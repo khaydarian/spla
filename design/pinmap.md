@@ -207,3 +207,41 @@ PPU2 | 97 | yes   | B        | Analog Blue Component (to S-ENC)
 PPU2 | 98 | maybe | HVCMODE  | Home Video Computer (a.k.a. Famicom) Mode (purpose unknown since SNES can play Famicom games already) (GND)
 PPU2 | 99 | no    | GND      | Supply
 PPU2 | 100| yes   | /CSYNC   | Video Output Composite Sync (Active-Low) (to S-ENC)
+
+Signals we need to tap:
+
+Category      | Bits | Name     | Purpose
+--------------|------|----------|-------------
+General       | 1    | XIN
+General       | 1    | /RESET
+CPU iface     | 1    | /PARD    | 5A22 B-Bus Read Strobe (Active-Low)
+CPU iface     | 1    | /PAWR    | 5A22 B-Bus Write Strobe (Active-Low)
+CPU iface     | 8    | PA{0..7} | 5A22 B-Bus Address
+CPU iface     | 8    | D{0..7}  | 5A22 B-Bus Data
+VRAM iface    | 1    | VA14     |
+VRAM iface    | 14   | VAA{0..13} |
+VRAM iface    | 14   | VAB{0..13} |
+VRAM iface    | 8    | VDA{0..7} |
+VRAM iface    | 8    | VDB{0..7} |
+VRAM iface    | 1    | /VRD
+VRAM iface    | 1    | /VAWR
+VRAM iface    | 1    | /VBWR
+Inter-PPU     | 4    | CHR{0..3}
+Inter-PPU     | 2    | PRIO{0,1}
+Inter-PPU     | 3    | COLOR{0..2}
+Inter-PPU     | 1    | /VCLD
+Inter-PPU     | 1    | /HCLD
+Inter-PPU     | 1    | FIELD
+Inter-PPU     | 1    | /OVER
+Inter-PPU     | 1    | 5MIN / 5MOUT
+PPU Outputs   | 1    | /BURST
+PPU Outputs   | 1    | /CSYNC
+PPU Outputs   | 1    | R
+PPU Outputs   | 1    | G
+PPU Outputs   | 1    | B
+PPU Outputs   | 1    | VBLANK
+PPU Outputs   | 1    | HBLANK
+PPU Outputs   | 1    | EXTLATCH
+PPU Outputs   | 2    | /RESOUT{0,1}
+
+Total tap pins needed: 92
