@@ -4,8 +4,8 @@ Derived from `pinout_s-ppu1.pdf` and `pinout_s-ppu2.pdf`.
 
 PPU1 signals:
 
-Chip |Pin | Need | Name     | Purpose
------|----|------|----------|-----------------
+Chip |Pin | Need  | Name     | Purpose
+-----|----|-------|----------|-----------------
 PPU1 |  1 | no    | TST1     | Unknown (GND)
 PPU1 |  2 | no    | TST0     | Unknown (GND)
 PPU1 |  3 | yes   | /PARD    | 5A22 B-Bus Read Strobe (Active-Low)
@@ -106,7 +106,6 @@ PPU1 | 97 | yes   | /5MIN    | Dot Clock In (5.37MHz) (driven by local /5MOUT)
 PPU1 | 98 | yes   | /RESET   | Reset (from PPU2) 
 PPU1 | 99 | no    | TST2     | Unknown (GND)
 PPU1 |100 | yes   | XIN      | Master Clock (21.47727MHz)
-
 PPU2 |  1 | yes   | /BURST   | Video Output Color Burst Strobe (Active-Low) (to-S-ENC)
 PPU2 |  2 | no    | /PED     | Unknown (NC) 
 PPU2 |  3 | yes   | 3.58M    | Video Output Clock (3.58MHz) (NTSC) (to S-ENC)
@@ -210,38 +209,48 @@ PPU2 | 100| yes   | /CSYNC   | Video Output Composite Sync (Active-Low) (to S-EN
 
 Signals we need to tap:
 
-Category      | Bits | Name     | Purpose
---------------|------|----------|-------------
-General       | 1    | XIN
-General       | 1    | /RESET
-CPU iface     | 1    | /PARD    | 5A22 B-Bus Read Strobe (Active-Low)
-CPU iface     | 1    | /PAWR    | 5A22 B-Bus Write Strobe (Active-Low)
-CPU iface     | 8    | PA{0..7} | 5A22 B-Bus Address
-CPU iface     | 8    | D{0..7}  | 5A22 B-Bus Data
-VRAM iface    | 1    | VA14     |
-VRAM iface    | 14   | VAA{0..13} |
-VRAM iface    | 14   | VAB{0..13} |
-VRAM iface    | 8    | VDA{0..7} |
-VRAM iface    | 8    | VDB{0..7} |
-VRAM iface    | 1    | /VRD
-VRAM iface    | 1    | /VAWR
-VRAM iface    | 1    | /VBWR
-Inter-PPU     | 4    | CHR{0..3}
-Inter-PPU     | 2    | PRIO{0,1}
-Inter-PPU     | 3    | COLOR{0..2}
-Inter-PPU     | 1    | /VCLD
-Inter-PPU     | 1    | /HCLD
-Inter-PPU     | 1    | FIELD
-Inter-PPU     | 1    | /OVER
-Inter-PPU     | 1    | 5MIN / 5MOUT
-PPU Outputs   | 1    | /BURST
-PPU Outputs   | 1    | /CSYNC
-PPU Outputs   | 1    | R
-PPU Outputs   | 1    | G
-PPU Outputs   | 1    | B
-PPU Outputs   | 1    | VBLANK
-PPU Outputs   | 1    | HBLANK
-PPU Outputs   | 1    | EXTLATCH
-PPU Outputs   | 2    | /RESOUT{0,1}
+Category      | Bits | Name         | Purpose
+--------------|------|--------------|-------------
+General       | 1    | XIN          | Main clock (21.47727 MHz)
+General       | 1    | /RESET       | Reset
+CPU iface     | 1    | /PARD        | 5A22 B-Bus Read Strobe (Active-Low)
+CPU iface     | 1    | /PAWR        | 5A22 B-Bus Write Strobe (Active-Low)
+CPU iface     | 8    | PA{0..7}     | 5A22 B-Bus Address
+CPU iface     | 8    | D{0..7}      | 5A22 B-Bus Data
+VRAM iface    | 1    | VA14         | VRAM Address
+VRAM iface    | 14   | VAA{0..13}   | VRAM Address (High Byte)
+VRAM iface    | 14   | VAB{0..13}   | VRAM Address (Low Byte)
+VRAM iface    | 8    | VDA{0..7}    | VRAM Data (High Byte)
+VRAM iface    | 8    | VDB{0..7}    | VRAM Data (Low Byte)
+VRAM iface    | 1    | /VRD         | VRAM Read Strobe (16-bit) (Active-Low)
+VRAM iface    | 1    | /VAWR        | VRAM Write Strobe (High Byte) (Active-Low)
+VRAM iface    | 1    | /VBWR        | VRAM Write Strobe (Low Byte) (Active-Low)
+Inter-PPU     | 4    | CHR{0..3}    | Unknown (Inter-PPU)
+Inter-PPU     | 2    | PRIO{0,1}    | Unknown (Inter-PPU)
+Inter-PPU     | 3    | COLOR{0..2}  | Unknown (Inter-PPU)
+Inter-PPU     | 1    | /VCLD        | Unknown (Inter-PPU)
+Inter-PPU     | 1    | /HCLD        | Unknown (Inter-PPU)
+Inter-PPU     | 1    | FIELD        | Unknown (Inter-PPU)
+Inter-PPU     | 1    | /OVER        | Unknown (Inter-PPU)
+Inter-PPU     | 1    | 5MIN,5MOUT   | Unknown (Inter-PPU)
+PPU Outputs   | 1    | /BURST       | NTSC Colorburst (?)
+PPU Outputs   | 1    | /CSYNC       | Video Output Composite Sync
+PPU Outputs   | 1    | R            | Analog Red Component (to S-ENC)
+PPU Outputs   | 1    | G            | Analog Green Component (to S-ENC)
+PPU Outputs   | 1    | B            | Analog Blue Component (to S-ENC)
+PPU Outputs   | 1    | VBLANK       | Vertical Blank (to CPU)
+PPU Outputs   | 1    | HBLANK       | Horizontal Blank (to CPU)
+PPU Outputs   | 1    | EXTLATCH     | External Latch (Lightpen signal) (???)
+PPU Outputs   | 2    | /RESOUT{0,1} | Reset Out to PPU1, elsewhere
+
+Category summary:
+
+Category      | Bits
+--------------|------
+General       |  2
+CPU iface     | 18
+VRAM iface    | 48
+Inter-PPU     | 14
+PPU Outputs   | 10
 
 Total tap pins needed: 92
