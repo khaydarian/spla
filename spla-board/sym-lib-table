@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name SPLA)(type Legacy)(uri ${KIPRJMOD}/SPLA.lib)(options "")(descr ""))
+)
