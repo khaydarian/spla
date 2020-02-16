@@ -25,7 +25,7 @@ F 3 "~" H 1600 9300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R?
+L Device:R R?
 U 1 1 5E4AB80E
 P 2400 9850
 F 0 "R?" H 2332 9804 50  0000 R CNN
@@ -149,17 +149,6 @@ Wire Wire Line
 	3200 8500 3000 8500
 Wire Wire Line
 	3500 8500 3650 8500
-$Comp
-L Device:R_US R?
-U 1 1 5E4DC0A0
-P 3350 8500
-F 0 "R?" V 3145 8500 50  0000 C CNN
-F 1 "1K" V 3236 8500 50  0000 C CNN
-F 2 "" V 3390 8490 50  0001 C CNN
-F 3 "~" H 3350 8500 50  0001 C CNN
-	1    3350 8500
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3650 8500 3650 8650
 Wire Wire Line
@@ -306,7 +295,7 @@ Wire Wire Line
 Wire Wire Line
 	7250 5950 7250 6350
 $Comp
-L Device:R_US R?
+L Device:R R?
 U 1 1 5E55BD51
 P 6800 6850
 F 0 "R?" V 6595 6850 50  0000 C CNN
@@ -342,7 +331,7 @@ Wire Wire Line
 Wire Wire Line
 	8750 4850 8250 4850
 $Comp
-L Device:R_US R?
+L Device:R R?
 U 1 1 5E571C78
 P 6400 5600
 F 0 "R?" H 6468 5646 50  0000 L CNN
@@ -353,7 +342,7 @@ F 3 "~" H 6400 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R?
+L Device:R R?
 U 1 1 5E572548
 P 6850 5600
 F 0 "R?" H 6918 5646 50  0000 L CNN
@@ -364,7 +353,7 @@ F 3 "~" H 6850 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R?
+L Device:R R?
 U 1 1 5E572B74
 P 7250 5600
 F 0 "R?" H 7318 5646 50  0000 L CNN
@@ -570,7 +559,7 @@ Wire Wire Line
 	1850 6350 1550 6350
 Connection ~ 1550 6350
 $Comp
-L Device:R_US R?
+L Device:R R?
 U 1 1 5E60E8AF
 P 8200 5250
 F 0 "R?" H 8268 5296 50  0000 L CNN
@@ -596,7 +585,7 @@ Wire Wire Line
 Wire Wire Line
 	8200 5050 8200 5100
 $Comp
-L Device:R_US R?
+L Device:R R?
 U 1 1 5E619C52
 P 8700 5600
 F 0 "R?" H 8768 5646 50  0000 L CNN
@@ -829,4 +818,15 @@ Text Notes 9850 3100 0    25   ~ 0
 How do I move this symbol name inside the box?
 Text Notes 2100 9000 0    25   ~ 0
 What is this inductor for?\nJust LC filtering input power?
+$Comp
+L Device:R R?
+U 1 1 5E4DC0A0
+P 3350 8500
+F 0 "R?" V 3145 8500 50  0000 C CNN
+F 1 "1K" V 3236 8500 50  0000 C CNN
+F 2 "" V 3390 8490 50  0001 C CNN
+F 3 "~" H 3350 8500 50  0001 C CNN
+	1    3350 8500
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
