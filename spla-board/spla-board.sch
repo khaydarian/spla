@@ -823,4 +823,10 @@ Wire Wire Line
 Connection ~ 7300 3050
 Text Notes 7200 1950 0    50   ~ 0
 Decoupling Capacitors\n
+Text Notes 11550 5550 0    50   ~ 0
+Not sure how to hook up AD/AC/BD/BC buses yet.
+Text Notes 9850 3100 0    25   ~ 0
+How do I move this symbol name inside the box?
+Text Notes 2100 9000 0    25   ~ 0
+What is this inductor for?\nJust LC filtering input power?
 $EndSCHEMATC
