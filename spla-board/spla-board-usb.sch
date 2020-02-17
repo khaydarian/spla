@@ -3,11 +3,11 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 2 3
-Title "SPLA Board"
+Sheet 3 5
+Title "SPLA Board - USB"
 Date "2020-02-15"
 Rev "1"
-Comp "N/A"
+Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -831,4 +831,6 @@ Text GLabel 2300 9450 2    50   Input ~ 0
 USB_DM
 Text GLabel 2300 9350 2    50   Input ~ 0
 USB_DP
+Text Notes 2350 2900 0    50   ~ 0
+TODO here: Power regulation to 1.2V for FPGA
 $EndSCHEMATC

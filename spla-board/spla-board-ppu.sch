@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 3 3
-Title ""
-Date ""
-Rev ""
+Sheet 2 5
+Title "SPLA Board - PPU"
+Date "2020-02-16"
+Rev "1"
 Comp ""
 Comment1 ""
 Comment2 ""
