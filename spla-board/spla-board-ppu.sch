@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 2 5
+Sheet 4 5
 Title "SPLA Board - PPU"
 Date "2020-02-18"
 Rev "2"
@@ -210,6 +210,8 @@ $Comp
 L SPLA:VRAM U?
 U 1 1 5E55B6D1
 P 8900 3750
+AR Path="/5E55B6D1" Ref="U?"  Part="1" 
+AR Path="/5E50E589/5E55B6D1" Ref="U?"  Part="1" 
 F 0 "U?" H 8900 4665 50  0000 C CNN
 F 1 "VRAM" H 8900 4574 50  0000 C CNN
 F 2 "" H 8900 3750 50  0001 C CNN
@@ -221,6 +223,8 @@ $Comp
 L SPLA:VRAM U?
 U 1 1 5E55C6FE
 P 8900 6050
+AR Path="/5E55C6FE" Ref="U?"  Part="1" 
+AR Path="/5E50E589/5E55C6FE" Ref="U?"  Part="1" 
 F 0 "U?" H 8900 6965 50  0000 C CNN
 F 1 "VRAM" H 8900 6874 50  0000 C CNN
 F 2 "" H 8900 6050 50  0001 C CNN
@@ -1581,7 +1585,7 @@ Text Label 9400 3550 0    50   ~ 0
 Text Label 9400 5850 0    50   ~ 0
 ~VRD
 Text Label 9400 3350 0    50   ~ 0
-~VBRD
+~VBWR
 Wire Wire Line
 	8150 4550 8550 4550
 Wire Wire Line
