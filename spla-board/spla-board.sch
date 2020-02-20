@@ -14,12 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 8000 4500 1500 1000
-U 5E50E589
-F0 "SPLA Board - PPU" 50
-F1 "spla-board-ppu.sch" 50
-$EndSheet
-$Sheet
 S 4000 4500 1500 1000
 U 5E4F712F
 F0 "SPLA Board - USB" 50
@@ -30,6 +24,12 @@ S 6000 4500 1500 1000
 U 5E4D8358
 F0 "SPLA Board - FPGA" 50
 F1 "spla-board-fpga.sch" 50
+$EndSheet
+$Sheet
+S 8000 4500 1500 1000
+U 5E50E589
+F0 "SPLA Board - PPU" 50
+F1 "spla-board-ppu.sch" 50
 $EndSheet
 $Sheet
 S 10000 4500 1500 1000
