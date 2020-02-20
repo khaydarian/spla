@@ -826,7 +826,7 @@ F 3 "~" H 3350 8500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Notes 9500 5750 0    101  ~ 20
-FT232HL
+FT2232H
 Text GLabel 2300 9450 2    50   Input ~ 0
 USB_DM
 Text GLabel 2300 9350 2    50   Input ~ 0
