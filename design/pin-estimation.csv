@@ -1,0 +1,51 @@
+Purpose,Signal,Mode,Bits,Encoding?,Clock Rate MHz,Req,Req Pins,Sample?,Sample Bits,Notes
+,,,136,,,,127,,121,
+Clock,XIN,W,1,Clock,21.47727,1,1,0,0,Obviously don't need to sample the clock.
+Reset,PPU1_~RESET~,RW,1,,,1,1,0,0,
+Reset,PPU2_~RESET~,RW,1,,,1,1,0,0,
+Reset,PPU2_~RESOUT1~,RW,1,,,1,1,0,0,
+Reset,PPU2_~RESOUT2~,RW,1,,,1,1,0,0,
+Periphreal Bus,~PARD,W,1,Stobe,3.579545,1,1,0,0,"We need to drive the periphral bus, but not sample it."
+Periphreal Bus,~PAWR,W,1,Stobe,3.579545,1,1,0,0,
+Periphreal Bus,PA0 - PA7,W,8,Data,3.579545,1,8,0,0,
+Periphreal Bus,D0 - D7,RW,8,Data,3.579545,1,8,1,8,
+VRAM Address Bus,VA14,R,1,Data,3.579545,1,1,1,1,We need to sample the VRAM bus.  Plausibly compressible.
+VRAM Address Bus,VAA0 - VAA13,R,14,Data,3.579545,1,14,1,14,
+VRAM Address Bus,VAB0 - VAB13,R,14,Data,3.579545,1,14,1,14,
+VRAM Data Bus,VDA0 - VDA7,R,8,Data,3.579545,1,8,1,8,
+VRAM Data Bus,VDB0 - VDB7,R,8,Data,3.579545,1,8,1,8,
+VRAM Control Bus,~VRD,R,1,Stobe,3.579545,1,1,1,1,
+VRAM Control Bus,~VAWR,R,1,Stobe,3.579545,1,1,1,1,
+VRAM Control Bus,~VBWR,R,1,Stobe,3.579545,1,1,1,1,
+Inter-PPU Bus,CHR3,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,CHR2,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,CHR1,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,CHR0,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,PRIO1,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,PRIO0,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,COLOR2,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,COLOR1,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,COLOR0,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,~VCLD,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,~HCLD,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,FIELD,R,1,Unknown,Unknown,1,1,1,1,
+Inter-PPU Bus,~OVER,R,1,Unknown,Unknown,1,1,1,1,Weird case; PPU2 has ~OVER1 and ~OVER2 wired together
+Inter-PPU Bus,~5M,R,1,Unknown,Unknown,1,1,1,1,
+PPU1 Misc,PPU1_~EXTSYNC,?,1,Unknown,Unknown,0,0,1,1,"Optional, hardwired high"
+PPU1 Misc,PPU1_~HVCMODE,?,1,Unknown,Unknown,0,0,1,1,"Optional, hardwired low"
+PPU1 Misc,PPU1_MASTER,W,1,Unknown,Unknown,0,0,1,1,"Optional, hardwired low"
+PPU1 Misc,PPU1_PALMODE,W,1,Constant,Zero,0,0,1,1,"Optional, hardwired low (Same as PPU2_PALMODE)"
+PPU2 Misc,PPU2_~5MOUT~,R,1,Unknown,Unknown,0,0,1,1,"Optional, sinks through LC filter to ground"
+PPU2 Misc,PPU2_HBLANK,R,1,Low-speed,Low,1,1,1,1,
+PPU2 Misc,PPU2_VBLANK,R,1,Low-speed,Low,1,1,1,1,
+PPU2 Misc,PPU2_HVCMODE,R,1,Unknown,Unknown,0,0,1,1,"Optional, hardwired low"
+PPU2 Misc,PPU2_EXTLATCH,RW,1,Low-speed,Low,1,1,1,1,
+PPU2 Misc,PPU2_PALMODE,W,1,Constant,Unknown,0,0,1,1,"Optional, hardwired low (Same as PPU1_PALMODE)"
+PPU2 Misc,PPU2_~PED~,?,1,Unknown,Unknown,0,0,1,1,"Optional, no connect"
+PPU2 Misc,PPU2_3.58M,R,1,Clock?,3.579545,1,1,1,1,
+PPU2 Misc,PPU2_~TOUMEI~,?,1,Unknown,Low,0,0,1,1,"Optional, no connect"
+Analog,~BURST~,R,1,NSTC,21.47727,1,1,1,1,
+Analog,~CSYNC~,R,1,NSTC,21.47727,1,1,1,1,
+Analog,R,R,12,NSTC,21.47727,1,12,1,12,Via 12-bit ADC
+Analog,G,R,12,NSTC,21.47727,1,12,1,12,Via 12-bit ADC
+Analog,B,R,12,NSTC,21.47727,1,12,1,12,Via 12-bit ADC
