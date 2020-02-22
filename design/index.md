@@ -6,7 +6,8 @@ a PC and log the values of each of the data buses during every cycle of
 operation, feeding the results back to the PC.
 
 In more detail: Connect the two PPU chips and tap all the important pins,
-sample the results with a high-speed FPGA and dump the results temporarily into nearby ram, and later into the PC.  Traces might be very big.
+sample the results with a high-speed FPGA and dump the results temporarily into
+nearby ram, and later into the PC.  Traces might be very big.
 
 Both PPU chips have ~100 pins in use, which is a lot.  We might need multiple
 FPGAs running in lockstep to collect the data at full speed.  If we don't have
@@ -15,28 +16,31 @@ around the pins.
 
 # Open Questions
 
-* Do we need to go at full speed (~21MHz)? How fast do we need to go?  Do we have to drive at full speed (dynamic NMOS or something), or can we go slowly?
-
-* Do we need direct write access to VRAM chips, or can we just use the PPU1 to do that?
-
-* What chips go on the board?
-  * What FPGA(s?) should we use?
-    * That I can actually install.
-
-* How many signals do we need?
-  * 100 per chip, but ~20-30 are shared between them.
-
-* Can we have the FPGA emulate the VRAM chips as well?
-  * Might be handy, if we have the space.
-  * If we can go slow, this is feasible with some minor helper chips (shift register or similar)
-
-* What's the format of the signals on R/G/B output lines?
-
-* Can I solder this myself, or does it need professional manufacturing?
-  * Practical limit is TQFP or similar (which PPU chips are, I think)
-  * BGAs are right out
+*Not in this doc for now.*
 
 # Closed Questions
+
+* Do we need to go at full speed (~21MHz)? How fast do we need to go?  Do we have to drive at full speed (dynamic NMOS or something), or can we go slowly?
+  * Probably we do need to run at full speed at least to start, but this is
+    very achievable.  Collecting data at that rate is harder, though, so we
+    might have to use USB superspeed, or stride and/or space out data
+    retrievals, or else dump the whole data into an SRAM and upload slowly.
+
+* Do we need direct write access to VRAM chips, or can we just use the PPU1 to do that?
+  * Probably we don't, but we have to hook them up anyways -- doesn't cost any extra traces to do so.
+
+* How many signals do we need?
+  * 136 minimum, counting shared signals.
+
+* Can we have the FPGA emulate the VRAM chips as well?
+  * No. The block ram is generally registered, so this is unlikely to work.  It's easier to take the VRAM chips from the actual board anyways.
+
+* What's the format of the signals on R/G/B output lines?
+  * Probably 5V analog; not entirely sure.  Might have negative voltages here in the superblack period, maybe.
+
+* Can I solder this myself, or does it need professional manufacturing?
+  * Probably.  JLCPCB-SMT will do most of the tiny fiddly parts, and I can
+    maybe (?) reflow a 0.8mm pitch BGA manually.  We'll see.
 * What are the VRAM chips?  Can I buy them?
   * Bog-standard SRAM chips; 2x 32Kx.
   * Maybe can just buy them, easy to emulate in FPGA (if enough space).
@@ -59,9 +63,6 @@ around the pins.
   * Solder everything together.
   * Test hardware construction (scan-chain-like).
 
-
 # References
 
 Original thread: https://byuu.org/articles/edge-of-emulation
-
-
