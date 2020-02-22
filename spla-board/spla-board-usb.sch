@@ -14,160 +14,70 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:USB_B_Micro J?
-U 1 1 5E4AA2D6
-P 1450 9350
-F 0 "J?" H 1507 9817 50  0000 C CNN
-F 1 "USB_B_Micro" H 1507 9726 50  0000 C CNN
-F 2 "" H 1600 9300 50  0001 C CNN
-F 3 "~" H 1600 9300 50  0001 C CNN
-	1    1450 9350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R?
 U 1 1 5E4AB80E
-P 2400 9850
-F 0 "R?" H 2332 9804 50  0000 R CNN
-F 1 "0" H 2332 9895 50  0000 R CNN
-F 2 "" V 2440 9840 50  0001 C CNN
-F 3 "~" H 2400 9850 50  0001 C CNN
-	1    2400 9850
+P 3750 5250
+F 0 "R?" H 3682 5204 50  0000 R CNN
+F 1 "0" H 3682 5295 50  0000 R CNN
+F 2 "" V 3790 5240 50  0001 C CNN
+F 3 "~" H 3750 5250 50  0001 C CNN
+	1    3750 5250
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1750 9350 2300 9350
-Wire Wire Line
-	1750 9450 2300 9450
 $Comp
 L power:GND #PWR?
 U 1 1 5E4AD97D
-P 1400 10150
-F 0 "#PWR?" H 1400 9900 50  0001 C CNN
-F 1 "GND" H 1405 9977 50  0000 C CNN
-F 2 "" H 1400 10150 50  0001 C CNN
-F 3 "" H 1400 10150 50  0001 C CNN
-	1    1400 10150
+P 2750 5550
+F 0 "#PWR?" H 2750 5300 50  0001 C CNN
+F 1 "GND" H 2755 5377 50  0000 C CNN
+F 2 "" H 2750 5550 50  0001 C CNN
+F 3 "" H 2750 5550 50  0001 C CNN
+	1    2750 5550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 5E4ACE23
-P 2000 9850
-F 0 "C?" H 1885 9804 50  0000 R CNN
-F 1 "0.1uF" H 1885 9895 50  0000 R CNN
-F 2 "" H 2038 9700 50  0001 C CNN
-F 3 "~" H 2000 9850 50  0001 C CNN
-	1    2000 9850
+P 3350 5250
+F 0 "C?" H 3235 5204 50  0000 R CNN
+F 1 "0.1uF" H 3235 5295 50  0000 R CNN
+F 2 "" H 3388 5100 50  0001 C CNN
+F 3 "~" H 3350 5250 50  0001 C CNN
+	1    3350 5250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1450 9750 1450 10150
+	3750 4950 3750 5100
 Wire Wire Line
-	2400 9550 2400 9700
+	3350 5100 3350 4950
+Connection ~ 3350 4950
 Wire Wire Line
-	2000 9700 2000 9550
-Connection ~ 2000 9550
+	3350 4950 3750 4950
 Wire Wire Line
-	2000 9550 2400 9550
+	3350 5400 3350 5550
 Wire Wire Line
-	2000 10000 2000 10150
-Wire Wire Line
-	2400 10000 2400 10150
+	3750 5400 3750 5550
 $Comp
 L power:GND #PWR?
 U 1 1 5E4C66E6
-P 2150 10150
-F 0 "#PWR?" H 2150 9900 50  0001 C CNN
-F 1 "GND" H 2155 9977 50  0000 C CNN
-F 2 "" H 2150 10150 50  0001 C CNN
-F 3 "" H 2150 10150 50  0001 C CNN
-	1    2150 10150
+P 3500 5550
+F 0 "#PWR?" H 3500 5300 50  0001 C CNN
+F 1 "GND" H 3505 5377 50  0000 C CNN
+F 2 "" H 3500 5550 50  0001 C CNN
+F 3 "" H 3500 5550 50  0001 C CNN
+	1    3500 5550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 9750 1350 10150
-$Comp
-L Device:L L?
-U 1 1 5E4DBB7B
-P 2000 8800
-F 0 "L?" H 2052 8846 50  0000 L CNN
-F 1 "600 Ohm 500 mA" H 2052 8755 50  0000 L CNN
-F 2 "" H 2000 8800 50  0001 C CNN
-F 3 "~" H 2000 8800 50  0001 C CNN
-	1    2000 8800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5E4DC5E3
-P 3000 8800
-F 0 "C?" H 2885 8754 50  0000 R CNN
-F 1 "0.1uF" H 2885 8845 50  0000 R CNN
-F 2 "" H 3038 8650 50  0001 C CNN
-F 3 "~" H 3000 8800 50  0001 C CNN
-	1    3000 8800
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E4E0513
-P 3650 9150
-F 0 "#PWR?" H 3650 8900 50  0001 C CNN
-F 1 "GND" H 3655 8977 50  0000 C CNN
-F 2 "" H 3650 9150 50  0001 C CNN
-F 3 "" H 3650 9150 50  0001 C CNN
-	1    3650 9150
-	1    0    0    -1  
-$EndComp
+	2700 5550 2750 5550
 Wire Wire Line
-	1750 9150 2000 9150
+	3350 5550 3500 5550
+Connection ~ 3500 5550
 Wire Wire Line
-	2000 9150 2000 8950
+	3500 5550 3750 5550
+Connection ~ 2750 5550
 Wire Wire Line
-	3000 8650 3000 8500
-Wire Wire Line
-	3000 8950 3000 9150
-Wire Wire Line
-	3000 9150 3650 9150
-Connection ~ 3650 9150
-Wire Wire Line
-	1350 10150 1400 10150
-Wire Wire Line
-	2000 10150 2150 10150
-Connection ~ 2150 10150
-Wire Wire Line
-	2150 10150 2400 10150
-Connection ~ 1400 10150
-Wire Wire Line
-	1400 10150 1450 10150
-Wire Wire Line
-	3200 8500 3000 8500
-Wire Wire Line
-	3500 8500 3650 8500
-Wire Wire Line
-	3650 8500 3650 8650
-Wire Wire Line
-	3650 8950 3650 9150
-$Comp
-L Device:LED D?
-U 1 1 5E4DF729
-P 3650 8800
-F 0 "D?" V 3689 8682 50  0000 R CNN
-F 1 "POWER_LED" V 3598 8682 50  0000 R CNN
-F 2 "" H 3650 8800 50  0001 C CNN
-F 3 "~" H 3650 8800 50  0001 C CNN
-	1    3650 8800
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2000 8350 2000 8500
-Wire Wire Line
-	3000 8500 2000 8500
-Connection ~ 3000 8500
-Connection ~ 2000 8500
-Wire Wire Line
-	2000 8500 2000 8650
+	2750 5550 2800 5550
 $Comp
 L Interface_USB:FT2232H U?
 U 1 1 5E5299CA
@@ -318,14 +228,6 @@ Wire Wire Line
 Wire Wire Line
 	8750 6550 7250 6550
 Connection ~ 7250 6550
-Text GLabel 8250 4850 0    50   Input ~ 0
-USB_DP
-Text GLabel 8250 4750 0    50   Input ~ 0
-USB_DM
-Wire Wire Line
-	8750 4750 8250 4750
-Wire Wire Line
-	8750 4850 8250 4850
 $Comp
 L Device:R R?
 U 1 1 5E571C78
@@ -399,17 +301,6 @@ Wire Wire Line
 Connection ~ 8900 7850
 Text Notes 6600 5350 0    50   ~ 0
 Weak pullup resistors
-$Comp
-L power:+5V #PWR?
-U 1 1 5E5BA060
-P 2000 8350
-F 0 "#PWR?" H 2000 8200 50  0001 C CNN
-F 1 "+5V" H 2015 8523 50  0000 C CNN
-F 2 "" H 2000 8350 50  0001 C CNN
-F 3 "" H 2000 8350 50  0001 C CNN
-	1    2000 8350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10450 3200 10450 3450
 Wire Wire Line
@@ -470,91 +361,6 @@ Wire Wire Line
 	8500 3100 8500 3300
 Connection ~ 8500 3300
 $Comp
-L Regulator_Linear:TC1262-33 U?
-U 1 1 5E5FA6F5
-P 2150 6350
-F 0 "U?" H 2150 6592 50  0000 C CNN
-F 1 "TC1262-33" H 2150 6501 50  0000 C CNN
-F 2 "" H 2150 6575 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21373C.pdf" H 2150 6050 50  0001 C CNN
-	1    2150 6350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 6350 2650 6350
-$Comp
-L power:GNDREF #PWR?
-U 1 1 5E5FC9D4
-P 2150 6650
-F 0 "#PWR?" H 2150 6400 50  0001 C CNN
-F 1 "GNDREF" H 2155 6477 50  0000 C CNN
-F 2 "" H 2150 6650 50  0001 C CNN
-F 3 "" H 2150 6650 50  0001 C CNN
-	1    2150 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5E5FCD2E
-P 2650 6500
-F 0 "C?" H 2765 6546 50  0000 L CNN
-F 1 "0.1uF" H 2765 6455 50  0000 L CNN
-F 2 "" H 2688 6350 50  0001 C CNN
-F 3 "~" H 2650 6500 50  0001 C CNN
-	1    2650 6500
-	1    0    0    -1  
-$EndComp
-Connection ~ 2650 6350
-$Comp
-L power:GND #PWR?
-U 1 1 5E5FD67A
-P 2650 6650
-F 0 "#PWR?" H 2650 6400 50  0001 C CNN
-F 1 "GND" H 2655 6477 50  0000 C CNN
-F 2 "" H 2650 6650 50  0001 C CNN
-F 3 "" H 2650 6650 50  0001 C CNN
-	1    2650 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5E5FFBAD
-P 1550 6500
-F 0 "C?" H 1665 6546 50  0000 L CNN
-F 1 "0.1uF" H 1665 6455 50  0000 L CNN
-F 2 "" H 1588 6350 50  0001 C CNN
-F 3 "~" H 1550 6500 50  0001 C CNN
-	1    1550 6500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E603CC8
-P 1550 6650
-F 0 "#PWR?" H 1550 6400 50  0001 C CNN
-F 1 "GND" H 1555 6477 50  0000 C CNN
-F 2 "" H 1550 6650 50  0001 C CNN
-F 3 "" H 1550 6650 50  0001 C CNN
-	1    1550 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5E604CE0
-P 1550 6150
-F 0 "#PWR?" H 1550 6000 50  0001 C CNN
-F 1 "+5V" H 1565 6323 50  0000 C CNN
-F 2 "" H 1550 6150 50  0001 C CNN
-F 3 "" H 1550 6150 50  0001 C CNN
-	1    1550 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1550 6150 1550 6350
-Wire Wire Line
-	1850 6350 1550 6350
-Connection ~ 1550 6350
-$Comp
 L Device:R R?
 U 1 1 5E60E8AF
 P 8200 5250
@@ -604,8 +410,6 @@ Wire Wire Line
 Connection ~ 9750 3450
 Wire Wire Line
 	9750 3300 8500 3300
-Wire Wire Line
-	2650 6350 2650 6150
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5E649611
@@ -651,17 +455,6 @@ F 3 "" H 6400 5300 50  0001 C CNN
 	1    6400 5300
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5E65960B
-P 2650 6150
-F 0 "#PWR?" H 2650 6000 50  0001 C CNN
-F 1 "+3V3" H 2665 6323 50  0000 C CNN
-F 2 "" H 2650 6150 50  0001 C CNN
-F 3 "" H 2650 6150 50  0001 C CNN
-	1    2650 6150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8750 3200 10450 3200
 Wire Wire Line
@@ -680,14 +473,10 @@ $EndComp
 Connection ~ 8750 3200
 Wire Wire Line
 	8750 3200 8750 3100
-Text Notes 2450 10050 0    25   ~ 0
+Text Notes 3800 5450 0    25   ~ 0
 (Not sure what this 0-Ohm resistor is for.)
-Wire Wire Line
-	1750 9550 2000 9550
 Text Notes 7100 7900 0    25   ~ 0
 (This is the wrong oscillator part.)
-Text Notes 1850 6000 0    25   ~ 0
-(This is the wrong LDO part.)
 $Comp
 L Device:C C?
 U 1 1 5E6D1368
@@ -812,25 +601,40 @@ Text Notes 11550 5550 0    50   ~ 0
 Not sure how to hook up AD/AC/BD/BC buses yet.
 Text Notes 9850 3100 0    25   ~ 0
 How do I move this symbol name inside the box?
-Text Notes 2100 9000 0    25   ~ 0
-What is this inductor for?\nJust LC filtering input power?
-$Comp
-L Device:R R?
-U 1 1 5E4DC0A0
-P 3350 8500
-F 0 "R?" V 3145 8500 50  0000 C CNN
-F 1 "1K" V 3236 8500 50  0000 C CNN
-F 2 "" V 3390 8490 50  0001 C CNN
-F 3 "~" H 3350 8500 50  0001 C CNN
-	1    3350 8500
-	0    1    1    0   
-$EndComp
 Text Notes 9500 5750 0    101  ~ 20
 FT2232H
-Text GLabel 2300 9450 2    50   Input ~ 0
-USB_DM
-Text GLabel 2300 9350 2    50   Input ~ 0
-USB_DP
-Text Notes 2350 2900 0    50   ~ 0
-TODO here: Power regulation to 1.2V for FPGA
+Wire Wire Line
+	2700 5150 2700 5550
+Wire Wire Line
+	2800 5150 2800 5550
+Wire Wire Line
+	3100 4950 3350 4950
+NoConn ~ 3100 4550
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5E4AA2D6
+P 2800 4750
+F 0 "J?" H 2857 5217 50  0000 C CNN
+F 1 "USB_B_Micro" H 2857 5126 50  0000 C CNN
+F 2 "" H 2950 4700 50  0001 C CNN
+F 3 "~" H 2950 4700 50  0001 C CNN
+	1    2800 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 4750 5100 4750
+Wire Wire Line
+	3100 4850 5100 4850
+Wire Wire Line
+	5250 4850 8750 4850
+Wire Wire Line
+	5250 4750 8750 4750
+Wire Wire Line
+	5100 4750 5250 4850
+Wire Wire Line
+	5250 4750 5100 4850
+Text Notes 4650 4700 0    25   ~ 0
+(Inconveniently arranged symbols require this crossing.)
+Text Notes 3200 4550 0    50   ~ 0
+USB self-powered
 $EndSCHEMATC
