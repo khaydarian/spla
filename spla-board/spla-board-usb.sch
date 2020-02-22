@@ -597,8 +597,6 @@ Wire Wire Line
 Connection ~ 7300 3050
 Text Notes 7200 1950 0    50   ~ 0
 Decoupling Capacitors\n
-Text Notes 11550 5550 0    50   ~ 0
-Not sure how to hook up AD/AC/BD/BC buses yet.
 Text Notes 9850 3100 0    25   ~ 0
 How do I move this symbol name inside the box?
 Text Notes 9500 5750 0    101  ~ 20
@@ -637,4 +635,46 @@ Text Notes 4650 4700 0    25   ~ 0
 (Inconveniently arranged symbols require this crossing.)
 Text Notes 3200 4550 0    50   ~ 0
 USB self-powered
+Text GLabel 11150 5550 2    50   Output ~ 0
+SPI_CLK
+Text GLabel 11150 5650 2    50   Output ~ 0
+SPI_MOSI
+Text GLabel 11150 5750 2    50   Input ~ 0
+SPI_MISO
+Text Notes 11400 6300 0    50   ~ 0
+TODO: Include an LED here.
+Text Notes 11400 6700 0    50   ~ 0
+TODO: Reset sequencing here
+Text GLabel 11150 3750 2    50   BiDi ~ 0
+FIFO_D0
+Text GLabel 11150 3850 2    50   BiDi ~ 0
+FIFO_D1
+Text GLabel 11150 3950 2    50   BiDi ~ 0
+FIFO_D2
+Text GLabel 11150 4050 2    50   BiDi ~ 0
+FIFO_D3
+Text GLabel 11150 4150 2    50   BiDi ~ 0
+FIFO_D4
+Text GLabel 11150 4250 2    50   BiDi ~ 0
+FIFO_D5
+Text GLabel 11150 4350 2    50   BiDi ~ 0
+FIFO_D6
+Text GLabel 11150 4450 2    50   BiDi ~ 0
+FIFO_D7
+Text GLabel 11150 5850 2    39   Input ~ 0
+SPI_~CS~
+Text GLabel 11150 4650 2    39   Output ~ 0
+FIFO_~RXF~
+Text GLabel 11150 4750 2    39   Output ~ 0
+FIFO_~TXE~
+Text GLabel 11150 4850 2    39   Input ~ 0
+FIFO_~RD~
+Text GLabel 11150 4950 2    39   Input ~ 0
+FIFO_~WR~
+Text GLabel 11150 5150 2    50   Output ~ 0
+FIFO_CLKOUT
+Text GLabel 11150 5250 2    39   Input ~ 0
+FIFO_~OE~
+Text GLabel 11150 5350 2    50   Input ~ 0
+FIFO_SIWU
 $EndSCHEMATC
