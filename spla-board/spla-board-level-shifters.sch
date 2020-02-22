@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A3 16535 11693
+$Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
-Title "SPLA Board - FPGA"
+Sheet 8 8
+Title ""
 Date "2020-02-21"
 Rev "3"
 Comp ""
@@ -13,6 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 4900 5650 0    202  ~ 0
-TODO: Add ECP5 (LFE5U-45F-6BG256) here.
+Text Notes 4250 3750 0    101  ~ 0
+TODO: Add lots (17?) of 74LVC245ABQ here
 $EndSCHEMATC

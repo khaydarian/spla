@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 2 5
+Sheet 2 8
 Title "SPLA Board - USB"
-Date "2020-02-18"
-Rev "2"
+Date "2020-02-21"
+Rev "3"
 Comp ""
 Comment1 ""
 Comment2 ""
