@@ -588,13 +588,11 @@ Wire Wire Line
 	10800 2150 10800 3650
 Wire Wire Line
 	10800 3650 11500 3650
-Text GLabel 10700 1850 0    50   Input ~ 0
-TAP_PPU2_~RESET~
-Text GLabel 10700 2000 0    50   Input ~ 0
+Text GLabel 10700 2000 0    50   BiDi ~ 0
 TAP_PPU2_~RESOUT1~
-Text GLabel 10700 2150 0    50   Input ~ 0
+Text GLabel 10700 2150 0    50   BiDi ~ 0
 TAP_PPU2_~RESOUT0~
-Text GLabel 4950 2150 2    50   Input ~ 0
+Text GLabel 4950 2150 2    50   BiDi ~ 0
 TAP_PPU1_~RESET~
 Entry Wire Line
 	4750 4750 4650 4850
@@ -674,31 +672,31 @@ Text Label 4550 4750 2    50   ~ 0
 FIELD
 Text Label 4550 4850 2    50   ~ 0
 ~OVER
-Text GLabel 4200 3650 0    50   Input ~ 0
+Text GLabel 4200 3650 0    50   BiDi ~ 0
 TAP_CHR3
-Text GLabel 4200 3750 0    50   Input ~ 0
+Text GLabel 4200 3750 0    50   BiDi ~ 0
 TAP_CHR2
-Text GLabel 4200 3850 0    50   Input ~ 0
+Text GLabel 4200 3850 0    50   BiDi ~ 0
 TAP_CHR1
-Text GLabel 4200 3950 0    50   Input ~ 0
+Text GLabel 4200 3950 0    50   BiDi ~ 0
 TAP_CHR0
-Text GLabel 4200 4150 0    50   Input ~ 0
+Text GLabel 4200 4150 0    50   BiDi ~ 0
 TAP_PRIO0
-Text GLabel 4200 4050 0    50   Input ~ 0
+Text GLabel 4200 4050 0    50   BiDi ~ 0
 TAP_PRIO1
-Text GLabel 4200 4250 0    50   Input ~ 0
+Text GLabel 4200 4250 0    50   BiDi ~ 0
 TAP_COLOR2
-Text GLabel 4200 4350 0    50   Input ~ 0
+Text GLabel 4200 4350 0    50   BiDi ~ 0
 TAP_COLOR1
-Text GLabel 4200 4450 0    50   Input ~ 0
+Text GLabel 4200 4450 0    50   BiDi ~ 0
 TAP_COLOR0
-Text GLabel 4200 4550 0    50   Input ~ 0
+Text GLabel 4200 4550 0    39   BiDi ~ 0
 TAP_~VCLD~
-Text GLabel 4200 4650 0    50   Input ~ 0
+Text GLabel 4200 4650 0    39   BiDi ~ 0
 TAP_~HCLD~
-Text GLabel 4200 4750 0    50   Input ~ 0
+Text GLabel 4200 4750 0    50   BiDi ~ 0
 TAP_FIELD
-Text GLabel 4200 4850 0    50   Input ~ 0
+Text GLabel 4200 4850 0    39   BiDi ~ 0
 TAP_~OVER~
 Entry Wire Line
 	10700 5150 10800 5250
@@ -747,7 +745,7 @@ Entry Wire Line
 	4750 4850 4850 4950
 Entry Wire Line
 	4750 4850 4650 4950
-Text GLabel 11500 6150 0    50   Input ~ 0
+Text GLabel 11500 6150 0    50   Output ~ 0
 TAP_PPU2_3.58M
 NoConn ~ 12600 5550
 NoConn ~ 12600 5450
@@ -805,15 +803,15 @@ Wire Wire Line
 	12700 3050 12700 2700
 Wire Wire Line
 	11500 2700 12700 2700
-Text GLabel 12950 3350 2    50   Input ~ 0
+Text GLabel 12950 3350 2    50   Output ~ 0
 ANALOG_~BURST~
-Text GLabel 12950 3450 2    50   Input ~ 0
+Text GLabel 12950 3450 2    50   Output ~ 0
 ANALOG_~CSYNC~
-Text GLabel 12950 3750 2    50   Input ~ 0
+Text GLabel 12950 3750 2    50   Output ~ 0
 ANALOG_R
-Text GLabel 12950 3650 2    50   Input ~ 0
+Text GLabel 12950 3650 2    50   Output ~ 0
 ANALOG_G
-Text GLabel 12950 3550 2    50   Input ~ 0
+Text GLabel 12950 3550 2    50   Output ~ 0
 ANALOG_B
 Wire Wire Line
 	12600 3350 12950 3350
@@ -831,7 +829,7 @@ Wire Wire Line
 	4850 4950 5250 4950
 Wire Wire Line
 	5300 5050 5250 5050
-Text GLabel 4200 4950 0    50   Input ~ 0
+Text GLabel 4200 4950 0    39   BiDi ~ 0
 TAP_~5M~
 Wire Wire Line
 	4650 4950 4200 4950
@@ -844,7 +842,7 @@ Text Label 4950 4950 0    50   ~ 0
 ~5M
 Text Label 4350 4950 0    50   ~ 0
 ~5M
-Text GLabel 10300 5050 1    50   Input ~ 0
+Text GLabel 10300 5050 1    50   Output ~ 0
 TAP_PPU2_~5MOUT~
 Wire Wire Line
 	10300 5350 10300 5050
@@ -1370,9 +1368,9 @@ Text Label 4300 8150 0    50   ~ 0
 D1
 Text Label 4300 8250 0    50   ~ 0
 D0
-Text GLabel 4200 6550 0    50   Input ~ 0
+Text GLabel 4200 6550 0    39   Input ~ 0
 TAP_~PARD~
-Text GLabel 4200 6650 0    50   Input ~ 0
+Text GLabel 4200 6650 0    39   Input ~ 0
 TAP_~PAWR~
 Text GLabel 4200 6750 0    50   Input ~ 0
 TAP_PA7
@@ -1390,21 +1388,21 @@ Text GLabel 4200 7350 0    50   Input ~ 0
 TAP_PA1
 Text GLabel 4200 7450 0    50   Input ~ 0
 TAP_PA0
-Text GLabel 4200 7550 0    50   Input ~ 0
+Text GLabel 4200 7550 0    50   BiDi ~ 0
 TAP_D7
-Text GLabel 4200 7650 0    50   Input ~ 0
+Text GLabel 4200 7650 0    50   BiDi ~ 0
 TAP_D6
-Text GLabel 4200 7750 0    50   Input ~ 0
+Text GLabel 4200 7750 0    50   BiDi ~ 0
 TAP_D5
-Text GLabel 4200 7850 0    50   Input ~ 0
+Text GLabel 4200 7850 0    50   BiDi ~ 0
 TAP_D4
-Text GLabel 4200 7950 0    50   Input ~ 0
+Text GLabel 4200 7950 0    50   BiDi ~ 0
 TAP_D3
-Text GLabel 4200 8050 0    50   Input ~ 0
+Text GLabel 4200 8050 0    50   BiDi ~ 0
 TAP_D2
-Text GLabel 4200 8150 0    50   Input ~ 0
+Text GLabel 4200 8150 0    50   BiDi ~ 0
 TAP_D1
-Text GLabel 4200 8250 0    50   Input ~ 0
+Text GLabel 4200 8250 0    50   BiDi ~ 0
 TAP_D0
 Entry Wire Line
 	3550 6250 3650 6350
@@ -1646,9 +1644,9 @@ Text Label 8250 4550 0    50   ~ 0
 VAB1
 Text Label 8250 4650 0    50   ~ 0
 VAB0
-Text GLabel 11500 5550 0    50   Input ~ 0
+Text GLabel 11500 5550 0    50   Output ~ 0
 TAP_PPU2_HBLANK
-Text GLabel 11500 5650 0    50   Input ~ 0
+Text GLabel 11500 5650 0    50   Output ~ 0
 TAP_PPU2_VBLANK
 Text GLabel 11500 5750 0    50   Input ~ 0
 TAP_PPU2_HVCMODE
@@ -1658,16 +1656,14 @@ Text GLabel 11500 5950 0    50   Input ~ 0
 TAP_PPU2_PALMODE
 Text GLabel 5300 5850 0    50   Input ~ 0
 TAP_PPU1_PALMODE
-Text GLabel 11500 6050 0    50   Input ~ 0
+Text GLabel 11500 6050 0    39   Input ~ 0
 TAP_PPU2_~PED~
-Text GLabel 11500 6250 0    50   Input ~ 0
+Text GLabel 11500 6250 0    39   Input ~ 0
 TAP_PPU2_~TOUMEI~
-Text GLabel 5300 5650 0    50   Input ~ 0
+Text GLabel 5300 5650 0    39   Input ~ 0
 TAP_PPU1_~HVCMODE~
-Text GLabel 5300 5750 0    50   Input ~ 0
+Text GLabel 5300 5750 0    39   Input ~ 0
 TAP_PPU1_~MASTER~
-Text GLabel 5300 5250 0    50   Input ~ 0
-TAP_PPU1_~EXTSYNC~
 Entry Wire Line
 	3550 6050 3650 6150
 Entry Wire Line
@@ -1676,11 +1672,11 @@ Entry Wire Line
 	3550 5650 3650 5750
 Entry Wire Line
 	3550 5550 3650 5650
-Text GLabel 4050 5650 2    50   Input ~ 0
+Text GLabel 4050 5650 2    39   3State ~ 0
 TAP_~VRD~
-Text GLabel 4050 5750 2    50   Input ~ 0
+Text GLabel 4050 5750 2    39   3State ~ 0
 TAP_~VAWR~
-Text GLabel 4050 5850 2    50   Input ~ 0
+Text GLabel 4050 5850 2    39   3State ~ 0
 TAP_~VBWR~
 Wire Wire Line
 	4050 5650 3650 5650
@@ -1868,63 +1864,63 @@ Text Label 6850 6350 0    50   ~ 0
 VAA1
 Text Label 6850 6450 0    50   ~ 0
 VAA0
-Text GLabel 7150 3450 2    50   Input ~ 0
+Text GLabel 7150 3450 2    50   BiDi ~ 0
 TAP_VA14
-Text GLabel 7150 3650 2    50   Input ~ 0
+Text GLabel 7150 3650 2    50   BiDi ~ 0
 TAP_VAB13
-Text GLabel 7150 3750 2    50   Input ~ 0
+Text GLabel 7150 3750 2    50   BiDi ~ 0
 TAP_VAB12
-Text GLabel 7150 3850 2    50   Input ~ 0
+Text GLabel 7150 3850 2    50   BiDi ~ 0
 TAP_VAB11
-Text GLabel 7150 3950 2    50   Input ~ 0
+Text GLabel 7150 3950 2    50   BiDi ~ 0
 TAP_VAB10
-Text GLabel 7150 4050 2    50   Input ~ 0
+Text GLabel 7150 4050 2    50   BiDi ~ 0
 TAP_VAB9
-Text GLabel 7150 4150 2    50   Input ~ 0
+Text GLabel 7150 4150 2    50   BiDi ~ 0
 TAP_VAB8
-Text GLabel 7150 4250 2    50   Input ~ 0
+Text GLabel 7150 4250 2    50   BiDi ~ 0
 TAP_VAB7
-Text GLabel 7150 4350 2    50   Input ~ 0
+Text GLabel 7150 4350 2    50   BiDi ~ 0
 TAP_VAB6
-Text GLabel 7150 4450 2    50   Input ~ 0
+Text GLabel 7150 4450 2    50   BiDi ~ 0
 TAP_VAB5
-Text GLabel 7150 4550 2    50   Input ~ 0
+Text GLabel 7150 4550 2    50   BiDi ~ 0
 TAP_VAB4
-Text GLabel 7150 4650 2    50   Input ~ 0
+Text GLabel 7150 4650 2    50   BiDi ~ 0
 TAP_VAB3
-Text GLabel 7150 4750 2    50   Input ~ 0
+Text GLabel 7150 4750 2    50   BiDi ~ 0
 TAP_VAB2
-Text GLabel 7150 4850 2    50   Input ~ 0
+Text GLabel 7150 4850 2    50   BiDi ~ 0
 TAP_VAB1
-Text GLabel 7150 4950 2    50   Input ~ 0
+Text GLabel 7150 4950 2    50   BiDi ~ 0
 TAP_VAB0
-Text GLabel 7150 5150 2    50   Input ~ 0
+Text GLabel 7150 5150 2    50   BiDi ~ 0
 TAP_VAA13
-Text GLabel 7150 5250 2    50   Input ~ 0
+Text GLabel 7150 5250 2    50   BiDi ~ 0
 TAP_VAA12
-Text GLabel 7150 5350 2    50   Input ~ 0
+Text GLabel 7150 5350 2    50   BiDi ~ 0
 TAP_VAA11
-Text GLabel 7150 5450 2    50   Input ~ 0
+Text GLabel 7150 5450 2    50   BiDi ~ 0
 TAP_VAA10
-Text GLabel 7150 5550 2    50   Input ~ 0
+Text GLabel 7150 5550 2    50   BiDi ~ 0
 TAP_VAA9
-Text GLabel 7150 5650 2    50   Input ~ 0
+Text GLabel 7150 5650 2    50   BiDi ~ 0
 TAP_VAA8
-Text GLabel 7150 5750 2    50   Input ~ 0
+Text GLabel 7150 5750 2    50   BiDi ~ 0
 TAP_VAA7
-Text GLabel 7150 5850 2    50   Input ~ 0
+Text GLabel 7150 5850 2    50   BiDi ~ 0
 TAP_VAA6
-Text GLabel 7150 5950 2    50   Input ~ 0
+Text GLabel 7150 5950 2    50   BiDi ~ 0
 TAP_VAA5
-Text GLabel 7150 6050 2    50   Input ~ 0
+Text GLabel 7150 6050 2    50   BiDi ~ 0
 TAP_VAA4
-Text GLabel 7150 6150 2    50   Input ~ 0
+Text GLabel 7150 6150 2    50   BiDi ~ 0
 TAP_VAA3
-Text GLabel 7150 6250 2    50   Input ~ 0
+Text GLabel 7150 6250 2    50   BiDi ~ 0
 TAP_VAA2
-Text GLabel 7150 6350 2    50   Input ~ 0
+Text GLabel 7150 6350 2    50   BiDi ~ 0
 TAP_VAA1
-Text GLabel 7150 6450 2    50   Input ~ 0
+Text GLabel 7150 6450 2    50   BiDi ~ 0
 TAP_VAA0
 Text Label 7850 2300 0    50   ~ 0
 INTER_PPU_BUS
@@ -2030,37 +2026,37 @@ Text Label 9650 8850 2    50   ~ 0
 VDA1
 Text Label 9650 8950 2    50   ~ 0
 VDA0
-Text GLabel 9350 7350 0    50   Input ~ 0
+Text GLabel 9350 7350 0    50   BiDi ~ 0
 TAP_VDB7
-Text GLabel 9350 7450 0    50   Input ~ 0
+Text GLabel 9350 7450 0    50   BiDi ~ 0
 TAP_VDB6
-Text GLabel 9350 7550 0    50   Input ~ 0
+Text GLabel 9350 7550 0    50   BiDi ~ 0
 TAP_VDB5
-Text GLabel 9350 7650 0    50   Input ~ 0
+Text GLabel 9350 7650 0    50   BiDi ~ 0
 TAP_VDB4
-Text GLabel 9350 7750 0    50   Input ~ 0
+Text GLabel 9350 7750 0    50   BiDi ~ 0
 TAP_VDB3
-Text GLabel 9350 7850 0    50   Input ~ 0
+Text GLabel 9350 7850 0    50   BiDi ~ 0
 TAP_VDB2
-Text GLabel 9350 7950 0    50   Input ~ 0
+Text GLabel 9350 7950 0    50   BiDi ~ 0
 TAP_VDB1
-Text GLabel 9350 8050 0    50   Input ~ 0
+Text GLabel 9350 8050 0    50   BiDi ~ 0
 TAP_VDB0
-Text GLabel 9350 8250 0    50   Input ~ 0
+Text GLabel 9350 8250 0    50   BiDi ~ 0
 TAP_VDA7
-Text GLabel 9350 8350 0    50   Input ~ 0
+Text GLabel 9350 8350 0    50   BiDi ~ 0
 TAP_VDA6
-Text GLabel 9350 8450 0    50   Input ~ 0
+Text GLabel 9350 8450 0    50   BiDi ~ 0
 TAP_VDA5
-Text GLabel 9350 8550 0    50   Input ~ 0
+Text GLabel 9350 8550 0    50   BiDi ~ 0
 TAP_VDA4
-Text GLabel 9350 8650 0    50   Input ~ 0
+Text GLabel 9350 8650 0    50   BiDi ~ 0
 TAP_VDA3
-Text GLabel 9350 8750 0    50   Input ~ 0
+Text GLabel 9350 8750 0    50   BiDi ~ 0
 TAP_VDA2
-Text GLabel 9350 8850 0    50   Input ~ 0
+Text GLabel 9350 8850 0    50   BiDi ~ 0
 TAP_VDA1
-Text GLabel 9350 8950 0    50   Input ~ 0
+Text GLabel 9350 8950 0    50   BiDi ~ 0
 TAP_TDA0
 Wire Wire Line
 	11000 1850 11000 3450
@@ -2216,4 +2212,8 @@ Wire Bus Line
 	8050 3100 8050 6850
 Wire Bus Line
 	9850 4050 9850 9100
+Text GLabel 10700 1850 0    50   BiDi ~ 0
+TAP_PPU2_~RESET~
+Text GLabel 5300 5250 0    50   Input ~ 0
+TAP_PPU1_~EXTSYNC~
 $EndSCHEMATC
