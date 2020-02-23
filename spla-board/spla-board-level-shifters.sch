@@ -13,6 +13,1168 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 4250 3750 0    101  ~ 0
-TODO: Add lots (17?) of 74LVC245ABQ here
+Text GLabel 2200 1650 2    39   Output ~ 0
+TAP_~PAWR~
+Text GLabel 2200 1550 2    39   Output ~ 0
+TAP_~PARD~
+Text GLabel 1400 1550 0    39   Input ~ 0
+FPGA_~PARD~
+Text GLabel 1400 1050 0    50   Input ~ 0
+LVL_CTL_OE
+Text GLabel 1400 1650 0    39   Input ~ 0
+FPGA_~PAWR~
+$Comp
+L power:+3V3 #PWR0133
+U 1 1 5E54ED05
+P 1700 750
+F 0 "#PWR0133" H 1700 600 50  0001 C CNN
+F 1 "+3V3" H 1715 923 50  0000 C CNN
+F 2 "" H 1700 750 50  0001 C CNN
+F 3 "" H 1700 750 50  0001 C CNN
+	1    1700 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0134
+U 1 1 5E54F123
+P 1900 750
+F 0 "#PWR0134" H 1900 600 50  0001 C CNN
+F 1 "+5V" H 1915 923 50  0000 C CNN
+F 2 "" H 1900 750 50  0001 C CNN
+F 3 "" H 1900 750 50  0001 C CNN
+	1    1900 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E550799
+P 1500 6850
+F 0 "U?" H 1500 6061 50  0000 C CNN
+F 1 "TXS0108EPW" H 1500 5970 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 1500 6100 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 1500 6750 50  0001 C CNN
+	1    1500 6850
+	1    0    0    -1  
+$EndComp
+Text GLabel 1900 7250 2    50   BiDi ~ 0
+TAP_D7
+Text GLabel 1900 7150 2    50   BiDi ~ 0
+TAP_D6
+Text GLabel 1900 7050 2    50   BiDi ~ 0
+TAP_D5
+Text GLabel 1900 6950 2    50   BiDi ~ 0
+TAP_D4
+Text GLabel 1900 6850 2    50   BiDi ~ 0
+TAP_D3
+Text GLabel 1900 6750 2    50   BiDi ~ 0
+TAP_D2
+Text GLabel 1900 6650 2    50   BiDi ~ 0
+TAP_D1
+Text GLabel 1900 6550 2    50   BiDi ~ 0
+TAP_D0
+Text GLabel 1100 6550 0    50   BiDi ~ 0
+FPGA_D0
+Text GLabel 1100 6450 0    50   Input ~ 0
+LVL_PD_OE
+Text GLabel 1100 6650 0    50   BiDi ~ 0
+FPGA_D1
+Text GLabel 1100 6750 0    50   BiDi ~ 0
+FPGA_D2
+Text GLabel 1100 6850 0    50   BiDi ~ 0
+FPGA_D3
+Text GLabel 1100 6950 0    50   BiDi ~ 0
+FPGA_D4
+Text GLabel 1100 7050 0    50   BiDi ~ 0
+FPGA_D5
+Text GLabel 1100 7150 0    50   BiDi ~ 0
+FPGA_D6
+Text GLabel 1100 7250 0    50   BiDi ~ 0
+FPGA_D7
+$Comp
+L power:+3V3 #PWR0135
+U 1 1 5E5507B4
+P 1400 6150
+F 0 "#PWR0135" H 1400 6000 50  0001 C CNN
+F 1 "+3V3" H 1415 6323 50  0000 C CNN
+F 2 "" H 1400 6150 50  0001 C CNN
+F 3 "" H 1400 6150 50  0001 C CNN
+	1    1400 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0136
+U 1 1 5E5507BE
+P 1600 6150
+F 0 "#PWR0136" H 1600 6000 50  0001 C CNN
+F 1 "+5V" H 1615 6323 50  0000 C CNN
+F 2 "" H 1600 6150 50  0001 C CNN
+F 3 "" H 1600 6150 50  0001 C CNN
+	1    1600 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E55EB1D
+P 1500 4850
+F 0 "U?" H 1500 4061 50  0000 C CNN
+F 1 "TXS0108EPW" H 1500 3970 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 1500 4100 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 1500 4750 50  0001 C CNN
+	1    1500 4850
+	1    0    0    -1  
+$EndComp
+Text GLabel 1900 5250 2    50   Output ~ 0
+TAP_PA7
+Text GLabel 1900 5150 2    50   Output ~ 0
+TAP_PA6
+Text GLabel 1900 5050 2    50   Output ~ 0
+TAP_PA5
+Text GLabel 1900 4950 2    50   Output ~ 0
+TAP_PA4
+Text GLabel 1900 4850 2    50   Output ~ 0
+TAP_PA3
+Text GLabel 1900 4750 2    50   Output ~ 0
+TAP_PA2
+Text GLabel 1900 4650 2    50   Output ~ 0
+TAP_PA1
+Text GLabel 1900 4550 2    50   Output ~ 0
+TAP_PA0
+Text GLabel 1100 4550 0    50   Input ~ 0
+FPGA_PA0
+Text GLabel 1100 4450 0    50   Input ~ 0
+LVL_PA_OE
+Text GLabel 1100 4650 0    50   Input ~ 0
+FPGA_PA1
+Text GLabel 1100 4750 0    50   Input ~ 0
+FPGA_PA2
+Text GLabel 1100 4850 0    50   Input ~ 0
+FPGA_PA3
+Text GLabel 1100 4950 0    50   Input ~ 0
+FPGA_PA4
+Text GLabel 1100 5050 0    50   Input ~ 0
+FPGA_PA5
+Text GLabel 1100 5150 0    50   Input ~ 0
+FPGA_PA6
+Text GLabel 1100 5250 0    50   Input ~ 0
+FPGA_PA7
+$Comp
+L power:+3V3 #PWR0137
+U 1 1 5E55EB38
+P 1400 4150
+F 0 "#PWR0137" H 1400 4000 50  0001 C CNN
+F 1 "+3V3" H 1415 4323 50  0000 C CNN
+F 2 "" H 1400 4150 50  0001 C CNN
+F 3 "" H 1400 4150 50  0001 C CNN
+	1    1400 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0138
+U 1 1 5E55EB42
+P 1600 4150
+F 0 "#PWR0138" H 1600 4000 50  0001 C CNN
+F 1 "+5V" H 1615 4323 50  0000 C CNN
+F 2 "" H 1600 4150 50  0001 C CNN
+F 3 "" H 1600 4150 50  0001 C CNN
+	1    1600 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E56FCA9
+P 5800 4950
+F 0 "U?" H 5800 4161 50  0000 C CNN
+F 1 "TXS0108EPW" H 5800 4070 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5800 4200 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 5800 4850 50  0001 C CNN
+	1    5800 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0139
+U 1 1 5E56FCB3
+P 5700 4250
+F 0 "#PWR0139" H 5700 4100 50  0001 C CNN
+F 1 "+3V3" H 5715 4423 50  0000 C CNN
+F 2 "" H 5700 4250 50  0001 C CNN
+F 3 "" H 5700 4250 50  0001 C CNN
+	1    5700 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0140
+U 1 1 5E56FCBD
+P 5900 4250
+F 0 "#PWR0140" H 5900 4100 50  0001 C CNN
+F 1 "+5V" H 5915 4423 50  0000 C CNN
+F 2 "" H 5900 4250 50  0001 C CNN
+F 3 "" H 5900 4250 50  0001 C CNN
+	1    5900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E517B3B
+P 1800 1450
+F 0 "U?" H 1800 661 50  0000 C CNN
+F 1 "TXS0108EPW" H 1800 570 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 1800 700 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 1800 1350 50  0001 C CNN
+	1    1800 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0141
+U 1 1 5E5914FA
+P 2200 2150
+F 0 "#PWR0141" H 2200 1900 50  0001 C CNN
+F 1 "GND" H 2205 1977 50  0000 C CNN
+F 2 "" H 2200 2150 50  0001 C CNN
+F 3 "" H 2200 2150 50  0001 C CNN
+	1    2200 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2150 1800 2150
+$Comp
+L power:GND #PWR0142
+U 1 1 5E594B43
+P 1900 5550
+F 0 "#PWR0142" H 1900 5300 50  0001 C CNN
+F 1 "GND" H 1905 5377 50  0000 C CNN
+F 2 "" H 1900 5550 50  0001 C CNN
+F 3 "" H 1900 5550 50  0001 C CNN
+	1    1900 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5550 1500 5550
+$Comp
+L power:GND #PWR0143
+U 1 1 5E598793
+P 6200 5650
+F 0 "#PWR0143" H 6200 5400 50  0001 C CNN
+F 1 "GND" H 6205 5477 50  0000 C CNN
+F 2 "" H 6200 5650 50  0001 C CNN
+F 3 "" H 6200 5650 50  0001 C CNN
+	1    6200 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 5650 5800 5650
+$Comp
+L power:GND #PWR0144
+U 1 1 5E59DE48
+P 1900 7550
+F 0 "#PWR0144" H 1900 7300 50  0001 C CNN
+F 1 "GND" H 1905 7377 50  0000 C CNN
+F 2 "" H 1900 7550 50  0001 C CNN
+F 3 "" H 1900 7550 50  0001 C CNN
+	1    1900 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 7550 1500 7550
+Text GLabel 6200 4650 2    50   BiDi ~ 0
+TAP_VAB0
+Text GLabel 6200 4750 2    50   BiDi ~ 0
+TAP_VAB1
+Text GLabel 6200 4850 2    50   BiDi ~ 0
+TAP_VAB2
+Text GLabel 6200 4950 2    50   BiDi ~ 0
+TAP_VAB3
+Text GLabel 6200 5050 2    50   BiDi ~ 0
+TAP_VAB4
+Text GLabel 6200 5150 2    50   BiDi ~ 0
+TAP_VAB5
+Text GLabel 6200 5250 2    50   BiDi ~ 0
+TAP_VAB6
+Text GLabel 6200 5350 2    50   BiDi ~ 0
+TAP_VAB7
+Text GLabel 5400 4650 0    50   BiDi ~ 0
+FPGA_VAB0
+Text GLabel 5400 4750 0    50   BiDi ~ 0
+FPGA_VAB1
+Text GLabel 5400 4850 0    50   BiDi ~ 0
+FPGA_VAB2
+Text GLabel 5400 4950 0    50   BiDi ~ 0
+FPGA_VAB3
+Text GLabel 5400 5050 0    50   BiDi ~ 0
+FPGA_VAB4
+Text GLabel 5400 5150 0    50   BiDi ~ 0
+FPGA_VAB5
+Text GLabel 5400 5250 0    50   BiDi ~ 0
+FPGA_VAB6
+Text GLabel 5400 5350 0    50   BiDi ~ 0
+FPGA_VAB7
+Text GLabel 5400 4550 0    50   BiDi ~ 0
+FPGA_VA_OE
+Wire Notes Line
+	2500 3650 2500 7800
+Text Notes 1250 3800 0    50   ~ 0
+Periphreal Bus
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E5C1563
+P 3750 4950
+F 0 "U?" H 3750 4161 50  0000 C CNN
+F 1 "TXS0108EPW" H 3750 4070 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 3750 4200 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 3750 4850 50  0001 C CNN
+	1    3750 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0145
+U 1 1 5E5C156D
+P 3650 4250
+F 0 "#PWR0145" H 3650 4100 50  0001 C CNN
+F 1 "+3V3" H 3665 4423 50  0000 C CNN
+F 2 "" H 3650 4250 50  0001 C CNN
+F 3 "" H 3650 4250 50  0001 C CNN
+	1    3650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0146
+U 1 1 5E5C1577
+P 3850 4250
+F 0 "#PWR0146" H 3850 4100 50  0001 C CNN
+F 1 "+5V" H 3865 4423 50  0000 C CNN
+F 2 "" H 3850 4250 50  0001 C CNN
+F 3 "" H 3850 4250 50  0001 C CNN
+	1    3850 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0147
+U 1 1 5E5C1581
+P 4150 5650
+F 0 "#PWR0147" H 4150 5400 50  0001 C CNN
+F 1 "GND" H 4155 5477 50  0000 C CNN
+F 2 "" H 4150 5650 50  0001 C CNN
+F 3 "" H 4150 5650 50  0001 C CNN
+	1    4150 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5650 3750 5650
+Text GLabel 4150 4650 2    50   BiDi ~ 0
+TAP_VAA0
+Text GLabel 4150 4750 2    50   BiDi ~ 0
+TAP_VAA1
+Text GLabel 4150 4850 2    50   BiDi ~ 0
+TAP_VAA2
+Text GLabel 4150 4950 2    50   BiDi ~ 0
+TAP_VAA3
+Text GLabel 4150 5050 2    50   BiDi ~ 0
+TAP_VAA4
+Text GLabel 4150 5150 2    50   BiDi ~ 0
+TAP_VAA5
+Text GLabel 4150 5250 2    50   BiDi ~ 0
+TAP_VAA6
+Text GLabel 4150 5350 2    50   BiDi ~ 0
+TAP_VAA7
+Text GLabel 3350 4650 0    50   BiDi ~ 0
+FPGA_VAA0
+Text GLabel 3350 4750 0    50   BiDi ~ 0
+FPGA_VAA1
+Text GLabel 3350 4850 0    50   BiDi ~ 0
+FPGA_VAA2
+Text GLabel 3350 4950 0    50   BiDi ~ 0
+FPGA_VAA3
+Text GLabel 3350 5050 0    50   BiDi ~ 0
+FPGA_VAA4
+Text GLabel 3350 5150 0    50   BiDi ~ 0
+FPGA_VAA5
+Text GLabel 3350 5250 0    50   BiDi ~ 0
+FPGA_VAA6
+Text GLabel 3350 5350 0    50   BiDi ~ 0
+FPGA_VAA7
+Text GLabel 3350 4550 0    50   BiDi ~ 0
+FPGA_VA_OE
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E5CA87C
+P 3750 6850
+F 0 "U?" H 3750 6061 50  0000 C CNN
+F 1 "TXS0108EPW" H 3750 5970 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 3750 6100 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 3750 6750 50  0001 C CNN
+	1    3750 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0148
+U 1 1 5E5CA886
+P 3650 6150
+F 0 "#PWR0148" H 3650 6000 50  0001 C CNN
+F 1 "+3V3" H 3665 6323 50  0000 C CNN
+F 2 "" H 3650 6150 50  0001 C CNN
+F 3 "" H 3650 6150 50  0001 C CNN
+	1    3650 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0149
+U 1 1 5E5CA890
+P 3850 6150
+F 0 "#PWR0149" H 3850 6000 50  0001 C CNN
+F 1 "+5V" H 3865 6323 50  0000 C CNN
+F 2 "" H 3850 6150 50  0001 C CNN
+F 3 "" H 3850 6150 50  0001 C CNN
+	1    3850 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0150
+U 1 1 5E5CA89A
+P 4150 7550
+F 0 "#PWR0150" H 4150 7300 50  0001 C CNN
+F 1 "GND" H 4155 7377 50  0000 C CNN
+F 2 "" H 4150 7550 50  0001 C CNN
+F 3 "" H 4150 7550 50  0001 C CNN
+	1    4150 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 7550 3750 7550
+Text GLabel 4150 6550 2    50   BiDi ~ 0
+TAP_VAA8
+Text GLabel 4150 6650 2    50   BiDi ~ 0
+TAP_VAA9
+Text GLabel 4150 6750 2    50   BiDi ~ 0
+TAP_VAA10
+Text GLabel 4150 6850 2    50   BiDi ~ 0
+TAP_VAA11
+Text GLabel 4150 6950 2    50   BiDi ~ 0
+TAP_VAA12
+Text GLabel 4150 7050 2    50   BiDi ~ 0
+TAP_VAA13
+Text GLabel 4150 7150 2    50   BiDi ~ 0
+TAP_VA14
+Text GLabel 3350 6550 0    50   BiDi ~ 0
+FPGA_VAA8
+Text GLabel 3350 6650 0    50   BiDi ~ 0
+FPGA_VAA9
+Text GLabel 3350 6750 0    50   BiDi ~ 0
+FPGA_VAA10
+Text GLabel 3350 6850 0    50   BiDi ~ 0
+FPGA_VAA11
+Text GLabel 3350 6950 0    50   BiDi ~ 0
+FPGA_VAA12
+Text GLabel 3350 7050 0    50   BiDi ~ 0
+FPGA_VAA13
+Text GLabel 3350 7150 0    50   BiDi ~ 0
+FPGA_VA14
+Text GLabel 3350 6450 0    50   BiDi ~ 0
+FPGA_VA_OE
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E5DCE42
+P 5800 6850
+F 0 "U?" H 5800 6061 50  0000 C CNN
+F 1 "TXS0108EPW" H 5800 5970 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5800 6100 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 5800 6750 50  0001 C CNN
+	1    5800 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0151
+U 1 1 5E5DCE4C
+P 5700 6150
+F 0 "#PWR0151" H 5700 6000 50  0001 C CNN
+F 1 "+3V3" H 5715 6323 50  0000 C CNN
+F 2 "" H 5700 6150 50  0001 C CNN
+F 3 "" H 5700 6150 50  0001 C CNN
+	1    5700 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0152
+U 1 1 5E5DCE56
+P 5900 6150
+F 0 "#PWR0152" H 5900 6000 50  0001 C CNN
+F 1 "+5V" H 5915 6323 50  0000 C CNN
+F 2 "" H 5900 6150 50  0001 C CNN
+F 3 "" H 5900 6150 50  0001 C CNN
+	1    5900 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0153
+U 1 1 5E5DCE60
+P 6200 7550
+F 0 "#PWR0153" H 6200 7300 50  0001 C CNN
+F 1 "GND" H 6205 7377 50  0000 C CNN
+F 2 "" H 6200 7550 50  0001 C CNN
+F 3 "" H 6200 7550 50  0001 C CNN
+	1    6200 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 7550 5800 7550
+Text GLabel 6200 6550 2    50   BiDi ~ 0
+TAP_VAB8
+Text GLabel 6200 6650 2    50   BiDi ~ 0
+TAP_VAB9
+Text GLabel 6200 6750 2    50   BiDi ~ 0
+TAP_VAB10
+Text GLabel 6200 6850 2    50   BiDi ~ 0
+TAP_VAB11
+Text GLabel 6200 6950 2    50   BiDi ~ 0
+TAP_VAB12
+Text GLabel 6200 7050 2    50   BiDi ~ 0
+TAP_VAB13
+Text GLabel 5400 6550 0    50   BiDi ~ 0
+FPGA_VAB8
+Text GLabel 5400 6650 0    50   BiDi ~ 0
+FPGA_VAB9
+Text GLabel 5400 6750 0    50   BiDi ~ 0
+FPGA_VAB10
+Text GLabel 5400 6850 0    50   BiDi ~ 0
+FPGA_VAB11
+Text GLabel 5400 6950 0    50   BiDi ~ 0
+FPGA_VAB12
+Text GLabel 5400 7050 0    50   BiDi ~ 0
+FPGA_VAB13
+Text GLabel 5400 6450 0    50   BiDi ~ 0
+FPGA_VA_OE
+Text Notes 4300 3800 0    50   ~ 0
+VRAM Address Bus
+Text GLabel 3350 7250 0    39   BiDi ~ 0
+FGPA_~VRD~
+Text GLabel 4150 7250 2    39   BiDi ~ 0
+TAP_~VRD~
+Text GLabel 5400 7150 0    39   BiDi ~ 0
+FPGA_~VAWR~
+Text GLabel 5400 7250 0    39   BiDi ~ 0
+FPGA_~VBWR~
+Text GLabel 6200 7150 2    39   BiDi ~ 0
+TAP_~VAWR~
+Text GLabel 6200 7250 2    39   BiDi ~ 0
+TAP_~VBWR~
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E61780A
+P 8100 5500
+F 0 "U?" H 8100 4711 50  0000 C CNN
+F 1 "TXS0108EPW" H 8100 4620 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 8100 4750 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 8100 5400 50  0001 C CNN
+	1    8100 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0154
+U 1 1 5E617814
+P 8000 4800
+F 0 "#PWR0154" H 8000 4650 50  0001 C CNN
+F 1 "+3V3" H 8015 4973 50  0000 C CNN
+F 2 "" H 8000 4800 50  0001 C CNN
+F 3 "" H 8000 4800 50  0001 C CNN
+	1    8000 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0155
+U 1 1 5E61781E
+P 8200 4800
+F 0 "#PWR0155" H 8200 4650 50  0001 C CNN
+F 1 "+5V" H 8215 4973 50  0000 C CNN
+F 2 "" H 8200 4800 50  0001 C CNN
+F 3 "" H 8200 4800 50  0001 C CNN
+	1    8200 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0156
+U 1 1 5E617828
+P 8500 6200
+F 0 "#PWR0156" H 8500 5950 50  0001 C CNN
+F 1 "GND" H 8505 6027 50  0000 C CNN
+F 2 "" H 8500 6200 50  0001 C CNN
+F 3 "" H 8500 6200 50  0001 C CNN
+	1    8500 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 6200 8100 6200
+Text GLabel 10500 5200 2    50   BiDi ~ 0
+TAP_VDB0
+Text GLabel 10500 5300 2    50   BiDi ~ 0
+TAP_VDB1
+Text GLabel 10500 5400 2    50   BiDi ~ 0
+TAP_VDB2
+Text GLabel 10500 5500 2    50   BiDi ~ 0
+TAP_VDB3
+Text GLabel 10500 5600 2    50   BiDi ~ 0
+TAP_VDB4
+Text GLabel 10500 5700 2    50   BiDi ~ 0
+TAP_VDB5
+Text GLabel 10500 5800 2    50   BiDi ~ 0
+TAP_VDB6
+Text GLabel 10500 5900 2    50   BiDi ~ 0
+TAP_VDB7
+Text GLabel 9700 5200 0    50   BiDi ~ 0
+FPGA_VDB0
+Text GLabel 9700 5300 0    50   BiDi ~ 0
+FPGA_VDB1
+Text GLabel 9700 5400 0    50   BiDi ~ 0
+FPGA_VDB2
+Text GLabel 9700 5500 0    50   BiDi ~ 0
+FPGA_VDB3
+Text GLabel 9700 5600 0    50   BiDi ~ 0
+FPGA_VDB4
+Text GLabel 9700 5700 0    50   BiDi ~ 0
+FPGA_VDB5
+Text GLabel 9700 5800 0    50   BiDi ~ 0
+FPGA_VDB6
+Text GLabel 9700 5900 0    50   BiDi ~ 0
+FPGA_VDB7
+Text GLabel 9700 5100 0    50   Input ~ 0
+FPGA_VD_OE
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E61D896
+P 10100 5500
+F 0 "U?" H 10100 4711 50  0000 C CNN
+F 1 "TXS0108EPW" H 10100 4620 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 10100 4750 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 10100 5400 50  0001 C CNN
+	1    10100 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0157
+U 1 1 5E61D8A0
+P 10000 4800
+F 0 "#PWR0157" H 10000 4650 50  0001 C CNN
+F 1 "+3V3" H 10015 4973 50  0000 C CNN
+F 2 "" H 10000 4800 50  0001 C CNN
+F 3 "" H 10000 4800 50  0001 C CNN
+	1    10000 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0158
+U 1 1 5E61D8AA
+P 10200 4800
+F 0 "#PWR0158" H 10200 4650 50  0001 C CNN
+F 1 "+5V" H 10215 4973 50  0000 C CNN
+F 2 "" H 10200 4800 50  0001 C CNN
+F 3 "" H 10200 4800 50  0001 C CNN
+	1    10200 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0159
+U 1 1 5E61D8B4
+P 10500 6200
+F 0 "#PWR0159" H 10500 5950 50  0001 C CNN
+F 1 "GND" H 10505 6027 50  0000 C CNN
+F 2 "" H 10500 6200 50  0001 C CNN
+F 3 "" H 10500 6200 50  0001 C CNN
+	1    10500 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 6200 10100 6200
+Text GLabel 8500 5200 2    50   BiDi ~ 0
+TAP_VDA0
+Text GLabel 8500 5300 2    50   BiDi ~ 0
+TAP_VDA1
+Text GLabel 8500 5400 2    50   BiDi ~ 0
+TAP_VDA2
+Text GLabel 8500 5500 2    50   BiDi ~ 0
+TAP_VDA3
+Text GLabel 8500 5600 2    50   BiDi ~ 0
+TAP_VDA4
+Text GLabel 8500 5700 2    50   BiDi ~ 0
+TAP_VDA5
+Text GLabel 8500 5800 2    50   BiDi ~ 0
+TAP_VDA6
+Text GLabel 8500 5900 2    50   BiDi ~ 0
+TAP_VDA7
+Text GLabel 7700 5200 0    50   BiDi ~ 0
+FPGA_VDA0
+Text GLabel 7700 5300 0    50   BiDi ~ 0
+FPGA_VDA1
+Text GLabel 7700 5400 0    50   BiDi ~ 0
+FPGA_VDA2
+Text GLabel 7700 5500 0    50   BiDi ~ 0
+FPGA_VDA3
+Text GLabel 7700 5600 0    50   BiDi ~ 0
+FPGA_VDA4
+Text GLabel 7700 5700 0    50   BiDi ~ 0
+FPGA_VDA5
+Text GLabel 7700 5800 0    50   BiDi ~ 0
+FPGA_VDA6
+Text GLabel 7700 5900 0    50   BiDi ~ 0
+FPGA_VDA7
+Text GLabel 7700 5100 0    50   Input ~ 0
+FPGA_VD_OE
+Wire Notes Line
+	7000 4450 11200 4450
+Text Notes 8700 4600 0    50   ~ 0
+VRAM Data Bus
+Text GLabel 9550 1150 0    50   Output ~ 0
+FPGA_CHR3
+Text GLabel 9550 1050 0    50   Input ~ 0
+LVL_PPUBUS_OE
+$Comp
+L power:+3V3 #PWR0160
+U 1 1 5E65F4F9
+P 9850 750
+F 0 "#PWR0160" H 9850 600 50  0001 C CNN
+F 1 "+3V3" H 9865 923 50  0000 C CNN
+F 2 "" H 9850 750 50  0001 C CNN
+F 3 "" H 9850 750 50  0001 C CNN
+	1    9850 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0161
+U 1 1 5E65F503
+P 10050 750
+F 0 "#PWR0161" H 10050 600 50  0001 C CNN
+F 1 "+5V" H 10065 923 50  0000 C CNN
+F 2 "" H 10050 750 50  0001 C CNN
+F 3 "" H 10050 750 50  0001 C CNN
+	1    10050 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E65F50D
+P 9950 1450
+F 0 "U?" H 9950 661 50  0000 C CNN
+F 1 "TXS0108EPW" H 9950 570 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 9950 700 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 9950 1350 50  0001 C CNN
+	1    9950 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0162
+U 1 1 5E65F517
+P 10350 2150
+F 0 "#PWR0162" H 10350 1900 50  0001 C CNN
+F 1 "GND" H 10355 1977 50  0000 C CNN
+F 2 "" H 10350 2150 50  0001 C CNN
+F 3 "" H 10350 2150 50  0001 C CNN
+	1    10350 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 2150 9950 2150
+Text GLabel 10350 1150 2    50   Input ~ 0
+TAP_CHR3
+Text GLabel 10350 1250 2    50   Input ~ 0
+TAP_CHR2
+Text GLabel 10350 1350 2    50   Input ~ 0
+TAP_CHR1
+Text GLabel 10350 1450 2    50   Input ~ 0
+TAP_CHR0
+Text GLabel 9550 1250 0    50   Output ~ 0
+FPGA_CHR2
+Text GLabel 9550 1350 0    50   Output ~ 0
+FPGA_CHR1
+Text GLabel 9550 1450 0    50   Output ~ 0
+FPGA_CHR0
+Text GLabel 10350 1750 2    50   Input ~ 0
+TAP_COLOR2
+Text GLabel 10350 1850 2    50   Input ~ 0
+TAP_COLOR1
+Text GLabel 10350 3100 2    50   Input ~ 0
+TAP_COLOR0
+Text GLabel 9550 1750 0    50   Output ~ 0
+FPGA_COLOR2
+Text GLabel 9550 1850 0    50   Output ~ 0
+FPGA_COLOR1
+Text GLabel 9550 3100 0    50   Output ~ 0
+FPGA_COLOR0
+Text GLabel 9550 1550 0    50   Output ~ 0
+FPGA_PRIO1
+Text GLabel 9550 1650 0    50   Output ~ 0
+FPGA_PRIO0
+Text GLabel 10350 1650 2    50   Input ~ 0
+TAP_PRIO1
+Text GLabel 10350 1550 2    50   Input ~ 0
+TAP_PRIO0
+$Comp
+L power:+3V3 #PWR0163
+U 1 1 5E66CF51
+P 9850 2700
+F 0 "#PWR0163" H 9850 2550 50  0001 C CNN
+F 1 "+3V3" H 9865 2873 50  0000 C CNN
+F 2 "" H 9850 2700 50  0001 C CNN
+F 3 "" H 9850 2700 50  0001 C CNN
+	1    9850 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0164
+U 1 1 5E66CF5B
+P 10050 2700
+F 0 "#PWR0164" H 10050 2550 50  0001 C CNN
+F 1 "+5V" H 10065 2873 50  0000 C CNN
+F 2 "" H 10050 2700 50  0001 C CNN
+F 3 "" H 10050 2700 50  0001 C CNN
+	1    10050 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0165
+U 1 1 5E66CF6F
+P 10350 4100
+F 0 "#PWR0165" H 10350 3850 50  0001 C CNN
+F 1 "GND" H 10355 3927 50  0000 C CNN
+F 2 "" H 10350 4100 50  0001 C CNN
+F 3 "" H 10350 4100 50  0001 C CNN
+	1    10350 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 4100 9950 4100
+Text GLabel 9550 3000 0    50   Input ~ 0
+LVL_PPUBUS_OE
+Text GLabel 9550 3200 0    39   Output ~ 0
+FPGA_~VCLD~
+Text GLabel 10350 3200 2    39   Input ~ 0
+TAP_~VCLD~
+Text GLabel 10350 3300 2    39   Input ~ 0
+TAP_~HCLD~
+Text GLabel 9550 3300 0    39   Output ~ 0
+FPGA_~HCLD
+Text GLabel 9550 3400 0    50   Output ~ 0
+FPGA_FIELD
+Text GLabel 10350 3400 2    50   Input ~ 0
+TAP_FIELD
+Text GLabel 10350 3500 2    39   Input ~ 0
+TAP_~OVER~
+Text GLabel 9550 3500 0    39   Output ~ 0
+FPGA_~OVER~
+Text GLabel 9550 3600 0    39   Output ~ 0
+FPGA_~5M~
+Text GLabel 10350 3600 2    39   Input ~ 0
+TAP_~5M~
+Text GLabel 1400 1750 0    50   Output ~ 0
+FPGA_PPU2_HBLANK
+Text GLabel 1400 1850 0    50   Output ~ 0
+FPGA_PPU2_VBLANK
+Text GLabel 2200 1750 2    50   Input ~ 0
+TAP_PPU2_HBLANK
+Text GLabel 2200 1850 2    50   Input ~ 0
+TAP_PPU2_VBLANK
+Text GLabel 2200 1250 2    39   Output ~ 0
+TAP_PPU2_~RESET~
+Text GLabel 2200 1350 2    39   Input ~ 0
+TAP_PPU2_~RESOUT0~
+Text GLabel 2200 1450 2    39   Input ~ 0
+TAP_PPU2_~RESOUT1~
+Text GLabel 2200 1150 2    39   Output ~ 0
+TAP_PPU1_~RESET~
+Text GLabel 1400 1250 0    39   Input ~ 0
+FPGA_PPU2_~RESET~
+Text GLabel 1400 1150 0    39   Input ~ 0
+FPGA_PPU1_~RESET~
+Text GLabel 1400 1350 0    39   Output ~ 0
+FPGA_PPU2_~RESOUT0~
+Text GLabel 1400 1450 0    39   Output ~ 0
+FPGA_PPU2_~RESOUT1~
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E6DACB9
+P 7250 750
+F 0 "#PWR?" H 7250 600 50  0001 C CNN
+F 1 "+3V3" H 7265 923 50  0000 C CNN
+F 2 "" H 7250 750 50  0001 C CNN
+F 3 "" H 7250 750 50  0001 C CNN
+	1    7250 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E6DACC3
+P 7450 750
+F 0 "#PWR?" H 7450 600 50  0001 C CNN
+F 1 "+5V" H 7465 923 50  0000 C CNN
+F 2 "" H 7450 750 50  0001 C CNN
+F 3 "" H 7450 750 50  0001 C CNN
+	1    7450 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E6DACCD
+P 7350 1450
+F 0 "U?" H 7350 661 50  0000 C CNN
+F 1 "TXS0108EPW" H 7350 570 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 7350 700 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 7350 1350 50  0001 C CNN
+	1    7350 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E6DACD7
+P 7750 2150
+F 0 "#PWR?" H 7750 1900 50  0001 C CNN
+F 1 "GND" H 7755 1977 50  0000 C CNN
+F 2 "" H 7750 2150 50  0001 C CNN
+F 3 "" H 7750 2150 50  0001 C CNN
+	1    7750 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2150 7350 2150
+Text GLabel 6950 1050 0    50   Input ~ 0
+LVL_EXTRA_OE
+Text GLabel 6950 1150 0    39   BiDi ~ 0
+FGPA_PPU1_~EXTSYNC~
+Text GLabel 7750 1150 2    39   BiDi ~ 0
+TAP_PPU1_~EXTSYNC~
+Text GLabel 7750 1250 2    50   BiDi ~ 0
+TAP_PPU1_HVCMODE
+Text GLabel 7750 1350 2    39   BiDi ~ 0
+TAP_PPU1_~MASTER~
+Text GLabel 7750 1450 2    50   BiDi ~ 0
+TAP_PPU1_PALMODE
+Text GLabel 7750 1550 2    50   Output ~ 0
+TAP_PPU2_HVCMODE
+Text GLabel 6950 1550 0    50   Input ~ 0
+FPGA_PPU2_HVCMODE
+Text GLabel 7750 1650 2    50   BiDi ~ 0
+TAP_PPU2_EXTLATCH
+Text GLabel 7750 1750 2    50   BiDi ~ 0
+TAP_PPU2_PALMODE
+Text GLabel 6700 2900 2    39   BiDi ~ 0
+TAP_PPU2_~PED~
+Text GLabel 6700 3000 2    39   BiDi ~ 0
+TAP_PPU2_~TOUMEI~
+Text GLabel 5600 2400 2    50   Input ~ 0
+TAP_PPU2_3.58M
+Text GLabel 6950 1250 0    50   BiDi ~ 0
+FGPA_PPU1_HVCMODE
+Text GLabel 6950 1350 0    39   BiDi ~ 0
+FPGA_PPU1_~MASTER~
+Text GLabel 6950 1450 0    50   BiDi ~ 0
+TAP_PPU1_PALMODE
+Text GLabel 6950 1650 0    50   BiDi ~ 0
+TAP_PPU2_EXTLATCH
+Text GLabel 6950 1750 0    50   BiDi ~ 0
+TAP_PPU2_PALMODE
+Text GLabel 3400 2400 0    50   Output ~ 0
+FPGA_PPU2_3.58M
+Text GLabel 4300 3000 0    39   BiDi ~ 0
+FPGA_PPU2_~TOUMEI~
+Text Notes 6450 3200 0    50   ~ 0
+These pins are NC on the original board.
+Wire Notes Line
+	7000 3650 7000 6550
+Text Notes 5900 750  0    50   ~ 0
+Extra PPU1/PPU2 Signals
+Text Notes 2400 800  0    50   ~ 0
+Reset and Blanking Signals
+Text Notes 8950 2450 0    50   ~ 0
+Inter-PPU Bus\n
+Wire Notes Line
+	8700 3650 8700 500 
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FB870DE
+P 4600 1900
+F 0 "#PWR?" H 4600 1750 50  0001 C CNN
+F 1 "+3V3" H 4615 2073 50  0000 C CNN
+F 2 "" H 4600 1900 50  0001 C CNN
+F 3 "" H 4600 1900 50  0001 C CNN
+	1    4600 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FB870E8
+P 4800 1900
+F 0 "#PWR?" H 4800 1750 50  0001 C CNN
+F 1 "+5V" H 4815 2073 50  0000 C CNN
+F 2 "" H 4800 1900 50  0001 C CNN
+F 3 "" H 4800 1900 50  0001 C CNN
+	1    4800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FB870FC
+P 5100 3300
+F 0 "#PWR?" H 5100 3050 50  0001 C CNN
+F 1 "GND" H 5105 3127 50  0000 C CNN
+F 2 "" H 5100 3300 50  0001 C CNN
+F 3 "" H 5100 3300 50  0001 C CNN
+	1    5100 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3300 4700 3300
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FB90E4E
+P 5400 2100
+F 0 "TP?" H 5458 2218 50  0000 L CNN
+F 1 "TP_TAP_XIN" H 5458 2127 50  0000 L CNN
+F 2 "" H 5600 2100 50  0001 C CNN
+F 3 "~" H 5600 2100 50  0001 C CNN
+	1    5400 2100
+	1    0    0    -1  
+$EndComp
+Text GLabel 5600 2300 2    50   Output ~ 0
+TAP_XIN
+Wire Wire Line
+	5400 2100 5400 2300
+Wire Wire Line
+	3550 2300 3400 2300
+Connection ~ 3550 2300
+Wire Wire Line
+	3550 1900 3550 2300
+Wire Wire Line
+	4300 2300 3550 2300
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FB8F8FE
+P 3550 1900
+F 0 "TP?" H 3608 2018 50  0000 L CNN
+F 1 "TP_FPGA_XIN" H 3608 1927 50  0000 L CNN
+F 2 "" H 3750 1900 50  0001 C CNN
+F 3 "~" H 3750 1900 50  0001 C CNN
+	1    3550 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 2300 0    50   Input ~ 0
+FPGA_XIN
+Text GLabel 3400 2200 0    50   Input ~ 0
+LVL_MISC_OE
+Text GLabel 7750 1850 2    39   Input ~ 0
+TAP_PPU2_~5MOUT~
+Text GLabel 6950 1850 0    39   Output ~ 0
+FPGA_PPU2_~5MOUT~
+Wire Notes Line
+	500  3650 8700 3650
+NoConn ~ 9550 3700
+NoConn ~ 9550 3800
+NoConn ~ 10350 3800
+NoConn ~ 10350 3700
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5E66CF65
+P 9950 3400
+F 0 "U?" H 9950 2611 50  0000 C CNN
+F 1 "TXS0108EPW" H 9950 2520 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 9950 2650 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 9950 3300 50  0001 C CNN
+	1    9950 3400
+	1    0    0    -1  
+$EndComp
+Text Notes 4300 1550 0    50   ~ 0
+Clocks and Misc signals
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5FC2F3B2
+P 5450 2700
+F 0 "J?" H 5422 2582 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 5422 2673 50  0000 R CNN
+F 2 "" H 5450 2700 50  0001 C CNN
+F 3 "~" H 5450 2700 50  0001 C CNN
+	1    5450 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 5FB870F2
+P 4700 2600
+F 0 "U?" H 4700 1811 50  0000 C CNN
+F 1 "TXS0108EPW" H 4700 1720 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4700 1850 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 4700 2500 50  0001 C CNN
+	1    4700 2600
+	1    0    0    -1  
+$EndComp
+Text GLabel 4300 2900 0    39   BiDi ~ 0
+FPGA_PPU2_~PED~
+Text Notes 5700 2600 0    50   ~ 0
+Extra 5V signals for bodging.
+Wire Wire Line
+	5100 2500 5250 2500
+Wire Wire Line
+	5250 2600 5100 2600
+Wire Wire Line
+	5100 2700 5250 2700
+Wire Wire Line
+	5250 2800 5100 2800
+Text GLabel 4300 2800 0    50   BiDi ~ 0
+FPGA_5VBODGE1
+Text GLabel 4300 2700 0    50   BiDi ~ 0
+FPGA_5VBODGE2
+Text GLabel 4300 2600 0    50   BiDi ~ 0
+FPGA_5VBODGE3
+Text GLabel 4300 2500 0    50   BiDi ~ 0
+FPGA_5VBODGE4
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J?
+U 1 1 5F69EDDE
+P 6400 2900
+F 0 "J?" H 6450 3117 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 6450 3026 50  0000 C CNN
+F 2 "" H 6400 2900 50  0001 C CNN
+F 3 "~" H 6400 2900 50  0001 C CNN
+	1    6400 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2900 6200 2900
+Wire Wire Line
+	6200 3000 5100 3000
+Wire Wire Line
+	5100 2300 5400 2300
+Wire Wire Line
+	5400 2300 5600 2300
+Connection ~ 5400 2300
+Wire Wire Line
+	5600 2400 5250 2400
+Wire Wire Line
+	5250 2400 5250 1900
+Wire Wire Line
+	5100 2400 5250 2400
+Connection ~ 5250 2400
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FCE2D06
+P 5250 1900
+F 0 "TP?" H 5308 2018 50  0000 L CNN
+F 1 "TP_TAP_3.58M" H 5308 1927 50  0000 L CNN
+F 2 "" H 5450 1900 50  0001 C CNN
+F 3 "~" H 5450 1900 50  0001 C CNN
+	1    5250 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FCEE0F2
+P 3700 2100
+F 0 "TP?" H 3758 2218 50  0000 L CNN
+F 1 "TP_TAP_3.58M" H 3758 2127 50  0000 L CNN
+F 2 "" H 3900 2100 50  0001 C CNN
+F 3 "~" H 3900 2100 50  0001 C CNN
+	1    3700 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2400 3700 2400
+Wire Wire Line
+	3700 2100 3700 2400
+Connection ~ 3700 2400
+Wire Wire Line
+	3700 2400 3400 2400
+Wire Wire Line
+	3400 2200 4300 2200
 $EndSCHEMATC
