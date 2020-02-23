@@ -1060,10 +1060,6 @@ Text GLabel 6950 1850 0    39   Output ~ 0
 FPGA_PPU2_~5MOUT~
 Wire Notes Line
 	500  3650 8700 3650
-NoConn ~ 9550 3700
-NoConn ~ 9550 3800
-NoConn ~ 10350 3800
-NoConn ~ 10350 3700
 $Comp
 L Logic_LevelTranslator:TXS0108EPW U?
 U 1 1 5E66CF65
@@ -1177,4 +1173,12 @@ Wire Wire Line
 	3700 2400 3400 2400
 Wire Wire Line
 	3400 2200 4300 2200
+Text GLabel 9550 3700 0    39   Output ~ 0
+FPGA_~BURST~
+Text GLabel 9550 3800 0    39   Output ~ 0
+FPGA_~CSYNC~
+Text GLabel 10350 3700 2    39   Input ~ 0
+TAP_~BURST~
+Text GLabel 10350 3800 2    39   Input ~ 0
+TAP_~CSYNC~
 $EndSCHEMATC
