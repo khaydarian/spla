@@ -131,4 +131,145 @@ Wire Wire Line
 	2250 10400 2700 10400
 Wire Wire Line
 	2700 10500 2250 10500
+Wire Wire Line
+	8350 9600 8250 9600
+Connection ~ 7850 9600
+Wire Wire Line
+	7850 9600 7750 9600
+Connection ~ 7950 9600
+Wire Wire Line
+	7950 9600 7850 9600
+Connection ~ 8050 9600
+Wire Wire Line
+	8050 9600 7950 9600
+Connection ~ 8150 9600
+Wire Wire Line
+	8150 9600 8050 9600
+Connection ~ 8250 9600
+Wire Wire Line
+	8250 9600 8150 9600
+$Comp
+L power:+1V1 #PWR?
+U 1 1 5E57DE98
+P 7750 9500
+F 0 "#PWR?" H 7750 9350 50  0001 C CNN
+F 1 "+1V1" H 7765 9673 50  0000 C CNN
+F 2 "" H 7750 9500 50  0001 C CNN
+F 3 "" H 7750 9500 50  0001 C CNN
+	1    7750 9500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 9600 7750 9500
+$Comp
+L power:+2V5 #PWR?
+U 1 1 5E57F036
+P 9450 9500
+F 0 "#PWR?" H 9450 9350 50  0001 C CNN
+F 1 "+2V5" H 9465 9673 50  0000 C CNN
+F 2 "" H 9450 9500 50  0001 C CNN
+F 3 "" H 9450 9500 50  0001 C CNN
+	1    9450 9500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 9600 9550 9600
+Wire Wire Line
+	9450 9600 9450 9500
+Connection ~ 9550 9600
+Wire Wire Line
+	9550 9600 9450 9600
+$Comp
+L power:GND #PWR?
+U 1 1 5E5915FB
+P 7450 10600
+F 0 "#PWR?" H 7450 10350 50  0001 C CNN
+F 1 "GND" H 7455 10427 50  0000 C CNN
+F 2 "" H 7450 10600 50  0001 C CNN
+F 3 "" H 7450 10600 50  0001 C CNN
+	1    7450 10600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 10500 10050 10500
+Wire Wire Line
+	7450 10500 7450 10600
+Connection ~ 7550 10500
+Wire Wire Line
+	7550 10500 7450 10500
+Connection ~ 7650 10500
+Wire Wire Line
+	7650 10500 7550 10500
+Connection ~ 7750 10500
+Wire Wire Line
+	7750 10500 7650 10500
+Connection ~ 7850 10500
+Wire Wire Line
+	7850 10500 7750 10500
+Connection ~ 7950 10500
+Wire Wire Line
+	7950 10500 7850 10500
+Connection ~ 8050 10500
+Wire Wire Line
+	8050 10500 7950 10500
+Connection ~ 8150 10500
+Wire Wire Line
+	8150 10500 8050 10500
+Connection ~ 8250 10500
+Wire Wire Line
+	8250 10500 8150 10500
+Connection ~ 8350 10500
+Wire Wire Line
+	8350 10500 8250 10500
+Connection ~ 8450 10500
+Wire Wire Line
+	8450 10500 8350 10500
+Connection ~ 8550 10500
+Wire Wire Line
+	8550 10500 8450 10500
+Connection ~ 8650 10500
+Wire Wire Line
+	8650 10500 8550 10500
+Connection ~ 8750 10500
+Wire Wire Line
+	8750 10500 8650 10500
+Connection ~ 8850 10500
+Wire Wire Line
+	8850 10500 8750 10500
+Connection ~ 8950 10500
+Wire Wire Line
+	8950 10500 8850 10500
+Connection ~ 9050 10500
+Wire Wire Line
+	9050 10500 8950 10500
+Connection ~ 9150 10500
+Wire Wire Line
+	9150 10500 9050 10500
+Connection ~ 9250 10500
+Wire Wire Line
+	9250 10500 9150 10500
+Connection ~ 9350 10500
+Wire Wire Line
+	9350 10500 9250 10500
+Connection ~ 9450 10500
+Wire Wire Line
+	9450 10500 9350 10500
+Connection ~ 9550 10500
+Wire Wire Line
+	9550 10500 9450 10500
+Connection ~ 9650 10500
+Wire Wire Line
+	9650 10500 9550 10500
+Connection ~ 9750 10500
+Wire Wire Line
+	9750 10500 9650 10500
+Connection ~ 9850 10500
+Wire Wire Line
+	9850 10500 9750 10500
+Connection ~ 9950 10500
+Wire Wire Line
+	9950 10500 9850 10500
+Connection ~ 10050 10500
+Wire Wire Line
+	10050 10500 9950 10500
 $EndSCHEMATC
