@@ -1,3 +1,7 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP LFE5U-45F-BG256
+D ECP5, 45K LUTs, caBGA-256 package
+$ENDCMP
+#
 #End Doc Library
