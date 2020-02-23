@@ -8,4 +8,16 @@ $CMP O252012MEDH4MI
 D SMD Oscillator 12MHz +/-20ppm, SMD-2520 4-pin
 $ENDCMP
 #
+$CMP SNES_PPU1
+D Super Nintendo PPU1 (5C77), QFP-100
+$ENDCMP
+#
+$CMP SNES_PPU2
+D Super Nintendo PPU2 (5C78), QFP-100
+$ENDCMP
+#
+$CMP VRAM
+D Super Nintendo Video RAM (32Kx8), SOP-28
+$ENDCMP
+#
 #End Doc Library
