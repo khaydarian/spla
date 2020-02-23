@@ -129,47 +129,23 @@ Wire Wire Line
 NoConn ~ 8750 7250
 NoConn ~ 11150 7450
 NoConn ~ 11150 7350
-$Comp
-L Oscillator:SG-5032CAN X?
-U 1 1 5E53B65F
-P 6850 7600
-F 0 "X?" H 7194 7646 50  0000 L CNN
-F 1 "12.000000 MHz" H 7194 7555 50  0000 L CNN
-F 2 "Oscillator:Oscillator_SMD_SeikoEpson_SG8002LB-4Pin_5.0x3.2mm" H 7550 7250 50  0001 C CNN
-F 3 "https://support.epson.biz/td/api/doc_check.php?dl=brief_SG5032CAN&lang=en" H 6750 7600 50  0001 C CNN
-	1    6850 7600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	7150 7600 8100 7600
+	7550 7900 8100 7900
 Wire Wire Line
-	8100 7600 8100 6850
+	8100 7900 8100 6850
 Wire Wire Line
 	8100 6850 8750 6850
 $Comp
 L Device:C C?
 U 1 1 5E53DEA7
-P 6200 7600
-F 0 "C?" H 6315 7646 50  0000 L CNN
-F 1 "C" H 6315 7555 50  0000 L CNN
-F 2 "" H 6238 7450 50  0001 C CNN
-F 3 "~" H 6200 7600 50  0001 C CNN
-	1    6200 7600
+P 6450 7600
+F 0 "C?" H 6565 7646 50  0000 L CNN
+F 1 "C" H 6565 7555 50  0000 L CNN
+F 2 "" H 6488 7450 50  0001 C CNN
+F 3 "~" H 6450 7600 50  0001 C CNN
+	1    6450 7600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 7900 6850 7900
-Wire Wire Line
-	6200 7750 6200 7900
-Wire Wire Line
-	6200 7300 6200 7450
-Wire Wire Line
-	6850 7300 6550 7300
-Wire Wire Line
-	6550 7300 6550 7600
-Connection ~ 6550 7300
-Wire Wire Line
-	6550 7300 6200 7300
 $Comp
 L power:GND #PWR0104
 U 1 1 5E558255
@@ -283,17 +259,16 @@ Connection ~ 7250 5950
 $Comp
 L power:GND #PWR0105
 U 1 1 5E58FEB5
-P 6850 7900
-F 0 "#PWR0105" H 6850 7650 50  0001 C CNN
-F 1 "GND" H 6855 7727 50  0000 C CNN
-F 2 "" H 6850 7900 50  0001 C CNN
-F 3 "" H 6850 7900 50  0001 C CNN
-	1    6850 7900
+P 6450 7900
+F 0 "#PWR0105" H 6450 7650 50  0001 C CNN
+F 1 "GND" H 6455 7727 50  0000 C CNN
+F 2 "" H 6450 7900 50  0001 C CNN
+F 3 "" H 6450 7900 50  0001 C CNN
+	1    6450 7900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5700 6250 6100 6250
-Connection ~ 6850 7900
 Wire Wire Line
 	8750 7450 8750 7850
 Wire Wire Line
@@ -413,15 +388,14 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0109
 U 1 1 5E649611
-P 6850 7300
-F 0 "#PWR0109" H 6850 7150 50  0001 C CNN
-F 1 "+3V3" H 6865 7473 50  0000 C CNN
-F 2 "" H 6850 7300 50  0001 C CNN
-F 3 "" H 6850 7300 50  0001 C CNN
-	1    6850 7300
+P 7550 7350
+F 0 "#PWR0109" H 7550 7200 50  0001 C CNN
+F 1 "+3V3" H 7565 7523 50  0000 C CNN
+F 2 "" H 7550 7350 50  0001 C CNN
+F 3 "" H 7550 7350 50  0001 C CNN
+	1    7550 7350
 	1    0    0    -1  
 $EndComp
-Connection ~ 6850 7300
 $Comp
 L power:+3V3 #PWR0110
 U 1 1 5E64A1B5
@@ -475,8 +449,6 @@ Wire Wire Line
 	8750 3200 8750 3100
 Text Notes 3800 5450 0    25   ~ 0
 (Not sure what this 0-Ohm resistor is for.)
-Text Notes 7100 7900 0    25   ~ 0
-(This is the wrong oscillator part.)
 $Comp
 L Device:C C?
 U 1 1 5E6D1368
@@ -677,4 +649,32 @@ Text GLabel 11150 5250 2    39   Input ~ 0
 FIFO_~OE~
 Text GLabel 11150 5350 2    50   Input ~ 0
 FIFO_SIWU
+$Comp
+L SPLA:O252012MEDH4MI X?
+U 1 1 5FDCFC82
+P 7150 7800
+F 0 "X?" H 7150 8165 50  0000 C CNN
+F 1 "O252012MEDH4MI" H 7150 8074 50  0000 C CNN
+F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 7200 7300 50  0001 C CNN
+F 3 "" H 7580 7490 50  0001 C CNN
+	1    7150 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 7900 6450 7900
+Wire Wire Line
+	6450 7900 6450 7750
+Wire Wire Line
+	6450 7450 6450 7350
+Wire Wire Line
+	6450 7350 6750 7350
+Wire Wire Line
+	7550 7700 7550 7350
+Connection ~ 7550 7350
+Wire Wire Line
+	6750 7700 6750 7350
+Connection ~ 6750 7350
+Wire Wire Line
+	6750 7350 7550 7350
+Connection ~ 6450 7900
 $EndSCHEMATC

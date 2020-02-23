@@ -4,4 +4,8 @@ $CMP LFE5U-45F-BG256
 D ECP5, 45K LUTs, caBGA-256 package
 $ENDCMP
 #
+$CMP O252012MEDH4MI
+D SMD Oscillator 12MHz +/-20ppm, SMD-2520 4-pin
+$ENDCMP
+#
 #End Doc Library
