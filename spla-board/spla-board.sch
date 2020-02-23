@@ -94,55 +94,45 @@ Analog R/G/B
 Text Notes 8400 6450 2    50   ~ 0
 30-bit R/G/B bus
 Wire Notes Line style solid
-	7000 2600 7300 2600
+	7000 2700 7300 2700
 Wire Notes Line style solid
-	7300 2550 7300 2650
+	7300 2650 7300 2750
 Wire Notes Line style solid
-	7300 2650 7350 2600
+	7300 2750 7350 2700
 Wire Notes Line style solid
-	7300 2550 7350 2600
+	7300 2650 7350 2700
 Wire Notes Line style solid
-	7000 2800 7300 2800
+	7000 2900 7300 2900
 Wire Notes Line style solid
-	7300 2750 7300 2850
+	7300 2850 7300 2950
 Wire Notes Line style solid
-	7300 2850 7350 2800
+	7300 2950 7350 2900
 Wire Notes Line style solid
-	7300 2750 7350 2800
+	7300 2850 7350 2900
 Wire Notes Line style solid
-	7000 3000 7300 3000
+	7000 3100 7300 3100
 Wire Notes Line style solid
-	7300 2950 7300 3050
+	7300 3050 7300 3150
 Wire Notes Line style solid
-	7300 3050 7350 3000
+	7300 3150 7350 3100
 Wire Notes Line style solid
-	7300 2950 7350 3000
-Wire Notes Line style solid
-	7000 3200 7300 3200
-Wire Notes Line style solid
-	7300 3150 7300 3250
-Wire Notes Line style solid
-	7300 3250 7350 3200
-Wire Notes Line style solid
-	7300 3150 7350 3200
-Text Notes 7100 2600 0    50   ~ 0
+	7300 3050 7350 3100
+Text Notes 7100 2700 0    50   ~ 0
 5V
-Text Notes 7050 2800 0    50   ~ 0
+Text Notes 7050 2900 0    50   ~ 0
 3.3V
-Text Notes 7050 3000 0    50   ~ 0
+Text Notes 7050 3100 0    50   ~ 0
 2.5V
-Text Notes 7050 3200 0    50   ~ 0
-1.5V
 Wire Notes Line style solid
-	7000 3400 7300 3400
+	7000 3300 7300 3300
 Wire Notes Line style solid
-	7300 3350 7300 3450
+	7300 3250 7300 3350
 Wire Notes Line style solid
-	7300 3450 7350 3400
+	7300 3350 7350 3300
 Wire Notes Line style solid
-	7300 3350 7350 3400
-Text Notes 7050 3400 0    50   ~ 0
-1.2V
+	7300 3250 7350 3300
+Text Notes 7050 3300 0    50   ~ 0
+1.1V
 Wire Notes Line style solid
 	5150 3000 5450 3000
 Wire Notes Line style solid
@@ -152,16 +142,14 @@ Wire Notes Line style solid
 Wire Notes Line style solid
 	5450 2950 5500 3000
 Text Notes 5250 3000 0    50   ~ 0
-12V
-Text Notes 7400 2600 0    50   ~ 0
+5V
+Text Notes 7400 2700 0    50   ~ 0
 (SNES)
-Text Notes 7400 2800 0    50   ~ 0
+Text Notes 7400 2900 0    50   ~ 0
 (USB, FPGA, Various)
-Text Notes 7400 3000 0    50   ~ 0
+Text Notes 7400 3100 0    50   ~ 0
 (FPGA)
-Text Notes 7400 3200 0    50   ~ 0
-(FPGA)
-Text Notes 7400 3400 0    50   ~ 0
+Text Notes 7400 3300 0    50   ~ 0
 (FPGA)
 Text Notes 5700 4950 0    50   ~ 0
 8-bit Sync FIFO
