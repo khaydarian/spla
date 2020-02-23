@@ -82,8 +82,8 @@ $Comp
 L Interface_USB:FT2232H U?
 U 1 1 5E5299CA
 P 9950 5650
-F 0 "U?" H 9950 8031 50  0000 C CNN
-F 1 "FT2232H" H 9950 7940 50  0000 C CNN
+F 0 "U?" H 8900 7750 50  0000 L CNN
+F 1 "FT2232H" H 9950 5650 101 0000 C CNB
 F 2 "" H 9950 5650 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" H 9950 5650 50  0001 C CNN
 	1    9950 5650
@@ -163,7 +163,7 @@ $Comp
 L Memory_EEPROM:93LCxxA U?
 U 1 1 5E53A19A
 P 5700 6550
-F 0 "U?" H 5700 7031 50  0000 C CNN
+F 0 "U?" H 5400 6800 50  0000 L CNN
 F 1 "93LCxxA" H 5700 6940 50  0000 C CNN
 F 2 "" H 5700 6550 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 5700 6550 50  0001 C CNN
@@ -569,10 +569,6 @@ Wire Wire Line
 Connection ~ 7300 3050
 Text Notes 7200 1950 0    50   ~ 0
 Decoupling Capacitors\n
-Text Notes 9850 3100 0    25   ~ 0
-How do I move this symbol name inside the box?
-Text Notes 9500 5750 0    101  ~ 20
-FT2232H
 Wire Wire Line
 	2700 5150 2700 5550
 Wire Wire Line
@@ -653,8 +649,8 @@ $Comp
 L SPLA:O252012MEDH4MI X?
 U 1 1 5FDCFC82
 P 7150 7800
-F 0 "X?" H 7150 8165 50  0000 C CNN
-F 1 "O252012MEDH4MI" H 7150 8074 50  0000 C CNN
+F 0 "X?" H 6850 8050 50  0000 L CNN
+F 1 "O252012MEDH4MI" H 7150 7550 50  0000 C CNN
 F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 7200 7300 50  0001 C CNN
 F 3 "" H 7580 7490 50  0001 C CNN
 	1    7150 7800
