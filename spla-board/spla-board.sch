@@ -26,6 +26,12 @@ F0 "SPLA Board - FPGA" 50
 F1 "spla-board-fpga.sch" 50
 $EndSheet
 $Sheet
+S 8500 4500 1500 1000
+U 5E50D400
+F0 "SPLA Board - Level Shifters" 50
+F1 "spla-board-level-shifters.sch" 50
+$EndSheet
+$Sheet
 S 10500 4500 1500 1000
 U 5E50E589
 F0 "SPLA Board - PPU" 50
@@ -57,12 +63,6 @@ Wire Notes Line width 12 style solid
 	5500 5000 6500 5000
 Wire Notes Line width 12 style solid
 	8000 5000 8500 5000
-$Sheet
-S 8500 4500 1500 1000
-U 5E50D400
-F0 "SPLA Board - Level Shifters" 50
-F1 "spla-board-level-shifters.sch" 50
-$EndSheet
 Wire Notes Line width 12 style solid
 	10000 5000 10500 5000
 Wire Notes Line width 12 style solid
