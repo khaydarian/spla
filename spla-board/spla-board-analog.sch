@@ -16,36 +16,156 @@ $EndDescr
 $Comp
 L Analog_ADC:AD9280ARS U?
 U 1 1 5E52AA65
-P 5700 3750
-F 0 "U?" H 5700 5031 50  0000 C CNN
-F 1 "AD9280ARS" H 5700 4940 50  0000 C CNN
-F 2 "" H 5700 3750 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 5700 3750 50  0001 C CNN
-	1    5700 3750
+P 4550 5450
+F 0 "U?" H 4000 6450 50  0000 L CNN
+F 1 "AD9280ARS" H 4550 5450 50  0000 C CNN
+F 2 "" H 4550 5450 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 4550 5450 50  0001 C CNN
+	1    4550 5450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Analog_ADC:AD9280ARS U?
 U 1 1 5E52B6B8
-P 9450 3750
-F 0 "U?" H 9450 5031 50  0000 C CNN
-F 1 "AD9280ARS" H 9450 4940 50  0000 C CNN
-F 2 "" H 9450 3750 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 9450 3750 50  0001 C CNN
-	1    9450 3750
+P 10550 5450
+F 0 "U?" H 10000 6450 50  0000 L CNN
+F 1 "AD9280ARS" H 10550 5450 50  0000 C CNN
+F 2 "" H 10550 5450 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 10550 5450 50  0001 C CNN
+	1    10550 5450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Analog_ADC:AD9280ARS U?
 U 1 1 5E52C2F0
-P 5550 6800
-F 0 "U?" H 5550 8081 50  0000 C CNN
-F 1 "AD9280ARS" H 5550 7990 50  0000 C CNN
-F 2 "" H 5550 6800 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 5550 6800 50  0001 C CNN
-	1    5550 6800
+P 7550 5450
+F 0 "U?" H 7000 6450 50  0000 L CNN
+F 1 "AD9280ARS" H 7550 5450 50  0000 C CNN
+F 2 "" H 7550 5450 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 7550 5450 50  0001 C CNN
+	1    7550 5450
 	1    0    0    -1  
 $EndComp
-Text Notes 7000 6150 0    101  ~ 0
-These are the wrong ADC's -- consider the AD9200 instead, which is similar.
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E547040
+P 4750 4350
+F 0 "#PWR?" H 4750 4200 50  0001 C CNN
+F 1 "+3V3" H 4765 4523 50  0000 C CNN
+F 2 "" H 4750 4350 50  0001 C CNN
+F 3 "" H 4750 4350 50  0001 C CNN
+	1    4750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E549B68
+P 10750 4350
+F 0 "#PWR?" H 10750 4200 50  0001 C CNN
+F 1 "+3V3" H 10765 4523 50  0000 C CNN
+F 2 "" H 10750 4350 50  0001 C CNN
+F 3 "" H 10750 4350 50  0001 C CNN
+	1    10750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E54CCC4
+P 4350 4350
+F 0 "#PWR?" H 4350 4200 50  0001 C CNN
+F 1 "+5V" H 4365 4523 50  0000 C CNN
+F 2 "" H 4350 4350 50  0001 C CNN
+F 3 "" H 4350 4350 50  0001 C CNN
+	1    4350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E551844
+P 7750 4350
+F 0 "#PWR?" H 7750 4200 50  0001 C CNN
+F 1 "+3V3" H 7765 4523 50  0000 C CNN
+F 2 "" H 7750 4350 50  0001 C CNN
+F 3 "" H 7750 4350 50  0001 C CNN
+	1    7750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E55184E
+P 7350 4350
+F 0 "#PWR?" H 7350 4200 50  0001 C CNN
+F 1 "+5V" H 7365 4523 50  0000 C CNN
+F 2 "" H 7350 4350 50  0001 C CNN
+F 3 "" H 7350 4350 50  0001 C CNN
+	1    7350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E55543C
+P 10350 4350
+F 0 "#PWR?" H 10350 4200 50  0001 C CNN
+F 1 "+5V" H 10365 4523 50  0000 C CNN
+F 2 "" H 10350 4350 50  0001 C CNN
+F 3 "" H 10350 4350 50  0001 C CNN
+	1    10350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E561A19
+P 10550 6550
+F 0 "#PWR?" H 10550 6300 50  0001 C CNN
+F 1 "GND" H 10555 6377 50  0000 C CNN
+F 2 "" H 10550 6550 50  0001 C CNN
+F 3 "" H 10550 6550 50  0001 C CNN
+	1    10550 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E56262E
+P 7550 6550
+F 0 "#PWR?" H 7550 6300 50  0001 C CNN
+F 1 "GND" H 7555 6377 50  0000 C CNN
+F 2 "" H 7550 6550 50  0001 C CNN
+F 3 "" H 7550 6550 50  0001 C CNN
+	1    7550 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E569227
+P 4550 6550
+F 0 "#PWR?" H 4550 6300 50  0001 C CNN
+F 1 "GND" H 4555 6377 50  0000 C CNN
+F 2 "" H 4550 6550 50  0001 C CNN
+F 3 "" H 4550 6550 50  0001 C CNN
+	1    4550 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 6550 4550 6550
+Connection ~ 4550 6550
+Wire Wire Line
+	4550 6550 4650 6550
+Wire Wire Line
+	7450 6550 7550 6550
+Connection ~ 7550 6550
+Wire Wire Line
+	7550 6550 7650 6550
+Wire Wire Line
+	10450 6550 10550 6550
+Connection ~ 10550 6550
+Wire Wire Line
+	10550 6550 10650 6550
+Text GLabel 3850 4650 0    50   Input ~ 0
+ANALOG_R
+Text GLabel 6850 4650 0    50   Input ~ 0
+ANALOG_G
+Text GLabel 9850 4650 0    50   Input ~ 0
+ANALOG_B
+Text Notes 6700 7800 0    101  ~ 0
+TODO: Complete this page.
 $EndSCHEMATC
