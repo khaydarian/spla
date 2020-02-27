@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Analog_ADC:AD9280ARS U?
+L Analog_ADC:AD9280ARS U4
 U 1 1 5E52AA65
 P 4550 5450
-F 0 "U?" H 4000 6450 50  0000 L CNN
+F 0 "U4" H 4000 6450 50  0000 L CNN
 F 1 "AD9280ARS" H 4550 5450 50  0000 C CNN
 F 2 "" H 4550 5450 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 4550 5450 50  0001 C CNN
@@ -25,10 +25,10 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.
 	1    0    0    -1  
 $EndComp
 $Comp
-L Analog_ADC:AD9280ARS U?
+L Analog_ADC:AD9280ARS U6
 U 1 1 5E52B6B8
 P 10550 5450
-F 0 "U?" H 10000 6450 50  0000 L CNN
+F 0 "U6" H 10000 6450 50  0000 L CNN
 F 1 "AD9280ARS" H 10550 5450 50  0000 C CNN
 F 2 "" H 10550 5450 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 10550 5450 50  0001 C CNN
@@ -36,10 +36,10 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.
 	1    0    0    -1  
 $EndComp
 $Comp
-L Analog_ADC:AD9280ARS U?
+L Analog_ADC:AD9280ARS U5
 U 1 1 5E52C2F0
 P 7550 5450
-F 0 "U?" H 7000 6450 50  0000 L CNN
+F 0 "U5" H 7000 6450 50  0000 L CNN
 F 1 "AD9280ARS" H 7550 5450 50  0000 C CNN
 F 2 "" H 7550 5450 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 7550 5450 50  0001 C CNN
@@ -47,10 +47,10 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR022
 U 1 1 5E547040
 P 4750 4350
-F 0 "#PWR?" H 4750 4200 50  0001 C CNN
+F 0 "#PWR022" H 4750 4200 50  0001 C CNN
 F 1 "+3V3" H 4765 4523 50  0000 C CNN
 F 2 "" H 4750 4350 50  0001 C CNN
 F 3 "" H 4750 4350 50  0001 C CNN
@@ -58,10 +58,10 @@ F 3 "" H 4750 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR028
 U 1 1 5E549B68
 P 10750 4350
-F 0 "#PWR?" H 10750 4200 50  0001 C CNN
+F 0 "#PWR028" H 10750 4200 50  0001 C CNN
 F 1 "+3V3" H 10765 4523 50  0000 C CNN
 F 2 "" H 10750 4350 50  0001 C CNN
 F 3 "" H 10750 4350 50  0001 C CNN
@@ -69,10 +69,10 @@ F 3 "" H 10750 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR020
 U 1 1 5E54CCC4
 P 4350 4350
-F 0 "#PWR?" H 4350 4200 50  0001 C CNN
+F 0 "#PWR020" H 4350 4200 50  0001 C CNN
 F 1 "+5V" H 4365 4523 50  0000 C CNN
 F 2 "" H 4350 4350 50  0001 C CNN
 F 3 "" H 4350 4350 50  0001 C CNN
@@ -80,10 +80,10 @@ F 3 "" H 4350 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR025
 U 1 1 5E551844
 P 7750 4350
-F 0 "#PWR?" H 7750 4200 50  0001 C CNN
+F 0 "#PWR025" H 7750 4200 50  0001 C CNN
 F 1 "+3V3" H 7765 4523 50  0000 C CNN
 F 2 "" H 7750 4350 50  0001 C CNN
 F 3 "" H 7750 4350 50  0001 C CNN
@@ -91,10 +91,10 @@ F 3 "" H 7750 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR023
 U 1 1 5E55184E
 P 7350 4350
-F 0 "#PWR?" H 7350 4200 50  0001 C CNN
+F 0 "#PWR023" H 7350 4200 50  0001 C CNN
 F 1 "+5V" H 7365 4523 50  0000 C CNN
 F 2 "" H 7350 4350 50  0001 C CNN
 F 3 "" H 7350 4350 50  0001 C CNN
@@ -102,10 +102,10 @@ F 3 "" H 7350 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR026
 U 1 1 5E55543C
 P 10350 4350
-F 0 "#PWR?" H 10350 4200 50  0001 C CNN
+F 0 "#PWR026" H 10350 4200 50  0001 C CNN
 F 1 "+5V" H 10365 4523 50  0000 C CNN
 F 2 "" H 10350 4350 50  0001 C CNN
 F 3 "" H 10350 4350 50  0001 C CNN
@@ -113,10 +113,10 @@ F 3 "" H 10350 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR027
 U 1 1 5E561A19
 P 10550 6550
-F 0 "#PWR?" H 10550 6300 50  0001 C CNN
+F 0 "#PWR027" H 10550 6300 50  0001 C CNN
 F 1 "GND" H 10555 6377 50  0000 C CNN
 F 2 "" H 10550 6550 50  0001 C CNN
 F 3 "" H 10550 6550 50  0001 C CNN
@@ -124,10 +124,10 @@ F 3 "" H 10550 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR024
 U 1 1 5E56262E
 P 7550 6550
-F 0 "#PWR?" H 7550 6300 50  0001 C CNN
+F 0 "#PWR024" H 7550 6300 50  0001 C CNN
 F 1 "GND" H 7555 6377 50  0000 C CNN
 F 2 "" H 7550 6550 50  0001 C CNN
 F 3 "" H 7550 6550 50  0001 C CNN
@@ -135,10 +135,10 @@ F 3 "" H 7550 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR021
 U 1 1 5E569227
 P 4550 6550
-F 0 "#PWR?" H 4550 6300 50  0001 C CNN
+F 0 "#PWR021" H 4550 6300 50  0001 C CNN
 F 1 "GND" H 4555 6377 50  0000 C CNN
 F 2 "" H 4550 6550 50  0001 C CNN
 F 3 "" H 4550 6550 50  0001 C CNN
@@ -168,4 +168,94 @@ Text GLabel 9850 4650 0    50   Input ~ 0
 ANALOG_B
 Text Notes 6700 7800 0    101  ~ 0
 TODO: Complete this page.
+Text GLabel 5250 5350 2    50   Output ~ 0
+ANALOG_R0
+Text GLabel 5250 5450 2    50   Output ~ 0
+ANALOG_R1
+Text GLabel 5250 5550 2    50   Output ~ 0
+ANALOG_R2
+Text GLabel 5250 5650 2    50   Output ~ 0
+ANALOG_R3
+Text GLabel 5250 5750 2    50   Output ~ 0
+ANALOG_R4
+Text GLabel 5250 5850 2    50   Output ~ 0
+ANALOG_R5
+Text GLabel 5250 5950 2    50   Output ~ 0
+ANALOG_R6
+Text GLabel 5250 6050 2    50   Output ~ 0
+ANALOG_R7
+Text GLabel 8250 6250 2    50   Input ~ 0
+ANALOG_CLK
+Text GLabel 11250 6250 2    50   Input ~ 0
+ANALOG_CLK
+Text GLabel 5250 6250 2    50   Input ~ 0
+ANALOG_CLK
+Text GLabel 8250 5350 2    50   Output ~ 0
+ANALOG_G0
+Text GLabel 8250 5450 2    50   Output ~ 0
+ANALOG_G1
+Text GLabel 8250 5550 2    50   Output ~ 0
+ANALOG_G2
+Text GLabel 8250 5650 2    50   Output ~ 0
+ANALOG_G3
+Text GLabel 8250 5750 2    50   Output ~ 0
+ANALOG_G4
+Text GLabel 8250 5850 2    50   Output ~ 0
+ANALOG_G5
+Text GLabel 8250 5950 2    50   Output ~ 0
+ANALOG_G6
+Text GLabel 8250 6050 2    50   Output ~ 0
+ANALOG_G7
+Text GLabel 11250 5350 2    50   Output ~ 0
+ANALOG_B0
+Text GLabel 11250 5450 2    50   Output ~ 0
+ANALOG_B1
+Text GLabel 11250 5550 2    50   Output ~ 0
+ANALOG_B2
+Text GLabel 11250 5650 2    50   Output ~ 0
+ANALOG_B3
+Text GLabel 11250 5750 2    50   Output ~ 0
+ANALOG_B4
+Text GLabel 11250 5850 2    50   Output ~ 0
+ANALOG_B5
+Text GLabel 11250 5950 2    50   Output ~ 0
+ANALOG_B6
+Text GLabel 11250 6050 2    50   Output ~ 0
+ANALOG_B7
+NoConn ~ 3850 4850
+NoConn ~ 3850 5050
+NoConn ~ 3850 5250
+NoConn ~ 3850 5350
+NoConn ~ 3850 5550
+NoConn ~ 3850 5650
+NoConn ~ 3850 5850
+NoConn ~ 3850 6050
+NoConn ~ 5250 5150
+NoConn ~ 5250 4950
+NoConn ~ 5250 4850
+NoConn ~ 5250 4650
+NoConn ~ 6850 6050
+NoConn ~ 6850 5850
+NoConn ~ 6850 5650
+NoConn ~ 6850 5550
+NoConn ~ 6850 5350
+NoConn ~ 6850 5250
+NoConn ~ 6850 5050
+NoConn ~ 6850 4850
+NoConn ~ 8250 4650
+NoConn ~ 8250 4850
+NoConn ~ 8250 4950
+NoConn ~ 8250 5150
+NoConn ~ 9850 6050
+NoConn ~ 9850 5850
+NoConn ~ 9850 5650
+NoConn ~ 9850 5550
+NoConn ~ 9850 5350
+NoConn ~ 9850 5250
+NoConn ~ 9850 5050
+NoConn ~ 9850 4850
+NoConn ~ 11250 4650
+NoConn ~ 11250 4850
+NoConn ~ 11250 4950
+NoConn ~ 11250 5150
 $EndSCHEMATC
