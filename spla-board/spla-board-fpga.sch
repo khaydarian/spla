@@ -517,7 +517,7 @@ Text GLabel 7150 2400 2    50   Input ~ 0
 FPGA_PRIO1
 Text GLabel 7150 2300 2    50   Input ~ 0
 FPGA_PRIO0
-Text GLabel 12150 2000 2    50   Output ~ 0
+Text GLabel 12150 2400 2    50   Output ~ 0
 FPGA_PPUBUS_OE
 Text GLabel 4650 4300 2    39   Output ~ 0
 FPGA_~VCLD~
@@ -535,7 +535,7 @@ Text GLabel 7150 1800 2    39   Input ~ 0
 FPGA_~CSYNC~
 Text GLabel 7150 1700 2    39   Output ~ 0
 FPGA_~PARD~
-Text GLabel 12150 1700 2    50   Output ~ 0
+Text GLabel 12150 2100 2    50   Output ~ 0
 FPGA_CTL_OE
 Text GLabel 7150 1600 2    39   Output ~ 0
 FPGA_~PAWR~
@@ -551,7 +551,7 @@ Text GLabel 12150 3700 2    39   Input ~ 0
 FPGA_PPU2_~RESOUT0~
 Text GLabel 12150 3600 2    39   Input ~ 0
 FPGA_PPU2_~RESOUT1~
-Text GLabel 12150 1900 2    50   Output ~ 0
+Text GLabel 12150 2300 2    50   Output ~ 0
 FPGA_EXTRA_OE
 Text GLabel 4650 3900 2    39   BiDi ~ 0
 FGPA_PPU1_~EXTSYNC~
@@ -573,7 +573,7 @@ Text GLabel 12150 4200 2    39   BiDi ~ 0
 FPGA_PPU2_~TOUMEI~
 Text GLabel 7150 1300 2    50   Output ~ 0
 FPGA_XIN
-Text GLabel 12150 1800 2    50   Output ~ 0
+Text GLabel 12150 2200 2    50   Output ~ 0
 FPGA_MISC_OE
 Text GLabel 4650 3200 2    39   Input ~ 0
 FPGA_PPU2_~5MOUT~
@@ -672,8 +672,6 @@ NoConn ~ 12150 3400
 NoConn ~ 12150 3500
 NoConn ~ 12150 4000
 NoConn ~ 12150 4100
-NoConn ~ 12150 4300
-NoConn ~ 12150 4400
 NoConn ~ 14650 3900
 NoConn ~ 14650 4000
 NoConn ~ 14650 4100
@@ -686,8 +684,6 @@ Text Notes 12300 2550 0    50   ~ 0
 "Slow" signals on left side.
 Text Notes 7000 800  0    50   ~ 0
 SNES signals on top and right side.
-NoConn ~ 12150 2100
-NoConn ~ 12150 2200
 NoConn ~ 12150 3300
 NoConn ~ 12150 3000
 NoConn ~ 12150 2900
@@ -696,7 +692,6 @@ NoConn ~ 12150 2700
 NoConn ~ 12150 2600
 NoConn ~ 12150 2500
 NoConn ~ 12150 2400
-NoConn ~ 12150 2300
 NoConn ~ 14650 1300
 NoConn ~ 14650 1400
 NoConn ~ 14650 1900
@@ -876,4 +871,12 @@ Wire Wire Line
 	3400 10050 2800 10050
 Wire Wire Line
 	3400 10550 3400 10650
+Text GLabel 12150 1900 2    50   Input ~ 0
+CLK_12MHZ
+Text GLabel 12150 1700 2    50   Input ~ 0
+CLK_12MHZ
+NoConn ~ 12150 1800
+NoConn ~ 12150 2000
+NoConn ~ 12150 4300
+NoConn ~ 12150 4400
 $EndSCHEMATC

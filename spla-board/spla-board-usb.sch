@@ -677,4 +677,11 @@ Wire Wire Line
 	3100 4750 8750 4750
 Wire Wire Line
 	3100 4650 3100 3850
+Text GLabel 8300 8300 2    50   Output ~ 0
+CLK_12MHZ
+Wire Wire Line
+	8100 7900 8100 8300
+Wire Wire Line
+	8100 8300 8300 8300
+Connection ~ 8100 7900
 $EndSCHEMATC
