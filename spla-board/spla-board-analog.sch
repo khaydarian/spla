@@ -19,7 +19,7 @@ U 1 1 5E52AA65
 P 4550 5450
 F 0 "U4" H 4000 6450 50  0000 L CNN
 F 1 "AD9280ARS" H 4550 5450 50  0000 C CNN
-F 2 "" H 4550 5450 50  0001 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 4550 5450 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 4550 5450 50  0001 C CNN
 	1    4550 5450
 	1    0    0    -1  
@@ -30,7 +30,7 @@ U 1 1 5E52B6B8
 P 10550 5450
 F 0 "U6" H 10000 6450 50  0000 L CNN
 F 1 "AD9280ARS" H 10550 5450 50  0000 C CNN
-F 2 "" H 10550 5450 50  0001 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 10550 5450 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 10550 5450 50  0001 C CNN
 	1    10550 5450
 	1    0    0    -1  
@@ -41,7 +41,7 @@ U 1 1 5E52C2F0
 P 7550 5450
 F 0 "U5" H 7000 6450 50  0000 L CNN
 F 1 "AD9280ARS" H 7550 5450 50  0000 C CNN
-F 2 "" H 7550 5450 50  0001 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 7550 5450 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9280.pdf" H 7550 5450 50  0001 C CNN
 	1    7550 5450
 	1    0    0    -1  

@@ -56,39 +56,39 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 2750 8850 50  0001 C CNN
 	1    2750 8950
 	1    0    0    -1  
 $EndComp
-Text GLabel 3150 9350 2    50   BiDi ~ 0
-TAP_D7
-Text GLabel 3150 9250 2    50   BiDi ~ 0
-TAP_D6
-Text GLabel 3150 9150 2    50   BiDi ~ 0
-TAP_D5
-Text GLabel 3150 9050 2    50   BiDi ~ 0
-TAP_D4
-Text GLabel 3150 8950 2    50   BiDi ~ 0
-TAP_D3
-Text GLabel 3150 8850 2    50   BiDi ~ 0
-TAP_D2
-Text GLabel 3150 8750 2    50   BiDi ~ 0
-TAP_D1
 Text GLabel 3150 8650 2    50   BiDi ~ 0
+TAP_D7
+Text GLabel 3150 8750 2    50   BiDi ~ 0
+TAP_D6
+Text GLabel 3150 8850 2    50   BiDi ~ 0
+TAP_D5
+Text GLabel 3150 8950 2    50   BiDi ~ 0
+TAP_D4
+Text GLabel 3150 9050 2    50   BiDi ~ 0
+TAP_D3
+Text GLabel 3150 9150 2    50   BiDi ~ 0
+TAP_D2
+Text GLabel 3150 9250 2    50   BiDi ~ 0
+TAP_D1
+Text GLabel 3150 9350 2    50   BiDi ~ 0
 TAP_D0
-Text GLabel 2350 8650 0    50   BiDi ~ 0
+Text GLabel 2350 9350 0    50   BiDi ~ 0
 FPGA_D0
 Text GLabel 2350 8550 0    50   Input ~ 0
 FPGA_PD_OE
-Text GLabel 2350 8750 0    50   BiDi ~ 0
-FPGA_D1
-Text GLabel 2350 8850 0    50   BiDi ~ 0
-FPGA_D2
-Text GLabel 2350 8950 0    50   BiDi ~ 0
-FPGA_D3
-Text GLabel 2350 9050 0    50   BiDi ~ 0
-FPGA_D4
-Text GLabel 2350 9150 0    50   BiDi ~ 0
-FPGA_D5
 Text GLabel 2350 9250 0    50   BiDi ~ 0
+FPGA_D1
+Text GLabel 2350 9150 0    50   BiDi ~ 0
+FPGA_D2
+Text GLabel 2350 9050 0    50   BiDi ~ 0
+FPGA_D3
+Text GLabel 2350 8950 0    50   BiDi ~ 0
+FPGA_D4
+Text GLabel 2350 8850 0    50   BiDi ~ 0
+FPGA_D5
+Text GLabel 2350 8750 0    50   BiDi ~ 0
 FPGA_D6
-Text GLabel 2350 9350 0    50   BiDi ~ 0
+Text GLabel 2350 8650 0    50   BiDi ~ 0
 FPGA_D7
 $Comp
 L power:+3V3 #PWR0135
@@ -123,39 +123,35 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 2750 6900 50  0001 C CNN
 	1    2750 7000
 	1    0    0    -1  
 $EndComp
-Text GLabel 3150 7400 2    50   Output ~ 0
-TAP_PA7
-Text GLabel 3150 7300 2    50   Output ~ 0
-TAP_PA6
-Text GLabel 3150 7200 2    50   Output ~ 0
-TAP_PA5
-Text GLabel 3150 7100 2    50   Output ~ 0
-TAP_PA4
-Text GLabel 3150 7000 2    50   Output ~ 0
-TAP_PA3
-Text GLabel 3150 6900 2    50   Output ~ 0
-TAP_PA2
-Text GLabel 3150 6800 2    50   Output ~ 0
-TAP_PA1
 Text GLabel 3150 6700 2    50   Output ~ 0
-TAP_PA0
-Text GLabel 2350 6700 0    50   Input ~ 0
+TAP_PA7
+Text GLabel 3150 6800 2    50   Output ~ 0
+TAP_PA6
+Text GLabel 3150 6900 2    50   Output ~ 0
+TAP_PA5
+Text GLabel 3150 7000 2    50   Output ~ 0
+TAP_PA4
+Text GLabel 3150 7100 2    50   Output ~ 0
+TAP_PA3
+Text GLabel 3150 7200 2    50   Output ~ 0
+TAP_PA2
+Text GLabel 2350 7400 0    50   Input ~ 0
 FPGA_PA0
 Text GLabel 2350 6600 0    50   Input ~ 0
 FPGA_PA_OE
-Text GLabel 2350 6800 0    50   Input ~ 0
-FPGA_PA1
-Text GLabel 2350 6900 0    50   Input ~ 0
-FPGA_PA2
-Text GLabel 2350 7000 0    50   Input ~ 0
-FPGA_PA3
-Text GLabel 2350 7100 0    50   Input ~ 0
-FPGA_PA4
-Text GLabel 2350 7200 0    50   Input ~ 0
-FPGA_PA5
 Text GLabel 2350 7300 0    50   Input ~ 0
+FPGA_PA1
+Text GLabel 2350 7200 0    50   Input ~ 0
+FPGA_PA2
+Text GLabel 2350 7100 0    50   Input ~ 0
+FPGA_PA3
+Text GLabel 2350 7000 0    50   Input ~ 0
+FPGA_PA4
+Text GLabel 2350 6900 0    50   Input ~ 0
+FPGA_PA5
+Text GLabel 2350 6800 0    50   Input ~ 0
 FPGA_PA6
-Text GLabel 2350 7400 0    50   Input ~ 0
+Text GLabel 2350 6700 0    50   Input ~ 0
 FPGA_PA7
 $Comp
 L power:+3V3 #PWR0137
@@ -989,7 +985,7 @@ U 1 1 5FB90E4E
 P 6750 3600
 F 0 "TP4" H 6808 3718 50  0000 L CNN
 F 1 "TP_TAP_XIN" H 6808 3627 50  0000 L CNN
-F 2 "" H 6950 3600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 6950 3600 50  0001 C CNN
 F 3 "~" H 6950 3600 50  0001 C CNN
 	1    6750 3600
 	1    0    0    -1  
@@ -1011,7 +1007,7 @@ U 1 1 5FB8F8FE
 P 4900 3400
 F 0 "TP1" H 4958 3518 50  0000 L CNN
 F 1 "TP_FPGA_XIN" H 4958 3427 50  0000 L CNN
-F 2 "" H 5100 3400 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5100 3400 50  0001 C CNN
 F 3 "~" H 5100 3400 50  0001 C CNN
 	1    4900 3400
 	1    0    0    -1  
@@ -1074,7 +1070,7 @@ U 1 1 5F69EDDE
 P 7750 4400
 F 0 "J4" H 7800 4617 50  0000 C CNN
 F 1 "Conn_02x02_Odd_Even" H 7800 4526 50  0000 C CNN
-F 2 "" H 7750 4400 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 7750 4400 50  0001 C CNN
 F 3 "~" H 7750 4400 50  0001 C CNN
 	1    7750 4400
 	1    0    0    -1  
@@ -1099,7 +1095,7 @@ U 1 1 5FCE2D06
 P 6600 3400
 F 0 "TP3" H 6658 3518 50  0000 L CNN
 F 1 "TP_TAP_3.58M" H 6658 3427 50  0000 L CNN
-F 2 "" H 6800 3400 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 6800 3400 50  0001 C CNN
 F 3 "~" H 6800 3400 50  0001 C CNN
 	1    6600 3400
 	1    0    0    -1  
@@ -1110,7 +1106,7 @@ U 1 1 5FCEE0F2
 P 5050 3600
 F 0 "TP2" H 5108 3718 50  0000 L CNN
 F 1 "TP_TAP_3.58M" H 5108 3627 50  0000 L CNN
-F 2 "" H 5250 3600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5250 3600 50  0001 C CNN
 F 3 "~" H 5250 3600 50  0001 C CNN
 	1    5050 3600
 	1    0    0    -1  
@@ -1140,7 +1136,7 @@ U 1 1 5E5A824A
 P 6800 4100
 F 0 "J3" H 6880 4092 50  0000 L CNN
 F 1 "Conn_01x04" H 6880 4001 50  0000 L CNN
-F 2 "" H 6800 4100 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6800 4100 50  0001 C CNN
 F 3 "~" H 6800 4100 50  0001 C CNN
 	1    6800 4100
 	1    0    0    -1  
@@ -1155,4 +1151,8 @@ Wire Notes Line
 	11700 500  11700 5450
 Text Notes 12700 9700 0    50   ~ 0
 TODO: Consider adding decoupling capacitors to all these chips.\n
+Text GLabel 3150 7300 2    50   Output ~ 0
+TAP_PA1
+Text GLabel 3150 7400 2    50   Output ~ 0
+TAP_PA0
 $EndSCHEMATC
