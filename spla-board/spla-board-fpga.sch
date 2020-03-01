@@ -668,8 +668,6 @@ NoConn ~ 3100 8400
 NoConn ~ 3100 8500
 NoConn ~ 3100 8600
 NoConn ~ 3100 8700
-NoConn ~ 12150 3400
-NoConn ~ 12150 3500
 NoConn ~ 12150 4000
 NoConn ~ 12150 4100
 NoConn ~ 14650 3900
@@ -684,14 +682,12 @@ Text Notes 12300 2550 0    50   ~ 0
 "Slow" signals on left side.
 Text Notes 7000 800  0    50   ~ 0
 SNES signals on top and right side.
-NoConn ~ 12150 3300
 NoConn ~ 12150 3000
 NoConn ~ 12150 2900
 NoConn ~ 12150 2800
 NoConn ~ 12150 2700
 NoConn ~ 12150 2600
 NoConn ~ 12150 2500
-NoConn ~ 12150 2400
 NoConn ~ 14650 1300
 NoConn ~ 14650 1400
 NoConn ~ 14650 1900
@@ -879,4 +875,10 @@ NoConn ~ 12150 1800
 NoConn ~ 12150 2000
 NoConn ~ 12150 4300
 NoConn ~ 12150 4400
+Text GLabel 12150 3500 2    50   Input ~ 0
+ANALOG_B_OTR
+Text GLabel 12150 3400 2    50   Input ~ 0
+ANALOG_G_OTR
+Text GLabel 12150 3300 2    50   Input ~ 0
+ANALOG_R_OTR
 $EndSCHEMATC
