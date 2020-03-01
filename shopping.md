@@ -1,8 +1,11 @@
 Basic lab equipment:
 *   Soldering station, with digital temperature control and fine-point tips.
-    *   Also a "well" style tip, for drag soldering.
+    *   Hakko FX888D
+*   Also a "well" style tip, for drag soldering.
 *   Solder fume handling thing (either vent outdoors, or filtering).
 *   Hot-air station.
+    *   Quick 861DW
+*   Board preheater (maybe?)
 *   Digital oscilloscope (if not borrowing from Kor).
 *   Cheap multimeter.  Really only need this for connectivity testing etc.
     *   If doing manual BGA reflow: K-type themocouple probe for it.
@@ -15,7 +18,7 @@ Basic lab equipment:
     be able to get a chip USB one.
 
 Lab supplies:
-*   Solder (leaded), fine 0.5mm.
+*   Solder (leaded), fine <0.5mm.
 *   Solder wick braid (two sizes).
 *   Flux pen.
 *   Captan tape (or something similar).
