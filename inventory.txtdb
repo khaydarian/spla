@@ -20,6 +20,7 @@ Ebay ID: 264641163929
 Cost Base: $12.50
 Cost Shipping: $11.30
 Cost Tax: $1.16
+Condition: Unknown
 
 Name: SNES Accessory Package
 Category: SNES Related
@@ -30,6 +31,7 @@ Source: Amazon
 Cost Base: $21.99
 Cost Shipping: $0
 Cost Tax: $2.03
+Cost Total: $24.02
 
 Name: SNES Power Supply (generic)
 Category: SNES Related
@@ -52,4 +54,83 @@ Category: Lab Equipment
 Source: Amazon
 Date Arrive Estimated: 2020-03-03
 Cost Base: $29.99
-Cost Tax $2.77
+Cost Tax: $2.77
+Cost Total: $32.76
+
+Name: Various Soldering Stuff
+Source: Amazon
+Date Arrive Estimated: 2020-03-02
+Package Key: amazon-soldering-1
+Package Cost Base: $256.02
+Cost Tax: $23.68
+Package Cost Total: $279.70
+
+Name: Hakko FX888D Soldering Station, with extra tips
+Category: Lab Equipment
+From Package Key: amazon-soldering-1
+Cost Base: $129.95
+
+Name: Soldering mat
+Category: Lab Equipment
+From Package Key: amazon-soldering-1
+Cost Base: $11.19
+
+Name: ChipQuik SMD1
+Category: Lab Supplies
+From Package Key: amazon-soldering-1
+Cost Base: $13.65
+
+Name: Electronics Tweezer set (7)
+Category: Lab Equipment
+From Package Key: amazon-soldering-1
+Cost Base: $6.90
+
+Name: Leaded Solder - Kaisi 63sn/37pb, 0.3mm
+From Package Key: amazon-soldering-1
+Category: Lab Supplies
+Cost Base: $5.90
+
+Name: Flux Paste
+From Package Key: amazon-soldering-1
+Category: Lab Supplies
+Cost Base: $16.76
+
+Name: Gikfun SMD practice kit
+From Package Key: amazon-soldering-1
+Category: Toys
+Cost Base: $7.98
+
+Name: NTE SW02-10 Solder Wick, 0.98in
+From Package Key: amazon-soldering-1
+Category: Lab Supplies
+Cost Base: $6.72
+
+Name: Wire wrap / bodge wire, 30AWG
+From Package Key: amazon-soldering-1
+Category: Lab Supplies
+Cost Base: $9.99
+
+Name: Kapton Tape 4-pack, 5mm/10mm/12mm/20mm
+From Package Key: amazon-soldering-1
+Category: Lab Supplies
+Cost Base: $9.99
+
+Name: KOTTO Solder Smoke Absorber
+From Package Key: amazon-soldering-1
+Category: Lab Equipment
+Cost Base: $36.99
+
+Name: Flux Pen (2x 10mL)
+Category: Lab Supplies
+Source: Amazon
+Date Arrive Estimated: 2020-03-04
+Cost Base: $14.95
+Cost Tax: $1.38
+
+Name: Isopropyl Alcohol 99.9% (spray bottle)
+Category: Lab Supplies
+Source: Amazon
+Date Arrive Estimated: 2020-03-06
+Cost Base: $14.65
+Cost Tax: $1.36
+Cost Total: $16.01
