@@ -1,4 +1,5 @@
 Name: SNES Cartridge - Super Mario World
+Category: SNES Related
 Source: Ebay
 Ebay ID: 202888171799
 Date Purchase: 2020-02-25
@@ -10,6 +11,7 @@ Cost Tax: $1.37
 Condition: Untested
 
 Name: SNES
+Category: SNES Related
 Condition: Working, but no sound
 Serial: UN16830049
 Date Arrive Estimated: 2020-03-02
@@ -20,6 +22,7 @@ Cost Shipping: $11.30
 Cost Tax: $1.16
 
 Name: SNES Accessory Package
+Category: SNES Related
 Package Key: snes-accessory-package-1
 Date Arrive Estimated: 2020-03-01
 Date Arrive Actual: 2020-03-01
@@ -29,13 +32,24 @@ Cost Shipping: $0
 Cost Tax: $2.03
 
 Name: SNES Power Supply (generic)
+Category: SNES Related
 From Package Key: snes-accessory-package-1
 
 Name: SNES RCA cable (generic)
+Category: SNES Related
 From Package Key: snes-accessory-package-1
 
 Name: SNES Controller (off-brand)
+Category: SNES Related
 From Package Key: snes-accessory-package-1
 
 Name: SNES Controller (off-brand)
+Category: SNES Related
 From Package Key: snes-accessory-package-1
+
+Name: Multimeter - AstroAI 4000
+Category: Lab Equipment
+Source: Amazon
+Date Arrive Estimated: 2020-03-03
+Cost Base: $29.99
+Cost Tax $2.77
