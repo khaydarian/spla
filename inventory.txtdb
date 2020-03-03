@@ -9,6 +9,7 @@ Cost Base: $15.00
 Cost Shipping: $0.00
 Cost Tax: $1.37
 Condition: Untested
+Location: Side Table
 
 Name: SNES
 Category: SNES Related
@@ -36,18 +37,22 @@ Cost Total: $24.02
 Name: SNES Power Supply (generic)
 Category: SNES Related
 From Package Key: snes-accessory-package-1
+Location: Side Table
 
 Name: SNES RCA cable (generic)
 Category: SNES Related
 From Package Key: snes-accessory-package-1
+Location: Side Table
 
 Name: SNES Controller (off-brand)
 Category: SNES Related
 From Package Key: snes-accessory-package-1
+Location: Side Table
 
 Name: SNES Controller (off-brand)
 Category: SNES Related
 From Package Key: snes-accessory-package-1
+Location: Side Table
 
 Name: Multimeter - AstroAI 4000
 Category: Lab Equipment
@@ -60,6 +65,7 @@ Cost Total: $32.76
 Name: Various Soldering Stuff
 Source: Amazon
 Date Arrive Estimated: 2020-03-02
+Date Arrive Actual: 2020-03-02
 Package Key: amazon-soldering-1
 Package Cost Base: $256.02
 Cost Tax: $23.68
@@ -69,31 +75,42 @@ Name: Hakko FX888D Soldering Station, with extra tips
 Category: Lab Equipment
 From Package Key: amazon-soldering-1
 Cost Base: $129.95
+Location: Amazon Box
 
 Name: Soldering mat
 Category: Lab Equipment
 From Package Key: amazon-soldering-1
 Cost Base: $11.19
+Location: Amazon Box
 
 Name: ChipQuik SMD1
 Category: Lab Supplies
 From Package Key: amazon-soldering-1
 Cost Base: $13.65
+Location: Amazon Box
 
 Name: Electronics Tweezer set (7)
 Category: Lab Equipment
 From Package Key: amazon-soldering-1
 Cost Base: $6.90
+Location: Amazon Box
 
 Name: Leaded Solder - Kaisi 63sn/37pb, 0.3mm
 From Package Key: amazon-soldering-1
 Category: Lab Supplies
 Cost Base: $5.90
+Location: Amazon Box
+Solder Composition: 63Sn/37Pb
+Solder Width: 0.3mm
+Solder Size: 176.oz / 50g
 
 Name: Flux Paste
 From Package Key: amazon-soldering-1
 Category: Lab Supplies
 Cost Base: $16.76
+Manufacturer: MG Chemicals
+Model Number: #9341-10ML
+Size: 10g
 
 Name: Gikfun SMD practice kit
 From Package Key: amazon-soldering-1
@@ -104,16 +121,23 @@ Name: NTE SW02-10 Solder Wick, 0.98in
 From Package Key: amazon-soldering-1
 Category: Lab Supplies
 Cost Base: $6.72
+Manufacturer: NTE Electronics
+Model Number: SW02-10
+Solder Wick Width: 0.098" / 2.5mm
+Solder Wick Length: 10ft
 
-Name: Wire wrap / bodge wire, 30AWG
+Name: Wire wrap / bodge wire, 30AWG, Multi-color
 From Package Key: amazon-soldering-1
 Category: Lab Supplies
 Cost Base: $9.99
+Manufacturer: VT Corporation
+Part Number: 8-30-1000
 
 Name: Kapton Tape 4-pack, 5mm/10mm/12mm/20mm
 From Package Key: amazon-soldering-1
 Category: Lab Supplies
 Cost Base: $9.99
+Manufacturer: Unknown
 
 Name: KOTTO Solder Smoke Absorber
 From Package Key: amazon-soldering-1
