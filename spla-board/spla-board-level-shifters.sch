@@ -298,7 +298,7 @@ FPGA_VAB7
 Text GLabel 8350 6600 0    50   BiDi ~ 0
 FPGA_VA_OE
 Text Notes 2500 5900 0    50   ~ 0
-Periphreal Bus
+Peripheral Bus
 $Comp
 L Logic_LevelTranslator:TXS0108EPW U24
 U 1 1 5E5C1563

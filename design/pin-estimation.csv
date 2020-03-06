@@ -5,10 +5,10 @@ Reset,PPU1_~RESET~,RW,1,,,1,1,0,0,
 Reset,PPU2_~RESET~,RW,1,,,1,1,0,0,
 Reset,PPU2_~RESOUT1~,RW,1,,,1,1,0,0,
 Reset,PPU2_~RESOUT2~,RW,1,,,1,1,0,0,
-Periphreal Bus,~PARD,W,1,Stobe,3.579545,1,1,0,0,"We need to drive the periphral bus, but not sample it."
-Periphreal Bus,~PAWR,W,1,Stobe,3.579545,1,1,0,0,
-Periphreal Bus,PA0 - PA7,W,8,Data,3.579545,1,8,0,0,
-Periphreal Bus,D0 - D7,RW,8,Data,3.579545,1,8,1,8,
+Peripheral Bus,~PARD,W,1,Stobe,3.579545,1,1,0,0,"We need to drive the periphral bus, but not sample it."
+Peripheral Bus,~PAWR,W,1,Stobe,3.579545,1,1,0,0,
+Peripheral Bus,PA0 - PA7,W,8,Data,3.579545,1,8,0,0,
+Peripheral Bus,D0 - D7,RW,8,Data,3.579545,1,8,1,8,
 VRAM Address Bus,VA14,R,1,Data,3.579545,1,1,1,1,We need to sample the VRAM bus.  Plausibly compressible.
 VRAM Address Bus,VAA0 - VAA13,R,14,Data,3.579545,1,14,1,14,
 VRAM Address Bus,VAB0 - VAB13,R,14,Data,3.579545,1,14,1,14,
