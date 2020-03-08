@@ -585,7 +585,7 @@ SPI_MOSI
 Text GLabel 11150 5750 2    50   Input ~ 0
 SPI_MISO
 Text Notes 11800 6450 0    50   ~ 0
-TODO: Include an LED here.
+TODO: Include an LED here, for bringup.
 Text GLabel 11150 3750 2    50   BiDi ~ 0
 FIFO_D0
 Text GLabel 11150 3850 2    50   BiDi ~ 0
@@ -684,4 +684,6 @@ Wire Wire Line
 	6350 7350 6350 7500
 Wire Wire Line
 	6350 7700 6350 7900
+Text Notes 5400 8450 0    50   ~ 0
+CMOS digital oscillator, rather than FTDI's crystal suggestion
 $EndSCHEMATC

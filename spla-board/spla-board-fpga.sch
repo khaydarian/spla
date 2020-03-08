@@ -95,7 +95,7 @@ L Connector:Conn_01x04_Male J2
 U 1 1 6001AFBA
 P 2800 9650
 F 0 "J2" V 2600 9650 50  0000 R CNN
-F 1 "J_JTAG" V 2700 9950 50  0000 R CNN
+F 1 "J_JTAG" V 2700 9600 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2800 9650 50  0001 C CNN
 F 3 "~" H 2800 9650 50  0001 C CNN
 	1    2800 9650
@@ -680,8 +680,6 @@ Text Notes 14950 2050 0    50   ~ 0
 FTDI signals on left side.
 Text Notes 12300 2550 0    50   ~ 0
 "Slow" signals on left side.
-Text Notes 7000 800  0    50   ~ 0
-SNES signals on top and right side.
 NoConn ~ 12150 3000
 NoConn ~ 12150 2900
 NoConn ~ 12150 2800

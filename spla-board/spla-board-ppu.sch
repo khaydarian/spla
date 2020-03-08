@@ -741,9 +741,9 @@ Wire Wire Line
 	12850 3350 12850 3000
 Wire Wire Line
 	11650 3000 12850 3000
-Text GLabel 14150 3650 2    39   Output ~ 0
+Text GLabel 13100 3650 2    39   Output ~ 0
 TAP_~BURST~
-Text GLabel 14150 3750 2    39   Output ~ 0
+Text GLabel 13100 3750 2    39   Output ~ 0
 TAP_~CSYNC~
 Text GLabel 13100 4050 2    50   Output ~ 0
 ANALOG_R
@@ -2082,23 +2082,10 @@ Jumper 1-2 for normal reset sequencing.\nJumper 3-4, 5-6, 7-8 to enable pulldown
 Wire Wire Line
 	4650 1450 4550 1450
 Connection ~ 4650 1450
-$Comp
-L Connector_Generic:Conn_02x02_Odd_Even J6
-U 1 1 5F565BB7
-P 13850 3650
-F 0 "J6" H 13900 3867 50  0000 C CNN
-F 1 "J_BURST" H 13900 3776 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 13850 3650 50  0001 C CNN
-F 3 "~" H 13850 3650 50  0001 C CNN
-	1    13850 3650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	12750 3650 13650 3650
+	12750 3650 13100 3650
 Wire Wire Line
-	12750 3750 13650 3750
-Text Notes 13750 4000 0    50   ~ 0
-Disconnect jumper, in case these\nsignals aren't digital.
+	12750 3750 13100 3750
 Text GLabel 5100 3650 0    50   Input ~ 0
 TAP_XIN
 Text GLabel 11650 3650 0    50   Input ~ 0
@@ -2654,6 +2641,9 @@ Wire Wire Line
 	3450 9600 3800 9600
 Wire Wire Line
 	3800 9600 3800 8950
+Connection ~ 3800 8950
+Text Notes 2000 9250 0    50   ~ 0
+Configurable pullup/pulldown for\ntesting hi-z data bus
 Wire Bus Line
 	10200 2700 10200 6050
 Wire Bus Line
@@ -2676,7 +2666,4 @@ Wire Bus Line
 	13350 6150 13350 9400
 Wire Bus Line
 	10000 4350 10000 9400
-Connection ~ 3800 8950
-Text Notes 2000 9250 0    50   ~ 0
-Configurable pullup/pulldown for\ntesting hi-z data bus
 $EndSCHEMATC

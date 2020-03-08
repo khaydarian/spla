@@ -106,8 +106,6 @@ Text GLabel 1850 3300 0    50   Input ~ 0
 ANALOG_G
 Text GLabel 1850 3200 0    50   Input ~ 0
 ANALOG_B
-Text Notes 6700 7800 0    101  ~ 0
-TODO: Verify that this page is correct.
 Text GLabel 4750 5350 2    50   Output ~ 0
 ANALOG_R0
 Text GLabel 4750 5450 2    50   Output ~ 0
@@ -182,7 +180,7 @@ F 3 "~" H 6300 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 5350 1900 0    50   ~ 0
-0.714V Reference
+2.702V Reference
 Wire Wire Line
 	5700 2050 5700 2350
 Wire Wire Line
@@ -264,7 +262,7 @@ L Device:R_Small R15
 U 1 1 5E5B6C48
 P 4950 1750
 F 0 "R15" H 5009 1796 50  0000 L CNN
-F 1 "600,1%" H 5009 1705 50  0000 L CNN
+F 1 "85,1%" H 5009 1705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4950 1750 50  0001 C CNN
 F 3 "~" H 4950 1750 50  0001 C CNN
 	1    4950 1750
@@ -918,9 +916,7 @@ Connection ~ 13850 4850
 Text GLabel 13750 5150 2    50   Output ~ 0
 ANALOG_B_OTR
 Text Notes 4200 1150 0    50   ~ 0
-TODO: Verify that the SNES analog output is 0V - 0.714V (NTSC standard)
-Text Notes 7350 2700 0    50   ~ 0
-TODO: Consider adding in the 2N2222 amplifier circuit.
+TODO: Make this voltage reference more easily tweakable.
 $Comp
 L Connector:TestPoint TP10
 U 1 1 5E6C3881
@@ -957,4 +953,6 @@ Wire Wire Line
 Connection ~ 7400 2050
 Wire Wire Line
 	7400 2050 6600 2050
+Text Notes 9800 1600 0    50   ~ 0
+TODO: Split analog power and ground planes, for PCB layout.
 $EndSCHEMATC

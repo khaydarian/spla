@@ -66,9 +66,9 @@ Wire Notes Line width 12 style solid
 Wire Notes Line width 12 style solid
 	10500 5000 11000 5000
 Wire Notes Line width 12 style solid
-	12000 5500 12000 6250
+	12000 5500 12000 6500
 Wire Notes Line width 12 style solid
-	12000 6250 10500 6250
+	12000 6500 10500 6500
 Wire Notes Line width 12 style solid
 	9000 6500 8100 6500
 Wire Notes Line width 12 style solid
@@ -77,10 +77,6 @@ Wire Notes Line width 12 style solid
 	7000 5400 6700 5400
 Wire Notes Line width 12 style solid
 	6700 5400 6700 6500
-Wire Notes Line width 12 style solid
-	10500 6700 12000 6700
-Text Notes 10950 6650 0    50   ~ 0
-Component Out
 Text Notes 6650 6200 1    50   ~ 0
 32-bit R/W bus
 Text Notes 6350 5100 0    50   ~ 0
@@ -89,7 +85,7 @@ Text Notes 8950 4950 2    50   ~ 0
 (wide bus)
 Text Notes 10950 4950 2    50   ~ 0
 (wide bus)
-Text Notes 11500 6200 2    50   ~ 0
+Text Notes 11500 6450 2    50   ~ 0
 Analog R/G/B
 Text Notes 8900 6450 2    50   ~ 0
 30-bit R/G/B bus
@@ -157,7 +153,7 @@ Text Notes 8600 5100 0    25   ~ 0
 21.47727 MHz\n3.579545 MHz
 Text Notes 10600 5100 0    25   ~ 0
 21.47727 MHz\n3.579545 MHz
-Text Notes 11100 6350 0    25   ~ 0
+Text Notes 11100 6600 0    25   ~ 0
 21.47727 MHz\n3.579545 MHz
 Text Notes 8350 6600 0    25   ~ 0
 21.47727 MHz\n3.579545 MHz
@@ -173,14 +169,4 @@ Wire Notes Line width 12 style solid
 	3000 5150 2850 5150
 Wire Notes Line width 12 style solid
 	2850 5150 2850 4850
-Wire Notes Line width 12 style solid
-	12000 6550 12150 6550
-Wire Notes Line width 12 style solid
-	12150 6550 12150 6850
-Wire Notes Line width 12 style solid
-	12150 6850 12000 6850
-Wire Notes Line width 12 style solid
-	12000 6850 12000 6550
-Text Notes 11000 6750 0    25   ~ 0
-Analog NTSC Component
 $EndSCHEMATC
