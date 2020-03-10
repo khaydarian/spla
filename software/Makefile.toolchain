@@ -1,0 +1,5 @@
+CC := gcc
+CCFLAGS := -Wall -Werror -Wextra
+
+LD := gcc
+LDFLAGS :=
