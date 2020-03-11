@@ -10,6 +10,7 @@ blog: Add photos and scope images.
 blog: Write README.md.
 schematic: Rearrange level shifter pins to suit pcb layout.
 schematic: Split power/ground planes for analog section.
+schematic: Change analog reference to internal 2V and add voltage divider to R/G/B.
 schematic: Add LEDs for FTDI and FPGA use.
 schematic: Fix power layout entirely.
 schematic: Add FPGA decoupling capacitors.
