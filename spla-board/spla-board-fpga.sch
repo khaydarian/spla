@@ -892,7 +892,9 @@ Text GLabel 12150 2800 2    50   BiDi ~ 0
 FGPA_PPU2_TST1
 Text GLabel 12150 2700 2    50   BiDi ~ 0
 FGPA_PPU2_TST0
-NoConn ~ 14650 1900
-NoConn ~ 14650 2000
 NoConn ~ 14650 2100
+Text GLabel 14650 1900 2    39   Input ~ 0
+USB_~PWREN~
+Text GLabel 14650 2000 2    39   Input ~ 0
+USB_~SUSPEND~
 $EndSCHEMATC

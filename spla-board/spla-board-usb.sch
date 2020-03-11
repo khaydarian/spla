@@ -122,8 +122,6 @@ Connection ~ 10150 7850
 Wire Wire Line
 	10150 7850 10050 7850
 NoConn ~ 8750 7250
-NoConn ~ 11150 7450
-NoConn ~ 11150 7350
 Wire Wire Line
 	7550 7900 8100 7900
 Wire Wire Line
@@ -686,4 +684,8 @@ Wire Wire Line
 	6350 7700 6350 7900
 Text Notes 5400 8450 0    50   ~ 0
 CMOS digital oscillator, rather than FTDI's crystal suggestion
+Text GLabel 11150 7350 2    39   Output ~ 0
+USB_~PWREN~
+Text GLabel 11150 7450 2    39   Output ~ 0
+USB_~SUSPEND~
 $EndSCHEMATC
