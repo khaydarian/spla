@@ -13,6 +13,7 @@ schematic: Split power/ground planes for analog section.
 schematic: Add LEDs for FTDI and FPGA use.
 schematic: Connect 12MHz and 60MHz clocks to FPGA.
 schematic: Hook up `FT2232H`'s `~PWREN` and `~SUSPEND` pins to FPGA.
+schematic: Hook up `TST` pins to FPGA.
 schematic: Fix power layout entirely.
 schematic: Add FPGA decoupling capacitors.
 schematic: Fix FPGA pin mapping.
