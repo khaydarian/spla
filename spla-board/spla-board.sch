@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 8
+Sheet 1 7
 Title "SPLA Board - Root"
 Date "2020-03-07"
 Rev "5"
@@ -49,12 +49,6 @@ U 5E50D39B
 F0 "SPLA Board - Power" 50
 F1 "spla-board-power.sch" 50
 $EndSheet
-$Sheet
-S 5500 6500 1500 1000
-U 5E50D3C6
-F0 "SPLA Board - SRAM" 50
-F1 "spla-board-sram.sch" 50
-$EndSheet
 Wire Notes Line width 12 style solid
 	3000 5000 4500 5000
 Text Notes 3350 4950 0    50   ~ 0
@@ -73,12 +67,6 @@ Wire Notes Line width 12 style solid
 	9000 6500 8100 6500
 Wire Notes Line width 12 style solid
 	8100 6500 8100 5500
-Wire Notes Line width 12 style solid
-	7000 5400 6700 5400
-Wire Notes Line width 12 style solid
-	6700 5400 6700 6500
-Text Notes 6650 6200 1    50   ~ 0
-32-bit R/W bus
 Text Notes 6350 5100 0    50   ~ 0
 60 MHz
 Text Notes 8950 4950 2    50   ~ 0
@@ -157,8 +145,6 @@ Text Notes 11100 6600 0    25   ~ 0
 21.47727 MHz\n3.579545 MHz
 Text Notes 8350 6600 0    25   ~ 0
 21.47727 MHz\n3.579545 MHz
-Text Notes 6800 6050 1    50   ~ 0
-100 MHz
 Text Notes 3350 5100 0    50   ~ 0
 480 Mbps / 60MBps
 Wire Notes Line width 12 style solid
