@@ -263,37 +263,37 @@ F 3 "" H 2750 9650 50  0001 C CNN
 	1    2750 9650
 	1    0    0    -1  
 $EndComp
-Text GLabel 9150 6700 2    50   BiDi ~ 0
-TAP_VAB0
 Text GLabel 9150 6800 2    50   BiDi ~ 0
-TAP_VAB1
+TAP_VAB0
 Text GLabel 9150 6900 2    50   BiDi ~ 0
-TAP_VAB2
+TAP_VAB1
 Text GLabel 9150 7000 2    50   BiDi ~ 0
-TAP_VAB3
+TAP_VAB2
 Text GLabel 9150 7100 2    50   BiDi ~ 0
-TAP_VAB4
+TAP_VAB3
 Text GLabel 9150 7200 2    50   BiDi ~ 0
-TAP_VAB5
+TAP_VAB4
 Text GLabel 9150 7300 2    50   BiDi ~ 0
-TAP_VAB6
+TAP_VAB5
 Text GLabel 9150 7400 2    50   BiDi ~ 0
+TAP_VAB6
+Text GLabel 9150 8650 2    50   BiDi ~ 0
 TAP_VAB7
-Text GLabel 8350 6700 0    50   BiDi ~ 0
-FPGA_VAB0
 Text GLabel 8350 6800 0    50   BiDi ~ 0
-FPGA_VAB1
+FPGA_VAB0
 Text GLabel 8350 6900 0    50   BiDi ~ 0
-FPGA_VAB2
+FPGA_VAB1
 Text GLabel 8350 7000 0    50   BiDi ~ 0
-FPGA_VAB3
+FPGA_VAB2
 Text GLabel 8350 7100 0    50   BiDi ~ 0
-FPGA_VAB4
+FPGA_VAB3
 Text GLabel 8350 7200 0    50   BiDi ~ 0
-FPGA_VAB5
+FPGA_VAB4
 Text GLabel 8350 7300 0    50   BiDi ~ 0
-FPGA_VAB6
+FPGA_VAB5
 Text GLabel 8350 7400 0    50   BiDi ~ 0
+FPGA_VAB6
+Text GLabel 8350 8650 0    50   BiDi ~ 0
 FPGA_VAB7
 Text GLabel 8350 6600 0    50   BiDi ~ 0
 FPGA_VA_OE
@@ -343,37 +343,37 @@ F 3 "" H 6300 7700 50  0001 C CNN
 	1    6300 7700
 	1    0    0    -1  
 $EndComp
-Text GLabel 6700 6700 2    50   BiDi ~ 0
-TAP_VAA0
-Text GLabel 6700 6800 2    50   BiDi ~ 0
-TAP_VAA1
-Text GLabel 6700 6900 2    50   BiDi ~ 0
-TAP_VAA2
 Text GLabel 6700 7000 2    50   BiDi ~ 0
-TAP_VAA3
+TAP_VAA0
 Text GLabel 6700 7100 2    50   BiDi ~ 0
-TAP_VAA4
+TAP_VAA1
 Text GLabel 6700 7200 2    50   BiDi ~ 0
-TAP_VAA5
+TAP_VAA2
 Text GLabel 6700 7300 2    50   BiDi ~ 0
-TAP_VAA6
+TAP_VAA3
 Text GLabel 6700 7400 2    50   BiDi ~ 0
+TAP_VAA4
+Text GLabel 6700 8650 2    50   BiDi ~ 0
+TAP_VAA5
+Text GLabel 6700 8750 2    50   BiDi ~ 0
+TAP_VAA6
+Text GLabel 6700 8850 2    50   BiDi ~ 0
 TAP_VAA7
-Text GLabel 5900 6700 0    50   BiDi ~ 0
-FPGA_VAA0
-Text GLabel 5900 6800 0    50   BiDi ~ 0
-FPGA_VAA1
-Text GLabel 5900 6900 0    50   BiDi ~ 0
-FPGA_VAA2
 Text GLabel 5900 7000 0    50   BiDi ~ 0
-FPGA_VAA3
+FPGA_VAA0
 Text GLabel 5900 7100 0    50   BiDi ~ 0
-FPGA_VAA4
+FPGA_VAA1
 Text GLabel 5900 7200 0    50   BiDi ~ 0
-FPGA_VAA5
+FPGA_VAA2
 Text GLabel 5900 7300 0    50   BiDi ~ 0
-FPGA_VAA6
+FPGA_VAA3
 Text GLabel 5900 7400 0    50   BiDi ~ 0
+FPGA_VAA4
+Text GLabel 5900 8650 0    50   BiDi ~ 0
+FPGA_VAA5
+Text GLabel 5900 8750 0    50   BiDi ~ 0
+FPGA_VAA6
+Text GLabel 5900 8850 0    50   BiDi ~ 0
 FPGA_VAA7
 Text GLabel 5900 6600 0    50   BiDi ~ 0
 FPGA_VA_OE
@@ -421,33 +421,33 @@ F 3 "" H 6300 9650 50  0001 C CNN
 	1    6300 9650
 	1    0    0    -1  
 $EndComp
-Text GLabel 6700 8650 2    50   BiDi ~ 0
-TAP_VAA8
-Text GLabel 6700 8750 2    50   BiDi ~ 0
-TAP_VAA9
-Text GLabel 6700 8850 2    50   BiDi ~ 0
-TAP_VAA10
 Text GLabel 6700 8950 2    50   BiDi ~ 0
-TAP_VAA11
+TAP_VAA8
 Text GLabel 6700 9050 2    50   BiDi ~ 0
-TAP_VAA12
+TAP_VAA9
 Text GLabel 6700 9150 2    50   BiDi ~ 0
-TAP_VAA13
+TAP_VAA10
 Text GLabel 6700 9250 2    50   BiDi ~ 0
+TAP_VAA11
+Text GLabel 6700 9350 2    50   BiDi ~ 0
+TAP_VAA12
+Text GLabel 9150 6700 2    50   BiDi ~ 0
+TAP_VAA13
+Text GLabel 9150 9350 2    50   BiDi ~ 0
 TAP_VA14
-Text GLabel 5900 8650 0    50   BiDi ~ 0
-FPGA_VAA8
-Text GLabel 5900 8750 0    50   BiDi ~ 0
-FPGA_VAA9
-Text GLabel 5900 8850 0    50   BiDi ~ 0
-FPGA_VAA10
 Text GLabel 5900 8950 0    50   BiDi ~ 0
-FPGA_VAA11
+FPGA_VAA8
 Text GLabel 5900 9050 0    50   BiDi ~ 0
-FPGA_VAA12
+FPGA_VAA9
 Text GLabel 5900 9150 0    50   BiDi ~ 0
-FPGA_VAA13
+FPGA_VAA10
 Text GLabel 5900 9250 0    50   BiDi ~ 0
+FPGA_VAA11
+Text GLabel 5900 9350 0    50   BiDi ~ 0
+FPGA_VAA12
+Text GLabel 8350 6700 0    50   BiDi ~ 0
+FPGA_VAA13
+Text GLabel 8350 9350 0    50   BiDi ~ 0
 FPGA_VA14
 Text GLabel 5900 8550 0    50   BiDi ~ 0
 FPGA_VA_OE
@@ -495,45 +495,45 @@ F 3 "" H 8750 9650 50  0001 C CNN
 	1    8750 9650
 	1    0    0    -1  
 $EndComp
-Text GLabel 9150 8650 2    50   BiDi ~ 0
-TAP_VAB8
 Text GLabel 9150 8750 2    50   BiDi ~ 0
-TAP_VAB9
+TAP_VAB8
 Text GLabel 9150 8850 2    50   BiDi ~ 0
-TAP_VAB10
+TAP_VAB9
 Text GLabel 9150 8950 2    50   BiDi ~ 0
-TAP_VAB11
+TAP_VAB10
 Text GLabel 9150 9050 2    50   BiDi ~ 0
-TAP_VAB12
+TAP_VAB11
 Text GLabel 9150 9150 2    50   BiDi ~ 0
+TAP_VAB12
+Text GLabel 9150 9250 2    50   BiDi ~ 0
 TAP_VAB13
-Text GLabel 8350 8650 0    50   BiDi ~ 0
-FPGA_VAB8
 Text GLabel 8350 8750 0    50   BiDi ~ 0
-FPGA_VAB9
+FPGA_VAB8
 Text GLabel 8350 8850 0    50   BiDi ~ 0
-FPGA_VAB10
+FPGA_VAB9
 Text GLabel 8350 8950 0    50   BiDi ~ 0
-FPGA_VAB11
+FPGA_VAB10
 Text GLabel 8350 9050 0    50   BiDi ~ 0
-FPGA_VAB12
+FPGA_VAB11
 Text GLabel 8350 9150 0    50   BiDi ~ 0
+FPGA_VAB12
+Text GLabel 8350 9250 0    50   BiDi ~ 0
 FPGA_VAB13
 Text GLabel 8350 8550 0    50   BiDi ~ 0
 FPGA_VA_OE
 Text Notes 7250 5900 0    50   ~ 0
 VRAM Address Bus
-Text GLabel 5900 9350 0    39   BiDi ~ 0
+Text GLabel 5900 6700 0    39   BiDi ~ 0
 FGPA_~VRD~
-Text GLabel 6700 9350 2    39   BiDi ~ 0
+Text GLabel 6700 6700 2    39   BiDi ~ 0
 TAP_~VRD~
-Text GLabel 8350 9250 0    39   BiDi ~ 0
+Text GLabel 5900 6900 0    39   BiDi ~ 0
 FPGA_~VAWR~
-Text GLabel 8350 9350 0    39   BiDi ~ 0
+Text GLabel 5900 6800 0    39   BiDi ~ 0
 FPGA_~VBWR~
-Text GLabel 9150 9250 2    39   BiDi ~ 0
+Text GLabel 6700 6900 2    39   BiDi ~ 0
 TAP_~VAWR~
-Text GLabel 9150 9350 2    39   BiDi ~ 0
+Text GLabel 6700 6800 2    39   BiDi ~ 0
 TAP_~VBWR~
 $Comp
 L Logic_LevelTranslator:TXS0108EPW U28
