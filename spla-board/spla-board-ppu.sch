@@ -484,18 +484,6 @@ Wire Wire Line
 	11550 5350 11550 5450
 Wire Wire Line
 	10950 5350 11550 5350
-Wire Wire Line
-	11650 5250 10950 5250
-Wire Wire Line
-	10950 5150 11650 5150
-Wire Wire Line
-	11650 4450 10950 4450
-Wire Wire Line
-	10950 4350 11650 4350
-Wire Wire Line
-	11650 4250 10950 4250
-Wire Wire Line
-	10950 4150 11650 4150
 Entry Wire Line
 	10850 4050 10950 4150
 Entry Wire Line
@@ -524,8 +512,6 @@ Entry Wire Line
 	10850 5250 10950 5350
 Wire Wire Line
 	5100 3750 4650 3750
-Wire Wire Line
-	10950 3950 11650 3950
 Text GLabel 11350 2450 2    50   Output ~ 0
 TAP_PPU2_~RESOUT1~
 Text GLabel 11050 1450 2    50   Output ~ 0
@@ -638,8 +624,6 @@ Text GLabel 4000 5150 0    39   BiDi ~ 0
 TAP_~OVER~
 Entry Wire Line
 	10850 5450 10950 5550
-Wire Wire Line
-	10950 5550 11650 5550
 Text Label 11300 5550 0    50   ~ 0
 ~5M
 $Comp
@@ -675,8 +659,6 @@ F 3 "~" H 10450 6100 50  0001 C CNN
 	1    10450 6100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	11650 5650 10450 5650
 Entry Wire Line
 	4550 5150 4650 5250
 Entry Wire Line
@@ -685,46 +667,6 @@ Entry Wire Line
 	4550 5150 4450 5250
 Text GLabel 11650 6450 0    50   Output ~ 0
 TAP_PPU2_3.58M
-NoConn ~ 12750 5850
-NoConn ~ 12750 5750
-NoConn ~ 12750 5650
-NoConn ~ 12750 5550
-NoConn ~ 12750 5450
-NoConn ~ 12750 5350
-NoConn ~ 12750 5250
-NoConn ~ 12750 5150
-NoConn ~ 12750 5050
-NoConn ~ 12750 4950
-NoConn ~ 12750 4850
-NoConn ~ 12750 4750
-$Comp
-L power:GND #PWR0125
-U 1 1 5E74B037
-P 12900 4650
-F 0 "#PWR0125" H 12900 4400 50  0001 C CNN
-F 1 "GND" H 12905 4477 50  0000 C CNN
-F 2 "" H 12900 4650 50  0001 C CNN
-F 3 "" H 12900 4650 50  0001 C CNN
-	1    12900 4650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12750 4350 12900 4350
-Wire Wire Line
-	12900 4350 12900 4450
-Wire Wire Line
-	12750 4650 12900 4650
-Connection ~ 12900 4650
-Wire Wire Line
-	12750 4550 12900 4550
-Connection ~ 12900 4550
-Wire Wire Line
-	12900 4550 12900 4650
-Wire Wire Line
-	12750 4450 12900 4450
-Connection ~ 12900 4450
-Wire Wire Line
-	12900 4450 12900 4550
 Wire Wire Line
 	12750 4150 12850 4150
 Wire Wire Line
@@ -925,42 +867,6 @@ Entry Wire Line
 	11100 8550 11200 8450
 Entry Wire Line
 	11100 8650 11200 8550
-Wire Wire Line
-	11650 6850 11200 6850
-Wire Wire Line
-	11200 6950 11650 6950
-Wire Wire Line
-	11650 7050 11200 7050
-Wire Wire Line
-	11200 7150 11650 7150
-Wire Wire Line
-	11650 7250 11200 7250
-Wire Wire Line
-	11200 7350 11650 7350
-Wire Wire Line
-	11650 7450 11200 7450
-Wire Wire Line
-	11200 7550 11650 7550
-Wire Wire Line
-	11650 7650 11200 7650
-Wire Wire Line
-	11200 7750 11650 7750
-Wire Wire Line
-	11650 7850 11200 7850
-Wire Wire Line
-	11200 7950 11650 7950
-Wire Wire Line
-	11650 8050 11200 8050
-Wire Wire Line
-	11200 8150 11650 8150
-Wire Wire Line
-	11650 8250 11200 8250
-Wire Wire Line
-	11200 8350 11650 8350
-Wire Wire Line
-	11650 8450 11200 8450
-Wire Wire Line
-	11200 8550 11650 8550
 Text Label 11300 6850 0    50   ~ 0
 ~PARD
 Text Label 11300 6950 0    50   ~ 0
@@ -1378,25 +1284,6 @@ Entry Wire Line
 	13350 6850 13250 6750
 Text Notes 13450 6150 3    25   ~ 0
 (Not sure why VBD* is hooked up to EXT*.)\n
-$Comp
-L power:GND #PWR0126
-U 1 1 5ED792CF
-P 4900 5650
-F 0 "#PWR0126" H 4900 5400 50  0001 C CNN
-F 1 "GND" H 4905 5477 50  0000 C CNN
-F 2 "" H 4900 5650 50  0001 C CNN
-F 3 "" H 4900 5650 50  0001 C CNN
-	1    4900 5650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5100 5850 5100 5750
-Connection ~ 5100 5750
-Wire Wire Line
-	5100 5750 5100 5650
-Wire Wire Line
-	4900 5650 5100 5650
-Connection ~ 5100 5650
 NoConn ~ 5100 6250
 Entry Wire Line
 	10200 3550 10100 3650
@@ -1831,10 +1718,6 @@ Entry Wire Line
 Entry Wire Line
 	10000 8450 9900 8550
 Wire Wire Line
-	11150 3750 11650 3750
-Wire Wire Line
-	11650 3850 11050 3850
-Wire Wire Line
 	11050 3850 11050 2450
 $Comp
 L Device:C_Small C8
@@ -1952,7 +1835,7 @@ Wire Wire Line
 Connection ~ 9400 5700
 Text GLabel 11250 1750 2    50   Input ~ 0
 TAP_PPU2_~RESET~
-Text GLabel 5100 5550 0    50   Input ~ 0
+Text GLabel 5100 5550 0    39   Input ~ 0
 TAP_PPU1_~EXTSYNC~
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J5
@@ -2378,33 +2261,6 @@ Text Label 4750 6450 0    50   ~ 0
 ~VRD
 Text Label 4750 6650 0    50   ~ 0
 ~VBWR
-Connection ~ 11650 8850
-Wire Wire Line
-	11650 8850 11650 9050
-Wire Wire Line
-	11650 8750 11650 8850
-Connection ~ 12750 8850
-Wire Wire Line
-	12750 8850 12750 9050
-Wire Wire Line
-	12750 8750 12750 8850
-Connection ~ 11650 3350
-Wire Wire Line
-	11650 3350 11650 3000
-Wire Wire Line
-	11650 3450 11650 3350
-Wire Wire Line
-	10950 4950 11650 4950
-Wire Wire Line
-	11650 4650 10950 4650
-Wire Wire Line
-	10950 4550 11650 4550
-Wire Wire Line
-	10950 4750 11650 4750
-Wire Wire Line
-	11650 4850 10950 4850
-Wire Wire Line
-	11650 5050 10950 5050
 Text Label 11300 4550 0    50   ~ 0
 PRIO1
 Text Label 11300 4650 0    50   ~ 0
@@ -2419,19 +2275,6 @@ Text Label 11300 5050 0    50   ~ 0
 ~VCLD
 Text Label 11300 5150 0    50   ~ 0
 ~HCLD
-$Comp
-L SPLA:SNES_PPU2 U?
-U 1 1 5E521E3A
-P 12200 6100
-AR Path="/5E521E3A" Ref="U?"  Part="1" 
-AR Path="/5E50E589/5E521E3A" Ref="U11"  Part="1" 
-F 0 "U11" H 12200 9115 50  0000 C CNN
-F 1 "SNES_PPU2" H 12200 9024 50  0000 C CNN
-F 2 "Package_QFP:PQFP-100_14x20mm_P0.65mm" H 12250 8300 50  0001 C CNN
-F 3 "" H 12250 8300 50  0001 C CNN
-	1    12200 6100
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_Small R24
 U 1 1 5E6959A3
@@ -2644,6 +2487,141 @@ Wire Wire Line
 Connection ~ 3800 8950
 Text Notes 2000 9250 0    50   ~ 0
 Configurable pullup/pulldown for\ntesting hi-z data bus
+Text GLabel 5100 5850 0    50   BiDi ~ 0
+TAP_PPU1_TST0
+Text GLabel 5100 5750 0    50   BiDi ~ 0
+TAP_PPU1_TST1
+Text GLabel 5100 5650 0    50   BiDi ~ 0
+TAP_PPU1_TST2
+Wire Wire Line
+	11200 7950 11650 7950
+Wire Wire Line
+	11650 7850 11200 7850
+Wire Wire Line
+	11650 6850 11200 6850
+Wire Wire Line
+	11200 6950 11650 6950
+Wire Wire Line
+	10950 4150 11650 4150
+Wire Wire Line
+	11650 4250 10950 4250
+Wire Wire Line
+	10950 4350 11650 4350
+Wire Wire Line
+	11650 4450 10950 4450
+Wire Wire Line
+	10950 4550 11650 4550
+Wire Wire Line
+	11650 4650 10950 4650
+Wire Wire Line
+	10950 4750 11650 4750
+Wire Wire Line
+	11650 4850 10950 4850
+Wire Wire Line
+	10950 4950 11650 4950
+Wire Wire Line
+	11650 5050 10950 5050
+Wire Wire Line
+	10950 5150 11650 5150
+Wire Wire Line
+	10950 5550 11650 5550
+Wire Wire Line
+	11650 5250 10950 5250
+Wire Wire Line
+	11150 3750 11650 3750
+Wire Wire Line
+	10950 3950 11650 3950
+Wire Wire Line
+	11650 3850 11050 3850
+Wire Wire Line
+	11650 5650 10450 5650
+Wire Wire Line
+	11200 7750 11650 7750
+Wire Wire Line
+	11650 7650 11200 7650
+Wire Wire Line
+	11200 7550 11650 7550
+Wire Wire Line
+	11650 7450 11200 7450
+Wire Wire Line
+	11200 7350 11650 7350
+Wire Wire Line
+	11650 7250 11200 7250
+Wire Wire Line
+	11200 7150 11650 7150
+Wire Wire Line
+	11650 7050 11200 7050
+Wire Wire Line
+	11200 8550 11650 8550
+Wire Wire Line
+	11650 8450 11200 8450
+Wire Wire Line
+	11200 8350 11650 8350
+Wire Wire Line
+	11650 8250 11200 8250
+Wire Wire Line
+	11200 8150 11650 8150
+Wire Wire Line
+	11650 8050 11200 8050
+$Comp
+L SPLA:SNES_PPU2 U?
+U 1 1 5E521E3A
+P 12200 6100
+AR Path="/5E521E3A" Ref="U?"  Part="1" 
+AR Path="/5E50E589/5E521E3A" Ref="U11"  Part="1" 
+F 0 "U11" H 12200 9115 50  0000 C CNN
+F 1 "SNES_PPU2" H 12200 9024 50  0000 C CNN
+F 2 "Package_QFP:PQFP-100_14x20mm_P0.65mm" H 12250 8300 50  0001 C CNN
+F 3 "" H 12250 8300 50  0001 C CNN
+	1    12200 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 3000 11650 3350
+Wire Wire Line
+	11650 8850 11650 9050
+Wire Wire Line
+	12750 8850 12750 9050
+Text GLabel 12750 5850 2    50   BiDi ~ 0
+TAP_PPU2_TST0
+Text GLabel 12750 5750 2    50   BiDi ~ 0
+TAP_PPU2_TST1
+Text GLabel 12750 5650 2    50   BiDi ~ 0
+TAP_PPU2_TST2
+Text GLabel 12750 5550 2    50   BiDi ~ 0
+TAP_PPU2_TST3
+Text GLabel 12750 5450 2    50   BiDi ~ 0
+TAP_PPU2_TST4
+Text GLabel 12750 5350 2    50   BiDi ~ 0
+TAP_PPU2_TST5
+Text GLabel 12750 5250 2    50   BiDi ~ 0
+TAP_PPU2_TST6
+Text GLabel 12750 5150 2    50   BiDi ~ 0
+TAP_PPU2_TST7
+Text GLabel 12750 5050 2    50   BiDi ~ 0
+TAP_PPU2_TST8
+Text GLabel 12750 4950 2    50   BiDi ~ 0
+TAP_PPU2_TST9
+Text GLabel 12750 4850 2    50   BiDi ~ 0
+TAP_PPU2_TST10
+Text GLabel 12750 4750 2    50   BiDi ~ 0
+TAP_PPU2_TST11
+Text GLabel 12750 4650 2    50   BiDi ~ 0
+TAP_PPU2_TST12
+Text GLabel 12750 4550 2    50   BiDi ~ 0
+TAP_PPU2_TST13
+Text GLabel 12750 4450 2    50   BiDi ~ 0
+TAP_PPU2_TST14
+Text GLabel 12750 4350 2    50   BiDi ~ 0
+TAP_PPU2_TST15
+Wire Wire Line
+	11650 3350 11650 3450
+Connection ~ 11650 3350
+Wire Wire Line
+	11650 8750 11650 8850
+Connection ~ 11650 8850
+Wire Wire Line
+	12750 8750 12750 8850
 Wire Bus Line
 	10200 2700 10200 6050
 Wire Bus Line
@@ -2666,4 +2644,5 @@ Wire Bus Line
 	13350 6150 13350 9400
 Wire Bus Line
 	10000 4350 10000 9400
+Connection ~ 12750 8850
 $EndSCHEMATC

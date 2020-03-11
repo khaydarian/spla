@@ -48,17 +48,6 @@ F 3 "" H 8050 4850 39  0001 C CNN
 $EndComp
 $Comp
 L SPLA:LFE5U-45F-BG256 U1
-U 6 1 5FE8A82C
-P 14000 2850
-F 0 "U1" H 14000 4641 39  0000 C CNN
-F 1 "LFE5U-45F-BG256" H 14000 4566 39  0000 C CNN
-F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSMD" H 13050 4850 39  0001 C CNN
-F 3 "" H 13050 4850 39  0001 C CNN
-	6    14000 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L SPLA:LFE5U-45F-BG256 U1
 U 8 1 5FE9BDBE
 P 1850 10100
 F 0 "U1" H 1933 10491 39  0000 C CNN
@@ -346,11 +335,6 @@ F 3 "" H 13350 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	13350 2000 13350 2100
-Connection ~ 13350 2100
-Wire Wire Line
-	13350 2100 13350 2200
-Wire Wire Line
 	1800 7050 1800 7150
 $Comp
 L SPLA:LFE5U-45F-BG256 U1
@@ -517,7 +501,7 @@ Text GLabel 7150 2400 2    50   Input ~ 0
 FPGA_PRIO1
 Text GLabel 7150 2300 2    50   Input ~ 0
 FPGA_PRIO0
-Text GLabel 12150 2400 2    50   Output ~ 0
+Text GLabel 12150 2000 2    50   Output ~ 0
 FPGA_PPUBUS_OE
 Text GLabel 4650 4300 2    39   Output ~ 0
 FPGA_~VCLD~
@@ -543,15 +527,15 @@ Text GLabel 7150 1500 2    50   Input ~ 0
 FPGA_PPU2_HBLANK
 Text GLabel 7150 1400 2    50   Input ~ 0
 FPGA_PPU2_VBLANK
-Text GLabel 12150 3800 2    39   Output ~ 0
+Text GLabel 12150 4200 2    39   Output ~ 0
 FPGA_PPU2_~RESET~
-Text GLabel 12150 3900 2    39   Output ~ 0
+Text GLabel 12150 4300 2    39   Output ~ 0
 FPGA_PPU1_~RESET~
-Text GLabel 12150 3700 2    39   Input ~ 0
+Text GLabel 12150 4100 2    39   Input ~ 0
 FPGA_PPU2_~RESOUT0~
-Text GLabel 12150 3600 2    39   Input ~ 0
+Text GLabel 12150 4000 2    39   Input ~ 0
 FPGA_PPU2_~RESOUT1~
-Text GLabel 12150 2300 2    50   Output ~ 0
+Text GLabel 12150 1800 2    50   Output ~ 0
 FPGA_EXTRA_OE
 Text GLabel 4650 3900 2    39   BiDi ~ 0
 FGPA_PPU1_~EXTSYNC~
@@ -569,7 +553,7 @@ Text GLabel 4650 3300 2    50   BiDi ~ 0
 FPGA_PPU2_PALMODE
 Text GLabel 4650 3100 2    50   Input ~ 0
 FPGA_PPU2_3.58M
-Text GLabel 12150 4200 2    39   BiDi ~ 0
+Text GLabel 12150 4400 2    39   BiDi ~ 0
 FPGA_PPU2_~TOUMEI~
 Text GLabel 7150 1300 2    50   Output ~ 0
 FPGA_XIN
@@ -595,35 +579,35 @@ Text GLabel 3100 7500 2    50   Input ~ 0
 SPI_MISO
 Text GLabel 3100 7700 2    39   Input ~ 0
 SPI_~CS~
-Text GLabel 14650 3200 2    39   Input ~ 0
+Text GLabel 14650 3000 2    39   Input ~ 0
 FIFO_~RXF~
-Text GLabel 14650 3300 2    39   Input ~ 0
+Text GLabel 14650 3100 2    39   Input ~ 0
 FIFO_~TXE~
-Text GLabel 14650 3400 2    39   Output ~ 0
+Text GLabel 14650 3200 2    39   Output ~ 0
 FIFO_~RD~
-Text GLabel 14650 3500 2    39   Output ~ 0
+Text GLabel 14650 3300 2    39   Output ~ 0
 FIFO_~WR~
-Text GLabel 14650 3700 2    50   Input ~ 0
+Text GLabel 14650 3600 2    50   Input ~ 0
 FIFO_CLKOUT
-Text GLabel 14650 3800 2    39   Output ~ 0
+Text GLabel 14650 3500 2    39   Output ~ 0
 FIFO_~OE~
-Text GLabel 14650 3600 2    50   Output ~ 0
+Text GLabel 14650 3400 2    50   Output ~ 0
 FIFO_SIWU
-Text GLabel 14650 3000 2    50   BiDi ~ 0
-FIFO_D7
 Text GLabel 14650 2900 2    50   BiDi ~ 0
-FIFO_D6
+FIFO_D7
 Text GLabel 14650 2800 2    50   BiDi ~ 0
-FIFO_D5
+FIFO_D6
 Text GLabel 14650 2700 2    50   BiDi ~ 0
-FIFO_D4
+FIFO_D5
 Text GLabel 14650 2600 2    50   BiDi ~ 0
-FIFO_D3
+FIFO_D4
 Text GLabel 14650 2500 2    50   BiDi ~ 0
-FIFO_D2
+FIFO_D3
 Text GLabel 14650 2400 2    50   BiDi ~ 0
-FIFO_D1
+FIFO_D2
 Text GLabel 14650 2300 2    50   BiDi ~ 0
+FIFO_D1
+Text GLabel 14650 2200 2    50   BiDi ~ 0
 FIFO_D0
 Text Notes 3900 7100 0    50   ~ 0
 CFG[2..0] = 001 (Slave SPI mode)
@@ -668,30 +652,8 @@ NoConn ~ 3100 8400
 NoConn ~ 3100 8500
 NoConn ~ 3100 8600
 NoConn ~ 3100 8700
-NoConn ~ 12150 4000
-NoConn ~ 12150 4100
-NoConn ~ 14650 3900
-NoConn ~ 14650 4000
-NoConn ~ 14650 4100
-NoConn ~ 14650 4200
-NoConn ~ 14650 4300
-NoConn ~ 14650 4400
-Text Notes 14950 2050 0    50   ~ 0
-FTDI signals on left side.
-Text Notes 12300 2550 0    50   ~ 0
-"Slow" signals on left side.
-NoConn ~ 12150 3000
-NoConn ~ 12150 2900
-NoConn ~ 12150 2800
-NoConn ~ 12150 2700
-NoConn ~ 12150 2600
-NoConn ~ 12150 2500
 NoConn ~ 14650 1300
 NoConn ~ 14650 1400
-NoConn ~ 14650 1900
-NoConn ~ 14650 2000
-NoConn ~ 14650 2100
-NoConn ~ 14650 2200
 Text Notes 8300 9000 0    50   ~ 0
 TODO: Add decoupling capacitors
 Wire Wire Line
@@ -736,7 +698,6 @@ Wire Wire Line
 Wire Wire Line
 	2250 9950 2900 9950
 NoConn ~ 3100 7900
-NoConn ~ 14650 3100
 Text GLabel 2150 2100 2    50   Input ~ 0
 ANALOG_R0
 Text GLabel 2150 2200 2    50   Input ~ 0
@@ -803,9 +764,9 @@ $EndComp
 Wire Wire Line
 	850  2500 850  2600
 Connection ~ 850  2500
-Text GLabel 12150 3100 2    50   Output ~ 0
+Text GLabel 12150 3500 2    50   Output ~ 0
 PWR_5V_EN
-Text GLabel 12150 3200 2    50   Input ~ 0
+Text GLabel 12150 3600 2    50   Input ~ 0
 PWR_OVERFLAG
 $Comp
 L Device:R_Small R13
@@ -869,14 +830,69 @@ Text GLabel 12150 1900 2    50   Input ~ 0
 CLK_12MHZ
 Text GLabel 12150 1700 2    50   Input ~ 0
 CLK_12MHZ
-NoConn ~ 12150 1800
-NoConn ~ 12150 2000
-NoConn ~ 12150 4300
-NoConn ~ 12150 4400
-Text GLabel 12150 3500 2    50   Input ~ 0
+Text GLabel 12150 3900 2    50   Input ~ 0
 ANALOG_B_OTR
-Text GLabel 12150 3400 2    50   Input ~ 0
+Text GLabel 12150 3800 2    50   Input ~ 0
 ANALOG_G_OTR
-Text GLabel 12150 3300 2    50   Input ~ 0
+Text GLabel 12150 3700 2    50   Input ~ 0
 ANALOG_R_OTR
+Wire Wire Line
+	13350 2100 13350 2200
+Wire Wire Line
+	13350 2000 13350 2100
+Connection ~ 13350 2100
+$Comp
+L SPLA:LFE5U-45F-BG256 U1
+U 6 1 5FE8A82C
+P 14000 2850
+F 0 "U1" H 14000 4641 39  0000 C CNN
+F 1 "LFE5U-45F-BG256" H 14000 4566 39  0000 C CNN
+F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSMD" H 13050 4850 39  0001 C CNN
+F 3 "" H 13050 4850 39  0001 C CNN
+	6    14000 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 12150 2600 2    50   BiDi ~ 0
+FGPA_PPU1_TST0
+Text GLabel 12150 2300 2    50   Output ~ 0
+FPGA_TST_OE
+Text GLabel 12150 2500 2    50   BiDi ~ 0
+FGPA_PPU1_TST1
+Text GLabel 12150 2400 2    50   BiDi ~ 0
+FGPA_PPU1_TST2
+Text GLabel 14650 4400 2    50   BiDi ~ 0
+FGPA_PPU2_TST15
+Text GLabel 14650 4300 2    50   BiDi ~ 0
+FGPA_PPU2_TST14
+Text GLabel 14650 4200 2    50   BiDi ~ 0
+FGPA_PPU2_TST13
+Text GLabel 14650 4100 2    50   BiDi ~ 0
+FGPA_PPU2_TST12
+Text GLabel 14650 4000 2    50   BiDi ~ 0
+FGPA_PPU2_TST11
+Text GLabel 14650 3900 2    50   BiDi ~ 0
+FGPA_PPU2_TST10
+Text GLabel 14650 3800 2    50   BiDi ~ 0
+FGPA_PPU2_TST9
+Text GLabel 14650 3700 2    50   BiDi ~ 0
+FGPA_PPU2_TST8
+Text GLabel 12150 3400 2    50   BiDi ~ 0
+FGPA_PPU2_TST7
+Text GLabel 12150 3300 2    50   BiDi ~ 0
+FGPA_PPU2_TST6
+Text GLabel 12150 3200 2    50   BiDi ~ 0
+FGPA_PPU2_TST5
+Text GLabel 12150 3100 2    50   BiDi ~ 0
+FGPA_PPU2_TST4
+Text GLabel 12150 3000 2    50   BiDi ~ 0
+FGPA_PPU2_TST3
+Text GLabel 12150 2900 2    50   BiDi ~ 0
+FGPA_PPU2_TST2
+Text GLabel 12150 2800 2    50   BiDi ~ 0
+FGPA_PPU2_TST1
+Text GLabel 12150 2700 2    50   BiDi ~ 0
+FGPA_PPU2_TST0
+NoConn ~ 14650 1900
+NoConn ~ 14650 2000
+NoConn ~ 14650 2100
 $EndSCHEMATC
