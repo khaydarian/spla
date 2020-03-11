@@ -16,9 +16,9 @@ schematic: Fix power layout entirely.
 schematic: Add FPGA decoupling capacitors.
 schematic: Fix FPGA pin mapping.
 schematic: Review with Nate.
-pcb: Layout excercise with new plan
-pcb: FInish QFP-100 footprint.
-lab: Verify PPU and VRAM footprint measurements
+pcb: Layout excercise with new plan.
+pcb: Finish QFP-100 footprint.
+lab: Verify PPU and VRAM footprint measurements.
 lab: Bodge wire to vblank / hblank, and measure with scope.
 rtl: Install "Project Trellis" tools and build example.
 rtl: Build async fifo.
