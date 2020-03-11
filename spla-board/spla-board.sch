@@ -76,7 +76,7 @@ Text Notes 10950 4950 2    50   ~ 0
 Text Notes 11500 6450 2    50   ~ 0
 Analog R/G/B
 Text Notes 8900 6450 2    50   ~ 0
-30-bit R/G/B bus
+24-bit R/G/B bus
 Wire Notes Line style solid
 	7500 2700 7800 2700
 Wire Notes Line style solid
