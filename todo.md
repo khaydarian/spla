@@ -29,7 +29,6 @@ rtl: Build opcode processor
 rtl: Build bringup LED-flasher.
 rtl: Build bringup boundary-scan-like image? Possibly get a Lattice tool instead.
 software: Set up CLI tool framework
-software: Import libftdi and get it working with a FT232 cable
 inventory: Write summary tool.
 inventory: Add borrowed scope.
 inventory: Note pre-existing tools (#1 screwdriver).

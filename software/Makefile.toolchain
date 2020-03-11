@@ -1,5 +1,5 @@
 CC := gcc
-CCFLAGS := -Wall -Werror -Wextra
+CFLAGS := -Wall -Werror -Wextra
 
 LD := gcc
 LDFLAGS :=

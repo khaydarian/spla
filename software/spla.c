@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ftdi.h>
+#include <libusb.h>
 
 static inline bool streq(const char* a, const char* b) {
 	return strcmp(a, b) == 0;
@@ -21,8 +22,10 @@ static int show(int argc, char** argv) {
 		return 1;
 	}
 
+	libusb_set_debug(ftdi->usb_ctx, LIBUSB_LOG_LEVEL_ERROR);
+
 	struct ftdi_device_list* devlist;
-	int ret = ftdi_usb_find_all(ftdi, &devlist, 0x0403, 0x6014);
+	int ret = ftdi_usb_find_all(ftdi, &devlist, 0, 0);
 	if (ret < 0) {
 		fprintf(stderr, "ftdi_usb_find_all: error %d: %s\n",
 			ret, ftdi_get_error_string(ftdi));
