@@ -2622,6 +2622,7 @@ Wire Wire Line
 Connection ~ 11650 8850
 Wire Wire Line
 	12750 8750 12750 8850
+Connection ~ 12750 8850
 Wire Bus Line
 	10200 2700 10200 6050
 Wire Bus Line
@@ -2644,5 +2645,4 @@ Wire Bus Line
 	13350 6150 13350 9400
 Wire Bus Line
 	10000 4350 10000 9400
-Connection ~ 12750 8850
 $EndSCHEMATC

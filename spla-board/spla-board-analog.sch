@@ -953,6 +953,4 @@ Wire Wire Line
 Connection ~ 7400 2050
 Wire Wire Line
 	7400 2050 6600 2050
-Text Notes 9800 1600 0    50   ~ 0
-TODO: Split analog power and ground planes, for PCB layout.
 $EndSCHEMATC

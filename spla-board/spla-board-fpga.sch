@@ -80,15 +80,15 @@ F 3 "" H 10550 4850 39  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male J2
+L Connector_Generic:Conn_01x04 J2
 U 1 1 6001AFBA
-P 2800 9650
-F 0 "J2" V 2600 9650 50  0000 R CNN
-F 1 "J_JTAG" V 2700 9600 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2800 9650 50  0001 C CNN
-F 3 "~" H 2800 9650 50  0001 C CNN
-	1    2800 9650
-	0    1    1    0   
+P 2700 9650
+F 0 "J2" V 2800 9650 50  0000 R CNN
+F 1 "J_JTAG" V 2900 9600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2700 9650 50  0001 C CNN
+F 3 "~" H 2700 9650 50  0001 C CNN
+	1    2700 9650
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	3800 10050 3400 10050

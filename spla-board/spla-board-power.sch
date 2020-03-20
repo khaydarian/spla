@@ -708,4 +708,6 @@ $EndComp
 Connection ~ 6850 3650
 Wire Wire Line
 	6850 3650 6500 3650
+Text Notes 3900 5600 0    50   ~ 0
+TODO: Swap these 300mA LDOs for AMS1117 parts.
 $EndSCHEMATC
