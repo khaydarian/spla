@@ -912,7 +912,7 @@ Text GLabel 3400 4350 2    39   BiDi ~ 0
 TAP_PPU2_~PED~
 Text GLabel 3400 4450 2    39   BiDi ~ 0
 TAP_PPU2_~TOUMEI~
-Text GLabel 3900 3850 2    50   Input ~ 0
+Text GLabel 4300 3850 2    50   Input ~ 0
 TAP_PPU2_3.58M
 Text GLabel 5900 1550 0    50   BiDi ~ 0
 FGPA_PPU1_HVCMODE
@@ -978,7 +978,7 @@ F 3 "~" H 3900 3550 50  0001 C CNN
 	1    3700 3550
 	1    0    0    -1  
 $EndComp
-Text GLabel 3900 3750 2    50   Output ~ 0
+Text GLabel 4300 3750 2    50   Output ~ 0
 TAP_XIN
 Wire Wire Line
 	3700 3550 3700 3750
@@ -1034,16 +1034,8 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 3000 3950 50  0001 C CNN
 $EndComp
 Text GLabel 2600 4350 0    39   BiDi ~ 0
 FPGA_PPU2_~PED~
-Text Notes 4000 4050 0    50   ~ 0
+Text Notes 4350 4050 0    50   ~ 0
 Extra 5V signals for bodging.
-Wire Wire Line
-	3400 3950 3550 3950
-Wire Wire Line
-	3550 4050 3400 4050
-Wire Wire Line
-	3400 4150 3550 4150
-Wire Wire Line
-	3550 4250 3400 4250
 Text GLabel 2600 3950 0    50   BiDi ~ 0
 FPGA_5VBODGE1
 Text GLabel 2600 4050 0    50   BiDi ~ 0
@@ -1055,10 +1047,10 @@ FPGA_5VBODGE4
 Wire Wire Line
 	3400 3750 3700 3750
 Wire Wire Line
-	3700 3750 3900 3750
+	3700 3750 4300 3750
 Connection ~ 3700 3750
 Wire Wire Line
-	3900 3850 3550 3850
+	4300 3850 3550 3850
 Wire Wire Line
 	3550 3850 3550 3350
 Wire Wire Line
@@ -1106,12 +1098,12 @@ TAP_~CSYNC~
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5E5A824A
-P 3750 4050
-F 0 "J3" H 3830 4042 50  0000 L CNN
-F 1 "J_BODGE" H 3830 3951 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3750 4050 50  0001 C CNN
-F 3 "~" H 3750 4050 50  0001 C CNN
-	1    3750 4050
+P 4100 4050
+F 0 "J3" H 4180 4042 50  0000 L CNN
+F 1 "J_BODGE" H 4180 3951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4100 4050 50  0001 C CNN
+F 3 "~" H 4100 4050 50  0001 C CNN
+	1    4100 4050
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -1364,4 +1356,20 @@ NoConn ~ 6450 4150
 NoConn ~ 6450 4050
 Text Notes 7550 3000 0    50   ~ 0
 Test signals (NC or GND on original board)
+Wire Wire Line
+	3400 3950 3900 3950
+Wire Wire Line
+	3400 4050 3900 4050
+Wire Wire Line
+	3400 4150 3900 4150
+Wire Wire Line
+	3400 4250 3900 4250
+Text Label 3550 3950 0    50   ~ 0
+BODGE1
+Text Label 3550 4050 0    50   ~ 0
+BODGE2
+Text Label 3550 4150 0    50   ~ 0
+BODGE3
+Text Label 3550 4250 0    50   ~ 0
+BODGE4
 $EndSCHEMATC
