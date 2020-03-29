@@ -953,4 +953,10 @@ Wire Wire Line
 Connection ~ 7400 2050
 Wire Wire Line
 	7400 2050 6600 2050
+Text Label 2500 3400 0    50   ~ 0
+ANALOG_R
+Text Label 2500 3300 0    50   ~ 0
+ANALOG_G
+Text Label 2500 3200 0    50   ~ 0
+ANALOG_B
 $EndSCHEMATC
