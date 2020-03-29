@@ -646,7 +646,6 @@ TODO: FPGA pins are in semi-arbitrary order; still need proper layout pin mappin
 NoConn ~ 3100 7800
 NoConn ~ 3100 8000
 NoConn ~ 3100 8100
-NoConn ~ 3100 8200
 NoConn ~ 3100 8300
 NoConn ~ 3100 8500
 NoConn ~ 3100 8600
@@ -892,7 +891,7 @@ FGPA_PPU2_TST1
 Text GLabel 12150 2700 2    50   BiDi ~ 0
 FGPA_PPU2_TST0
 NoConn ~ 14650 2100
-Text GLabel 14650 1900 2    39   Input ~ 0
+Text GLabel 3100 8200 2    39   Input ~ 0
 USB_~PWREN~
 Text GLabel 3100 8400 2    39   Input ~ 0
 USB_~SUSPEND~
