@@ -353,7 +353,7 @@ Text GLabel 12150 1500 2    50   Output ~ 0
 FPGA_PD_OE
 Text GLabel 9650 2700 2    50   BiDi ~ 0
 FPGA_D1
-Text GLabel 9650 2600 2    50   BiDi ~ 0
+Text GLabel 10350 2600 2    50   BiDi ~ 0
 FPGA_D2
 Text GLabel 9650 2500 2    50   BiDi ~ 0
 FPGA_D3
@@ -369,7 +369,7 @@ Text GLabel 9650 2000 2    50   Output ~ 0
 FPGA_PA0
 Text GLabel 12150 1400 2    50   Output ~ 0
 FPGA_PA_OE
-Text GLabel 9650 1900 2    50   Output ~ 0
+Text GLabel 14650 3600 2    50   Output ~ 0
 FPGA_PA1
 Text GLabel 9650 1800 2    50   Output ~ 0
 FPGA_PA2
@@ -383,37 +383,37 @@ Text GLabel 9650 1400 2    50   Output ~ 0
 FPGA_PA6
 Text GLabel 9650 1300 2    50   Output ~ 0
 FPGA_PA7
-Text GLabel 9650 3600 2    50   BiDi ~ 0
+Text GLabel 13500 5650 2    50   BiDi ~ 0
 FPGA_VAB0
-Text GLabel 9650 3500 2    50   BiDi ~ 0
+Text GLabel 13500 5550 2    50   BiDi ~ 0
 FPGA_VAB1
-Text GLabel 9650 3400 2    50   BiDi ~ 0
+Text GLabel 13500 5450 2    50   BiDi ~ 0
 FPGA_VAB2
-Text GLabel 9650 3300 2    50   BiDi ~ 0
+Text GLabel 13500 5350 2    50   BiDi ~ 0
 FPGA_VAB3
-Text GLabel 9650 3200 2    50   BiDi ~ 0
+Text GLabel 13500 5250 2    50   BiDi ~ 0
 FPGA_VAB4
-Text GLabel 9650 3100 2    50   BiDi ~ 0
+Text GLabel 13500 5150 2    50   BiDi ~ 0
 FPGA_VAB5
-Text GLabel 9650 3000 2    50   BiDi ~ 0
+Text GLabel 13500 5050 2    50   BiDi ~ 0
 FPGA_VAB6
-Text GLabel 9650 2900 2    50   BiDi ~ 0
+Text GLabel 13500 4950 2    50   BiDi ~ 0
 FPGA_VAB7
-Text GLabel 9650 4400 2    50   BiDi ~ 0
+Text GLabel 13500 6450 2    50   BiDi ~ 0
 FPGA_VAA0
-Text GLabel 9650 4300 2    50   BiDi ~ 0
+Text GLabel 13500 6350 2    50   BiDi ~ 0
 FPGA_VAA1
-Text GLabel 9650 4200 2    50   BiDi ~ 0
+Text GLabel 13500 6250 2    50   BiDi ~ 0
 FPGA_VAA2
-Text GLabel 9650 4100 2    50   BiDi ~ 0
+Text GLabel 13500 6150 2    50   BiDi ~ 0
 FPGA_VAA3
-Text GLabel 9650 4000 2    50   BiDi ~ 0
+Text GLabel 13500 6050 2    50   BiDi ~ 0
 FPGA_VAA4
-Text GLabel 9650 3900 2    50   BiDi ~ 0
+Text GLabel 13500 5950 2    50   BiDi ~ 0
 FPGA_VAA5
-Text GLabel 9650 3800 2    50   BiDi ~ 0
+Text GLabel 13500 5850 2    50   BiDi ~ 0
 FPGA_VAA6
-Text GLabel 9650 3700 2    50   BiDi ~ 0
+Text GLabel 13500 5750 2    50   BiDi ~ 0
 FPGA_VAA7
 Text GLabel 7150 4400 2    50   BiDi ~ 0
 FPGA_VAA8
@@ -579,35 +579,35 @@ Text GLabel 3100 7500 2    50   Input ~ 0
 SPI_MISO
 Text GLabel 3100 7700 2    39   Input ~ 0
 SPI_~CS~
-Text GLabel 14650 3000 2    39   Input ~ 0
+Text GLabel 9650 2900 2    39   Input ~ 0
 FIFO_~RXF~
-Text GLabel 14650 3100 2    39   Input ~ 0
+Text GLabel 9650 3300 2    39   Input ~ 0
 FIFO_~TXE~
-Text GLabel 14650 3200 2    39   Output ~ 0
+Text GLabel 9650 4000 2    39   Output ~ 0
 FIFO_~RD~
-Text GLabel 14650 3300 2    39   Output ~ 0
+Text GLabel 9650 4400 2    39   Output ~ 0
 FIFO_~WR~
-Text GLabel 14650 3600 2    50   Input ~ 0
+Text GLabel 9650 1900 2    50   Input ~ 0
 FIFO_CLKOUT
-Text GLabel 14650 3500 2    39   Output ~ 0
+Text GLabel 9650 4200 2    39   Output ~ 0
 FIFO_~OE~
-Text GLabel 14650 3400 2    50   Output ~ 0
+Text GLabel 9650 4300 2    50   Output ~ 0
 FIFO_SIWU
-Text GLabel 14650 2900 2    50   BiDi ~ 0
+Text GLabel 9650 3700 2    50   BiDi ~ 0
 FIFO_D7
-Text GLabel 14650 2800 2    50   BiDi ~ 0
+Text GLabel 9650 3800 2    50   BiDi ~ 0
 FIFO_D6
-Text GLabel 14650 2700 2    50   BiDi ~ 0
+Text GLabel 9650 3500 2    50   BiDi ~ 0
 FIFO_D5
-Text GLabel 14650 2600 2    50   BiDi ~ 0
+Text GLabel 9650 3600 2    50   BiDi ~ 0
 FIFO_D4
-Text GLabel 14650 2500 2    50   BiDi ~ 0
+Text GLabel 9650 3400 2    50   BiDi ~ 0
 FIFO_D3
-Text GLabel 14650 2400 2    50   BiDi ~ 0
+Text GLabel 9650 3200 2    50   BiDi ~ 0
 FIFO_D2
-Text GLabel 14650 2300 2    50   BiDi ~ 0
+Text GLabel 9650 3100 2    50   BiDi ~ 0
 FIFO_D1
-Text GLabel 14650 2200 2    50   BiDi ~ 0
+Text GLabel 9650 2600 2    50   BiDi ~ 0
 FIFO_D0
 Text Notes 3900 7100 0    50   ~ 0
 CFG[2..0] = 001 (Slave SPI mode)
@@ -648,7 +648,6 @@ NoConn ~ 3100 8000
 NoConn ~ 3100 8100
 NoConn ~ 3100 8200
 NoConn ~ 3100 8300
-NoConn ~ 3100 8400
 NoConn ~ 3100 8500
 NoConn ~ 3100 8600
 NoConn ~ 3100 8700
@@ -895,6 +894,6 @@ FGPA_PPU2_TST0
 NoConn ~ 14650 2100
 Text GLabel 14650 1900 2    39   Input ~ 0
 USB_~PWREN~
-Text GLabel 14650 2000 2    39   Input ~ 0
+Text GLabel 3100 8400 2    39   Input ~ 0
 USB_~SUSPEND~
 $EndSCHEMATC

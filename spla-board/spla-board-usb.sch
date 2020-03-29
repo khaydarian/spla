@@ -641,16 +641,12 @@ Wire Wire Line
 	6750 7350 7550 7350
 Connection ~ 6350 7900
 NoConn ~ 11150 5050
-Text GLabel 11150 6550 2    39   BiDi ~ 0
+Text GLabel 11150 6050 2    39   BiDi ~ 0
 ~INIT
-Text GLabel 11150 6650 2    39   Input ~ 0
+Text GLabel 11150 6150 2    39   Input ~ 0
 ~PROGRAM
-Text GLabel 11150 6450 2    50   BiDi ~ 0
+Text GLabel 11150 5950 2    50   BiDi ~ 0
 DONE
-NoConn ~ 11150 6250
-NoConn ~ 11150 6150
-NoConn ~ 11150 6050
-NoConn ~ 11150 5950
 NoConn ~ 11150 6750
 Text GLabel 11150 7150 2    50   Input ~ 0
 JTAG_TMS
@@ -688,4 +684,8 @@ Text GLabel 11150 7350 2    39   Output ~ 0
 USB_~PWREN~
 Text GLabel 11150 7450 2    39   Output ~ 0
 USB_~SUSPEND~
+NoConn ~ 11150 6250
+NoConn ~ 11150 6450
+NoConn ~ 11150 6550
+NoConn ~ 11150 6650
 $EndSCHEMATC
