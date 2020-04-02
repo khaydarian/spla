@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 74LVC8T245-Q1
+D 8-bit Dual Supply Bus Transceiver
+$ENDCMP
+#
 $CMP LFE5U-45F-BG256
 D ECP5, 45K LUTs, caBGA-256 package
 $ENDCMP
