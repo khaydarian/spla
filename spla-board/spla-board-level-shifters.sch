@@ -13,13 +13,13 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 2950 1750 2    39   Output ~ 0
+Text GLabel 2950 1550 2    39   Output ~ 0
 TAP_~PAWR~
 Text GLabel 2950 1650 2    39   Output ~ 0
 TAP_~PARD~
 Text GLabel 2150 1650 0    39   Input ~ 0
 FPGA_~PARD~
-Text GLabel 2150 1750 0    39   Input ~ 0
+Text GLabel 2150 1550 0    39   Input ~ 0
 FPGA_~PAWR~
 $Comp
 L SPLA:74LVC8T245-Q1 U23
@@ -461,7 +461,7 @@ Text GLabel 13900 4350 0    39   Output ~ 0
 FPGA_~5M~
 Text GLabel 14700 4350 2    39   Input ~ 0
 TAP_~5M~
-Text GLabel 2950 2150 2    39   Output ~ 0
+Text GLabel 2950 1850 2    39   Output ~ 0
 TAP_PPU1_~RESET~
 Text GLabel 5900 3850 0    39   Input ~ 0
 FGPA_PPU1_~EXTSYNC~
@@ -560,7 +560,7 @@ Text GLabel 11050 1750 2    50   Input ~ 0
 TAP_PPU2_TST13
 Text GLabel 11050 1650 2    50   Input ~ 0
 TAP_PPU2_TST14
-Text GLabel 2950 2050 2    50   Output ~ 0
+Text GLabel 2950 2150 2    50   Output ~ 0
 TAP_PPU2_TST15
 $Comp
 L SPLA:74LVC8T245-Q1 U16
@@ -590,7 +590,7 @@ Text GLabel 13900 1300 0    39   Input ~ 0
 LVL_PPUBUS_~OE~
 Text GLabel 10250 1300 0    39   Input ~ 0
 LVL_TST_~OE~
-Text GLabel 2150 2050 0    50   Input ~ 0
+Text GLabel 2150 2150 0    50   Input ~ 0
 FGPA_PPU2_TST15
 Text GLabel 10250 1650 0    50   Output ~ 0
 FGPA_PPU2_TST14
@@ -656,7 +656,7 @@ Text GLabel 2000 9900 0    50   BiDi ~ 0
 FPGA_D6
 Text GLabel 2000 10000 0    50   BiDi ~ 0
 FPGA_D7
-Text GLabel 2150 2150 0    39   Input ~ 0
+Text GLabel 2150 1850 0    39   Input ~ 0
 FPGA_PPU1_~RESET~
 Text GLabel 5900 1300 0    39   Input ~ 0
 LVL_MISCIN_~OE~
@@ -664,9 +664,9 @@ Text GLabel 5900 1750 0    39   Output ~ 0
 FPGA_PPU2_~5MOUT~
 Text GLabel 6700 1750 2    39   Input ~ 0
 TAP_PPU2_~5MOUT~
-Text GLabel 2150 1950 0    50   Input ~ 0
+Text GLabel 2150 2050 0    50   Input ~ 0
 FPGA_PPU2_PALMODE
-Text GLabel 2950 1950 2    50   Output ~ 0
+Text GLabel 2950 2050 2    50   Output ~ 0
 TAP_PPU2_PALMODE
 Text GLabel 3050 4000 2    50   BiDi ~ 0
 TAP_PPU2_EXTLATCH
@@ -685,13 +685,13 @@ Text GLabel 5900 1650 0    39   Output ~ 0
 FPGA_PPU2_~RESOUT1~
 Text GLabel 5900 1550 0    39   Output ~ 0
 FPGA_PPU2_~RESOUT0~
-Text GLabel 2150 1850 0    39   Input ~ 0
+Text GLabel 2150 1950 0    39   Input ~ 0
 FPGA_PPU2_~RESET~
 Text GLabel 6700 1650 2    39   Input ~ 0
 TAP_PPU2_~RESOUT1~
 Text GLabel 6700 1550 2    39   Input ~ 0
 TAP_PPU2_~RESOUT0~
-Text GLabel 2950 1850 2    39   Output ~ 0
+Text GLabel 2950 1950 2    39   Output ~ 0
 TAP_PPU2_~RESET~
 Text GLabel 6700 1950 2    50   Input ~ 0
 TAP_PPU2_VBLANK
@@ -702,18 +702,18 @@ FPGA_PPU2_VBLANK
 Text GLabel 5900 2050 0    50   Output ~ 0
 FPGA_PPU2_HBLANK
 Wire Wire Line
-	3500 1350 3500 1550
-Text GLabel 3650 1550 2    50   Output ~ 0
+	3500 1550 3500 1750
+Text GLabel 3650 1750 2    50   Output ~ 0
 TAP_XIN
 $Comp
 L Connector:TestPoint TP4
 U 1 1 5FB90E4E
-P 3500 1350
-F 0 "TP4" H 3558 1468 50  0000 L CNN
-F 1 "TP_TAP_XIN" H 3558 1377 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3700 1350 50  0001 C CNN
-F 3 "~" H 3700 1350 50  0001 C CNN
-	1    3500 1350
+P 3500 1550
+F 0 "TP4" H 3558 1668 50  0000 L CNN
+F 1 "TP_TAP_XIN" H 3558 1577 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3700 1550 50  0001 C CNN
+F 3 "~" H 3700 1550 50  0001 C CNN
+	1    3500 1550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -730,7 +730,7 @@ $EndComp
 Text Notes 9100 2850 0    50   ~ 0
 Test signals\n(NC or GND on original board)
 Wire Wire Line
-	3650 1550 3500 1550
+	3650 1750 3500 1750
 Text Label 7600 4550 0    50   ~ 0
 BODGE4
 $Comp
@@ -1432,8 +1432,8 @@ Wire Wire Line
 Text Notes 3600 2850 0    50   ~ 0
 TODO: Rearrange these pins for PCB layout.
 Wire Wire Line
-	3500 1550 2950 1550
-Connection ~ 3500 1550
+	3500 1750 2950 1750
+Connection ~ 3500 1750
 Text GLabel 5900 4250 0    50   Input ~ 0
 FPGA_BODGE1
 Text GLabel 5900 4350 0    50   Input ~ 0
@@ -1670,24 +1670,24 @@ Wire Wire Line
 Text GLabel 2150 1300 0    39   Input ~ 0
 LVL_MISCOUT_~OE~
 Wire Wire Line
-	1350 1550 2150 1550
+	1350 1750 2150 1750
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5FB8F8FE
-P 1350 1350
-F 0 "TP1" H 1300 1450 50  0000 R CNN
-F 1 "TP_FPGA_XIN" H 1300 1350 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1550 1350 50  0001 C CNN
-F 3 "~" H 1550 1350 50  0001 C CNN
-	1    1350 1350
+P 1350 1550
+F 0 "TP1" H 1300 1650 50  0000 R CNN
+F 1 "TP_FPGA_XIN" H 1300 1550 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1550 1550 50  0001 C CNN
+F 3 "~" H 1550 1550 50  0001 C CNN
+	1    1350 1550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 1550 1200 1550
-Connection ~ 1350 1550
+	1350 1750 1200 1750
+Connection ~ 1350 1750
 Wire Wire Line
-	1350 1350 1350 1550
-Text GLabel 1200 1550 0    50   Input ~ 0
+	1350 1550 1350 1750
+Text GLabel 1200 1750 0    50   Input ~ 0
 FPGA_XIN
 Wire Wire Line
 	1500 1400 1500 950 
