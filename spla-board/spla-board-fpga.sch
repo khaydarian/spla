@@ -347,230 +347,6 @@ F 3 "" H 1500 9850 39  0001 C CNN
 	7    2450 7850
 	1    0    0    -1  
 $EndComp
-Text GLabel 9250 7500 2    50   BiDi ~ 0
-FPGA_D0
-Text GLabel 10250 5450 2    50   Output ~ 0
-FPGA_PD_OE
-Text GLabel 9250 7400 2    50   BiDi ~ 0
-FPGA_D1
-Text GLabel 9250 7300 2    50   BiDi ~ 0
-FPGA_D2
-Text GLabel 9250 7200 2    50   BiDi ~ 0
-FPGA_D3
-Text GLabel 9250 7100 2    50   BiDi ~ 0
-FPGA_D4
-Text GLabel 9250 7000 2    50   BiDi ~ 0
-FPGA_D5
-Text GLabel 9250 6900 2    50   BiDi ~ 0
-FPGA_D6
-Text GLabel 9250 6800 2    50   BiDi ~ 0
-FPGA_D7
-Text GLabel 9250 6400 2    50   Output ~ 0
-FPGA_PA0
-Text GLabel 10250 5350 2    50   Output ~ 0
-FPGA_PA_OE
-Text GLabel 9250 6300 2    50   Output ~ 0
-FPGA_PA1
-Text GLabel 9250 6200 2    50   Output ~ 0
-FPGA_PA2
-Text GLabel 9250 6100 2    50   Output ~ 0
-FPGA_PA3
-Text GLabel 9250 6000 2    50   Output ~ 0
-FPGA_PA4
-Text GLabel 9250 5900 2    50   Output ~ 0
-FPGA_PA5
-Text GLabel 9250 5800 2    50   Output ~ 0
-FPGA_PA6
-Text GLabel 9250 5700 2    50   Output ~ 0
-FPGA_PA7
-Text GLabel 12550 6600 2    50   BiDi ~ 0
-FPGA_VAB0
-Text GLabel 12550 6500 2    50   BiDi ~ 0
-FPGA_VAB1
-Text GLabel 12550 6400 2    50   BiDi ~ 0
-FPGA_VAB2
-Text GLabel 12550 6300 2    50   BiDi ~ 0
-FPGA_VAB3
-Text GLabel 12550 6200 2    50   BiDi ~ 0
-FPGA_VAB4
-Text GLabel 12550 6100 2    50   BiDi ~ 0
-FPGA_VAB5
-Text GLabel 12550 6000 2    50   BiDi ~ 0
-FPGA_VAB6
-Text GLabel 12550 5900 2    50   BiDi ~ 0
-FPGA_VAB7
-Text GLabel 13500 6650 2    50   BiDi ~ 0
-FPGA_VAA0
-Text GLabel 13500 6550 2    50   BiDi ~ 0
-FPGA_VAA1
-Text GLabel 13500 6450 2    50   BiDi ~ 0
-FPGA_VAA2
-Text GLabel 13500 6350 2    50   BiDi ~ 0
-FPGA_VAA3
-Text GLabel 13500 6250 2    50   BiDi ~ 0
-FPGA_VAA4
-Text GLabel 13500 6150 2    50   BiDi ~ 0
-FPGA_VAA5
-Text GLabel 13500 6050 2    50   BiDi ~ 0
-FPGA_VAA6
-Text GLabel 13500 5950 2    50   BiDi ~ 0
-FPGA_VAA7
-Text GLabel 13500 5850 2    50   BiDi ~ 0
-FPGA_VAA8
-Text GLabel 13500 5750 2    50   BiDi ~ 0
-FPGA_VAA9
-Text GLabel 13500 5650 2    50   BiDi ~ 0
-FPGA_VAA10
-Text GLabel 13500 5550 2    50   BiDi ~ 0
-FPGA_VAA11
-Text GLabel 13500 5450 2    50   BiDi ~ 0
-FPGA_VAA12
-Text GLabel 13500 5350 2    50   BiDi ~ 0
-FPGA_VAA13
-Text GLabel 13500 5250 2    50   BiDi ~ 0
-FPGA_VA14
-Text GLabel 10250 5250 2    50   Output ~ 0
-FPGA_VA_OE
-Text GLabel 12550 5800 2    50   BiDi ~ 0
-FPGA_VAB8
-Text GLabel 12550 5700 2    50   BiDi ~ 0
-FPGA_VAB9
-Text GLabel 12550 5600 2    50   BiDi ~ 0
-FPGA_VAB10
-Text GLabel 12550 5500 2    50   BiDi ~ 0
-FPGA_VAB11
-Text GLabel 12550 5400 2    50   BiDi ~ 0
-FPGA_VAB12
-Text GLabel 12550 5300 2    50   BiDi ~ 0
-FPGA_VAB13
-Text GLabel 13050 7200 2    39   BiDi ~ 0
-FGPA_~VRD~
-Text GLabel 13050 7100 2    39   BiDi ~ 0
-FPGA_~VAWR~
-Text GLabel 13050 7000 2    39   BiDi ~ 0
-FPGA_~VBWR~
-Text GLabel 12250 7750 2    50   BiDi ~ 0
-FPGA_VDB0
-Text GLabel 12250 7650 2    50   BiDi ~ 0
-FPGA_VDB1
-Text GLabel 12250 7550 2    50   BiDi ~ 0
-FPGA_VDB2
-Text GLabel 12250 7450 2    50   BiDi ~ 0
-FPGA_VDB3
-Text GLabel 12250 7350 2    50   BiDi ~ 0
-FPGA_VDB4
-Text GLabel 12250 7250 2    50   BiDi ~ 0
-FPGA_VDB5
-Text GLabel 12250 7150 2    50   BiDi ~ 0
-FPGA_VDB6
-Text GLabel 12250 7050 2    50   BiDi ~ 0
-FPGA_VDB7
-Text GLabel 12250 8550 2    50   BiDi ~ 0
-FPGA_VDA0
-Text GLabel 12250 8450 2    50   BiDi ~ 0
-FPGA_VDA1
-Text GLabel 12250 8350 2    50   BiDi ~ 0
-FPGA_VDA2
-Text GLabel 12250 8250 2    50   BiDi ~ 0
-FPGA_VDA3
-Text GLabel 12250 8150 2    50   BiDi ~ 0
-FPGA_VDA4
-Text GLabel 12250 8050 2    50   BiDi ~ 0
-FPGA_VDA5
-Text GLabel 12250 7950 2    50   BiDi ~ 0
-FPGA_VDA6
-Text GLabel 12250 7850 2    50   BiDi ~ 0
-FPGA_VDA7
-Text GLabel 10250 5550 2    50   Output ~ 0
-FPGA_VD_OE
-Text GLabel 10250 8100 2    50   Input ~ 0
-FPGA_CHR3
-Text GLabel 10250 8000 2    50   Input ~ 0
-FPGA_CHR2
-Text GLabel 10250 7900 2    50   Input ~ 0
-FPGA_CHR1
-Text GLabel 10250 7800 2    50   Input ~ 0
-FPGA_CHR0
-Text GLabel 10250 7500 2    50   Input ~ 0
-FPGA_COLOR2
-Text GLabel 10250 7400 2    50   Input ~ 0
-FPGA_COLOR1
-Text GLabel 10250 7300 2    50   Input ~ 0
-FPGA_COLOR0
-Text GLabel 10250 7700 2    50   Input ~ 0
-FPGA_PRIO1
-Text GLabel 10250 7600 2    50   Input ~ 0
-FPGA_PRIO0
-Text GLabel 10250 5850 2    50   Output ~ 0
-FPGA_PPUBUS_OE
-Text GLabel 11150 7900 2    39   Output ~ 0
-FPGA_~VCLD~
-Text GLabel 11150 7800 2    39   Output ~ 0
-FPGA_~HCLD
-Text GLabel 11150 7700 2    50   Output ~ 0
-FPGA_FIELD
-Text GLabel 11150 7600 2    39   Output ~ 0
-FPGA_~OVER~
-Text GLabel 11150 8000 2    39   Output ~ 0
-FPGA_~5M~
-Text GLabel 10250 7200 2    39   Input ~ 0
-FPGA_~BURST~
-Text GLabel 10250 7100 2    39   Input ~ 0
-FPGA_~CSYNC~
-Text GLabel 10250 7000 2    39   Output ~ 0
-FPGA_~PARD~
-Text GLabel 10250 5950 2    50   Output ~ 0
-FPGA_CTL_OE
-Text GLabel 10250 6900 2    39   Output ~ 0
-FPGA_~PAWR~
-Text GLabel 10250 6800 2    50   Input ~ 0
-FPGA_PPU2_HBLANK
-Text GLabel 10250 6700 2    50   Input ~ 0
-FPGA_PPU2_VBLANK
-Text GLabel 11250 5750 2    39   Output ~ 0
-FPGA_PPU2_~RESET~
-Text GLabel 11250 5850 2    39   Output ~ 0
-FPGA_PPU1_~RESET~
-Text GLabel 11250 5650 2    39   Input ~ 0
-FPGA_PPU2_~RESOUT0~
-Text GLabel 11250 5550 2    39   Input ~ 0
-FPGA_PPU2_~RESOUT1~
-Text GLabel 10250 5650 2    50   Output ~ 0
-FPGA_EXTRA_OE
-Text GLabel 11150 7500 2    39   BiDi ~ 0
-FGPA_PPU1_~EXTSYNC~
-Text GLabel 11150 7100 2    50   BiDi ~ 0
-FPGA_PPU2_HVCMODE
-Text GLabel 11150 7400 2    50   BiDi ~ 0
-FGPA_PPU1_HVCMODE
-Text GLabel 11150 7300 2    39   BiDi ~ 0
-FPGA_PPU1_~MASTER~
-Text GLabel 11150 7200 2    50   BiDi ~ 0
-FPGA_PPU1_PALMODE
-Text GLabel 11150 7000 2    50   BiDi ~ 0
-FPGA_PPU2_EXTLATCH
-Text GLabel 11150 6900 2    50   BiDi ~ 0
-FPGA_PPU2_PALMODE
-Text GLabel 11150 6700 2    50   Input ~ 0
-FPGA_PPU2_3.58M
-Text GLabel 11250 5950 2    39   BiDi ~ 0
-FPGA_PPU2_~TOUMEI~
-Text GLabel 10250 6600 2    50   Output ~ 0
-FPGA_XIN
-Text GLabel 10250 6050 2    50   Output ~ 0
-FPGA_MISC_OE
-Text GLabel 11150 6800 2    39   Input ~ 0
-FPGA_PPU2_~5MOUT~
-Text GLabel 11150 6600 2    39   BiDi ~ 0
-FPGA_PPU2_~PED~
-Text GLabel 14150 7750 2    50   BiDi ~ 0
-FPGA_5VBODGE1
-Text GLabel 14150 7650 2    50   BiDi ~ 0
-FPGA_5VBODGE2
-Text GLabel 14150 7550 2    50   BiDi ~ 0
-FPGA_5VBODGE3
-Text GLabel 14150 7450 2    50   BiDi ~ 0
-FPGA_5VBODGE4
 Text GLabel 3100 6900 2    50   Output ~ 0
 SPI_CLK
 Text GLabel 3100 7600 2    50   Output ~ 0
@@ -696,55 +472,55 @@ Wire Wire Line
 Wire Wire Line
 	2250 9950 2900 9950
 NoConn ~ 3100 7900
-Text GLabel 8100 6400 2    50   Input ~ 0
+Text GLabel 4150 5200 2    50   Input ~ 0
 ANALOG_R0
-Text GLabel 8100 6500 2    50   Input ~ 0
+Text GLabel 4150 5300 2    50   Input ~ 0
 ANALOG_R1
-Text GLabel 8100 6600 2    50   Input ~ 0
+Text GLabel 4150 5400 2    50   Input ~ 0
 ANALOG_R2
-Text GLabel 8100 6700 2    50   Input ~ 0
+Text GLabel 4150 5500 2    50   Input ~ 0
 ANALOG_R3
-Text GLabel 8100 6800 2    50   Input ~ 0
+Text GLabel 4150 5600 2    50   Input ~ 0
 ANALOG_R4
-Text GLabel 8100 6900 2    50   Input ~ 0
+Text GLabel 4150 5700 2    50   Input ~ 0
 ANALOG_R5
-Text GLabel 8100 7000 2    50   Input ~ 0
+Text GLabel 4150 5800 2    50   Input ~ 0
 ANALOG_R6
-Text GLabel 8100 7100 2    50   Input ~ 0
+Text GLabel 4150 5900 2    50   Input ~ 0
 ANALOG_R7
-Text GLabel 8100 6300 2    50   Output ~ 0
+Text GLabel 4150 5100 2    50   Output ~ 0
 ANALOG_CLK
-Text GLabel 7550 6400 2    50   Input ~ 0
+Text GLabel 3600 5200 2    50   Input ~ 0
 ANALOG_G0
-Text GLabel 7550 6500 2    50   Input ~ 0
+Text GLabel 3600 5300 2    50   Input ~ 0
 ANALOG_G1
-Text GLabel 7550 6600 2    50   Input ~ 0
+Text GLabel 3600 5400 2    50   Input ~ 0
 ANALOG_G2
-Text GLabel 7550 6700 2    50   Input ~ 0
+Text GLabel 3600 5500 2    50   Input ~ 0
 ANALOG_G3
-Text GLabel 7550 6800 2    50   Input ~ 0
+Text GLabel 3600 5600 2    50   Input ~ 0
 ANALOG_G4
-Text GLabel 7550 6900 2    50   Input ~ 0
+Text GLabel 3600 5700 2    50   Input ~ 0
 ANALOG_G5
-Text GLabel 7550 7000 2    50   Input ~ 0
+Text GLabel 3600 5800 2    50   Input ~ 0
 ANALOG_G6
-Text GLabel 7550 7100 2    50   Input ~ 0
+Text GLabel 3600 5900 2    50   Input ~ 0
 ANALOG_G7
-Text GLabel 7000 6400 2    50   Input ~ 0
+Text GLabel 3050 5200 2    50   Input ~ 0
 ANALOG_B0
-Text GLabel 7000 6500 2    50   Input ~ 0
+Text GLabel 3050 5300 2    50   Input ~ 0
 ANALOG_B1
-Text GLabel 7000 6600 2    50   Input ~ 0
+Text GLabel 3050 5400 2    50   Input ~ 0
 ANALOG_B2
-Text GLabel 7000 6700 2    50   Input ~ 0
+Text GLabel 3050 5500 2    50   Input ~ 0
 ANALOG_B3
-Text GLabel 7000 6800 2    50   Input ~ 0
+Text GLabel 3050 5600 2    50   Input ~ 0
 ANALOG_B4
-Text GLabel 7000 6900 2    50   Input ~ 0
+Text GLabel 3050 5700 2    50   Input ~ 0
 ANALOG_B5
-Text GLabel 7000 7000 2    50   Input ~ 0
+Text GLabel 3050 5800 2    50   Input ~ 0
 ANALOG_B6
-Text GLabel 7000 7100 2    50   Input ~ 0
+Text GLabel 3050 5900 2    50   Input ~ 0
 ANALOG_B7
 Wire Wire Line
 	850  2400 850  2500
@@ -762,9 +538,9 @@ $EndComp
 Wire Wire Line
 	850  2500 850  2600
 Connection ~ 850  2500
-Text GLabel 11550 5100 2    50   Output ~ 0
+Text GLabel 6450 5800 2    50   Output ~ 0
 PWR_5V_EN
-Text GLabel 11550 5200 2    50   Input ~ 0
+Text GLabel 6450 5900 2    50   Input ~ 0
 PWR_OVERFLAG
 $Comp
 L Device:R_Small R13
@@ -824,15 +600,13 @@ Wire Wire Line
 	3400 10050 2800 10050
 Wire Wire Line
 	3400 10550 3400 10650
-Text GLabel 10250 5750 2    50   Input ~ 0
+Text GLabel 6450 5600 2    50   Input ~ 0
 CLK_12MHZ
-Text GLabel 12600 5000 2    50   Input ~ 0
-CLK_12MHZ
-Text GLabel 7300 7600 2    50   Input ~ 0
+Text GLabel 3350 6400 2    50   Input ~ 0
 ANALOG_B_OTR
-Text GLabel 7300 7500 2    50   Input ~ 0
+Text GLabel 3350 6300 2    50   Input ~ 0
 ANALOG_G_OTR
-Text GLabel 7300 7400 2    50   Input ~ 0
+Text GLabel 3350 6200 2    50   Input ~ 0
 ANALOG_R_OTR
 Wire Wire Line
 	13350 2100 13350 2200
@@ -850,49 +624,267 @@ F 3 "" H 13050 4850 39  0001 C CNN
 	6    14000 2850
 	1    0    0    -1  
 $EndComp
-Text GLabel 14600 5200 2    50   BiDi ~ 0
-FGPA_PPU1_TST0
-Text GLabel 10250 6150 2    50   Output ~ 0
-FPGA_TST_OE
-Text GLabel 14600 5100 2    50   BiDi ~ 0
-FGPA_PPU1_TST1
-Text GLabel 14600 5000 2    50   BiDi ~ 0
-FGPA_PPU1_TST2
-Text GLabel 14600 6800 2    50   BiDi ~ 0
-FGPA_PPU2_TST15
-Text GLabel 14600 6700 2    50   BiDi ~ 0
-FGPA_PPU2_TST14
-Text GLabel 14600 6600 2    50   BiDi ~ 0
-FGPA_PPU2_TST13
-Text GLabel 14600 6500 2    50   BiDi ~ 0
-FGPA_PPU2_TST12
-Text GLabel 14600 6400 2    50   BiDi ~ 0
-FGPA_PPU2_TST11
-Text GLabel 14600 6300 2    50   BiDi ~ 0
-FGPA_PPU2_TST10
-Text GLabel 14600 6200 2    50   BiDi ~ 0
-FGPA_PPU2_TST9
-Text GLabel 14600 6100 2    50   BiDi ~ 0
-FGPA_PPU2_TST8
-Text GLabel 14600 6000 2    50   BiDi ~ 0
-FGPA_PPU2_TST7
-Text GLabel 14600 5900 2    50   BiDi ~ 0
-FGPA_PPU2_TST6
-Text GLabel 14600 5800 2    50   BiDi ~ 0
-FGPA_PPU2_TST5
-Text GLabel 14600 5700 2    50   BiDi ~ 0
-FGPA_PPU2_TST4
-Text GLabel 14600 5600 2    50   BiDi ~ 0
-FGPA_PPU2_TST3
-Text GLabel 14600 5500 2    50   BiDi ~ 0
-FGPA_PPU2_TST2
-Text GLabel 14600 5400 2    50   BiDi ~ 0
-FGPA_PPU2_TST1
-Text GLabel 14600 5300 2    50   BiDi ~ 0
-FGPA_PPU2_TST0
 NoConn ~ 14650 2100
 Text GLabel 3100 8200 2    39   Input ~ 0
 USB_~PWREN~
 Text GLabel 3100 8400 2    39   Input ~ 0
 USB_~SUSPEND~
+Text GLabel 10650 5500 2    39   Output ~ 0
+FPGA_~PARD~
+Text GLabel 10650 5600 2    39   Output ~ 0
+FPGA_~PAWR~
+Text GLabel 10100 7800 2    50   Input ~ 0
+FPGA_PA0
+Text GLabel 10100 7550 2    39   Output ~ 0
+LVL_PA_~OE~
+Text GLabel 10100 7900 2    50   Input ~ 0
+FPGA_PA1
+Text GLabel 10100 8000 2    50   Input ~ 0
+FPGA_PA2
+Text GLabel 10100 8100 2    50   Input ~ 0
+FPGA_PA3
+Text GLabel 10100 8200 2    50   Input ~ 0
+FPGA_PA4
+Text GLabel 10100 8300 2    50   Input ~ 0
+FPGA_PA5
+Text GLabel 10100 8400 2    50   Input ~ 0
+FPGA_PA6
+Text GLabel 10100 8500 2    50   Input ~ 0
+FPGA_PA7
+Text GLabel 12650 8850 2    50   BiDi ~ 0
+FPGA_VAB0
+Text GLabel 12650 8750 2    50   BiDi ~ 0
+FPGA_VAB1
+Text GLabel 12650 8650 2    50   BiDi ~ 0
+FPGA_VAB2
+Text GLabel 12650 8550 2    50   BiDi ~ 0
+FPGA_VAB3
+Text GLabel 12650 8450 2    50   BiDi ~ 0
+FPGA_VAB4
+Text GLabel 12650 8350 2    50   BiDi ~ 0
+FPGA_VAB5
+Text GLabel 12650 8250 2    50   BiDi ~ 0
+FPGA_VAB6
+Text GLabel 12650 8150 2    50   BiDi ~ 0
+FPGA_VAB7
+Text GLabel 11850 8850 2    50   BiDi ~ 0
+FPGA_VAA0
+Text GLabel 11850 8750 2    50   BiDi ~ 0
+FPGA_VAA1
+Text GLabel 11850 8650 2    50   BiDi ~ 0
+FPGA_VAA2
+Text GLabel 11850 8550 2    50   BiDi ~ 0
+FPGA_VAA3
+Text GLabel 11850 8450 2    50   BiDi ~ 0
+FPGA_VAA4
+Text GLabel 11850 8350 2    50   BiDi ~ 0
+FPGA_VAA5
+Text GLabel 11850 8250 2    50   BiDi ~ 0
+FPGA_VAA6
+Text GLabel 11850 8150 2    50   BiDi ~ 0
+FPGA_VAA7
+Text GLabel 11850 8050 2    50   BiDi ~ 0
+FPGA_VAA8
+Text GLabel 11850 7950 2    50   BiDi ~ 0
+FPGA_VAA9
+Text GLabel 11850 7850 2    50   BiDi ~ 0
+FPGA_VAA10
+Text GLabel 11850 7750 2    50   BiDi ~ 0
+FPGA_VAA11
+Text GLabel 11850 7650 2    50   BiDi ~ 0
+FPGA_VAA12
+Text GLabel 11850 7550 2    50   BiDi ~ 0
+FPGA_VAA13
+Text GLabel 13400 8450 2    50   BiDi ~ 0
+FPGA_VA14
+Text GLabel 12650 8050 2    50   BiDi ~ 0
+FPGA_VAB8
+Text GLabel 12650 7950 2    50   BiDi ~ 0
+FPGA_VAB9
+Text GLabel 12650 7850 2    50   BiDi ~ 0
+FPGA_VAB10
+Text GLabel 12650 7750 2    50   BiDi ~ 0
+FPGA_VAB11
+Text GLabel 12650 7650 2    50   BiDi ~ 0
+FPGA_VAB12
+Text GLabel 12650 7550 2    50   BiDi ~ 0
+FPGA_VAB13
+Text GLabel 13400 8350 2    39   BiDi ~ 0
+FGPA_~VRD~
+Text GLabel 13400 8150 2    39   BiDi ~ 0
+FPGA_~VAWR~
+Text GLabel 13400 8250 2    39   BiDi ~ 0
+FPGA_~VBWR~
+Text GLabel 14950 8500 2    50   BiDi ~ 0
+FPGA_VDB0
+Text GLabel 14950 8400 2    50   BiDi ~ 0
+FPGA_VDB1
+Text GLabel 14950 8300 2    50   BiDi ~ 0
+FPGA_VDB2
+Text GLabel 14950 8200 2    50   BiDi ~ 0
+FPGA_VDB3
+Text GLabel 14950 8100 2    50   BiDi ~ 0
+FPGA_VDB4
+Text GLabel 14950 8000 2    50   BiDi ~ 0
+FPGA_VDB5
+Text GLabel 14950 7900 2    50   BiDi ~ 0
+FPGA_VDB6
+Text GLabel 14950 7800 2    50   BiDi ~ 0
+FPGA_VDB7
+Text GLabel 14350 8500 2    50   BiDi ~ 0
+FPGA_VDA0
+Text GLabel 14350 8400 2    50   BiDi ~ 0
+FPGA_VDA1
+Text GLabel 14350 8300 2    50   BiDi ~ 0
+FPGA_VDA2
+Text GLabel 14350 8200 2    50   BiDi ~ 0
+FPGA_VDA3
+Text GLabel 14350 8100 2    50   BiDi ~ 0
+FPGA_VDA4
+Text GLabel 14350 8000 2    50   BiDi ~ 0
+FPGA_VDA5
+Text GLabel 14350 7900 2    50   BiDi ~ 0
+FPGA_VDA6
+Text GLabel 14350 7800 2    50   BiDi ~ 0
+FPGA_VDA7
+Text GLabel 14400 5400 2    50   Input ~ 0
+FPGA_CHR3
+Text GLabel 14400 5500 2    50   Input ~ 0
+FPGA_CHR2
+Text GLabel 14400 5600 2    50   Input ~ 0
+FPGA_CHR1
+Text GLabel 14400 5700 2    50   Input ~ 0
+FPGA_CHR0
+Text GLabel 14400 6000 2    50   Input ~ 0
+FPGA_COLOR2
+Text GLabel 14400 6100 2    50   Input ~ 0
+FPGA_COLOR1
+Text GLabel 14400 5800 2    50   Input ~ 0
+FPGA_PRIO1
+Text GLabel 14400 5900 2    50   Input ~ 0
+FPGA_PRIO0
+Text GLabel 10650 6200 2    39   Output ~ 0
+FGPA_PPU1_~EXTSYNC~
+Text GLabel 10650 6100 2    50   Output ~ 0
+FPGA_PPU2_HVCMODE
+Text GLabel 10650 6300 2    50   Output ~ 0
+FGPA_PPU1_HVCMODE
+Text GLabel 10650 6400 2    39   Output ~ 0
+FPGA_PPU1_~MASTER~
+Text GLabel 10650 6500 2    50   Output ~ 0
+FPGA_PPU1_PALMODE
+Text GLabel 11900 5700 2    39   Input ~ 0
+FPGA_~BURST~
+Text GLabel 11900 5800 2    39   Input ~ 0
+FPGA_~CSYNC~
+Text GLabel 14350 7550 2    39   Output ~ 0
+LVL_VD_~OE~
+Text GLabel 14400 5150 2    39   Output ~ 0
+LVL_PPUBUS_~OE~
+Text GLabel 13200 5150 2    39   Output ~ 0
+LVL_TST_~OE~
+Text GLabel 10650 5900 2    50   Output ~ 0
+FGPA_PPU2_TST15
+Text GLabel 13200 5400 2    50   Input ~ 0
+FGPA_PPU2_TST14
+Text GLabel 13200 5500 2    50   Input ~ 0
+FGPA_PPU2_TST13
+Text GLabel 13200 5600 2    50   Input ~ 0
+FGPA_PPU2_TST12
+Text GLabel 13200 5700 2    50   Input ~ 0
+FGPA_PPU2_TST11
+Text GLabel 13200 5800 2    50   Input ~ 0
+FGPA_PPU2_TST10
+Text GLabel 13200 5900 2    50   Input ~ 0
+FGPA_PPU2_TST9
+Text GLabel 13200 6000 2    50   Input ~ 0
+FGPA_PPU2_TST8
+Text GLabel 13200 6100 2    50   Input ~ 0
+FGPA_PPU2_TST7
+Text GLabel 13200 6200 2    50   Input ~ 0
+FGPA_PPU2_TST6
+Text GLabel 13200 6300 2    50   Input ~ 0
+FGPA_PPU2_TST5
+Text GLabel 13200 6400 2    50   Input ~ 0
+FGPA_PPU2_TST4
+Text GLabel 13200 6500 2    50   Input ~ 0
+FGPA_PPU2_TST3
+Text GLabel 13200 6600 2    50   Input ~ 0
+FGPA_PPU2_TST2
+Text GLabel 13200 6700 2    50   Input ~ 0
+FGPA_PPU2_TST1
+Text GLabel 13200 6800 2    50   Input ~ 0
+FGPA_PPU2_TST0
+Text GLabel 10850 7800 2    50   BiDi ~ 0
+FPGA_D0
+Text GLabel 10850 7900 2    50   BiDi ~ 0
+FPGA_D1
+Text GLabel 10850 8000 2    50   BiDi ~ 0
+FPGA_D2
+Text GLabel 10850 8100 2    50   BiDi ~ 0
+FPGA_D3
+Text GLabel 10850 8200 2    50   BiDi ~ 0
+FPGA_D4
+Text GLabel 10850 8300 2    50   BiDi ~ 0
+FPGA_D5
+Text GLabel 10850 8400 2    50   BiDi ~ 0
+FPGA_D6
+Text GLabel 10850 8500 2    50   BiDi ~ 0
+FPGA_D7
+Text GLabel 10650 6000 2    39   Output ~ 0
+FPGA_PPU1_~RESET~
+Text GLabel 11900 5150 2    39   Output ~ 0
+LVL_MISCIN_~OE~
+Text GLabel 11900 5600 2    39   Input ~ 0
+FPGA_PPU2_~5MOUT~
+Text GLabel 10650 5800 2    50   Output ~ 0
+FPGA_PPU2_PALMODE
+Text GLabel 11900 5500 2    39   Input ~ 0
+FPGA_PPU2_~RESOUT1~
+Text GLabel 11900 5400 2    39   Input ~ 0
+FPGA_PPU2_~RESOUT0~
+Text GLabel 10650 5700 2    39   Output ~ 0
+FPGA_PPU2_~RESET~
+Text GLabel 11900 5900 2    50   Input ~ 0
+FPGA_PPU2_VBLANK
+Text GLabel 11900 6000 2    50   Input ~ 0
+FPGA_PPU2_HBLANK
+Text GLabel 13400 7750 2    39   Output ~ 0
+LVL_VA_~OE~
+Text GLabel 13400 7850 2    50   Output ~ 0
+LVL_VA_DIR
+Text GLabel 10100 7650 2    50   Output ~ 0
+LVL_PA_DIR
+Text GLabel 14350 7650 2    50   Output ~ 0
+LVL_VD_DIR
+Text GLabel 10650 6600 2    50   Output ~ 0
+FPGA_BODGE1
+Text GLabel 10650 6700 2    50   Output ~ 0
+FPGA_BODGE2
+Text GLabel 10650 6800 2    50   Output ~ 0
+FPGA_BODGE3
+Text GLabel 10650 6900 2    50   Output ~ 0
+FPGA_BODGE4
+Text GLabel 10650 5150 2    39   Output ~ 0
+LVL_MISCOUT_~OE~
+Text GLabel 10650 5400 2    50   Output ~ 0
+FPGA_XIN
+Text GLabel 10850 7650 2    50   Output ~ 0
+LVL_PD_DIR
+Text GLabel 10850 7550 2    39   Output ~ 0
+LVL_PD_~OE~
+Text GLabel 14400 6800 2    50   Input ~ 0
+FPGA_PPU2_3.58M
+Text GLabel 14400 6700 2    39   Input ~ 0
+FPGA_~5M~
+Text GLabel 14400 6600 2    39   Input ~ 0
+FPGA_~OVER~
+Text GLabel 14400 6500 2    50   Input ~ 0
+FPGA_FIELD
+Text GLabel 14400 6400 2    39   Input ~ 0
+FPGA_~HCLD
+Text GLabel 14400 6300 2    39   Input ~ 0
+FPGA_~VCLD~
+Text GLabel 14400 6200 2    50   Input ~ 0
+FPGA_COLOR0
 $EndSCHEMATC
