@@ -2,7 +2,16 @@ SPLA is a Super Nintendo PPU Logic Analyzer, a breakout board design and
 software to fully reverse-engineer the Super Nintendo PPU chips, which are
 controlled by the CPU and generate the image you see on your TV.
 
-Repository is a bit disorganized at the moment; apologies.
+Current status: Design 80% complete, with some open questions; schematic 80% complete; some PCB layout experiments done.
+
+Design components:
+
+* USB interface to a host PC with an FTDI `FT2232H` chip, which can drive up to
+  60MBps (USB 2.0 "Full Speed" maximum throughput).
+* A Lattice `ECP5` FPGA, which forms the central brains of the board.
+* Both SNES `PPU` chips, and their corresponding video SRAM chips.
+* Three `ADS9280` high-speed analog-to-digital video capture chips, to capture
+  the analog RGB signal output and convert it back to digital for analysis.
 
 ## References
 
