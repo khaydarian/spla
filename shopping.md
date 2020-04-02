@@ -3,11 +3,10 @@ Basic lab equipment:
 *   Hot-air station: Quick 861DW
 *   Board preheater / hot plate
 *   Digital oscilloscope (if not borrowing from Kor).
-*   Magnifying work light, on an arm.
 *   Antistatic wrap strap.
 *   Handy-hand grabber thingys, or something to hold stuff while I work.
 *   Optional: Trinocular electronics microscope?  Not sure if needed yet; might
-    be able to get a chip USB one.
+    be able to get a cheap USB one.
 
 Lab supplies:
 *   ...
@@ -28,8 +27,7 @@ Final board parts (pending actual BoM):
     *   1.8V for FTDI internal core.
     *   1.2V for FPGA I think.
 *   Some voltage shifter stuff.  Not sure about this yet.
-*   3x Analog ADC chips, for video rate (>3.5Msamp). Maybe an extra for
-    colorburst / csync.
+*   3x Analog ADC chips, for video rate (>3.5Msamp).
 *   Micro USB connector.
 *   Lots of surface-mount passives (resistors / capacitors / inductors?).
 *   Bunch of surface-mount LEDs.

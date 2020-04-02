@@ -33,17 +33,23 @@ around the pins.
   * 136 minimum, counting shared signals.
 
 * Can we have the FPGA emulate the VRAM chips as well?
-  * No. The block ram is generally registered, so this is unlikely to work.  It's easier to take the VRAM chips from the actual board anyways.
+  * Maybe. The block ram is generally registered, so this will be at least one
+    (core) clock cycle delayed.  The real SNES takes ~4-6 cycles for video
+    access, so that might still be ok.  This also takes quite a lot of block ram
+    which can make the FPGA more expensive.
+  * It's possibly easier to take the VRAM chips from the actual board anyways.
 
 * What's the format of the signals on R/G/B output lines?
-  * Probably 5V analog; not entirely sure.  Might have negative voltages here in the superblack period, maybe.
+  * Seems like 0V - 2.7V analog, which is too wide peak-to-peak for some ADC
+    chips.  Still not fully characterized.
 
 * Can I solder this myself, or does it need professional manufacturing?
   * Probably.  JLCPCB-SMT will do most of the tiny fiddly parts, and I can
     maybe (?) reflow a 0.8mm pitch BGA manually.  We'll see.
+
 * What are the VRAM chips?  Can I buy them?
-  * Bog-standard SRAM chips; 2x 32Kx.
-  * Maybe can just buy them, easy to emulate in FPGA (if enough space).
+  * Bog-standard SRAM chips; 2x 32KB.  However, they're obsolete, so it might
+    be hard to buy new ones that are compatible with the PPUs.
 
 # Design Process
 
@@ -51,7 +57,6 @@ around the pins.
 * Figure out bill-of-materials, tuning for something I can physically build.
 * Write some proof-of-concept FPGA-styled verilog.
 * Figure out what (physical) tools I need.
-* Talk to Kor/Chris about this nonsense.
 * Learn to solder properly.
 * Figure out how to use kicad (schematics and PCBs).
 * Find a source for PPU1/PPU2 chips (everything else is easy from digikey)
