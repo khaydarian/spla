@@ -502,13 +502,13 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 14300 3950 50  0001 C CNN
 $EndComp
 Text Notes 7150 4800 0    50   ~ 0
 Extra 5V signals for bodging.
-Text GLabel 5900 1850 0    39   Output ~ 0
+Text GLabel 5900 2150 0    39   Output ~ 0
 FPGA_~BURST~
-Text GLabel 5900 1950 0    39   Output ~ 0
+Text GLabel 5900 2250 0    39   Output ~ 0
 FPGA_~CSYNC~
-Text GLabel 6700 1850 2    39   Input ~ 0
+Text GLabel 6700 2150 2    39   Input ~ 0
 TAP_~BURST~
-Text GLabel 6700 1950 2    39   Input ~ 0
+Text GLabel 6700 2250 2    39   Input ~ 0
 TAP_~CSYNC~
 Wire Notes Line
 	15950 5450 500  5450
@@ -693,13 +693,13 @@ Text GLabel 6700 1550 2    39   Input ~ 0
 TAP_PPU2_~RESOUT0~
 Text GLabel 2950 1850 2    39   Output ~ 0
 TAP_PPU2_~RESET~
-Text GLabel 6700 2050 2    50   Input ~ 0
+Text GLabel 6700 1950 2    50   Input ~ 0
 TAP_PPU2_VBLANK
-Text GLabel 6700 2150 2    50   Input ~ 0
+Text GLabel 6700 2050 2    50   Input ~ 0
 TAP_PPU2_HBLANK
-Text GLabel 5900 2050 0    50   Output ~ 0
+Text GLabel 5900 1950 0    50   Output ~ 0
 FPGA_PPU2_VBLANK
-Text GLabel 5900 2150 0    50   Output ~ 0
+Text GLabel 5900 2050 0    50   Output ~ 0
 FPGA_PPU2_HBLANK
 Wire Wire Line
 	3500 1350 3500 1550
@@ -1456,7 +1456,7 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 2550 1650 50  0001 C CNN
 	1    2550 1750
 	1    0    0    -1  
 $EndComp
-Text Notes 1250 4600 0    50   ~ 0
+Text Notes 1100 3550 0    50   ~ 0
 Note: These pins left disconnected, for lack of a better level-shifting solution.
 Text GLabel 5900 3600 0    39   Input ~ 0
 LVL_MISCOUT_~OE~
@@ -1636,25 +1636,6 @@ Wire Notes Line
 Text Notes 4100 900  0    50   ~ 0
 Various Control Signals
 $Comp
-L power:GND #PWR0176
-U 1 1 5EBA997C
-P 1250 4100
-F 0 "#PWR0176" H 1250 3850 50  0001 C CNN
-F 1 "GND" H 1255 3927 50  0000 C CNN
-F 2 "" H 1250 4100 50  0001 C CNN
-F 3 "" H 1250 4100 50  0001 C CNN
-	1    1250 4100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1250 3800 1250 3900
-Connection ~ 1250 3900
-Wire Wire Line
-	1250 3900 1250 4000
-Connection ~ 1250 4000
-Wire Wire Line
-	1250 4000 1250 4100
-$Comp
 L power:+3V3 #PWR0177
 U 1 1 5EBB3621
 P 5200 3250
@@ -1781,8 +1762,8 @@ Wire Wire Line
 	13000 1500 13000 1400
 Wire Wire Line
 	13900 1400 13000 1400
-NoConn ~ 6700 2250
-NoConn ~ 5900 2250
+NoConn ~ 6700 1850
+NoConn ~ 5900 1850
 Text GLabel 13900 4450 0    50   Output ~ 0
 FPGA_PPU2_3.58M
 Text Notes 9150 3600 0    50   ~ 0
@@ -1799,4 +1780,36 @@ Text Notes 12700 1350 0    50   ~ 0
 DIR = B-to-A
 Text Notes 12700 3650 0    50   ~ 0
 DIR = B-to-A
+$Comp
+L Device:R_Small R25
+U 1 1 5F2D13A9
+P 1250 4200
+F 0 "R25" H 1309 4246 50  0000 L CNN
+F 1 "0" H 1309 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1250 4200 50  0001 C CNN
+F 3 "~" H 1250 4200 50  0001 C CNN
+	1    1250 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5F2D1E97
+P 1250 4400
+F 0 "#PWR011" H 1250 4150 50  0001 C CNN
+F 1 "GND" H 1255 4227 50  0000 C CNN
+F 2 "" H 1250 4400 50  0001 C CNN
+F 3 "" H 1250 4400 50  0001 C CNN
+	1    1250 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 3800 1250 3900
+Connection ~ 1250 3900
+Wire Wire Line
+	1250 3900 1250 4000
+Connection ~ 1250 4000
+Wire Wire Line
+	1250 4000 1250 4100
+Wire Wire Line
+	1250 4300 1250 4400
 $EndSCHEMATC
