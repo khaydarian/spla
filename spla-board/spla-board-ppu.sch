@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 5 7
 Title "SPLA Board - PPU"
-Date "2020-03-07"
-Rev "5"
+Date "2020-04-01"
+Rev "6"
 Comp ""
 Comment1 ""
 Comment2 ""
