@@ -111,7 +111,7 @@ Text GLabel 9150 6900 2    50   BiDi ~ 0
 TAP_VAB5
 Text GLabel 9150 6800 2    50   BiDi ~ 0
 TAP_VAB6
-Text GLabel 9150 9300 2    50   BiDi ~ 0
+Text GLabel 9150 10000 2    50   BiDi ~ 0
 TAP_VAB7
 Text GLabel 8350 7400 0    50   BiDi ~ 0
 FPGA_VAB0
@@ -127,7 +127,7 @@ Text GLabel 8350 6900 0    50   BiDi ~ 0
 FPGA_VAB5
 Text GLabel 8350 6800 0    50   BiDi ~ 0
 FPGA_VAB6
-Text GLabel 8350 9300 0    50   BiDi ~ 0
+Text GLabel 8350 10000 0    50   BiDi ~ 0
 FPGA_VAB7
 Text Notes 2050 5750 0    50   ~ 0
 Peripheral Bus
@@ -219,8 +219,6 @@ Text GLabel 6700 9300 2    50   BiDi ~ 0
 TAP_VAA12
 Text GLabel 9150 7500 2    50   BiDi ~ 0
 TAP_VAA13
-Text GLabel 9150 10000 2    50   BiDi ~ 0
-TAP_VA14
 Text GLabel 5900 9700 0    50   BiDi ~ 0
 FPGA_VAA8
 Text GLabel 5900 9600 0    50   BiDi ~ 0
@@ -233,19 +231,6 @@ Text GLabel 5900 9300 0    50   BiDi ~ 0
 FPGA_VAA12
 Text GLabel 8350 7500 0    50   BiDi ~ 0
 FPGA_VAA13
-Text GLabel 8350 10000 0    50   BiDi ~ 0
-FPGA_VA14
-$Comp
-L SPLA:74LVC8T245-Q1 U27
-U 1 1 5E5DCE42
-P 8750 9500
-F 0 "U27" H 8750 10250 50  0000 C CNN
-F 1 "74LVC8T245-Q1" V 8750 9450 50  0000 C CNN
-F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 8750 8200 50  0001 C CNN
-F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 8750 9650 50  0001 C CNN
-	1    8750 9500
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3V3 #PWR0151
 U 1 1 5E5DCE4C
@@ -268,30 +253,18 @@ F 3 "" H 8750 10500 50  0001 C CNN
 	1    8750 10500
 	1    0    0    -1  
 $EndComp
-Text GLabel 9150 9400 2    50   BiDi ~ 0
-TAP_VAB8
-Text GLabel 9150 9500 2    50   BiDi ~ 0
-TAP_VAB9
-Text GLabel 9150 9600 2    50   BiDi ~ 0
-TAP_VAB10
-Text GLabel 9150 9700 2    50   BiDi ~ 0
-TAP_VAB11
-Text GLabel 9150 9800 2    50   BiDi ~ 0
-TAP_VAB12
 Text GLabel 9150 9900 2    50   BiDi ~ 0
-TAP_VAB13
-Text GLabel 8350 9400 0    50   BiDi ~ 0
-FPGA_VAB8
-Text GLabel 8350 9500 0    50   BiDi ~ 0
-FPGA_VAB9
-Text GLabel 8350 9600 0    50   BiDi ~ 0
-FPGA_VAB10
-Text GLabel 8350 9700 0    50   BiDi ~ 0
-FPGA_VAB11
-Text GLabel 8350 9800 0    50   BiDi ~ 0
-FPGA_VAB12
+TAP_VAB8
+Text GLabel 9150 9800 2    50   BiDi ~ 0
+TAP_VAB9
+Text GLabel 9150 9700 2    50   BiDi ~ 0
+TAP_VAB10
 Text GLabel 8350 9900 0    50   BiDi ~ 0
-FPGA_VAB13
+FPGA_VAB8
+Text GLabel 8350 9800 0    50   BiDi ~ 0
+FPGA_VAB9
+Text GLabel 8350 9700 0    50   BiDi ~ 0
+FPGA_VAB10
 Text Notes 7150 5700 0    50   ~ 0
 VRAM Address Bus
 Text GLabel 5900 7500 0    39   BiDi ~ 0
@@ -463,15 +436,15 @@ Text GLabel 14700 4350 2    39   Input ~ 0
 TAP_~5M~
 Text GLabel 2950 1850 2    39   Output ~ 0
 TAP_PPU1_~RESET~
-Text GLabel 5900 3850 0    39   Input ~ 0
+Text GLabel 5900 4250 0    39   Input ~ 0
 FGPA_PPU1_~EXTSYNC~
-Text GLabel 6700 3850 2    39   Output ~ 0
+Text GLabel 6700 4250 2    39   Output ~ 0
 TAP_PPU1_~EXTSYNC~
-Text GLabel 6700 3950 2    50   Output ~ 0
+Text GLabel 6700 4550 2    50   Output ~ 0
 TAP_PPU1_HVCMODE
-Text GLabel 6700 4050 2    39   Output ~ 0
+Text GLabel 6700 4350 2    39   Output ~ 0
 TAP_PPU1_~MASTER~
-Text GLabel 6700 4150 2    50   Output ~ 0
+Text GLabel 6700 4450 2    50   Output ~ 0
 TAP_PPU1_PALMODE
 Text GLabel 2950 2250 2    50   Output ~ 0
 TAP_PPU2_HVCMODE
@@ -481,11 +454,11 @@ Text GLabel 3050 3900 2    39   BiDi ~ 0
 TAP_PPU2_~PED~
 Text GLabel 3050 3800 2    39   BiDi ~ 0
 TAP_PPU2_~TOUMEI~
-Text GLabel 5900 3950 0    50   Input ~ 0
+Text GLabel 5900 4550 0    50   Input ~ 0
 FGPA_PPU1_HVCMODE
-Text GLabel 5900 4050 0    39   Input ~ 0
+Text GLabel 5900 4350 0    39   Input ~ 0
 FPGA_PPU1_~MASTER~
-Text GLabel 5900 4150 0    50   Input ~ 0
+Text GLabel 5900 4450 0    50   Input ~ 0
 FPGA_PPU1_PALMODE
 Text Notes 12850 2850 0    50   ~ 0
 Inter-PPU Bus\n
@@ -500,7 +473,7 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 14300 3950 50  0001 C CNN
 	1    14300 4050
 	1    0    0    -1  
 $EndComp
-Text Notes 7150 4800 0    50   ~ 0
+Text Notes 7250 3650 0    50   ~ 0
 Extra 5V signals for bodging.
 Text GLabel 5900 2150 0    39   Output ~ 0
 FPGA_~BURST~
@@ -512,8 +485,6 @@ Text GLabel 6700 2250 2    39   Input ~ 0
 TAP_~CSYNC~
 Wire Notes Line
 	15950 5450 500  5450
-Wire Notes Line
-	10550 5450 10550 11200
 Wire Notes Line
 	4450 5450 4450 11200
 Wire Notes Line
@@ -731,33 +702,33 @@ Text Notes 9100 2850 0    50   ~ 0
 Test signals\n(NC or GND on original board)
 Wire Wire Line
 	3650 1750 3500 1750
-Text Label 7600 4550 0    50   ~ 0
+Text Label 7000 4150 0    50   ~ 0
 BODGE4
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5E5A824A
-P 8150 4350
-F 0 "J3" H 8230 4342 50  0000 L CNN
-F 1 "J_BODGE" H 8230 4251 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8150 4350 50  0001 C CNN
-F 3 "~" H 8150 4350 50  0001 C CNN
-	1    8150 4350
+P 7550 3950
+F 0 "J3" H 7630 3942 50  0000 L CNN
+F 1 "J_BODGE" H 7630 3851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7550 3950 50  0001 C CNN
+F 3 "~" H 7550 3950 50  0001 C CNN
+	1    7550 3950
 	1    0    0    -1  
 $EndComp
-Text Label 7600 4250 0    50   ~ 0
+Text Label 7000 3850 0    50   ~ 0
 BODGE1
-Text Label 7600 4350 0    50   ~ 0
+Text Label 7000 3950 0    50   ~ 0
 BODGE2
-Text Label 7600 4450 0    50   ~ 0
+Text Label 7000 4050 0    50   ~ 0
 BODGE3
 Wire Wire Line
-	6700 4250 7950 4250
+	6700 3850 7350 3850
 Wire Wire Line
-	6700 4350 7950 4350
+	6700 3950 7350 3950
 Wire Wire Line
-	6700 4450 7950 4450
+	6700 4050 7350 4050
 Wire Wire Line
-	6700 4550 7950 4550
+	6700 4150 7350 4150
 Text GLabel 5900 6550 0    39   Input ~ 0
 LVL_VA_~OE~
 Text GLabel 5900 6650 0    50   Input ~ 0
@@ -1434,13 +1405,13 @@ TODO: Rearrange these pins for PCB layout.
 Wire Wire Line
 	3500 1750 2950 1750
 Connection ~ 3500 1750
-Text GLabel 5900 4250 0    50   Input ~ 0
+Text GLabel 5900 3850 0    50   Input ~ 0
 FPGA_BODGE1
-Text GLabel 5900 4350 0    50   Input ~ 0
+Text GLabel 5900 3950 0    50   Input ~ 0
 FPGA_BODGE2
-Text GLabel 5900 4450 0    50   Input ~ 0
+Text GLabel 5900 4050 0    50   Input ~ 0
 FPGA_BODGE3
-Text GLabel 5900 4550 0    50   Input ~ 0
+Text GLabel 5900 4150 0    50   Input ~ 0
 FPGA_BODGE4
 NoConn ~ 2850 4000
 Wire Wire Line
@@ -1812,4 +1783,33 @@ Wire Wire Line
 	1250 4000 1250 4100
 Wire Wire Line
 	1250 4300 1250 4400
+Wire Notes Line
+	10550 5450 10550 11200
+$Comp
+L SPLA:74LVC8T245-Q1 U27
+U 1 1 5E5DCE42
+P 8750 9500
+F 0 "U27" H 8750 10250 50  0000 C CNN
+F 1 "74LVC8T245-Q1" V 8750 9450 50  0000 C CNN
+F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 8750 8200 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 8750 9650 50  0001 C CNN
+	1    8750 9500
+	1    0    0    -1  
+$EndComp
+Text GLabel 9150 9600 2    50   BiDi ~ 0
+TAP_VA14
+Text GLabel 8350 9600 0    50   BiDi ~ 0
+FPGA_VA14
+Text GLabel 9150 9300 2    50   BiDi ~ 0
+TAP_VAB11
+Text GLabel 9150 9400 2    50   BiDi ~ 0
+TAP_VAB12
+Text GLabel 9150 9500 2    50   BiDi ~ 0
+TAP_VAB13
+Text GLabel 8350 9300 0    50   BiDi ~ 0
+FPGA_VAB11
+Text GLabel 8350 9400 0    50   BiDi ~ 0
+FPGA_VAB12
+Text GLabel 8350 9500 0    50   BiDi ~ 0
+FPGA_VAB13
 $EndSCHEMATC
