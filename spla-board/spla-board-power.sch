@@ -710,4 +710,108 @@ Wire Wire Line
 	6850 3650 6500 3650
 Text Notes 3900 5600 0    50   ~ 0
 TODO: Swap these 300mA LDOs for AMS1117 parts.
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5E9F55D4
+P 13400 8150
+AR Path="/5E9F55D4" Ref="H?"  Part="1" 
+AR Path="/5E50D39B/5E9F55D4" Ref="H1"  Part="1" 
+F 0 "H1" H 13500 8199 50  0000 L CNN
+F 1 "MountingHole_Pad" H 13500 8108 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13400 8150 50  0001 C CNN
+F 3 "~" H 13400 8150 50  0001 C CNN
+	1    13400 8150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5E9F55DA
+P 14400 8150
+AR Path="/5E9F55DA" Ref="H?"  Part="1" 
+AR Path="/5E50D39B/5E9F55DA" Ref="H3"  Part="1" 
+F 0 "H3" H 14500 8199 50  0000 L CNN
+F 1 "MountingHole_Pad" H 14500 8108 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 14400 8150 50  0001 C CNN
+F 3 "~" H 14400 8150 50  0001 C CNN
+	1    14400 8150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5E9F55E0
+P 13400 8650
+AR Path="/5E9F55E0" Ref="H?"  Part="1" 
+AR Path="/5E50D39B/5E9F55E0" Ref="H2"  Part="1" 
+F 0 "H2" H 13500 8699 50  0000 L CNN
+F 1 "MountingHole_Pad" H 13500 8608 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13400 8650 50  0001 C CNN
+F 3 "~" H 13400 8650 50  0001 C CNN
+	1    13400 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5E9F55E6
+P 14400 8650
+AR Path="/5E9F55E6" Ref="H?"  Part="1" 
+AR Path="/5E50D39B/5E9F55E6" Ref="H4"  Part="1" 
+F 0 "H4" H 14500 8699 50  0000 L CNN
+F 1 "MountingHole_Pad" H 14500 8608 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 14400 8650 50  0001 C CNN
+F 3 "~" H 14400 8650 50  0001 C CNN
+	1    14400 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9F55EC
+P 13400 8250
+AR Path="/5E9F55EC" Ref="#PWR?"  Part="1" 
+AR Path="/5E50D39B/5E9F55EC" Ref="#PWR0176"  Part="1" 
+F 0 "#PWR0176" H 13400 8000 50  0001 C CNN
+F 1 "GND" H 13405 8077 50  0000 C CNN
+F 2 "" H 13400 8250 50  0001 C CNN
+F 3 "" H 13400 8250 50  0001 C CNN
+	1    13400 8250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9F55F2
+P 14400 8250
+AR Path="/5E9F55F2" Ref="#PWR?"  Part="1" 
+AR Path="/5E50D39B/5E9F55F2" Ref="#PWR0180"  Part="1" 
+F 0 "#PWR0180" H 14400 8000 50  0001 C CNN
+F 1 "GND" H 14405 8077 50  0000 C CNN
+F 2 "" H 14400 8250 50  0001 C CNN
+F 3 "" H 14400 8250 50  0001 C CNN
+	1    14400 8250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9F55F8
+P 13400 8750
+AR Path="/5E9F55F8" Ref="#PWR?"  Part="1" 
+AR Path="/5E50D39B/5E9F55F8" Ref="#PWR0181"  Part="1" 
+F 0 "#PWR0181" H 13400 8500 50  0001 C CNN
+F 1 "GND" H 13405 8577 50  0000 C CNN
+F 2 "" H 13400 8750 50  0001 C CNN
+F 3 "" H 13400 8750 50  0001 C CNN
+	1    13400 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9F55FE
+P 14400 8750
+AR Path="/5E9F55FE" Ref="#PWR?"  Part="1" 
+AR Path="/5E50D39B/5E9F55FE" Ref="#PWR0184"  Part="1" 
+F 0 "#PWR0184" H 14400 8500 50  0001 C CNN
+F 1 "GND" H 14405 8577 50  0000 C CNN
+F 2 "" H 14400 8750 50  0001 C CNN
+F 3 "" H 14400 8750 50  0001 C CNN
+	1    14400 8750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
