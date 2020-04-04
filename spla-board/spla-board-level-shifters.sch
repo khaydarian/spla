@@ -1674,36 +1674,6 @@ F 3 "" H 1500 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0180
-U 1 1 5EC13393
-P 9350 1500
-F 0 "#PWR0180" H 9350 1250 50  0001 C CNN
-F 1 "GND" H 9355 1327 50  0000 C CNN
-F 2 "" H 9350 1500 50  0001 C CNN
-F 3 "" H 9350 1500 50  0001 C CNN
-	1    9350 1500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9350 1500 9350 1400
-Wire Wire Line
-	10250 1400 9350 1400
-$Comp
-L power:GND #PWR0181
-U 1 1 5EC298B3
-P 9350 3750
-F 0 "#PWR0181" H 9350 3500 50  0001 C CNN
-F 1 "GND" H 9355 3577 50  0000 C CNN
-F 2 "" H 9350 3750 50  0001 C CNN
-F 3 "" H 9350 3750 50  0001 C CNN
-	1    9350 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9350 3750 9350 3650
-Wire Wire Line
-	10250 3650 9350 3650
-$Comp
 L power:GND #PWR0182
 U 1 1 5EC35040
 P 13000 3800
@@ -1737,10 +1707,6 @@ NoConn ~ 6700 1850
 NoConn ~ 5900 1850
 Text GLabel 13900 4450 0    50   Output ~ 0
 FPGA_PPU2_3.58M
-Text Notes 9150 3600 0    50   ~ 0
-DIR = B-to-A
-Text Notes 9150 1350 0    50   ~ 0
-DIR = B-to-A
 Text Notes 4800 1350 0    50   ~ 0
 DIR = B-to-A
 Text Notes 900  1000 0    50   ~ 0
@@ -1812,4 +1778,10 @@ Text GLabel 8350 9400 0    50   BiDi ~ 0
 FPGA_VAB12
 Text GLabel 8350 9500 0    50   BiDi ~ 0
 FPGA_VAB13
+NoConn ~ 11050 1550
+NoConn ~ 10250 1550
+Text GLabel 10250 1400 0    50   Input ~ 0
+LVL_TST_DIR
+Text GLabel 10250 3650 0    50   Input ~ 0
+LVL_TST_DIR
 $EndSCHEMATC

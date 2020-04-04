@@ -881,4 +881,6 @@ Text GLabel 14400 6300 2    39   Input ~ 0
 FPGA_~VCLD~
 Text GLabel 14400 6200 2    50   Input ~ 0
 FPGA_COLOR0
+Text GLabel 13200 5250 2    50   Output ~ 0
+LVL_TST_DIR
 $EndSCHEMATC
