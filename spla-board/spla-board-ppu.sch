@@ -1280,7 +1280,7 @@ Entry Wire Line
 	13350 6850 13250 6750
 Text Notes 13450 6150 3    25   ~ 0
 (Not sure why VBD* is hooked up to EXT*.)\n
-NoConn ~ 5100 6250
+NoConn ~ 4700 6300
 Entry Wire Line
 	10200 3550 10100 3650
 Entry Wire Line
@@ -2627,6 +2627,10 @@ Wire Wire Line
 	7600 1450 7700 1450
 Wire Wire Line
 	7700 1550 6800 1550
+Wire Wire Line
+	5100 6250 5100 6300
+Wire Wire Line
+	5100 6300 4700 6300
 Wire Bus Line
 	10200 2700 10200 6050
 Wire Bus Line
@@ -2649,4 +2653,6 @@ Wire Bus Line
 	13350 6150 13350 9400
 Wire Bus Line
 	10000 4350 10000 9400
+Text Label 4850 6300 0    50   ~ 0
+NC
 $EndSCHEMATC
