@@ -419,12 +419,7 @@ Text GLabel 3100 7300 2    50   BiDi ~ 0
 DONE
 Text Notes 5700 4900 0    101  ~ 0
 TODO: FPGA pins still need proper layout pin mapping.
-NoConn ~ 3100 7800
-NoConn ~ 3100 8000
 NoConn ~ 3100 8100
-NoConn ~ 3100 8300
-NoConn ~ 3100 8500
-NoConn ~ 3100 8600
 NoConn ~ 3100 8700
 NoConn ~ 14650 1300
 NoConn ~ 14650 1400
@@ -472,55 +467,55 @@ Wire Wire Line
 Wire Wire Line
 	2250 9950 2900 9950
 NoConn ~ 3100 7900
-Text GLabel 4150 5200 2    50   Input ~ 0
+Text GLabel 3100 8000 2    50   Input ~ 0
 ANALOG_R0
-Text GLabel 4150 5300 2    50   Input ~ 0
+Text GLabel 3100 7800 2    50   Input ~ 0
 ANALOG_R1
-Text GLabel 4150 5400 2    50   Input ~ 0
+Text GLabel 3100 8600 2    50   Input ~ 0
 ANALOG_R2
-Text GLabel 4150 5500 2    50   Input ~ 0
+Text GLabel 3100 8500 2    50   Input ~ 0
 ANALOG_R3
-Text GLabel 4150 5600 2    50   Input ~ 0
+Text GLabel 12150 4200 2    50   Input ~ 0
 ANALOG_R4
-Text GLabel 4150 5700 2    50   Input ~ 0
+Text GLabel 12150 4400 2    50   Input ~ 0
 ANALOG_R5
-Text GLabel 4150 5800 2    50   Input ~ 0
+Text GLabel 12150 4000 2    50   Input ~ 0
 ANALOG_R6
-Text GLabel 4150 5900 2    50   Input ~ 0
+Text GLabel 12150 3300 2    50   Input ~ 0
 ANALOG_R7
-Text GLabel 4150 5100 2    50   Output ~ 0
+Text GLabel 14650 4300 2    50   Output ~ 0
 ANALOG_CLK
-Text GLabel 3600 5200 2    50   Input ~ 0
+Text GLabel 3100 8300 2    50   Input ~ 0
 ANALOG_G0
-Text GLabel 3600 5300 2    50   Input ~ 0
+Text GLabel 12150 3700 2    50   Input ~ 0
 ANALOG_G1
-Text GLabel 3600 5400 2    50   Input ~ 0
+Text GLabel 12150 3800 2    50   Input ~ 0
 ANALOG_G2
-Text GLabel 3600 5500 2    50   Input ~ 0
+Text GLabel 12150 3500 2    50   Input ~ 0
 ANALOG_G3
-Text GLabel 3600 5600 2    50   Input ~ 0
+Text GLabel 12150 3600 2    50   Input ~ 0
 ANALOG_G4
-Text GLabel 3600 5700 2    50   Input ~ 0
+Text GLabel 12150 3400 2    50   Input ~ 0
 ANALOG_G5
-Text GLabel 3600 5800 2    50   Input ~ 0
+Text GLabel 12150 3200 2    50   Input ~ 0
 ANALOG_G6
-Text GLabel 3600 5900 2    50   Input ~ 0
+Text GLabel 12150 3100 2    50   Input ~ 0
 ANALOG_G7
-Text GLabel 3050 5200 2    50   Input ~ 0
+Text GLabel 12150 2200 2    50   Input ~ 0
 ANALOG_B0
-Text GLabel 3050 5300 2    50   Input ~ 0
+Text GLabel 12150 2500 2    50   Input ~ 0
 ANALOG_B1
-Text GLabel 3050 5400 2    50   Input ~ 0
+Text GLabel 12150 2800 2    50   Input ~ 0
 ANALOG_B2
-Text GLabel 3050 5500 2    50   Input ~ 0
+Text GLabel 12150 2100 2    50   Input ~ 0
 ANALOG_B3
-Text GLabel 3050 5600 2    50   Input ~ 0
+Text GLabel 12150 1600 2    50   Input ~ 0
 ANALOG_B4
-Text GLabel 3050 5700 2    50   Input ~ 0
+Text GLabel 12150 1500 2    50   Input ~ 0
 ANALOG_B5
-Text GLabel 3050 5800 2    50   Input ~ 0
+Text GLabel 12150 1400 2    50   Input ~ 0
 ANALOG_B6
-Text GLabel 3050 5900 2    50   Input ~ 0
+Text GLabel 12150 1300 2    50   Input ~ 0
 ANALOG_B7
 Wire Wire Line
 	850  2400 850  2500
@@ -600,13 +595,13 @@ Wire Wire Line
 	3400 10050 2800 10050
 Wire Wire Line
 	3400 10550 3400 10650
-Text GLabel 6450 5600 2    50   Input ~ 0
+Text GLabel 12150 4300 2    50   Input ~ 0
 CLK_12MHZ
-Text GLabel 3350 6400 2    50   Input ~ 0
+Text GLabel 14650 4400 2    50   Input ~ 0
 ANALOG_B_OTR
-Text GLabel 3350 6300 2    50   Input ~ 0
+Text GLabel 12150 2600 2    50   Input ~ 0
 ANALOG_G_OTR
-Text GLabel 3350 6200 2    50   Input ~ 0
+Text GLabel 12150 2900 2    50   Input ~ 0
 ANALOG_R_OTR
 Wire Wire Line
 	13350 2100 13350 2200
@@ -624,7 +619,6 @@ F 3 "" H 13050 4850 39  0001 C CNN
 	6    14000 2850
 	1    0    0    -1  
 $EndComp
-NoConn ~ 14650 2100
 Text GLabel 3100 8200 2    39   Input ~ 0
 USB_~PWREN~
 Text GLabel 3100 8400 2    39   Input ~ 0
