@@ -699,9 +699,9 @@ Wire Wire Line
 Text Label 8450 5250 0    50   ~ 0
 ~RESET
 Text Label 7600 4750 0    50   ~ 0
-USB_DM
+USB_D-
 Text Label 7600 4850 0    50   ~ 0
-USB_DP
+USB_D+
 Text Label 3450 3850 0    50   ~ 0
 USB_ID
 Text Label 6100 6650 0    50   ~ 0
