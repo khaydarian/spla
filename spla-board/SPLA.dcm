@@ -20,6 +20,10 @@ $CMP SNES_PPU2
 D Super Nintendo PPU2 (5C78), QFP-100
 $ENDCMP
 #
+$CMP ST1S10PHR
+D 3A 900kHz monolithic synchronous step-down regulator
+$ENDCMP
+#
 $CMP VRAM
 D Super Nintendo Video RAM (32Kx8), SOP-28
 $ENDCMP

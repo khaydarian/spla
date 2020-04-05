@@ -533,10 +533,6 @@ $EndComp
 Wire Wire Line
 	850  2500 850  2600
 Connection ~ 850  2500
-Text GLabel 6450 5800 2    50   Output ~ 0
-PWR_5V_EN
-Text GLabel 6450 5900 2    50   Input ~ 0
-PWR_OVERFLAG
 $Comp
 L Device:R_Small R13
 U 1 1 5E5D3141
