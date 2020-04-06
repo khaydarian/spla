@@ -2631,6 +2631,8 @@ Wire Wire Line
 	5100 6250 5100 6300
 Wire Wire Line
 	5100 6300 4700 6300
+Text Label 4850 6300 0    50   ~ 0
+NC
 Wire Bus Line
 	10200 2700 10200 6050
 Wire Bus Line
@@ -2653,6 +2655,4 @@ Wire Bus Line
 	13350 6150 13350 9400
 Wire Bus Line
 	10000 4350 10000 9400
-Text Label 4850 6300 0    50   ~ 0
-NC
 $EndSCHEMATC

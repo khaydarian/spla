@@ -765,10 +765,6 @@ Text GLabel 11900 5700 2    39   Input ~ 0
 FPGA_~BURST~
 Text GLabel 11900 5800 2    39   Input ~ 0
 FPGA_~CSYNC~
-Text GLabel 4650 3500 2    39   Output ~ 0
-LVL_VD_~OE~
-Text GLabel 14400 5150 2    39   Output ~ 0
-LVL_PPUBUS_~OE~
 Text GLabel 14650 2400 2    39   Output ~ 0
 LVL_TST_~OE~
 Text GLabel 10650 5900 2    50   Output ~ 0
@@ -821,8 +817,6 @@ Text GLabel 2150 4300 2    50   BiDi ~ 0
 FPGA_D7
 Text GLabel 10650 6000 2    39   Output ~ 0
 FPGA_PPU1_~RESET~
-Text GLabel 11900 5150 2    39   Output ~ 0
-LVL_MISCIN_~OE~
 Text GLabel 11900 5600 2    39   Input ~ 0
 FPGA_PPU2_~5MOUT~
 Text GLabel 10650 5800 2    50   Output ~ 0
@@ -837,8 +831,6 @@ Text GLabel 11900 5900 2    50   Input ~ 0
 FPGA_PPU2_VBLANK
 Text GLabel 11900 6000 2    50   Input ~ 0
 FPGA_PPU2_HBLANK
-Text GLabel 13400 7750 2    39   Output ~ 0
-LVL_VA_~OE~
 Text GLabel 13400 7850 2    50   Output ~ 0
 LVL_VA_DIR
 Text GLabel 2800 5000 2    50   Output ~ 0
@@ -853,14 +845,10 @@ Text GLabel 10650 6800 2    50   Output ~ 0
 FPGA_BODGE3
 Text GLabel 10650 6900 2    50   Output ~ 0
 FPGA_BODGE4
-Text GLabel 10650 5150 2    39   Output ~ 0
-LVL_MISCOUT_~OE~
 Text GLabel 4650 1800 2    50   Output ~ 0
 FPGA_XIN
 Text GLabel 2150 3000 2    50   Output ~ 0
 LVL_PD_DIR
-Text GLabel 2150 3100 2    39   Output ~ 0
-LVL_PD_~OE~
 Text GLabel 14400 6800 2    50   Input ~ 0
 FPGA_PPU2_3.58M
 Text GLabel 14400 6700 2    39   Input ~ 0

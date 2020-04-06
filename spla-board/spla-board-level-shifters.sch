@@ -32,8 +32,6 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 2400 9400 50  0001 C CNN
 	1    2400 9500
 	1    0    0    -1  
 $EndComp
-Text GLabel 2000 9050 0    39   Input ~ 0
-LVL_PD_~OE~
 $Comp
 L SPLA:74LVC8T245-Q1 U22
 U 1 1 5E55EB1D
@@ -59,8 +57,6 @@ Text GLabel 2800 7000 2    50   Output ~ 0
 TAP_PA2
 Text GLabel 2000 6800 0    50   Input ~ 0
 FPGA_PA0
-Text GLabel 2000 6550 0    39   Input ~ 0
-LVL_PA_~OE~
 Text GLabel 2000 6900 0    50   Input ~ 0
 FPGA_PA1
 Text GLabel 2000 7000 0    50   Input ~ 0
@@ -555,12 +551,6 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 10650 3900 50  0001 C CNN
 	1    10650 4000
 	1    0    0    -1  
 $EndComp
-Text GLabel 11750 6550 0    39   Input ~ 0
-LVL_VD_~OE~
-Text GLabel 13900 1300 0    39   Input ~ 0
-LVL_PPUBUS_~OE~
-Text GLabel 10250 1300 0    39   Input ~ 0
-LVL_TST_~OE~
 Text GLabel 2150 2150 0    50   Input ~ 0
 FGPA_PPU2_TST15
 Text GLabel 10250 1650 0    50   Output ~ 0
@@ -629,8 +619,6 @@ Text GLabel 2000 10000 0    50   BiDi ~ 0
 FPGA_D7
 Text GLabel 2150 1850 0    39   Input ~ 0
 FPGA_PPU1_~RESET~
-Text GLabel 5900 1300 0    39   Input ~ 0
-LVL_MISCIN_~OE~
 Text GLabel 5900 1750 0    39   Output ~ 0
 FPGA_PPU2_~5MOUT~
 Text GLabel 6700 1750 2    39   Input ~ 0
@@ -729,20 +717,12 @@ Wire Wire Line
 	6700 4050 7350 4050
 Wire Wire Line
 	6700 4150 7350 4150
-Text GLabel 5900 6550 0    39   Input ~ 0
-LVL_VA_~OE~
 Text GLabel 5900 6650 0    50   Input ~ 0
 LVL_VA_DIR
-Text GLabel 8350 6550 0    39   Input ~ 0
-LVL_VA_~OE~
 Text GLabel 8350 6650 0    50   Input ~ 0
 LVL_VA_DIR
-Text GLabel 5900 9050 0    39   Input ~ 0
-LVL_VA_~OE~
 Text GLabel 5900 9150 0    50   Input ~ 0
 LVL_VA_DIR
-Text GLabel 8350 9050 0    39   Input ~ 0
-LVL_VA_~OE~
 Text GLabel 8350 9150 0    50   Input ~ 0
 LVL_VA_DIR
 Wire Wire Line
@@ -990,8 +970,6 @@ Wire Wire Line
 	14150 7800 14150 7900
 Wire Wire Line
 	14150 8000 14150 7900
-Text GLabel 13750 6550 0    39   Input ~ 0
-LVL_VD_~OE~
 Text GLabel 11750 6650 0    50   Input ~ 0
 LVL_VD_DIR
 Text GLabel 13750 6650 0    50   Input ~ 0
@@ -1156,8 +1134,6 @@ Wire Wire Line
 Connection ~ 2900 6400
 Wire Wire Line
 	2900 6400 2900 6500
-Text GLabel 13900 3600 0    39   Input ~ 0
-LVL_PPUBUS_~OE~
 $Comp
 L power:+3V3 #PWR0155
 U 1 1 5E907712
@@ -1272,8 +1248,6 @@ Wire Wire Line
 Connection ~ 14800 3450
 Wire Wire Line
 	14800 3450 14800 3550
-Text GLabel 10250 3550 0    39   Input ~ 0
-LVL_TST_~OE~
 $Comp
 L power:+3V3 #PWR0161
 U 1 1 5E958B95
@@ -1429,8 +1403,6 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 2550 1650 50  0001 C CNN
 $EndComp
 Text Notes 1100 3550 0    50   ~ 0
 Note: These pins left disconnected, for lack of a better level-shifting solution.
-Text GLabel 5900 3600 0    39   Input ~ 0
-LVL_MISCOUT_~OE~
 $Comp
 L power:+3V3 #PWR0167
 U 1 1 5EB3672B
@@ -1638,8 +1610,6 @@ Wire Wire Line
 	5900 1400 5050 1400
 Wire Wire Line
 	2150 1400 1500 1400
-Text GLabel 2150 1300 0    39   Input ~ 0
-LVL_MISCOUT_~OE~
 Wire Wire Line
 	1350 1750 2150 1750
 $Comp
@@ -1784,4 +1754,229 @@ Text GLabel 10250 1400 0    50   Input ~ 0
 LVL_TST_DIR
 Text GLabel 10250 3650 0    50   Input ~ 0
 LVL_TST_DIR
+$Comp
+L power:GND #PWR0192
+U 1 1 5EDE95C2
+P 1950 1100
+F 0 "#PWR0192" H 1950 850 50  0001 C CNN
+F 1 "GND" H 1955 927 50  0000 C CNN
+F 2 "" H 1950 1100 50  0001 C CNN
+F 3 "" H 1950 1100 50  0001 C CNN
+	1    1950 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 1300 2050 1300
+Wire Wire Line
+	2050 1300 2050 1100
+Wire Wire Line
+	2050 1100 1950 1100
+$Comp
+L power:GND #PWR0193
+U 1 1 5EE004CD
+P 5700 3400
+F 0 "#PWR0193" H 5700 3150 50  0001 C CNN
+F 1 "GND" H 5705 3227 50  0000 C CNN
+F 2 "" H 5700 3400 50  0001 C CNN
+F 3 "" H 5700 3400 50  0001 C CNN
+	1    5700 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3600 5800 3600
+Wire Wire Line
+	5800 3600 5800 3400
+Wire Wire Line
+	5800 3400 5700 3400
+$Comp
+L power:GND #PWR0194
+U 1 1 5EE30ECD
+P 5700 1100
+F 0 "#PWR0194" H 5700 850 50  0001 C CNN
+F 1 "GND" H 5705 927 50  0000 C CNN
+F 2 "" H 5700 1100 50  0001 C CNN
+F 3 "" H 5700 1100 50  0001 C CNN
+	1    5700 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 1300 5800 1300
+Wire Wire Line
+	5800 1300 5800 1100
+Wire Wire Line
+	5800 1100 5700 1100
+$Comp
+L power:GND #PWR0197
+U 1 1 5EE63EB9
+P 13700 1100
+F 0 "#PWR0197" H 13700 850 50  0001 C CNN
+F 1 "GND" H 13705 927 50  0000 C CNN
+F 2 "" H 13700 1100 50  0001 C CNN
+F 3 "" H 13700 1100 50  0001 C CNN
+	1    13700 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13900 1300 13800 1300
+Wire Wire Line
+	13800 1300 13800 1100
+Wire Wire Line
+	13800 1100 13700 1100
+$Comp
+L power:GND #PWR0198
+U 1 1 5EE70EAD
+P 13700 3400
+F 0 "#PWR0198" H 13700 3150 50  0001 C CNN
+F 1 "GND" H 13705 3227 50  0000 C CNN
+F 2 "" H 13700 3400 50  0001 C CNN
+F 3 "" H 13700 3400 50  0001 C CNN
+	1    13700 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13900 3600 13800 3600
+Wire Wire Line
+	13800 3600 13800 3400
+Wire Wire Line
+	13800 3400 13700 3400
+$Comp
+L power:GND #PWR0199
+U 1 1 5EEDA5D5
+P 1800 6350
+F 0 "#PWR0199" H 1800 6100 50  0001 C CNN
+F 1 "GND" H 1805 6177 50  0000 C CNN
+F 2 "" H 1800 6350 50  0001 C CNN
+F 3 "" H 1800 6350 50  0001 C CNN
+	1    1800 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 6550 1900 6550
+Wire Wire Line
+	1900 6550 1900 6350
+Wire Wire Line
+	1900 6350 1800 6350
+$Comp
+L power:GND #PWR0200
+U 1 1 5EEE9151
+P 1800 8850
+F 0 "#PWR0200" H 1800 8600 50  0001 C CNN
+F 1 "GND" H 1805 8677 50  0000 C CNN
+F 2 "" H 1800 8850 50  0001 C CNN
+F 3 "" H 1800 8850 50  0001 C CNN
+	1    1800 8850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 9050 1900 9050
+Wire Wire Line
+	1900 9050 1900 8850
+Wire Wire Line
+	1900 8850 1800 8850
+$Comp
+L power:GND #PWR0201
+U 1 1 5EEF74CA
+P 5700 8850
+F 0 "#PWR0201" H 5700 8600 50  0001 C CNN
+F 1 "GND" H 5705 8677 50  0000 C CNN
+F 2 "" H 5700 8850 50  0001 C CNN
+F 3 "" H 5700 8850 50  0001 C CNN
+	1    5700 8850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 9050 5800 9050
+Wire Wire Line
+	5800 9050 5800 8850
+Wire Wire Line
+	5800 8850 5700 8850
+$Comp
+L power:GND #PWR0202
+U 1 1 5EF05DF0
+P 8150 8850
+F 0 "#PWR0202" H 8150 8600 50  0001 C CNN
+F 1 "GND" H 8155 8677 50  0000 C CNN
+F 2 "" H 8150 8850 50  0001 C CNN
+F 3 "" H 8150 8850 50  0001 C CNN
+	1    8150 8850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 9050 8250 9050
+Wire Wire Line
+	8250 9050 8250 8850
+Wire Wire Line
+	8250 8850 8150 8850
+$Comp
+L power:GND #PWR0203
+U 1 1 5EF14C2A
+P 8150 6350
+F 0 "#PWR0203" H 8150 6100 50  0001 C CNN
+F 1 "GND" H 8155 6177 50  0000 C CNN
+F 2 "" H 8150 6350 50  0001 C CNN
+F 3 "" H 8150 6350 50  0001 C CNN
+	1    8150 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 6550 8250 6550
+Wire Wire Line
+	8250 6550 8250 6350
+Wire Wire Line
+	8250 6350 8150 6350
+$Comp
+L power:GND #PWR0204
+U 1 1 5EF23F4F
+P 5700 6350
+F 0 "#PWR0204" H 5700 6100 50  0001 C CNN
+F 1 "GND" H 5705 6177 50  0000 C CNN
+F 2 "" H 5700 6350 50  0001 C CNN
+F 3 "" H 5700 6350 50  0001 C CNN
+	1    5700 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 6550 5800 6550
+Wire Wire Line
+	5800 6550 5800 6350
+Wire Wire Line
+	5800 6350 5700 6350
+$Comp
+L power:GND #PWR0205
+U 1 1 5EF33ADC
+P 11550 6350
+F 0 "#PWR0205" H 11550 6100 50  0001 C CNN
+F 1 "GND" H 11555 6177 50  0000 C CNN
+F 2 "" H 11550 6350 50  0001 C CNN
+F 3 "" H 11550 6350 50  0001 C CNN
+	1    11550 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11750 6550 11650 6550
+Wire Wire Line
+	11650 6550 11650 6350
+Wire Wire Line
+	11650 6350 11550 6350
+$Comp
+L power:GND #PWR0206
+U 1 1 5EF43AC4
+P 13550 6350
+F 0 "#PWR0206" H 13550 6100 50  0001 C CNN
+F 1 "GND" H 13555 6177 50  0000 C CNN
+F 2 "" H 13550 6350 50  0001 C CNN
+F 3 "" H 13550 6350 50  0001 C CNN
+	1    13550 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13750 6550 13650 6550
+Wire Wire Line
+	13650 6550 13650 6350
+Wire Wire Line
+	13650 6350 13550 6350
+Text GLabel 10250 1300 0    39   Input ~ 0
+LVL_TST_~OE~
+Text GLabel 10250 3550 0    39   Input ~ 0
+LVL_TST_~OE~
 $EndSCHEMATC
