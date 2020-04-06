@@ -705,7 +705,7 @@ Text GLabel 13400 8250 2    39   BiDi ~ 0
 FPGA_~VBWR~
 Text GLabel 7150 3500 2    50   BiDi ~ 0
 FPGA_VDB0
-Text GLabel 7150 3100 2    50   BiDi ~ 0
+Text GLabel 7150 3400 2    50   BiDi ~ 0
 FPGA_VDB1
 Text GLabel 7150 2000 2    50   BiDi ~ 0
 FPGA_VDB2
