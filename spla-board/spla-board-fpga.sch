@@ -421,8 +421,6 @@ Text Notes 5700 4900 0    101  ~ 0
 TODO: FPGA pins still need proper layout pin mapping.
 NoConn ~ 3100 8100
 NoConn ~ 3100 8700
-NoConn ~ 14650 1300
-NoConn ~ 14650 1400
 Text Notes 8300 9000 0    50   ~ 0
 TODO: Add decoupling capacitors
 Wire Wire Line
@@ -623,23 +621,23 @@ Text GLabel 10650 5500 2    39   Output ~ 0
 FPGA_~PARD~
 Text GLabel 10650 5600 2    39   Output ~ 0
 FPGA_~PAWR~
-Text GLabel 10100 7800 2    50   Input ~ 0
+Text GLabel 2800 5150 2    50   Input ~ 0
 FPGA_PA0
-Text GLabel 10100 7550 2    39   Output ~ 0
+Text GLabel 2800 4900 2    39   Output ~ 0
 LVL_PA_~OE~
-Text GLabel 10100 7900 2    50   Input ~ 0
+Text GLabel 2800 5250 2    50   Input ~ 0
 FPGA_PA1
-Text GLabel 10100 8000 2    50   Input ~ 0
+Text GLabel 2800 5350 2    50   Input ~ 0
 FPGA_PA2
-Text GLabel 10100 8100 2    50   Input ~ 0
+Text GLabel 2800 5450 2    50   Input ~ 0
 FPGA_PA3
-Text GLabel 10100 8200 2    50   Input ~ 0
+Text GLabel 2800 5550 2    50   Input ~ 0
 FPGA_PA4
-Text GLabel 10100 8300 2    50   Input ~ 0
+Text GLabel 2800 5650 2    50   Input ~ 0
 FPGA_PA5
-Text GLabel 10100 8400 2    50   Input ~ 0
+Text GLabel 2800 5750 2    50   Input ~ 0
 FPGA_PA6
-Text GLabel 10100 8500 2    50   Input ~ 0
+Text GLabel 2800 5850 2    50   Input ~ 0
 FPGA_PA7
 Text GLabel 12650 8850 2    50   BiDi ~ 0
 FPGA_VAB0
@@ -771,55 +769,55 @@ Text GLabel 4650 3500 2    39   Output ~ 0
 LVL_VD_~OE~
 Text GLabel 14400 5150 2    39   Output ~ 0
 LVL_PPUBUS_~OE~
-Text GLabel 13200 5150 2    39   Output ~ 0
+Text GLabel 14650 2400 2    39   Output ~ 0
 LVL_TST_~OE~
 Text GLabel 10650 5900 2    50   Output ~ 0
 FGPA_PPU2_TST15
-Text GLabel 13200 5400 2    50   Input ~ 0
+Text GLabel 14650 2300 2    50   Input ~ 0
 FGPA_PPU2_TST14
-Text GLabel 13200 5500 2    50   Input ~ 0
+Text GLabel 14650 3100 2    50   Input ~ 0
 FGPA_PPU2_TST13
-Text GLabel 13200 5600 2    50   Input ~ 0
+Text GLabel 14650 2600 2    50   Input ~ 0
 FGPA_PPU2_TST12
-Text GLabel 13200 5700 2    50   Input ~ 0
+Text GLabel 14650 3200 2    50   Input ~ 0
 FGPA_PPU2_TST11
-Text GLabel 13200 5800 2    50   Input ~ 0
+Text GLabel 14650 3400 2    50   Input ~ 0
 FGPA_PPU2_TST10
-Text GLabel 13200 5900 2    50   Input ~ 0
+Text GLabel 14650 3300 2    50   Input ~ 0
 FGPA_PPU2_TST9
-Text GLabel 13200 6000 2    50   Input ~ 0
+Text GLabel 14650 3900 2    50   Input ~ 0
 FGPA_PPU2_TST8
-Text GLabel 13200 6100 2    50   Input ~ 0
+Text GLabel 12150 3000 2    50   Input ~ 0
 FGPA_PPU2_TST7
-Text GLabel 13200 6200 2    50   Input ~ 0
+Text GLabel 12150 3900 2    50   Input ~ 0
 FGPA_PPU2_TST6
-Text GLabel 13200 6300 2    50   Input ~ 0
+Text GLabel 12150 2700 2    50   Input ~ 0
 FGPA_PPU2_TST5
-Text GLabel 13200 6400 2    50   Input ~ 0
+Text GLabel 12150 2000 2    50   Input ~ 0
 FGPA_PPU2_TST4
-Text GLabel 13200 6500 2    50   Input ~ 0
+Text GLabel 12150 2300 2    50   Input ~ 0
 FGPA_PPU2_TST3
-Text GLabel 13200 6600 2    50   Input ~ 0
+Text GLabel 12150 1900 2    50   Input ~ 0
 FGPA_PPU2_TST2
-Text GLabel 13200 6700 2    50   Input ~ 0
+Text GLabel 14650 4000 2    50   Input ~ 0
 FGPA_PPU2_TST1
-Text GLabel 13200 6800 2    50   Input ~ 0
+Text GLabel 14650 3500 2    50   Input ~ 0
 FGPA_PPU2_TST0
-Text GLabel 10850 7800 2    50   BiDi ~ 0
+Text GLabel 2150 2500 2    50   BiDi ~ 0
 FPGA_D0
-Text GLabel 10850 7900 2    50   BiDi ~ 0
+Text GLabel 2150 2400 2    50   BiDi ~ 0
 FPGA_D1
-Text GLabel 10850 8000 2    50   BiDi ~ 0
+Text GLabel 2150 2100 2    50   BiDi ~ 0
 FPGA_D2
-Text GLabel 10850 8100 2    50   BiDi ~ 0
+Text GLabel 2150 4400 2    50   BiDi ~ 0
 FPGA_D3
-Text GLabel 10850 8200 2    50   BiDi ~ 0
+Text GLabel 14650 1500 2    50   BiDi ~ 0
 FPGA_D4
-Text GLabel 10850 8300 2    50   BiDi ~ 0
+Text GLabel 14650 1600 2    50   BiDi ~ 0
 FPGA_D5
-Text GLabel 10850 8400 2    50   BiDi ~ 0
+Text GLabel 2150 2300 2    50   BiDi ~ 0
 FPGA_D6
-Text GLabel 10850 8500 2    50   BiDi ~ 0
+Text GLabel 2150 4300 2    50   BiDi ~ 0
 FPGA_D7
 Text GLabel 10650 6000 2    39   Output ~ 0
 FPGA_PPU1_~RESET~
@@ -843,7 +841,7 @@ Text GLabel 13400 7750 2    39   Output ~ 0
 LVL_VA_~OE~
 Text GLabel 13400 7850 2    50   Output ~ 0
 LVL_VA_DIR
-Text GLabel 10100 7650 2    50   Output ~ 0
+Text GLabel 2800 5000 2    50   Output ~ 0
 LVL_PA_DIR
 Text GLabel 9650 2700 2    50   Output ~ 0
 LVL_VD_DIR
@@ -859,9 +857,9 @@ Text GLabel 10650 5150 2    39   Output ~ 0
 LVL_MISCOUT_~OE~
 Text GLabel 4650 1800 2    50   Output ~ 0
 FPGA_XIN
-Text GLabel 10850 7650 2    50   Output ~ 0
+Text GLabel 2150 3000 2    50   Output ~ 0
 LVL_PD_DIR
-Text GLabel 10850 7550 2    39   Output ~ 0
+Text GLabel 2150 3100 2    39   Output ~ 0
 LVL_PD_~OE~
 Text GLabel 14400 6800 2    50   Input ~ 0
 FPGA_PPU2_3.58M
@@ -877,7 +875,7 @@ Text GLabel 14400 6300 2    39   Input ~ 0
 FPGA_~VCLD~
 Text GLabel 14400 6200 2    50   Input ~ 0
 FPGA_COLOR0
-Text GLabel 13200 5250 2    50   Output ~ 0
+Text GLabel 14650 2000 2    50   Output ~ 0
 LVL_TST_DIR
 $Comp
 L Device:LED D?
