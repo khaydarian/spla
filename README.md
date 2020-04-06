@@ -4,13 +4,13 @@ controlled by the CPU and generate the image you see on your TV.
 
 Current status:
 
-* Design stabilized, 80% complete, with some open questions.
-  * Power regulation is wrong and needs rework.
+* Design stabilized, 95% complete, with some open questions.
   * Analog ADC layout needs adjustment to handle 2V peak-to-peak limitations.
-* Schematic 80% complete, pending above design changes and FPGA pinmapping.
-* Early PCB layout experiments in progress.
-* Software: Minimally started.
-* Manufacturing: Not started.
+* Schematic 90% complete, pending above design changes and FPGA pinmapping.
+* PCB layout 85% complete.
+* Software minimally started.
+* Lab setup partially complete.
+* Manufacturing not started.
 
 Design components:
 
