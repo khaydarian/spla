@@ -773,9 +773,9 @@ Wire Wire Line
 	3400 5400 4150 5400
 Text Label 2850 3350 0    50   ~ 0
 PWR_12V
-Text Label 9200 3350 0    50   ~ 0
+Text Label 8700 3350 0    50   ~ 0
 PWR_PRE_5V
-Text Label 9200 5400 0    50   ~ 0
+Text Label 8700 5400 0    50   ~ 0
 PWR_PRE_3V3
 Wire Wire Line
 	9800 4700 10350 4700
@@ -804,7 +804,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 3850 7000 3750
 Wire Wire Line
-	8500 3350 9800 3350
+	8500 3350 9350 3350
 Wire Wire Line
 	6500 5800 7000 5800
 Wire Wire Line
@@ -821,7 +821,7 @@ Wire Wire Line
 Wire Wire Line
 	8050 5800 8500 5800
 Wire Wire Line
-	8500 5400 9800 5400
+	8500 5400 9350 5400
 Wire Wire Line
 	10350 4900 10350 4800
 Connection ~ 10350 4700
@@ -1059,9 +1059,6 @@ F 3 "~" H 11850 4700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	12100 4700 11850 4700
-Connection ~ 11400 6350
-Wire Wire Line
-	11400 6350 11400 6550
 Wire Wire Line
 	12100 4600 12100 4700
 $Comp
@@ -1146,4 +1143,104 @@ $EndComp
 Wire Wire Line
 	2500 3650 1450 3650
 Connection ~ 2500 3650
+$Comp
+L Device:LED D?
+U 1 1 5EB36971
+P 9350 3600
+AR Path="/5E4F712F/5EB36971" Ref="D?"  Part="1" 
+AR Path="/5E50D39B/5EB36971" Ref="D5"  Part="1" 
+F 0 "D5" V 9389 3483 50  0000 R CNN
+F 1 "LED" V 9298 3483 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 9350 3600 50  0001 C CNN
+F 3 "~" H 9350 3600 50  0001 C CNN
+	1    9350 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5EB36977
+P 9350 3950
+AR Path="/5E4F712F/5EB36977" Ref="R?"  Part="1" 
+AR Path="/5E50D39B/5EB36977" Ref="R86"  Part="1" 
+F 0 "R86" H 9409 3996 50  0000 L CNN
+F 1 "150" H 9409 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9350 3950 50  0001 C CNN
+F 3 "~" H 9350 3950 50  0001 C CNN
+	1    9350 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 3750 9350 3850
+Wire Wire Line
+	9350 4050 9350 4150
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3697F
+P 9350 4150
+AR Path="/5E4F712F/5EB3697F" Ref="#PWR?"  Part="1" 
+AR Path="/5E50D39B/5EB3697F" Ref="#PWR0190"  Part="1" 
+F 0 "#PWR0190" H 9350 3900 50  0001 C CNN
+F 1 "GND" H 9355 3977 50  0000 C CNN
+F 2 "" H 9350 4150 50  0001 C CNN
+F 3 "" H 9350 4150 50  0001 C CNN
+	1    9350 4150
+	1    0    0    -1  
+$EndComp
+Text Notes 8350 4550 0    50   ~ 0
+(5.0V - 2.0V) / 20mA = 150 ohm
+Wire Wire Line
+	9350 3350 9350 3450
+$Comp
+L Device:LED D?
+U 1 1 5EB3D482
+P 9350 5650
+AR Path="/5E4F712F/5EB3D482" Ref="D?"  Part="1" 
+AR Path="/5E50D39B/5EB3D482" Ref="D3"  Part="1" 
+F 0 "D3" V 9389 5533 50  0000 R CNN
+F 1 "LED" V 9298 5533 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 9350 5650 50  0001 C CNN
+F 3 "~" H 9350 5650 50  0001 C CNN
+	1    9350 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5EB3D48C
+P 9350 6000
+AR Path="/5E4F712F/5EB3D48C" Ref="R?"  Part="1" 
+AR Path="/5E50D39B/5EB3D48C" Ref="R96"  Part="1" 
+F 0 "R96" H 9409 6046 50  0000 L CNN
+F 1 "68" H 9409 5955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9350 6000 50  0001 C CNN
+F 3 "~" H 9350 6000 50  0001 C CNN
+	1    9350 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 5800 9350 5900
+Wire Wire Line
+	9350 6100 9350 6200
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3D498
+P 9350 6200
+AR Path="/5E4F712F/5EB3D498" Ref="#PWR?"  Part="1" 
+AR Path="/5E50D39B/5EB3D498" Ref="#PWR0191"  Part="1" 
+F 0 "#PWR0191" H 9350 5950 50  0001 C CNN
+F 1 "GND" H 9355 6027 50  0000 C CNN
+F 2 "" H 9350 6200 50  0001 C CNN
+F 3 "" H 9350 6200 50  0001 C CNN
+	1    9350 6200
+	1    0    0    -1  
+$EndComp
+Text Notes 8350 6600 0    50   ~ 0
+(3.3V - 2.0V) / 20mA = 65 ohm
+Wire Wire Line
+	9350 5400 9350 5500
+Connection ~ 9350 5400
+Wire Wire Line
+	9350 5400 9800 5400
+Connection ~ 9350 3350
+Wire Wire Line
+	9350 3350 9800 3350
 $EndSCHEMATC

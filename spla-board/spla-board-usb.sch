@@ -578,8 +578,6 @@ Text GLabel 11150 5650 2    50   Output ~ 0
 SPI_MOSI
 Text GLabel 11150 5750 2    50   Input ~ 0
 SPI_MISO
-Text Notes 11800 6450 0    50   ~ 0
-TODO: Include an LED here, for bringup.
 Text GLabel 11150 3750 2    50   BiDi ~ 0
 FIFO_D0
 Text GLabel 11150 3850 2    50   BiDi ~ 0
@@ -681,7 +679,6 @@ USB_~PWREN~
 Text GLabel 11150 7450 2    39   Output ~ 0
 USB_~SUSPEND~
 NoConn ~ 11150 6250
-NoConn ~ 11150 6450
 NoConn ~ 11150 6550
 NoConn ~ 11150 6650
 Text Label 7700 6350 0    50   ~ 0
@@ -706,4 +703,47 @@ Text Label 3450 3850 0    50   ~ 0
 USB_ID
 Text Label 6100 6650 0    50   ~ 0
 EEDO
+$Comp
+L Device:LED D1
+U 1 1 5EB1669C
+P 12400 6700
+F 0 "D1" V 12439 6583 50  0000 R CNN
+F 1 "LED" V 12348 6583 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 12400 6700 50  0001 C CNN
+F 3 "~" H 12400 6700 50  0001 C CNN
+	1    12400 6700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 5EB172EB
+P 12400 7050
+F 0 "R12" H 12459 7096 50  0000 L CNN
+F 1 "68" H 12459 7005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 12400 7050 50  0001 C CNN
+F 3 "~" H 12400 7050 50  0001 C CNN
+	1    12400 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11150 6450 12400 6450
+Wire Wire Line
+	12400 6850 12400 6950
+Wire Wire Line
+	12400 7150 12400 7250
+$Comp
+L power:GND #PWR0187
+U 1 1 5EB1F2EF
+P 12400 7250
+F 0 "#PWR0187" H 12400 7000 50  0001 C CNN
+F 1 "GND" H 12405 7077 50  0000 C CNN
+F 2 "" H 12400 7250 50  0001 C CNN
+F 3 "" H 12400 7250 50  0001 C CNN
+	1    12400 7250
+	1    0    0    -1  
+$EndComp
+Text Notes 12700 7050 0    50   ~ 0
+(3.3V - 2.0V) / 20mA = 65 ohm
+Wire Wire Line
+	12400 6450 12400 6550
 $EndSCHEMATC
