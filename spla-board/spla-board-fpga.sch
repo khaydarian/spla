@@ -705,37 +705,37 @@ Text GLabel 13400 8150 2    39   BiDi ~ 0
 FPGA_~VAWR~
 Text GLabel 13400 8250 2    39   BiDi ~ 0
 FPGA_~VBWR~
-Text GLabel 14950 8500 2    50   BiDi ~ 0
+Text GLabel 7150 3500 2    50   BiDi ~ 0
 FPGA_VDB0
-Text GLabel 14950 8400 2    50   BiDi ~ 0
+Text GLabel 7150 3100 2    50   BiDi ~ 0
 FPGA_VDB1
-Text GLabel 14950 8300 2    50   BiDi ~ 0
+Text GLabel 7150 2000 2    50   BiDi ~ 0
 FPGA_VDB2
-Text GLabel 14950 8200 2    50   BiDi ~ 0
+Text GLabel 7150 2400 2    50   BiDi ~ 0
 FPGA_VDB3
-Text GLabel 14950 8100 2    50   BiDi ~ 0
+Text GLabel 7150 1900 2    50   BiDi ~ 0
 FPGA_VDB4
-Text GLabel 14950 8000 2    50   BiDi ~ 0
+Text GLabel 7150 2300 2    50   BiDi ~ 0
 FPGA_VDB5
-Text GLabel 14950 7900 2    50   BiDi ~ 0
+Text GLabel 4650 4000 2    50   BiDi ~ 0
 FPGA_VDB6
-Text GLabel 14950 7800 2    50   BiDi ~ 0
+Text GLabel 4650 3900 2    50   BiDi ~ 0
 FPGA_VDB7
-Text GLabel 14350 8500 2    50   BiDi ~ 0
+Text GLabel 9650 2800 2    50   BiDi ~ 0
 FPGA_VDA0
-Text GLabel 14350 8400 2    50   BiDi ~ 0
+Text GLabel 9650 2400 2    50   BiDi ~ 0
 FPGA_VDA1
-Text GLabel 14350 8300 2    50   BiDi ~ 0
+Text GLabel 9650 2000 2    50   BiDi ~ 0
 FPGA_VDA2
-Text GLabel 14350 8200 2    50   BiDi ~ 0
+Text GLabel 9650 2300 2    50   BiDi ~ 0
 FPGA_VDA3
-Text GLabel 14350 8100 2    50   BiDi ~ 0
+Text GLabel 9650 1800 2    50   BiDi ~ 0
 FPGA_VDA4
-Text GLabel 14350 8000 2    50   BiDi ~ 0
+Text GLabel 7150 4000 2    50   BiDi ~ 0
 FPGA_VDA5
-Text GLabel 14350 7900 2    50   BiDi ~ 0
+Text GLabel 9650 1700 2    50   BiDi ~ 0
 FPGA_VDA6
-Text GLabel 14350 7800 2    50   BiDi ~ 0
+Text GLabel 7150 3900 2    50   BiDi ~ 0
 FPGA_VDA7
 Text GLabel 14400 5400 2    50   Input ~ 0
 FPGA_CHR3
@@ -767,7 +767,7 @@ Text GLabel 11900 5700 2    39   Input ~ 0
 FPGA_~BURST~
 Text GLabel 11900 5800 2    39   Input ~ 0
 FPGA_~CSYNC~
-Text GLabel 14350 7550 2    39   Output ~ 0
+Text GLabel 4650 3500 2    39   Output ~ 0
 LVL_VD_~OE~
 Text GLabel 14400 5150 2    39   Output ~ 0
 LVL_PPUBUS_~OE~
@@ -845,7 +845,7 @@ Text GLabel 13400 7850 2    50   Output ~ 0
 LVL_VA_DIR
 Text GLabel 10100 7650 2    50   Output ~ 0
 LVL_PA_DIR
-Text GLabel 14350 7650 2    50   Output ~ 0
+Text GLabel 9650 2700 2    50   Output ~ 0
 LVL_VD_DIR
 Text GLabel 10650 6600 2    50   Output ~ 0
 FPGA_BODGE1
@@ -857,7 +857,7 @@ Text GLabel 10650 6900 2    50   Output ~ 0
 FPGA_BODGE4
 Text GLabel 10650 5150 2    39   Output ~ 0
 LVL_MISCOUT_~OE~
-Text GLabel 10650 5400 2    50   Output ~ 0
+Text GLabel 4650 1800 2    50   Output ~ 0
 FPGA_XIN
 Text GLabel 10850 7650 2    50   Output ~ 0
 LVL_PD_DIR
