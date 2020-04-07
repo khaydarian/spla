@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 7)
+    (drawings 8)
     (tracks 4123)
     (zones 0)
     (modules 133)
@@ -7855,6 +7855,9 @@
     )
   )
 
+  (gr_text JLCJLCJLCJLC (at 169.3 76 90) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.2)))
+  )
   (dimension 178 (width 0.15) (layer Cmts.User)
     (gr_text "178.000 mm" (at 129 161.299999) (layer Cmts.User)
       (effects (font (size 1 1) (thickness 0.15)))
