@@ -6,8 +6,8 @@ Current status:
 
 * Design stabilized, 95% complete, with some open questions.
   * Analog ADC layout needs adjustment to handle 2V peak-to-peak limitations.
-* Schematic 90% complete, pending above design changes and FPGA pinmapping.
-* PCB layout 85% complete.
+* Schematic 90% complete, pending above design changes.
+* PCB layout 95% complete.
 * Software minimally started.
 * Lab setup partially complete.
 * Manufacturing not started.
