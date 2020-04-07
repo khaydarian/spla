@@ -639,69 +639,69 @@ Text GLabel 2800 5750 2    50   Input ~ 0
 FPGA_PA6
 Text GLabel 2800 5850 2    50   Input ~ 0
 FPGA_PA7
-Text GLabel 12650 8850 2    50   BiDi ~ 0
+Text GLabel 7150 2900 2    50   BiDi ~ 0
 FPGA_VAB0
-Text GLabel 12650 8750 2    50   BiDi ~ 0
+Text GLabel 7150 3000 2    50   BiDi ~ 0
 FPGA_VAB1
-Text GLabel 12650 8650 2    50   BiDi ~ 0
+Text GLabel 7150 3700 2    50   BiDi ~ 0
 FPGA_VAB2
-Text GLabel 12650 8550 2    50   BiDi ~ 0
+Text GLabel 7150 3200 2    50   BiDi ~ 0
 FPGA_VAB3
-Text GLabel 12650 8450 2    50   BiDi ~ 0
+Text GLabel 7150 3800 2    50   BiDi ~ 0
 FPGA_VAB4
-Text GLabel 12650 8350 2    50   BiDi ~ 0
+Text GLabel 7150 4100 2    50   BiDi ~ 0
 FPGA_VAB5
-Text GLabel 12650 8250 2    50   BiDi ~ 0
+Text GLabel 7150 4200 2    50   BiDi ~ 0
 FPGA_VAB6
-Text GLabel 12650 8150 2    50   BiDi ~ 0
+Text GLabel 7150 4300 2    50   BiDi ~ 0
 FPGA_VAB7
-Text GLabel 11850 8850 2    50   BiDi ~ 0
+Text GLabel 4650 3300 2    50   BiDi ~ 0
 FPGA_VAA0
-Text GLabel 11850 8750 2    50   BiDi ~ 0
+Text GLabel 4650 4100 2    50   BiDi ~ 0
 FPGA_VAA1
-Text GLabel 11850 8650 2    50   BiDi ~ 0
+Text GLabel 4650 3700 2    50   BiDi ~ 0
 FPGA_VAA2
-Text GLabel 11850 8550 2    50   BiDi ~ 0
+Text GLabel 4650 4200 2    50   BiDi ~ 0
 FPGA_VAA3
-Text GLabel 11850 8450 2    50   BiDi ~ 0
+Text GLabel 4650 4300 2    50   BiDi ~ 0
 FPGA_VAA4
-Text GLabel 11850 8350 2    50   BiDi ~ 0
+Text GLabel 4650 4400 2    50   BiDi ~ 0
 FPGA_VAA5
-Text GLabel 11850 8250 2    50   BiDi ~ 0
+Text GLabel 7150 1400 2    50   BiDi ~ 0
 FPGA_VAA6
-Text GLabel 11850 8150 2    50   BiDi ~ 0
+Text GLabel 7150 1300 2    50   BiDi ~ 0
 FPGA_VAA7
-Text GLabel 11850 8050 2    50   BiDi ~ 0
+Text GLabel 7150 1800 2    50   BiDi ~ 0
 FPGA_VAA8
-Text GLabel 11850 7950 2    50   BiDi ~ 0
+Text GLabel 7150 1700 2    50   BiDi ~ 0
 FPGA_VAA9
-Text GLabel 11850 7850 2    50   BiDi ~ 0
+Text GLabel 7150 1600 2    50   BiDi ~ 0
 FPGA_VAA10
-Text GLabel 11850 7750 2    50   BiDi ~ 0
+Text GLabel 7150 2100 2    50   BiDi ~ 0
 FPGA_VAA11
-Text GLabel 11850 7650 2    50   BiDi ~ 0
+Text GLabel 7150 2200 2    50   BiDi ~ 0
 FPGA_VAA12
-Text GLabel 11850 7550 2    50   BiDi ~ 0
+Text GLabel 7150 2700 2    50   BiDi ~ 0
 FPGA_VAA13
-Text GLabel 13400 8450 2    50   BiDi ~ 0
+Text GLabel 9650 1500 2    50   BiDi ~ 0
 FPGA_VA14
-Text GLabel 12650 8050 2    50   BiDi ~ 0
+Text GLabel 7150 4400 2    50   BiDi ~ 0
 FPGA_VAB8
-Text GLabel 12650 7950 2    50   BiDi ~ 0
+Text GLabel 9650 1300 2    50   BiDi ~ 0
 FPGA_VAB9
-Text GLabel 12650 7850 2    50   BiDi ~ 0
+Text GLabel 9650 1400 2    50   BiDi ~ 0
 FPGA_VAB10
-Text GLabel 12650 7750 2    50   BiDi ~ 0
+Text GLabel 9650 3000 2    50   BiDi ~ 0
 FPGA_VAB11
-Text GLabel 12650 7650 2    50   BiDi ~ 0
+Text GLabel 9650 2100 2    50   BiDi ~ 0
 FPGA_VAB12
-Text GLabel 12650 7550 2    50   BiDi ~ 0
+Text GLabel 9650 1600 2    50   BiDi ~ 0
 FPGA_VAB13
-Text GLabel 13400 8350 2    39   BiDi ~ 0
+Text GLabel 4650 3100 2    39   BiDi ~ 0
 FGPA_~VRD~
-Text GLabel 13400 8150 2    39   BiDi ~ 0
+Text GLabel 4650 3200 2    39   BiDi ~ 0
 FPGA_~VAWR~
-Text GLabel 13400 8250 2    39   BiDi ~ 0
+Text GLabel 4650 2700 2    39   BiDi ~ 0
 FPGA_~VBWR~
 Text GLabel 7150 3500 2    50   BiDi ~ 0
 FPGA_VDB0
@@ -831,7 +831,7 @@ Text GLabel 11900 5900 2    50   Input ~ 0
 FPGA_PPU2_VBLANK
 Text GLabel 11900 6000 2    50   Input ~ 0
 FPGA_PPU2_HBLANK
-Text GLabel 13400 7850 2    50   Output ~ 0
+Text GLabel 7150 2800 2    50   Output ~ 0
 LVL_VA_DIR
 Text GLabel 2800 5000 2    50   Output ~ 0
 LVL_PA_DIR
