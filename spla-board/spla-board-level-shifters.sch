@@ -1979,4 +1979,6 @@ Text GLabel 10250 1300 0    39   Input ~ 0
 LVL_TST_~OE~
 Text GLabel 10250 3550 0    39   Input ~ 0
 LVL_TST_~OE~
+NoConn ~ 13900 4550
+NoConn ~ 14700 4550
 $EndSCHEMATC

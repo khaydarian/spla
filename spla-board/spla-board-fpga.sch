@@ -967,4 +967,24 @@ Text GLabel 9650 2200 2    50   Output ~ 0
 LED4
 Text GLabel 9650 2500 2    50   Output ~ 0
 LED6
+NoConn ~ 9650 4100
+NoConn ~ 9650 3900
+NoConn ~ 12150 1700
+NoConn ~ 12150 1800
+NoConn ~ 12150 2400
+NoConn ~ 12150 4100
+NoConn ~ 14650 3600
+NoConn ~ 14650 2500
+NoConn ~ 14650 1300
+NoConn ~ 14650 1700
+NoConn ~ 14650 1800
+NoConn ~ 14650 1900
+NoConn ~ 14650 2100
+NoConn ~ 7150 3600
+NoConn ~ 7150 3300
+NoConn ~ 7150 3100
+NoConn ~ 7150 2600
+NoConn ~ 4650 2600
+NoConn ~ 4650 3600
+NoConn ~ 7150 2500
 $EndSCHEMATC
