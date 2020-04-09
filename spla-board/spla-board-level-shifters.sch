@@ -446,9 +446,9 @@ Text GLabel 2950 2250 2    50   Output ~ 0
 TAP_PPU2_HVCMODE
 Text GLabel 2150 2250 0    50   Input ~ 0
 FPGA_PPU2_HVCMODE
-Text GLabel 3050 3900 2    39   BiDi ~ 0
+Text GLabel 14700 4550 2    39   Input ~ 0
 TAP_PPU2_~PED~
-Text GLabel 3050 3800 2    39   BiDi ~ 0
+Text GLabel 6700 1650 2    39   Input ~ 0
 TAP_PPU2_~TOUMEI~
 Text GLabel 5900 4550 0    50   Input ~ 0
 FGPA_PPU1_HVCMODE
@@ -619,9 +619,9 @@ Text GLabel 2000 10000 0    50   BiDi ~ 0
 FPGA_D7
 Text GLabel 2150 1850 0    39   Input ~ 0
 FPGA_PPU1_~RESET~
-Text GLabel 5900 1750 0    39   Output ~ 0
+Text GLabel 5900 1850 0    39   Output ~ 0
 FPGA_PPU2_~5MOUT~
-Text GLabel 6700 1750 2    39   Input ~ 0
+Text GLabel 6700 1850 2    39   Input ~ 0
 TAP_PPU2_~5MOUT~
 Text GLabel 2150 2050 0    50   Input ~ 0
 FPGA_PPU2_PALMODE
@@ -640,13 +640,13 @@ F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 6300 1650 50  0001 C CNN
 	1    6300 1750
 	1    0    0    -1  
 $EndComp
-Text GLabel 5900 1650 0    39   Output ~ 0
+Text GLabel 5900 1750 0    39   Output ~ 0
 FPGA_PPU2_~RESOUT1~
 Text GLabel 5900 1550 0    39   Output ~ 0
 FPGA_PPU2_~RESOUT0~
 Text GLabel 2150 1950 0    39   Input ~ 0
 FPGA_PPU2_~RESET~
-Text GLabel 6700 1650 2    39   Input ~ 0
+Text GLabel 6700 1750 2    39   Input ~ 0
 TAP_PPU2_~RESOUT1~
 Text GLabel 6700 1550 2    39   Input ~ 0
 TAP_PPU2_~RESOUT0~
@@ -1363,12 +1363,6 @@ Connection ~ 11150 1150
 Wire Wire Line
 	11150 1150 11150 1250
 Wire Wire Line
-	3050 3800 2850 3800
-Wire Wire Line
-	2850 3900 3050 3900
-NoConn ~ 2850 3800
-NoConn ~ 2850 3900
-Wire Wire Line
 	1250 3800 1450 3800
 Wire Wire Line
 	1250 3900 1450 3900
@@ -1387,9 +1381,6 @@ Text GLabel 5900 4050 0    50   Input ~ 0
 FPGA_BODGE3
 Text GLabel 5900 4150 0    50   Input ~ 0
 FPGA_BODGE4
-NoConn ~ 2850 4000
-Wire Wire Line
-	3050 4000 2850 4000
 $Comp
 L SPLA:74LVC8T245-Q1 U20
 U 1 1 5E517B3B
@@ -1673,8 +1664,6 @@ Wire Wire Line
 	13000 1500 13000 1400
 Wire Wire Line
 	13900 1400 13000 1400
-NoConn ~ 6700 1850
-NoConn ~ 5900 1850
 Text GLabel 13900 4450 0    50   Output ~ 0
 FPGA_PPU2_3.58M
 Text Notes 4800 1350 0    50   ~ 0
@@ -1979,6 +1968,23 @@ Text GLabel 10250 1300 0    39   Input ~ 0
 LVL_TST_~OE~
 Text GLabel 10250 3550 0    39   Input ~ 0
 LVL_TST_~OE~
-NoConn ~ 13900 4550
-NoConn ~ 14700 4550
+Text GLabel 5900 1650 0    39   Output ~ 0
+FPGA_PPU2_~TOUMEI~
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5E97DC98
+P 2550 3900
+F 0 "TP2" H 2608 4018 50  0000 L CNN
+F 1 "TP_EXTLATCH" H 2608 3927 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2750 3900 50  0001 C CNN
+F 3 "~" H 2750 3900 50  0001 C CNN
+	1    2550 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 4000 2550 3900
+Wire Wire Line
+	2550 4000 3050 4000
+Text GLabel 13900 4550 0    39   Output ~ 0
+FPGA_PPU2_~PED~
 $EndSCHEMATC

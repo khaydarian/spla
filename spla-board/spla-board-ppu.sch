@@ -645,7 +645,7 @@ F 3 "" H 10450 6250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C11
+L Device:C C11
 U 1 1 5E6CDC31
 P 10450 6100
 F 0 "C11" H 10568 6146 50  0000 L CNN
@@ -1407,9 +1407,9 @@ Text GLabel 11650 6250 0    50   Input ~ 0
 TAP_PPU2_PALMODE
 Text GLabel 5100 6150 0    50   Input ~ 0
 TAP_PPU1_PALMODE
-Text GLabel 11650 6350 0    39   Input ~ 0
+Text GLabel 11650 6350 0    39   Output ~ 0
 TAP_PPU2_~PED~
-Text GLabel 11650 6550 0    39   Input ~ 0
+Text GLabel 11650 6550 0    39   Output ~ 0
 TAP_PPU2_~TOUMEI~
 Text GLabel 5100 5950 0    50   Input ~ 0
 TAP_PPU1_HVCMODE

@@ -79,7 +79,7 @@ U 1 1 5E5299CA
 P 9950 5650
 F 0 "U2" H 8900 7750 50  0000 L CNN
 F 1 "FT2232H" H 9950 5650 101 0000 C CNB
-F 2 "Package_QFP:LQFP-64-1EP_10x10mm_P0.5mm_EP6.5x6.5mm" H 9950 5650 50  0001 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 9950 5650 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" H 9950 5650 50  0001 C CNN
 	1    9950 5650
 	1    0    0    -1  

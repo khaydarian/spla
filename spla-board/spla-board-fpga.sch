@@ -417,8 +417,6 @@ Text GLabel 3100 8800 2    39   Input ~ 0
 ~PROGRAM
 Text GLabel 3100 7300 2    50   BiDi ~ 0
 DONE
-Text Notes 5700 4900 0    101  ~ 0
-TODO: FPGA pins still need proper layout pin mapping.
 NoConn ~ 3100 8100
 NoConn ~ 3100 8700
 Text Notes 8300 9000 0    50   ~ 0
@@ -733,21 +731,21 @@ Text GLabel 9650 1700 2    50   BiDi ~ 0
 FPGA_VDA6
 Text GLabel 7150 3900 2    50   BiDi ~ 0
 FPGA_VDA7
-Text GLabel 2150 3700 2    50   Input ~ 0
-FPGA_CHR3
 Text GLabel 2150 3600 2    50   Input ~ 0
-FPGA_CHR2
+FPGA_CHR3
 Text GLabel 2150 2800 2    50   Input ~ 0
-FPGA_CHR1
+FPGA_CHR2
 Text GLabel 2150 3200 2    50   Input ~ 0
-FPGA_CHR0
-Text GLabel 2150 4200 2    50   Input ~ 0
-FPGA_COLOR2
-Text GLabel 2150 2200 2    50   Input ~ 0
-FPGA_COLOR1
+FPGA_CHR1
 Text GLabel 2150 2700 2    50   Input ~ 0
-FPGA_PRIO1
+FPGA_CHR0
+Text GLabel 2150 2200 2    50   Input ~ 0
+FPGA_COLOR2
+Text GLabel 2150 4100 2    50   Input ~ 0
+FPGA_COLOR1
 Text GLabel 2150 2600 2    50   Input ~ 0
+FPGA_PRIO1
+Text GLabel 2150 4200 2    50   Input ~ 0
 FPGA_PRIO0
 Text GLabel 4650 3400 2    39   Output ~ 0
 FGPA_PPU1_~EXTSYNC~
@@ -759,9 +757,9 @@ Text GLabel 4650 3000 2    39   Output ~ 0
 FPGA_PPU1_~MASTER~
 Text GLabel 4650 2800 2    50   Output ~ 0
 FPGA_PPU1_PALMODE
-Text GLabel 2150 3100 2    39   Input ~ 0
+Text GLabel 14650 1300 2    39   Input ~ 0
 FPGA_~BURST~
-Text GLabel 14650 1400 2    39   Input ~ 0
+Text GLabel 14650 1800 2    39   Input ~ 0
 FPGA_~CSYNC~
 Text GLabel 14650 2400 2    39   Output ~ 0
 LVL_TST_~OE~
@@ -815,19 +813,19 @@ Text GLabel 2150 4300 2    50   BiDi ~ 0
 FPGA_D7
 Text GLabel 4650 2000 2    39   Output ~ 0
 FPGA_PPU1_~RESET~
-Text GLabel 2150 3900 2    39   Input ~ 0
+Text GLabel 2150 3500 2    39   Input ~ 0
 FPGA_PPU2_~5MOUT~
 Text GLabel 4650 1300 2    50   Output ~ 0
 FPGA_PPU2_PALMODE
-Text GLabel 2150 4000 2    39   Input ~ 0
+Text GLabel 14650 1400 2    39   Input ~ 0
 FPGA_PPU2_~RESOUT1~
-Text GLabel 2150 4100 2    39   Input ~ 0
+Text GLabel 2150 4000 2    39   Input ~ 0
 FPGA_PPU2_~RESOUT0~
 Text GLabel 4650 1400 2    39   Output ~ 0
 FPGA_PPU2_~RESET~
-Text GLabel 2150 3500 2    50   Input ~ 0
-FPGA_PPU2_VBLANK
 Text GLabel 2150 3300 2    50   Input ~ 0
+FPGA_PPU2_VBLANK
+Text GLabel 2150 3100 2    50   Input ~ 0
 FPGA_PPU2_HBLANK
 Text GLabel 7150 2800 2    50   Output ~ 0
 LVL_VA_DIR
@@ -975,9 +973,7 @@ NoConn ~ 12150 2400
 NoConn ~ 12150 4100
 NoConn ~ 14650 3600
 NoConn ~ 14650 2500
-NoConn ~ 14650 1300
 NoConn ~ 14650 1700
-NoConn ~ 14650 1800
 NoConn ~ 14650 1900
 NoConn ~ 14650 2100
 NoConn ~ 7150 3600
@@ -987,4 +983,8 @@ NoConn ~ 7150 2600
 NoConn ~ 4650 2600
 NoConn ~ 4650 3600
 NoConn ~ 7150 2500
+Text GLabel 2150 3900 2    39   Input ~ 0
+FPGA_PPU2_~TOUMEI~
+Text GLabel 2150 3700 2    39   Input ~ 0
+FPGA_PPU2_~PED~
 $EndSCHEMATC
