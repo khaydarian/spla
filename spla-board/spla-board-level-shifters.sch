@@ -665,10 +665,10 @@ Wire Wire Line
 Text GLabel 3650 1750 2    50   Output ~ 0
 TAP_XIN
 $Comp
-L Connector:TestPoint TP4
+L Connector:TestPoint TP2
 U 1 1 5FB90E4E
 P 3500 1550
-F 0 "TP4" H 3558 1668 50  0000 L CNN
+F 0 "TP2" H 3558 1668 50  0000 L CNN
 F 1 "TP_TAP_XIN" H 3558 1577 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3700 1550 50  0001 C CNN
 F 3 "~" H 3700 1550 50  0001 C CNN
@@ -1971,12 +1971,12 @@ LVL_TST_~OE~
 Text GLabel 5900 1650 0    39   Output ~ 0
 FPGA_PPU2_~TOUMEI~
 $Comp
-L Connector:TestPoint TP2
+L Connector:TestPoint TP3
 U 1 1 5E97DC98
 P 2550 3900
-F 0 "TP2" H 2608 4018 50  0000 L CNN
+F 0 "TP3" H 2608 4018 50  0000 L CNN
 F 1 "TP_EXTLATCH" H 2608 3927 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2750 3900 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2750 3900 50  0001 C CNN
 F 3 "~" H 2750 3900 50  0001 C CNN
 	1    2550 3900
 	1    0    0    -1  
