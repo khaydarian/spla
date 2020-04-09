@@ -839,8 +839,6 @@ Text GLabel 7150 1500 2    50   Output ~ 0
 FPGA_BODGE2
 Text GLabel 4650 3800 2    50   Output ~ 0
 FPGA_BODGE3
-Text GLabel 4650 2900 2    50   Output ~ 0
-FPGA_BODGE4
 Text GLabel 4650 1800 2    50   Output ~ 0
 FPGA_XIN
 Text GLabel 2150 3000 2    50   Output ~ 0
@@ -987,4 +985,6 @@ Text GLabel 2150 3900 2    39   Input ~ 0
 FPGA_PPU2_~TOUMEI~
 Text GLabel 2150 3700 2    39   Input ~ 0
 FPGA_PPU2_~PED~
+Text GLabel 4650 2900 2    50   Output ~ 0
+FPGA_PPU2_EXTLATCH
 $EndSCHEMATC

@@ -627,7 +627,7 @@ Text GLabel 2150 2050 0    50   Input ~ 0
 FPGA_PPU2_PALMODE
 Text GLabel 2950 2050 2    50   Output ~ 0
 TAP_PPU2_PALMODE
-Text GLabel 3050 4000 2    50   BiDi ~ 0
+Text GLabel 6700 4150 2    50   Output ~ 0
 TAP_PPU2_EXTLATCH
 $Comp
 L SPLA:74LVC8T245-Q1 U32
@@ -688,33 +688,29 @@ Text Notes 9100 2850 0    50   ~ 0
 Test signals\n(NC or GND on original board)
 Wire Wire Line
 	3650 1750 3500 1750
-Text Label 7000 4150 0    50   ~ 0
-BODGE4
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5E5A824A
-P 7550 3950
-F 0 "J3" H 7630 3942 50  0000 L CNN
-F 1 "J_BODGE" H 7630 3851 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7550 3950 50  0001 C CNN
-F 3 "~" H 7550 3950 50  0001 C CNN
-	1    7550 3950
+P 7950 3950
+F 0 "J3" H 8030 3942 50  0000 L CNN
+F 1 "J_BODGE" H 8030 3851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7950 3950 50  0001 C CNN
+F 3 "~" H 7950 3950 50  0001 C CNN
+	1    7950 3950
 	1    0    0    -1  
 $EndComp
-Text Label 7000 3850 0    50   ~ 0
+Text Label 7400 3850 0    50   ~ 0
 BODGE1
-Text Label 7000 3950 0    50   ~ 0
+Text Label 7400 3950 0    50   ~ 0
 BODGE2
-Text Label 7000 4050 0    50   ~ 0
+Text Label 7400 4050 0    50   ~ 0
 BODGE3
 Wire Wire Line
-	6700 3850 7350 3850
+	6700 3850 7750 3850
 Wire Wire Line
-	6700 3950 7350 3950
+	6700 3950 7750 3950
 Wire Wire Line
-	6700 4050 7350 4050
-Wire Wire Line
-	6700 4150 7350 4150
+	6700 4050 7750 4050
 Text GLabel 5900 6650 0    50   Input ~ 0
 LVL_VA_DIR
 Text GLabel 8350 6650 0    50   Input ~ 0
@@ -1377,8 +1373,6 @@ Text GLabel 5900 3950 0    50   Input ~ 0
 FPGA_BODGE2
 Text GLabel 5900 4050 0    50   Input ~ 0
 FPGA_BODGE3
-Text GLabel 5900 4150 0    50   Input ~ 0
-FPGA_BODGE4
 $Comp
 L SPLA:74LVC8T245-Q1 U20
 U 1 1 5E517B3B
@@ -1968,23 +1962,21 @@ Text GLabel 10250 3550 0    39   Input ~ 0
 LVL_TST_~OE~
 Text GLabel 5900 1650 0    39   Output ~ 0
 FPGA_PPU2_~TOUMEI~
-$Comp
-L Connector:TestPoint TP3
-U 1 1 5E97DC98
-P 2550 3900
-F 0 "TP3" H 2608 4018 50  0000 L CNN
-F 1 "TP_EXTLATCH" H 2608 3927 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2750 3900 50  0001 C CNN
-F 3 "~" H 2750 3900 50  0001 C CNN
-	1    2550 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2550 4000 2550 3900
-Wire Wire Line
-	2550 4000 3050 4000
 Text GLabel 13900 4550 0    39   Output ~ 0
 FPGA_PPU2_~PED~
 Text GLabel 2950 1950 2    39   Output ~ 0
 TAP_PPU2_~RESET~
+$Comp
+L power:GND #PWR0195
+U 1 1 5E9139D7
+P 7750 4150
+F 0 "#PWR0195" H 7750 3900 50  0001 C CNN
+F 1 "GND" H 7755 3977 50  0000 C CNN
+F 2 "" H 7750 4150 50  0001 C CNN
+F 3 "" H 7750 4150 50  0001 C CNN
+	1    7750 4150
+	1    0    0    -1  
+$EndComp
+Text GLabel 5900 4150 0    50   Input ~ 0
+FPGA_PPU2_EXTLATCH
 $EndSCHEMATC
