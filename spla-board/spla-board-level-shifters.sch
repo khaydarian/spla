@@ -475,9 +475,9 @@ Text GLabel 5900 2150 0    39   Output ~ 0
 FPGA_~BURST~
 Text GLabel 5900 2250 0    39   Output ~ 0
 FPGA_~CSYNC~
-Text GLabel 6700 2150 2    39   Input ~ 0
+Text GLabel 7800 2150 2    39   Input ~ 0
 TAP_~BURST~
-Text GLabel 6700 2250 2    39   Input ~ 0
+Text GLabel 7800 2250 2    39   Input ~ 0
 TAP_~CSYNC~
 Wire Notes Line
 	15950 5450 500  5450
@@ -650,9 +650,9 @@ Text GLabel 6700 1750 2    39   Input ~ 0
 TAP_PPU2_~RESOUT1~
 Text GLabel 6700 1550 2    39   Input ~ 0
 TAP_PPU2_~RESOUT0~
-Text GLabel 6700 1950 2    50   Input ~ 0
+Text GLabel 7800 1950 2    50   Input ~ 0
 TAP_PPU2_VBLANK
-Text GLabel 6700 2050 2    50   Input ~ 0
+Text GLabel 7800 2050 2    50   Input ~ 0
 TAP_PPU2_HBLANK
 Text GLabel 5900 1950 0    50   Output ~ 0
 FPGA_PPU2_VBLANK
@@ -1979,4 +1979,43 @@ F 3 "" H 7750 4150 50  0001 C CNN
 $EndComp
 Text GLabel 5900 4150 0    50   Input ~ 0
 FPGA_PPU2_EXTLATCH
+$Comp
+L Connector_Generic:Conn_01x04 J6
+U 1 1 5E9B9595
+P 7250 2700
+F 0 "J6" V 7350 2650 50  0000 L CNN
+F 1 "J_SAMPLE" V 7450 2500 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7250 2700 50  0001 C CNN
+F 3 "~" H 7250 2700 50  0001 C CNN
+	1    7250 2700
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	7800 2050 7250 2050
+Wire Wire Line
+	6700 2150 7350 2150
+Wire Wire Line
+	7800 2250 7450 2250
+Wire Wire Line
+	7150 2500 7150 1950
+Wire Wire Line
+	6700 1950 7150 1950
+Connection ~ 7150 1950
+Wire Wire Line
+	7150 1950 7800 1950
+Wire Wire Line
+	7250 2500 7250 2050
+Connection ~ 7250 2050
+Wire Wire Line
+	7250 2050 6700 2050
+Wire Wire Line
+	7350 2500 7350 2150
+Connection ~ 7350 2150
+Wire Wire Line
+	7350 2150 7800 2150
+Wire Wire Line
+	7450 2500 7450 2250
+Connection ~ 7450 2250
+Wire Wire Line
+	7450 2250 6700 2250
 $EndSCHEMATC
