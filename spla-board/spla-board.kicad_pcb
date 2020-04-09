@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 27)
+    (drawings 31)
     (tracks 4134)
     (zones 0)
     (modules 132)
@@ -7790,6 +7790,18 @@
     )
   )
 
+  (gr_text TMS (at 60.1 100.3 90) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)) (justify left))
+  )
+  (gr_text TCK (at 57.6 100.3 90) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)) (justify left))
+  )
+  (gr_text TDI (at 55 100.3 90) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)) (justify left))
+  )
+  (gr_text TDO (at 52.5 100.3 90) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)) (justify left))
+  )
   (gr_text FPGA (at 141.8 93.5 90) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
