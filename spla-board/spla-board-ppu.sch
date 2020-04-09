@@ -1833,8 +1833,6 @@ Text GLabel 5100 5550 0    39   Input ~ 0
 TAP_PPU1_~EXTSYNC~
 Wire Wire Line
 	11350 2450 11050 2450
-Text Notes 8450 1400 0    50   ~ 0
-Jumper 1-2 for normal reset sequencing.\nJumper 3-4, 5-6, 7-8 to enable pulldown resistors.
 Wire Wire Line
 	12750 3650 13100 3650
 Wire Wire Line
@@ -2494,145 +2492,53 @@ Wire Wire Line
 	12750 8750 12750 8850
 Connection ~ 12750 8850
 Wire Wire Line
-	11150 1750 11250 1750
-Connection ~ 10950 1450
+	11150 2600 11250 2600
+Connection ~ 10950 2300
 Wire Wire Line
-	11050 1450 10950 1450
+	11050 2300 10950 2300
 Wire Wire Line
-	10950 1450 10950 3950
+	10950 2300 10950 3950
 Wire Wire Line
-	11150 1750 11150 3750
-Wire Wire Line
-	10950 1450 8700 1450
-Text GLabel 11250 1750 2    50   Input ~ 0
+	11150 2600 11150 3750
+Text GLabel 11250 2600 2    50   Input ~ 0
 TAP_PPU2_~RESET~
-Text GLabel 11050 1450 2    50   Output ~ 0
+Text GLabel 11050 2300 2    50   Output ~ 0
 TAP_PPU2_~RESOUT0~
-Connection ~ 4650 1450
 Wire Wire Line
-	4650 1450 4550 1450
-Wire Wire Line
-	4650 1450 4650 3750
-Text GLabel 4550 1450 0    50   Input ~ 0
+	4650 2400 4650 3750
+Text GLabel 8500 2200 2    50   Input ~ 0
 TAP_PPU1_~RESET~
-Wire Wire Line
-	8700 1450 8700 1650
-Connection ~ 8700 1450
-Wire Wire Line
-	8700 1450 8200 1450
-Wire Wire Line
-	8700 1650 8200 1650
-Connection ~ 11150 1750
-Wire Wire Line
-	11150 1750 8200 1750
-Wire Wire Line
-	6800 1550 6800 1950
 $Comp
-L power:GND #PWR019
-U 1 1 5EDB9128
-P 6800 2250
-F 0 "#PWR019" H 6800 2000 50  0001 C CNN
-F 1 "GND" H 6805 2077 50  0000 C CNN
-F 2 "" H 6800 2250 50  0001 C CNN
-F 3 "" H 6800 2250 50  0001 C CNN
-	1    6800 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 5EA7B048
-P 6800 2100
-F 0 "R10" H 6870 2146 50  0000 L CNN
-F 1 "10K" H 6870 2055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6730 2100 50  0001 C CNN
-F 3 "~" H 6800 2100 50  0001 C CNN
-	1    6800 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7500 1750 7500 1950
-Wire Wire Line
-	7700 1750 7500 1750
-Wire Wire Line
-	7150 1650 7150 1950
-Wire Wire Line
-	7700 1650 7150 1650
-$Comp
-L power:GND #PWR017
-U 1 1 5EDF1D4E
-P 7150 2250
-F 0 "#PWR017" H 7150 2000 50  0001 C CNN
-F 1 "GND" H 7155 2077 50  0000 C CNN
-F 2 "" H 7150 2250 50  0001 C CNN
-F 3 "" H 7150 2250 50  0001 C CNN
-	1    7150 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 5ECDD8AA
-P 7500 2100
-F 0 "R8" H 7570 2146 50  0000 L CNN
-F 1 "10K" H 7570 2055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7430 2100 50  0001 C CNN
-F 3 "~" H 7500 2100 50  0001 C CNN
-	1    7500 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 5ECA019B
-P 7150 2100
-F 0 "R9" H 7220 2146 50  0000 L CNN
-F 1 "10K" H 7220 2055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7080 2100 50  0001 C CNN
-F 3 "~" H 7150 2100 50  0001 C CNN
-	1    7150 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR018
-U 1 1 5EBF916A
-P 7500 2250
-F 0 "#PWR018" H 7500 2000 50  0001 C CNN
-F 1 "GND" H 7505 2077 50  0000 C CNN
-F 2 "" H 7500 2250 50  0001 C CNN
-F 3 "" H 7500 2250 50  0001 C CNN
-	1    7500 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J5
+L Connector_Generic:Conn_01x03 J5
 U 1 1 5E72EA03
-P 7900 1550
-F 0 "J5" H 7950 1867 50  0000 C CNN
-F 1 "J_PPURESET" H 7950 1776 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 7900 1550 50  0001 C CNN
-F 3 "~" H 7900 1550 50  0001 C CNN
-	1    7900 1550
-	1    0    0    -1  
+P 8050 1900
+F 0 "J5" V 8300 1900 50  0000 C CNN
+F 1 "J_PPURESET" V 8200 1900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8050 1900 50  0001 C CNN
+F 3 "~" H 8050 1900 50  0001 C CNN
+	1    8050 1900
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4650 1450 7600 1450
-Wire Wire Line
-	8200 1550 8300 1550
-Wire Wire Line
-	8300 1550 8300 1150
-Wire Wire Line
-	8300 1150 7600 1150
-Wire Wire Line
-	7600 1150 7600 1450
-Connection ~ 7600 1450
-Wire Wire Line
-	7600 1450 7700 1450
-Wire Wire Line
-	7700 1550 6800 1550
 Wire Wire Line
 	5100 6250 5100 6300
 Wire Wire Line
 	5100 6300 4700 6300
 Text Label 4850 6300 0    50   ~ 0
 NC
+Text Label 5150 2400 0    50   ~ 0
+PPU1_~RESET~_ONLY
+Wire Wire Line
+	8150 2100 8150 2200
+Wire Wire Line
+	8150 2200 8500 2200
+Wire Wire Line
+	7950 2300 7950 2100
+Wire Wire Line
+	7950 2300 10950 2300
+Wire Wire Line
+	8050 2400 8050 2100
+Wire Wire Line
+	4650 2400 8050 2400
 Wire Bus Line
 	10200 2700 10200 6050
 Wire Bus Line

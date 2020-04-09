@@ -650,8 +650,6 @@ Text GLabel 6700 1750 2    39   Input ~ 0
 TAP_PPU2_~RESOUT1~
 Text GLabel 6700 1550 2    39   Input ~ 0
 TAP_PPU2_~RESOUT0~
-Text GLabel 2950 1950 2    39   Output ~ 0
-TAP_PPU2_~RESET~
 Text GLabel 6700 1950 2    50   Input ~ 0
 TAP_PPU2_VBLANK
 Text GLabel 6700 2050 2    50   Input ~ 0
@@ -1987,4 +1985,6 @@ Wire Wire Line
 	2550 4000 3050 4000
 Text GLabel 13900 4550 0    39   Output ~ 0
 FPGA_PPU2_~PED~
+Text GLabel 2950 1950 2    39   Output ~ 0
+TAP_PPU2_~RESET~
 $EndSCHEMATC
