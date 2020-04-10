@@ -855,10 +855,10 @@ Wire Wire Line
 Connection ~ 9800 5250
 Wire Wire Line
 	9800 5650 9800 5550
-Text Label 6550 3850 0    50   ~ 0
+Text Label 6500 3850 0    50   ~ 0
 ANALOG_SCALED_R
 Wire Wire Line
-	6450 3850 7300 3850
+	6400 3850 7300 3850
 Wire Wire Line
 	7500 3850 7600 3850
 Wire Wire Line
@@ -1080,7 +1080,7 @@ Connection ~ 12050 2400
 Wire Wire Line
 	12450 2300 12450 2400
 Text Notes 3300 5050 0    50   ~ 0
-TODO: Correct these values.
+TODO: Correct these values to be compatible with the -1 gain
 Text Notes 7850 2350 0    50   ~ 0
 TODO: Inject opamps to maintain levels
 Text Notes 5300 1200 0    50   ~ 0
@@ -1167,13 +1167,7 @@ GAIN = -(R102/R101) = -(549/549) = -1
 Text Notes 6400 3350 0    50   ~ 0
 Cutoff Freq = sqrt(1/(R102*R105*C102*C105))/(2*pi) = 498 kHz
 Wire Notes Line
-	7550 3450 7550 4100
-Wire Notes Line
-	7550 4100 7450 4100
-Wire Notes Line
-	7450 4100 7450 4800
-Wire Notes Line
-	7450 4800 8050 4800
+	7250 4800 8050 4800
 Wire Notes Line
 	8050 4800 8050 4300
 Wire Notes Line
@@ -1185,7 +1179,9 @@ Wire Notes Line
 Wire Notes Line
 	8900 4350 8900 3450
 Wire Notes Line
-	8900 3450 7550 3450
-Text Notes 8200 3550 0    50   ~ 0
-Opamp Feedback
+	8900 3450 7250 3450
+Text Notes 7700 3550 0    50   ~ 0
+Input filter / oamp Feedback
+Wire Notes Line
+	7250 3450 7250 4800
 $EndSCHEMATC
