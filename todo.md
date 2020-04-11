@@ -7,14 +7,9 @@
 * blog: Write export-to-website tool (or find static site generator).
 * blog: Add photos and scope images.
 * blog: Clean up README.md.
-* design: `TXS0108E` isn't a great choice; switch to direction-controlled level shifters.
 * schematic: Change analog reference to internal 2V and add voltage divider to R/G/B.
-* schematic: Add LEDs for FTDI and FPGA use.
-* schematic: Fix power layout entirely.
 * schematic: Add FPGA decoupling capacitors.
-* schematic: Fix FPGA pin mapping.
 * schematic: Review with Nate.
-* pcb: Layout excercise with new plan.
 * lab: Verify PPU and VRAM footprint measurements.
 * lab: Bodge wire to vblank / hblank, and measure with scope.
 * rtl: Install "Project Trellis" tools and build example.
