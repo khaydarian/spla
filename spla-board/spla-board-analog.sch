@@ -551,12 +551,12 @@ $EndComp
 $Comp
 L Device:C_Small C106
 U 1 1 5E9AE271
-P 7050 5350
-F 0 "C106" H 7142 5396 50  0000 L CNN
-F 1 "5.6uF" H 7142 5305 50  0000 L CNN
-F 2 "" H 7050 5350 50  0001 C CNN
-F 3 "~" H 7050 5350 50  0001 C CNN
-	1    7050 5350
+P 2800 6450
+F 0 "C106" H 2892 6496 50  0000 L CNN
+F 1 "5.6uF" H 2892 6405 50  0000 L CNN
+F 2 "" H 2800 6450 50  0001 C CNN
+F 3 "~" H 2800 6450 50  0001 C CNN
+	1    2800 6450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -774,16 +774,16 @@ $EndComp
 $Comp
 L power:GND #PWR0217
 U 1 1 5E9F0655
-P 7050 5550
-F 0 "#PWR0217" H 7050 5300 50  0001 C CNN
-F 1 "GND" H 7055 5377 50  0000 C CNN
-F 2 "" H 7050 5550 50  0001 C CNN
-F 3 "" H 7050 5550 50  0001 C CNN
-	1    7050 5550
+P 2800 6650
+F 0 "#PWR0217" H 2800 6400 50  0001 C CNN
+F 1 "GND" H 2805 6477 50  0000 C CNN
+F 2 "" H 2800 6650 50  0001 C CNN
+F 3 "" H 2800 6650 50  0001 C CNN
+	1    2800 6650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2350 6250 3300 6250
+	2350 6250 2800 6250
 $Comp
 L power:GND #PWR0218
 U 1 1 5E9F2D31
@@ -949,7 +949,7 @@ ANALOG_AMP_R
 Text Label 9950 5250 0    50   ~ 0
 ANALOG_AMP_R
 Wire Wire Line
-	7050 5450 7050 5550
+	2800 6550 2800 6650
 Wire Wire Line
 	7450 5450 7450 5550
 Wire Wire Line
@@ -1021,7 +1021,7 @@ Wire Wire Line
 Connection ~ 8600 4600
 Wire Wire Line
 	8600 4600 9050 4600
-Text Label 2800 6250 0    50   ~ 0
+Text Label 3000 6250 0    50   ~ 0
 OPAMP_2V5
 Wire Wire Line
 	12050 2000 12450 2000
@@ -1089,15 +1089,15 @@ Wire Notes Line
 Wire Notes Line
 	9350 4400 8450 4400
 Wire Notes Line
-	6900 4950 7800 4950
+	7250 4900 7800 4900
 Wire Notes Line
-	7800 4950 7800 5550
+	7800 4900 7800 5800
 Wire Notes Line
-	7800 5550 6900 5550
+	7800 5800 7250 5800
 Wire Notes Line
-	6900 5550 6900 4950
+	7250 5800 7250 4900
 Wire Notes Line
-	6050 5400 6050 4900
+	6400 5400 6400 4900
 Wire Notes Line
 	9450 4850 9450 5600
 Wire Notes Line
@@ -1110,9 +1110,9 @@ Text Notes 9800 4950 0    50   ~ 0
 Output filter
 Text Notes 8700 4500 0    50   ~ 0
 Decoupling
-Text Notes 7050 5050 0    50   ~ 0
+Text Notes 7300 5000 0    50   ~ 0
 Decoupling
-Text Notes 6100 5000 0    50   ~ 0
+Text Notes 6450 5000 0    50   ~ 0
 2.5V reference
 Text Notes 6400 3200 0    50   ~ 0
 Gain = -(R102/R101) = -(5.6k/5.6k) = -1
@@ -1136,21 +1136,16 @@ Text Notes 11800 3800 0    50   ~ 0
 V = 1.1V
 Wire Notes Line
 	8050 4300 8900 4300
-Connection ~ 7050 5150
-Text Label 6300 5150 0    50   ~ 0
+Text Label 6650 5150 0    50   ~ 0
 OPAMP_2V5
 Wire Wire Line
-	7050 5150 7450 5150
-Wire Wire Line
-	7050 5250 7050 5150
+	2800 6350 2800 6250
 Wire Notes Line
-	6800 5400 6050 5400
+	7150 5400 6400 5400
 Wire Notes Line
-	6800 4900 6800 5400
+	7150 4900 7150 5400
 Wire Notes Line
-	6050 4900 6800 4900
-Wire Wire Line
-	7050 5150 6200 5150
+	6400 4900 7150 4900
 Wire Notes Line
 	5700 3400 6650 3400
 Wire Notes Line
@@ -1218,4 +1213,9 @@ Connection ~ 7450 3800
 Connection ~ 7450 4200
 Wire Wire Line
 	7450 3800 7600 3800
+Wire Wire Line
+	6550 5150 7450 5150
+Connection ~ 2800 6250
+Wire Wire Line
+	2800 6250 3500 6250
 $EndSCHEMATC
