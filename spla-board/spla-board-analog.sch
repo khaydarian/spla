@@ -437,17 +437,6 @@ Text GLabel 13850 6100 2    50   Input ~ 0
 ANALOG_CLK
 Text GLabel 13850 8500 2    50   Input ~ 0
 ANALOG_CLK
-$Comp
-L Amplifier_Operational:LMH6611 U?
-U 1 1 5E992C76
-P 8300 5250
-F 0 "U?" H 8644 5296 50  0000 L CNN
-F 1 "LMH6611" H 8644 5205 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 8400 5000 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 8450 5400 50  0001 C CNN
-	1    8300 5250
-	1    0    0    1   
-$EndComp
 Text Label 8200 1950 0    50   ~ 0
 AREF_HI
 Text Label 8200 2050 0    50   ~ 0
@@ -553,7 +542,7 @@ L Device:C_Small C105
 U 1 1 5E9ACDDD
 P 8650 4200
 F 0 "C105" V 8421 4200 50  0000 C CNN
-F 1 "150pF" V 8512 4200 50  0000 C CNN
+F 1 "2.2pF" V 8512 4200 50  0000 C CNN
 F 2 "" H 8650 4200 50  0001 C CNN
 F 3 "~" H 8650 4200 50  0001 C CNN
 	1    8650 4200
@@ -562,23 +551,23 @@ $EndComp
 $Comp
 L Device:C_Small C106
 U 1 1 5E9AE271
-P 7250 5550
-F 0 "C106" H 7342 5596 50  0000 L CNN
-F 1 "5.6uF" H 7342 5505 50  0000 L CNN
-F 2 "" H 7250 5550 50  0001 C CNN
-F 3 "~" H 7250 5550 50  0001 C CNN
-	1    7250 5550
+P 7050 5350
+F 0 "C106" H 7142 5396 50  0000 L CNN
+F 1 "5.6uF" H 7142 5305 50  0000 L CNN
+F 2 "" H 7050 5350 50  0001 C CNN
+F 3 "~" H 7050 5350 50  0001 C CNN
+	1    7050 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C107
 U 1 1 5E9AE27B
-P 7650 5550
-F 0 "C107" H 7742 5596 50  0000 L CNN
-F 1 "0.1uF" H 7742 5505 50  0000 L CNN
-F 2 "" H 7650 5550 50  0001 C CNN
-F 3 "~" H 7650 5550 50  0001 C CNN
-	1    7650 5550
+P 7450 5350
+F 0 "C107" H 7542 5396 50  0000 L CNN
+F 1 "0.1uF" H 7542 5305 50  0000 L CNN
+F 2 "" H 7450 5350 50  0001 C CNN
+F 3 "~" H 7450 5350 50  0001 C CNN
+	1    7450 5350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -639,45 +628,45 @@ $EndComp
 $Comp
 L Device:C_Small C102
 U 1 1 5E9B7525
-P 7600 4450
-F 0 "C102" H 7692 4496 50  0000 L CNN
-F 1 "1nF" H 7692 4405 50  0000 L CNN
-F 2 "" H 7600 4450 50  0001 C CNN
-F 3 "~" H 7600 4450 50  0001 C CNN
-	1    7600 4450
+P 7450 4450
+F 0 "C102" H 7542 4496 50  0000 L CNN
+F 1 "6.8pF" H 7542 4405 50  0000 L CNN
+F 2 "" H 7450 4450 50  0001 C CNN
+F 3 "~" H 7450 4450 50  0001 C CNN
+	1    7450 4450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small R102
 U 1 1 5E9B8A3B
-P 8100 3800
-F 0 "R102" V 7904 3800 50  0000 C CNN
-F 1 "549" V 7995 3800 50  0000 C CNN
-F 2 "" H 8100 3800 50  0001 C CNN
-F 3 "~" H 8100 3800 50  0001 C CNN
-	1    8100 3800
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R101
-U 1 1 5E9B9EA4
 P 7700 3800
-F 0 "R101" V 7504 3800 50  0000 C CNN
-F 1 "549" V 7595 3800 50  0000 C CNN
+F 0 "R102" V 7504 3800 50  0000 C CNN
+F 1 "5.6k" V 7595 3800 50  0000 C CNN
 F 2 "" H 7700 3800 50  0001 C CNN
 F 3 "~" H 7700 3800 50  0001 C CNN
 	1    7700 3800
 	0    1    1    0   
 $EndComp
 $Comp
+L Device:R_Small R101
+U 1 1 5E9B9EA4
+P 7250 3800
+F 0 "R101" V 7054 3800 50  0000 C CNN
+F 1 "5.6k" V 7145 3800 50  0000 C CNN
+F 2 "" H 7250 3800 50  0001 C CNN
+F 3 "~" H 7250 3800 50  0001 C CNN
+	1    7250 3800
+	0    1    1    0   
+$EndComp
+$Comp
 L Device:C_Small C101
 U 1 1 5E9BBA79
-P 7200 3800
-F 0 "C101" V 6971 3800 50  0000 C CNN
-F 1 "1uF" V 7062 3800 50  0000 C CNN
-F 2 "" H 7200 3800 50  0001 C CNN
-F 3 "~" H 7200 3800 50  0001 C CNN
-	1    7200 3800
+P 6800 3800
+F 0 "C101" V 6571 3800 50  0000 C CNN
+F 1 "1uF" V 6662 3800 50  0000 C CNN
+F 2 "" H 6800 3800 50  0001 C CNN
+F 3 "~" H 6800 3800 50  0001 C CNN
+	1    6800 3800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -688,22 +677,18 @@ Wire Wire Line
 	9400 5250 8600 5250
 Wire Wire Line
 	8550 4200 7900 4200
-Wire Wire Line
-	7900 4200 7900 5150
-Wire Wire Line
-	7900 5150 8000 5150
 Connection ~ 7900 4200
 Wire Wire Line
-	7600 4200 7600 4350
+	7450 4200 7450 4350
 $Comp
 L power:GND #PWR0211
 U 1 1 5E9D05AB
-P 7600 4550
-F 0 "#PWR0211" H 7600 4300 50  0001 C CNN
-F 1 "GND" H 7605 4377 50  0000 C CNN
-F 2 "" H 7600 4550 50  0001 C CNN
-F 3 "" H 7600 4550 50  0001 C CNN
-	1    7600 4550
+P 7450 4550
+F 0 "#PWR0211" H 7450 4300 50  0001 C CNN
+F 1 "GND" H 7455 4377 50  0000 C CNN
+F 2 "" H 7450 4550 50  0001 C CNN
+F 3 "" H 7450 4550 50  0001 C CNN
+	1    7450 4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -789,12 +774,12 @@ $EndComp
 $Comp
 L power:GND #PWR0217
 U 1 1 5E9F0655
-P 7250 5750
-F 0 "#PWR0217" H 7250 5500 50  0001 C CNN
-F 1 "GND" H 7255 5577 50  0000 C CNN
-F 2 "" H 7250 5750 50  0001 C CNN
-F 3 "" H 7250 5750 50  0001 C CNN
-	1    7250 5750
+P 7050 5550
+F 0 "#PWR0217" H 7050 5300 50  0001 C CNN
+F 1 "GND" H 7055 5377 50  0000 C CNN
+F 2 "" H 7050 5550 50  0001 C CNN
+F 3 "" H 7050 5550 50  0001 C CNN
+	1    7050 5550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -802,19 +787,17 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0218
 U 1 1 5E9F2D31
-P 7650 5750
-F 0 "#PWR0218" H 7650 5500 50  0001 C CNN
-F 1 "GND" H 7655 5577 50  0000 C CNN
-F 2 "" H 7650 5750 50  0001 C CNN
-F 3 "" H 7650 5750 50  0001 C CNN
-	1    7650 5750
+P 7450 5550
+F 0 "#PWR0218" H 7450 5300 50  0001 C CNN
+F 1 "GND" H 7455 5377 50  0000 C CNN
+F 2 "" H 7450 5550 50  0001 C CNN
+F 3 "" H 7450 5550 50  0001 C CNN
+	1    7450 5550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 5350 7650 5450
-Connection ~ 7650 5350
-Wire Wire Line
-	7650 5350 8000 5350
+	7450 5150 7450 5250
+Connection ~ 7450 5150
 Wire Wire Line
 	1200 6250 1200 6350
 Wire Wire Line
@@ -851,14 +834,14 @@ Wire Wire Line
 Connection ~ 9800 5250
 Wire Wire Line
 	9800 5650 9800 5550
-Text Label 6300 3800 0    50   ~ 0
+Text Label 5900 3800 0    50   ~ 0
 ANALOG_SCALED_R
 Wire Wire Line
-	6200 3800 7100 3800
+	5800 3800 6700 3800
 Wire Wire Line
-	7300 3800 7600 3800
+	6900 3800 7150 3800
 Wire Wire Line
-	8200 3800 9400 3800
+	7800 3800 9400 3800
 Wire Wire Line
 	9400 3800 9400 4200
 Connection ~ 9400 4200
@@ -966,9 +949,9 @@ ANALOG_AMP_R
 Text Label 9950 5250 0    50   ~ 0
 ANALOG_AMP_R
 Wire Wire Line
-	7250 5650 7250 5750
+	7050 5450 7050 5550
 Wire Wire Line
-	7650 5650 7650 5750
+	7450 5450 7450 5550
 Wire Wire Line
 	8200 5550 8200 5750
 $Comp
@@ -1038,8 +1021,6 @@ Wire Wire Line
 Connection ~ 8600 4600
 Wire Wire Line
 	8600 4600 9050 4600
-Wire Wire Line
-	8200 4600 8200 4850
 Text Label 2800 6250 0    50   ~ 0
 OPAMP_2V5
 Wire Wire Line
@@ -1081,38 +1062,24 @@ TODO: Validate all this nonense with somebody who knows what they're doing.
 Text Notes 12100 1350 0    50   ~ 0
 Ref: ADC1173 Datasheet page 19
 Text Notes 9150 3650 0    50   ~ 0
-Ref: LMH6611 Datasheet Page 25\nSecond order multiple-feedback configuration, gain -1\nInverting configuration for improved linearity
+Ref: LMH6611 Datasheet Page 25\nSecond order multiple-feedback configuration, gain -1\nInverting configuration for improved linearity\nValues tweaked for 5MHz input filter
 Text Notes 3250 4000 0    50   ~ 0
 Ref: Nothing; bogus level divider nonsense
-Wire Wire Line
-	8200 4850 8300 4850
-Wire Wire Line
-	8300 4850 8300 4950
-Connection ~ 8200 4850
-Wire Wire Line
-	8200 4850 8200 4950
 $Comp
 L Device:R_Small R105
 U 1 1 5E9577DD
-P 7900 4000
-F 0 "R105" H 7959 4046 50  0000 L CNN
-F 1 "1.24k" H 7959 3955 50  0000 L CNN
-F 2 "" H 7900 4000 50  0001 C CNN
-F 3 "~" H 7900 4000 50  0001 C CNN
-	1    7900 4000
-	1    0    0    -1  
+P 7700 4200
+F 0 "R105" V 7504 4200 50  0000 C CNN
+F 1 "12k" V 7595 4200 50  0000 C CNN
+F 2 "" H 7700 4200 50  0001 C CNN
+F 3 "~" H 7700 4200 50  0001 C CNN
+	1    7700 4200
+	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7900 3800 7900 3900
-Connection ~ 7900 3800
+	7350 3800 7450 3800
 Wire Wire Line
-	7900 3800 8000 3800
-Wire Wire Line
-	7600 4200 7900 4200
-Wire Wire Line
-	7800 3800 7900 3800
-Wire Wire Line
-	7900 4100 7900 4200
+	7800 4200 7900 4200
 Wire Notes Line
 	8450 4400 8450 5100
 Wire Notes Line
@@ -1122,15 +1089,15 @@ Wire Notes Line
 Wire Notes Line
 	9350 4400 8450 4400
 Wire Notes Line
-	7150 5200 8000 5200
+	6900 4950 7800 4950
 Wire Notes Line
-	8000 5200 8000 5750
+	7800 4950 7800 5550
 Wire Notes Line
-	8000 5750 7150 5750
+	7800 5550 6900 5550
 Wire Notes Line
-	7150 5750 7150 5200
+	6900 5550 6900 4950
 Wire Notes Line
-	6300 5600 6300 5100
+	6050 5400 6050 4900
 Wire Notes Line
 	9450 4850 9450 5600
 Wire Notes Line
@@ -1143,55 +1110,112 @@ Text Notes 9800 4950 0    50   ~ 0
 Output filter
 Text Notes 8700 4500 0    50   ~ 0
 Decoupling
-Text Notes 7300 5300 0    50   ~ 0
+Text Notes 7050 5050 0    50   ~ 0
 Decoupling
-Text Notes 6350 5200 0    50   ~ 0
+Text Notes 6100 5000 0    50   ~ 0
 2.5V reference
 Text Notes 6400 3200 0    50   ~ 0
-GAIN = -(R102/R101) = -(549/549) = -1
+Gain = -(R102/R101) = -(5.6k/5.6k) = -1
 Text Notes 6400 3300 0    50   ~ 0
-Cutoff Freq = sqrt(1/(R102*R105*C102*C105))/(2*pi) = 498 kHz
+Cutoff Freq = sqrt(1/(R102*R105*C102*C105))/(2*pi) = 5.019 MHz
 Wire Notes Line
-	7400 4800 8050 4800
+	6950 4800 8050 4800
 Wire Notes Line
 	8050 4800 8050 4300
 Wire Notes Line
 	8900 4300 8900 3400
 Wire Notes Line
-	8900 3400 7400 3400
+	8900 3400 6950 3400
 Text Notes 7700 3500 0    50   ~ 0
 Input filter / OpAmp Feedback
 Wire Notes Line
-	7400 3400 7400 4800
+	6950 3400 6950 4800
 Text Notes 11800 3500 0    50   ~ 0
 V = 3.1v
 Text Notes 11800 3800 0    50   ~ 0
 V = 1.1V
 Wire Notes Line
 	8050 4300 8900 4300
-Connection ~ 7250 5350
-Text Label 6550 5350 0    50   ~ 0
+Connection ~ 7050 5150
+Text Label 6300 5150 0    50   ~ 0
 OPAMP_2V5
 Wire Wire Line
-	7250 5350 7650 5350
+	7050 5150 7450 5150
 Wire Wire Line
-	7250 5450 7250 5350
+	7050 5250 7050 5150
 Wire Notes Line
-	7050 5600 6300 5600
+	6800 5400 6050 5400
 Wire Notes Line
-	7050 5100 7050 5600
+	6800 4900 6800 5400
 Wire Notes Line
-	6300 5100 7050 5100
+	6050 4900 6800 4900
 Wire Wire Line
-	7250 5350 6450 5350
+	7050 5150 6200 5150
 Wire Notes Line
-	6100 3400 7050 3400
+	5700 3400 6650 3400
 Wire Notes Line
-	7050 3400 7050 3900
+	6650 3400 6650 3900
 Wire Notes Line
-	7050 3900 6100 3900
+	6650 3900 5700 3900
 Wire Notes Line
-	6100 3900 6100 3400
-Text Notes 6300 3500 0    50   ~ 0
+	5700 3900 5700 3400
+Text Notes 5900 3500 0    50   ~ 0
 Analog Input
+$Comp
+L Amplifier_Operational:LMH6611 U?
+U 1 1 5E992C76
+P 8300 5250
+F 0 "U?" H 8644 5296 50  0000 L CNN
+F 1 "LMH6611" H 8644 5205 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 8400 5000 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 8450 5400 50  0001 C CNN
+	1    8300 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 5350 8000 5350
+Wire Wire Line
+	7900 4200 7900 5350
+Wire Wire Line
+	7450 5150 8000 5150
+Wire Wire Line
+	8200 4600 8200 4950
+$Comp
+L power:+5V #PWR?
+U 1 1 5EA75669
+P 8700 5650
+F 0 "#PWR?" H 8700 5500 50  0001 C CNN
+F 1 "+5V" H 8715 5823 50  0000 C CNN
+F 2 "" H 8700 5650 50  0001 C CNN
+F 3 "" H 8700 5650 50  0001 C CNN
+	1    8700 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R108
+U 1 1 5EA81E1F
+P 8500 5750
+F 0 "R108" V 8304 5750 50  0000 C CNN
+F 1 "0" V 8395 5750 50  0000 C CNN
+F 2 "" H 8500 5750 50  0001 C CNN
+F 3 "~" H 8500 5750 50  0001 C CNN
+	1    8500 5750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8300 5550 8300 5750
+Wire Wire Line
+	8300 5750 8400 5750
+Wire Wire Line
+	8700 5650 8700 5750
+Wire Wire Line
+	8700 5750 8600 5750
+Wire Wire Line
+	7600 4200 7450 4200
+Wire Wire Line
+	7450 3800 7450 4200
+Connection ~ 7450 3800
+Connection ~ 7450 4200
+Wire Wire Line
+	7450 3800 7600 3800
 $EndSCHEMATC
