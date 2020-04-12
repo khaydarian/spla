@@ -2581,10 +2581,10 @@ Wire Wire Line
 Wire Notes Line
 	4400 8600 4400 9350
 Wire Notes Line
-	4400 9350 4950 9350
+	4400 9350 5350 9350
 Wire Notes Line
-	4950 8600 4400 8600
-Text Notes 4450 8700 0    50   ~ 0
+	5350 8600 4400 8600
+Text Notes 4650 8700 0    50   ~ 0
 Decoupling
 $Comp
 L Amplifier_Operational:LMH6611 U75
@@ -2741,7 +2741,7 @@ Wire Wire Line
 Wire Wire Line
 	5600 10750 3900 10750
 Wire Notes Line
-	4950 9350 4950 8600
+	5350 9350 5350 8600
 Wire Wire Line
 	2600 9800 2700 9800
 Wire Wire Line
@@ -2830,4 +2830,49 @@ Wire Wire Line
 	1600 6900 1700 6900
 Wire Wire Line
 	2400 6800 2400 8750
+Text Label 9150 8150 1    50   ~ 0
+AOP_P_R
+Text Label 9150 8700 1    50   ~ 0
+AOP_N_R
+Text Label 9150 5100 1    50   ~ 0
+AOP_P_G
+Text Label 9150 5650 1    50   ~ 0
+AOP_N_G
+Text Label 9150 2000 1    50   ~ 0
+AOP_P_B
+Text Label 9150 2600 1    50   ~ 0
+AOP_N_B
+Text Label 8250 7900 1    50   ~ 0
+AOP_F_R
+Text Label 8250 4850 1    50   ~ 0
+AOP_F_G
+Text Label 8250 1800 1    50   ~ 0
+AOP_F_B
+$Comp
+L power:GND #PWR?
+U 1 1 5FD35D14
+P 5000 9050
+F 0 "#PWR?" H 5000 8800 50  0001 C CNN
+F 1 "GND" H 5005 8877 50  0000 C CNN
+F 2 "" H 5000 9050 50  0001 C CNN
+F 3 "" H 5000 9050 50  0001 C CNN
+	1    5000 9050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C508
+U 1 1 5FD35D1E
+P 5000 8950
+F 0 "C508" H 5092 8996 50  0000 L CNN
+F 1 "10uF" H 5092 8905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5000 8950 50  0001 C CNN
+F 3 "~" H 5000 8950 50  0001 C CNN
+	1    5000 8950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 8800 5000 8850
+Wire Wire Line
+	4550 8800 5000 8800
+Connection ~ 4550 8800
 $EndSCHEMATC

@@ -463,56 +463,26 @@ Wire Wire Line
 Wire Wire Line
 	2250 9950 2900 9950
 NoConn ~ 3100 7900
-Text GLabel 3100 8000 2    50   Input ~ 0
-ANALOG_R0
 Text GLabel 3100 7800 2    50   Input ~ 0
-ANALOG_R1
+ANALOG_R0
 Text GLabel 3100 8600 2    50   Input ~ 0
-ANALOG_R2
+ANALOG_R1
 Text GLabel 3100 8500 2    50   Input ~ 0
-ANALOG_R3
+ANALOG_R2
 Text GLabel 12150 4200 2    50   Input ~ 0
-ANALOG_R4
+ANALOG_R3
 Text GLabel 12150 4400 2    50   Input ~ 0
-ANALOG_R5
+ANALOG_R4
 Text GLabel 12150 4000 2    50   Input ~ 0
-ANALOG_R6
+ANALOG_R5
 Text GLabel 12150 3300 2    50   Input ~ 0
+ANALOG_R6
+Text GLabel 12150 2900 2    50   Input ~ 0
 ANALOG_R7
 Text GLabel 14650 4300 2    50   Output ~ 0
 ANALOG_CLK
-Text GLabel 3100 8300 2    50   Input ~ 0
-ANALOG_G0
-Text GLabel 12150 3700 2    50   Input ~ 0
-ANALOG_G1
-Text GLabel 12150 3800 2    50   Input ~ 0
-ANALOG_G2
-Text GLabel 12150 3500 2    50   Input ~ 0
-ANALOG_G3
-Text GLabel 12150 3600 2    50   Input ~ 0
-ANALOG_G4
-Text GLabel 12150 3400 2    50   Input ~ 0
-ANALOG_G5
-Text GLabel 12150 3200 2    50   Input ~ 0
-ANALOG_G6
-Text GLabel 12150 3100 2    50   Input ~ 0
-ANALOG_G7
-Text GLabel 12150 2200 2    50   Input ~ 0
-ANALOG_B0
 Text GLabel 12150 2500 2    50   Input ~ 0
-ANALOG_B1
-Text GLabel 12150 2800 2    50   Input ~ 0
-ANALOG_B2
-Text GLabel 12150 2100 2    50   Input ~ 0
-ANALOG_B3
-Text GLabel 12150 1600 2    50   Input ~ 0
-ANALOG_B4
-Text GLabel 12150 1500 2    50   Input ~ 0
-ANALOG_B5
-Text GLabel 12150 1400 2    50   Input ~ 0
-ANALOG_B6
-Text GLabel 12150 1300 2    50   Input ~ 0
-ANALOG_B7
+ANALOG_B0
 Wire Wire Line
 	850  2400 850  2500
 $Comp
@@ -589,12 +559,8 @@ Wire Wire Line
 	3400 10550 3400 10650
 Text GLabel 12150 4300 2    50   Input ~ 0
 CLK_12MHZ
-Text GLabel 14650 4400 2    50   Input ~ 0
+Text GLabel 12150 2200 2    50   Input ~ 0
 ANALOG_B_OE
-Text GLabel 12150 2600 2    50   Input ~ 0
-ANALOG_G_OE
-Text GLabel 12150 2900 2    50   Input ~ 0
-ANALOG_R_OE
 Wire Wire Line
 	13350 2100 13350 2200
 Wire Wire Line
@@ -987,4 +953,38 @@ Text GLabel 2150 3700 2    39   Input ~ 0
 FPGA_PPU2_~PED~
 Text GLabel 4650 2900 2    50   Output ~ 0
 FPGA_PPU2_EXTLATCH
+Text GLabel 12150 2800 2    50   Input ~ 0
+ANALOG_B1
+Text GLabel 12150 2100 2    50   Input ~ 0
+ANALOG_B2
+Text GLabel 12150 1600 2    50   Input ~ 0
+ANALOG_B3
+Text GLabel 12150 1500 2    50   Input ~ 0
+ANALOG_B4
+Text GLabel 12150 1400 2    50   Input ~ 0
+ANALOG_B5
+Text GLabel 12150 1300 2    50   Input ~ 0
+ANALOG_B6
+Text GLabel 14650 4400 2    50   Input ~ 0
+ANALOG_B7
+Text GLabel 3100 8300 2    50   Input ~ 0
+ANALOG_G_OE
+Text GLabel 3100 8000 2    50   Input ~ 0
+ANALOG_R_OE
+Text GLabel 12150 3700 2    50   Input ~ 0
+ANALOG_G0
+Text GLabel 12150 3800 2    50   Input ~ 0
+ANALOG_G1
+Text GLabel 12150 3500 2    50   Input ~ 0
+ANALOG_G2
+Text GLabel 12150 3600 2    50   Input ~ 0
+ANALOG_G3
+Text GLabel 12150 3400 2    50   Input ~ 0
+ANALOG_G4
+Text GLabel 12150 3200 2    50   Input ~ 0
+ANALOG_G5
+Text GLabel 12150 3100 2    50   Input ~ 0
+ANALOG_G6
+Text GLabel 12150 2600 2    50   Input ~ 0
+ANALOG_G7
 $EndSCHEMATC
