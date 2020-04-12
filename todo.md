@@ -9,6 +9,7 @@
 * design: Document part selection rationale.
 * reference: Retrieve datasheets for all parts.
 * reference: Reverify datasheets for gotcah details.
+* schematic: Add 1-ohm resistors in series with power rails, with test points for power measurement.
 * schematic: Re-do analog layout entirely.
 * schematic: Add FPGA decoupling capacitors.
 * schematic: Review with Nate.
