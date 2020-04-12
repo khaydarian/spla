@@ -590,11 +590,11 @@ Wire Wire Line
 Text GLabel 12150 4300 2    50   Input ~ 0
 CLK_12MHZ
 Text GLabel 14650 4400 2    50   Input ~ 0
-ANALOG_B_OTR
+ANALOG_B_OE
 Text GLabel 12150 2600 2    50   Input ~ 0
-ANALOG_G_OTR
+ANALOG_G_OE
 Text GLabel 12150 2900 2    50   Input ~ 0
-ANALOG_R_OTR
+ANALOG_R_OE
 Wire Wire Line
 	13350 2100 13350 2200
 Wire Wire Line

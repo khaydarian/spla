@@ -4,3 +4,4 @@ fp-lib-table
 *.kicad_pcb-bak
 *.bck
 *.bak
+*.pyc
