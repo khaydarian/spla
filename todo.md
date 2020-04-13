@@ -8,12 +8,13 @@
 * blog: Clean up README.md.
 * design: Document part selection rationale.
 * reference: Retrieve datasheets for all parts.
-* reference: Reverify datasheets for gotcah details.
+* reference: Reverify datasheets for gotcha details.
+* schematic: Add weak pulldown for PPU-2 reset line.
 * schematic: Add 1-ohm resistors in series with power rails, with test points for power measurement.
-* schematic: Re-do analog layout entirely.
 * schematic: Add FPGA decoupling capacitors.
 * schematic: Review with Nate.
 * schematic: Run through [schematic checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
+* schematic/pcb: Hook up extra three pins on FPGA to something (LEDs?).
 * pcb: Run through [PCB checklist](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md)
 * lab: Verify PPU and VRAM footprint measurements.
 * lab: Bodge wire to vblank / hblank, and measure analog voltage levels with scope.
