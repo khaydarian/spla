@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 7
 Title "SPLA Board - USB"
-Date "2020-04-07"
-Rev "7"
+Date "2020-04-12"
+Rev "8"
 Comp ""
 Comment1 ""
 Comment2 ""
