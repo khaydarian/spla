@@ -1,0 +1,129 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5EAAEE9C
+P 3550 3500
+F 0 "V1" H 3778 3546 50  0000 L CNN
+F 1 "dc 0 ac 1" H 3778 3455 50  0000 L CNN
+F 2 "" H 3550 3500 50  0001 C CNN
+F 3 "~" H 3550 3500 50  0001 C CNN
+	1    3550 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3200 3550 3100
+Wire Wire Line
+	3550 3100 4400 3100
+Text GLabel 4100 3100 1    50   Input ~ 0
+in
+$Comp
+L power:GND #PWR02
+U 1 1 5EAB1651
+P 3550 3800
+F 0 "#PWR02" H 3550 3550 50  0001 C CNN
+F 1 "GND" H 3555 3627 50  0000 C CNN
+F 2 "" H 3550 3800 50  0001 C CNN
+F 3 "" H 3550 3800 50  0001 C CNN
+	1    3550 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3100 4950 3100
+Wire Wire Line
+	4950 3100 4950 3350
+Wire Wire Line
+	4950 2850 4950 3100
+Connection ~ 4950 3100
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5EAB2F0D
+P 3550 2500
+F 0 "V2" H 3778 2546 50  0000 L CNN
+F 1 "5" H 3778 2455 50  0000 L CNN
+F 2 "" H 3550 2500 50  0001 C CNN
+F 3 "~" H 3550 2500 50  0001 C CNN
+	1    3550 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5EAB339F
+P 3550 2800
+F 0 "#PWR01" H 3550 2550 50  0001 C CNN
+F 1 "GND" H 3555 2627 50  0000 C CNN
+F 2 "" H 3550 2800 50  0001 C CNN
+F 3 "" H 3550 2800 50  0001 C CNN
+	1    3550 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3650 4950 3800
+$Comp
+L power:GND #PWR03
+U 1 1 5EAB3753
+P 4950 3800
+F 0 "#PWR03" H 4950 3550 50  0001 C CNN
+F 1 "GND" H 4955 3627 50  0000 C CNN
+F 2 "" H 4950 3800 50  0001 C CNN
+F 3 "" H 4950 3800 50  0001 C CNN
+	1    4950 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 4950 3100 2    50   Input ~ 0
+out
+Wire Wire Line
+	3550 2200 4950 2200
+Wire Wire Line
+	4950 2200 4950 2550
+Text GLabel 4100 2200 1    50   Input ~ 0
+5v
+Text Notes 3550 4200 0    50   ~ 0
+.dc V1 0 3 0.05
+$Comp
+L Device:R R3
+U 1 1 5EAB273C
+P 4950 3500
+F 0 "R3" H 4880 3454 50  0000 R CNN
+F 1 "649" H 4880 3545 50  0000 R CNN
+F 2 "" V 4880 3500 50  0001 C CNN
+F 3 "~" H 4950 3500 50  0001 C CNN
+	1    4950 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F4DFEB6
+P 4950 2700
+F 0 "R1" H 4880 2654 50  0000 R CNN
+F 1 "1.65k" H 4880 2745 50  0000 R CNN
+F 2 "" V 4880 2700 50  0001 C CNN
+F 3 "~" H 4950 2700 50  0001 C CNN
+	1    4950 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5EAAF6D1
+P 4550 3100
+F 0 "R2" V 4343 3100 50  0000 C CNN
+F 1 "301" V 4434 3100 50  0000 C CNN
+F 2 "" V 4480 3100 50  0001 C CNN
+F 3 "~" H 4550 3100 50  0001 C CNN
+	1    4550 3100
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
