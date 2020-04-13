@@ -15,6 +15,7 @@
 * schematic: Review with Nate.
 * schematic: Run through [schematic checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
 * schematic/pcb: Hook up extra three pins on FPGA to something (LEDs?).
+* pcb: Add traceability markings (logo, name, revision, date, space for serial ID sticker).
 * pcb: Run through [PCB checklist](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md)
 * lab: Verify PPU and VRAM footprint measurements.
 * lab: Bodge wire to vblank / hblank, and measure analog voltage levels with scope.
