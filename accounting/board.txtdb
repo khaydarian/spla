@@ -1,0 +1,133 @@
+Name: Digikey Order #1
+Category: Board Parts
+Package Key: Digikey-308771862
+Digikey Web ID: 308771862
+Digikey Salesorder Number: 63833044
+Order Submitted Date: 2020-04-14
+Shipping Method: USPS, First Class Mail
+Cost Subtotal: $133.82
+Cost Shipping: $4.99
+Cost Tariff: $1.42
+Cost Sales Tax: $12.51
+Cost Total: $152.74
+
+Name: FPGA, Lattice ECP5
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 220-2198-ND
+Digikey Description: IC FPGA 197 I/O 256CABGA
+Manufacturer: Lattice
+Manufacturer Product Id: LFE4U-45F-6BG256C
+Unit Cost: $15.86000
+Quantity: 2
+Cost: $31.72
+
+Name: Level Shifter, 74LVC8T245
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 296-18593-1-ND
+Digikey Description: IC TRNSLTR BIDIRECTIONAL 24TSSOP
+Manufacturer: Texas Instruments
+Manufacturer Product Id: SN74LVC8T245PWR
+Unit Cost: $0.86240
+Quantity: 30
+Cost: $25.87
+
+Name: ADC, ADC1173
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 296035234-1-ND
+Digikey Description: IC ADC 8BIT TWO-STEP 24TSSOP
+Manufacturer: Texas Instruments
+Manufacturer Product Id: ADC1173CIMTCX/NOPB
+Unit Cost: $3.38000
+Quantity: 6
+Cost: $20.28
+
+Name: Power, LDO Regulator, TLV73311P
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 296-40663-1-ND
+Digikey Description: IC REG LINEAR 1.1V 300MA SOT23-5
+Manufacturer: Texas Instruments
+Manufacturer Product Id: TLV73311PDBVR
+Unit Cost: $0.35000
+Quantity: 5
+Cost: $1.75
+
+Name: Power, LDO Regulator, TLV73325P
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 296-40671-1-ND
+Digikey Description: IC REG LINEAR 2.5V 300MA SOT23-5
+Manufacturer: Texas Instruments
+Manufacturer Product Id: TLV73325PDBVR
+Unit Cost: $0.35000
+Quantity: 5
+Cost: $1.75
+
+Name: Analog, Opamp, LMH6611
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 296-41441-1-ND
+Digikey Description: IC OPAMP GP 1 CIRCUIT TSOT23-6
+Manufacturer: Texas Instruments
+Manufacturer Product Id: LMH6611MK/NOPB
+Unit Cost: $1.63200
+Quantity: 10
+Cost: $16.32
+
+Name: Power, Switching Regulator, ST1S10
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 497-6904-1-ND
+Digikey Description: IC REG BUCK ADJ 3A POWERSO-8
+Manufacturer: ST Microelectronics
+Manufacturer Product Id: ST1S10PHR
+Unit Cost: $1.76000
+Quantity: 5
+Cost: $8.80
+
+Name: Passive, Inductor, IHLP2020CZ
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 541-1237-1-ND
+Digikey Description: FIXED IND 3.3UH 5.5A 40.4MOHM
+Manufacturer: Vishay Dale
+Manufacturer Product Id: IHLP2020CZER3R3M11
+Unit Cost: $2.39000
+Quantity: 4
+Cost: $9.56
+
+Name: USB Interface, FTDI FT2232H
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 768-1024-1-ND
+Digikey Description: IC USB HS DUAL UART/FIFO 64-LQFP
+Manufacturer: FTDI
+Manufacturer Product Id: FT2232HL-REEL
+Unit Cost: $6.71000
+Quantity: 2
+Cost: $13.42
+
+Name: USB Interface Related, FTDI EEPROM, 93LC66B
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 93LC66B/SN-ND
+Digikey Description: IC EEPROM 4K SPI 2MHZ 8SOIC
+Manufacturer: Microchip Technologies
+Manufacturer Product Id: 93LC66B/SN
+Unit Cost: $0.26000
+Quantity: 10
+Cost: $2.60
+
+Name: Power, LDO Regulator, TLV73333P
+Category: Board Parts
+From Package Key: Digikey-308771862
+Digikey Product Id: 296-40673-1-ND
+Digikey Description: IC REG LINEAR 3.3V 300MA SOT23-5
+Manufacturer: Texas Instruments
+Manufacturer Product Id: TLV73333PDBVR
+Unit Cost: $0.35000
+Quantity: 5
+Cost: $1.75
