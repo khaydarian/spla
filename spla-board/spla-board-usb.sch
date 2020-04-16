@@ -152,17 +152,6 @@ F 3 "" H 5700 6850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7250 6350 8750 6350
-$Comp
-L Memory_EEPROM:93LCxxA U3
-U 1 1 5E53A19A
-P 5700 6550
-F 0 "U3" H 5400 6800 50  0000 L CNN
-F 1 "93LCxxA" H 5200 6550 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 6550 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 5700 6550 50  0001 C CNN
-	1    5700 6550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5300 5950 7250 5950
 Wire Wire Line
@@ -746,4 +735,15 @@ Text Notes 12700 7050 0    50   ~ 0
 (3.3V - 2.0V) / 20mA = 65 ohm
 Wire Wire Line
 	12400 6450 12400 6550
+$Comp
+L Memory_EEPROM:93LCxxB U3
+U 1 1 5E53A19A
+P 5700 6550
+F 0 "U3" H 5400 6800 50  0000 L CNN
+F 1 "93LC66B" H 5200 6550 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 6550 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 5700 6550 50  0001 C CNN
+	1    5700 6550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
