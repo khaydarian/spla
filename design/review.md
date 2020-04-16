@@ -1,5 +1,7 @@
 # Notes from Design Review
 
+On schematic / pcb revision 8:
+
 ## `LMH6611` Common Mode Voltage Range
 
 @rrrabarbaro
@@ -51,3 +53,31 @@ Status: Pending.
 Generally for best performance the ADC clock needs to be very clean.  Driving this from the FPGA won't provide a very clean clock, re-driving for each ADC would be better.  Perhaps a star topology is ok.
 
 Status: Probably skip; I don't need very great ADC performance.
+
+## FPGA startup
+
+Programming input pins ought to have a pull-up/pull-down resistors, in case the `FT2232H` sets the B bus to high impedence when A bus is in sync fifo mode.  The datasheet isn't specific about this detail.
+
+There should be LEDs on the various important FPGA programming pins (`DONE`, `INIT`, `PROGRAM`);
+
+Status: Needs review.
+
+## `FT2232H` layout
+
+Some of the layout around the `FT2232H` is odd because I originally had the `EP` footprint, with a large ground pad.  THis should be cleaned up.o
+
+Also, the `+1V8` rail out to have a convenient test point, for bringup use.  Decoupling capacity (`C7`) should be near the source of this power (pin 49).
+
+Status: Pending.
+
+## Ground loops
+
+The 5V rail goes a long way around the edge of the board, but the ground return path is direct.  This might create a small magnetic field going through the middle of the board, which might be bad.
+
+Status: Probably ignore, since I'm not sure if this is a real problem.
+
+## Physical connectors
+
+USB Micro adapter and 12V Barrel jack might not match reasonable actual parts; need to choose those parts and update the layout to match.
+
+Status: Pending.
