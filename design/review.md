@@ -28,7 +28,7 @@ Status: Pending.
 
 5V power plane attaches to the source right at a PPU, which might cause excessive ripple.  Move this away from the chips, and add decoupling capacitors.
 
-Status: Pending.
+Status: Fixed.
 
 ## Decoupling
 
@@ -36,7 +36,7 @@ Status: Pending.
 
 Check Lattice's recommendations for decoupling capacitors on the FPGA, and add them.
 
-Status: Pending.
+Status: Fixed.
 
 ## Adjacent Pads
 
@@ -44,7 +44,7 @@ Status: Pending.
 
 Avoid connecting adjacent pads by the long edges. historically this causes problems with etch traps, but that might not be important with modern processes.
 
-Status: Pending.
+Status: Fixed.
 
 ## ADC Clock
 
@@ -68,7 +68,7 @@ Some of the layout around the `FT2232H` is odd because I originally had the `EP`
 
 Also, the `+1V8` rail out to have a convenient test point, for bringup use.  Decoupling capacity (`C7`) should be near the source of this power (pin 49).
 
-Status: Pending.
+Status: Fixed.
 
 ## Ground loops
 
