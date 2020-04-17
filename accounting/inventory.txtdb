@@ -11,9 +11,9 @@ Cost Tax: $1.37
 Condition: Untested
 Location: Small Amazon Box
 
-Name: SNES
+Name: SNES 1
 Category: SNES Related
-Condition: Working, but no sound
+Ebay Condition: Working, but no sound
 Serial: UN16830049
 Date Arrive Estimated: 2020-03-02
 Date Arrive Actual: 2020-03-02
@@ -193,3 +193,16 @@ Cost Base: $9.79
 Cost Tax: $0.91
 Cost Total: $10.70
 Location: Office Desk Drawers
+
+Name: SNES 2
+Category: SNES Related
+Ebay Condition: Working, but no sound
+Serial: UN12291829
+Date Arrive Estimated: 2020-05-02
+Date Arrive Actual:
+Source: Ebay
+Ebay ID: 124084758463
+Cost Base: $31.00
+Cost Shipping: $0.00
+Cost Tax: $2.87
+Location: In Transit
