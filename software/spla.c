@@ -59,6 +59,12 @@ static int help(int argc, char** argv) {
 	return 1;
 }
 
+static inline void show_ftdi_error(const char* fn,
+		struct ftdi_context* ftdi, int ret) {
+	fprintf(stderr, "%s: error %d: %s\n",
+			fn, ret, ftdi_get_error_string(ftdi));
+}
+
 static int show_ftdi(int argc, char** argv) {
 	// TODO handle per-command arguments
 	(void) argc;
@@ -75,8 +81,7 @@ static int show_ftdi(int argc, char** argv) {
 	struct ftdi_device_list* devlist;
 	int ret = ftdi_usb_find_all(ftdi, &devlist, 0, 0);
 	if (ret < 0) {
-		fprintf(stderr, "ftdi_usb_find_all: error %d: %s\n",
-			ret, ftdi_get_error_string(ftdi));
+		show_ftdi_error("ftdi_usb_find_all", ftdi, ret);
 		ftdi_free(ftdi);
 		return 1;
 	}
@@ -95,8 +100,7 @@ static int show_ftdi(int argc, char** argv) {
 				description, sizeof(description),
 				serial, sizeof(serial));
 		if (ret < 0) {
-			fprintf(stderr, "ftdi_usb_get_strings: error %d: %s\n",
-					ret, ftdi_get_error_string(ftdi));
+			show_ftdi_error("ftdi_usb_get_strings", ftdi, ret);
 			ftdi_list_free(&devlist);
 			ftdi_free(ftdi);
 			return 1;
