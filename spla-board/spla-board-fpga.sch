@@ -343,7 +343,7 @@ F 3 "" H 1500 9850 39  0001 C CNN
 	7    2450 7850
 	1    0    0    -1  
 $EndComp
-Text GLabel 3100 6900 2    50   Output ~ 0
+Text GLabel 3100 6900 2    50   Input ~ 0
 SPI_CLK
 Text GLabel 3100 7600 2    50   Output ~ 0
 SPI_MOSI

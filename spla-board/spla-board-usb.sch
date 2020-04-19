@@ -583,7 +583,7 @@ Text GLabel 11150 4350 2    50   BiDi ~ 0
 FIFO_D6
 Text GLabel 11150 4450 2    50   BiDi ~ 0
 FIFO_D7
-Text GLabel 11150 5850 2    39   Input ~ 0
+Text GLabel 11150 5850 2    39   Output ~ 0
 SPI_~CS~
 Text GLabel 11150 4650 2    39   Output ~ 0
 FIFO_~RXF~
@@ -626,7 +626,7 @@ Connection ~ 6350 7900
 NoConn ~ 11150 5050
 Text GLabel 11150 6050 2    39   BiDi ~ 0
 ~INIT
-Text GLabel 12600 6150 2    39   Input ~ 0
+Text GLabel 12600 6150 2    39   Output ~ 0
 ~PROGRAM
 Text GLabel 11150 5950 2    50   BiDi ~ 0
 DONE
