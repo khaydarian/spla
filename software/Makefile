@@ -10,8 +10,8 @@ all: spla
 clean:
 	rm -rf build/ spla
 
-HDRS := build/ftdi.h
-OBJS := build/spla.o build/ftdi.o
+HDRS := build/ftdi.h $(wildcard *.h)
+OBJS := build/ftdi.o $(patsubst %.c,build/%.o,$(wildcard *.c))
 
 # libusn
 LIBUSB_CFLAGS := -I/usr/include/libusb-1.0
