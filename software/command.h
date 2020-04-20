@@ -20,5 +20,7 @@ int usage();
 int help(int argc, char** argv);
 int ftdi_list_devices(int argc, char** argv);
 int ftdi_test_toggle(int argc, char** argv);
+int ftdi_test_spi(int argc, char** argv);
+int ftdi_test_raw(int argc, char** argv);
 
 #endif

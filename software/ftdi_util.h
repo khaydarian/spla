@@ -10,4 +10,8 @@ void ftdiutil_deinit();
 
 void ftdiutil_error(const char* fn, struct ftdi_context* ftdi, int ret);
 
+void ftdiutil_write_data(unsigned char* data, int size);
+int ftdiutil_flush_data();
+int ftdiutil_read_data(unsigned char* data, int size);
+
 #endif

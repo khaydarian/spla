@@ -28,29 +28,29 @@ int ftdi_test_toggle(int argc, char** argv) {
 	} else {
 		unsigned char buf[1];
 
-		for (int i = 0; i < 10; i++) {
-			printf("On\n");
+		for (int i = 0; i < 100; i++) {
+			//printf("On\n");
 			buf[0] = 0xFF;
 			ret = ftdi_write_data(ftdi, buf, 1);
 			if (ret < 0) {
 				ftdiutil_error("ftdi_write_data", ftdi, ret);
 			}
-			usleep(1000000);
-			printf("Off\n");
+			//usleep(1000000);
+			//printf("Off\n");
 			buf[0] = 0x0;
 			ret = ftdi_write_data(ftdi, buf, 1);
 			if (ret < 0) {
 				ftdiutil_error("ftdi_write_data", ftdi, ret);
 			}
-			usleep(1000000);
+			//usleep(1000000);
 		}
 	}
 
 	// Reset all pins to inputs / hi-z.
-	ret = ftdi_set_bitmode(ftdi, 0x00, BITMODE_BITBANG);
-	if (ret) {
-		ftdiutil_error("ftdi_set_bitmode", ftdi, ret);
-	}
+	//ret = ftdi_set_bitmode(ftdi, 0x00, BITMODE_BITBANG);
+	//if (ret) {
+	//	ftdiutil_error("ftdi_set_bitmode", ftdi, ret);
+	//}
 
 	ret = ftdi_usb_close(ftdi);
 	if (ret) {

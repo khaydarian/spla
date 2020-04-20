@@ -17,6 +17,14 @@ static struct command all_commands[] = {
 		"Show all relevant devices connected by USB.",
 	},
 	{
+		"ftdi_test_raw", ftdi_test_raw,
+		"Test FTDI interface with individual commands.",
+	},
+	{
+		"ftdi_test_spi", ftdi_test_spi,
+		"Test FTDI SPI interface.",
+	},
+	{
 		"ftdi_test_toggle", ftdi_test_toggle,
 		"Test FTDI interface by toggling GPIOs.",
 	},

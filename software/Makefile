@@ -13,7 +13,7 @@ clean:
 HDRS := build/ftdi.h $(wildcard *.h)
 OBJS := build/ftdi.o $(patsubst %.c,build/%.o,$(wildcard *.c))
 
-# libusn
+# libusb
 LIBUSB_CFLAGS := -I/usr/include/libusb-1.0
 LIBUSB_LIBS := -L/usr/lib/x86_64-linux-gnu -lusb-1.0
 
@@ -23,7 +23,7 @@ build/%.o: %.c $(HDRS)
 	$(CC) $(CFLAGS) $(LIBUSB_CFLAGS) -Ibuild/ -c $< -o $@
 
 spla: $(OBJS)
-	$(LD) $(LDFLAGS) $^ -o $@ $(LIBUSB_LIBS)
+	$(LD) $(LDFLAGS) $^ -o $@ $(LIBUSB_LIBS) -lm
 
 build/ftdi.o: build/ftdi.c build/ftdi.h build/ftdi_i.h build/ftdi_version_i.h
 	$(CC) -c $< $(LIBUSB_CFLAGS) -o $@
