@@ -81,6 +81,8 @@ F 0 "U2" H 8900 7750 50  0000 L CNN
 F 1 "FT2232H" H 9950 5650 101 0000 C CNB
 F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 9950 5650 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" H 9950 5650 50  0001 C CNN
+F 4 "768-1024-1-ND" H 9950 5650 50  0001 C CNN "Digikey"
+F 5 "FT2232HL" H 9950 5650 50  0001 C CNN "Manufacturer Id"
 	1    9950 5650
 	1    0    0    -1  
 $EndComp
@@ -743,6 +745,8 @@ F 0 "U3" H 5400 6800 50  0000 L CNN
 F 1 "93LC66B" H 5200 6550 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 6550 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 5700 6550 50  0001 C CNN
+F 4 "93LC66B/SN-ND" H 5700 6550 50  0001 C CNN "Digikey"
+F 5 "93LC66B/SN" H 5700 6550 50  0001 C CNN "Manufacturer Id"
 	1    5700 6550
 	1    0    0    -1  
 $EndComp

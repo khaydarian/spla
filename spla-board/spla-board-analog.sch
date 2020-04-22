@@ -209,6 +209,8 @@ F 0 "U53" H 14300 1661 50  0000 C CNN
 F 1 "ADC1173" H 14300 1570 50  0000 C CNN
 F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14300 2550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/adc1173.pdf" H 14300 2550 50  0001 C CNN
+F 4 "296-35234-1-ND" H 14300 2550 50  0001 C CNN "Digikey"
+F 5 "ADC1173CIMTCX/NOPB" H 14300 2550 50  0001 C CNN "Manufacturer Id"
 	1    14300 2550
 	1    0    0    -1  
 $EndComp
@@ -220,6 +222,8 @@ F 0 "U51" H 14300 7761 50  0000 C CNN
 F 1 "ADC1173" H 14300 7670 50  0000 C CNN
 F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14300 8650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/adc1173.pdf" H 14300 8650 50  0001 C CNN
+F 4 "296-35234-1-ND" H 14300 8650 50  0001 C CNN "Digikey"
+F 5 "ADC1173CIMTCX/NOPB" H 14300 8650 50  0001 C CNN "Manufacturer Id"
 	1    14300 8650
 	1    0    0    -1  
 $EndComp
@@ -231,6 +235,8 @@ F 0 "U52" H 14300 4711 50  0000 C CNN
 F 1 "ADC1173" H 14300 4620 50  0000 C CNN
 F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14300 5600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/adc1173.pdf" H 14300 5600 50  0001 C CNN
+F 4 "296-35234-1-ND" H 14300 5600 50  0001 C CNN "Digikey"
+F 5 "ADC1173CIMTCX/NOPB" H 14300 5600 50  0001 C CNN "Manufacturer Id"
 	1    14300 5600
 	1    0    0    -1  
 $EndComp
@@ -595,6 +601,8 @@ F 0 "U61" H 9894 8296 50  0000 L CNN
 F 1 "LMH6611" H 9894 8205 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 9650 8000 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 9700 8400 50  0001 C CNN
+F 4 "296-41441-1-ND" H 9550 8250 50  0001 C CNN "Digikey"
+F 5 "LMH6611MK/NOPB" H 9550 8250 50  0001 C CNN "Manufacturer Id"
 	1    9550 8250
 	1    0    0    -1  
 $EndComp
@@ -1122,6 +1130,8 @@ F 0 "U63" H 9894 2196 50  0000 L CNN
 F 1 "LMH6611" H 9894 2105 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 9650 1900 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 9700 2300 50  0001 C CNN
+F 4 "296-41441-1-ND" H 9550 2150 50  0001 C CNN "Digikey"
+F 5 "LMH6611MK/NOPB" H 9550 2150 50  0001 C CNN "Manufacturer Id"
 	1    9550 2150
 	1    0    0    -1  
 $EndComp
@@ -1404,6 +1414,8 @@ F 0 "U62" H 9894 5246 50  0000 L CNN
 F 1 "LMH6611" H 9894 5155 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 9650 4950 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 9700 5350 50  0001 C CNN
+F 4 "296-41441-1-ND" H 9550 5200 50  0001 C CNN "Digikey"
+F 5 "LMH6611MK/NOPB" H 9550 5200 50  0001 C CNN "Manufacturer Id"
 	1    9550 5200
 	1    0    0    -1  
 $EndComp
@@ -2367,6 +2379,8 @@ F 0 "U74" H 4644 7396 50  0000 L CNN
 F 1 "LMH6611" H 4644 7305 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 4400 7100 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 4450 7500 50  0001 C CNN
+F 4 "296-41441-1-ND" H 4300 7350 50  0001 C CNN "Digikey"
+F 5 "LMH6611MK/NOPB" H 4300 7350 50  0001 C CNN "Manufacturer Id"
 	1    4300 7350
 	1    0    0    -1  
 $EndComp
@@ -2594,6 +2608,8 @@ F 0 "U75" H 4644 9946 50  0000 L CNN
 F 1 "LMH6611" H 4644 9855 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 4400 9650 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 4450 10050 50  0001 C CNN
+F 4 "296-41441-1-ND" H 4300 9900 50  0001 C CNN "Digikey"
+F 5 "LMH6611MK/NOPB" H 4300 9900 50  0001 C CNN "Manufacturer Id"
 	1    4300 9900
 	1    0    0    -1  
 $EndComp
@@ -2772,6 +2788,8 @@ F 0 "U76" H 2000 7242 50  0000 C CNN
 F 1 "TLV73333PDBV" H 2000 7151 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2000 7100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tlv733p.pdf" H 2100 6650 50  0001 C CNN
+F 4 "296-40673-1-ND" H 2000 6900 50  0001 C CNN "Digikey"
+F 5 "TLV73333PDBVR" H 2000 6900 50  0001 C CNN "Manufacturer Id"
 	1    2000 6900
 	1    0    0    -1  
 $EndComp
