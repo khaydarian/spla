@@ -21,6 +21,8 @@ F 0 "J7" H 1107 3775 50  0000 C CNN
 F 1 "Barrel_Jack" H 1107 3684 50  0000 C CNN
 F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-036AH-SMT_Horizontal" H 1100 3410 50  0001 C CNN
 F 3 "~" H 1100 3410 50  0001 C CNN
+F 4 "CP-036AHPJCT-ND" H 1050 3450 50  0001 C CNN "Digikey"
+F 5 "PJ-036AH-SMT-TR" H 1050 3450 50  0001 C CNN "Manufacturer Id"
 	1    1050 3450
 	1    0    0    -1  
 $EndComp
