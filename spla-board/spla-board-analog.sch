@@ -162,6 +162,8 @@ F 0 "TP3" H 6258 8818 50  0000 L CNN
 F 1 "TP_AREF_HI" H 6258 8727 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 8700 50  0001 C CNN
 F 3 "~" H 6400 8700 50  0001 C CNN
+F 4 "N/A" H 6200 8700 50  0001 C CNN "Digikey"
+F 5 "N/A" H 6200 8700 50  0001 C CNN "Manufacturer Id"
 	1    6200 8700
 	1    0    0    -1  
 $EndComp
@@ -175,6 +177,8 @@ F 0 "TP4" H 6150 9000 50  0000 R CNN
 F 1 "TP_AREF_LO" H 6150 9100 50  0000 R CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 8900 50  0001 C CNN
 F 3 "~" H 6400 8900 50  0001 C CNN
+F 4 "N/A" H 6200 8900 50  0001 C CNN "Digikey"
+F 5 "N/A" H 6200 8900 50  0001 C CNN "Manufacturer Id"
 	1    6200 8900
 	-1   0    0    1   
 $EndComp

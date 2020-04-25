@@ -69,6 +69,8 @@ F 0 "TP5" H 2558 3368 50  0000 L CNN
 F 1 "TP_12V" H 2558 3277 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2700 3250 50  0001 C CNN
 F 3 "~" H 2700 3250 50  0001 C CNN
+F 4 "N/A" H 2500 3250 50  0001 C CNN "Digikey"
+F 5 "N/A" H 2500 3250 50  0001 C CNN "Manufacturer Id"
 	1    2500 3250
 	1    0    0    -1  
 $EndComp
@@ -106,6 +108,8 @@ F 0 "H1" H 13500 8199 50  0000 L CNN
 F 1 "MountingHole_Pad" H 13500 8108 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13400 8150 50  0001 C CNN
 F 3 "~" H 13400 8150 50  0001 C CNN
+F 4 "N/A" H 13400 8150 50  0001 C CNN "Digikey"
+F 5 "N/A" H 13400 8150 50  0001 C CNN "Manufacturer Id"
 	1    13400 8150
 	1    0    0    -1  
 $EndComp
@@ -119,6 +123,8 @@ F 0 "H3" H 14500 8199 50  0000 L CNN
 F 1 "MountingHole_Pad" H 14500 8108 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 14400 8150 50  0001 C CNN
 F 3 "~" H 14400 8150 50  0001 C CNN
+F 4 "N/A" H 14400 8150 50  0001 C CNN "Digikey"
+F 5 "N/A" H 14400 8150 50  0001 C CNN "Manufacturer Id"
 	1    14400 8150
 	1    0    0    -1  
 $EndComp
@@ -132,6 +138,8 @@ F 0 "H2" H 13500 8699 50  0000 L CNN
 F 1 "MountingHole_Pad" H 13500 8608 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13400 8650 50  0001 C CNN
 F 3 "~" H 13400 8650 50  0001 C CNN
+F 4 "N/A" H 13400 8650 50  0001 C CNN "Digikey"
+F 5 "N/A" H 13400 8650 50  0001 C CNN "Manufacturer Id"
 	1    13400 8650
 	1    0    0    -1  
 $EndComp
@@ -145,6 +153,8 @@ F 0 "H4" H 14500 8699 50  0000 L CNN
 F 1 "MountingHole_Pad" H 14500 8608 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 14400 8650 50  0001 C CNN
 F 3 "~" H 14400 8650 50  0001 C CNN
+F 4 "N/A" H 14400 8650 50  0001 C CNN "Digikey"
+F 5 "N/A" H 14400 8650 50  0001 C CNN "Manufacturer Id"
 	1    14400 8650
 	1    0    0    -1  
 $EndComp
@@ -1630,6 +1640,8 @@ F 0 "TP6" H 2558 3768 50  0000 L CNN
 F 1 "TP_GND" H 2558 3677 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2700 3650 50  0001 C CNN
 F 3 "~" H 2700 3650 50  0001 C CNN
+F 4 "N/A" H 2500 3650 50  0001 C CNN "Digikey"
+F 5 "N/A" H 2500 3650 50  0001 C CNN "Manufacturer Id"
 	1    2500 3650
 	1    0    0    -1  
 $EndComp

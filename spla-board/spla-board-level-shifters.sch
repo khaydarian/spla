@@ -694,6 +694,8 @@ F 0 "TP2" H 3558 1668 50  0000 L CNN
 F 1 "TP_TAP_XIN" H 3558 1577 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3700 1550 50  0001 C CNN
 F 3 "~" H 3700 1550 50  0001 C CNN
+F 4 "N/A" H 3500 1550 50  0001 C CNN "Digikey"
+F 5 "N/A" H 3500 1550 50  0001 C CNN "Manufacturer Id"
 	1    3500 1550
 	1    0    0    -1  
 $EndComp
@@ -1629,6 +1631,8 @@ F 0 "TP1" H 1300 1650 50  0000 R CNN
 F 1 "TP_FPGA_XIN" H 1300 1550 50  0000 R CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1550 1550 50  0001 C CNN
 F 3 "~" H 1550 1550 50  0001 C CNN
+F 4 "N/A" H 1350 1550 50  0001 C CNN "Digikey"
+F 5 "N/A" H 1350 1550 50  0001 C CNN "Manufacturer Id"
 	1    1350 1550
 	1    0    0    -1  
 $EndComp
