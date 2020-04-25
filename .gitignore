@@ -5,3 +5,4 @@ fp-lib-table
 *.bck
 *.bak
 *.pyc
+/spla-board/spla-board
