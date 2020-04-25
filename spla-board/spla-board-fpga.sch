@@ -929,9 +929,6 @@ NoConn ~ 12150 2400
 NoConn ~ 12150 4100
 NoConn ~ 14650 3600
 NoConn ~ 14650 2500
-NoConn ~ 14650 1700
-NoConn ~ 14650 1900
-NoConn ~ 14650 2100
 NoConn ~ 7150 3600
 NoConn ~ 7150 3300
 NoConn ~ 7150 3100
@@ -1628,4 +1625,61 @@ F 3 "" H 7300 7500 50  0001 C CNN
 $EndComp
 Text Notes 7950 7350 0    50   ~ 0
 Note: by above logic, 3.3V is short 9x 0.01uF decoupling capacitors, due to lack of space.
+Text GLabel 14650 1700 2    50   Output ~ 0
+FPGA_EXTRA1
+Text GLabel 14650 2100 2    50   Output ~ 0
+FPGA_EXTRA2
+Text GLabel 14650 1900 2    50   Output ~ 0
+FPGA_EXTRA3
+Text GLabel 14800 5300 2    50   Output ~ 0
+FPGA_EXTRA1
+Text GLabel 14800 5700 2    50   Output ~ 0
+FPGA_EXTRA2
+Text GLabel 14800 6100 2    50   Output ~ 0
+FPGA_EXTRA3
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5EA65145
+P 14700 5200
+F 0 "TP7" H 14758 5318 50  0000 L CNN
+F 1 "TestPoint" H 14758 5227 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 5200 50  0001 C CNN
+F 3 "~" H 14900 5200 50  0001 C CNN
+	1    14700 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5EA6567A
+P 14700 5600
+F 0 "TP8" H 14758 5718 50  0000 L CNN
+F 1 "TestPoint" H 14758 5627 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 5600 50  0001 C CNN
+F 3 "~" H 14900 5600 50  0001 C CNN
+	1    14700 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5EA6C737
+P 14700 6000
+F 0 "TP9" H 14758 6118 50  0000 L CNN
+F 1 "TestPoint" H 14758 6027 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 6000 50  0001 C CNN
+F 3 "~" H 14900 6000 50  0001 C CNN
+	1    14700 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14800 5300 14700 5300
+Wire Wire Line
+	14700 5300 14700 5200
+Wire Wire Line
+	14800 5700 14700 5700
+Wire Wire Line
+	14700 5700 14700 5600
+Wire Wire Line
+	14800 6100 14700 6100
+Wire Wire Line
+	14700 6100 14700 6000
 $EndSCHEMATC
