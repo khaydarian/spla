@@ -17,7 +17,6 @@
 * schematic: Run through [schematic checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
 * schematic/pcb: Complete part selection for resistors and capacitors.
 * bom: Improve BoM generation script to be good enough to use.
-* schematic/pcb: Hook up extra three pins on FPGA to something (LEDs?).
 * pcb: Fix FPGA power/ground layout; use smaller plane-to-via spacing.
 * pcb: Shield VRAM data bus from power switching noise, if necessary?
 * pcb: Run through [PCB checklist](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md)
