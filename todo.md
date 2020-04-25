@@ -9,8 +9,6 @@
 * reference: Retrieve datasheets for all parts.
 * reference: Reverify datasheets for gotcha details.
 * schematic: Simulate opamp layouts in analog block.
-* schematic: Add weak pulldown for PPU-2 reset line.
-* schematic: Add weak pullup for SPI chip-select line.
 * schematic: Add 1-ohm 0.1% resistors in series with power rails, with test points for power measurement.
 * schematic: Fix FPGA decoupling capacitors.
 * schematic: Review with Nate.
