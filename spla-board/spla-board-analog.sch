@@ -73,6 +73,8 @@ F 0 "J14" H 2150 9167 50  0000 C CNN
 F 1 "J_AREF" H 2150 9076 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2100 8850 50  0001 C CNN
 F 3 "~" H 2100 8850 50  0001 C CNN
+F 4 "S2011EC-40-ND" H 2100 8850 50  0001 C CNN "Digikey"
+F 5 "PRPC040DAAN-RC" H 2100 8850 50  0001 C CNN "Manufacturer Id"
 	1    2100 8850
 	1    0    0    -1  
 $EndComp
@@ -151,6 +153,8 @@ F 0 "J13" H 6300 3317 50  0000 C CNN
 F 1 "J_ANALOG" H 6300 3226 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 6250 3000 50  0001 C CNN
 F 3 "~" H 6250 3000 50  0001 C CNN
+F 4 "S2011EC-40-ND" H 6250 3000 50  0001 C CNN "Digikey"
+F 5 "PRPC040DAAN-RC" H 6250 3000 50  0001 C CNN "Manufacturer Id"
 	1    6250 3000
 	1    0    0    -1  
 $EndComp
@@ -2553,6 +2557,8 @@ F 0 "J8" H 5850 9017 50  0000 C CNN
 F 1 "J_AREF_AMP" H 5850 8926 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 5800 8800 50  0001 C CNN
 F 3 "~" H 5800 8800 50  0001 C CNN
+F 4 "S2011EC-40-ND" H 5800 8800 50  0001 C CNN "Digikey"
+F 5 "PRPC040DAAN-RC" H 5800 8800 50  0001 C CNN "Manufacturer Id"
 	1    5800 8800
 	1    0    0    -1  
 $EndComp

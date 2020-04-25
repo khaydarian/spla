@@ -99,6 +99,8 @@ F 0 "J2" V 2800 9650 50  0000 R CNN
 F 1 "J_JTAG" V 2900 9600 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2700 9650 50  0001 C CNN
 F 3 "~" H 2700 9650 50  0001 C CNN
+F 4 "S1011EC-40-ND" H 2700 9650 50  0001 C CNN "Digikey"
+F 5 "PRPC040SAAN-RC" H 2700 9650 50  0001 C CNN "Manufacturer Id"
 	1    2700 9650
 	0    -1   -1   0   
 $EndComp
