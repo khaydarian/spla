@@ -39,6 +39,8 @@ def parse_xml(filename):
 
         footprint = component.find('footprint').text
         value = component.find('value').text
+        if value == 'NOSTUFF' or value == 'INF':
+            continue
         fields = component.find('fields')
         if fields is None:
             print "Error: Component %s missing fields." % ref

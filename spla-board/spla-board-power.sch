@@ -23,6 +23,7 @@ F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-036AH-SMT_Horizontal" H 1100 3410 50
 F 3 "~" H 1100 3410 50  0001 C CNN
 F 4 "CP-036AHPJCT-ND" H 1050 3450 50  0001 C CNN "Digikey"
 F 5 "PJ-036AH-SMT-TR" H 1050 3450 50  0001 C CNN "Manufacturer Id"
+F 6 "CUI Devices" H 1050 3450 50  0001 C CNN "Manufacturer"
 	1    1050 3450
 	1    0    0    -1  
 $EndComp
@@ -71,6 +72,7 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 3050 3250 50  0001 C CNN
 F 3 "~" H 3050 3250 50  0001 C CNN
 F 4 "N/A" H 2850 3250 50  0001 C CNN "Digikey"
 F 5 "N/A" H 2850 3250 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 2850 3250 50  0001 C CNN "Manufacturer"
 	1    2850 3250
 	1    0    0    -1  
 $EndComp
@@ -110,6 +112,7 @@ F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13400 8150 50  0001 C CNN
 F 3 "~" H 13400 8150 50  0001 C CNN
 F 4 "N/A" H 13400 8150 50  0001 C CNN "Digikey"
 F 5 "N/A" H 13400 8150 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 13400 8150 50  0001 C CNN "Manufacturer"
 	1    13400 8150
 	1    0    0    -1  
 $EndComp
@@ -125,6 +128,7 @@ F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 14400 8150 50  0001 C CNN
 F 3 "~" H 14400 8150 50  0001 C CNN
 F 4 "N/A" H 14400 8150 50  0001 C CNN "Digikey"
 F 5 "N/A" H 14400 8150 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 14400 8150 50  0001 C CNN "Manufacturer"
 	1    14400 8150
 	1    0    0    -1  
 $EndComp
@@ -140,6 +144,7 @@ F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13400 8650 50  0001 C CNN
 F 3 "~" H 13400 8650 50  0001 C CNN
 F 4 "N/A" H 13400 8650 50  0001 C CNN "Digikey"
 F 5 "N/A" H 13400 8650 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 13400 8650 50  0001 C CNN "Manufacturer"
 	1    13400 8650
 	1    0    0    -1  
 $EndComp
@@ -155,6 +160,7 @@ F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 14400 8650 50  0001 C CNN
 F 3 "~" H 14400 8650 50  0001 C CNN
 F 4 "N/A" H 14400 8650 50  0001 C CNN "Digikey"
 F 5 "N/A" H 14400 8650 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 14400 8650 50  0001 C CNN "Manufacturer"
 	1    14400 8650
 	1    0    0    -1  
 $EndComp
@@ -220,6 +226,7 @@ F 2 "SPLA:ST_PowerSO-8EP_4x5mm_P1.27mm_EP3.5x2.6mm" H 6000 3100 50  0001 C CNN
 F 3 "" H 6000 3800 50  0001 C CNN
 F 4 "497-6904-1-ND" H 6000 3750 50  0001 C CNN "Digikey"
 F 5 "ST1S10PHR" H 6000 3750 50  0001 C CNN "Manufacturer Id"
+F 6 "ST Microelectronics" H 6000 3750 50  0001 C CNN "Manufacturer"
 	1    6000 3750
 	1    0    0    -1  
 $EndComp
@@ -233,6 +240,7 @@ F 2 "SPLA:ST_PowerSO-8EP_4x5mm_P1.27mm_EP3.5x2.6mm" H 6000 5150 50  0001 C CNN
 F 3 "" H 6000 5850 50  0001 C CNN
 F 4 "497-6904-1-ND" H 6000 5800 50  0001 C CNN "Digikey"
 F 5 "ST1S10PHR" H 6000 5800 50  0001 C CNN "Manufacturer Id"
+F 6 "ST Microelectronics" H 6000 5800 50  0001 C CNN "Manufacturer"
 	1    6000 5800
 	1    0    0    -1  
 $EndComp
@@ -328,6 +336,7 @@ F 2 "Inductor_SMD:L_Vishay_IHLP-2020" H 6700 3350 50  0001 C CNN
 F 3 "~" H 6700 3350 50  0001 C CNN
 F 4 "541-1237-1-ND" H 6700 3350 50  0001 C CNN "Digikey"
 F 5 "IHLP2020CZER3R3M11" H 6700 3350 50  0001 C CNN "Manufacturer Id"
+F 6 "Vishay Dale" H 6700 3350 50  0001 C CNN "Manufacturer"
 	1    6700 3350
 	0    -1   -1   0   
 $EndComp
@@ -601,6 +610,7 @@ F 2 "Inductor_SMD:L_Vishay_IHLP-2020" H 6700 5400 50  0001 C CNN
 F 3 "~" H 6700 5400 50  0001 C CNN
 F 4 "541-1237-1-ND" H 6700 5400 50  0001 C CNN "Digikey"
 F 5 "IHLP2020CZER3R3M11" H 6700 5400 50  0001 C CNN "Manufacturer Id"
+F 6 "Vishay Dale" H 6700 5400 50  0001 C CNN "Manufacturer"
 	1    6700 5400
 	0    -1   -1   0   
 $EndComp
@@ -845,6 +855,7 @@ F 2 "Package_TO_SOT_SMD:SOT-23-5" H 13200 6775 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/tlv733p.pdf" H 13200 6450 50  0001 C CNN
 F 4 "296-40663-1-ND" H 13200 6450 50  0001 C CNN "Digikey"
 F 5 "TLV73311PDBVR" H 13200 6450 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 13200 6450 50  0001 C CNN "Manufacturer"
 	1    13200 6450
 	1    0    0    -1  
 $EndComp
@@ -858,6 +869,7 @@ F 2 "Package_TO_SOT_SMD:SOT-23-5" H 13200 5525 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/tlv733p.pdf" H 13200 5200 50  0001 C CNN
 F 4 "296-40671-1-ND" H 13200 5200 50  0001 C CNN "Digikey"
 F 5 "TLV73325PDBVR" H 13200 5200 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 13200 5200 50  0001 C CNN "Manufacturer"
 	1    13200 5200
 	1    0    0    -1  
 $EndComp
@@ -1026,6 +1038,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 10750 4700 50
 F 3 "~" H 10750 4700 50  0001 C CNN
 F 4 "S2011EC-40-ND" H 10750 4700 50  0001 C CNN "Digikey"
 F 5 "PRPC040DAAN-RC" H 10750 4700 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 10750 4700 50  0001 C CNN "Manufacturer"
 	1    10750 4700
 	-1   0    0    -1  
 $EndComp
@@ -1148,6 +1161,7 @@ F 2 "LED_SMD:LED_0805_2012Metric" H 9350 3600 50  0001 C CNN
 F 3 "~" H 9350 3600 50  0001 C CNN
 F 4 "732-4986-1-ND" H 9350 3600 50  0001 C CNN "Digikey"
 F 5 "150080VS75000" H 9350 3600 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 9350 3600 50  0001 C CNN "Manufacturer"
 	1    9350 3600
 	0    -1   -1   0   
 $EndComp
@@ -1197,6 +1211,7 @@ F 2 "LED_SMD:LED_0805_2012Metric" H 9350 5650 50  0001 C CNN
 F 3 "~" H 9350 5650 50  0001 C CNN
 F 4 "732-4986-1-ND" H 9350 5650 50  0001 C CNN "Digikey"
 F 5 "150080VS75000" H 9350 5650 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 9350 5650 50  0001 C CNN "Manufacturer"
 	1    9350 5650
 	0    -1   -1   0   
 $EndComp
@@ -1278,6 +1293,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 14600 5950 50
 F 3 "~" H 14600 5950 50  0001 C CNN
 F 4 "S2011EC-40-ND" H 14600 5950 50  0001 C CNN "Digikey"
 F 5 "PRPC040DAAN-RC" H 14600 5950 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 14600 5950 50  0001 C CNN "Manufacturer"
 	1    14600 5950
 	1    0    0    1   
 $EndComp
@@ -1646,6 +1662,7 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 3050 4050 50  0001 C CNN
 F 3 "~" H 3050 4050 50  0001 C CNN
 F 4 "N/A" H 2850 4050 50  0001 C CNN "Digikey"
 F 5 "N/A" H 2850 4050 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 2850 4050 50  0001 C CNN "Manufacturer"
 	1    2850 4050
 	1    0    0    -1  
 $EndComp
@@ -1663,6 +1680,7 @@ F 2 "SPLA:BoM" H 10700 5650 50  0001 C CNN
 F 3 "" H 10700 5650 50  0001 C CNN
 F 4 "S9337-ND" H 10700 5650 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 10700 5650 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 10700 5650 50  0001 C CNN "Manufacturer"
 	1    10700 5650
 	1    0    0    -1  
 $EndComp
@@ -1678,6 +1696,7 @@ F 2 "SPLA:BoM" H 14650 6250 50  0001 C CNN
 F 3 "" H 14650 6250 50  0001 C CNN
 F 4 "S9337-ND" H 14650 6250 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 14650 6250 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 14650 6250 50  0001 C CNN "Manufacturer"
 	1    14650 6250
 	1    0    0    -1  
 $EndComp
@@ -1693,6 +1712,7 @@ F 2 "SPLA:BoM" H 14650 6500 50  0001 C CNN
 F 3 "" H 14650 6500 50  0001 C CNN
 F 4 "S9337-ND" H 14650 6500 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 14650 6500 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 14650 6500 50  0001 C CNN "Manufacturer"
 	1    14650 6500
 	1    0    0    -1  
 $EndComp
@@ -1708,6 +1728,7 @@ F 2 "SPLA:BoM" H 10700 5900 50  0001 C CNN
 F 3 "" H 10700 5900 50  0001 C CNN
 F 4 "S9337-ND" H 10700 5900 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 10700 5900 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 10700 5900 50  0001 C CNN "Manufacturer"
 	1    10700 5900
 	1    0    0    -1  
 $EndComp
@@ -1723,6 +1744,7 @@ F 2 "SPLA:BoM" H 10700 6150 50  0001 C CNN
 F 3 "" H 10700 6150 50  0001 C CNN
 F 4 "S9337-ND" H 10700 6150 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 10700 6150 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 10700 6150 50  0001 C CNN "Manufacturer"
 	1    10700 6150
 	1    0    0    -1  
 $EndComp
@@ -1738,6 +1760,7 @@ F 2 "SPLA:BoM" H 10700 6400 50  0001 C CNN
 F 3 "" H 10700 6400 50  0001 C CNN
 F 4 "S9337-ND" H 10700 6400 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 10700 6400 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 10700 6400 50  0001 C CNN "Manufacturer"
 	1    10700 6400
 	1    0    0    -1  
 $EndComp
@@ -1753,6 +1776,7 @@ F 2 "SPLA:BoM" H 10700 6650 50  0001 C CNN
 F 3 "" H 10700 6650 50  0001 C CNN
 F 4 "S9337-ND" H 10700 6650 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 10700 6650 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 10700 6650 50  0001 C CNN "Manufacturer"
 	1    10700 6650
 	1    0    0    -1  
 $EndComp
@@ -1768,6 +1792,7 @@ F 2 "SPLA:BoM" H 11200 8150 50  0001 C CNN
 F 3 "" H 11200 8150 50  0001 C CNN
 F 4 "732-12823-ND" H 11200 8150 50  0001 C CNN "Digikey"
 F 5 "971350366" H 11200 8150 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 11200 8150 50  0001 C CNN "Manufacturer"
 	1    11200 8150
 	1    0    0    -1  
 $EndComp
@@ -1783,6 +1808,7 @@ F 2 "SPLA:BoM" H 11200 8400 50  0001 C CNN
 F 3 "" H 11200 8400 50  0001 C CNN
 F 4 "732-12823-ND" H 11200 8400 50  0001 C CNN "Digikey"
 F 5 "971350366" H 11200 8400 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 11200 8400 50  0001 C CNN "Manufacturer"
 	1    11200 8400
 	1    0    0    -1  
 $EndComp
@@ -1798,6 +1824,7 @@ F 2 "SPLA:BoM" H 11200 8650 50  0001 C CNN
 F 3 "" H 11200 8650 50  0001 C CNN
 F 4 "732-12823-ND" H 11200 8650 50  0001 C CNN "Digikey"
 F 5 "971350366" H 11200 8650 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 11200 8650 50  0001 C CNN "Manufacturer"
 	1    11200 8650
 	1    0    0    -1  
 $EndComp
@@ -1813,6 +1840,7 @@ F 2 "SPLA:BoM" H 11200 8900 50  0001 C CNN
 F 3 "" H 11200 8900 50  0001 C CNN
 F 4 "732-12823-ND" H 11200 8900 50  0001 C CNN "Digikey"
 F 5 "971350366" H 11200 8900 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 11200 8900 50  0001 C CNN "Manufacturer"
 	1    11200 8900
 	1    0    0    -1  
 $EndComp
@@ -1828,6 +1856,7 @@ F 2 "SPLA:BoM" H 12250 8150 50  0001 C CNN
 F 3 "" H 12250 8150 50  0001 C CNN
 F 4 "732-12808-ND" H 12250 8150 50  0001 C CNN "Digikey"
 F 5 "970350366" H 12250 8150 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 12250 8150 50  0001 C CNN "Manufacturer"
 	1    12250 8150
 	1    0    0    -1  
 $EndComp
@@ -1843,6 +1872,7 @@ F 2 "SPLA:BoM" H 12250 8400 50  0001 C CNN
 F 3 "" H 12250 8400 50  0001 C CNN
 F 4 "732-12808-ND" H 12250 8400 50  0001 C CNN "Digikey"
 F 5 "970350366" H 12250 8400 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 12250 8400 50  0001 C CNN "Manufacturer"
 	1    12250 8400
 	1    0    0    -1  
 $EndComp
@@ -1858,6 +1888,7 @@ F 2 "SPLA:BoM" H 12250 8650 50  0001 C CNN
 F 3 "" H 12250 8650 50  0001 C CNN
 F 4 "732-12808-ND" H 12250 8650 50  0001 C CNN "Digikey"
 F 5 "970350366" H 12250 8650 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 12250 8650 50  0001 C CNN "Manufacturer"
 	1    12250 8650
 	1    0    0    -1  
 $EndComp
@@ -1873,6 +1904,7 @@ F 2 "SPLA:BoM" H 12250 8900 50  0001 C CNN
 F 3 "" H 12250 8900 50  0001 C CNN
 F 4 "732-12808-ND" H 12250 8900 50  0001 C CNN "Digikey"
 F 5 "970350366" H 12250 8900 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 12250 8900 50  0001 C CNN "Manufacturer"
 	1    12250 8900
 	1    0    0    -1  
 $EndComp
@@ -1895,6 +1927,9 @@ F 0 "C71" H 1868 3746 50  0000 L CNN
 F 1 "NOSTUFF" H 1868 3655 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 1788 3550 50  0001 C CNN
 F 3 "~" H 1750 3700 50  0001 C CNN
+F 4 "N/A" H 1750 3700 50  0001 C CNN "Digikey"
+F 5 "N/A" H 1750 3700 50  0001 C CNN "Manufacturer"
+F 6 "N/A" H 1750 3700 50  0001 C CNN "Manufacturer Id"
 	1    1750 3700
 	1    0    0    -1  
 $EndComp
@@ -1906,6 +1941,9 @@ F 0 "C72" H 2518 3746 50  0000 L CNN
 F 1 "NOSTUFF" H 2518 3655 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D7.5mm_P2.50mm" H 2438 3550 50  0001 C CNN
 F 3 "~" H 2400 3700 50  0001 C CNN
+F 4 "N/A" H 2400 3700 50  0001 C CNN "Digikey"
+F 5 "N/A" H 2400 3700 50  0001 C CNN "Manufacturer"
+F 6 "N/A" H 2400 3700 50  0001 C CNN "Manufacturer Id"
 	1    2400 3700
 	1    0    0    -1  
 $EndComp

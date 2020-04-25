@@ -24,7 +24,8 @@ F 1 "SNES_PPU1" H 5650 9024 50  0000 C CNN
 F 2 "SPLA:QFP-100_14x20mm_P0.635mm" H 5700 8300 50  0001 C CNN
 F 3 "" H 5700 8300 50  0001 C CNN
 F 4 "N/A" H 5650 6100 50  0001 C CNN "Digikey"
-F 5 "N/A" H 5650 6100 50  0001 C CNN "Manufacturer Id"
+F 5 "5C77-01" H 5650 6100 50  0001 C CNN "Manufacturer Id"
+F 6 "Nintendo" H 5650 6100 50  0001 C CNN "Manufacturer"
 	1    5650 6100
 	1    0    0    -1  
 $EndComp
@@ -191,7 +192,8 @@ F 1 "VRAM" H 9050 4874 50  0000 C CNN
 F 2 "SPLA:SOP-28_17x8mm_P1.27mm" H 9050 4050 50  0001 C CNN
 F 3 "" H 9050 4050 50  0001 C CNN
 F 4 "N/A" H 9050 4050 50  0001 C CNN "Digikey"
-F 5 "N/A" H 9050 4050 50  0001 C CNN "Manufacturer Id"
+F 5 "MS62256DL-10FC" H 9050 4050 50  0001 C CNN "Manufacturer Id"
+F 6 "Mosel" H 9050 4050 50  0001 C CNN "Manufacturer"
 	1    9050 4050
 	1    0    0    -1  
 $EndComp
@@ -206,7 +208,8 @@ F 1 "VRAM" H 9050 7174 50  0000 C CNN
 F 2 "SPLA:SOP-28_17x8mm_P1.27mm" H 9050 6350 50  0001 C CNN
 F 3 "" H 9050 6350 50  0001 C CNN
 F 4 "N/A" H 9050 6350 50  0001 C CNN "Digikey"
-F 5 "N/A" H 9050 6350 50  0001 C CNN "Manufacturer Id"
+F 5 "MS62256DL-10FC" H 9050 6350 50  0001 C CNN "Manufacturer Id"
+F 6 "Mosel" H 9050 6350 50  0001 C CNN "Manufacturer"
 	1    9050 6350
 	1    0    0    -1  
 $EndComp
@@ -2353,6 +2356,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3250 9600 50 
 F 3 "~" H 3250 9600 50  0001 C CNN
 F 4 "S1011EC-40-ND" H 3250 9600 50  0001 C CNN "Digikey"
 F 5 "PRPC040SAAN-RC" H 3250 9600 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 3250 9600 50  0001 C CNN "Manufacturer"
 	1    3250 9600
 	-1   0    0    1   
 $EndComp
@@ -2450,7 +2454,8 @@ F 1 "SNES_PPU2" H 12200 9024 50  0000 C CNN
 F 2 "SPLA:QFP-100_14x20mm_P0.635mm" H 12250 8300 50  0001 C CNN
 F 3 "" H 12250 8300 50  0001 C CNN
 F 4 "N/A" H 12200 6100 50  0001 C CNN "Digikey"
-F 5 "N/A" H 12200 6100 50  0001 C CNN "Manufacturer Id"
+F 5 "5C78-03" H 12200 6100 50  0001 C CNN "Manufacturer Id"
+F 6 "Nintendo" H 12200 6100 50  0001 C CNN "Manufacturer"
 	1    12200 6100
 	1    0    0    -1  
 $EndComp
@@ -2528,6 +2533,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8050 1900 50 
 F 3 "~" H 8050 1900 50  0001 C CNN
 F 4 "S1011EC-40-ND" H 8050 1900 50  0001 C CNN "Digikey"
 F 5 "PRPC040SAAN-RC" H 8050 1900 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 8050 1900 50  0001 C CNN "Manufacturer"
 	1    8050 1900
 	0    -1   -1   0   
 $EndComp
@@ -2561,6 +2567,7 @@ F 2 "SPLA:BoM" H 8650 1550 50  0001 C CNN
 F 3 "" H 8650 1550 50  0001 C CNN
 F 4 "S9337-ND" H 8650 1550 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 8650 1550 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 8650 1550 50  0001 C CNN "Manufacturer"
 	1    8650 1550
 	1    0    0    -1  
 $EndComp
@@ -2574,6 +2581,7 @@ F 2 "SPLA:BoM" H 2550 9600 50  0001 C CNN
 F 3 "" H 2550 9600 50  0001 C CNN
 F 4 "S9337-ND" H 2550 9600 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 2550 9600 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 2550 9600 50  0001 C CNN "Manufacturer"
 	1    2550 9600
 	1    0    0    -1  
 $EndComp

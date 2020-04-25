@@ -83,6 +83,7 @@ F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 9950 5650 50  0001 C CNN
 F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" H 9950 5650 50  0001 C CNN
 F 4 "768-1024-1-ND" H 9950 5650 50  0001 C CNN "Digikey"
 F 5 "FT2232HL" H 9950 5650 50  0001 C CNN "Manufacturer Id"
+F 6 "FTDI Ltd." H 9950 5650 50  0001 C CNN "Manufacturer"
 	1    9950 5650
 	1    0    0    -1  
 $EndComp
@@ -560,6 +561,7 @@ F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 2950 4800 50  0001 C CNN
 F 3 "~" H 2950 4800 50  0001 C CNN
 F 4 "732-5960-1-ND" H 2800 4850 50  0001 C CNN "Digikey"
 F 5 "629105150521" H 2800 4850 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 2800 4850 50  0001 C CNN "Manufacturer"
 	1    2800 4850
 	1    0    0    1   
 $EndComp
@@ -615,6 +617,7 @@ F 2 "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm" H 7200 7300 50  0001 C CNN
 F 3 "" H 7580 7490 50  0001 C CNN
 F 4 "631-1068-1-ND" H 7150 7800 50  0001 C CNN "Digikey"
 F 5 "FT5HNBPK12.0-T1" H 7150 7800 50  0001 C CNN "Manufacturer Id"
+F 6 "Fox Electronics" H 7150 7800 50  0001 C CNN "Manufacturer"
 	1    7150 7800
 	1    0    0    -1  
 $EndComp
@@ -700,6 +703,7 @@ F 2 "LED_SMD:LED_0805_2012Metric" H 12400 6700 50  0001 C CNN
 F 3 "~" H 12400 6700 50  0001 C CNN
 F 4 "732-4986-1-ND" H 12400 6700 50  0001 C CNN "Digikey"
 F 5 "150080VS75000" H 12400 6700 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 12400 6700 50  0001 C CNN "Manufacturer"
 	1    12400 6700
 	0    -1   -1   0   
 $EndComp
@@ -745,6 +749,7 @@ F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 6550 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 5700 6550 50  0001 C CNN
 F 4 "93LC66B/SN-ND" H 5700 6550 50  0001 C CNN "Digikey"
 F 5 "93LC66B/SN" H 5700 6550 50  0001 C CNN "Manufacturer Id"
+F 6 "Microchip Technology" H 5700 6550 50  0001 C CNN "Manufacturer"
 	1    5700 6550
 	1    0    0    -1  
 $EndComp
@@ -761,6 +766,7 @@ F 2 "LED_SMD:LED_0805_2012Metric" H 12400 5600 50  0001 C CNN
 F 3 "~" H 12400 5600 50  0001 C CNN
 F 4 "732-4986-1-ND" H 12400 5600 50  0001 C CNN "Digikey"
 F 5 "150080VS75000" H 12400 5600 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 12400 5600 50  0001 C CNN "Manufacturer"
 	1    12400 5600
 	0    -1   -1   0   
 $EndComp
@@ -820,6 +826,7 @@ F 2 "SPLA:BoM" H 1600 4850 50  0001 C CNN
 F 3 "" H 1600 4850 50  0001 C CNN
 F 4 "AE11229-ND" H 1600 4850 50  0001 C CNN "Digikey"
 F 5 "AK67421-0.3-VM" H 1600 4850 50  0001 C CNN "Manufacturer Id"
+F 6 "Assmann WSW Components" H 1600 4850 50  0001 C CNN "Manufacturer"
 	1    1600 4850
 	1    0    0    -1  
 $EndComp

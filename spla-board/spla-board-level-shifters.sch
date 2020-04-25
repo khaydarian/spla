@@ -31,6 +31,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 2400 8750 50  0001 C CNN
 F 3 "" H 2400 9400 50  0001 C CNN
 F 4 "296-18593-1-ND" H 2400 9500 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 2400 9500 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 2400 9500 50  0001 C CNN "Manufacturer"
 	1    2400 9500
 	1    0    0    -1  
 $EndComp
@@ -44,6 +45,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 2400 5700 50  0001 C CNN
 F 3 "" H 2400 7150 50  0001 C CNN
 F 4 "296-18593-1-ND" H 2400 7000 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 2400 7000 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 2400 7000 50  0001 C CNN "Manufacturer"
 	1    2400 7000
 	1    0    0    -1  
 $EndComp
@@ -85,6 +87,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 8750 5700 50  0001 C CNN
 F 3 "" H 8750 7150 50  0001 C CNN
 F 4 "296-18593-1-ND" H 8750 7000 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 8750 7000 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 8750 7000 50  0001 C CNN "Manufacturer"
 	1    8750 7000
 	1    0    0    -1  
 $EndComp
@@ -143,6 +146,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 6300 5700 50  0001 C CNN
 F 3 "" H 6300 7150 50  0001 C CNN
 F 4 "296-18593-1-ND" H 6300 7000 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 6300 7000 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 6300 7000 50  0001 C CNN "Manufacturer"
 	1    6300 7000
 	1    0    0    -1  
 $EndComp
@@ -199,6 +203,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 6300 8200 50  0001 C CNN
 F 3 "" H 6300 9650 50  0001 C CNN
 F 4 "296-18593-1-ND" H 6300 9500 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 6300 9500 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 6300 9500 50  0001 C CNN "Manufacturer"
 	1    6300 9500
 	1    0    0    -1  
 $EndComp
@@ -295,6 +300,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 12150 5700 50  0001 C CNN
 F 3 "" H 12150 7150 50  0001 C CNN
 F 4 "296-18593-1-ND" H 12150 7000 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 12150 7000 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 12150 7000 50  0001 C CNN "Manufacturer"
 	1    12150 7000
 	1    0    0    -1  
 $EndComp
@@ -340,6 +346,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14150 5700 50  0001 C CNN
 F 3 "" H 14150 7150 50  0001 C CNN
 F 4 "296-18593-1-ND" H 14150 7000 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 14150 7000 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 14150 7000 50  0001 C CNN "Manufacturer"
 	1    14150 7000
 	1    0    0    -1  
 $EndComp
@@ -389,6 +396,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14300 1000 50  0001 C CNN
 F 3 "" H 14300 1650 50  0001 C CNN
 F 4 "296-18593-1-ND" H 14300 1750 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 14300 1750 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 14300 1750 50  0001 C CNN "Manufacturer"
 	1    14300 1750
 	1    0    0    -1  
 $EndComp
@@ -484,6 +492,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14300 3300 50  0001 C CNN
 F 3 "" H 14300 3950 50  0001 C CNN
 F 4 "296-18593-1-ND" H 14300 4050 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 14300 4050 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 14300 4050 50  0001 C CNN "Manufacturer"
 	1    14300 4050
 	1    0    0    -1  
 $EndComp
@@ -557,6 +566,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 10650 1000 50  0001 C CNN
 F 3 "" H 10650 1650 50  0001 C CNN
 F 4 "296-18593-1-ND" H 10650 1750 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 10650 1750 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 10650 1750 50  0001 C CNN "Manufacturer"
 	1    10650 1750
 	1    0    0    -1  
 $EndComp
@@ -570,6 +580,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 10650 3250 50  0001 C CNN
 F 3 "" H 10650 3900 50  0001 C CNN
 F 4 "296-18593-1-ND" H 10650 4000 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 10650 4000 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 10650 4000 50  0001 C CNN "Manufacturer"
 	1    10650 4000
 	1    0    0    -1  
 $EndComp
@@ -661,6 +672,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 6300 1000 50  0001 C CNN
 F 3 "" H 6300 1650 50  0001 C CNN
 F 4 "296-18593-1-ND" H 6300 1750 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 6300 1750 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 6300 1750 50  0001 C CNN "Manufacturer"
 	1    6300 1750
 	1    0    0    -1  
 $EndComp
@@ -696,6 +708,7 @@ F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3700 1550 50  0001 C CNN
 F 3 "~" H 3700 1550 50  0001 C CNN
 F 4 "N/A" H 3500 1550 50  0001 C CNN "Digikey"
 F 5 "N/A" H 3500 1550 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 3500 1550 50  0001 C CNN "Manufacturer"
 	1    3500 1550
 	1    0    0    -1  
 $EndComp
@@ -709,6 +722,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 6300 3300 50  0001 C CNN
 F 3 "" H 6300 3950 50  0001 C CNN
 F 4 "296-18593-1-ND" H 6300 4050 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 6300 4050 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 6300 4050 50  0001 C CNN "Manufacturer"
 	1    6300 4050
 	1    0    0    -1  
 $EndComp
@@ -726,6 +740,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7950 3950 50 
 F 3 "~" H 7950 3950 50  0001 C CNN
 F 4 "S1011EC-40-ND" H 7950 3950 50  0001 C CNN "Digikey"
 F 5 "PRPC040SAAN-RC" H 7950 3950 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 7950 3950 50  0001 C CNN "Manufacturer"
 	1    7950 3950
 	1    0    0    -1  
 $EndComp
@@ -1411,6 +1426,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 2550 1000 50  0001 C CNN
 F 3 "" H 2550 1650 50  0001 C CNN
 F 4 "296-18593-1-ND" H 2550 1750 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 2550 1750 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 2550 1750 50  0001 C CNN "Manufacturer"
 	1    2550 1750
 	1    0    0    -1  
 $EndComp
@@ -1635,6 +1651,7 @@ F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1550 1550 50  0001 C CNN
 F 3 "~" H 1550 1550 50  0001 C CNN
 F 4 "N/A" H 1350 1550 50  0001 C CNN "Digikey"
 F 5 "N/A" H 1350 1550 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 1350 1550 50  0001 C CNN "Manufacturer"
 	1    1350 1550
 	1    0    0    -1  
 $EndComp
@@ -1744,6 +1761,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 8750 8200 50  0001 C CNN
 F 3 "" H 8750 9650 50  0001 C CNN
 F 4 "296-18593-1-ND" H 8750 9500 50  0001 C CNN "Digikey"
 F 5 "SN74LVC8T245PWR" H 8750 9500 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 8750 9500 50  0001 C CNN "Manufacturer"
 	1    8750 9500
 	1    0    0    -1  
 $EndComp
@@ -2023,6 +2041,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7250 2700 50 
 F 3 "~" H 7250 2700 50  0001 C CNN
 F 4 "S1011EC-40-ND" H 7250 2700 50  0001 C CNN "Digikey"
 F 5 "PRPC040SAAN-RC" H 7250 2700 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 7250 2700 50  0001 C CNN "Manufacturer"
 	1    7250 2700
 	0    -1   1    0   
 $EndComp

@@ -23,6 +23,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 3050 4850 39  0001 C CNN
 F 4 "220-2198-ND" H 4000 2850 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 4000 2850 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 4000 2850 50  0001 C CNN "Manufacturer"
 	2    4000 2850
 	1    0    0    -1  
 $EndComp
@@ -36,6 +37,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 5550 4850 39  0001 C CNN
 F 4 "220-2198-ND" H 6500 2850 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 6500 2850 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 6500 2850 50  0001 C CNN "Manufacturer"
 	3    6500 2850
 	1    0    0    -1  
 $EndComp
@@ -49,6 +51,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 8050 4850 39  0001 C CNN
 F 4 "220-2198-ND" H 9000 2850 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 9000 2850 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 9000 2850 50  0001 C CNN "Manufacturer"
 	4    9000 2850
 	1    0    0    -1  
 $EndComp
@@ -62,6 +65,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 900 12100 39  0001 C CNN
 F 4 "220-2198-ND" H 1850 10100 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 1850 10100 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 1850 10100 50  0001 C CNN "Manufacturer"
 	8    1850 10100
 	1    0    0    -1  
 $EndComp
@@ -75,6 +79,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 7900 12050 39  0001 C CNN
 F 4 "220-2198-ND" H 8850 10050 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 8850 10050 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 8850 10050 50  0001 C CNN "Manufacturer"
 	9    8850 10050
 	1    0    0    -1  
 $EndComp
@@ -88,6 +93,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 10550 4850 39  0001 C CNN
 F 4 "220-2198-ND" H 11500 2850 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 11500 2850 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 11500 2850 50  0001 C CNN "Manufacturer"
 	5    11500 2850
 	1    0    0    -1  
 $EndComp
@@ -101,6 +107,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2700 9650 50 
 F 3 "~" H 2700 9650 50  0001 C CNN
 F 4 "S1011EC-40-ND" H 2700 9650 50  0001 C CNN "Digikey"
 F 5 "PRPC040SAAN-RC" H 2700 9650 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 2700 9650 50  0001 C CNN "Manufacturer"
 	1    2700 9650
 	0    -1   -1   0   
 $EndComp
@@ -356,6 +363,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 1500 9850 39  0001 C CNN
 F 4 "220-2198-ND" H 2450 7850 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 2450 7850 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 2450 7850 50  0001 C CNN "Manufacturer"
 	7    2450 7850
 	1    0    0    -1  
 $EndComp
@@ -481,6 +489,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 550 5250 39  0001 C CNN
 F 4 "220-2198-ND" H 1500 3250 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 1500 3250 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 1500 3250 50  0001 C CNN "Manufacturer"
 	1    1500 3250
 	1    0    0    -1  
 $EndComp
@@ -562,6 +571,7 @@ F 2 "Package_BGA:BGA-256_14.0x14.0mm_Layout16x16_P0.8mm_Ball0.45mm_Pad0.32mm_NSM
 F 3 "" H 13050 4850 39  0001 C CNN
 F 4 "220-2198-ND" H 14000 2850 50  0001 C CNN "Digikey"
 F 5 "LFE4U-45F-6BG256C" H 14000 2850 50  0001 C CNN "Manufacturer Id"
+F 6 "Lattice Semiconductor Corporation" H 14000 2850 50  0001 C CNN "Manufacturer"
 	6    14000 2850
 	1    0    0    -1  
 $EndComp
@@ -826,6 +836,7 @@ F 2 "LED_SMD:LED_0805_2012Metric" H 5550 9750 50  0001 C CNN
 F 3 "~" H 5550 9750 50  0001 C CNN
 F 4 "732-4986-1-ND" H 5550 9750 50  0001 C CNN "Digikey"
 F 5 "150080VS75000" H 5550 9750 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 5550 9750 50  0001 C CNN "Manufacturer"
 	1    5550 9750
 	0    -1   -1   0   
 $EndComp
@@ -875,6 +886,7 @@ F 2 "LED_SMD:LED_0805_2012Metric" H 5950 9750 50  0001 C CNN
 F 3 "~" H 5950 9750 50  0001 C CNN
 F 4 "732-4986-1-ND" H 5950 9750 50  0001 C CNN "Digikey"
 F 5 "150080VS75000" H 5950 9750 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 5950 9750 50  0001 C CNN "Manufacturer"
 	1    5950 9750
 	0    -1   -1   0   
 $EndComp
@@ -991,6 +1003,7 @@ F 2 "LED_SMD:LED_0805_2012Metric" H 4750 9750 50  0001 C CNN
 F 3 "~" H 4750 9750 50  0001 C CNN
 F 4 "732-4986-1-ND" H 4750 9750 50  0001 C CNN "Digikey"
 F 5 "150080VS75000" H 4750 9750 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 4750 9750 50  0001 C CNN "Manufacturer"
 	1    4750 9750
 	0    -1   -1   0   
 $EndComp
@@ -1040,6 +1053,7 @@ F 2 "LED_SMD:LED_0805_2012Metric" H 5150 9750 50  0001 C CNN
 F 3 "~" H 5150 9750 50  0001 C CNN
 F 4 "732-4986-1-ND" H 5150 9750 50  0001 C CNN "Digikey"
 F 5 "150080VS75000" H 5150 9750 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 5150 9750 50  0001 C CNN "Manufacturer"
 	1    5150 9750
 	0    -1   -1   0   
 $EndComp
@@ -1647,6 +1661,7 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 5200 50  0001 C CNN
 F 3 "~" H 14900 5200 50  0001 C CNN
 F 4 "N/A" H 14700 5200 50  0001 C CNN "Digikey"
 F 5 "N/A" H 14700 5200 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 14700 5200 50  0001 C CNN "Manufacturer"
 	1    14700 5200
 	1    0    0    -1  
 $EndComp
@@ -1660,6 +1675,7 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 5600 50  0001 C CNN
 F 3 "~" H 14900 5600 50  0001 C CNN
 F 4 "N/A" H 14700 5600 50  0001 C CNN "Digikey"
 F 5 "N/A" H 14700 5600 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 14700 5600 50  0001 C CNN "Manufacturer"
 	1    14700 5600
 	1    0    0    -1  
 $EndComp
@@ -1673,6 +1689,7 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 6000 50  0001 C CNN
 F 3 "~" H 14900 6000 50  0001 C CNN
 F 4 "N/A" H 14700 6000 50  0001 C CNN "Digikey"
 F 5 "N/A" H 14700 6000 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 14700 6000 50  0001 C CNN "Manufacturer"
 	1    14700 6000
 	1    0    0    -1  
 $EndComp

@@ -75,6 +75,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2100 8850 50 
 F 3 "~" H 2100 8850 50  0001 C CNN
 F 4 "S2011EC-40-ND" H 2100 8850 50  0001 C CNN "Digikey"
 F 5 "PRPC040DAAN-RC" H 2100 8850 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 2100 8850 50  0001 C CNN "Manufacturer"
 	1    2100 8850
 	1    0    0    -1  
 $EndComp
@@ -155,6 +156,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 6250 3000 50 
 F 3 "~" H 6250 3000 50  0001 C CNN
 F 4 "S2011EC-40-ND" H 6250 3000 50  0001 C CNN "Digikey"
 F 5 "PRPC040DAAN-RC" H 6250 3000 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 6250 3000 50  0001 C CNN "Manufacturer"
 	1    6250 3000
 	1    0    0    -1  
 $EndComp
@@ -168,6 +170,7 @@ F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 8700 50  0001 C CNN
 F 3 "~" H 6400 8700 50  0001 C CNN
 F 4 "N/A" H 6200 8700 50  0001 C CNN "Digikey"
 F 5 "N/A" H 6200 8700 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 6200 8700 50  0001 C CNN "Manufacturer"
 	1    6200 8700
 	1    0    0    -1  
 $EndComp
@@ -183,6 +186,7 @@ F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 8900 50  0001 C CNN
 F 3 "~" H 6400 8900 50  0001 C CNN
 F 4 "N/A" H 6200 8900 50  0001 C CNN "Digikey"
 F 5 "N/A" H 6200 8900 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 6200 8900 50  0001 C CNN "Manufacturer"
 	1    6200 8900
 	-1   0    0    1   
 $EndComp
@@ -219,6 +223,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14300 2550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/adc1173.pdf" H 14300 2550 50  0001 C CNN
 F 4 "296-35234-1-ND" H 14300 2550 50  0001 C CNN "Digikey"
 F 5 "ADC1173CIMTCX/NOPB" H 14300 2550 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 14300 2550 50  0001 C CNN "Manufacturer"
 	1    14300 2550
 	1    0    0    -1  
 $EndComp
@@ -232,6 +237,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14300 8650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/adc1173.pdf" H 14300 8650 50  0001 C CNN
 F 4 "296-35234-1-ND" H 14300 8650 50  0001 C CNN "Digikey"
 F 5 "ADC1173CIMTCX/NOPB" H 14300 8650 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 14300 8650 50  0001 C CNN "Manufacturer"
 	1    14300 8650
 	1    0    0    -1  
 $EndComp
@@ -245,6 +251,7 @@ F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 14300 5600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/adc1173.pdf" H 14300 5600 50  0001 C CNN
 F 4 "296-35234-1-ND" H 14300 5600 50  0001 C CNN "Digikey"
 F 5 "ADC1173CIMTCX/NOPB" H 14300 5600 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 14300 5600 50  0001 C CNN "Manufacturer"
 	1    14300 5600
 	1    0    0    -1  
 $EndComp
@@ -611,6 +618,7 @@ F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 9650 8000 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 9700 8400 50  0001 C CNN
 F 4 "296-41441-1-ND" H 9550 8250 50  0001 C CNN "Digikey"
 F 5 "LMH6611MK/NOPB" H 9550 8250 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 9550 8250 50  0001 C CNN "Manufacturer"
 	1    9550 8250
 	1    0    0    -1  
 $EndComp
@@ -1140,6 +1148,7 @@ F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 9650 1900 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 9700 2300 50  0001 C CNN
 F 4 "296-41441-1-ND" H 9550 2150 50  0001 C CNN "Digikey"
 F 5 "LMH6611MK/NOPB" H 9550 2150 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 9550 2150 50  0001 C CNN "Manufacturer"
 	1    9550 2150
 	1    0    0    -1  
 $EndComp
@@ -1424,6 +1433,7 @@ F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 9650 4950 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 9700 5350 50  0001 C CNN
 F 4 "296-41441-1-ND" H 9550 5200 50  0001 C CNN "Digikey"
 F 5 "LMH6611MK/NOPB" H 9550 5200 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 9550 5200 50  0001 C CNN "Manufacturer"
 	1    9550 5200
 	1    0    0    -1  
 $EndComp
@@ -2389,6 +2399,7 @@ F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 4400 7100 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 4450 7500 50  0001 C CNN
 F 4 "296-41441-1-ND" H 4300 7350 50  0001 C CNN "Digikey"
 F 5 "LMH6611MK/NOPB" H 4300 7350 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 4300 7350 50  0001 C CNN "Manufacturer"
 	1    4300 7350
 	1    0    0    -1  
 $EndComp
@@ -2559,6 +2570,7 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 5800 8800 50 
 F 3 "~" H 5800 8800 50  0001 C CNN
 F 4 "S2011EC-40-ND" H 5800 8800 50  0001 C CNN "Digikey"
 F 5 "PRPC040DAAN-RC" H 5800 8800 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 5800 8800 50  0001 C CNN "Manufacturer"
 	1    5800 8800
 	1    0    0    -1  
 $EndComp
@@ -2620,6 +2632,7 @@ F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 4400 9650 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lmh6612.pdf" H 4450 10050 50  0001 C CNN
 F 4 "296-41441-1-ND" H 4300 9900 50  0001 C CNN "Digikey"
 F 5 "LMH6611MK/NOPB" H 4300 9900 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 4300 9900 50  0001 C CNN "Manufacturer"
 	1    4300 9900
 	1    0    0    -1  
 $EndComp
@@ -2800,6 +2813,7 @@ F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2000 7100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tlv733p.pdf" H 2100 6650 50  0001 C CNN
 F 4 "296-40673-1-ND" H 2000 6900 50  0001 C CNN "Digikey"
 F 5 "TLV73333PDBVR" H 2000 6900 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 2000 6900 50  0001 C CNN "Manufacturer"
 	1    2000 6900
 	1    0    0    -1  
 $EndComp
@@ -2915,6 +2929,7 @@ F 2 "SPLA:BoM" H 1950 9850 50  0001 C CNN
 F 3 "" H 1950 9850 50  0001 C CNN
 F 4 "S9337-ND" H 1950 9850 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 1950 9850 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 1950 9850 50  0001 C CNN "Manufacturer"
 	1    1950 9850
 	1    0    0    -1  
 $EndComp
@@ -2930,6 +2945,7 @@ F 2 "SPLA:BoM" H 1950 10100 50  0001 C CNN
 F 3 "" H 1950 10100 50  0001 C CNN
 F 4 "S9337-ND" H 1950 10100 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 1950 10100 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 1950 10100 50  0001 C CNN "Manufacturer"
 	1    1950 10100
 	1    0    0    -1  
 $EndComp
@@ -2945,6 +2961,7 @@ F 2 "SPLA:BoM" H 1950 10350 50  0001 C CNN
 F 3 "" H 1950 10350 50  0001 C CNN
 F 4 "S9337-ND" H 1950 10350 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 1950 10350 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 1950 10350 50  0001 C CNN "Manufacturer"
 	1    1950 10350
 	1    0    0    -1  
 $EndComp
@@ -2960,6 +2977,7 @@ F 2 "SPLA:BoM" H 5850 9300 50  0001 C CNN
 F 3 "" H 5850 9300 50  0001 C CNN
 F 4 "S9337-ND" H 5850 9300 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 5850 9300 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 5850 9300 50  0001 C CNN "Manufacturer"
 	1    5850 9300
 	1    0    0    -1  
 $EndComp
@@ -2975,6 +2993,7 @@ F 2 "SPLA:BoM" H 5850 9550 50  0001 C CNN
 F 3 "" H 5850 9550 50  0001 C CNN
 F 4 "S9337-ND" H 5850 9550 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 5850 9550 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 5850 9550 50  0001 C CNN "Manufacturer"
 	1    5850 9550
 	1    0    0    -1  
 $EndComp
@@ -2990,6 +3009,7 @@ F 2 "SPLA:BoM" H 6100 3600 50  0001 C CNN
 F 3 "" H 6100 3600 50  0001 C CNN
 F 4 "S9337-ND" H 6100 3600 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 6100 3600 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 6100 3600 50  0001 C CNN "Manufacturer"
 	1    6100 3600
 	1    0    0    -1  
 $EndComp
@@ -3005,6 +3025,7 @@ F 2 "SPLA:BoM" H 6100 3850 50  0001 C CNN
 F 3 "" H 6100 3850 50  0001 C CNN
 F 4 "S9337-ND" H 6100 3850 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 6100 3850 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 6100 3850 50  0001 C CNN "Manufacturer"
 	1    6100 3850
 	1    0    0    -1  
 $EndComp
@@ -3020,6 +3041,7 @@ F 2 "SPLA:BoM" H 6100 4100 50  0001 C CNN
 F 3 "" H 6100 4100 50  0001 C CNN
 F 4 "S9337-ND" H 6100 4100 50  0001 C CNN "Digikey"
 F 5 "QPC02SXGN-RC" H 6100 4100 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 6100 4100 50  0001 C CNN "Manufacturer"
 	1    6100 4100
 	1    0    0    -1  
 $EndComp
