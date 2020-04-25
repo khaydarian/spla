@@ -3,6 +3,7 @@
 * pm: Organize TODO items better than this list.
 * pm: Survey blog posts for forgotten TODO items.
 * pm: Start a website?
+* accounting: Add SMD Rework station and power bricks.
 * blog: Write export-to-website tool (or find static site generator).
 * blog: Add photos and scope images.
 * reference: Retrieve datasheets for all parts.
@@ -14,11 +15,11 @@
 * schematic: Fix FPGA decoupling capacitors.
 * schematic: Review with Nate.
 * schematic: Run through [schematic checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
-* schematic/pcb: Complete part selection; generate BoM; update PCB to match.
+* schematic/pcb: Complete part selection for resistors and capacitors.
+* bom: Improve BoM generation script to be good enough to use.
 * schematic/pcb: Hook up extra three pins on FPGA to something (LEDs?).
 * pcb: Fix FPGA power/ground layout; use smaller plane-to-via spacing.
 * pcb: Shield VRAM data bus from power switching noise, if necessary?
-* pcb: Add traceability markings (logo, name, revision, date, space for serial ID sticker).
 * pcb: Run through [PCB checklist](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md)
 * lab: Verify PPU and VRAM footprint measurements.
 * lab: Bodge wire to vblank / hblank, and measure analog voltage levels with scope.
