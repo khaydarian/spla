@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/khaydarian/spla/spla-board/spla-board.sch</source>
-    <date>Sat 25 Apr 2020 04:48:51 PM PDT</date>
+    <date>Sun 26 Apr 2020 04:46:48 PM PDT</date>
     <tool>Eeschema 5.1.5-52549c5~86~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -101,6 +101,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E4AB80E</tstamp>
@@ -109,6 +114,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E4ACE23</tstamp>
@@ -130,6 +140,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E53DEA7</tstamp>
@@ -138,6 +153,11 @@
       <value>2.2k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT2K20</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT2K20CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E55BD51</tstamp>
@@ -146,6 +166,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E571C78</tstamp>
@@ -154,6 +179,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E572548</tstamp>
@@ -162,14 +192,24 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E572B74</tstamp>
     </comp>
     <comp ref="C7">
-      <value>3.3uF</value>
+      <value>4.7uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-7203-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R61E475KE11D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E5E774C</tstamp>
@@ -178,6 +218,11 @@
       <value>12k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT12K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT12K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E60E8AF</tstamp>
@@ -186,6 +231,11 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT1K00</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E619C52</tstamp>
@@ -194,6 +244,11 @@
       <value>4.7uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-7203-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R61E475KE11D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E6D1368</tstamp>
@@ -202,6 +257,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E6D502E</tstamp>
@@ -210,6 +270,11 @@
       <value>4.7uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-7203-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R61E475KE11D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E6D59EB</tstamp>
@@ -218,6 +283,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E6D5FB8</tstamp>
@@ -264,6 +334,11 @@
       <value>330</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5EB172EB</tstamp>
@@ -298,6 +373,11 @@
       <value>330</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5E9C89B8</tstamp>
@@ -314,10 +394,15 @@
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5EA5FF9A</tstamp>
     </comp>
-    <comp ref="R30">
+    <comp ref="R31">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
       <tstamp>5EB42683</tstamp>
@@ -351,6 +436,11 @@
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT4K70</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT4K70CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5E5D3141</tstamp>
@@ -359,6 +449,11 @@
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT4K70</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT4K70CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5E5E7554</tstamp>
@@ -380,6 +475,11 @@
       <value>330</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EB4D264</tstamp>
@@ -401,6 +501,11 @@
       <value>330</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EB50D37</tstamp>
@@ -422,6 +527,11 @@
       <value>330</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5E9D36C2</tstamp>
@@ -443,6 +553,11 @@
       <value>330</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5E9D36E3</tstamp>
@@ -451,6 +566,11 @@
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0402FT4K70</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0402FT4K70CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EB8A904</tstamp>
@@ -459,6 +579,11 @@
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT4K70</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT4K70CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EB9F9F9</tstamp>
@@ -467,6 +592,11 @@
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT4K70</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT4K70CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EBAC32F</tstamp>
@@ -475,6 +605,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0251C</tstamp>
@@ -483,6 +618,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC074FD</tstamp>
@@ -491,6 +631,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0A02F</tstamp>
@@ -499,6 +644,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0A043</tstamp>
@@ -507,6 +657,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0D4F1</tstamp>
@@ -515,6 +670,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0D4FB</tstamp>
@@ -523,6 +683,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0D505</tstamp>
@@ -531,6 +696,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0D537</tstamp>
@@ -539,6 +709,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC14C6E</tstamp>
@@ -547,6 +722,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0D52D</tstamp>
@@ -555,6 +735,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0D523</tstamp>
@@ -563,6 +748,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0D519</tstamp>
@@ -571,6 +761,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5EC0D50F</tstamp>
@@ -579,6 +774,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5ED68BF7</tstamp>
@@ -587,6 +787,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5ED68C01</tstamp>
@@ -595,6 +800,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5ED68C0B</tstamp>
@@ -603,6 +813,11 @@
       <value>0.01uF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-6351-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155R71H103KA88J</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
       <tstamp>5ED68C1F</tstamp>
@@ -857,6 +1072,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Level Shifters/" tstamps="/5E50D400/"/>
       <tstamp>5F2D13A9</tstamp>
@@ -885,6 +1105,32 @@
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/SPLA Board - Level Shifters/" tstamps="/5E50D400/"/>
       <tstamp>5E9B9595</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/SPLA Board - Level Shifters/" tstamps="/5E50D400/"/>
+      <tstamp>5EB1A3B9</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/SPLA Board - Level Shifters/" tstamps="/5E50D400/"/>
+      <tstamp>5EB52BAA</tstamp>
     </comp>
     <comp ref="U10">
       <value>SNES_PPU1</value>
@@ -926,6 +1172,11 @@
       <value>100</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT100R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT100RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E6CC6A3</tstamp>
@@ -934,6 +1185,11 @@
       <value>56pF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-17769-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCM1885C2A560JA16D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E6CDC31</tstamp>
@@ -942,6 +1198,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E72F793</tstamp>
@@ -950,6 +1211,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E768AD3</tstamp>
@@ -958,6 +1224,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E7A4C4F</tstamp>
@@ -966,6 +1237,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E88A2D5</tstamp>
@@ -974,6 +1250,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E6959A3</tstamp>
@@ -982,6 +1263,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E814C80</tstamp>
@@ -990,6 +1276,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E84A784</tstamp>
@@ -998,6 +1289,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E84A78E</tstamp>
@@ -1006,6 +1302,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E880645</tstamp>
@@ -1014,6 +1315,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E88064F</tstamp>
@@ -1022,6 +1328,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E880659</tstamp>
@@ -1030,6 +1341,11 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5E880663</tstamp>
@@ -1096,14 +1412,6 @@
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
       <tstamp>5EAB9764</tstamp>
     </comp>
-    <comp ref="R29">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
-      <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
-      <tstamp>5EABD7FF</tstamp>
-    </comp>
     <comp ref="J14">
       <value>J_AREF</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
@@ -1121,6 +1429,11 @@
       <value>1.65k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT1K65</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT1K65CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E5B6C48</tstamp>
@@ -1129,6 +1442,11 @@
       <value>3.48k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT3K48</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT3K48CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E5B6727</tstamp>
@@ -1176,6 +1494,11 @@
       <value>1k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT1K00</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E905C35</tstamp>
@@ -1223,6 +1546,11 @@
       <value>301, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT301R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT301RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E96FD93</tstamp>
@@ -1231,6 +1559,11 @@
       <value>1.65k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT1K65</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT1K65CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E9701EB</tstamp>
@@ -1239,22 +1572,37 @@
       <value>649, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT649R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT649RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E979809</tstamp>
     </comp>
     <comp ref="C109">
-      <value>390pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E9AFAB1</tstamp>
     </comp>
     <comp ref="R109">
-      <value>22</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EA04950</tstamp>
@@ -1263,6 +1611,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EA55FA4</tstamp>
@@ -1271,6 +1624,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EA56750</tstamp>
@@ -1279,6 +1637,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EA73595</tstamp>
@@ -1287,6 +1650,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EA77708</tstamp>
@@ -1295,6 +1663,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E9AB6FD</tstamp>
@@ -1303,6 +1676,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5E9AB3D5</tstamp>
@@ -1324,6 +1702,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EBA536F</tstamp>
@@ -1332,6 +1715,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EBA5757</tstamp>
@@ -1340,6 +1728,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EBAB289</tstamp>
@@ -1348,6 +1741,11 @@
       <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EBCE66E</tstamp>
@@ -1356,6 +1754,11 @@
       <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EBCE8F1</tstamp>
@@ -1364,38 +1767,63 @@
       <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EBD446D</tstamp>
     </comp>
     <comp ref="R101">
-      <value>16k</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED2498D</tstamp>
     </comp>
     <comp ref="C101">
-      <value>1pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED2553F</tstamp>
     </comp>
     <comp ref="R102">
-      <value>16k</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED2F913</tstamp>
     </comp>
     <comp ref="C102">
-      <value>1pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED58356</tstamp>
@@ -1404,6 +1832,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED105DA</tstamp>
@@ -1412,30 +1845,50 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EA81E1F</tstamp>
     </comp>
     <comp ref="R104">
-      <value>INF</value>
+      <value>NOSTUFF</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EDCB5F5</tstamp>
     </comp>
     <comp ref="C309">
-      <value>390pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F212</tstamp>
     </comp>
     <comp ref="R309">
-      <value>22</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F21C</tstamp>
@@ -1444,6 +1897,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F249</tstamp>
@@ -1452,6 +1910,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F253</tstamp>
@@ -1470,33 +1933,53 @@
       <tstamp>5EF1F26E</tstamp>
     </comp>
     <comp ref="R301">
-      <value>16k</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F281</tstamp>
     </comp>
     <comp ref="C301">
-      <value>1pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F28B</tstamp>
     </comp>
     <comp ref="R302">
-      <value>16k</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F297</tstamp>
     </comp>
     <comp ref="C302">
-      <value>1pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F2A7</tstamp>
@@ -1505,6 +1988,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F2BE</tstamp>
@@ -1513,30 +2001,50 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F2C8</tstamp>
     </comp>
     <comp ref="R304">
-      <value>INF</value>
+      <value>NOSTUFF</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF1F2D7</tstamp>
     </comp>
     <comp ref="C209">
-      <value>390pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BB4B</tstamp>
     </comp>
     <comp ref="R209">
-      <value>22</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BB55</tstamp>
@@ -1545,6 +2053,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BB82</tstamp>
@@ -1553,6 +2066,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BB8C</tstamp>
@@ -1571,33 +2089,53 @@
       <tstamp>5EF5BB9B</tstamp>
     </comp>
     <comp ref="R201">
-      <value>16k</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BBAE</tstamp>
     </comp>
     <comp ref="C201">
-      <value>1pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BBB8</tstamp>
     </comp>
     <comp ref="R202">
-      <value>16k</value>
+      <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BBC4</tstamp>
     </comp>
     <comp ref="C202">
-      <value>1pF</value>
+      <value>NOSTUFF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BBD4</tstamp>
@@ -1606,6 +2144,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BBEB</tstamp>
@@ -1614,14 +2157,24 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BBF5</tstamp>
     </comp>
     <comp ref="R204">
-      <value>INF</value>
+      <value>NOSTUFF</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">N/A</field>
+        <field name="Manufacturer">N/A</field>
+        <field name="Manufacturer Id">N/A</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF5BBFF</tstamp>
@@ -1630,6 +2183,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EFF5CED</tstamp>
@@ -1638,6 +2196,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EFF5CF7</tstamp>
@@ -1646,6 +2209,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EFF5D0E</tstamp>
@@ -1654,6 +2222,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EFF5D18</tstamp>
@@ -1662,6 +2235,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F03C731</tstamp>
@@ -1670,6 +2248,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F03C73B</tstamp>
@@ -1678,6 +2261,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F03C752</tstamp>
@@ -1686,6 +2274,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F03C75C</tstamp>
@@ -1694,6 +2287,11 @@
       <value>301, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT301R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT301RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F245C6C</tstamp>
@@ -1702,6 +2300,11 @@
       <value>1.65k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT1K65</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT1K65CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F245C76</tstamp>
@@ -1710,6 +2313,11 @@
       <value>649, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT649R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT649RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F245C85</tstamp>
@@ -1718,6 +2326,11 @@
       <value>301, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT301R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT301RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F2C72FF</tstamp>
@@ -1726,6 +2339,11 @@
       <value>1.65k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT1K65</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT1K65CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F2C7309</tstamp>
@@ -1734,6 +2352,11 @@
       <value>649, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT649R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT649RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5F2C7318</tstamp>
@@ -1742,6 +2365,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED379CC</tstamp>
@@ -1750,6 +2378,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED379D6</tstamp>
@@ -1771,6 +2404,11 @@
       <value>33k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT33K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT33K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED379FD</tstamp>
@@ -1779,6 +2417,11 @@
       <value>100pF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-4771-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCM1885C2A101JA16D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED37A07</tstamp>
@@ -1787,6 +2430,11 @@
       <value>33k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT33K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT33K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED37A13</tstamp>
@@ -1795,6 +2443,11 @@
       <value>100pF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-4771-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCM1885C2A101JA16D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED37A23</tstamp>
@@ -1803,6 +2456,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5ED37A44</tstamp>
@@ -1824,6 +2482,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF3D5A6</tstamp>
@@ -1845,6 +2508,11 @@
       <value>33k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT33K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT33K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF3D5CC</tstamp>
@@ -1853,6 +2521,11 @@
       <value>100pF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-4771-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCM1885C2A101JA16D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF3D5D6</tstamp>
@@ -1861,6 +2534,11 @@
       <value>33k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT33K0</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT33K0CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF3D5E2</tstamp>
@@ -1869,6 +2547,11 @@
       <value>100pF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-4771-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCM1885C2A101JA16D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF3D5F2</tstamp>
@@ -1877,6 +2560,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5EF3D609</tstamp>
@@ -1898,6 +2586,11 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12538-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R60J106KE47D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
       <tstamp>5FD35D1E</tstamp>
@@ -2104,6 +2797,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA0EA27</tstamp>
@@ -2112,6 +2810,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA1301A</tstamp>
@@ -2120,6 +2823,11 @@
       <value>4.7uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-7203-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R61E475KE11D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA1356A</tstamp>
@@ -2128,14 +2836,24 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-10516-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM21BR71A106KA73L</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA13C74</tstamp>
     </comp>
     <comp ref="C84">
       <value>4.7nF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-8289-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM2165C1H472GA01D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA14438</tstamp>
@@ -2157,6 +2875,11 @@
       <value>5.23k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT5K23</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT5K23CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA1F15C</tstamp>
@@ -2165,6 +2888,11 @@
       <value>1k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT1K00</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA1F84C</tstamp>
@@ -2173,6 +2901,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA1FD64</tstamp>
@@ -2181,6 +2914,11 @@
       <value>22uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-10511-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM21BR61A226ME51L</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA2074A</tstamp>
@@ -2189,6 +2927,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC781</tstamp>
@@ -2197,6 +2940,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC7A0</tstamp>
@@ -2205,6 +2953,11 @@
       <value>4.7uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-7203-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM188R61E475KE11D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC7AA</tstamp>
@@ -2213,14 +2966,24 @@
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-10516-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM21BR71A106KA73L</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC7B4</tstamp>
     </comp>
     <comp ref="C94">
       <value>4.7nF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-8289-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM2165C1H472GA01D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC7BE</tstamp>
@@ -2242,6 +3005,11 @@
       <value>3.09k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT3K09</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT3K09CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC7D3</tstamp>
@@ -2250,6 +3018,11 @@
       <value>1k, 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603FT1K00</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC7DD</tstamp>
@@ -2258,6 +3031,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC7E7</tstamp>
@@ -2266,6 +3044,11 @@
       <value>22uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-10511-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM21BR61A226ME51L</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EABC7F1</tstamp>
@@ -2300,6 +3083,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA1E7DB</tstamp>
@@ -2308,6 +3096,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA230D5</tstamp>
@@ -2316,6 +3109,11 @@
       <value>0</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">2019-RK73Z1JTTDCT-ND</field>
+        <field name="Manufacturer">KOA Speer Electronics Inc.</field>
+        <field name="Manufacturer Id">RK73Z1JTTD</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA25E8A</tstamp>
@@ -2324,6 +3122,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EA2A86D</tstamp>
@@ -2358,6 +3161,11 @@
       <value>750</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT750R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT750RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EB36977</tstamp>
@@ -2379,6 +3187,11 @@
       <value>330</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5EB3D48C</tstamp>
@@ -2400,6 +3213,11 @@
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12699-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155C81A105KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F0808D2</tstamp>
@@ -2408,6 +3226,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F081825</tstamp>
@@ -2416,6 +3239,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F0897BF</tstamp>
@@ -2424,6 +3252,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F0C5F5C</tstamp>
@@ -2432,6 +3265,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F0C5F66</tstamp>
@@ -2440,6 +3278,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F0CFEEB</tstamp>
@@ -2448,6 +3291,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F0CFEF5</tstamp>
@@ -2456,6 +3304,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F0CFF09</tstamp>
@@ -2464,6 +3317,11 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-16477-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GCJ188R71E104KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F0CFF13</tstamp>
@@ -2472,6 +3330,11 @@
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12699-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155C81A105KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F102E44</tstamp>
@@ -2480,6 +3343,11 @@
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12699-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155C81A105KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F110CF8</tstamp>
@@ -2488,6 +3356,11 @@
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey">490-12699-1-ND</field>
+        <field name="Manufacturer">Murata Electronics</field>
+        <field name="Manufacturer Id">GRM155C81A105KA12D</field>
+      </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
       <tstamp>5F110D02</tstamp>
@@ -3835,402 +4708,403 @@
   </libraries>
   <nets>
     <net code="1" name="+1V1">
-      <node ref="C19" pin="1"/>
-      <node ref="C25" pin="1"/>
-      <node ref="C23" pin="1"/>
-      <node ref="U1" pin="G7"/>
       <node ref="C21" pin="1"/>
-      <node ref="C17" pin="1"/>
+      <node ref="C19" pin="1"/>
+      <node ref="U1" pin="G6"/>
       <node ref="C15" pin="1"/>
+      <node ref="C17" pin="1"/>
+      <node ref="J4" pin="2"/>
       <node ref="C13" pin="1"/>
       <node ref="U1" pin="L9"/>
-      <node ref="U1" pin="L8"/>
-      <node ref="J4" pin="2"/>
+      <node ref="U1" pin="G7"/>
       <node ref="U1" pin="G9"/>
+      <node ref="U1" pin="L8"/>
       <node ref="U1" pin="L10"/>
-      <node ref="U1" pin="G6"/>
+      <node ref="C23" pin="1"/>
+      <node ref="C25" pin="1"/>
     </net>
     <net code="2" name="+2V5">
-      <node ref="U1" pin="L7"/>
-      <node ref="C33" pin="1"/>
-      <node ref="C31" pin="1"/>
-      <node ref="C35" pin="1"/>
-      <node ref="J4" pin="4"/>
       <node ref="U1" pin="G11"/>
+      <node ref="C31" pin="1"/>
+      <node ref="C33" pin="1"/>
+      <node ref="J4" pin="4"/>
+      <node ref="U1" pin="L7"/>
+      <node ref="C35" pin="1"/>
     </net>
     <net code="3" name="+3V3">
-      <node ref="U31" pin="1"/>
-      <node ref="C29" pin="1"/>
-      <node ref="U2" pin="20"/>
-      <node ref="C36" pin="1"/>
-      <node ref="U30" pin="1"/>
-      <node ref="U2" pin="56"/>
-      <node ref="U32" pin="1"/>
-      <node ref="C28" pin="1"/>
-      <node ref="U2" pin="9"/>
-      <node ref="U15" pin="2"/>
-      <node ref="U2" pin="4"/>
-      <node ref="C14" pin="1"/>
-      <node ref="C32" pin="1"/>
-      <node ref="C37" pin="1"/>
-      <node ref="U2" pin="31"/>
-      <node ref="U16" pin="1"/>
-      <node ref="C34" pin="1"/>
-      <node ref="C30" pin="1"/>
-      <node ref="C27" pin="1"/>
-      <node ref="R5" pin="1"/>
-      <node ref="C2" pin="1"/>
       <node ref="R28" pin="1"/>
-      <node ref="R16" pin="1"/>
       <node ref="C20" pin="1"/>
       <node ref="C24" pin="1"/>
-      <node ref="R2" pin="1"/>
       <node ref="R15" pin="1"/>
-      <node ref="R4" pin="1"/>
-      <node ref="U20" pin="1"/>
+      <node ref="U20" pin="2"/>
+      <node ref="R16" pin="1"/>
+      <node ref="U25" pin="1"/>
       <node ref="R13" pin="1"/>
       <node ref="U1" pin="F7"/>
       <node ref="U1" pin="F6"/>
-      <node ref="C18" pin="1"/>
-      <node ref="C26" pin="1"/>
-      <node ref="J12" pin="7"/>
-      <node ref="U2" pin="42"/>
-      <node ref="J12" pin="13"/>
-      <node ref="R7" pin="2"/>
-      <node ref="C4" pin="1"/>
-      <node ref="U29" pin="1"/>
       <node ref="U28" pin="1"/>
-      <node ref="U25" pin="1"/>
+      <node ref="U29" pin="1"/>
+      <node ref="C39" pin="1"/>
+      <node ref="C38" pin="1"/>
+      <node ref="C27" pin="1"/>
+      <node ref="U27" pin="1"/>
+      <node ref="U1" pin="K11"/>
+      <node ref="X1" pin="4"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R4" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="U2" pin="50"/>
+      <node ref="R31" pin="1"/>
+      <node ref="U2" pin="31"/>
+      <node ref="U2" pin="20"/>
+      <node ref="U2" pin="56"/>
+      <node ref="U20" pin="1"/>
+      <node ref="U2" pin="9"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U2" pin="4"/>
+      <node ref="U2" pin="42"/>
+      <node ref="U1" pin="L11"/>
+      <node ref="U1" pin="J11"/>
+      <node ref="U1" pin="H11"/>
+      <node ref="C30" pin="1"/>
+      <node ref="C32" pin="1"/>
+      <node ref="C34" pin="1"/>
+      <node ref="C37" pin="1"/>
       <node ref="U3" pin="8"/>
       <node ref="D4" pin="2"/>
       <node ref="C3" pin="1"/>
       <node ref="C5" pin="1"/>
+      <node ref="C4" pin="1"/>
       <node ref="C6" pin="1"/>
+      <node ref="R7" pin="2"/>
       <node ref="U1" pin="F11"/>
-      <node ref="U27" pin="1"/>
-      <node ref="U1" pin="H11"/>
       <node ref="U1" pin="F10"/>
-      <node ref="U1" pin="J11"/>
-      <node ref="U20" pin="2"/>
-      <node ref="U1" pin="K11"/>
-      <node ref="U1" pin="L11"/>
+      <node ref="U26" pin="1"/>
+      <node ref="U15" pin="2"/>
+      <node ref="C18" pin="1"/>
+      <node ref="C14" pin="1"/>
+      <node ref="J12" pin="7"/>
+      <node ref="C22" pin="1"/>
       <node ref="U1" pin="L6"/>
       <node ref="C16" pin="1"/>
-      <node ref="U1" pin="J6"/>
+      <node ref="U15" pin="1"/>
+      <node ref="C28" pin="1"/>
+      <node ref="U17" pin="1"/>
+      <node ref="C26" pin="1"/>
+      <node ref="C36" pin="1"/>
+      <node ref="C29" pin="1"/>
+      <node ref="U23" pin="1"/>
       <node ref="U1" pin="J7"/>
+      <node ref="U1" pin="J6"/>
+      <node ref="C40" pin="1"/>
+      <node ref="J12" pin="13"/>
+      <node ref="U31" pin="1"/>
+      <node ref="U30" pin="1"/>
       <node ref="C43" pin="1"/>
       <node ref="U24" pin="1"/>
-      <node ref="U22" pin="1"/>
+      <node ref="U16" pin="1"/>
       <node ref="U1" pin="H7"/>
+      <node ref="U22" pin="1"/>
       <node ref="U1" pin="H6"/>
-      <node ref="X1" pin="4"/>
-      <node ref="C38" pin="1"/>
-      <node ref="C39" pin="1"/>
-      <node ref="U17" pin="1"/>
-      <node ref="U2" pin="50"/>
-      <node ref="C22" pin="1"/>
-      <node ref="U26" pin="1"/>
-      <node ref="R30" pin="1"/>
-      <node ref="C40" pin="1"/>
-      <node ref="U15" pin="1"/>
-      <node ref="U23" pin="1"/>
+      <node ref="U32" pin="1"/>
     </net>
     <net code="4" name="JTAG_TCK">
-      <node ref="U1" pin="T10"/>
       <node ref="U2" pin="55"/>
-      <node ref="R14" pin="1"/>
       <node ref="J2" pin="4"/>
+      <node ref="U1" pin="T10"/>
+      <node ref="R14" pin="1"/>
     </net>
     <net code="5" name="GND">
-      <node ref="U15" pin="12"/>
-      <node ref="U30" pin="11"/>
-      <node ref="U15" pin="22"/>
-      <node ref="U30" pin="22"/>
-      <node ref="U26" pin="11"/>
       <node ref="U15" pin="11"/>
-      <node ref="U32" pin="11"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="U3" pin="5"/>
+      <node ref="C4" pin="2"/>
+      <node ref="U15" pin="22"/>
       <node ref="U32" pin="13"/>
       <node ref="U32" pin="12"/>
-      <node ref="U27" pin="11"/>
-      <node ref="U27" pin="12"/>
-      <node ref="U30" pin="12"/>
-      <node ref="U17" pin="13"/>
+      <node ref="C6" pin="2"/>
+      <node ref="R96" pin="2"/>
+      <node ref="J12" pin="6"/>
+      <node ref="U24" pin="11"/>
+      <node ref="C41" pin="2"/>
+      <node ref="U17" pin="12"/>
       <node ref="U17" pin="11"/>
-      <node ref="R25" pin="2"/>
+      <node ref="U17" pin="13"/>
       <node ref="U15" pin="13"/>
+      <node ref="J12" pin="1"/>
+      <node ref="U24" pin="12"/>
+      <node ref="J1" pin="6"/>
+      <node ref="J1" pin="5"/>
+      <node ref="U24" pin="22"/>
+      <node ref="U26" pin="22"/>
+      <node ref="U26" pin="13"/>
+      <node ref="U15" pin="12"/>
+      <node ref="U26" pin="12"/>
+      <node ref="U26" pin="11"/>
+      <node ref="X1" pin="2"/>
+      <node ref="U2" pin="35"/>
+      <node ref="C1" pin="1"/>
+      <node ref="U31" pin="2"/>
+      <node ref="U31" pin="12"/>
+      <node ref="R86" pin="2"/>
+      <node ref="U2" pin="11"/>
+      <node ref="U2" pin="10"/>
+      <node ref="U31" pin="11"/>
+      <node ref="U2" pin="1"/>
+      <node ref="U31" pin="22"/>
+      <node ref="U16" pin="13"/>
+      <node ref="U30" pin="22"/>
+      <node ref="U30" pin="13"/>
+      <node ref="U30" pin="2"/>
+      <node ref="U16" pin="11"/>
+      <node ref="J12" pin="16"/>
+      <node ref="R12" pin="2"/>
+      <node ref="U32" pin="11"/>
       <node ref="U32" pin="22"/>
       <node ref="U32" pin="2"/>
-      <node ref="U17" pin="12"/>
-      <node ref="U28" pin="11"/>
-      <node ref="U31" pin="11"/>
-      <node ref="U22" pin="12"/>
-      <node ref="U22" pin="13"/>
-      <node ref="U23" pin="13"/>
-      <node ref="R86" pin="2"/>
-      <node ref="U23" pin="11"/>
-      <node ref="U23" pin="12"/>
-      <node ref="U22" pin="22"/>
-      <node ref="U28" pin="12"/>
-      <node ref="U25" pin="11"/>
-      <node ref="U28" pin="13"/>
-      <node ref="U25" pin="22"/>
-      <node ref="U25" pin="12"/>
-      <node ref="U25" pin="13"/>
-      <node ref="U29" pin="13"/>
-      <node ref="U31" pin="2"/>
-      <node ref="U31" pin="22"/>
-      <node ref="U29" pin="11"/>
-      <node ref="U28" pin="22"/>
-      <node ref="U29" pin="12"/>
-      <node ref="U16" pin="11"/>
-      <node ref="U30" pin="13"/>
-      <node ref="U26" pin="13"/>
-      <node ref="U27" pin="13"/>
-      <node ref="U30" pin="2"/>
-      <node ref="U29" pin="22"/>
-      <node ref="U16" pin="13"/>
-      <node ref="U26" pin="12"/>
-      <node ref="U26" pin="22"/>
+      <node ref="U30" pin="12"/>
+      <node ref="U30" pin="11"/>
+      <node ref="U2" pin="5"/>
+      <node ref="U2" pin="51"/>
       <node ref="U16" pin="12"/>
-      <node ref="U24" pin="22"/>
-      <node ref="U24" pin="12"/>
       <node ref="U31" pin="13"/>
-      <node ref="U31" pin="12"/>
-      <node ref="U24" pin="11"/>
-      <node ref="U24" pin="13"/>
-      <node ref="U23" pin="22"/>
-      <node ref="U22" pin="11"/>
+      <node ref="U2" pin="47"/>
+      <node ref="J3" pin="4"/>
+      <node ref="C36" pin="2"/>
+      <node ref="J7" pin="2"/>
+      <node ref="C28" pin="2"/>
+      <node ref="U27" pin="13"/>
+      <node ref="U27" pin="22"/>
+      <node ref="U7" pin="4"/>
+      <node ref="TP6" pin="1"/>
       <node ref="H1" pin="1"/>
       <node ref="H3" pin="1"/>
       <node ref="H2" pin="1"/>
       <node ref="H4" pin="1"/>
-      <node ref="U7" pin="4"/>
-      <node ref="J7" pin="2"/>
-      <node ref="C38" pin="2"/>
+      <node ref="U27" pin="12"/>
+      <node ref="U23" pin="12"/>
+      <node ref="C83" pin="2"/>
+      <node ref="U20" pin="22"/>
+      <node ref="U7" pin="8"/>
+      <node ref="U27" pin="11"/>
+      <node ref="R25" pin="2"/>
+      <node ref="C81" pin="2"/>
       <node ref="R82" pin="2"/>
+      <node ref="U29" pin="12"/>
+      <node ref="U29" pin="11"/>
+      <node ref="C43" pin="2"/>
+      <node ref="U29" pin="13"/>
+      <node ref="U25" pin="13"/>
+      <node ref="U25" pin="12"/>
+      <node ref="U25" pin="22"/>
+      <node ref="C40" pin="2"/>
+      <node ref="U25" pin="11"/>
       <node ref="C89" pin="2"/>
       <node ref="C82" pin="2"/>
+      <node ref="C39" pin="2"/>
+      <node ref="C38" pin="2"/>
+      <node ref="U28" pin="11"/>
+      <node ref="U28" pin="12"/>
+      <node ref="U28" pin="13"/>
+      <node ref="U28" pin="22"/>
+      <node ref="U29" pin="22"/>
+      <node ref="C22" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="U22" pin="22"/>
+      <node ref="U14" pin="2"/>
+      <node ref="U9" pin="2"/>
+      <node ref="R92" pin="2"/>
+      <node ref="J12" pin="5"/>
+      <node ref="C99" pin="2"/>
+      <node ref="U23" pin="22"/>
+      <node ref="R30" pin="2"/>
+      <node ref="R29" pin="2"/>
+      <node ref="C91" pin="2"/>
+      <node ref="C93" pin="2"/>
+      <node ref="J12" pin="2"/>
+      <node ref="J12" pin="15"/>
+      <node ref="U24" pin="13"/>
       <node ref="C92" pin="2"/>
       <node ref="R98" pin="2"/>
-      <node ref="C93" pin="2"/>
-      <node ref="C91" pin="2"/>
-      <node ref="C81" pin="2"/>
-      <node ref="C83" pin="2"/>
-      <node ref="U7" pin="8"/>
+      <node ref="C72" pin="2"/>
+      <node ref="U22" pin="13"/>
+      <node ref="C71" pin="2"/>
+      <node ref="U22" pin="12"/>
+      <node ref="U8" pin="8"/>
       <node ref="U7" pin="E"/>
       <node ref="R88" pin="2"/>
-      <node ref="U8" pin="8"/>
       <node ref="U8" pin="E"/>
+      <node ref="U23" pin="11"/>
       <node ref="U8" pin="4"/>
-      <node ref="C39" pin="2"/>
-      <node ref="C42" pin="2"/>
-      <node ref="U9" pin="2"/>
-      <node ref="U14" pin="2"/>
-      <node ref="R92" pin="2"/>
-      <node ref="C99" pin="2"/>
-      <node ref="J12" pin="1"/>
-      <node ref="J12" pin="6"/>
-      <node ref="J12" pin="15"/>
-      <node ref="J12" pin="16"/>
-      <node ref="J12" pin="2"/>
-      <node ref="J12" pin="5"/>
-      <node ref="C18" pin="2"/>
-      <node ref="C26" pin="2"/>
+      <node ref="U23" pin="13"/>
+      <node ref="U22" pin="11"/>
       <node ref="C29" pin="2"/>
-      <node ref="R96" pin="2"/>
-      <node ref="C41" pin="2"/>
-      <node ref="C28" pin="2"/>
-      <node ref="C36" pin="2"/>
-      <node ref="C14" pin="2"/>
-      <node ref="C16" pin="2"/>
-      <node ref="C22" pin="2"/>
-      <node ref="C40" pin="2"/>
-      <node ref="C43" pin="2"/>
-      <node ref="C71" pin="2"/>
-      <node ref="C72" pin="2"/>
-      <node ref="TP6" pin="1"/>
-      <node ref="J14" pin="8"/>
-      <node ref="U51" pin="2"/>
-      <node ref="U51" pin="21"/>
-      <node ref="U51" pin="24"/>
-      <node ref="U51" pin="20"/>
-      <node ref="U53" pin="2"/>
-      <node ref="U53" pin="20"/>
-      <node ref="U53" pin="21"/>
-      <node ref="U53" pin="24"/>
-      <node ref="R123" pin="1"/>
-      <node ref="U52" pin="2"/>
-      <node ref="U52" pin="20"/>
-      <node ref="U52" pin="21"/>
-      <node ref="U52" pin="24"/>
-      <node ref="J14" pin="7"/>
-      <node ref="U62" pin="2"/>
-      <node ref="R603" pin="2"/>
-      <node ref="C311" pin="2"/>
-      <node ref="C211" pin="2"/>
-      <node ref="C111" pin="2"/>
-      <node ref="C508" pin="2"/>
-      <node ref="C209" pin="2"/>
-      <node ref="C151" pin="2"/>
-      <node ref="C153" pin="2"/>
-      <node ref="C154" pin="2"/>
-      <node ref="C152" pin="2"/>
-      <node ref="U61" pin="2"/>
+      <node ref="C26" pin="2"/>
+      <node ref="C42" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="R204" pin="2"/>
       <node ref="C202" pin="2"/>
-      <node ref="C208" pin="2"/>
-      <node ref="R304" pin="2"/>
-      <node ref="C207" pin="2"/>
-      <node ref="C10" pin="2"/>
-      <node ref="C9" pin="2"/>
-      <node ref="C352" pin="2"/>
-      <node ref="C8" pin="2"/>
-      <node ref="C12" pin="2"/>
-      <node ref="U12" pin="20"/>
-      <node ref="U10" pin="96"/>
-      <node ref="U76" pin="2"/>
-      <node ref="C109" pin="2"/>
-      <node ref="C108" pin="2"/>
-      <node ref="C107" pin="2"/>
-      <node ref="C351" pin="2"/>
-      <node ref="C353" pin="2"/>
-      <node ref="C354" pin="2"/>
-      <node ref="C253" pin="2"/>
-      <node ref="C254" pin="2"/>
-      <node ref="C252" pin="2"/>
-      <node ref="U75" pin="2"/>
-      <node ref="C507" pin="2"/>
-      <node ref="C502" pin="2"/>
-      <node ref="C408" pin="2"/>
-      <node ref="C407" pin="2"/>
-      <node ref="U74" pin="2"/>
-      <node ref="R323" pin="1"/>
-      <node ref="R223" pin="1"/>
-      <node ref="C251" pin="2"/>
-      <node ref="U63" pin="2"/>
       <node ref="C102" pin="2"/>
       <node ref="R104" pin="2"/>
-      <node ref="R204" pin="2"/>
-      <node ref="C402" pin="2"/>
-      <node ref="C308" pin="2"/>
-      <node ref="C307" pin="2"/>
-      <node ref="C309" pin="2"/>
-      <node ref="C302" pin="2"/>
-      <node ref="U27" pin="22"/>
-      <node ref="U20" pin="11"/>
-      <node ref="U20" pin="12"/>
-      <node ref="U20" pin="13"/>
-      <node ref="U20" pin="22"/>
-      <node ref="R29" pin="2"/>
-      <node ref="U10" pin="45"/>
-      <node ref="J15" pin="1"/>
-      <node ref="U11" pin="35"/>
-      <node ref="U11" pin="16"/>
-      <node ref="U10" pin="77"/>
-      <node ref="U13" pin="20"/>
-      <node ref="U13" pin="14"/>
-      <node ref="U12" pin="14"/>
-      <node ref="C11" pin="2"/>
-      <node ref="U11" pin="99"/>
-      <node ref="U11" pin="68"/>
-      <node ref="U10" pin="22"/>
-      <node ref="J3" pin="4"/>
-      <node ref="U1" pin="R10"/>
-      <node ref="U1" pin="P10"/>
-      <node ref="U1" pin="T16"/>
-      <node ref="U1" pin="T12"/>
-      <node ref="U1" pin="T1"/>
-      <node ref="C32" pin="2"/>
-      <node ref="C30" pin="2"/>
+      <node ref="C154" pin="2"/>
+      <node ref="C209" pin="2"/>
+      <node ref="C152" pin="2"/>
+      <node ref="C153" pin="2"/>
+      <node ref="C151" pin="2"/>
       <node ref="R14" pin="2"/>
-      <node ref="U1" pin="N2"/>
-      <node ref="C2" pin="2"/>
-      <node ref="C3" pin="2"/>
-      <node ref="C4" pin="2"/>
-      <node ref="C6" pin="2"/>
-      <node ref="U1" pin="T5"/>
-      <node ref="U1" pin="N15"/>
-      <node ref="U1" pin="K9"/>
-      <node ref="U1" pin="K8"/>
-      <node ref="R12" pin="2"/>
+      <node ref="C307" pin="2"/>
+      <node ref="C308" pin="2"/>
+      <node ref="U1" pin="R10"/>
+      <node ref="U63" pin="2"/>
+      <node ref="U1" pin="P10"/>
+      <node ref="C302" pin="2"/>
+      <node ref="C309" pin="2"/>
+      <node ref="C30" pin="2"/>
+      <node ref="C32" pin="2"/>
       <node ref="C34" pin="2"/>
-      <node ref="U1" pin="K7"/>
-      <node ref="U3" pin="5"/>
-      <node ref="U2" pin="35"/>
-      <node ref="R10" pin="2"/>
-      <node ref="R9" pin="2"/>
-      <node ref="C24" pin="2"/>
-      <node ref="C20" pin="2"/>
-      <node ref="C1" pin="1"/>
-      <node ref="U2" pin="25"/>
-      <node ref="U2" pin="13"/>
-      <node ref="C13" pin="2"/>
-      <node ref="U2" pin="1"/>
-      <node ref="U2" pin="10"/>
-      <node ref="U2" pin="11"/>
-      <node ref="U2" pin="15"/>
-      <node ref="C31" pin="2"/>
+      <node ref="C37" pin="2"/>
+      <node ref="R123" pin="1"/>
+      <node ref="C35" pin="2"/>
+      <node ref="C25" pin="2"/>
+      <node ref="C23" pin="2"/>
+      <node ref="C21" pin="2"/>
+      <node ref="U53" pin="24"/>
+      <node ref="U53" pin="21"/>
+      <node ref="R304" pin="2"/>
       <node ref="C27" pin="2"/>
       <node ref="C15" pin="2"/>
       <node ref="C17" pin="2"/>
       <node ref="C19" pin="2"/>
       <node ref="C33" pin="2"/>
-      <node ref="C35" pin="2"/>
-      <node ref="R6" pin="2"/>
-      <node ref="C7" pin="2"/>
-      <node ref="C37" pin="2"/>
-      <node ref="U2" pin="47"/>
-      <node ref="U2" pin="5"/>
-      <node ref="U2" pin="51"/>
-      <node ref="C5" pin="2"/>
-      <node ref="C21" pin="2"/>
-      <node ref="C23" pin="2"/>
-      <node ref="C25" pin="2"/>
-      <node ref="J1" pin="5"/>
-      <node ref="J1" pin="6"/>
+      <node ref="C31" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C20" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="U53" pin="20"/>
+      <node ref="U53" pin="2"/>
+      <node ref="R10" pin="2"/>
+      <node ref="U51" pin="24"/>
+      <node ref="U51" pin="21"/>
+      <node ref="U51" pin="20"/>
+      <node ref="U51" pin="2"/>
+      <node ref="U62" pin="2"/>
+      <node ref="C208" pin="2"/>
+      <node ref="U1" pin="A1"/>
+      <node ref="U1" pin="A16"/>
+      <node ref="U1" pin="H8"/>
+      <node ref="U1" pin="T5"/>
+      <node ref="R323" pin="1"/>
+      <node ref="U1" pin="K6"/>
+      <node ref="U1" pin="K10"/>
+      <node ref="U1" pin="J9"/>
+      <node ref="U1" pin="J8"/>
+      <node ref="U1" pin="J10"/>
+      <node ref="U1" pin="H9"/>
+      <node ref="U1" pin="H16"/>
+      <node ref="U1" pin="H10"/>
+      <node ref="U1" pin="H1"/>
+      <node ref="U1" pin="G8"/>
+      <node ref="U1" pin="G10"/>
+      <node ref="U1" pin="F9"/>
+      <node ref="U1" pin="F8"/>
       <node ref="U1" pin="D2"/>
       <node ref="U1" pin="D15"/>
-      <node ref="U1" pin="A16"/>
-      <node ref="U1" pin="A1"/>
-      <node ref="R26" pin="2"/>
-      <node ref="U1" pin="J10"/>
-      <node ref="U1" pin="H16"/>
-      <node ref="U1" pin="H8"/>
-      <node ref="U1" pin="H9"/>
+      <node ref="U1" pin="K7"/>
+      <node ref="C254" pin="2"/>
+      <node ref="U75" pin="2"/>
+      <node ref="C507" pin="2"/>
+      <node ref="C252" pin="2"/>
+      <node ref="C253" pin="2"/>
+      <node ref="C251" pin="2"/>
+      <node ref="U74" pin="2"/>
+      <node ref="C402" pin="2"/>
+      <node ref="C407" pin="2"/>
+      <node ref="C408" pin="2"/>
+      <node ref="C502" pin="2"/>
+      <node ref="R223" pin="1"/>
+      <node ref="U1" pin="T16"/>
+      <node ref="U1" pin="T12"/>
+      <node ref="U1" pin="T1"/>
+      <node ref="U1" pin="N2"/>
+      <node ref="U1" pin="N15"/>
+      <node ref="U1" pin="K9"/>
+      <node ref="U1" pin="K8"/>
+      <node ref="C207" pin="2"/>
+      <node ref="C354" pin="2"/>
+      <node ref="C352" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C12" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="U12" pin="14"/>
+      <node ref="U12" pin="20"/>
       <node ref="R1" pin="1"/>
+      <node ref="J15" pin="1"/>
+      <node ref="U11" pin="35"/>
+      <node ref="U10" pin="77"/>
+      <node ref="U10" pin="96"/>
+      <node ref="C108" pin="2"/>
+      <node ref="C107" pin="2"/>
+      <node ref="C351" pin="2"/>
+      <node ref="C353" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="U11" pin="99"/>
+      <node ref="C11" pin="2"/>
+      <node ref="U10" pin="45"/>
+      <node ref="U11" pin="16"/>
+      <node ref="U13" pin="14"/>
+      <node ref="R26" pin="2"/>
       <node ref="R27" pin="2"/>
-      <node ref="U1" pin="J8"/>
-      <node ref="U1" pin="J9"/>
-      <node ref="U1" pin="K10"/>
-      <node ref="U1" pin="K6"/>
-      <node ref="U1" pin="H10"/>
-      <node ref="U1" pin="F8"/>
-      <node ref="U1" pin="F9"/>
-      <node ref="U1" pin="G10"/>
-      <node ref="X1" pin="2"/>
-      <node ref="U1" pin="G8"/>
-      <node ref="U1" pin="H1"/>
+      <node ref="U13" pin="20"/>
+      <node ref="U10" pin="22"/>
+      <node ref="U11" pin="68"/>
+      <node ref="U20" pin="13"/>
+      <node ref="U20" pin="12"/>
+      <node ref="R6" pin="2"/>
+      <node ref="U20" pin="11"/>
+      <node ref="J14" pin="7"/>
+      <node ref="J14" pin="8"/>
+      <node ref="C7" pin="2"/>
+      <node ref="U2" pin="25"/>
+      <node ref="U2" pin="13"/>
+      <node ref="U52" pin="24"/>
+      <node ref="U52" pin="2"/>
+      <node ref="U52" pin="20"/>
+      <node ref="U2" pin="15"/>
+      <node ref="U52" pin="21"/>
+      <node ref="C508" pin="2"/>
+      <node ref="R603" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C311" pin="2"/>
+      <node ref="C111" pin="2"/>
+      <node ref="C211" pin="2"/>
+      <node ref="U61" pin="2"/>
+      <node ref="U76" pin="2"/>
+      <node ref="C109" pin="2"/>
     </net>
     <net code="6" name="FIFO_D2">
-      <node ref="U1" pin="T15"/>
       <node ref="U2" pin="18"/>
+      <node ref="U1" pin="T15"/>
     </net>
     <net code="7" name="JTAG_TMS">
+      <node ref="U1" pin="T11"/>
       <node ref="R13" pin="2"/>
       <node ref="J2" pin="1"/>
       <node ref="U2" pin="59"/>
-      <node ref="U1" pin="T11"/>
     </net>
     <net code="8" name="FIFO_D4">
-      <node ref="U1" pin="T14"/>
       <node ref="U2" pin="21"/>
+      <node ref="U1" pin="T14"/>
     </net>
     <net code="9" name="FPGA_VAB12">
-      <node ref="U27" pin="4"/>
       <node ref="U1" pin="N16"/>
+      <node ref="U27" pin="4"/>
     </net>
     <net code="10" name="FPGA_VAB10">
-      <node ref="U27" pin="7"/>
       <node ref="U1" pin="L15"/>
+      <node ref="U27" pin="7"/>
     </net>
     <net code="11" name="FPGA_VAB9">
       <node ref="U1" pin="L16"/>
@@ -4243,9 +5117,9 @@
       <node ref="U1" pin="M12"/>
     </net>
     <net code="14" name="LVL_VD_DIR">
-      <node ref="U29" pin="2"/>
       <node ref="U1" pin="M13"/>
       <node ref="U28" pin="2"/>
+      <node ref="U29" pin="2"/>
     </net>
     <net code="15" name="FPGA_VDA1">
       <node ref="U1" pin="M14"/>
@@ -4264,24 +5138,24 @@
       <node ref="U1" pin="N11"/>
     </net>
     <net code="19" name="FIFO_~RD~">
-      <node ref="U2" pin="28"/>
       <node ref="U1" pin="N12"/>
+      <node ref="U2" pin="28"/>
     </net>
     <net code="20" name="FIFO_~RXF~">
-      <node ref="U2" pin="26"/>
       <node ref="U1" pin="N13"/>
+      <node ref="U2" pin="26"/>
     </net>
     <net code="21" name="FPGA_VDA0">
-      <node ref="U28" pin="10"/>
       <node ref="U1" pin="N14"/>
+      <node ref="U28" pin="10"/>
     </net>
     <net code="22" name="FIFO_SIWU">
-      <node ref="U2" pin="34"/>
       <node ref="U1" pin="P11"/>
+      <node ref="U2" pin="34"/>
     </net>
     <net code="23" name="FIFO_~WR~">
-      <node ref="U2" pin="29"/>
       <node ref="U1" pin="P12"/>
+      <node ref="U2" pin="29"/>
     </net>
     <net code="24" name="FIFO_~TXE~">
       <node ref="U2" pin="27"/>
@@ -4292,20 +5166,20 @@
       <node ref="U1" pin="P14"/>
     </net>
     <net code="26" name="LED4">
-      <node ref="D7" pin="2"/>
       <node ref="U1" pin="P15"/>
+      <node ref="D7" pin="2"/>
     </net>
     <net code="27" name="LED6">
-      <node ref="D8" pin="2"/>
       <node ref="U1" pin="P16"/>
+      <node ref="D8" pin="2"/>
     </net>
     <net code="28" name="FIFO_D7">
       <node ref="U2" pin="24"/>
       <node ref="U1" pin="R12"/>
     </net>
     <net code="29" name="FIFO_D5">
-      <node ref="U2" pin="22"/>
       <node ref="U1" pin="R13"/>
+      <node ref="U2" pin="22"/>
     </net>
     <net code="30" name="FIFO_D3">
       <node ref="U1" pin="R14"/>
@@ -4316,16 +5190,16 @@
       <node ref="U1" pin="R15"/>
     </net>
     <net code="32" name="FIFO_D0">
-      <node ref="U2" pin="16"/>
       <node ref="U1" pin="R16"/>
+      <node ref="U2" pin="16"/>
     </net>
     <net code="33" name="FIFO_D6">
       <node ref="U2" pin="23"/>
       <node ref="U1" pin="T13"/>
     </net>
     <net code="34" name="CLK_12MHZ">
-      <node ref="X1" pin="3"/>
       <node ref="U1" pin="P6"/>
+      <node ref="X1" pin="3"/>
       <node ref="U2" pin="2"/>
     </net>
     <net code="35" name="FGPA_PPU2_TST6">
@@ -4336,16 +5210,16 @@
       <node ref="U1" pin="M6"/>
     </net>
     <net code="37" name="ANALOG_B2">
-      <node ref="U53" pin="5"/>
       <node ref="U1" pin="N1"/>
+      <node ref="U53" pin="5"/>
     </net>
     <net code="38" name="ANALOG_B1">
-      <node ref="U53" pin="4"/>
       <node ref="U1" pin="N3"/>
+      <node ref="U53" pin="4"/>
     </net>
     <net code="39" name="ANALOG_R7">
-      <node ref="U51" pin="10"/>
       <node ref="U1" pin="N4"/>
+      <node ref="U51" pin="10"/>
     </net>
     <net code="40" name="ANALOG_R5">
       <node ref="U1" pin="N5"/>
@@ -4360,12 +5234,12 @@
       <node ref="U53" pin="3"/>
     </net>
     <net code="43" name="ANALOG_B_OE">
-      <node ref="U53" pin="1"/>
       <node ref="U1" pin="P2"/>
+      <node ref="U53" pin="1"/>
     </net>
     <net code="44" name="FGPA_PPU2_TST7">
-      <node ref="U1" pin="P3"/>
       <node ref="U17" pin="3"/>
+      <node ref="U1" pin="P3"/>
     </net>
     <net code="45" name="ANALOG_R6">
       <node ref="U1" pin="P4"/>
@@ -4396,20 +5270,20 @@
       <node ref="U52" pin="5"/>
     </net>
     <net code="52" name="ANALOG_G0">
-      <node ref="U1" pin="R5"/>
       <node ref="U52" pin="3"/>
+      <node ref="U1" pin="R5"/>
     </net>
     <net code="53" name="ANALOG_G5">
       <node ref="U52" pin="8"/>
       <node ref="U1" pin="T2"/>
     </net>
     <net code="54" name="ANALOG_G3">
-      <node ref="U1" pin="T3"/>
       <node ref="U52" pin="6"/>
+      <node ref="U1" pin="T3"/>
     </net>
     <net code="55" name="ANALOG_G1">
-      <node ref="U52" pin="4"/>
       <node ref="U1" pin="T4"/>
+      <node ref="U52" pin="4"/>
     </net>
     <net code="56" name="Net-(U1-PadM7)">
       <node ref="U1" pin="M7"/>
@@ -4421,28 +5295,28 @@
       <node ref="U1" pin="K5"/>
     </net>
     <net code="59" name="ANALOG_B6">
-      <node ref="U53" pin="9"/>
       <node ref="U1" pin="L1"/>
+      <node ref="U53" pin="9"/>
     </net>
     <net code="60" name="ANALOG_B5">
-      <node ref="U53" pin="8"/>
       <node ref="U1" pin="L2"/>
+      <node ref="U53" pin="8"/>
     </net>
     <net code="61" name="FGPA_PPU2_TST3">
-      <node ref="U1" pin="L3"/>
       <node ref="U17" pin="7"/>
+      <node ref="U1" pin="L3"/>
     </net>
     <net code="62" name="FGPA_PPU2_TST2">
-      <node ref="U1" pin="L4"/>
       <node ref="U17" pin="8"/>
+      <node ref="U1" pin="L4"/>
     </net>
     <net code="63" name="FGPA_PPU2_TST4">
-      <node ref="U1" pin="L5"/>
       <node ref="U17" pin="6"/>
+      <node ref="U1" pin="L5"/>
     </net>
     <net code="64" name="ANALOG_B4">
-      <node ref="U53" pin="7"/>
       <node ref="U1" pin="M1"/>
+      <node ref="U53" pin="7"/>
     </net>
     <net code="65" name="ANALOG_B3">
       <node ref="U1" pin="M2"/>
@@ -4452,29 +5326,29 @@
       <node ref="U1" pin="M3"/>
     </net>
     <net code="67" name="FPGA_PA7">
-      <node ref="U1" pin="J2"/>
       <node ref="U22" pin="10"/>
+      <node ref="U1" pin="J2"/>
     </net>
     <net code="68" name="LVL_TST_~OE~">
-      <node ref="U17" pin="22"/>
       <node ref="U16" pin="22"/>
+      <node ref="U17" pin="22"/>
       <node ref="U1" pin="F5"/>
     </net>
     <net code="69" name="FPGA_PA3">
-      <node ref="U22" pin="6"/>
       <node ref="U1" pin="G1"/>
+      <node ref="U22" pin="6"/>
     </net>
     <net code="70" name="FPGA_PA4">
-      <node ref="U22" pin="7"/>
       <node ref="U1" pin="G2"/>
+      <node ref="U22" pin="7"/>
     </net>
     <net code="71" name="FGPA_PPU2_TST13">
       <node ref="U1" pin="G3"/>
       <node ref="U16" pin="5"/>
     </net>
     <net code="72" name="FGPA_PPU2_TST12">
-      <node ref="U1" pin="G4"/>
       <node ref="U16" pin="6"/>
+      <node ref="U1" pin="G4"/>
     </net>
     <net code="73" name="Net-(U1-PadG5)">
       <node ref="U1" pin="G5"/>
@@ -4500,29 +5374,29 @@
       <node ref="U1" pin="J1"/>
     </net>
     <net code="79" name="FGPA_PPU2_TST14">
-      <node ref="U16" pin="4"/>
       <node ref="U1" pin="F4"/>
+      <node ref="U16" pin="4"/>
     </net>
     <net code="80" name="FGPA_PPU2_TST8">
-      <node ref="U1" pin="J3"/>
       <node ref="U16" pin="10"/>
+      <node ref="U1" pin="J3"/>
     </net>
     <net code="81" name="FGPA_PPU2_TST0">
-      <node ref="U1" pin="J4"/>
       <node ref="U17" pin="10"/>
+      <node ref="U1" pin="J4"/>
     </net>
     <net code="82" name="Net-(U1-PadJ5)">
       <node ref="U1" pin="J5"/>
     </net>
     <net code="83" name="ANALOG_CLK">
       <node ref="U53" pin="12"/>
-      <node ref="U51" pin="12"/>
       <node ref="U52" pin="12"/>
       <node ref="U1" pin="K1"/>
+      <node ref="U51" pin="12"/>
     </net>
     <net code="84" name="ANALOG_B7">
-      <node ref="U1" pin="K2"/>
       <node ref="U53" pin="10"/>
+      <node ref="U1" pin="K2"/>
     </net>
     <net code="85" name="FGPA_PPU2_TST1">
       <node ref="U17" pin="9"/>
@@ -4553,40 +5427,40 @@
       <node ref="U1" pin="E1"/>
     </net>
     <net code="92" name="FPGA_PA0">
-      <node ref="U22" pin="3"/>
       <node ref="U1" pin="E2"/>
+      <node ref="U22" pin="3"/>
     </net>
     <net code="93" name="FPGA_EXTRA3">
       <node ref="TP9" pin="1"/>
       <node ref="U1" pin="E3"/>
     </net>
     <net code="94" name="FPGA_PA1">
-      <node ref="U1" pin="F1"/>
       <node ref="U22" pin="4"/>
+      <node ref="U1" pin="F1"/>
     </net>
     <net code="95" name="FPGA_PA2">
-      <node ref="U1" pin="F2"/>
       <node ref="U22" pin="5"/>
+      <node ref="U1" pin="F2"/>
     </net>
     <net code="96" name="LVL_TST_DIR">
-      <node ref="U1" pin="F3"/>
-      <node ref="U16" pin="2"/>
       <node ref="U17" pin="2"/>
+      <node ref="U16" pin="2"/>
+      <node ref="U1" pin="F3"/>
     </net>
     <net code="97" name="Net-(U1-PadM9)">
       <node ref="U1" pin="M9"/>
     </net>
     <net code="98" name="USB_~SUSPEND~">
-      <node ref="U2" pin="36"/>
       <node ref="U1" pin="R7"/>
+      <node ref="U2" pin="36"/>
     </net>
     <net code="99" name="ANALOG_R_OE">
       <node ref="U1" pin="M8"/>
       <node ref="U51" pin="1"/>
     </net>
     <net code="100" name="ANALOG_R1">
-      <node ref="U1" pin="N7"/>
       <node ref="U51" pin="4"/>
+      <node ref="U1" pin="N7"/>
     </net>
     <net code="101" name="Net-(U1-PadN8)">
       <node ref="U1" pin="N8"/>
@@ -4604,9 +5478,9 @@
       <node ref="U51" pin="3"/>
     </net>
     <net code="105" name="DONE">
+      <node ref="U2" pin="43"/>
       <node ref="D5" pin="2"/>
       <node ref="U1" pin="P9"/>
-      <node ref="U2" pin="43"/>
     </net>
     <net code="106" name="ANALOG_G_OE">
       <node ref="U52" pin="1"/>
@@ -4614,34 +5488,34 @@
     </net>
     <net code="107" name="SPI_~CS~">
       <node ref="U2" pin="41"/>
-      <node ref="R30" pin="2"/>
       <node ref="U1" pin="R8"/>
+      <node ref="R31" pin="2"/>
     </net>
     <net code="108" name="USB_~PWREN~">
-      <node ref="U2" pin="60"/>
       <node ref="U1" pin="T6"/>
+      <node ref="U2" pin="60"/>
     </net>
     <net code="109" name="SPI_MISO">
       <node ref="U2" pin="40"/>
       <node ref="U1" pin="T7"/>
     </net>
     <net code="110" name="SPI_MOSI">
-      <node ref="U1" pin="T8"/>
       <node ref="U2" pin="39"/>
+      <node ref="U1" pin="T8"/>
     </net>
     <net code="111" name="~INIT">
       <node ref="R28" pin="2"/>
-      <node ref="U2" pin="44"/>
-      <node ref="U1" pin="T9"/>
       <node ref="D6" pin="2"/>
+      <node ref="U1" pin="T9"/>
+      <node ref="U2" pin="44"/>
     </net>
     <net code="112" name="FPGA_PPU2_HVCMODE">
-      <node ref="U1" pin="E6"/>
       <node ref="U20" pin="10"/>
+      <node ref="U1" pin="E6"/>
     </net>
     <net code="113" name="FPGA_CHR1">
-      <node ref="U30" pin="5"/>
       <node ref="U1" pin="B6"/>
+      <node ref="U30" pin="5"/>
     </net>
     <net code="114" name="FPGA_CHR3">
       <node ref="U30" pin="3"/>
@@ -4660,12 +5534,12 @@
       <node ref="U1" pin="C6"/>
     </net>
     <net code="118" name="FPGA_PPU2_~5MOUT~">
-      <node ref="U32" pin="6"/>
       <node ref="U1" pin="C7"/>
+      <node ref="U32" pin="6"/>
     </net>
     <net code="119" name="FPGA_D3">
-      <node ref="U1" pin="D4"/>
       <node ref="U23" pin="6"/>
+      <node ref="U1" pin="D4"/>
     </net>
     <net code="120" name="FPGA_D1">
       <node ref="U23" pin="4"/>
@@ -4680,8 +5554,8 @@
       <node ref="U1" pin="D7"/>
     </net>
     <net code="123" name="FPGA_D7">
-      <node ref="U23" pin="10"/>
       <node ref="U1" pin="E4"/>
+      <node ref="U23" pin="10"/>
     </net>
     <net code="124" name="FPGA_D6">
       <node ref="U1" pin="E5"/>
@@ -4692,42 +5566,42 @@
       <node ref="U30" pin="7"/>
     </net>
     <net code="126" name="FPGA_PPU2_VBLANK">
-      <node ref="U32" pin="7"/>
       <node ref="U1" pin="E7"/>
+      <node ref="U32" pin="7"/>
     </net>
     <net code="127" name="JTAG_TDI">
-      <node ref="J2" pin="3"/>
-      <node ref="U1" pin="R11"/>
       <node ref="U2" pin="57"/>
+      <node ref="U1" pin="R11"/>
+      <node ref="J2" pin="3"/>
     </net>
     <net code="128" name="JTAG_TDO">
+      <node ref="U1" pin="M10"/>
       <node ref="J2" pin="2"/>
       <node ref="U2" pin="58"/>
-      <node ref="U1" pin="M10"/>
     </net>
     <net code="129" name="FPGA_VDA3">
       <node ref="U1" pin="L14"/>
       <node ref="U28" pin="7"/>
     </net>
     <net code="130" name="FPGA_PPU2_~TOUMEI~">
-      <node ref="U32" pin="4"/>
       <node ref="U1" pin="A2"/>
+      <node ref="U32" pin="4"/>
     </net>
     <net code="131" name="FPGA_COLOR1">
       <node ref="U30" pin="10"/>
       <node ref="U1" pin="A3"/>
     </net>
     <net code="132" name="FPGA_PRIO0">
-      <node ref="U1" pin="A4"/>
       <node ref="U30" pin="8"/>
+      <node ref="U1" pin="A4"/>
     </net>
     <net code="133" name="FPGA_CHR0">
-      <node ref="U30" pin="6"/>
       <node ref="U1" pin="A5"/>
+      <node ref="U30" pin="6"/>
     </net>
     <net code="134" name="FPGA_CHR2">
-      <node ref="U1" pin="A6"/>
       <node ref="U30" pin="4"/>
+      <node ref="U1" pin="A6"/>
     </net>
     <net code="135" name="FPGA_PPU2_~PED~">
       <node ref="U31" pin="10"/>
@@ -4738,8 +5612,8 @@
       <node ref="U31" pin="8"/>
     </net>
     <net code="137" name="FPGA_PPU2_~RESOUT0~">
-      <node ref="U32" pin="3"/>
       <node ref="U1" pin="B3"/>
+      <node ref="U32" pin="3"/>
     </net>
     <net code="138" name="FPGA_COLOR2">
       <node ref="U1" pin="B4"/>
@@ -4754,10 +5628,10 @@
       <node ref="R15" pin="2"/>
     </net>
     <net code="141" name="~PROGRAM">
-      <node ref="R8" pin="2"/>
       <node ref="U1" pin="R9"/>
-      <node ref="R16" pin="2"/>
+      <node ref="R8" pin="2"/>
       <node ref="U2" pin="45"/>
+      <node ref="R16" pin="2"/>
     </net>
     <net code="142" name="FPGA_EXTRA2">
       <node ref="U1" pin="D1"/>
@@ -4768,16 +5642,16 @@
       <node ref="TP7" pin="1"/>
     </net>
     <net code="144" name="FIFO_CLKOUT">
-      <node ref="U1" pin="L13"/>
       <node ref="U2" pin="32"/>
+      <node ref="U1" pin="L13"/>
     </net>
     <net code="145" name="FPGA_~VBWR~">
-      <node ref="U24" pin="9"/>
       <node ref="U1" pin="B11"/>
+      <node ref="U24" pin="9"/>
     </net>
     <net code="146" name="FPGA_~VCLD~">
-      <node ref="U31" pin="4"/>
       <node ref="U1" pin="A10"/>
+      <node ref="U31" pin="4"/>
     </net>
     <net code="147" name="FGPA_~VRD~">
       <node ref="U1" pin="A11"/>
@@ -4792,8 +5666,8 @@
       <node ref="U1" pin="A13"/>
     </net>
     <net code="150" name="FPGA_VAA3">
-      <node ref="U1" pin="A14"/>
       <node ref="U24" pin="4"/>
+      <node ref="U1" pin="A14"/>
     </net>
     <net code="151" name="FPGA_VAA5">
       <node ref="U25" pin="10"/>
@@ -4816,36 +5690,36 @@
       <node ref="U24" pin="5"/>
     </net>
     <net code="156" name="FPGA_VAA4">
-      <node ref="U1" pin="B14"/>
       <node ref="U24" pin="3"/>
+      <node ref="U1" pin="B14"/>
     </net>
     <net code="157" name="FPGA_PPU2_3.58M">
-      <node ref="U1" pin="B8"/>
       <node ref="U31" pin="9"/>
+      <node ref="U1" pin="B8"/>
     </net>
     <net code="158" name="FPGA_~HCLD">
       <node ref="U31" pin="5"/>
       <node ref="U1" pin="B9"/>
     </net>
     <net code="159" name="FPGA_~PAWR~">
-      <node ref="U1" pin="C10"/>
       <node ref="U20" pin="3"/>
+      <node ref="U1" pin="C10"/>
     </net>
     <net code="160" name="FPGA_PPU1_PALMODE">
-      <node ref="U15" pin="9"/>
       <node ref="U1" pin="C11"/>
+      <node ref="U15" pin="9"/>
     </net>
     <net code="161" name="FGPA_PPU1_~EXTSYNC~">
-      <node ref="U15" pin="7"/>
       <node ref="U1" pin="C12"/>
+      <node ref="U15" pin="7"/>
     </net>
     <net code="162" name="FPGA_BODGE3">
       <node ref="U15" pin="5"/>
       <node ref="U1" pin="C13"/>
     </net>
     <net code="163" name="FPGA_~OVER~">
-      <node ref="U31" pin="7"/>
       <node ref="U1" pin="C8"/>
+      <node ref="U31" pin="7"/>
     </net>
     <net code="164" name="FPGA_XIN">
       <node ref="TP1" pin="1"/>
@@ -4853,8 +5727,8 @@
       <node ref="U1" pin="C9"/>
     </net>
     <net code="165" name="FGPA_PPU1_HVCMODE">
-      <node ref="U15" pin="10"/>
       <node ref="U1" pin="D10"/>
+      <node ref="U15" pin="10"/>
     </net>
     <net code="166" name="FPGA_PPU2_EXTLATCH">
       <node ref="U15" pin="6"/>
@@ -4877,8 +5751,8 @@
       <node ref="U1" pin="G14"/>
     </net>
     <net code="172" name="FPGA_VAB1">
-      <node ref="U1" pin="G15"/>
       <node ref="U26" pin="8"/>
+      <node ref="U1" pin="G15"/>
     </net>
     <net code="173" name="FPGA_VAB2">
       <node ref="U1" pin="G16"/>
@@ -4888,8 +5762,8 @@
       <node ref="U1" pin="H12"/>
     </net>
     <net code="175" name="FPGA_VDB1">
-      <node ref="U29" pin="9"/>
       <node ref="U1" pin="H13"/>
+      <node ref="U29" pin="9"/>
     </net>
     <net code="176" name="FPGA_VAB3">
       <node ref="U1" pin="H14"/>
@@ -4900,28 +5774,28 @@
       <node ref="U26" pin="5"/>
     </net>
     <net code="178" name="FPGA_VAA13">
-      <node ref="U26" pin="10"/>
       <node ref="U1" pin="F15"/>
+      <node ref="U26" pin="10"/>
     </net>
     <net code="179" name="FPGA_VDB0">
-      <node ref="U1" pin="J13"/>
       <node ref="U29" pin="10"/>
+      <node ref="U1" pin="J13"/>
     </net>
     <net code="180" name="FPGA_VDA7">
       <node ref="U28" pin="3"/>
       <node ref="U1" pin="J14"/>
     </net>
     <net code="181" name="FPGA_VAB6">
-      <node ref="U26" pin="3"/>
       <node ref="U1" pin="J15"/>
+      <node ref="U26" pin="3"/>
     </net>
     <net code="182" name="FPGA_VAB5">
       <node ref="U26" pin="4"/>
       <node ref="U1" pin="J16"/>
     </net>
     <net code="183" name="FPGA_VDA5">
-      <node ref="U28" pin="5"/>
       <node ref="U1" pin="K14"/>
+      <node ref="U28" pin="5"/>
     </net>
     <net code="184" name="FPGA_VAB8">
       <node ref="U27" pin="9"/>
@@ -4932,8 +5806,8 @@
       <node ref="U1" pin="K16"/>
     </net>
     <net code="186" name="FPGA_VDA4">
-      <node ref="U1" pin="K12"/>
       <node ref="U28" pin="6"/>
+      <node ref="U1" pin="K12"/>
     </net>
     <net code="187" name="FPGA_VDA6">
       <node ref="U1" pin="K13"/>
@@ -4944,24 +5818,25 @@
       <node ref="U28" pin="8"/>
     </net>
     <net code="189" name="FPGA_VAA6">
-      <node ref="U1" pin="B15"/>
       <node ref="U25" pin="9"/>
+      <node ref="U1" pin="B15"/>
     </net>
     <net code="190" name="FPGA_BODGE1">
       <node ref="U15" pin="3"/>
       <node ref="U1" pin="D12"/>
     </net>
     <net code="191" name="FPGA_VDB7">
-      <node ref="U1" pin="D13"/>
       <node ref="U29" pin="3"/>
+      <node ref="U1" pin="D13"/>
     </net>
     <net code="192" name="FPGA_PPU2_~RESET~">
       <node ref="U20" pin="7"/>
       <node ref="U1" pin="D8"/>
+      <node ref="R29" pin="1"/>
     </net>
     <net code="193" name="FPGA_~PARD~">
-      <node ref="U1" pin="D9"/>
       <node ref="U20" pin="4"/>
+      <node ref="U1" pin="D9"/>
     </net>
     <net code="194" name="Net-(U1-PadE10)">
       <node ref="U1" pin="E10"/>
@@ -4982,8 +5857,9 @@
       <node ref="U1" pin="E8"/>
     </net>
     <net code="199" name="FPGA_PPU1_~RESET~">
-      <node ref="U1" pin="E9"/>
+      <node ref="R30" pin="1"/>
       <node ref="U20" pin="6"/>
+      <node ref="U1" pin="E9"/>
     </net>
     <net code="200" name="FPGA_VAA7">
       <node ref="U1" pin="B16"/>
@@ -4994,12 +5870,12 @@
       <node ref="U15" pin="4"/>
     </net>
     <net code="202" name="FPGA_VAA8">
-      <node ref="U25" pin="7"/>
       <node ref="U1" pin="C15"/>
+      <node ref="U25" pin="7"/>
     </net>
     <net code="203" name="FPGA_VAA9">
-      <node ref="U25" pin="6"/>
       <node ref="U1" pin="C16"/>
+      <node ref="U25" pin="6"/>
     </net>
     <net code="204" name="FPGA_VAA10">
       <node ref="U25" pin="5"/>
@@ -5010,19 +5886,19 @@
       <node ref="U25" pin="4"/>
     </net>
     <net code="206" name="FPGA_VDB4">
-      <node ref="U29" pin="6"/>
       <node ref="U1" pin="E14"/>
+      <node ref="U29" pin="6"/>
     </net>
     <net code="207" name="FPGA_VAA12">
-      <node ref="U1" pin="E15"/>
       <node ref="U25" pin="3"/>
+      <node ref="U1" pin="E15"/>
     </net>
     <net code="208" name="LVL_VA_DIR">
-      <node ref="U24" pin="2"/>
       <node ref="U26" pin="2"/>
-      <node ref="U27" pin="2"/>
-      <node ref="U25" pin="2"/>
       <node ref="U1" pin="E16"/>
+      <node ref="U27" pin="2"/>
+      <node ref="U24" pin="2"/>
+      <node ref="U25" pin="2"/>
     </net>
     <net code="209" name="FPGA_VDB3">
       <node ref="U29" pin="7"/>
@@ -5033,34 +5909,34 @@
       <node ref="U1" pin="F13"/>
     </net>
     <net code="211" name="FPGA_VDB2">
-      <node ref="U29" pin="8"/>
       <node ref="U1" pin="F14"/>
+      <node ref="U29" pin="8"/>
     </net>
     <net code="212" name="Net-(D6-Pad1)">
       <node ref="D6" pin="1"/>
       <node ref="R9" pin="1"/>
     </net>
     <net code="213" name="Net-(D8-Pad1)">
-      <node ref="R27" pin="1"/>
       <node ref="D8" pin="1"/>
+      <node ref="R27" pin="1"/>
     </net>
     <net code="214" name="Net-(D7-Pad1)">
       <node ref="R26" pin="1"/>
       <node ref="D7" pin="1"/>
     </net>
     <net code="215" name="/SPLA Board - USB/EEDO">
-      <node ref="U3" pin="4"/>
       <node ref="R3" pin="2"/>
       <node ref="R2" pin="2"/>
+      <node ref="U3" pin="4"/>
     </net>
     <net code="216" name="Net-(U2-Pad3)">
       <node ref="U2" pin="3"/>
     </net>
     <net code="217" name="+1V8">
-      <node ref="C7" pin="1"/>
       <node ref="U2" pin="64"/>
-      <node ref="U2" pin="12"/>
       <node ref="U2" pin="37"/>
+      <node ref="U2" pin="12"/>
+      <node ref="C7" pin="1"/>
       <node ref="U2" pin="49"/>
     </net>
     <net code="218" name="Net-(U2-Pad30)">
@@ -5083,36 +5959,36 @@
       <node ref="U2" pin="48"/>
     </net>
     <net code="224" name="/SPLA Board - USB/EEDATA">
+      <node ref="U3" pin="3"/>
       <node ref="U2" pin="61"/>
       <node ref="R3" pin="1"/>
-      <node ref="U3" pin="3"/>
     </net>
     <net code="225" name="/SPLA Board - USB/EECS">
-      <node ref="R5" pin="2"/>
-      <node ref="U3" pin="1"/>
       <node ref="U2" pin="63"/>
+      <node ref="U3" pin="1"/>
+      <node ref="R5" pin="2"/>
     </net>
     <net code="226" name="/SPLA Board - USB/EECLK">
-      <node ref="U3" pin="2"/>
       <node ref="R4" pin="2"/>
       <node ref="U2" pin="62"/>
+      <node ref="U3" pin="2"/>
     </net>
     <net code="227" name="/SPLA Board - USB/REF">
       <node ref="R6" pin="1"/>
       <node ref="U2" pin="6"/>
     </net>
     <net code="228" name="/SPLA Board - USB/USB_D-">
-      <node ref="J1" pin="2"/>
       <node ref="U2" pin="7"/>
+      <node ref="J1" pin="2"/>
     </net>
     <net code="229" name="/SPLA Board - USB/USB_D+">
-      <node ref="U2" pin="8"/>
       <node ref="J1" pin="3"/>
+      <node ref="U2" pin="8"/>
     </net>
     <net code="230" name="/SPLA Board - USB/USB_ID">
-      <node ref="J1" pin="4"/>
       <node ref="R1" pin="2"/>
       <node ref="C1" pin="2"/>
+      <node ref="J1" pin="4"/>
     </net>
     <net code="231" name="Net-(X1-Pad1)">
       <node ref="X1" pin="1"/>
@@ -5126,8 +6002,8 @@
       <node ref="D3" pin="1"/>
     </net>
     <net code="234" name="/SPLA Board - USB/~RESET">
-      <node ref="U2" pin="14"/>
       <node ref="R7" pin="1"/>
+      <node ref="U2" pin="14"/>
     </net>
     <net code="235" name="Net-(U3-Pad6)">
       <node ref="U3" pin="6"/>
@@ -5149,134 +6025,134 @@
       <node ref="U9" pin="4"/>
     </net>
     <net code="241" name="/SPLA Board - Power/SW_3V3">
-      <node ref="L2" pin="1"/>
       <node ref="U8" pin="7"/>
+      <node ref="L2" pin="1"/>
     </net>
     <net code="242" name="/SPLA Board - Power/VFB_3V3">
-      <node ref="C94" pin="2"/>
       <node ref="R92" pin="1"/>
-      <node ref="R91" pin="2"/>
       <node ref="U8" pin="3"/>
+      <node ref="C94" pin="2"/>
+      <node ref="R91" pin="2"/>
     </net>
     <net code="243" name="/SPLA Board - Power/SYNC_3V3">
-      <node ref="R98" pin="1"/>
       <node ref="U8" pin="5"/>
+      <node ref="R98" pin="1"/>
     </net>
     <net code="244" name="/SPLA Board - Power/~INH~_3V3">
-      <node ref="U8" pin="2"/>
       <node ref="R97" pin="2"/>
+      <node ref="U8" pin="2"/>
     </net>
     <net code="245" name="/SPLA Board - Power/SYNC_5V">
       <node ref="R88" pin="1"/>
       <node ref="U7" pin="5"/>
     </net>
     <net code="246" name="/SPLA Board - Power/PWR_PRE_5V">
-      <node ref="C84" pin="1"/>
-      <node ref="L1" pin="2"/>
-      <node ref="J12" pin="4"/>
-      <node ref="R81" pin="1"/>
-      <node ref="D2" pin="2"/>
-      <node ref="C89" pin="1"/>
       <node ref="C82" pin="1"/>
+      <node ref="C89" pin="1"/>
+      <node ref="J12" pin="4"/>
+      <node ref="C84" pin="1"/>
+      <node ref="D2" pin="2"/>
+      <node ref="L1" pin="2"/>
+      <node ref="R81" pin="1"/>
     </net>
     <net code="247" name="/SPLA Board - Power/SW_5V">
-      <node ref="U7" pin="7"/>
       <node ref="L1" pin="1"/>
+      <node ref="U7" pin="7"/>
     </net>
     <net code="248" name="/SPLA Board - Power/~INH~_5V">
-      <node ref="U7" pin="2"/>
       <node ref="R87" pin="2"/>
+      <node ref="U7" pin="2"/>
     </net>
     <net code="249" name="/SPLA Board - Power/VFB_5V">
-      <node ref="R81" pin="2"/>
-      <node ref="C84" pin="2"/>
       <node ref="R82" pin="1"/>
+      <node ref="C84" pin="2"/>
+      <node ref="R81" pin="2"/>
       <node ref="U7" pin="3"/>
     </net>
     <net code="250" name="+12V">
-      <node ref="C72" pin="1"/>
       <node ref="C71" pin="1"/>
+      <node ref="C72" pin="1"/>
       <node ref="R87" pin="1"/>
-      <node ref="TP5" pin="1"/>
-      <node ref="J7" pin="1"/>
-      <node ref="C83" pin="1"/>
-      <node ref="C81" pin="1"/>
-      <node ref="U7" pin="1"/>
-      <node ref="U7" pin="6"/>
-      <node ref="U8" pin="1"/>
-      <node ref="U8" pin="6"/>
-      <node ref="C93" pin="1"/>
-      <node ref="R97" pin="1"/>
       <node ref="C91" pin="1"/>
+      <node ref="C93" pin="1"/>
+      <node ref="TP5" pin="1"/>
+      <node ref="R97" pin="1"/>
+      <node ref="C81" pin="1"/>
+      <node ref="C83" pin="1"/>
+      <node ref="U8" pin="6"/>
+      <node ref="U7" pin="1"/>
+      <node ref="J7" pin="1"/>
+      <node ref="U8" pin="1"/>
+      <node ref="U7" pin="6"/>
     </net>
     <net code="251" name="/SPLA Board - Power/PWR_1V1_OUT">
+      <node ref="J4" pin="1"/>
       <node ref="U14" pin="5"/>
       <node ref="C42" pin="1"/>
-      <node ref="J4" pin="1"/>
     </net>
     <net code="252" name="+5V">
+      <node ref="C9" pin="1"/>
+      <node ref="C12" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="R321" pin="2"/>
+      <node ref="R221" pin="2"/>
+      <node ref="R121" pin="2"/>
+      <node ref="U76" pin="3"/>
+      <node ref="U76" pin="1"/>
+      <node ref="U11" pin="59"/>
+      <node ref="U11" pin="94"/>
+      <node ref="U11" pin="83"/>
+      <node ref="U11" pin="5"/>
+      <node ref="U10" pin="36"/>
+      <node ref="U10" pin="13"/>
+      <node ref="U11" pin="32"/>
+      <node ref="U12" pin="28"/>
       <node ref="U10" pin="81"/>
       <node ref="U13" pin="28"/>
-      <node ref="U15" pin="23"/>
       <node ref="U10" pin="62"/>
+      <node ref="J15" pin="3"/>
+      <node ref="U20" pin="23"/>
+      <node ref="U20" pin="24"/>
+      <node ref="U17" pin="23"/>
+      <node ref="U23" pin="24"/>
+      <node ref="U23" pin="23"/>
+      <node ref="J12" pin="3"/>
+      <node ref="U24" pin="24"/>
+      <node ref="U24" pin="23"/>
+      <node ref="U26" pin="24"/>
+      <node ref="U26" pin="23"/>
+      <node ref="U16" pin="24"/>
       <node ref="U16" pin="23"/>
-      <node ref="U11" pin="94"/>
-      <node ref="U10" pin="36"/>
-      <node ref="U11" pin="59"/>
-      <node ref="U10" pin="13"/>
+      <node ref="U17" pin="24"/>
+      <node ref="U22" pin="23"/>
+      <node ref="U15" pin="23"/>
+      <node ref="U15" pin="24"/>
       <node ref="U32" pin="24"/>
       <node ref="U32" pin="23"/>
-      <node ref="U15" pin="24"/>
-      <node ref="U16" pin="24"/>
-      <node ref="C10" pin="1"/>
-      <node ref="J15" pin="3"/>
-      <node ref="U31" pin="24"/>
-      <node ref="U31" pin="23"/>
-      <node ref="U76" pin="1"/>
-      <node ref="U76" pin="3"/>
-      <node ref="R121" pin="2"/>
-      <node ref="U11" pin="32"/>
-      <node ref="U11" pin="83"/>
-      <node ref="J12" pin="3"/>
-      <node ref="U11" pin="5"/>
-      <node ref="U17" pin="24"/>
-      <node ref="U17" pin="23"/>
       <node ref="U30" pin="24"/>
       <node ref="U30" pin="23"/>
-      <node ref="U12" pin="28"/>
-      <node ref="C8" pin="1"/>
-      <node ref="C12" pin="1"/>
-      <node ref="C9" pin="1"/>
+      <node ref="U31" pin="24"/>
+      <node ref="U31" pin="23"/>
+      <node ref="U27" pin="23"/>
+      <node ref="U27" pin="24"/>
       <node ref="U25" pin="24"/>
       <node ref="U25" pin="23"/>
       <node ref="U29" pin="24"/>
       <node ref="U29" pin="23"/>
       <node ref="U28" pin="24"/>
       <node ref="U28" pin="23"/>
-      <node ref="R321" pin="2"/>
-      <node ref="R221" pin="2"/>
-      <node ref="U27" pin="24"/>
-      <node ref="U27" pin="23"/>
-      <node ref="U20" pin="23"/>
-      <node ref="U20" pin="24"/>
-      <node ref="U26" pin="23"/>
-      <node ref="U26" pin="24"/>
-      <node ref="U24" pin="23"/>
-      <node ref="U23" pin="24"/>
-      <node ref="U23" pin="23"/>
-      <node ref="U24" pin="24"/>
-      <node ref="U22" pin="23"/>
       <node ref="U22" pin="24"/>
     </net>
     <net code="253" name="/SPLA Board - Power/PWR_2V5_IN">
-      <node ref="J12" pin="9"/>
       <node ref="U9" pin="1"/>
       <node ref="R33" pin="1"/>
+      <node ref="J12" pin="9"/>
     </net>
     <net code="254" name="/SPLA Board - Power/PWR_1V1_IN">
-      <node ref="J12" pin="11"/>
-      <node ref="R34" pin="1"/>
       <node ref="U14" pin="1"/>
+      <node ref="R34" pin="1"/>
+      <node ref="J12" pin="11"/>
     </net>
     <net code="255" name="/SPLA Board - Power/PWR_2V5_EN">
       <node ref="R33" pin="2"/>
@@ -5286,108 +6162,109 @@
       <node ref="R91" pin="1"/>
       <node ref="C99" pin="1"/>
       <node ref="C92" pin="1"/>
+      <node ref="J12" pin="10"/>
+      <node ref="J12" pin="14"/>
+      <node ref="J12" pin="8"/>
+      <node ref="J12" pin="12"/>
       <node ref="C94" pin="1"/>
       <node ref="L2" pin="2"/>
-      <node ref="J12" pin="12"/>
-      <node ref="J12" pin="14"/>
-      <node ref="J12" pin="10"/>
       <node ref="D1" pin="2"/>
-      <node ref="J12" pin="8"/>
     </net>
     <net code="257" name="Net-(D1-Pad1)">
       <node ref="R96" pin="1"/>
       <node ref="D1" pin="1"/>
     </net>
     <net code="258" name="/SPLA Board - Power/PWR_2V5_OUT">
+      <node ref="J4" pin="3"/>
       <node ref="U9" pin="5"/>
       <node ref="C41" pin="1"/>
-      <node ref="J4" pin="3"/>
     </net>
     <net code="259" name="Net-(D2-Pad1)">
       <node ref="R86" pin="1"/>
       <node ref="D2" pin="1"/>
     </net>
-    <net code="260" name="TAP_~BURST~">
-      <node ref="U32" pin="15"/>
-      <node ref="J6" pin="3"/>
-      <node ref="U11" pin="1"/>
+    <net code="260" name="TAP_FIELD">
+      <node ref="U31" pin="18"/>
+      <node ref="U10" pin="95"/>
+      <node ref="U11" pin="36"/>
     </net>
-    <net code="261" name="TAP_PPU2_~PED~">
+    <net code="261" name="TAP_~OVER~">
+      <node ref="U11" pin="50"/>
+      <node ref="U31" pin="17"/>
+      <node ref="U11" pin="37"/>
+      <node ref="U10" pin="94"/>
+    </net>
+    <net code="262" name="TAP_PPU2_~PED~">
       <node ref="U11" pin="2"/>
       <node ref="U31" pin="14"/>
     </net>
-    <net code="262" name="TAP_PPU2_3.58M">
-      <node ref="U31" pin="15"/>
+    <net code="263" name="TAP_PPU2_3.58M">
       <node ref="U11" pin="3"/>
+      <node ref="U31" pin="15"/>
     </net>
-    <net code="263" name="TAP_PPU2_TST8">
+    <net code="264" name="TAP_PPU2_TST8">
       <node ref="U11" pin="86"/>
       <node ref="U16" pin="14"/>
     </net>
-    <net code="264" name="TAP_PPU2_TST9">
-      <node ref="U16" pin="15"/>
+    <net code="265" name="TAP_PPU2_TST9">
       <node ref="U11" pin="87"/>
+      <node ref="U16" pin="15"/>
     </net>
-    <net code="265" name="TAP_PPU2_TST10">
-      <node ref="U11" pin="88"/>
+    <net code="266" name="TAP_PPU2_TST10">
       <node ref="U16" pin="16"/>
+      <node ref="U11" pin="88"/>
     </net>
-    <net code="266" name="TAP_PPU2_TST11">
+    <net code="267" name="TAP_PPU2_TST11">
       <node ref="U16" pin="17"/>
       <node ref="U11" pin="89"/>
     </net>
-    <net code="267" name="TAP_PPU2_TST12">
-      <node ref="U16" pin="18"/>
+    <net code="268" name="TAP_PPU2_TST12">
       <node ref="U11" pin="90"/>
+      <node ref="U16" pin="18"/>
     </net>
-    <net code="268" name="TAP_PPU2_TST13">
+    <net code="269" name="TAP_PPU2_TST13">
       <node ref="U11" pin="91"/>
       <node ref="U16" pin="19"/>
     </net>
-    <net code="269" name="TAP_PPU2_~RESOUT1~">
-      <node ref="U32" pin="19"/>
-      <node ref="U11" pin="28"/>
-    </net>
-    <net code="270" name="TAP_PPU2_~TOUMEI~">
-      <node ref="U32" pin="20"/>
-      <node ref="U11" pin="4"/>
-    </net>
-    <net code="271" name="TAP_PPU2_~RESOUT0~">
-      <node ref="U11" pin="33"/>
-      <node ref="U32" pin="21"/>
-      <node ref="J5" pin="1"/>
-    </net>
-    <net code="272" name="TAP_PPU2_~5MOUT~">
-      <node ref="R11" pin="1"/>
-      <node ref="U32" pin="18"/>
-      <node ref="U11" pin="27"/>
-    </net>
-    <net code="273" name="TAP_~CSYNC~">
+    <net code="270" name="TAP_~CSYNC~">
       <node ref="J6" pin="4"/>
       <node ref="U11" pin="100"/>
       <node ref="U32" pin="14"/>
     </net>
-    <net code="274" name="TAP_PPU1_~EXTSYNC~">
-      <node ref="U10" pin="26"/>
-      <node ref="U15" pin="17"/>
+    <net code="271" name="TAP_PPU2_~RESOUT1~">
+      <node ref="U32" pin="19"/>
+      <node ref="U11" pin="28"/>
     </net>
-    <net code="275" name="TAP_PPU2_EXTLATCH">
+    <net code="272" name="TAP_PPU2_~TOUMEI~">
+      <node ref="U32" pin="20"/>
+      <node ref="U11" pin="4"/>
+    </net>
+    <net code="273" name="TAP_PPU2_~RESOUT0~">
+      <node ref="U32" pin="21"/>
+      <node ref="U11" pin="33"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="274" name="TAP_PPU2_~5MOUT~">
+      <node ref="U11" pin="27"/>
+      <node ref="R11" pin="1"/>
+      <node ref="U32" pin="18"/>
+    </net>
+    <net code="275" name="TAP_PPU1_~EXTSYNC~">
+      <node ref="U15" pin="17"/>
+      <node ref="U10" pin="26"/>
+    </net>
+    <net code="276" name="TAP_PPU2_EXTLATCH">
       <node ref="U15" pin="18"/>
       <node ref="U11" pin="29"/>
     </net>
-    <net code="276" name="TAP_PPU1_~MASTER~">
-      <node ref="U10" pin="25"/>
+    <net code="277" name="TAP_PPU1_~MASTER~">
       <node ref="U15" pin="16"/>
+      <node ref="U10" pin="25"/>
     </net>
-    <net code="277" name="TAP_PPU2_VBLANK">
+    <net code="278" name="TAP_PPU2_VBLANK">
       <node ref="U32" pin="17"/>
-      <node ref="J6" pin="1"/>
       <node ref="U11" pin="26"/>
-    </net>
-    <net code="278" name="TAP_PPU2_HBLANK">
-      <node ref="U32" pin="16"/>
-      <node ref="U11" pin="25"/>
-      <node ref="J6" pin="2"/>
+      <node ref="J6" pin="1"/>
     </net>
     <net code="279" name="TAP_PPU1_HVCMODE">
       <node ref="U15" pin="14"/>
@@ -5402,28 +6279,28 @@
       <node ref="U11" pin="85"/>
     </net>
     <net code="282" name="TAP_PPU2_TST0">
-      <node ref="U11" pin="77"/>
       <node ref="U17" pin="14"/>
+      <node ref="U11" pin="77"/>
     </net>
     <net code="283" name="TAP_PPU2_TST1">
       <node ref="U11" pin="78"/>
       <node ref="U17" pin="15"/>
     </net>
     <net code="284" name="TAP_PPU2_TST2">
-      <node ref="U17" pin="16"/>
       <node ref="U11" pin="79"/>
+      <node ref="U17" pin="16"/>
     </net>
     <net code="285" name="TAP_PPU2_TST3">
-      <node ref="U17" pin="17"/>
       <node ref="U11" pin="80"/>
+      <node ref="U17" pin="17"/>
     </net>
     <net code="286" name="TAP_PPU2_TST4">
       <node ref="U11" pin="81"/>
       <node ref="U17" pin="18"/>
     </net>
     <net code="287" name="TAP_PPU2_TST5">
-      <node ref="U17" pin="19"/>
       <node ref="U11" pin="82"/>
+      <node ref="U17" pin="19"/>
     </net>
     <net code="288" name="TAP_PPU2_TST6">
       <node ref="U17" pin="20"/>
@@ -5440,522 +6317,520 @@
       <node ref="U16" pin="3"/>
     </net>
     <net code="292" name="TAP_PPU1_TST0">
-      <node ref="U10" pin="1"/>
       <node ref="R25" pin="1"/>
-      <node ref="U10" pin="99"/>
       <node ref="U10" pin="2"/>
+      <node ref="U10" pin="1"/>
+      <node ref="U10" pin="99"/>
     </net>
-    <net code="293" name="TAP_XIN">
-      <node ref="TP2" pin="1"/>
-      <node ref="U10" pin="100"/>
-      <node ref="U11" pin="31"/>
-      <node ref="U20" pin="19"/>
+    <net code="293" name="TAP_~BURST~">
+      <node ref="U11" pin="1"/>
+      <node ref="U32" pin="15"/>
+      <node ref="J6" pin="3"/>
     </net>
-    <net code="294" name="TAP_PPU1_~RESET~">
-      <node ref="U20" pin="18"/>
-      <node ref="J5" pin="3"/>
+    <net code="294" name="TAP_PPU2_HBLANK">
+      <node ref="U32" pin="16"/>
+      <node ref="J6" pin="2"/>
+      <node ref="U11" pin="25"/>
     </net>
-    <net code="295" name="TAP_PPU2_~RESET~">
-      <node ref="U20" pin="17"/>
-      <node ref="U11" pin="34"/>
-      <node ref="R29" pin="1"/>
-    </net>
-    <net code="296" name="TAP_PPU2_PALMODE">
-      <node ref="U20" pin="16"/>
-      <node ref="U11" pin="30"/>
-    </net>
-    <net code="297" name="TAP_PPU2_TST15">
-      <node ref="U11" pin="93"/>
-      <node ref="U20" pin="15"/>
-    </net>
-    <net code="298" name="TAP_PPU2_HVCMODE">
-      <node ref="U20" pin="14"/>
-      <node ref="U11" pin="98"/>
-    </net>
-    <net code="299" name="/SPLA Board - Level Shifters/BODGE3">
-      <node ref="U15" pin="19"/>
+    <net code="295" name="/SPLA Board - Level Shifters/BODGE3">
       <node ref="J3" pin="3"/>
+      <node ref="U15" pin="19"/>
     </net>
-    <net code="300" name="/SPLA Board - Level Shifters/BODGE2">
-      <node ref="J3" pin="2"/>
+    <net code="296" name="/SPLA Board - Level Shifters/BODGE2">
       <node ref="U15" pin="20"/>
+      <node ref="J3" pin="2"/>
     </net>
-    <net code="301" name="/SPLA Board - Level Shifters/BODGE1">
+    <net code="297" name="/SPLA Board - Level Shifters/BODGE1">
       <node ref="U15" pin="21"/>
       <node ref="J3" pin="1"/>
     </net>
-    <net code="302" name="Net-(J15-Pad2)">
-      <node ref="R21" pin="2"/>
+    <net code="298" name="TAP_XIN">
+      <node ref="U20" pin="19"/>
+      <node ref="U11" pin="31"/>
+      <node ref="U10" pin="100"/>
+      <node ref="TP2" pin="1"/>
+    </net>
+    <net code="299" name="TAP_PPU1_~RESET~">
+      <node ref="J5" pin="3"/>
+      <node ref="U20" pin="18"/>
+    </net>
+    <net code="300" name="TAP_PPU2_~RESET~">
+      <node ref="U20" pin="17"/>
+      <node ref="U11" pin="34"/>
+    </net>
+    <net code="301" name="TAP_PPU2_PALMODE">
+      <node ref="U20" pin="16"/>
+      <node ref="U11" pin="30"/>
+    </net>
+    <net code="302" name="TAP_PPU2_TST15">
+      <node ref="U20" pin="15"/>
+      <node ref="U11" pin="93"/>
+    </net>
+    <net code="303" name="TAP_PPU2_HVCMODE">
+      <node ref="U20" pin="14"/>
+      <node ref="U11" pin="98"/>
+    </net>
+    <net code="304" name="TAP_~VCLD~">
+      <node ref="U11" pin="40"/>
+      <node ref="U10" pin="91"/>
+      <node ref="U31" pin="20"/>
+    </net>
+    <net code="305" name="TAP_~VAWR~">
+      <node ref="U12" pin="27"/>
+      <node ref="U10" pin="78"/>
+      <node ref="U24" pin="16"/>
+    </net>
+    <net code="306" name="TAP_~VRD~">
+      <node ref="U12" pin="22"/>
+      <node ref="U24" pin="14"/>
+      <node ref="U10" pin="80"/>
+      <node ref="U13" pin="22"/>
+    </net>
+    <net code="307" name="TAP_~VBWR~">
+      <node ref="U10" pin="79"/>
+      <node ref="U24" pin="15"/>
+      <node ref="U13" pin="27"/>
+    </net>
+    <net code="308" name="TAP_PRIO1">
+      <node ref="U30" pin="17"/>
+      <node ref="U11" pin="45"/>
+      <node ref="U10" pin="86"/>
+    </net>
+    <net code="309" name="TAP_PRIO0">
+      <node ref="U11" pin="44"/>
+      <node ref="U10" pin="87"/>
+      <node ref="U30" pin="16"/>
+    </net>
+    <net code="310" name="TAP_COLOR2">
+      <node ref="U11" pin="43"/>
+      <node ref="U10" pin="88"/>
+      <node ref="U30" pin="15"/>
+    </net>
+    <net code="311" name="TAP_COLOR1">
+      <node ref="U11" pin="42"/>
+      <node ref="U30" pin="14"/>
+      <node ref="U10" pin="89"/>
+    </net>
+    <net code="312" name="TAP_COLOR0">
+      <node ref="U31" pin="21"/>
+      <node ref="U11" pin="41"/>
+      <node ref="U10" pin="90"/>
+    </net>
+    <net code="313" name="TAP_~HCLD~">
+      <node ref="U31" pin="19"/>
+      <node ref="U10" pin="92"/>
+      <node ref="U11" pin="39"/>
+    </net>
+    <net code="314" name="Net-(J15-Pad2)">
+      <node ref="R20" pin="2"/>
       <node ref="R17" pin="2"/>
+      <node ref="J15" pin="2"/>
       <node ref="R18" pin="2"/>
       <node ref="R23" pin="2"/>
+      <node ref="R21" pin="2"/>
       <node ref="R19" pin="2"/>
       <node ref="R22" pin="2"/>
-      <node ref="R20" pin="2"/>
       <node ref="R24" pin="2"/>
-      <node ref="J15" pin="2"/>
     </net>
-    <net code="303" name="Net-(U10-Pad46)">
-      <node ref="U10" pin="46"/>
-    </net>
-    <net code="304" name="/SPLA Board - PPU/NC">
+    <net code="315" name="/SPLA Board - PPU/NC">
       <node ref="U10" pin="27"/>
     </net>
-    <net code="305" name="ANALOG_R">
-      <node ref="R122" pin="2"/>
-      <node ref="U11" pin="95"/>
+    <net code="316" name="TAP_VDB0">
+      <node ref="U11" pin="69"/>
+      <node ref="U10" pin="28"/>
+      <node ref="U29" pin="14"/>
+      <node ref="U11" pin="51"/>
+      <node ref="U13" pin="11"/>
     </net>
-    <net code="306" name="TAP_D2">
-      <node ref="U11" pin="13"/>
+    <net code="317" name="TAP_PA4">
+      <node ref="U10" pin="8"/>
+      <node ref="U22" pin="17"/>
+      <node ref="U11" pin="20"/>
+    </net>
+    <net code="318" name="TAP_D2">
       <node ref="U23" pin="19"/>
       <node ref="U10" pin="19"/>
       <node ref="R22" pin="1"/>
+      <node ref="U11" pin="13"/>
     </net>
-    <net code="307" name="TAP_D1">
-      <node ref="U23" pin="20"/>
+    <net code="319" name="TAP_D1">
       <node ref="U10" pin="20"/>
+      <node ref="U23" pin="20"/>
       <node ref="R23" pin="1"/>
       <node ref="U11" pin="14"/>
     </net>
-    <net code="308" name="TAP_D0">
-      <node ref="R24" pin="1"/>
-      <node ref="U10" pin="21"/>
+    <net code="320" name="TAP_D0">
       <node ref="U23" pin="21"/>
+      <node ref="U10" pin="21"/>
       <node ref="U11" pin="15"/>
+      <node ref="R24" pin="1"/>
     </net>
-    <net code="309" name="TAP_D3">
-      <node ref="U23" pin="18"/>
-      <node ref="R21" pin="1"/>
-      <node ref="U11" pin="12"/>
-      <node ref="U10" pin="18"/>
-    </net>
-    <net code="310" name="TAP_PA3">
-      <node ref="U10" pin="9"/>
-      <node ref="U22" pin="18"/>
-      <node ref="U11" pin="21"/>
-    </net>
-    <net code="311" name="TAP_~PARD~">
+    <net code="321" name="TAP_~PARD~">
       <node ref="U20" pin="20"/>
-      <node ref="U10" pin="3"/>
       <node ref="U11" pin="7"/>
+      <node ref="U10" pin="3"/>
     </net>
-    <net code="312" name="TAP_~PAWR~">
+    <net code="322" name="TAP_~PAWR~">
       <node ref="U20" pin="21"/>
       <node ref="U11" pin="6"/>
       <node ref="U10" pin="4"/>
     </net>
-    <net code="313" name="TAP_PA7">
+    <net code="323" name="TAP_PA7">
+      <node ref="U22" pin="14"/>
       <node ref="U11" pin="17"/>
       <node ref="U10" pin="5"/>
-      <node ref="U22" pin="14"/>
     </net>
-    <net code="314" name="TAP_PA6">
+    <net code="324" name="TAP_PA6">
       <node ref="U11" pin="18"/>
-      <node ref="U22" pin="15"/>
       <node ref="U10" pin="6"/>
+      <node ref="U22" pin="15"/>
     </net>
-    <net code="315" name="TAP_PA5">
-      <node ref="U11" pin="19"/>
+    <net code="325" name="TAP_PA5">
       <node ref="U22" pin="16"/>
       <node ref="U10" pin="7"/>
+      <node ref="U11" pin="19"/>
     </net>
-    <net code="316" name="TAP_PA4">
-      <node ref="U11" pin="20"/>
-      <node ref="U22" pin="17"/>
-      <node ref="U10" pin="8"/>
+    <net code="326" name="TAP_D3">
+      <node ref="U11" pin="12"/>
+      <node ref="R21" pin="1"/>
+      <node ref="U10" pin="18"/>
+      <node ref="U23" pin="18"/>
     </net>
-    <net code="317" name="TAP_PA2">
-      <node ref="U11" pin="22"/>
+    <net code="327" name="TAP_PA3">
+      <node ref="U10" pin="9"/>
+      <node ref="U22" pin="18"/>
+      <node ref="U11" pin="21"/>
+    </net>
+    <net code="328" name="TAP_PA2">
       <node ref="U22" pin="19"/>
       <node ref="U10" pin="10"/>
+      <node ref="U11" pin="22"/>
     </net>
-    <net code="318" name="TAP_PA1">
-      <node ref="U11" pin="23"/>
+    <net code="329" name="TAP_PA1">
       <node ref="U22" pin="20"/>
+      <node ref="U11" pin="23"/>
       <node ref="U10" pin="11"/>
     </net>
-    <net code="319" name="TAP_PA0">
+    <net code="330" name="TAP_PA0">
       <node ref="U11" pin="24"/>
-      <node ref="U22" pin="21"/>
       <node ref="U10" pin="12"/>
+      <node ref="U22" pin="21"/>
     </net>
-    <net code="320" name="TAP_D7">
+    <net code="331" name="TAP_D7">
       <node ref="R17" pin="1"/>
+      <node ref="U23" pin="14"/>
       <node ref="U10" pin="14"/>
       <node ref="U11" pin="8"/>
-      <node ref="U23" pin="14"/>
     </net>
-    <net code="321" name="TAP_D6">
-      <node ref="U10" pin="15"/>
+    <net code="332" name="TAP_D6">
       <node ref="R18" pin="1"/>
       <node ref="U23" pin="15"/>
       <node ref="U11" pin="9"/>
+      <node ref="U10" pin="15"/>
     </net>
-    <net code="322" name="TAP_D5">
-      <node ref="R19" pin="1"/>
-      <node ref="U23" pin="16"/>
+    <net code="333" name="TAP_D5">
       <node ref="U11" pin="10"/>
+      <node ref="R19" pin="1"/>
       <node ref="U10" pin="16"/>
+      <node ref="U23" pin="16"/>
     </net>
-    <net code="323" name="TAP_D4">
-      <node ref="U11" pin="11"/>
+    <net code="334" name="TAP_D4">
       <node ref="U23" pin="17"/>
       <node ref="U10" pin="17"/>
       <node ref="R20" pin="1"/>
+      <node ref="U11" pin="11"/>
     </net>
-    <net code="324" name="TAP_VDB0">
-      <node ref="U11" pin="69"/>
-      <node ref="U10" pin="28"/>
-      <node ref="U29" pin="14"/>
-      <node ref="U13" pin="11"/>
-      <node ref="U11" pin="51"/>
+    <net code="335" name="TAP_VDA1">
+      <node ref="U12" pin="12"/>
+      <node ref="U11" pin="61"/>
+      <node ref="U10" pin="38"/>
+      <node ref="U28" pin="15"/>
     </net>
-    <net code="325" name="TAP_VDB1">
-      <node ref="U11" pin="52"/>
-      <node ref="U11" pin="70"/>
-      <node ref="U29" pin="15"/>
-      <node ref="U13" pin="12"/>
-      <node ref="U10" pin="29"/>
-    </net>
-    <net code="326" name="TAP_VDA0">
-      <node ref="U28" pin="14"/>
-      <node ref="U10" pin="37"/>
-      <node ref="U12" pin="11"/>
-      <node ref="U11" pin="60"/>
-    </net>
-    <net code="327" name="TAP_VDA7">
-      <node ref="U10" pin="44"/>
+    <net code="336" name="TAP_VDA7">
       <node ref="U12" pin="19"/>
       <node ref="U28" pin="21"/>
+      <node ref="U10" pin="44"/>
       <node ref="U11" pin="67"/>
     </net>
-    <net code="328" name="TAP_VDA6">
+    <net code="337" name="TAP_VDA6">
       <node ref="U10" pin="43"/>
-      <node ref="U28" pin="20"/>
       <node ref="U11" pin="66"/>
+      <node ref="U28" pin="20"/>
       <node ref="U12" pin="18"/>
     </net>
-    <net code="329" name="TAP_VDA5">
-      <node ref="U10" pin="42"/>
+    <net code="338" name="TAP_VDA5">
       <node ref="U28" pin="19"/>
       <node ref="U12" pin="17"/>
+      <node ref="U10" pin="42"/>
       <node ref="U11" pin="65"/>
     </net>
-    <net code="330" name="TAP_VDA4">
-      <node ref="U11" pin="64"/>
-      <node ref="U28" pin="18"/>
+    <net code="339" name="TAP_VDA4">
       <node ref="U10" pin="41"/>
+      <node ref="U11" pin="64"/>
       <node ref="U12" pin="16"/>
+      <node ref="U28" pin="18"/>
     </net>
-    <net code="331" name="TAP_VDA3">
+    <net code="340" name="TAP_VDA3">
+      <node ref="U11" pin="63"/>
+      <node ref="U28" pin="17"/>
       <node ref="U12" pin="15"/>
       <node ref="U10" pin="40"/>
-      <node ref="U28" pin="17"/>
-      <node ref="U11" pin="63"/>
     </net>
-    <net code="332" name="TAP_VDA2">
-      <node ref="U10" pin="39"/>
-      <node ref="U28" pin="16"/>
+    <net code="341" name="TAP_VDA2">
       <node ref="U11" pin="62"/>
+      <node ref="U28" pin="16"/>
       <node ref="U12" pin="13"/>
+      <node ref="U10" pin="39"/>
     </net>
-    <net code="333" name="TAP_VDA1">
-      <node ref="U10" pin="38"/>
-      <node ref="U11" pin="61"/>
-      <node ref="U28" pin="15"/>
-      <node ref="U12" pin="12"/>
+    <net code="342" name="TAP_VDA0">
+      <node ref="U10" pin="37"/>
+      <node ref="U12" pin="11"/>
+      <node ref="U28" pin="14"/>
+      <node ref="U11" pin="60"/>
     </net>
-    <net code="334" name="TAP_VDB7">
-      <node ref="U11" pin="76"/>
+    <net code="343" name="TAP_VDB7">
+      <node ref="U13" pin="19"/>
       <node ref="U10" pin="35"/>
       <node ref="U29" pin="21"/>
-      <node ref="U13" pin="19"/>
       <node ref="U11" pin="58"/>
+      <node ref="U11" pin="76"/>
     </net>
-    <net code="335" name="TAP_VDB6">
-      <node ref="U13" pin="18"/>
+    <net code="344" name="TAP_VDB6">
       <node ref="U29" pin="20"/>
-      <node ref="U11" pin="57"/>
       <node ref="U10" pin="34"/>
       <node ref="U11" pin="75"/>
+      <node ref="U13" pin="18"/>
+      <node ref="U11" pin="57"/>
     </net>
-    <net code="336" name="TAP_VDB5">
-      <node ref="U11" pin="74"/>
+    <net code="345" name="TAP_VDB5">
       <node ref="U13" pin="17"/>
-      <node ref="U29" pin="19"/>
-      <node ref="U11" pin="56"/>
       <node ref="U10" pin="33"/>
+      <node ref="U11" pin="56"/>
+      <node ref="U11" pin="74"/>
+      <node ref="U29" pin="19"/>
     </net>
-    <net code="337" name="TAP_VDB4">
-      <node ref="U10" pin="32"/>
-      <node ref="U13" pin="16"/>
-      <node ref="U29" pin="18"/>
+    <net code="346" name="TAP_VDB4">
       <node ref="U11" pin="55"/>
+      <node ref="U13" pin="16"/>
       <node ref="U11" pin="73"/>
+      <node ref="U29" pin="18"/>
+      <node ref="U10" pin="32"/>
     </net>
-    <net code="338" name="TAP_VDB3">
-      <node ref="U11" pin="72"/>
+    <net code="347" name="TAP_VDB3">
       <node ref="U29" pin="17"/>
+      <node ref="U10" pin="31"/>
       <node ref="U11" pin="54"/>
       <node ref="U13" pin="15"/>
-      <node ref="U10" pin="31"/>
+      <node ref="U11" pin="72"/>
     </net>
-    <net code="339" name="TAP_VDB2">
-      <node ref="U11" pin="53"/>
-      <node ref="U29" pin="16"/>
-      <node ref="U10" pin="30"/>
-      <node ref="U11" pin="71"/>
-      <node ref="U13" pin="13"/>
-    </net>
-    <net code="340" name="ANALOG_G">
-      <node ref="R222" pin="2"/>
-      <node ref="U11" pin="96"/>
-    </net>
-    <net code="341" name="ANALOG_B">
-      <node ref="U11" pin="97"/>
-      <node ref="R322" pin="2"/>
-    </net>
-    <net code="342" name="TAP_~5M~">
-      <node ref="U11" pin="38"/>
-      <node ref="U10" pin="97"/>
-      <node ref="U31" pin="16"/>
-      <node ref="U10" pin="93"/>
-    </net>
-    <net code="343" name="Net-(C11-Pad1)">
+    <net code="348" name="Net-(C11-Pad1)">
       <node ref="R11" pin="2"/>
       <node ref="C11" pin="1"/>
     </net>
-    <net code="344" name="TAP_VA14">
-      <node ref="U27" pin="18"/>
-      <node ref="U12" pin="1"/>
-      <node ref="U13" pin="1"/>
-      <node ref="U10" pin="47"/>
+    <net code="349" name="TAP_~5M~">
+      <node ref="U11" pin="38"/>
+      <node ref="U31" pin="16"/>
+      <node ref="U10" pin="93"/>
+      <node ref="U10" pin="97"/>
     </net>
-    <net code="345" name="TAP_VAB13">
-      <node ref="U27" pin="19"/>
-      <node ref="U10" pin="48"/>
-      <node ref="U13" pin="26"/>
+    <net code="350" name="ANALOG_R">
+      <node ref="U11" pin="95"/>
+      <node ref="R122" pin="2"/>
     </net>
-    <net code="346" name="TAP_VAB12">
-      <node ref="U13" pin="2"/>
-      <node ref="U27" pin="20"/>
-      <node ref="U10" pin="49"/>
+    <net code="351" name="ANALOG_G">
+      <node ref="U11" pin="96"/>
+      <node ref="R222" pin="2"/>
     </net>
-    <net code="347" name="TAP_VAB11">
-      <node ref="U27" pin="21"/>
-      <node ref="U10" pin="50"/>
-      <node ref="U13" pin="23"/>
+    <net code="352" name="ANALOG_B">
+      <node ref="U11" pin="97"/>
+      <node ref="R322" pin="2"/>
     </net>
-    <net code="348" name="TAP_VAB10">
-      <node ref="U27" pin="17"/>
-      <node ref="U13" pin="21"/>
-      <node ref="U10" pin="51"/>
+    <net code="353" name="TAP_VDB2">
+      <node ref="U11" pin="53"/>
+      <node ref="U11" pin="71"/>
+      <node ref="U10" pin="30"/>
+      <node ref="U29" pin="16"/>
+      <node ref="U13" pin="13"/>
     </net>
-    <net code="349" name="TAP_VAB9">
-      <node ref="U27" pin="16"/>
-      <node ref="U10" pin="52"/>
-      <node ref="U13" pin="24"/>
-    </net>
-    <net code="350" name="TAP_~VAWR~">
-      <node ref="U12" pin="27"/>
-      <node ref="U24" pin="16"/>
-      <node ref="U10" pin="78"/>
-    </net>
-    <net code="351" name="TAP_~VRD~">
-      <node ref="U13" pin="22"/>
-      <node ref="U10" pin="80"/>
-      <node ref="U12" pin="22"/>
-      <node ref="U24" pin="14"/>
-    </net>
-    <net code="352" name="TAP_~VBWR~">
-      <node ref="U13" pin="27"/>
-      <node ref="U24" pin="15"/>
-      <node ref="U10" pin="79"/>
-    </net>
-    <net code="353" name="TAP_VAB0">
-      <node ref="U10" pin="61"/>
-      <node ref="U13" pin="10"/>
-      <node ref="U26" pin="15"/>
-    </net>
-    <net code="354" name="TAP_VAB8">
-      <node ref="U13" pin="25"/>
-      <node ref="U10" pin="53"/>
-      <node ref="U27" pin="15"/>
-    </net>
-    <net code="355" name="TAP_VAB7">
-      <node ref="U10" pin="54"/>
-      <node ref="U27" pin="14"/>
-      <node ref="U13" pin="3"/>
-    </net>
-    <net code="356" name="TAP_VAB6">
-      <node ref="U26" pin="21"/>
-      <node ref="U10" pin="55"/>
-      <node ref="U13" pin="4"/>
-    </net>
-    <net code="357" name="TAP_VAB5">
-      <node ref="U10" pin="56"/>
-      <node ref="U13" pin="5"/>
-      <node ref="U26" pin="20"/>
-    </net>
-    <net code="358" name="TAP_VAB4">
-      <node ref="U26" pin="19"/>
-      <node ref="U13" pin="6"/>
-      <node ref="U10" pin="57"/>
-    </net>
-    <net code="359" name="TAP_VAB3">
-      <node ref="U13" pin="7"/>
-      <node ref="U10" pin="58"/>
-      <node ref="U26" pin="18"/>
-    </net>
-    <net code="360" name="TAP_VAB2">
-      <node ref="U26" pin="17"/>
-      <node ref="U13" pin="8"/>
-      <node ref="U10" pin="59"/>
-    </net>
-    <net code="361" name="TAP_VAB1">
+    <net code="357" name="TAP_VAB1">
       <node ref="U10" pin="60"/>
       <node ref="U26" pin="16"/>
       <node ref="U13" pin="9"/>
     </net>
-    <net code="366" name="TAP_COLOR0">
-      <node ref="U10" pin="90"/>
-      <node ref="U11" pin="41"/>
-      <node ref="U31" pin="21"/>
+    <net code="358" name="TAP_VAB9">
+      <node ref="U13" pin="24"/>
+      <node ref="U27" pin="16"/>
+      <node ref="U10" pin="52"/>
     </net>
-    <net code="367" name="TAP_CHR3">
+    <net code="359" name="TAP_VAB8">
+      <node ref="U10" pin="53"/>
+      <node ref="U27" pin="15"/>
+      <node ref="U13" pin="25"/>
+    </net>
+    <net code="360" name="TAP_VAB7">
+      <node ref="U13" pin="3"/>
+      <node ref="U10" pin="54"/>
+      <node ref="U27" pin="14"/>
+    </net>
+    <net code="361" name="TAP_VAB6">
+      <node ref="U10" pin="55"/>
+      <node ref="U26" pin="21"/>
+      <node ref="U13" pin="4"/>
+    </net>
+    <net code="362" name="TAP_VAB5">
+      <node ref="U26" pin="20"/>
+      <node ref="U10" pin="56"/>
+      <node ref="U13" pin="5"/>
+    </net>
+    <net code="363" name="TAP_VAB4">
+      <node ref="U10" pin="57"/>
+      <node ref="U26" pin="19"/>
+      <node ref="U13" pin="6"/>
+    </net>
+    <net code="364" name="TAP_VAB3">
+      <node ref="U10" pin="58"/>
+      <node ref="U13" pin="7"/>
+      <node ref="U26" pin="18"/>
+    </net>
+    <net code="365" name="TAP_VAB2">
+      <node ref="U13" pin="8"/>
+      <node ref="U10" pin="59"/>
+      <node ref="U26" pin="17"/>
+    </net>
+    <net code="366" name="TAP_VAB10">
+      <node ref="U27" pin="17"/>
+      <node ref="U13" pin="21"/>
+      <node ref="U10" pin="51"/>
+    </net>
+    <net code="367" name="TAP_VAB0">
+      <node ref="U26" pin="15"/>
+      <node ref="U13" pin="10"/>
+      <node ref="U10" pin="61"/>
+    </net>
+    <net code="368" name="TAP_VA14">
+      <node ref="U12" pin="1"/>
+      <node ref="U13" pin="1"/>
+      <node ref="U10" pin="47"/>
+      <node ref="U27" pin="18"/>
+    </net>
+    <net code="369" name="TAP_VAB13">
+      <node ref="U13" pin="26"/>
+      <node ref="U27" pin="19"/>
+      <node ref="U10" pin="48"/>
+    </net>
+    <net code="370" name="TAP_VAB12">
+      <node ref="U13" pin="2"/>
+      <node ref="U10" pin="49"/>
+      <node ref="U27" pin="20"/>
+    </net>
+    <net code="371" name="TAP_VAB11">
+      <node ref="U13" pin="23"/>
+      <node ref="U27" pin="21"/>
+      <node ref="U10" pin="50"/>
+    </net>
+    <net code="373" name="TAP_VDB1">
+      <node ref="U29" pin="15"/>
+      <node ref="U10" pin="29"/>
+      <node ref="U13" pin="12"/>
+      <node ref="U11" pin="70"/>
+      <node ref="U11" pin="52"/>
+    </net>
+    <net code="374" name="TAP_CHR3">
+      <node ref="U10" pin="82"/>
       <node ref="U30" pin="21"/>
       <node ref="U11" pin="49"/>
-      <node ref="U10" pin="82"/>
     </net>
-    <net code="368" name="TAP_CHR2">
-      <node ref="U30" pin="20"/>
+    <net code="375" name="TAP_CHR2">
       <node ref="U10" pin="83"/>
       <node ref="U11" pin="48"/>
+      <node ref="U30" pin="20"/>
     </net>
-    <net code="369" name="TAP_CHR1">
+    <net code="376" name="TAP_CHR1">
+      <node ref="U10" pin="84"/>
       <node ref="U30" pin="19"/>
       <node ref="U11" pin="47"/>
-      <node ref="U10" pin="84"/>
     </net>
-    <net code="370" name="TAP_CHR0">
-      <node ref="U30" pin="18"/>
-      <node ref="U11" pin="46"/>
+    <net code="377" name="TAP_CHR0">
       <node ref="U10" pin="85"/>
+      <node ref="U11" pin="46"/>
+      <node ref="U30" pin="18"/>
     </net>
-    <net code="371" name="TAP_PRIO1">
-      <node ref="U10" pin="86"/>
-      <node ref="U11" pin="45"/>
-      <node ref="U30" pin="17"/>
-    </net>
-    <net code="372" name="TAP_PRIO0">
-      <node ref="U10" pin="87"/>
-      <node ref="U11" pin="44"/>
-      <node ref="U30" pin="16"/>
-    </net>
-    <net code="373" name="TAP_COLOR2">
-      <node ref="U30" pin="15"/>
-      <node ref="U10" pin="88"/>
-      <node ref="U11" pin="43"/>
-    </net>
-    <net code="374" name="TAP_COLOR1">
-      <node ref="U10" pin="89"/>
-      <node ref="U30" pin="14"/>
-      <node ref="U11" pin="42"/>
-    </net>
-    <net code="375" name="TAP_~VCLD~">
-      <node ref="U10" pin="91"/>
-      <node ref="U11" pin="40"/>
-      <node ref="U31" pin="20"/>
-    </net>
-    <net code="376" name="TAP_~HCLD~">
-      <node ref="U11" pin="39"/>
-      <node ref="U31" pin="19"/>
-      <node ref="U10" pin="92"/>
-    </net>
-    <net code="377" name="TAP_FIELD">
-      <node ref="U11" pin="36"/>
-      <node ref="U10" pin="95"/>
-      <node ref="U31" pin="18"/>
-    </net>
-    <net code="378" name="TAP_~OVER~">
-      <node ref="U11" pin="50"/>
-      <node ref="U11" pin="37"/>
-      <node ref="U10" pin="94"/>
-      <node ref="U31" pin="17"/>
+    <net code="378" name="Net-(U10-Pad46)">
+      <node ref="U10" pin="46"/>
     </net>
     <net code="379" name="/SPLA Board - PPU/PPU1_~RESET~_ONLY">
-      <node ref="J5" pin="2"/>
       <node ref="U10" pin="98"/>
+      <node ref="J5" pin="2"/>
     </net>
-    <net code="380" name="TAP_VAA0">
-      <node ref="U10" pin="76"/>
-      <node ref="U12" pin="10"/>
-      <node ref="U24" pin="17"/>
+    <net code="380" name="TAP_VAA5">
+      <node ref="U25" pin="14"/>
+      <node ref="U12" pin="5"/>
+      <node ref="U10" pin="71"/>
     </net>
-    <net code="381" name="TAP_VAA1">
-      <node ref="U12" pin="9"/>
-      <node ref="U24" pin="18"/>
-      <node ref="U10" pin="75"/>
+    <net code="381" name="TAP_VAA13">
+      <node ref="U12" pin="26"/>
+      <node ref="U10" pin="63"/>
+      <node ref="U26" pin="14"/>
     </net>
     <net code="382" name="TAP_VAA12">
-      <node ref="U25" pin="21"/>
-      <node ref="U10" pin="64"/>
       <node ref="U12" pin="2"/>
+      <node ref="U10" pin="64"/>
+      <node ref="U25" pin="21"/>
     </net>
-    <net code="383" name="TAP_VAA10">
-      <node ref="U10" pin="66"/>
-      <node ref="U12" pin="21"/>
-      <node ref="U25" pin="19"/>
-    </net>
-    <net code="384" name="TAP_VAA11">
-      <node ref="U12" pin="23"/>
+    <net code="383" name="TAP_VAA11">
       <node ref="U25" pin="20"/>
+      <node ref="U12" pin="23"/>
       <node ref="U10" pin="65"/>
     </net>
+    <net code="384" name="TAP_VAA10">
+      <node ref="U25" pin="19"/>
+      <node ref="U10" pin="66"/>
+      <node ref="U12" pin="21"/>
+    </net>
     <net code="385" name="TAP_VAA9">
+      <node ref="U10" pin="67"/>
       <node ref="U12" pin="24"/>
       <node ref="U25" pin="18"/>
-      <node ref="U10" pin="67"/>
     </net>
     <net code="386" name="TAP_VAA8">
       <node ref="U10" pin="68"/>
       <node ref="U12" pin="25"/>
       <node ref="U25" pin="17"/>
     </net>
-    <net code="387" name="TAP_VAA13">
-      <node ref="U10" pin="63"/>
-      <node ref="U12" pin="26"/>
-      <node ref="U26" pin="14"/>
-    </net>
-    <net code="388" name="TAP_VAA7">
-      <node ref="U10" pin="69"/>
+    <net code="387" name="TAP_VAA7">
       <node ref="U25" pin="16"/>
       <node ref="U12" pin="3"/>
+      <node ref="U10" pin="69"/>
     </net>
-    <net code="389" name="TAP_VAA6">
-      <node ref="U12" pin="4"/>
-      <node ref="U25" pin="15"/>
+    <net code="388" name="TAP_VAA6">
       <node ref="U10" pin="70"/>
+      <node ref="U25" pin="15"/>
+      <node ref="U12" pin="4"/>
     </net>
-    <net code="390" name="TAP_VAA5">
-      <node ref="U10" pin="71"/>
-      <node ref="U25" pin="14"/>
-      <node ref="U12" pin="5"/>
-    </net>
-    <net code="391" name="TAP_VAA4">
+    <net code="389" name="TAP_VAA4">
+      <node ref="U24" pin="21"/>
       <node ref="U12" pin="6"/>
       <node ref="U10" pin="72"/>
-      <node ref="U24" pin="21"/>
     </net>
-    <net code="392" name="TAP_VAA3">
+    <net code="390" name="TAP_VAA3">
       <node ref="U24" pin="20"/>
       <node ref="U12" pin="7"/>
       <node ref="U10" pin="73"/>
     </net>
-    <net code="393" name="TAP_VAA2">
+    <net code="391" name="TAP_VAA2">
       <node ref="U24" pin="19"/>
       <node ref="U12" pin="8"/>
       <node ref="U10" pin="74"/>
+    </net>
+    <net code="392" name="TAP_VAA1">
+      <node ref="U12" pin="9"/>
+      <node ref="U24" pin="18"/>
+      <node ref="U10" pin="75"/>
+    </net>
+    <net code="393" name="TAP_VAA0">
+      <node ref="U10" pin="76"/>
+      <node ref="U24" pin="17"/>
+      <node ref="U12" pin="10"/>
     </net>
     <net code="396" name="Net-(U53-Pad22)">
       <node ref="U53" pin="22"/>
@@ -5964,17 +6839,17 @@
       <node ref="U53" pin="16"/>
     </net>
     <net code="398" name="/SPLA Board - Analog/AREF_LO">
-      <node ref="TP4" pin="1"/>
       <node ref="J8" pin="4"/>
+      <node ref="TP4" pin="1"/>
       <node ref="U52" pin="23"/>
-      <node ref="U53" pin="23"/>
       <node ref="U51" pin="23"/>
+      <node ref="U53" pin="23"/>
     </net>
     <net code="399" name="/SPLA Board - Analog/AREF_HI">
       <node ref="U52" pin="17"/>
-      <node ref="U53" pin="17"/>
-      <node ref="J8" pin="2"/>
       <node ref="U51" pin="17"/>
+      <node ref="J8" pin="2"/>
+      <node ref="U53" pin="17"/>
       <node ref="TP3" pin="1"/>
     </net>
     <net code="400" name="/SPLA Board - Analog/3.3VA_IN">
@@ -5994,14 +6869,14 @@
       <node ref="U61" pin="5"/>
     </net>
     <net code="405" name="/SPLA Board - Analog/AOP_N_R">
-      <node ref="R103" pin="2"/>
       <node ref="R104" pin="1"/>
+      <node ref="R103" pin="2"/>
       <node ref="U61" pin="4"/>
     </net>
     <net code="406" name="/SPLA Board - Analog/AOP_P_R">
-      <node ref="C102" pin="1"/>
-      <node ref="R102" pin="2"/>
       <node ref="U61" pin="3"/>
+      <node ref="R102" pin="2"/>
+      <node ref="C102" pin="1"/>
     </net>
     <net code="407" name="/SPLA Board - Analog/ASCALED_B">
       <node ref="R301" pin="1"/>
@@ -6032,10 +6907,10 @@
       <node ref="U52" pin="16"/>
     </net>
     <net code="414" name="/SPLA Board - Analog/ALINE_R">
-      <node ref="R122" pin="1"/>
-      <node ref="R121" pin="1"/>
       <node ref="R111" pin="2"/>
+      <node ref="R121" pin="1"/>
       <node ref="R123" pin="2"/>
+      <node ref="R122" pin="1"/>
     </net>
     <net code="415" name="Net-(U51-Pad22)">
       <node ref="U51" pin="22"/>
@@ -6048,165 +6923,165 @@
       <node ref="R208" pin="2"/>
     </net>
     <net code="418" name="/SPLA Board - Analog/AOP_N_G">
-      <node ref="U62" pin="4"/>
       <node ref="R203" pin="2"/>
       <node ref="R204" pin="1"/>
+      <node ref="U62" pin="4"/>
     </net>
     <net code="419" name="/SPLA Board - Analog/AOP_P_G">
-      <node ref="R202" pin="2"/>
       <node ref="U62" pin="3"/>
+      <node ref="R202" pin="2"/>
       <node ref="C202" pin="1"/>
     </net>
     <net code="420" name="/SPLA Board - Analog/AOP_F_G">
-      <node ref="R202" pin="1"/>
       <node ref="C201" pin="2"/>
       <node ref="R201" pin="2"/>
+      <node ref="R202" pin="1"/>
     </net>
     <net code="421" name="/SPLA Board - Analog/ADC_B">
       <node ref="R309" pin="1"/>
       <node ref="C309" pin="1"/>
       <node ref="U53" pin="19"/>
     </net>
-    <net code="422" name="/SPLA Board - Analog/AOP_OUT_B">
-      <node ref="C301" pin="1"/>
-      <node ref="R309" pin="2"/>
-      <node ref="U63" pin="1"/>
-      <node ref="R303" pin="1"/>
-    </net>
-    <net code="423" name="Net-(R308-Pad2)">
+    <net code="422" name="Net-(R308-Pad2)">
       <node ref="U63" pin="5"/>
       <node ref="R308" pin="2"/>
     </net>
-    <net code="424" name="/SPLA Board - Analog/ASCALED_G">
-      <node ref="J13" pin="4"/>
-      <node ref="R201" pin="1"/>
+    <net code="423" name="Net-(C302-Pad1)">
+      <node ref="R302" pin="2"/>
+      <node ref="C302" pin="1"/>
+      <node ref="U63" pin="3"/>
     </net>
-    <net code="425" name="/SPLA Board - Analog/ADC_G">
+    <net code="424" name="/SPLA Board - Analog/ADC_G">
       <node ref="U52" pin="19"/>
       <node ref="R209" pin="1"/>
       <node ref="C209" pin="1"/>
     </net>
+    <net code="425" name="/SPLA Board - Analog/ASCALED_G">
+      <node ref="J13" pin="4"/>
+      <node ref="R201" pin="1"/>
+    </net>
     <net code="426" name="/SPLA Board - Analog/AOP_OUT_G">
-      <node ref="U62" pin="1"/>
-      <node ref="R203" pin="1"/>
       <node ref="R209" pin="2"/>
+      <node ref="U62" pin="1"/>
       <node ref="C201" pin="1"/>
+      <node ref="R203" pin="1"/>
     </net>
     <net code="427" name="/SPLA Board - Analog/AOP_F_R">
-      <node ref="R102" pin="1"/>
       <node ref="C101" pin="2"/>
       <node ref="R101" pin="2"/>
+      <node ref="R102" pin="1"/>
     </net>
     <net code="428" name="/SPLA Board - Analog/ADC_R">
-      <node ref="U51" pin="19"/>
-      <node ref="C109" pin="1"/>
       <node ref="R109" pin="1"/>
+      <node ref="C109" pin="1"/>
+      <node ref="U51" pin="19"/>
     </net>
-    <net code="429" name="/SPLA Board - Analog/ATERM_B">
-      <node ref="C311" pin="1"/>
-      <node ref="J13" pin="1"/>
-      <node ref="R311" pin="1"/>
-    </net>
-    <net code="430" name="/SPLA Board - Analog/ATERM_R">
+    <net code="429" name="/SPLA Board - Analog/ATERM_R">
+      <node ref="J13" pin="5"/>
       <node ref="C111" pin="1"/>
       <node ref="R111" pin="1"/>
-      <node ref="J13" pin="5"/>
     </net>
-    <net code="431" name="/SPLA Board - Analog/ATERM_G">
-      <node ref="R211" pin="1"/>
-      <node ref="J13" pin="3"/>
+    <net code="430" name="/SPLA Board - Analog/ATERM_G">
       <node ref="C211" pin="1"/>
+      <node ref="J13" pin="3"/>
+      <node ref="R211" pin="1"/>
+    </net>
+    <net code="431" name="/SPLA Board - Analog/ATERM_B">
+      <node ref="J13" pin="1"/>
+      <node ref="C311" pin="1"/>
+      <node ref="R311" pin="1"/>
     </net>
     <net code="432" name="/SPLA Board - Analog/AOP_F_B">
       <node ref="C301" pin="2"/>
       <node ref="R301" pin="2"/>
       <node ref="R302" pin="1"/>
     </net>
-    <net code="433" name="Net-(C302-Pad1)">
-      <node ref="U63" pin="3"/>
-      <node ref="R302" pin="2"/>
-      <node ref="C302" pin="1"/>
+    <net code="433" name="/SPLA Board - Analog/AOP_OUT_B">
+      <node ref="R309" pin="2"/>
+      <node ref="U63" pin="1"/>
+      <node ref="R303" pin="1"/>
+      <node ref="C301" pin="1"/>
     </net>
     <net code="434" name="/SPLA Board - Analog/AOP_OUT_R">
-      <node ref="U61" pin="1"/>
       <node ref="C101" pin="1"/>
       <node ref="R103" pin="1"/>
+      <node ref="U61" pin="1"/>
       <node ref="R109" pin="2"/>
     </net>
-    <net code="435" name="Net-(C401-Pad2)">
-      <node ref="R402" pin="1"/>
+    <net code="435" name="Net-(J14-Pad4)">
+      <node ref="R401" pin="1"/>
+      <node ref="J14" pin="4"/>
+    </net>
+    <net code="436" name="Net-(C401-Pad2)">
       <node ref="C401" pin="2"/>
+      <node ref="R402" pin="1"/>
       <node ref="R401" pin="2"/>
     </net>
-    <net code="436" name="Net-(C402-Pad1)">
-      <node ref="C402" pin="1"/>
-      <node ref="R402" pin="2"/>
-      <node ref="U74" pin="3"/>
-    </net>
-    <net code="437" name="Net-(J14-Pad4)">
-      <node ref="J14" pin="4"/>
-      <node ref="R401" pin="1"/>
-    </net>
-    <net code="438" name="Net-(R408-Pad2)">
-      <node ref="R408" pin="2"/>
-      <node ref="U74" pin="5"/>
-    </net>
-    <net code="439" name="/SPLA Board - Analog/AREF_HI_OP">
-      <node ref="C401" pin="1"/>
-      <node ref="J8" pin="1"/>
-      <node ref="U74" pin="1"/>
-      <node ref="U74" pin="4"/>
-    </net>
-    <net code="440" name="+3.3VA">
-      <node ref="C507" pin="1"/>
-      <node ref="C508" pin="1"/>
-      <node ref="U75" pin="6"/>
-      <node ref="U53" pin="11"/>
-      <node ref="R601" pin="1"/>
-      <node ref="C251" pin="1"/>
-      <node ref="C254" pin="1"/>
-      <node ref="U53" pin="13"/>
-      <node ref="U53" pin="14"/>
-      <node ref="C252" pin="1"/>
-      <node ref="U53" pin="15"/>
+    <net code="437" name="+3.3VA">
       <node ref="C253" pin="1"/>
-      <node ref="U52" pin="14"/>
-      <node ref="U52" pin="13"/>
       <node ref="U52" pin="11"/>
-      <node ref="C151" pin="1"/>
-      <node ref="C153" pin="1"/>
-      <node ref="U52" pin="15"/>
-      <node ref="C154" pin="1"/>
-      <node ref="C152" pin="1"/>
+      <node ref="C108" pin="1"/>
+      <node ref="C208" pin="1"/>
+      <node ref="U52" pin="13"/>
+      <node ref="C107" pin="1"/>
+      <node ref="C251" pin="1"/>
       <node ref="R208" pin="1"/>
-      <node ref="U51" pin="13"/>
-      <node ref="U51" pin="14"/>
-      <node ref="U51" pin="15"/>
+      <node ref="C507" pin="1"/>
+      <node ref="U75" pin="6"/>
+      <node ref="C252" pin="1"/>
+      <node ref="C254" pin="1"/>
       <node ref="U51" pin="18"/>
+      <node ref="U51" pin="15"/>
+      <node ref="U51" pin="14"/>
+      <node ref="U51" pin="13"/>
       <node ref="U51" pin="11"/>
+      <node ref="U62" pin="6"/>
+      <node ref="J14" pin="1"/>
+      <node ref="U53" pin="15"/>
       <node ref="U53" pin="18"/>
+      <node ref="U52" pin="15"/>
       <node ref="C352" pin="1"/>
       <node ref="C354" pin="1"/>
-      <node ref="C353" pin="1"/>
       <node ref="C207" pin="1"/>
-      <node ref="C108" pin="1"/>
-      <node ref="C107" pin="1"/>
-      <node ref="C208" pin="1"/>
-      <node ref="R308" pin="1"/>
-      <node ref="U62" pin="6"/>
-      <node ref="R508" pin="1"/>
-      <node ref="R408" pin="1"/>
-      <node ref="C408" pin="1"/>
-      <node ref="C407" pin="1"/>
-      <node ref="U74" pin="6"/>
+      <node ref="C353" pin="1"/>
       <node ref="C351" pin="1"/>
+      <node ref="U52" pin="14"/>
       <node ref="U52" pin="18"/>
-      <node ref="R108" pin="1"/>
-      <node ref="J14" pin="1"/>
-      <node ref="U61" pin="6"/>
-      <node ref="U63" pin="6"/>
-      <node ref="C307" pin="1"/>
+      <node ref="U53" pin="13"/>
+      <node ref="R308" pin="1"/>
+      <node ref="U53" pin="11"/>
       <node ref="C308" pin="1"/>
+      <node ref="C307" pin="1"/>
+      <node ref="U53" pin="14"/>
+      <node ref="C152" pin="1"/>
+      <node ref="C154" pin="1"/>
+      <node ref="U74" pin="6"/>
+      <node ref="R408" pin="1"/>
+      <node ref="U61" pin="6"/>
+      <node ref="R601" pin="1"/>
+      <node ref="R108" pin="1"/>
+      <node ref="C508" pin="1"/>
+      <node ref="C153" pin="1"/>
+      <node ref="C151" pin="1"/>
+      <node ref="U63" pin="6"/>
+      <node ref="C407" pin="1"/>
+      <node ref="C408" pin="1"/>
+      <node ref="R508" pin="1"/>
+    </net>
+    <net code="438" name="Net-(R408-Pad2)">
+      <node ref="U74" pin="5"/>
+      <node ref="R408" pin="2"/>
+    </net>
+    <net code="439" name="Net-(C402-Pad1)">
+      <node ref="R402" pin="2"/>
+      <node ref="U74" pin="3"/>
+      <node ref="C402" pin="1"/>
+    </net>
+    <net code="440" name="/SPLA Board - Analog/AREF_HI_OP">
+      <node ref="J8" pin="1"/>
+      <node ref="U74" pin="4"/>
+      <node ref="U74" pin="1"/>
+      <node ref="C401" pin="1"/>
     </net>
     <net code="441" name="Net-(C502-Pad1)">
       <node ref="R502" pin="2"/>
@@ -6214,31 +7089,31 @@
       <node ref="C502" pin="1"/>
     </net>
     <net code="442" name="Net-(C501-Pad2)">
-      <node ref="R502" pin="1"/>
-      <node ref="C501" pin="2"/>
       <node ref="R501" pin="2"/>
+      <node ref="C501" pin="2"/>
+      <node ref="R502" pin="1"/>
     </net>
     <net code="443" name="/SPLA Board - Analog/AREF_LO_OP">
-      <node ref="U75" pin="4"/>
-      <node ref="U75" pin="1"/>
-      <node ref="C501" pin="1"/>
       <node ref="J8" pin="3"/>
+      <node ref="U75" pin="1"/>
+      <node ref="U75" pin="4"/>
+      <node ref="C501" pin="1"/>
     </net>
     <net code="444" name="Net-(R508-Pad2)">
       <node ref="R508" pin="2"/>
       <node ref="U75" pin="5"/>
     </net>
     <net code="445" name="/SPLA Board - Analog/ALINE_G">
-      <node ref="R223" pin="2"/>
-      <node ref="R221" pin="1"/>
-      <node ref="R211" pin="2"/>
       <node ref="R222" pin="1"/>
+      <node ref="R221" pin="1"/>
+      <node ref="R223" pin="2"/>
+      <node ref="R211" pin="2"/>
     </net>
     <net code="446" name="/SPLA Board - Analog/ALINE_B">
       <node ref="R323" pin="2"/>
       <node ref="R321" pin="1"/>
-      <node ref="R322" pin="1"/>
       <node ref="R311" pin="2"/>
+      <node ref="R322" pin="1"/>
     </net>
   </nets>
 </export>

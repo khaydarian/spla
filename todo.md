@@ -13,7 +13,6 @@
 * schematic: Fix FPGA decoupling capacitors.
 * schematic: Review with Nate.
 * schematic: Run through [schematic checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
-* schematic/pcb: Complete part selection for resistors and capacitors.
 * bom: Improve BoM generation script to be good enough to use.
 * pcb: Fix FPGA power/ground layout; use smaller plane-to-via spacing.
 * pcb: Shield VRAM data bus from power switching noise, if necessary?
