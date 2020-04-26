@@ -13,13 +13,13 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 2950 1550 2    39   Output ~ 0
+Text GLabel 3500 1550 2    39   Output ~ 0
 TAP_~PAWR~
-Text GLabel 2950 1650 2    39   Output ~ 0
+Text GLabel 3500 1650 2    39   Output ~ 0
 TAP_~PARD~
-Text GLabel 2150 1650 0    39   Input ~ 0
+Text GLabel 2700 1650 0    39   Input ~ 0
 FPGA_~PARD~
-Text GLabel 2150 1550 0    39   Input ~ 0
+Text GLabel 2700 1550 0    39   Input ~ 0
 FPGA_~PAWR~
 $Comp
 L SPLA:74LVC8T245 U23
@@ -454,7 +454,7 @@ Text GLabel 13900 4350 0    39   Output ~ 0
 FPGA_~5M~
 Text GLabel 14700 4350 2    39   Input ~ 0
 TAP_~5M~
-Text GLabel 2950 1850 2    39   Output ~ 0
+Text GLabel 3500 1850 2    39   Output ~ 0
 TAP_PPU1_~RESET~
 Text GLabel 5900 4250 0    39   Input ~ 0
 FGPA_PPU1_~EXTSYNC~
@@ -466,9 +466,9 @@ Text GLabel 6700 4350 2    39   Output ~ 0
 TAP_PPU1_~MASTER~
 Text GLabel 6700 4450 2    50   Output ~ 0
 TAP_PPU1_PALMODE
-Text GLabel 2950 2250 2    50   Output ~ 0
+Text GLabel 3500 2250 2    50   Output ~ 0
 TAP_PPU2_HVCMODE
-Text GLabel 2150 2250 0    50   Input ~ 0
+Text GLabel 2700 2250 0    50   Input ~ 0
 FPGA_PPU2_HVCMODE
 Text GLabel 14700 4550 2    39   Input ~ 0
 TAP_PPU2_~PED~
@@ -554,7 +554,7 @@ Text GLabel 11050 1750 2    50   Input ~ 0
 TAP_PPU2_TST13
 Text GLabel 11050 1650 2    50   Input ~ 0
 TAP_PPU2_TST14
-Text GLabel 2950 2150 2    50   Output ~ 0
+Text GLabel 3500 2150 2    50   Output ~ 0
 TAP_PPU2_TST15
 $Comp
 L SPLA:74LVC8T245 U16
@@ -584,7 +584,7 @@ F 6 "Texas Instruments" H 10650 4000 50  0001 C CNN "Manufacturer"
 	1    10650 4000
 	1    0    0    -1  
 $EndComp
-Text GLabel 2150 2150 0    50   Input ~ 0
+Text GLabel 2700 2150 0    50   Input ~ 0
 FGPA_PPU2_TST15
 Text GLabel 10250 1650 0    50   Output ~ 0
 FGPA_PPU2_TST14
@@ -650,15 +650,15 @@ Text GLabel 2000 9900 0    50   BiDi ~ 0
 FPGA_D6
 Text GLabel 2000 10000 0    50   BiDi ~ 0
 FPGA_D7
-Text GLabel 2150 1850 0    39   Input ~ 0
+Text GLabel 1150 1850 0    39   Input ~ 0
 FPGA_PPU1_~RESET~
 Text GLabel 5900 1850 0    39   Output ~ 0
 FPGA_PPU2_~5MOUT~
 Text GLabel 6700 1850 2    39   Input ~ 0
 TAP_PPU2_~5MOUT~
-Text GLabel 2150 2050 0    50   Input ~ 0
+Text GLabel 2700 2050 0    50   Input ~ 0
 FPGA_PPU2_PALMODE
-Text GLabel 2950 2050 2    50   Output ~ 0
+Text GLabel 3500 2050 2    50   Output ~ 0
 TAP_PPU2_PALMODE
 Text GLabel 6700 4150 2    50   Output ~ 0
 TAP_PPU2_EXTLATCH
@@ -680,7 +680,7 @@ Text GLabel 5900 1750 0    39   Output ~ 0
 FPGA_PPU2_~RESOUT1~
 Text GLabel 5900 1550 0    39   Output ~ 0
 FPGA_PPU2_~RESOUT0~
-Text GLabel 2150 1950 0    39   Input ~ 0
+Text GLabel 1150 1950 0    39   Input ~ 0
 FPGA_PPU2_~RESET~
 Text GLabel 6700 1750 2    39   Input ~ 0
 TAP_PPU2_~RESOUT1~
@@ -695,21 +695,21 @@ FPGA_PPU2_VBLANK
 Text GLabel 5900 2050 0    50   Output ~ 0
 FPGA_PPU2_HBLANK
 Wire Wire Line
-	3500 1550 3500 1750
-Text GLabel 3650 1750 2    50   Output ~ 0
+	4050 1550 4050 1750
+Text GLabel 4200 1750 2    50   Output ~ 0
 TAP_XIN
 $Comp
 L Connector:TestPoint TP2
 U 1 1 5FB90E4E
-P 3500 1550
-F 0 "TP2" H 3558 1668 50  0000 L CNN
-F 1 "TP_TAP_XIN" H 3558 1577 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3700 1550 50  0001 C CNN
-F 3 "~" H 3700 1550 50  0001 C CNN
-F 4 "N/A" H 3500 1550 50  0001 C CNN "Digikey"
-F 5 "N/A" H 3500 1550 50  0001 C CNN "Manufacturer Id"
-F 6 "N/A" H 3500 1550 50  0001 C CNN "Manufacturer"
-	1    3500 1550
+P 4050 1550
+F 0 "TP2" H 4108 1668 50  0000 L CNN
+F 1 "TP_TAP_XIN" H 4108 1577 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4250 1550 50  0001 C CNN
+F 3 "~" H 4250 1550 50  0001 C CNN
+F 4 "N/A" H 4050 1550 50  0001 C CNN "Digikey"
+F 5 "N/A" H 4050 1550 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 4050 1550 50  0001 C CNN "Manufacturer"
+	1    4050 1550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -729,7 +729,7 @@ $EndComp
 Text Notes 9100 2850 0    50   ~ 0
 Test signals\n(NC or GND on original board)
 Wire Wire Line
-	3650 1750 3500 1750
+	4200 1750 4050 1750
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5E5A824A
@@ -1408,8 +1408,8 @@ Wire Wire Line
 Wire Wire Line
 	1250 4000 1450 4000
 Wire Wire Line
-	3500 1750 2950 1750
-Connection ~ 3500 1750
+	4050 1750 3500 1750
+Connection ~ 4050 1750
 Text GLabel 5900 3850 0    50   Input ~ 0
 FPGA_BODGE1
 Text GLabel 5900 3950 0    50   Input ~ 0
@@ -1419,15 +1419,15 @@ FPGA_BODGE3
 $Comp
 L SPLA:74LVC8T245 U20
 U 1 1 5E517B3B
-P 2550 1750
-F 0 "U20" H 2550 2500 50  0000 C CNN
-F 1 "74LVC8T245" V 2550 1750 50  0000 C CNN
-F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 2550 1000 50  0001 C CNN
-F 3 "" H 2550 1650 50  0001 C CNN
-F 4 "296-18593-1-ND" H 2550 1750 50  0001 C CNN "Digikey"
-F 5 "SN74LVC8T245PWR" H 2550 1750 50  0001 C CNN "Manufacturer Id"
-F 6 "Texas Instruments" H 2550 1750 50  0001 C CNN "Manufacturer"
-	1    2550 1750
+P 3100 1750
+F 0 "U20" H 3100 2500 50  0000 C CNN
+F 1 "74LVC8T245" V 3100 1750 50  0000 C CNN
+F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 3100 1000 50  0001 C CNN
+F 3 "" H 3100 1650 50  0001 C CNN
+F 4 "296-18593-1-ND" H 3100 1750 50  0001 C CNN "Digikey"
+F 5 "SN74LVC8T245PWR" H 3100 1750 50  0001 C CNN "Manufacturer Id"
+F 6 "Texas Instruments" H 3100 1750 50  0001 C CNN "Manufacturer"
+	1    3100 1750
 	1    0    0    -1  
 $EndComp
 Text Notes 1100 3550 0    50   ~ 0
@@ -1492,60 +1492,60 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0170
 U 1 1 5EB3EA6E
-P 2150 950
-F 0 "#PWR0170" H 2150 800 50  0001 C CNN
-F 1 "+3V3" H 2165 1123 50  0000 C CNN
-F 2 "" H 2150 950 50  0001 C CNN
-F 3 "" H 2150 950 50  0001 C CNN
-	1    2150 950 
+P 2700 950
+F 0 "#PWR0170" H 2700 800 50  0001 C CNN
+F 1 "+3V3" H 2715 1123 50  0000 C CNN
+F 2 "" H 2700 950 50  0001 C CNN
+F 3 "" H 2700 950 50  0001 C CNN
+	1    2700 950 
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0171
 U 1 1 5EB3EA78
-P 3050 950
-F 0 "#PWR0171" H 3050 800 50  0001 C CNN
-F 1 "+5V" H 3065 1123 50  0000 C CNN
-F 2 "" H 3050 950 50  0001 C CNN
-F 3 "" H 3050 950 50  0001 C CNN
-	1    3050 950 
+P 3600 950
+F 0 "#PWR0171" H 3600 800 50  0001 C CNN
+F 1 "+5V" H 3615 1123 50  0000 C CNN
+F 2 "" H 3600 950 50  0001 C CNN
+F 3 "" H 3600 950 50  0001 C CNN
+	1    3600 950 
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0172
 U 1 1 5EB3EA82
-P 2550 2750
-F 0 "#PWR0172" H 2550 2500 50  0001 C CNN
-F 1 "GND" H 2555 2577 50  0000 C CNN
-F 2 "" H 2550 2750 50  0001 C CNN
-F 3 "" H 2550 2750 50  0001 C CNN
-	1    2550 2750
+P 3100 2750
+F 0 "#PWR0172" H 3100 2500 50  0001 C CNN
+F 1 "GND" H 3105 2577 50  0000 C CNN
+F 2 "" H 3100 2750 50  0001 C CNN
+F 3 "" H 3100 2750 50  0001 C CNN
+	1    3100 2750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 950  2150 1150
+	2700 950  2700 1150
 Wire Wire Line
-	2650 2550 2650 2650
+	3200 2550 3200 2650
 Wire Wire Line
-	2650 2650 2550 2650
+	3200 2650 3100 2650
 Wire Wire Line
-	2450 2650 2450 2550
-Connection ~ 2550 2650
+	3000 2650 3000 2550
+Connection ~ 3100 2650
 Wire Wire Line
-	2550 2650 2450 2650
+	3100 2650 3000 2650
 Wire Wire Line
-	2550 2550 2550 2650
+	3100 2550 3100 2650
 Wire Wire Line
-	2550 2750 2550 2650
+	3100 2750 3100 2650
 Wire Wire Line
-	3050 950  3050 1150
+	3600 950  3600 1150
 Wire Wire Line
-	3050 1250 2950 1250
+	3600 1250 3500 1250
 Wire Wire Line
-	2950 1150 3050 1150
-Connection ~ 3050 1150
+	3500 1150 3600 1150
+Connection ~ 3600 1150
 Wire Wire Line
-	3050 1150 3050 1250
+	3600 1150 3600 1250
 $Comp
 L power:+3V3 #PWR0173
 U 1 1 5EB47F69
@@ -1638,41 +1638,41 @@ Wire Wire Line
 Wire Wire Line
 	5900 1400 5050 1400
 Wire Wire Line
-	2150 1400 1500 1400
+	2700 1400 2050 1400
 Wire Wire Line
-	1350 1750 2150 1750
+	1900 1750 2700 1750
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5FB8F8FE
-P 1350 1550
-F 0 "TP1" H 1300 1650 50  0000 R CNN
-F 1 "TP_FPGA_XIN" H 1300 1550 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1550 1550 50  0001 C CNN
-F 3 "~" H 1550 1550 50  0001 C CNN
-F 4 "N/A" H 1350 1550 50  0001 C CNN "Digikey"
-F 5 "N/A" H 1350 1550 50  0001 C CNN "Manufacturer Id"
-F 6 "N/A" H 1350 1550 50  0001 C CNN "Manufacturer"
-	1    1350 1550
+P 1900 1550
+F 0 "TP1" H 1850 1650 50  0000 R CNN
+F 1 "TP_FPGA_XIN" H 1850 1550 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2100 1550 50  0001 C CNN
+F 3 "~" H 2100 1550 50  0001 C CNN
+F 4 "N/A" H 1900 1550 50  0001 C CNN "Digikey"
+F 5 "N/A" H 1900 1550 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 1900 1550 50  0001 C CNN "Manufacturer"
+	1    1900 1550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 1750 1200 1750
-Connection ~ 1350 1750
+	1900 1750 1750 1750
+Connection ~ 1900 1750
 Wire Wire Line
-	1350 1550 1350 1750
-Text GLabel 1200 1750 0    50   Input ~ 0
+	1900 1550 1900 1750
+Text GLabel 1750 1750 0    50   Input ~ 0
 FPGA_XIN
 Wire Wire Line
-	1500 1400 1500 950 
+	2050 1400 2050 950 
 $Comp
 L power:+3V3 #PWR0179
 U 1 1 5EC08834
-P 1500 950
-F 0 "#PWR0179" H 1500 800 50  0001 C CNN
-F 1 "+3V3" H 1515 1123 50  0000 C CNN
-F 2 "" H 1500 950 50  0001 C CNN
-F 3 "" H 1500 950 50  0001 C CNN
-	1    1500 950 
+P 2050 950
+F 0 "#PWR0179" H 2050 800 50  0001 C CNN
+F 1 "+3V3" H 2065 1123 50  0000 C CNN
+F 2 "" H 2050 950 50  0001 C CNN
+F 3 "" H 2050 950 50  0001 C CNN
+	1    2050 950 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1709,7 +1709,7 @@ Text GLabel 13900 4450 0    50   Output ~ 0
 FPGA_PPU2_3.58M
 Text Notes 4800 1350 0    50   ~ 0
 DIR = B-to-A
-Text Notes 900  1000 0    50   ~ 0
+Text Notes 1450 1000 0    50   ~ 0
 DIR = A-to-B
 Text Notes 4550 3750 0    50   ~ 0
 DIR = A-to-B
@@ -1790,20 +1790,20 @@ LVL_TST_DIR
 $Comp
 L power:GND #PWR0192
 U 1 1 5EDE95C2
-P 1950 1100
-F 0 "#PWR0192" H 1950 850 50  0001 C CNN
-F 1 "GND" H 1955 927 50  0000 C CNN
-F 2 "" H 1950 1100 50  0001 C CNN
-F 3 "" H 1950 1100 50  0001 C CNN
-	1    1950 1100
+P 2500 1100
+F 0 "#PWR0192" H 2500 850 50  0001 C CNN
+F 1 "GND" H 2505 927 50  0000 C CNN
+F 2 "" H 2500 1100 50  0001 C CNN
+F 3 "" H 2500 1100 50  0001 C CNN
+	1    2500 1100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 1300 2050 1300
+	2700 1300 2600 1300
 Wire Wire Line
-	2050 1300 2050 1100
+	2600 1300 2600 1100
 Wire Wire Line
-	2050 1100 1950 1100
+	2600 1100 2500 1100
 $Comp
 L power:GND #PWR0193
 U 1 1 5EE004CD
@@ -2016,7 +2016,7 @@ Text GLabel 5900 1650 0    39   Output ~ 0
 FPGA_PPU2_~TOUMEI~
 Text GLabel 13900 4550 0    39   Output ~ 0
 FPGA_PPU2_~PED~
-Text GLabel 2950 1950 2    39   Output ~ 0
+Text GLabel 3500 1950 2    39   Output ~ 0
 TAP_PPU2_~RESET~
 $Comp
 L power:GND #PWR0195
@@ -2073,4 +2073,74 @@ Wire Wire Line
 Connection ~ 7450 2250
 Wire Wire Line
 	7450 2250 6700 2250
+$Comp
+L Device:R_Small R?
+U 1 1 5EB1A3B9
+P 1250 2150
+AR Path="/5E50E589/5EB1A3B9" Ref="R?"  Part="1" 
+AR Path="/5E50D400/5EB1A3B9" Ref="R29"  Part="1" 
+F 0 "R29" H 1309 2196 50  0000 L CNN
+F 1 "10k" H 1309 2105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1250 2150 50  0001 C CNN
+F 3 "~" H 1250 2150 50  0001 C CNN
+	1    1250 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB1A3BF
+P 1250 2350
+AR Path="/5E50E589/5EB1A3BF" Ref="#PWR?"  Part="1" 
+AR Path="/5E50D400/5EB1A3BF" Ref="#PWR0231"  Part="1" 
+F 0 "#PWR0231" H 1250 2100 50  0001 C CNN
+F 1 "GND" H 1255 2177 50  0000 C CNN
+F 2 "" H 1250 2350 50  0001 C CNN
+F 3 "" H 1250 2350 50  0001 C CNN
+	1    1250 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 2350 1250 2250
+Wire Wire Line
+	1250 2050 1250 1950
+$Comp
+L Device:R_Small R?
+U 1 1 5EB52BAA
+P 1550 2150
+AR Path="/5E50E589/5EB52BAA" Ref="R?"  Part="1" 
+AR Path="/5E50D400/5EB52BAA" Ref="R30"  Part="1" 
+F 0 "R30" H 1609 2196 50  0000 L CNN
+F 1 "10k" H 1609 2105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1550 2150 50  0001 C CNN
+F 3 "~" H 1550 2150 50  0001 C CNN
+	1    1550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB52BB4
+P 1550 2350
+AR Path="/5E50E589/5EB52BB4" Ref="#PWR?"  Part="1" 
+AR Path="/5E50D400/5EB52BB4" Ref="#PWR0232"  Part="1" 
+F 0 "#PWR0232" H 1550 2100 50  0001 C CNN
+F 1 "GND" H 1555 2177 50  0000 C CNN
+F 2 "" H 1550 2350 50  0001 C CNN
+F 3 "" H 1550 2350 50  0001 C CNN
+	1    1550 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2350 1550 2250
+Wire Wire Line
+	1550 1850 1150 1850
+Wire Wire Line
+	1550 1850 1550 2050
+Wire Wire Line
+	1550 1850 2700 1850
+Connection ~ 1550 1850
+Wire Wire Line
+	2700 1950 1250 1950
+Connection ~ 1250 1950
+Wire Wire Line
+	1250 1950 1150 1950
 $EndSCHEMATC
