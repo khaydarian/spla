@@ -3,7 +3,6 @@
 * pm: Organize TODO items better than this list.
 * pm: Survey blog posts for forgotten TODO items.
 * pm: Start a website?
-* accounting: Add SMD Rework station and power bricks.
 * blog: Write export-to-website tool (or find static site generator).
 * blog: Add photos and scope images.
 * reference: Retrieve datasheets for all parts.
@@ -31,5 +30,6 @@
 * software: Get rid of global-constant mess.
 * software: Integrate or invent a decent unit testing framework.
 * inventory: Write summary tool.
+* inventory: Correct SMD Rework station and power bricks in inventory.
 * inventory: Add borrowed scope.
 * inventory: Note pre-existing tools (#1 screwdriver).

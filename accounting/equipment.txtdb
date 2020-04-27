@@ -14,8 +14,7 @@ Date Arrive Estimated: 2020-03-02
 Date Arrive Actual: 2020-03-02
 Package Key: amazon-soldering-1
 Package Cost Base: $256.02
-Cost Tax: $23.68
-Package Cost Total: $279.70
+Cost Tax: $23.68 Package Cost Total: $279.70
 
 Name: Hakko FX888D Soldering Station, with extra tips
 Category: Lab Equipment
@@ -56,3 +55,16 @@ Cost Base: $9.79
 Cost Tax: $0.91
 Cost Total: $10.70
 Location: Office Desk Drawers
+
+Name: Amazon - Hot Air Rework station and power bricks
+Package Key: amazon-misc-1
+Cost Base: $73.97
+Cost Tax: $6.84
+Cost Total: $80.81
+Note: Not fully accounted yet; due to missing amazon receipt.
+
+Name: Hot Air Rework Station
+Category: Lab Equipment
+From Package Key: amazon-misc-1
+Note: With miscellaneous stuff
+Note: Not fully accounted yet; due to missing amazon receipt.

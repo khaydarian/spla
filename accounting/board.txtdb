@@ -133,6 +133,12 @@ Unit Cost: $0.35000
 Quantity: 5
 Cost: $1.75
 
+Name: 12V 5A 5.5mm Power Supply
+Category: Board Parts
+From Package Key: amazon-misc-1
+Quantity: 2
+Note: Not fully accounted yet; due to missing amazon receipt.
+
 Name: Digikey Order 2
 Package Key: Digikey-309025554
 Digikey Web ID: 309025554
