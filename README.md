@@ -40,14 +40,14 @@ and sufficient supporting software written, it should be possible to
 experimentally characterize the entire operation of the PPU chips, thus
 producing a completely cycle-accurate emulation of the SNES video hardware.
 
-<img src="images/spla-board-pcb-r008.png"></img>
+<img src="images/spla-board-pcb-r009.png"></img>
 
 ## Current status
 
-* Design stabilized, 95% complete.
-* Schematic 98% complete.
-* PCB layout 98% complete.
-* Schematic and PCB review in progress.
+* Design stabilized complete.
+* Schematic complete.
+* PCB layout complete.
+* Schematic and PCB review complete (enough).
 * Manufacturing partially started.
   * Most "large" chips ordered and arrived.
 * Software started.
