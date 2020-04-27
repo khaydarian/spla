@@ -2,14 +2,14 @@
 <export version="D">
   <design>
     <source>/home/khaydarian/spla/spla-board/spla-board.sch</source>
-    <date>Sun 26 Apr 2020 04:46:48 PM PDT</date>
+    <date>Sun 26 Apr 2020 07:10:14 PM PDT</date>
     <tool>Eeschema 5.1.5-52549c5~86~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>SPLA Board - Root</title>
         <company/>
-        <rev>8</rev>
-        <date>2020-04-12</date>
+        <rev>9</rev>
+        <date>2020-04-26</date>
         <source>spla-board.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -21,8 +21,8 @@
       <title_block>
         <title>SPLA Board - USB</title>
         <company/>
-        <rev>8</rev>
-        <date>2020-04-12</date>
+        <rev>9</rev>
+        <date>2020-04-26</date>
         <source>spla-board-usb.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -34,8 +34,8 @@
       <title_block>
         <title>SPLA Board - FPGA</title>
         <company/>
-        <rev>8</rev>
-        <date>2020-04-12</date>
+        <rev>9</rev>
+        <date>2020-04-26</date>
         <source>spla-board-fpga.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -47,8 +47,8 @@
       <title_block>
         <title/>
         <company/>
-        <rev>8</rev>
-        <date>2020-04-12</date>
+        <rev>9</rev>
+        <date>2020-04-26</date>
         <source>spla-board-level-shifters.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -60,8 +60,8 @@
       <title_block>
         <title>SPLA Board - PPU</title>
         <company/>
-        <rev>8</rev>
-        <date>2020-04-12</date>
+        <rev>9</rev>
+        <date>2020-04-26</date>
         <source>spla-board-ppu.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -73,8 +73,8 @@
       <title_block>
         <title/>
         <company/>
-        <rev>8</rev>
-        <date>2020-04-12</date>
+        <rev>9</rev>
+        <date>2020-04-26</date>
         <source>spla-board-analog.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -86,8 +86,8 @@
       <title_block>
         <title/>
         <company/>
-        <rev>8</rev>
-        <date>2020-04-12</date>
+        <rev>9</rev>
+        <date>2020-04-26</date>
         <source>spla-board-power.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -154,9 +154,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT2K20</field>
+        <field name="Digikey">RMCF0603JT2K20CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT2K20CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT2K20</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -167,9 +167,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -180,9 +180,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -193,9 +193,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -219,9 +219,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT12K0</field>
+        <field name="Digikey">RMCF0603JT12K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT12K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT12K0</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -232,9 +232,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT1K00</field>
+        <field name="Digikey">RMCF0603JT1K00CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT1K00CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT1K00</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -335,9 +335,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Digikey">RMCF0603JT330RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT330R</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -374,9 +374,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Digikey">RMCF0603JT330RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT330R</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -399,9 +399,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - USB/" tstamps="/5E4F712F/"/>
@@ -437,9 +437,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT4K70</field>
+        <field name="Digikey">RMCF0603JT4K70CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT4K70CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT4K70</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -450,9 +450,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT4K70</field>
+        <field name="Digikey">RMCF0603JT4K70CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT4K70CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT4K70</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -476,9 +476,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Digikey">RMCF0603JT330RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT330R</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -502,9 +502,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Digikey">RMCF0603JT330RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT330R</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -528,9 +528,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Digikey">RMCF0603JT330RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT330R</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -554,9 +554,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Digikey">RMCF0603JT330RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT330R</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -567,9 +567,9 @@
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0402FT4K70</field>
+        <field name="Digikey">RMCF0402FT4K70CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0402FT4K70CT-ND</field>
+        <field name="Manufacturer Id">RMCF0402FT4K70</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -580,9 +580,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT4K70</field>
+        <field name="Digikey">RMCF0603JT4K70CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT4K70CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT4K70</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -593,9 +593,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT4K70</field>
+        <field name="Digikey">RMCF0603JT4K70CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT4K70CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT4K70</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - FPGA/" tstamps="/5E4D8358/"/>
@@ -1111,9 +1111,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Level Shifters/" tstamps="/5E50D400/"/>
@@ -1124,9 +1124,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Level Shifters/" tstamps="/5E50D400/"/>
@@ -1173,9 +1173,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT100R</field>
+        <field name="Digikey">RMCF0603JT100RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT100RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT100R</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1251,9 +1251,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1264,9 +1264,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1277,9 +1277,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1290,9 +1290,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1303,9 +1303,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1316,9 +1316,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1329,9 +1329,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1342,9 +1342,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT10K0</field>
+        <field name="Digikey">RMCF0603JT10K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT10K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT10K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - PPU/" tstamps="/5E50E589/"/>
@@ -1430,9 +1430,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT1K65</field>
+        <field name="Digikey">RMCF0603FT1K65CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT1K65CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT1K65</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -1443,9 +1443,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT3K48</field>
+        <field name="Digikey">RMCF0603FT3K48CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT3K48CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT3K48</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -1495,9 +1495,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT1K00</field>
+        <field name="Digikey">RMCF0603FT1K00CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT1K00CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT1K00</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -1547,9 +1547,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT301R</field>
+        <field name="Digikey">RMCF0603FT301RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT301RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT301R</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -1560,9 +1560,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT1K65</field>
+        <field name="Digikey">RMCF0603FT1K65CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT1K65CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT1K65</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -1573,9 +1573,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT649R</field>
+        <field name="Digikey">RMCF0603FT649RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT649RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT649R</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2288,9 +2288,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT301R</field>
+        <field name="Digikey">RMCF0603FT301RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT301RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT301R</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2301,9 +2301,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT1K65</field>
+        <field name="Digikey">RMCF0603FT1K65CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT1K65CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT1K65</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2314,9 +2314,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT649R</field>
+        <field name="Digikey">RMCF0603FT649RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT649RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT649R</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2327,9 +2327,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT301R</field>
+        <field name="Digikey">RMCF0603FT301RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT301RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT301R</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2340,9 +2340,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT1K65</field>
+        <field name="Digikey">RMCF0603FT1K65CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT1K65CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT1K65</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2353,9 +2353,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT649R</field>
+        <field name="Digikey">RMCF0603FT649RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT649RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT649R</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2405,9 +2405,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT33K0</field>
+        <field name="Digikey">RMCF0603JT33K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT33K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT33K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2431,9 +2431,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT33K0</field>
+        <field name="Digikey">RMCF0603JT33K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT33K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT33K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2509,9 +2509,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT33K0</field>
+        <field name="Digikey">RMCF0603JT33K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT33K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT33K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2535,9 +2535,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT33K0</field>
+        <field name="Digikey">RMCF0603JT33K0CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT33K0CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT33K0</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Analog/" tstamps="/5E520B87/"/>
@@ -2876,9 +2876,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT5K23</field>
+        <field name="Digikey">RMCF0603FT5K23CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT5K23CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT5K23</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
@@ -2889,9 +2889,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT1K00</field>
+        <field name="Digikey">RMCF0603FT1K00CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT1K00CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT1K00</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
@@ -3006,9 +3006,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT3K09</field>
+        <field name="Digikey">RMCF0603FT3K09CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT3K09CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT3K09</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
@@ -3019,9 +3019,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603FT1K00</field>
+        <field name="Digikey">RMCF0603FT1K00CT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603FT1K00CT-ND</field>
+        <field name="Manufacturer Id">RMCF0603FT1K00</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
@@ -3162,9 +3162,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT750R</field>
+        <field name="Digikey">RMCF0603JT750RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT750RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT750R</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
@@ -3188,9 +3188,9 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Digikey">RMCF0603JT330R</field>
+        <field name="Digikey">RMCF0603JT330RCT-ND</field>
         <field name="Manufacturer">Stackpole Electronics Inc</field>
-        <field name="Manufacturer Id">RMCF0603JT330RCT-ND</field>
+        <field name="Manufacturer Id">RMCF0603JT330R</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/SPLA Board - Power/" tstamps="/5E50D39B/"/>
