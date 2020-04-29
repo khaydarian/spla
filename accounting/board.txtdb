@@ -1,17 +1,3 @@
-Name: Digikey Order 1
-Category: Board Parts
-Package Key: Digikey-308771862
-Digikey Web ID: 308771862
-Digikey Salesorder Number: 63833044
-Order Submitted Date: 2020-04-14
-Order Arrived Date: 2020-04-14
-Shipping Method: USPS, First Class Mail
-Cost Subtotal: $133.82
-Cost Shipping: $4.99
-Cost Tariff: $1.42
-Cost Sales Tax: $12.51
-Cost Total: $152.74
-
 Name: FPGA, Lattice ECP5
 Category: Board Parts
 From Package Key: Digikey-308771862
@@ -133,23 +119,13 @@ Unit Cost: $0.35000
 Quantity: 5
 Cost: $1.75
 
-Name: 12V 5A 5.5mm Power Supply
+Name: 12V 5A AC/DC Power Supply, 5.5mm jack
 Category: Board Parts
 From Package Key: amazon-misc-1
 Quantity: 2
-Note: Not fully accounted yet; due to missing amazon receipt.
-
-Name: Digikey Order 2
-Package Key: Digikey-309025554
-Digikey Web ID: 309025554
-Digikey Salesorder Number: 63983604
-Order Submitted Date: 2020-04-26
-Shipping Method: USPS, First Class Mail
-Cost Subtotal: $97.87
-Cost Shipping: $4.99
-Cost Tariff: $1.77
-Cost Sales Tax: $9.22
-Cost Total: $113.85
+Unit Cost: $11.99
+Manufacturer: ALITOVE
+Cost: $23.98
 
 Name: Hex Standoff, Female-Female
 Category: Board Parts

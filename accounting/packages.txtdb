@@ -1,0 +1,52 @@
+Name: Various Soldering Stuff
+Source: Amazon
+Date Arrive Estimated: 2020-03-02
+Date Arrive Actual: 2020-03-02
+Package Key: amazon-soldering-1
+Package Cost Base: $256.02
+Package Cost Tax: $23.68
+Package Cost Total: $279.70
+
+Name: SNES Accessory Package
+Category: SNES Related
+Package Key: snes-accessory-package-1
+Date Arrive Estimated: 2020-03-01
+Date Arrive Actual: 2020-03-01
+Source: Amazon
+Cost Base: $21.99
+Cost Shipping: $0
+Cost Tax: $2.03
+Cost Total: $24.02
+
+Name: Digikey Order 1
+Category: Board Parts
+Package Key: Digikey-308771862
+Digikey Web ID: 308771862
+Digikey Salesorder Number: 63833044
+Order Submitted Date: 2020-04-14
+Order Arrived Date: 2020-04-14
+Shipping Method: USPS, First Class Mail
+Package Cost Subtotal: $133.82
+Package Cost Shipping: $4.99
+Package Cost Tariff: $1.42
+Package Cost Sales Tax: $12.51
+Package Cost Total: $152.74
+
+Name: Digikey Order 2
+Package Key: Digikey-309025554
+Digikey Web ID: 309025554
+Digikey Salesorder Number: 63983604
+Order Submitted Date: 2020-04-26
+Shipping Method: USPS, First Class Mail
+Package Cost Subtotal: $97.87
+Package Cost Shipping: $4.99
+Package Cost Tariff: $1.77
+Package Cost Sales Tax: $9.22
+Package Cost Total: $113.85
+
+Name: Amazon Misc - Hot Air Rework station and power bricks
+Source: Amazon
+Package Key: amazon-misc-1
+Package Cost Base: $73.97
+Package Cost Tax: $6.84
+Package Cost Total: $80.81

@@ -30,6 +30,5 @@
 * software: Get rid of global-constant mess.
 * software: Integrate or invent a decent unit testing framework.
 * inventory: Write summary tool.
-* inventory: Correct SMD Rework station and power bricks in inventory.
 * inventory: Add borrowed scope.
 * inventory: Note pre-existing tools (#1 screwdriver).
