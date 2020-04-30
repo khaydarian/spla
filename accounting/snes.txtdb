@@ -8,8 +8,9 @@ Date Arrive Actual: 2020-02-29
 Cost Base: $15.00
 Cost Shipping: $0.00
 Cost Tax: $1.37
-Condition: Untested
+Condition: Confirmed working 2020-03-02
 Location: Small Amazon Box
+SNES Chips: CPU=5A22-02, PPU1=5C77-01, PPU2=5C78-03, VRAM=MOSEL-MS62256DL-10FC
 
 Name: SNES 1
 Category: SNES Related
@@ -62,11 +63,11 @@ Ebay Condition: Working, but no sound
 Serial: UN12291829
 Date Arrive Estimated: 2020-05-02
 Date Arrive Actual: 2020-04-28
-Condition: Untested.
+Condition: Confirmed working (video, no sound) 2020-04-29
+SNES Chips: CPU=5A22-01, PPU1=5C77-01, PPU2=5C78-01, VRAM=Sony-CXK58257M-12L
 Source: Ebay
 Ebay ID: 124084758463
 Cost Base: $31.00
 Cost Shipping: $0.00
 Cost Tax: $2.87
 Cost Total: $33.87
-Location: In Transit
