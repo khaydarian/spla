@@ -49,7 +49,9 @@ producing a completely cycle-accurate emulation of the SNES video hardware.
 * PCB layout complete.
 * Schematic and PCB review complete (enough).
 * Manufacturing partially started.
-  * Most "large" chips ordered and arrived.
+  * Most components ordered and arrived.
+  * Two sets of scavenged SNES chips available.
+  * Boards not yet ordered.
 * Software started.
 * Lab setup partially complete.
 
