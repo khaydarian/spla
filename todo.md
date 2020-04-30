@@ -12,13 +12,10 @@
 * schematic: Fix FPGA decoupling capacitors.
 * schematic: Review with Nate.
 * schematic: Run through [schematic checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
-* bom: Improve BoM generation script to be good enough to use.
 * pcb: Fix FPGA power/ground layout; use smaller plane-to-via spacing.
 * pcb: Shield VRAM data bus from power switching noise, if necessary?
 * pcb: Run through [PCB checklist](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md)
-* lab: Verify PPU and VRAM footprint measurements.
 * lab: Bodge wire to vblank / hblank, and measure analog voltage levels with scope.
-* rtl: Install "Project Trellis" tools and build example.
 * rtl: Build async fifo.
 * rtl: Build plausible FTDI-fifo interface.
 * rtl: Build stream merging protocol.
