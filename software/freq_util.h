@@ -3,8 +3,8 @@
 #ifndef FREQ_UTIL_H
 #define FREQ_UTIL_H
 
-#include <stdbool.h>
+#include "status.h"
 
-bool parse_frequency(const char* frequency_str, bool* div5, int* divisor);
+status parse_frequency(const char* frequency_str, bool* div5, int* divisor);
 
 #endif

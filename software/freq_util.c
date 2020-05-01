@@ -61,7 +61,7 @@ static void selftest_divisors() {
 }
 
 
-int parse_frequency_string(const char* fstr) {
+status parse_frequency_string(const char* fstr, int* out) {
 	int n = strlen(fstr);
 	int mult = 1;
 	if (fstr[n-2] == 'H' && fstr[n-1] == 'z') {
@@ -77,34 +77,51 @@ int parse_frequency_string(const char* fstr) {
 	char* end;
 	double freq = strtod(fstr, &end);
 	if (end != fstr + n) {
-		return 0;
+		return errorf("Unparseable frequency: '%s'", fstr);
 	}
-	return (int)floor(mult * freq);
+	*out = (int)floor(mult * freq);
+	return OK;
 }
 
 __attribute__((constructor))
 static void selftest_parse_frequency_string() {
 	struct {
 		const char* str;
+		bool ok;
 		int expected;
 	} testcase[] = {
-		{"30000000", 30000000},
-		{"30000k", 30000000},
-		{"30M", 30000000},
-		{"30MHz", 30000000},
-		{"30.0", 30},
-		{"30.0M", 30000000},
-		{"30.0MHz", 30000000},
-		{"30e6", 30000000},
-		{"30.0e6", 30000000},
-		{"2.5k", 2500},
-		{"2.5", 2},
-		{"asdf", 0},
-		{"0", 0},
+		{"30000000", true, 30000000},
+		{"30000k", true, 30000000},
+		{"30M", true, 30000000},
+		{"30MHz", true, 30000000},
+		{"30.0", true, 30},
+		{"30.0M", true, 30000000},
+		{"30.0MHz", true, 30000000},
+		{"30e6", true, 30000000},
+		{"30.0e6", true, 30000000},
+		{"2.5k", true, 2500},
+		{"2.5", true, 2},
+		{"asdf", false, 0},
+		{"0", true, 0},
 	};
 	for (unsigned i = 0; i < sizeof(testcase) / sizeof(testcase[0]); i++) {
-		int val = parse_frequency_string(testcase[i].str);
-		if (val != testcase[i].expected) {
+		int val = -1;
+		status err = parse_frequency_string(testcase[i].str, &val);
+		if (is_error(err)) {
+			if (testcase[i].ok) {
+				fprintf(stderr, "selftest_parse_frequency_string[%d]: "
+						"\"%s\": unexpected error: %s.\n",
+						i, testcase[i].str, err->message);
+				status_free(err);
+				abort();
+			}
+			status_free(err);
+		} else if (!testcase[i].ok) {
+			fprintf(stderr, "selftest_parse_frequency_string[%d]: "
+					"\"%s\": no error when expected.\n",
+					i, testcase[i].str);
+			abort();
+		} else if (val != testcase[i].expected) {
 			fprintf(stderr, "selftest_parse_frequency_string[%d]: "
 					"\"%s\": expected %d, actual %d\n",
 					i, testcase[i].str, testcase[i].expected, val);
@@ -113,25 +130,22 @@ static void selftest_parse_frequency_string() {
 	}
 }
 
-bool parse_frequency(const char* frequency_str, bool* div5, int* divisor) {
-	int frequency_hz = parse_frequency_string(frequency_str);
-	if (!frequency_hz) {
-		fprintf(stderr, "Invalid frequency '%s'.\n", frequency_str);
-		return false;
-	}
+status parse_frequency(const char* frequency_str, bool* div5, int* divisor) {
+	int frequency_hz;
+	RETURN_IF_ERROR(parse_frequency_string(frequency_str, &frequency_hz));
+
 	float ideal_divisor_div1 = frequency_to_divisor(false, frequency_hz);
 	if (frequency_hz == divisor_to_frequency(false, floor(ideal_divisor_div1))) {
 		*div5 = false;
 		*divisor = floor(ideal_divisor_div1);
-		return true;
+		return OK;
 	}
 	float ideal_divisor_div5 = frequency_to_divisor(true, frequency_hz);
 	if (frequency_hz == divisor_to_frequency(false, floor(ideal_divisor_div5))) {
 		*div5 = false;
 		*divisor = floor(ideal_divisor_div5);
-		return true;
+		return OK;
 	}
-	fprintf(stderr, "Invalid frequency %dHz.\n", frequency_hz);
-	// TODO: Show nearby frequencies
-	return false;
+	// TODO: Show nearby frequencies in error message
+	return errorf("Invalid frequency %dHz.\n", frequency_hz);
 }

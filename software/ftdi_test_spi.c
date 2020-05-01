@@ -4,6 +4,7 @@
 #include "ftdi_util.h"
 #include "ftdi.h"
 #include "mpsse.h"
+#include "status.h"
 
 #include <unistd.h>
 #include <stdio.h>
@@ -11,7 +12,7 @@
 #define FTDI_VENDOR_ID 0x0403
 #define FTDI_PRODUCT_ID 0x6014
 
-int ftdi_test_spi(int argc, char** argv) {
+status ftdi_test_spi(int argc, char** argv) {
 	// TODO handle per-command arguments
 	(void) argc;
 	(void) argv;
@@ -19,19 +20,18 @@ int ftdi_test_spi(int argc, char** argv) {
 	int ret = ftdi_usb_open_desc(ftdi, FTDI_VENDOR_ID, FTDI_PRODUCT_ID,
 			"C232HM-DDHSL-0", "FT0J7C2U");
 	if (ret) {
-		ftdiutil_error("ftdi_usb_open_desc", ftdi, ret);
-		return 1;
+		return ftdiutil_error("ftdi_usb_open_desc", ret);
 	}
 
-	ret = mpsse_init();
-	if (ret) {
-		ftdiutil_error("mpsse_init", ftdi, ret);
+	status err = OK;
+
+	err = mpsse_init();
+	if (is_error(err)) {
 		goto bad;
 	}
 
-	ret = mpsse_set_frequency("1MHz");
-	if (ret) {
-		ftdiutil_error("mpsse_set_frequency", ftdi, ret);
+	err = mpsse_set_frequency("1MHz");
+	if (is_error(err)) {
 		goto bad;
 	}
 
@@ -48,17 +48,16 @@ int ftdi_test_spi(int argc, char** argv) {
 
 	ret = ftdiutil_flush_data(ftdi);
 	if (ret) {
-		ftdiutil_error("ftdiutil_flush_data", ftdi, ret);
+		err = ftdiutil_error("ftdiutil_flush_data", ret);
 	}
 
 bad:
-	ret = mpsse_deinit();
-	(void) ret;
+	status_ignore(mpsse_deinit());
 
 	ret = ftdi_usb_close(ftdi);
 	if (ret) {
-		ftdiutil_error("ftdi_usb_close", ftdi, ret);
+		status_ignore(ftdiutil_error("ftdi_usb_close", ret));
 	}
 
-	return 0;
+	return err;
 }

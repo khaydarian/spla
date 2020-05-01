@@ -10,14 +10,13 @@
 
 struct ftdi_context* ftdi;
 
-void ftdiutil_init() {
+status ftdiutil_init() {
 	ftdi = ftdi_new();
 	if (!ftdi) {
-		fprintf(stderr, "ftdi_new: error creating FTDI context.\n");
-		return;
+		return errorf("ftdi_new: error creating FTDDI context.");
 	}
-
 	libusb_set_debug(ftdi->usb_ctx, LIBUSB_LOG_LEVEL_ERROR);
+	return OK;
 }
 
 void ftdiutil_deinit() {
@@ -26,8 +25,8 @@ void ftdiutil_deinit() {
 	}
 }
 
-void ftdiutil_error(const char* fn, struct ftdi_context* ftdi, int ret) {
-	fprintf(stderr, "%s: error %d: %s\n",
+status ftdiutil_error(const char* fn, int ret) {
+	return errorf("%s: error %d: %s",
 			fn, ret, ftdi_get_error_string(ftdi));
 }
 

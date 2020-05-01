@@ -3,7 +3,9 @@
 #ifndef COMMAND_H
 #define COMMAND_H
 
-typedef int (*command_fn)(int,char**);
+#include "status.h"
+
+typedef status (*command_fn)(int,char**);
 
 struct command {
 	const char* name;
@@ -16,11 +18,11 @@ extern const char* invoked_as;
 struct command* find_command(const char* name);
 
 // Individual commands
-int usage();
-int help(int argc, char** argv);
-int ftdi_list_devices(int argc, char** argv);
-int ftdi_test_toggle(int argc, char** argv);
-int ftdi_test_spi(int argc, char** argv);
-int ftdi_test_raw(int argc, char** argv);
+status usage();
+status help(int argc, char** argv);
+status ftdi_list_devices(int argc, char** argv);
+status ftdi_test_toggle(int argc, char** argv);
+status ftdi_test_spi(int argc, char** argv);
+status ftdi_test_raw(int argc, char** argv);
 
 #endif

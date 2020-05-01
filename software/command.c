@@ -40,7 +40,7 @@ struct command* find_command(const char* name) {
 	return NULL;
 }
 
-int usage() {
+status usage() {
 	fprintf(stderr, "usage: %s <global-options> [subcommand] <options...>\n", invoked_as);
 	fprintf(stderr, "global-options:\n");
 	fprintf(stderr, "  (none)\n"); // TODO add table here
@@ -49,5 +49,5 @@ int usage() {
 		fprintf(stderr, "  %-24s  %s\n",
 				all_commands[i].name, all_commands[i].desc);
 	}
-	return 1;
+	return OK;
 }

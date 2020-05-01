@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int help(int argc, char** argv) {
+status help(int argc, char** argv) {
 	if (argc == 0) {
 		return usage();
 	}
@@ -22,5 +22,5 @@ int help(int argc, char** argv) {
 			fprintf(stderr, "  (none)\n"); // TODO add table here
 		}
 	}
-	return 1;
+	return OK;
 }

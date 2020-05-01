@@ -3,12 +3,15 @@
 #ifndef FTDI_UTIL_H
 #define FTDI_UTIL_H
 
+#include "ftdi.h"
+#include "status.h"
+
 extern struct ftdi_context* ftdi;
 
-void ftdiutil_init();
+status ftdiutil_init();
 void ftdiutil_deinit();
 
-void ftdiutil_error(const char* fn, struct ftdi_context* ftdi, int ret);
+status ftdiutil_error(const char* fn, int ret);
 
 void ftdiutil_write_data(unsigned char* data, int size);
 int ftdiutil_flush_data();

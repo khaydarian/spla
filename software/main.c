@@ -15,22 +15,17 @@ int global_flag(int argc, char** argv) {
 	return 1;
 }
 
-int invoke_command(int argc, char** argv) {
+static status invoke_command(int argc, char** argv) {
 	const char* command_name = argv[0];
 	struct command* cmd = find_command(command_name);
-	if (cmd) {
-		ftdiutil_init();
-		if (!ftdi) {
-			return 1;
-		}
-		int ret = cmd->fn(argc - 1, argv + 1);
-		ftdiutil_deinit();
-		return ret;
-	} else {
-		fprintf(stderr, "Unknown subcommand \"%s\". Try \"%s help\".\n",
+	if (!cmd) {
+		return errorf("Unknown subcommand \"%s\". Try \"%s help\".\n",
 				command_name, invoked_as);
-		return 1;
 	}
+	RETURN_IF_ERROR(ftdiutil_init());
+	status err = cmd->fn(argc - 1, argv + 1);
+	ftdiutil_deinit();
+	return err;
 }
 
 int main(int argc, char** argv) {
@@ -46,8 +41,15 @@ int main(int argc, char** argv) {
 			argc -= absorbed;
 			argv += absorbed;
 		} else {
-			return invoke_command(argc, argv);
+			status err = invoke_command(argc, argv);
+			if (is_error(err)) {
+				fprintf(stderr, "%s\n", err->message);
+				status_free(err);
+				return 1;
+			}
+			return 0;
 		}
 	}
-	return usage();
+	usage();
+	return 0;
 }

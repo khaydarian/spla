@@ -54,44 +54,41 @@ static void flush_data_bits_lo() {
 	ftdiutil_write_data(buf, sizeof(buf));
 }
 
-int mpsse_init() {
+status mpsse_init() {
 	int ret = ftdi_set_bitmode(ftdi, 0xFF, BITMODE_MPSSE);
 	if (ret) {
-		ftdiutil_error("ftdi_set_bitmode(MPSSE)", ftdi, ret);
-		return ret;
+		return ftdiutil_error("ftdi_set_bitmode(MPSSE)", ret);
 	}
 	data_bits_lo_out = BIT_CS | BIT_CLOCK | BIT_MOSI;
 	data_bits_lo_val = BIT_CS;
 	flush_data_bits_lo();
 	ret = ftdiutil_flush_data(ftdi);
 	if (ret) {
-		ftdiutil_error("flush_data_bits_low", ftdi, ret);
-		return ret;
+		return ftdiutil_error("flush_data_bits_low", ret);
 	}
 //	usleep(1000000);
 //	ret = ftdi_usb_purge_buffers(ftdi);
 //	if (ret) {
 //		ftdiutil_error("ftdi_usb_purge_buffers", ftdi, ret);
 //	}
-	return ret;
+	return OK;
 }
 
-int mpsse_deinit() {
+status mpsse_deinit() {
 	// Reset all pins to inputs / hi-z.
 	//int ret = ftdi_set_bitmode(ftdi, 0x00, BITMODE_BITBANG);
 	//if (ret) {
 	//	ftdiutil_error("ftdi_set_bitmode", ftdi, ret);
 	//}
 	//return ret;
-	return 0;
+	return OK;
 }
 
-int mpsse_set_frequency(const char* frequency_str) {
+status mpsse_set_frequency(const char* frequency_str) {
 	bool div5;
 	int divisor;
-	if (!parse_frequency(frequency_str, &div5, &divisor)) {
-		return -42; // TODO improve error handling
-	}
+	RETURN_IF_ERROR(
+		parse_frequency(frequency_str, &div5, &divisor));
 
 	// Set div5 state
 	unsigned char buf[3];
@@ -104,7 +101,7 @@ int mpsse_set_frequency(const char* frequency_str) {
 	buf[2] = (divisor >> 8) & 0xff;
 	ftdiutil_write_data(buf, sizeof(buf));
 
-	return 0;
+	return OK;
 }
 
 void mpsse_loopback(bool enabled) {

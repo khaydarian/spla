@@ -3,15 +3,13 @@
 #ifndef MPSSE_H
 #define MPSSE_H
 
-#include <stdbool.h>
+#include "status.h"
 
-#include "ftdi.h"
+status mpsse_init();
 
-int mpsse_init();
+status mpsse_deinit();
 
-int mpsse_deinit();
-
-int mpsse_set_frequency(const char* frequency_str);
+status mpsse_set_frequency(const char* frequency_str);
 
 void mpsse_loopback(bool enabled);
 

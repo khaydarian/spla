@@ -7,7 +7,7 @@
 #include "ftdi.h"
 #include "ftdi_util.h"
 
-int ftdi_list_devices(int argc, char** argv) {
+status ftdi_list_devices(int argc, char** argv) {
 	// TODO handle per-command arguments
 	(void) argc;
 	(void) argv;
@@ -15,8 +15,7 @@ int ftdi_list_devices(int argc, char** argv) {
 	struct ftdi_device_list* devlist;
 	int ret = ftdi_usb_find_all(ftdi, &devlist, 0, 0);
 	if (ret < 0) {
-		ftdiutil_error("ftdi_usb_find_all", ftdi, ret);
-		return 1;
+		return ftdiutil_error("ftdi_usb_find_all", ret);
 	}
 
 	printf("Found %d FTDI device%s:\n", ret, (ret == 1 ? "" : "s"));
@@ -33,9 +32,8 @@ int ftdi_list_devices(int argc, char** argv) {
 				description, sizeof(description),
 				serial, sizeof(serial));
 		if (ret < 0) {
-			ftdiutil_error("ftdi_usb_get_strings", ftdi, ret);
 			ftdi_list_free(&devlist);
-			return 1;
+			return ftdiutil_error("ftdi_usb_get_strings", ret);
 		}
 		printf("  Manufacturer: %s\n", manufacturer);
 		printf("  Description:  %s\n", description);
@@ -43,5 +41,5 @@ int ftdi_list_devices(int argc, char** argv) {
 	}
 
 	ftdi_list_free(&devlist);
-	return 0;
+	return OK;
 }

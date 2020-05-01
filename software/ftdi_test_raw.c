@@ -19,18 +19,18 @@ static int single_command(int argc, char** argv) {
 	if (!strcmp(command, "usbreset")) {
 		ret = ftdi_usb_reset(ftdi);
 		if (ret) {
-			ftdiutil_error("ftdi_usb_reset", ftdi, ret);
+			status_ignore(ftdiutil_error("ftdi_usb_reset", ret));
 		}
 		usleep(25000);
 		return 1;
 	} else if (!strcmp(command, "mpsse")) {
-		mpsse_init();
+		status_ignore(mpsse_init());
 		usleep(25000);
 		return 1;
 	} else if (!strcmp(command, "bitbang")) {
 		ret = ftdi_set_bitmode(ftdi, 0x00, BITMODE_BITBANG);
 		if (ret) {
-			ftdiutil_error("ftdi_set_bitmode(BITBANG)", ftdi, ret);
+			status_ignore(ftdiutil_error("ftdi_set_bitmode(BITBANG)", ret));
 		}
 		return 1;
 	} else if (!strcmp(command, "bbout") && argc >= 2) {
@@ -38,7 +38,7 @@ static int single_command(int argc, char** argv) {
 		printf("outputs = 0x%02x\n", outputs);
 		ret = ftdi_set_bitmode(ftdi, outputs, BITMODE_BITBANG);
 		if (ret) {
-			ftdiutil_error("ftdi_set_bitmode(BITBANG)", ftdi, ret);
+			status_ignore(ftdiutil_error("ftdi_set_bitmode(BITBANG)", ret));
 		}
 		return 2;
 	} else if (!strcmp(command, "bbval") && argc >= 2) {
@@ -47,7 +47,7 @@ static int single_command(int argc, char** argv) {
 		unsigned char buf[1] = {values};
 		ret = ftdi_write_data(ftdi, buf, sizeof(buf));
 		if (ret < 0) {
-			ftdiutil_error("ftdi_write_data", ftdi, ret);
+			status_ignore(ftdiutil_error("ftdi_write_data", ret));
 		}
 		return 2;
 	} else if (!strcmp(command, "lo") && argc >= 2) {
@@ -62,15 +62,12 @@ static int single_command(int argc, char** argv) {
 		mpsse_chip_select(false);
 		return 1;
 	} else if (!strcmp(command, "freq") && argc >= 2) {
-		ret = mpsse_set_frequency(argv[1]);
-		if (ret) {
-			ftdiutil_error("mpsse_set_frequency", ftdi, ret);
-		}
+		status_ignore(mpsse_set_frequency(argv[1]));
 		return 2;
 	} else if (!strcmp(command, "sleep")) {
 		ret = ftdiutil_flush_data();
 		if (ret) {
-			ftdiutil_error("ftdiutil_flush_data", ftdi, ret);
+			status_ignore(ftdiutil_error("ftdiutil_flush_data", ret));
 		}
 		usleep(500000);
 		return 1;
@@ -81,12 +78,12 @@ static int single_command(int argc, char** argv) {
 	} else if (!strcmp(command, "read")) {
 		ret = ftdiutil_flush_data();
 		if (ret) {
-			ftdiutil_error("ftdiutil_flush_data", ftdi, ret);
+			status_ignore(ftdiutil_error("ftdiutil_flush_data", ret));
 		}
 		unsigned char buf[255];
 		int ret = ftdi_read_data(ftdi, buf, sizeof(buf));
 		if (ret < 0) {
-			ftdiutil_error("ftdi_read_data", ftdi, ret);
+			status_ignore(ftdiutil_error("ftdi_read_data", ret));
 		}
 		printf("Read[%d]\n", ret);
 		for (int i = 0; i < ret; i++) {
@@ -105,7 +102,7 @@ static int single_command(int argc, char** argv) {
 #define FTDI_VENDOR_ID 0x0403
 #define FTDI_PRODUCT_ID 0x6014
 
-int ftdi_test_raw(int argc, char** argv) {
+status ftdi_test_raw(int argc, char** argv) {
 	// TODO handle per-command arguments
 	(void) argc;
 	(void) argv;
@@ -113,8 +110,7 @@ int ftdi_test_raw(int argc, char** argv) {
 	int ret = ftdi_usb_open_desc(ftdi, FTDI_VENDOR_ID, FTDI_PRODUCT_ID,
 			"C232HM-DDHSL-0", "FT0J7C2U");
 	if (ret) {
-		ftdiutil_error("ftdi_usb_open_desc", ftdi, ret);
-		return 1;
+		return ftdiutil_error("ftdi_usb_open_desc", ret);
 	}
 
 	while (argc > 0) {
@@ -125,13 +121,12 @@ int ftdi_test_raw(int argc, char** argv) {
 
 	ret = ftdiutil_flush_data();
 	if (ret) {
-		ftdiutil_error("ftdiutil_flush_data", ftdi, ret);
+		status_ignore(ftdiutil_error("ftdiutil_flush_data", ret));
 	}
 
 	ret = ftdi_usb_close(ftdi);
 	if (ret) {
-		ftdiutil_error("ftdi_usb_close", ftdi, ret);
-		return ret;
+		status_ignore(ftdiutil_error("ftdi_usb_close", ret));
 	}
-	return 0;
+	return OK;
 }
