@@ -2,10 +2,10 @@
 
 The 1990-era Super Nintendo Entertainment System is a venerable gaming console,
 and although its hardware is aging and hard to come by, it has long had
-well-establish software emulatiot, preserving gaming history for generations to
+well-establish software emulators, preserving gaming history for generations to
 come.
 
-However, while the rest of the SNES hardware has been effectively
+However, while most of the SNES hardware has been effectively
 reverse-engineered by writing test programs for the CPU (sometimes taking
 advantage of undocumented behavior to figure out details), one remaining
 component of the console has resisted complete analysis: the "Picture
