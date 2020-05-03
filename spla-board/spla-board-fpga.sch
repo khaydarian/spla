@@ -938,13 +938,13 @@ Text Notes 4750 10700 0    50   ~ 0
 Wire Wire Line
 	5950 9500 5950 9600
 Text GLabel 5550 9500 0    50   Input ~ 0
-LED4
+LED7
 Text GLabel 5950 9500 0    50   Input ~ 0
-LED6
+LED8
 Text GLabel 9650 2200 2    50   Output ~ 0
-LED4
+LED7
 Text GLabel 9650 2500 2    50   Output ~ 0
-LED6
+LED8
 NoConn ~ 9650 4100
 NoConn ~ 9650 3900
 NoConn ~ 12150 1700
