@@ -48,9 +48,25 @@ Cost Tax: $0.91
 Cost Total: $10.70
 Location: Office Desk Drawers
 
-Name: Hot Air Rework Station
+Name: Newacalox Hot Air SMD Rework Station
 Category: Lab Equipment
 From Package Key: amazon-misc-1
 Manufacturer: NEWACALOX
 Cost: $49.99
-Note: More stuff included with this kit
+
+Name: Hot Air Nozzles (x3)
+Category: Lab Equipment
+From Package Key: amazon-misc-1
+Note: Sizes 5mm, 8mm, 10mm
+
+Name: Generic Side Cutters
+Category: Lab Equipment
+From Package Key: amazon-misc-1
+
+Name: Suction pickup tool
+Category: Lab Equipment
+From Package Key: amazon-misc-1
+
+Name: Extra Electronics Tweezers (2)
+Category: Lab Equipment
+From Package Key: amazon-misc-1
