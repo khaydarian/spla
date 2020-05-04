@@ -1,0 +1,7 @@
+
+YOSYS := yosys
+
+NEXTPNR := nextpnr-ecp5
+NEXTPNR_FLAGS := --um5g-45k --package CABGA256
+
+ECPPACK := ecppack
