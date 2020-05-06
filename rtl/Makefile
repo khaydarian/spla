@@ -18,7 +18,7 @@ build/:
 	mkdir -p $@
 
 # Synthesis with Yosys / NextPNR
-build/bringup_blinky.json: constants.v bringup_blinky.v lib/fifo_dummy.v lib/bbus_dummy.v lib/vram_dummy.v lib/misc_default.v lib/analog_dummy.v
+build/bringup_blinky.json: constants.v bringup_blinky.v pins.v lib/fifo_dummy.v lib/bbus_dummy.v lib/vram_dummy.v lib/misc_default.v lib/analog_dummy.v
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_blinky -json $@' $^
 
 %.config: %.json

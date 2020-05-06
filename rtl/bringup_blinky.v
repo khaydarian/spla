@@ -3,25 +3,25 @@
 
 module bringup_blinky(
 	// Clock input
-	input clk_12mhz,
+	input  clk_12mhz,
 
 	// Bringup / Test LEDs
 	output led7,
 	output led8,
 
 	// Ftdi Fifo
-	inout [7:0] fifo_d,
-	input fifo_rxf_n,
-	input fifo_txe_n,
+	input  [7:0] fifo_d,
+	input  fifo_rxf_n,
+	input  fifo_txe_n,
 	output fifo_rd_n,
 	output fifo_wr_n,
 	output fifo_siwu,
-	input fifo_clkout,
+	input  fifo_clkout,
 	output fifo_oe_n,
 
 	// FTDI misc
-	input usb_pwren_n,
-	input usb_suspend_n,
+	input  usb_pwren_n,
+	input  usb_suspend_n,
 
 	// SNES clock output
 	output xin,
@@ -29,50 +29,50 @@ module bringup_blinky(
 	// SNES reset
 	output ppu1_reset_n,
 	output ppu2_reset_n,
-	input ppu2_resout0_n,
-	input ppu2_resout1_n,
+	input  ppu2_resout0_n,
+	input  ppu2_resout1_n,
 
 	// SNES sync
-	input burst_n,
-	input csync_n,
-	input ppu2_hblank,
-	input ppu2_vblank,
+	input  burst_n,
+	input  csync_n,
+	input  ppu2_hblank,
+	input  ppu2_vblank,
 
 	// SNES B-bus
 	output pard_n,
 	output pawr_n,
 	output lvl_pa_dir,
-	inout [7:0] pa,
+	input  [7:0] pa,
 	output lvl_pd_dir,
-	inout [7:0] pd,
+	input  [7:0] pd,
 
 	// SNES VRAM bus
-	output vrd_n,
-	output vawr_n,
-	output vbwr_n,
 	output lvl_va_dir,
-	inout va14,
-	inout [13:0] vaa,
-	inout [13:0] vab,
+	input  vrd_n,
+	input  vawr_n,
+	input  vbwr_n,
+	input  va14,
+	input  [13:0] vaa,
+	input  [13:0] vab,
 	output lvl_vd_dir,
-	inout [7:0] vda,
-	inout [7:0] vdb,
+	input  [7:0] vda,
+	input  [7:0] vdb,
 
 	// SNES Inter-PPU bus
-	input field,
-	input over_n,
-	input ppu_5m,
-	input hcld_n,
-	input vcld_n,
-	input [2:0] color,
-	input [1:0] prio,
-	input [3:0] chr,
+	input  field,
+	input  over_n,
+	input  ppu_5m,
+	input  hcld_n,
+	input  vcld_n,
+	input  [2:0] color,
+	input  [1:0] prio,
+	input  [3:0] chr,
 
 	// SNES PPU2 test (digital color inputs)
 	output ppu2_tst15,
 	output lvl_tst_dir,
 	output lvl_tst_oe,
-	input [14:0] ppu2_tst,
+	input  [14:0] ppu2_tst,
 
 	// SNES PPU1 misc outputs
 	output ppu1_extsync_n,
@@ -81,10 +81,10 @@ module bringup_blinky(
 	output ppu1_palmode,
 
 	// SNES PPU2 misc inputs
-	input ppu2_3p58m,
-	input ppu2_ped_n,
-	input ppu2_5mout_n,
-	input ppu2_toumei_n,
+	input  ppu2_3p58m,
+	input  ppu2_ped_n,
+	input  ppu2_5mout_n,
+	input  ppu2_toumei_n,
 
 	// SNES PPU2 misc outputs
 	output ppu2_extlatch,
@@ -104,11 +104,11 @@ module bringup_blinky(
 	// Analog block
 	output analog_clk,
 	output analog_r_oe,
-	input [7:0] analog_r,
+	input  [7:0] analog_r,
 	output analog_g_oe,
-	input [7:0] analog_g,
+	input  [7:0] analog_g,
 	output analog_b_oe,
-	input [7:0] analog_b);
+	input  [7:0] analog_b);
 
 localparam COUNTER_RESET_VAL = 1200000;
 localparam COUNTER_BITS = $clog2(COUNTER_RESET_VAL);
@@ -130,8 +130,18 @@ end
 assign led7 = spinner[0];
 assign led8 = ~spinner[0];
 
+// Ftdi Fifo
+wire [7:0] fifo_d_in;
+wire [7:0] fifo_d_out;
+wire fifo_d_dir;
+pin_bidir_8 pin_bidir_8_for_fifo_d(
+	.i(fifo_d_in),
+	.o(fifo_d_out), .dir(fifo_d_dir),
+	.pin(fifo_d));
 fifo_dummy fifo(
-	.d(fifo_d),
+	.d_in(fifo_d_in),
+	.d_out(fifo_d_out),
+	.d_dir(fifo_d_dir),
 	.rxf_n(fifo_rxf_n),
 	.txe_n(fifo_txe_n),
 	.rd_n(fifo_rd_n),
@@ -146,26 +156,81 @@ assign ppu1_reset_n = 1'b0;
 assign ppu2_reset_n = 1'b0;
 
 // SNES B-bus
+wire [7:0] pa_in;
+wire [7:0] pa_out;
+wire pa_dir;
+wire [7:0] pd_in;
+wire [7:0] pd_out;
+wire pd_dir;
+pin_bidir_8 pin_bidir_8_for_pa(
+	.i(pa_in), .o(pa_out), .dir(pa_dir), .pin(pa));
+pin_bidir_8 pin_bidir_8_for_bd(
+	.i(pd_in), .o(pd_out), .dir(pd_dir), .pin(pd));
 bbus_dummy bbus(
 	.pard_n(pard_n),
 	.pawr_n(pawr_n),
 	.lvl_pa_dir(lvl_pa_dir),
-	.pa(pa),
+	.pa_in(pa_in),
+	.pa_out(pa_out),
+	.pa_dir(pa_dir),
 	.lvl_pd_dir(lvl_pd_dir),
-	.pd(pd));
+	.pd_in(pd_in),
+	.pd_out(pd_out),
+	.pd_dir(pd_dir),
+	);
 
 // SNES VRAM bus
+wire vrd_n_in;
+wire vrd_n_out;
+wire vrd_n_dir;
+wire vawr_n_in;
+wire vawr_n_out;
+wire vawr_n_dir;
+wire vbwr_n_in;
+wire vbwr_n_out;
+wire vbwr_n_dir;
+wire va14_in;
+wire va14_out;
+wire va14_dir;
+wire [13:0] vaa_in;
+wire [13:0] vaa_out;
+wire vaa_dir;
+wire [13:0] vab_in;
+wire [13:0] vab_out;
+wire vab_dir;
+wire [7:0] vda_in;
+wire [7:0] vda_out;
+wire vda_dir;
+wire [7:0] vdb_in;
+wire [7:0] vdb_out;
+wire vdb_dir;
+pin_bidir pin_bidir_for_vrd(
+	.i(vrd_n_in), .o(vrd_n_out), .dir(vrd_n_dir), .pin(vrd_n));
+pin_bidir pin_bidir_for_vawr(
+	.i(vawr_n_in), .o(vawr_n_out), .dir(vawr_n_dir), .pin(vawr_n));
+pin_bidir pin_bidir_for_vbwr(
+	.i(vbwr_n_in), .o(vbwr_n_out), .dir(vbwr_n_dir), .pin(vbwr_n));
+pin_bidir pin_bidir_for_va14(
+	.i(va14_in), .o(va14_out), .dir(va14_dir), .pin(va14));
+pin_bidir_14 pin_bidir_14_for_vaa(
+	.i(vaa_in), .o(vaa_out), .dir(vaa_dir), .pin(vaa));
+pin_bidir_14 pin_bidir_14_for_vab(
+	.i(vab_in), .o(vab_out), .dir(vab_dir), .pin(vab));
+pin_bidir_8 pin_bidir_8_for_vda(
+	.i(vda_in), .o(vda_out), .dir(vda_dir), .pin(vda));
+pin_bidir_8 pin_bidir_8_for_vdb(
+	.i(vdb_in), .o(vdb_out), .dir(vdb_dir), .pin(vdb));
 vram_dummy vram(
-	.vrd_n(vrd_n),
-	.vawr_n(vawr_n),
-	.vbwr_n(vbwr_n),
 	.lvl_va_dir(lvl_va_dir),
-	.va14(va14),
-	.vaa(vaa),
-	.vab(vab),
+	.vrd_n_in(vrd_n_in), .vrd_n_out(vrd_n_out), .vrd_n_dir(vrd_n_dir),
+	.vawr_n_in(vawr_n_in), .vawr_n_out(vawr_n_out), .vawr_n_dir(vawr_n_dir),
+	.vbwr_n_in(vbwr_n_in), .vbwr_n_out(vbwr_n_out), .vbwr_n_dir(vbwr_n_dir),
+	.va14_in(va14_in), .va14_out(va14_out), .va14_dir(va14_dir),
+	.vaa_in(vaa_in), .vaa_out(vaa_out), .vaa_dir(vaa_dir),
+	.vab_in(vab_in), .vab_out(vab_out), .vab_dir(vab_dir),
 	.lvl_vd_dir(lvl_vd_dir),
-	.vda(vda),
-	.vdb(vdb));
+	.vda_in(vda_in), .vda_out(vda_out), .vda_dir(vda_dir),
+	.vdb_in(vdb_in), .vdb_out(vdb_out), .vdb_dir(vdb_dir));
 
 // SNES PPU2 test (digital color inputs)
 assign ppu2_tst15 = 1'b0;
