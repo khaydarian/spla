@@ -1,7 +1,7 @@
 // vim: set ts=4:sts=4:sw=4:noet
 `default_nettype none
 
-module fifo_dummy(
+module ftdi_fifo_dummy(
 	input  [7:0] d_in,
 	output [7:0] d_out,
 	output d_dir,

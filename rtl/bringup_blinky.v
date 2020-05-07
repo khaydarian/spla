@@ -138,7 +138,7 @@ pin_bidir_8 pin_bidir_8_for_fifo_d(
 	.i(fifo_d_in),
 	.o(fifo_d_out), .dir(fifo_d_dir),
 	.pin(fifo_d));
-fifo_dummy fifo(
+ftdi_fifo_dummy ftdi_fifo(
 	.d_in(fifo_d_in),
 	.d_out(fifo_d_out),
 	.d_dir(fifo_d_dir),
