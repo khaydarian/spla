@@ -1,36 +1,64 @@
 # Bringup sequence
 
-This is the steps to build a working SPLA board, starting from a bare board and parts.
+Follow these steps to build a working SPLA board, starting from a bare board
+and parts.  This is the most-paranoid bringup for the first board; many steps
+can be skipped or merged once the board layout is proven.
 
 1.  Visually inspect PCB.
-    1.  Remove all connecting jumpers.
+    1.  Verify PCB revision.  These instructions are for `SPLA Breakout Board Rev 009`.
+    1.  Inspect FPGA BGA area.
+    1.  Inspect 'narrow' areas (ie, minimum-pitch traces).
+    1.  Inspect via alignment.
     1.  Sand edges with fine-grit sandpaper (not necessary, but more professional).
-    1.  Pre-clean PCB surface with isopropyl alcohol.
+    1.  Pre-clean PCB surface with isopropyl alcohol, if necessary.
+    1.  Insert hex standoffs.
 1.  Power validation.
-    1.  Solder any power-related chips that aren't already present.
-    1.  Solder power-related jumpers.
-    1.  Verify that 12V input on barrel jack is stable (with test load).
-    1.  Verify that 5V regulator output is stable (with test load).
-    1.  Verify that 3.3V regulator output is stable (with test load).
+    1.  Solder barrel jack: `J7`.
+    1.  Solder power pinheaders: `J12` (2x8), `J4` (2x2).
+    1.  Solder `ST1S10` regulators: `U7`, `U8`.
+    1.  Solder inductors: `L1`, `L2`.
+    1.  Solder LEDs: `D1`, `D2`
+    1.  Solder power-related passives.
+    1.  Configure test load: several 220-ohm resistor(s) on breadboard.
+    1.  Connect test load to power pinheader.
+    1.  Connect 12V lab supply with power adapter pigtail.  Limit current to 100 mA.
     1.  Verify that 5V and 3.3V LEDs are lit.
+    1.  Verify that 5V regulator output is stable (via oscilloscope).
+    1.  Verify that 3.3V regulator output is stable (via oscilloscope).
+    1.  Disable 12V power.
+    1.  Solder 2.5V and 1.1V LDOs `U9` and `U14`.
+    1.  Solder 2.5V and 1.1V passives.
+    1.  Connect jumpers on `J4`.
+    1.  Enable 12V power.  Limit current to 100mA.
     1.  Verify that 2.5V LDO output is stable (with test load).
     1.  Verify that 1.1V LDO output is stable (with test load).
+    1.  Remove 12V power.
     1.  Connect jumpers to enable power to the rest of the board.
-1.  USB conenction
-    1.  Solder USB connector, `FT2232H` chip, and `93LC66B` EEPROM.
-    1.  Solder crystal oscillator.
+1.  USB connection
+    1.  Solder USB connector: `J1`
+    1.  Solder JTAG pinheader: `J2`.
+    1.  Solder `FT2232H` chip: `U2`.
+    1.  Solder `93LC66B` EEPROM: `U3`.
+    1.  Solder LEDs: `D3`, `D4`, `D5`, `D6`.
+    1.  Solder front-side FTDI-related passives.
+    1.  Switch to back of board.
+    1.  Solder crystal oscillator: `X0` (reverse of board).
+    1.  Solder back-side USB/FTDI-related passives.
+    1.  Enable 12V power.
     1.  Verify oscillator output (frequency and voltage) on oscilloscope.
-    1.  Enable FTDI power.
-    1.  Verify conenction to host (via `lsusb` at first).
+    1.  Verify connection to host via `lsusb`.
+    1.  Verify connection to host with `spla` command.
     1.  Program the FTDI EEPROM with the correct settings. *Need a tool for this.*
     1.  Power cycle the board to reset FTDI.
-    1.  Verify that FTDI comes up as expected on `lsusb`.
+    1.  Verify that properly-configured FTDI comes up as expected on `lsusb`.
+    1.  Verify that the FTDI comes up with the correct serial number with `spla ftdi_list_devices`.
     1.  Verify `ADBUS` and `BDBUS` connectivity via MPSSE GPIO interface, on oscillscope. *Need a tool for this.*
     1.  Toggle the LED on `BDBUS`. *Need a tool for this.*
+    1.  *Note: After this point, these instructions are a bit fuzzy.*
 1.  FPGA
     1.  Solder FPGA to the board, using hot air rework station or reflow oven. *This might need to be done first, to avoid messing up other soldering on the board.*
     1.  Verify basic connectivity to FTDI `BDBUS` SPI pins, and get ECP5 SPI Slave interface working. *Need a tool for this.*
-    1.  Load first-run FPGA image, and verify that sample LEDs blink. *Need to write this image.*
+    1.  Load `bringup_blinky` FPGA image, and verify that sample LEDs blink. *Need to write this image.*
     1.  Load the bringup FPGA image. *Need to write this image.*
     1.  Use function generator (and/or crummy Arduino substitute) to drive each external pin one at a time, and verify connectivity and lack of bridges. *Need a tool for this.*
 1.  Level Shifters
