@@ -13,6 +13,11 @@ void ftdiutil_deinit();
 
 status ftdiutil_error(const char* fn, int ret);
 
+status ftdiutil_set_default_usb_device(const char* which);
+status ftdiutil_set_usb_device(const char* which);
+status ftdiutil_open_usb();
+status ftdiutil_close_usb();
+
 void ftdiutil_write_data(unsigned char* data, int size);
 int ftdiutil_flush_data();
 int ftdiutil_read_data(unsigned char* data, int size);

@@ -7,6 +7,8 @@
 #include "ftdi.h"
 #include "ftdi_util.h"
 
+// [Command]
+// Description: Show all relevant devices connected by USB.
 status ftdi_list_devices(int argc, char** argv) {
 	// TODO handle per-command arguments
 	(void) argc;
@@ -17,7 +19,6 @@ status ftdi_list_devices(int argc, char** argv) {
 	if (ret < 0) {
 		return ftdiutil_error("ftdi_usb_find_all", ret);
 	}
-
 	printf("Found %d FTDI device%s:\n", ret, (ret == 1 ? "" : "s"));
 
 	char manufacturer[256];

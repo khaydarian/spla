@@ -11,16 +11,26 @@ clean:
 	rm -rf build/ spla
 
 HDRS := build/ftdi.h $(wildcard *.h)
-OBJS := build/ftdi.o $(patsubst %.c,build/%.o,$(wildcard *.c))
+SRCS := $(wildcard *.c)
 
 # libusb
 LIBUSB_CFLAGS := -I/usr/include/libusb-1.0
 LIBUSB_LIBS := -L/usr/lib/x86_64-linux-gnu -lusb-1.0
 
-x:=$(shell mkdir -p build)
+nop:=$(shell mkdir -p build)
 
 build/%.o: %.c $(HDRS)
 	$(CC) $(CFLAGS) $(LIBUSB_CFLAGS) -Ibuild/ -c $< -o $@
+
+build/command_table.o: build/command_table.c command.h $(SRCS)
+	$(CC) $(CFLAGS) -I. -c $< -o $@
+
+build/command_table.c: command_table.py $(SRCS)
+	python $^ >$@
+
+OBJS := $(patsubst %.c,build/%.o,$(SRCS))
+OBJS += build/ftdi.o
+OBJS += build/command_table.o
 
 spla: $(OBJS)
 	$(LD) $(LDFLAGS) $^ -o $@ $(LIBUSB_LIBS) -lm

@@ -4,6 +4,8 @@
 
 #include <stdio.h>
 
+// [Command]
+// Description: Show command list, or options.
 status help(int argc, char** argv) {
 	if (argc == 0) {
 		return usage();

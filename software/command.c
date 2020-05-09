@@ -7,29 +7,7 @@
 
 const char* invoked_as;
 
-static struct command all_commands[] = {
-	{
-		"help", help,
-		"Show command listing, or options.",
-	},
-	{
-		"ftdi_list_devices", ftdi_list_devices,
-		"Show all relevant devices connected by USB.",
-	},
-	{
-		"ftdi_test_raw", ftdi_test_raw,
-		"Test FTDI interface with individual commands.",
-	},
-	{
-		"ftdi_test_spi", ftdi_test_spi,
-		"Test FTDI SPI interface.",
-	},
-	{
-		"ftdi_test_toggle", ftdi_test_toggle,
-		"Test FTDI interface by toggling GPIOs.",
-	},
-	{0, 0, 0},
-}; 
+struct command* all_commands;
 
 struct command* find_command(const char* name) {
 	for (int i = 0; all_commands[i].name; i++) {
@@ -40,10 +18,13 @@ struct command* find_command(const char* name) {
 	return NULL;
 }
 
+// TODO fix this hacky way of showing global flags
+void global_flag_usage();
+
 status usage() {
 	fprintf(stderr, "usage: %s <global-options> [subcommand] <options...>\n", invoked_as);
 	fprintf(stderr, "global-options:\n");
-	fprintf(stderr, "  (none)\n"); // TODO add table here
+	global_flag_usage();
 	fprintf(stderr, "subcommands:\n");
 	for (int i = 0; all_commands[i].name; i++) {
 		fprintf(stderr, "  %-24s  %s\n",

@@ -9,19 +9,14 @@
 #include <unistd.h>
 #include <stdio.h>
 
-#define FTDI_VENDOR_ID 0x0403
-#define FTDI_PRODUCT_ID 0x6014
-
+// [Command]
+// Description: Test FTDI SPI interface.
+// Option: open_usb = true
+// Option: default_usb_device = cable
 status ftdi_test_spi(int argc, char** argv) {
 	// TODO handle per-command arguments
 	(void) argc;
 	(void) argv;
-
-	int ret = ftdi_usb_open_desc(ftdi, FTDI_VENDOR_ID, FTDI_PRODUCT_ID,
-			"C232HM-DDHSL-0", "FT0J7C2U");
-	if (ret) {
-		return ftdiutil_error("ftdi_usb_open_desc", ret);
-	}
 
 	status err = OK;
 
@@ -46,18 +41,13 @@ status ftdi_test_spi(int argc, char** argv) {
 
 	mpsse_chip_select(false);
 
-	ret = ftdiutil_flush_data(ftdi);
+	int ret = ftdiutil_flush_data(ftdi);
 	if (ret) {
 		err = ftdiutil_error("ftdiutil_flush_data", ret);
 	}
 
 bad:
 	status_ignore(mpsse_deinit());
-
-	ret = ftdi_usb_close(ftdi);
-	if (ret) {
-		status_ignore(ftdiutil_error("ftdi_usb_close", ret));
-	}
 
 	return err;
 }

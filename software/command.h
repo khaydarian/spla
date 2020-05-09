@@ -11,18 +11,14 @@ struct command {
 	const char* name;
 	command_fn fn;
 	const char* desc;
+	bool open_usb;
+	const char* default_usb_device;
 };
 
 extern const char* invoked_as;
 
 struct command* find_command(const char* name);
 
-// Individual commands
 status usage();
-status help(int argc, char** argv);
-status ftdi_list_devices(int argc, char** argv);
-status ftdi_test_toggle(int argc, char** argv);
-status ftdi_test_spi(int argc, char** argv);
-status ftdi_test_raw(int argc, char** argv);
 
 #endif

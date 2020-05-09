@@ -99,19 +99,14 @@ static int single_command(int argc, char** argv) {
 	return 1;
 }
 
-#define FTDI_VENDOR_ID 0x0403
-#define FTDI_PRODUCT_ID 0x6014
-
+// [Command]
+// Description: Test FTDI interface with individual commands.
+// Option: open_usb = true
+// Option: default_usb_device = cable
 status ftdi_test_raw(int argc, char** argv) {
 	// TODO handle per-command arguments
 	(void) argc;
 	(void) argv;
-
-	int ret = ftdi_usb_open_desc(ftdi, FTDI_VENDOR_ID, FTDI_PRODUCT_ID,
-			"C232HM-DDHSL-0", "FT0J7C2U");
-	if (ret) {
-		return ftdiutil_error("ftdi_usb_open_desc", ret);
-	}
 
 	while (argc > 0) {
 		int absorbed = single_command(argc, argv);
@@ -119,14 +114,10 @@ status ftdi_test_raw(int argc, char** argv) {
 		argv += absorbed;
 	}
 
-	ret = ftdiutil_flush_data();
+	int ret = ftdiutil_flush_data();
 	if (ret) {
 		status_ignore(ftdiutil_error("ftdiutil_flush_data", ret));
 	}
 
-	ret = ftdi_usb_close(ftdi);
-	if (ret) {
-		status_ignore(ftdiutil_error("ftdi_usb_close", ret));
-	}
 	return OK;
 }

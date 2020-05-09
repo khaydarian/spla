@@ -8,11 +8,23 @@
 #include "command.h"
 #include "ftdi_util.h"
 
-int global_flag(int argc, char** argv) {
-	// TODO parse global flags here, and not just skip over them
-	(void) argc;
-	(void) argv;
-	return 1;
+status global_flag(int argc, char** argv, int* absorbed) {
+	if (!strcmp(argv[0], "--device")) {
+		if (argc < 2) {
+			return errorf("Missing argument to '--device'.");
+		} else {
+			// TODO: Parse some format in ftdiutil_set_usb_device
+			// TODO: fix this flag to match ftdi_list_devices
+			RETURN_IF_ERROR(ftdiutil_set_usb_device(argv[1]));
+			*absorbed = 2;
+			return OK;
+		}
+	}
+	return errorf("Unknown flag: %s", argv[0]);
+}
+
+void global_flag_usage() {
+	fprintf(stderr, "  %-24s  %s\n", "--device", "Select FTDI USB device to use.");
 }
 
 static status invoke_command(int argc, char** argv) {
@@ -23,7 +35,17 @@ static status invoke_command(int argc, char** argv) {
 				command_name, invoked_as);
 	}
 	RETURN_IF_ERROR(ftdiutil_init());
-	status err = cmd->fn(argc - 1, argv + 1);
+	status err;
+	if (cmd->default_usb_device) {
+		RETURN_IF_ERROR(ftdiutil_set_default_usb_device(cmd->default_usb_device));
+	}
+	if (cmd->open_usb) {
+		RETURN_IF_ERROR(ftdiutil_open_usb());
+	}
+	err = cmd->fn(argc - 1, argv + 1);
+	if (cmd->open_usb) {
+		status_ignore(ftdiutil_close_usb());
+	}
 	ftdiutil_deinit();
 	return err;
 }
@@ -37,7 +59,13 @@ int main(int argc, char** argv) {
 	while (argc > 0) {
 		const char* arg = argv[0];
 		if (arg[0] == '-') {
-			int absorbed = global_flag(argc, argv);
+			int absorbed;
+			status err = global_flag(argc, argv, &absorbed);
+			if (is_error(err)) {
+				fprintf(stderr, "%s\n", err->message);
+				status_free(err);
+				return 1;
+			}
 			argc -= absorbed;
 			argv += absorbed;
 		} else {
