@@ -13,10 +13,7 @@
 * rtl: Build plausible FTDI-fifo interface.
 * rtl: Build stream merging protocol.
 * rtl: Build opcode processor.
-* rtl: Build bringup LED-flasher.
 * rtl: Build bringup boundary-scan-like image? Possibly get a Lattice tool instead.
-* software: Clean up error handling (absl::Status-like?).
-* software: Clean up CLI structure.
 * software: Get rid of global-constant mess.
 * software: Integrate or invent a decent unit testing framework.
 * inventory: Write summary tool.
