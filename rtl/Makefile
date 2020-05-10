@@ -18,11 +18,11 @@ build/:
 	mkdir -p $@
 
 # Synthesis with Yosys / NextPNR
-build/bringup_blinky.json: constants.v bringup_blinky.v pins.v lib/ftdi_fifo_dummy.v lib/bbus_dummy.v lib/vram_dummy.v lib/misc_default.v lib/analog_dummy.v
+build/bringup_blinky.json: $(shell cat bringup_blinky.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_blinky -json $@' $^
 
 %.config: %.json
-	$(NEXTPNR) $(NEXTPNR_FLAGS) --json $< --textcfg $@ --lpf default.lpf
+	$(NEXTPNR) $(NEXTPNR_FLAGS) --json $< --textcfg $@ --lpf default.lpf 2>&1 | tee -a $(patsubst %.config,%.log,$@)
 
 %.bit: %.config
 	$(ECPPACK) $< --bit $@
