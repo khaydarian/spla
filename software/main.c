@@ -6,7 +6,7 @@
 #include <string.h>
 
 #include "command.h"
-#include "ftdi_util.h"
+#include "ftdiutil.h"
 
 status global_flag(int argc, char** argv, int* absorbed) {
 	if (!strcmp(argv[0], "--device")) {

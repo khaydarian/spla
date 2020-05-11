@@ -1,6 +1,6 @@
 // vi: ts=2:sw=2:sts=2:noet
 
-#include "ftdi_util.h"
+#include "ftdiutil.h"
 
 #include "ftdi.h"
 #include <assert.h>

@@ -3,7 +3,7 @@
 #include "mpsse.h"
 #include <unistd.h>
 
-#include "ftdi_util.h"
+#include "ftdiutil.h"
 #include "freq_util.h"
 
 #define BIT_CLOCK  0x01

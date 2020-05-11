@@ -5,7 +5,7 @@
 
 #include "command.h"
 #include "ftdi.h"
-#include "ftdi_util.h"
+#include "ftdiutil.h"
 
 // [Command]
 // Description: Show all relevant devices connected by USB.
