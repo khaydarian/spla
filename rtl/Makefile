@@ -22,7 +22,7 @@ build/bringup_blinky.json: $(shell cat bringup_blinky.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_blinky -json $@' $^
 
 %.config: %.json
-	$(NEXTPNR) $(NEXTPNR_FLAGS) --json $< --textcfg $@ --lpf default.lpf 2>&1 | tee -a $(patsubst %.config,%.log,$@)
+	$(NEXTPNR) $(NEXTPNR_FLAGS) --json $< --textcfg $@ --lpf default.lpf -l $(patsubst %.config,%.log,$@)
 
 %.bit: %.config
 	$(ECPPACK) $< --bit $@
