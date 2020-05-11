@@ -62,10 +62,7 @@ status mpsse_init() {
 	data_bits_lo_out = BIT_CS | BIT_CLOCK | BIT_MOSI;
 	data_bits_lo_val = BIT_CS;
 	flush_data_bits_lo();
-	ret = ftdiutil_flush_data(ftdi);
-	if (ret) {
-		return ftdiutil_error("flush_data_bits_low", ret);
-	}
+	RETURN_IF_ERROR(ftdiutil_flush_writes("flush_data_bits_low"));
 	return OK;
 }
 

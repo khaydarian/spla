@@ -65,10 +65,7 @@ static int single_command(int argc, char** argv) {
 		status_ignore(mpsse_set_frequency(argv[1]));
 		return 2;
 	} else if (!strcmp(command, "sleep")) {
-		ret = ftdiutil_flush_data();
-		if (ret) {
-			status_ignore(ftdiutil_error("ftdiutil_flush_data", ret));
-		}
+		status_ignore(ftdiutil_flush_writes(0));
 		usleep(500000);
 		return 1;
 	} else if (!strcmp(command, "clock") && argc >= 2) {
@@ -76,10 +73,7 @@ static int single_command(int argc, char** argv) {
 		mpsse_clock_only(bytes);
 		return 2;
 	} else if (!strcmp(command, "read")) {
-		ret = ftdiutil_flush_data();
-		if (ret) {
-			status_ignore(ftdiutil_error("ftdiutil_flush_data", ret));
-		}
+		status_ignore(ftdiutil_flush_writes(0));
 		unsigned char buf[255];
 		int ret = ftdi_read_data(ftdi, buf, sizeof(buf));
 		if (ret < 0) {
@@ -114,10 +108,7 @@ status ftdi_test_raw(int argc, char** argv) {
 		argv += absorbed;
 	}
 
-	int ret = ftdiutil_flush_data();
-	if (ret) {
-		status_ignore(ftdiutil_error("ftdiutil_flush_data", ret));
-	}
+	status_ignore(ftdiutil_flush_writes(0));
 
 	return OK;
 }

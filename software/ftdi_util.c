@@ -105,30 +105,21 @@ void ftdiutil_write_data(unsigned char* data, int size) {
 	write_buf_len += size;
 }
 
-int ftdiutil_flush_data() {
+status ftdiutil_flush_writes(const char* caller) {
+	if (!caller) {
+		caller = "ftdiutil_flush_writes";
+	}
 	unsigned char* data = write_buf;
 	int size = write_buf_len;
 	while (size > 0) {
 		int ret = ftdi_write_data(ftdi, data, size);
 		if (ret < 0) {
 			write_buf_len = 0;
-			return ret;
+			return ftdiutil_error(caller, ret);
 		}
 		data += ret;
 		size -= ret;
 	}
 	write_buf_len = 0;
-	return 0;
-}
-
-int ftdiutil_read_data(unsigned char* data, int size) {
-	while (size > 0) {
-		int ret = ftdi_read_data(ftdi, data, size);
-		if (ret < 0) {
-			return ret;
-		}
-		data += ret;
-		size -= ret;
-	}
-	return 0;
+	return OK;
 }

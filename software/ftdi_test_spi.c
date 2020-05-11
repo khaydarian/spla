@@ -76,10 +76,7 @@ status ftdi_test_spi(int argc, char** argv) {
 
 		mpsse_chip_select(false);
 
-		int ret = ftdiutil_flush_data(ftdi);
-		if (ret) {
-			err = ftdiutil_error("ftdiutil_flush_data", ret);
-		}
+		RETURN_IF_ERROR(ftdiutil_flush_writes("ftdiutil_flush_writes"));
 	}
 
 bad:
