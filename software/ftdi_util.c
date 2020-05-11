@@ -79,17 +79,21 @@ status ftdiutil_open_usb() {
 	return OK;
 }
 
+static unsigned char* write_buf;
+static int write_buf_len;
+static int write_buf_cap;
+
 status ftdiutil_close_usb() {
+	if (write_buf_len) {
+		fprintf(stderr, "Warning: Dropping %d bytes of buffered FTDI writes.\n",
+				write_buf_len);
+	}
 	int ret = ftdi_usb_close(ftdi);
 	if (ret) {
 		return ftdiutil_error("ftdi_usb_close", ret);
 	}
 	return OK;
 }
-
-static unsigned char* write_buf;
-static int write_buf_len;
-static int write_buf_cap;
 
 void ftdiutil_write_data(unsigned char* data, int size) {
 	if (write_buf == NULL) {
