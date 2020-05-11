@@ -34,8 +34,8 @@
 
 #define CMD_TRANSFER_OUT_NEG_EDGE 0x01
 #define CMD_TRANSFER_OUT_POS_EDGE 0x00
-#define CMD_TRANSFER_BYTE_MODE 0x02
-#define CMD_TRANSFER_BIT_MODE 0x00
+#define CMD_TRANSFER_BYTE_MODE 0x00
+#define CMD_TRANSFER_BIT_MODE 0x02
 #define CMD_TRANSFER_IN_NEG_EDGE 0x04
 #define CMD_TRANSFER_IN_POS_EDGE 0x00
 #define CMD_TRANSFER_LSB_FIRST 0x08
@@ -66,21 +66,10 @@ status mpsse_init() {
 	if (ret) {
 		return ftdiutil_error("flush_data_bits_low", ret);
 	}
-//	usleep(1000000);
-//	ret = ftdi_usb_purge_buffers(ftdi);
-//	if (ret) {
-//		ftdiutil_error("ftdi_usb_purge_buffers", ftdi, ret);
-//	}
 	return OK;
 }
 
 status mpsse_deinit() {
-	// Reset all pins to inputs / hi-z.
-	//int ret = ftdi_set_bitmode(ftdi, 0x00, BITMODE_BITBANG);
-	//if (ret) {
-	//	ftdiutil_error("ftdi_set_bitmode", ftdi, ret);
-	//}
-	//return ret;
 	return OK;
 }
 
@@ -129,11 +118,12 @@ void mpsse_clock_only(int bytes) {
 }
 
 void mpsse_write_data(unsigned char* data, int bytes) {
-	unsigned char opcode = 0x19/*(CMD_TRANSFER_WRITE |
+	unsigned char opcode = (
+			CMD_TRANSFER_WRITE |
 			CMD_TRANSFER_BYTE_MODE |
 			CMD_TRANSFER_OUT_NEG_EDGE |
-			CMD_TRANSFER_IN_NEG_EDGE |
-			CMD_TRANSFER_MSB_FIRST)*/;
+			CMD_TRANSFER_IN_POS_EDGE |
+			CMD_TRANSFER_LSB_FIRST);
 	unsigned char buf[3];
 	buf[0] = opcode;
 	buf[1] = ((bytes - 1) >> 0) & 0xff;
