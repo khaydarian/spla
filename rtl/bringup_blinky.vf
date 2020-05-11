@@ -1,6 +1,6 @@
-constants.v
+lib/constants.v
 bringup_blinky.v
-pins.v
+lib/pins.v
 lib/ftdi_fifo_dummy.v
 lib/bbus_dummy.v
 lib/vram_dummy.v
