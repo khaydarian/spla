@@ -21,7 +21,7 @@ status ftdiutil_close_usb();
 void ftdiutil_write_data(unsigned char* data, int size);
 status ftdiutil_flush_writes(const char* caller);
 
-void ftdiutil_read_data(unsigned char* data, int size, bool* completed);
+void ftdiutil_read_data(unsigned char* data, int size);
 status ftdiutil_flush_reads(const char* caller);
 
 #endif

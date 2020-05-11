@@ -128,3 +128,18 @@ void mpsse_write_data(unsigned char* data, int bytes) {
 	ftdiutil_write_data(buf, sizeof(buf));
 	ftdiutil_write_data(data, bytes);
 }
+
+void mpsse_read_data(unsigned char* data, int bytes) {
+	unsigned char opcode = (
+			CMD_TRANSFER_READ |
+			CMD_TRANSFER_BYTE_MODE |
+			CMD_TRANSFER_OUT_NEG_EDGE |
+			CMD_TRANSFER_IN_POS_EDGE |
+			CMD_TRANSFER_LSB_FIRST);
+	unsigned char buf[3];
+	buf[0] = opcode;
+	buf[1] = ((bytes - 1) >> 0) & 0xff;
+	buf[2] = ((bytes - 1) >> 8) & 0xff;
+	ftdiutil_write_data(buf, sizeof(buf));
+	ftdiutil_read_data(data, bytes);
+}

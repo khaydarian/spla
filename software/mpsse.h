@@ -21,4 +21,6 @@ void mpsse_clock_only(int bytes);
 
 void mpsse_write_data(unsigned char* data, int bytes);
 
+void mpsse_read_data(unsigned char* data, int bytes);
+
 #endif

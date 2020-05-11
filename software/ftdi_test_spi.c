@@ -13,6 +13,7 @@
 
 bool flag_repeat = false;
 char* flag_freq = "1MHz";
+bool flag_read = false;
 
 static status flag(int argc, char** argv, int* absorbed) {
 	if (!strcmp(argv[0], "--freq")) {
@@ -25,6 +26,11 @@ static status flag(int argc, char** argv, int* absorbed) {
 	}
 	if (!strcmp(argv[0], "--repeat")) {
 		flag_repeat = true;
+		*absorbed = 1;
+		return OK;
+	}
+	if (!strcmp(argv[0], "--read")) {
+		flag_read = true;
 		*absorbed = 1;
 		return OK;
 	}
@@ -64,19 +70,33 @@ status ftdi_test_spi(int argc, char** argv) {
 	for (unsigned i = 0; i < sizeof(data); i++) {
 		data[i] = i;
 	}
+	unsigned char wbuf[] = "A";
+	unsigned char rbuf[2];
 
 	if (flag_repeat) {
 		signal(SIGINT, sigint_handler);
 	}
 
-	while (flag_repeat) {
-		mpsse_chip_select(true);
-
-		mpsse_write_data(data, sizeof(data));
-
-		mpsse_chip_select(false);
-
-		RETURN_IF_ERROR(ftdiutil_flush_writes(0));
+	if (flag_read) {
+		do {
+			mpsse_chip_select(true);
+			mpsse_write_data(wbuf, sizeof(wbuf));
+			mpsse_read_data(rbuf, sizeof(rbuf));
+			mpsse_chip_select(false);
+			RETURN_IF_ERROR(ftdiutil_flush_reads(0));
+			printf("Read: ");
+			for (unsigned i = 0; i < sizeof(rbuf); i++) {
+				printf("%02x", rbuf[i]);
+			}
+			printf("\n");
+		} while (flag_repeat);
+	} else {
+		do {
+			mpsse_chip_select(true);
+			mpsse_write_data(data, sizeof(data));
+			mpsse_chip_select(false);
+			RETURN_IF_ERROR(ftdiutil_flush_writes(0));
+		} while (flag_repeat);
 	}
 
 bad:
