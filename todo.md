@@ -20,6 +20,21 @@
 * inventory: Add borrowed scope.
 * inventory: Note pre-existing tools (#1 screwdriver, label printer).
 
+## Next Schematic / PCB revision
+
+* Consider ENIG finish, which makes the BGA easier to install.
+* Omit large areas of silkscreen, which are awkward to print and can have lower quality.
+* Consider the "paper between boards" option, which would avoid some silkscreen scratches.
+* Consider ordering stencils.
+* Review the back-side silkscreen more carefully; there's several references clumsily placed (`U32`, `C10`, etc).
+* Compact the board, since there's quite a bit of unnecessary empty space.
+* Consider adding an alternate clock source for the FPGA.
+* Consider adding an easier test pad for the oscillator.
+* Move `J5` and `J6` further away from each other.
+* Maybe add `VCC` and `GND` to JTAG connector.
+* Fix `J3` pin 3, which has a weird connection.
+* `U32` has pads connected on the long side, which it should not.
+
 ## Deferred
 
 Things put off for now (possibly indefinitely).
