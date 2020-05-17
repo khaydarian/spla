@@ -40,6 +40,8 @@
 * Add explicit jumper / button for FTDI reset.
 * Add physical power switch (toggle)
 * Add an easier test point for the 12MHz oscillator.
+* Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
+* Add SMD test clips for scope ground.
 
 ## Deferred
 
