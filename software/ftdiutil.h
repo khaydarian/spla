@@ -17,6 +17,7 @@ status ftdiutil_set_default_usb_device(const char* which);
 status ftdiutil_set_usb_device(const char* which);
 status ftdiutil_open_usb();
 status ftdiutil_close_usb();
+status ftdiutil_set_interface(enum ftdi_interface interface);
 
 void ftdiutil_write_data(unsigned char* data, int size);
 status ftdiutil_flush_writes(const char* caller);

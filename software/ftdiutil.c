@@ -110,6 +110,16 @@ status ftdiutil_close_usb() {
 	return OK;
 }
 
+status ftdiutil_set_interface(enum ftdi_interface interface) {
+	RETURN_IF_ERROR(ftdiutil_close_usb());
+	int ret = ftdi_set_interface(ftdi, interface);
+	if (ret) {
+		return ftdiutil_error("ftdiutil_set_interface", ret);
+	}
+	RETURN_IF_ERROR(ftdiutil_open_usb());
+	return OK;
+}
+
 void ftdiutil_write_data(unsigned char* data, int size) {
 	if (write_buf == NULL) {
 		write_buf_len = 0;

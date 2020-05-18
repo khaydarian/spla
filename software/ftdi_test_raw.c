@@ -27,6 +27,15 @@ static int single_command(int argc, char** argv) {
 		status_ignore(mpsse_init());
 		usleep(25000);
 		return 1;
+	} else if (!strcmp(command, "interface") && argc >= 2) {
+		if (!strcmp(argv[1], "a")) {
+			status_ignore(ftdiutil_set_interface(INTERFACE_A));
+		} else if (!strcmp(argv[1], "b")) {
+			status_ignore(ftdiutil_set_interface(INTERFACE_B));
+		} else {
+			printf("Error: Unknown interface '%s'\n", argv[1]);
+		}
+		return 2;
 	} else if (!strcmp(command, "bitbang")) {
 		ret = ftdi_set_bitmode(ftdi, 0x00, BITMODE_BITBANG);
 		if (ret) {
