@@ -68,7 +68,8 @@ status ftdiutil_set_default_usb_device(const char* which) {
 }
 
 #define FTDI_VENDOR_ID 0x0403
-#define FTDI_PRODUCT_ID 0x6014
+#define FTDI_PRODUCT_ID_CABLE 0x6014
+#define FTDI_PRODUCT_ID_BOARD 0x6010
 
 status ftdiutil_open_usb() {
 	const char* device;
@@ -81,22 +82,16 @@ status ftdiutil_open_usb() {
 		return errorf("ftdiutil_open_usb: No default device specified; use --device.");
 	}
 
-	int device_vendor_id;
-	int device_product_id;
-	const char* device_description;
-	const char* device_serial;
-
+	int ret;
 	if (!strcmp(device, "cable")) {
-		device_vendor_id = FTDI_VENDOR_ID;
-		device_product_id = FTDI_PRODUCT_ID;
-		device_description = "C232HM-DDHSL-0";
-		device_serial = "FT0J7C2U";
+		ret = ftdi_usb_open_desc(ftdi, FTDI_VENDOR_ID, FTDI_PRODUCT_ID_CABLE,
+			"C232HM-DDHSL-0", "FT0J7C2U");
+	} else if (!strcmp(device, "new")) {
+		ret = ftdi_usb_open(ftdi, FTDI_VENDOR_ID, FTDI_PRODUCT_ID_BOARD);
 	} else {
 		return errorf("Unknown device alias '%s'.", device);
 	}
 
-	int ret = ftdi_usb_open_desc(ftdi,
-			device_vendor_id, device_product_id, device_description, device_serial);
 	if (ret) {
 		return ftdiutil_error("ftdi_usb_open_desc", ret);
 	}
