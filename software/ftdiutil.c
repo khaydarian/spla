@@ -120,6 +120,16 @@ status ftdiutil_set_interface(enum ftdi_interface interface) {
 	return OK;
 }
 
+int ftdiutil_describe(struct ftdi_context* ftdi, struct libusb_device* dev, char* manufacturer, int manufacturer_len, char* description, int description_len, char* serial, int serial_len) {
+	int ret = ftdi_usb_get_strings(ftdi, dev, manufacturer, manufacturer_len, description, description_len, serial, serial_len);
+	// With an empty serial field, libftdi fails with error code -9.
+	if (ret == -9) {
+		serial[0] = '\0';
+		ret = 0;
+	}
+	return ret;
+}
+
 void ftdiutil_write_data(unsigned char* data, int size) {
 	if (write_buf == NULL) {
 		write_buf_len = 0;

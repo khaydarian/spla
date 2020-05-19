@@ -28,7 +28,7 @@ status ftdi_list_devices(int argc, char** argv) {
 	int i = 0;
 	for (struct ftdi_device_list* cur = devlist; cur; cur = cur->next, i++) {
 		printf("Device #%d:\n", i);
-		ret = ftdi_usb_get_strings(ftdi, cur->dev,
+		ret = ftdiutil_describe(ftdi, cur->dev,
 				manufacturer, sizeof(manufacturer),
 				description, sizeof(description),
 				serial, sizeof(serial));
