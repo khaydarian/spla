@@ -10,8 +10,8 @@ all: spla
 clean:
 	rm -rf build/ spla
 
-HDRS := build/ftdi.h $(wildcard *.h)
-SRCS := $(wildcard *.c)
+HDRS := build/ftdi.h $(sort $(wildcard *.h))
+SRCS := $(sort $(wildcard *.c))
 
 # libusb
 LIBUSB_CFLAGS := -I/usr/include/libusb-1.0
