@@ -13,8 +13,8 @@ void ftdiutil_deinit();
 
 status ftdiutil_error(const char* fn, int ret);
 
-status ftdiutil_set_default_usb_device(const char* which);
-status ftdiutil_set_usb_device(const char* which);
+void ftdiutil_set_default_usb_device(const char* which);
+void ftdiutil_set_usb_device(const char* which);
 status ftdiutil_open_usb();
 status ftdiutil_close_usb();
 status ftdiutil_set_interface(enum ftdi_interface interface);

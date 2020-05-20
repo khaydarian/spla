@@ -15,7 +15,7 @@ status global_flag(int argc, char** argv, int* absorbed) {
 		} else {
 			// TODO: Parse some format in ftdiutil_set_usb_device
 			// TODO: fix this flag to match ftdi_list_devices
-			RETURN_IF_ERROR(ftdiutil_set_usb_device(argv[1]));
+			ftdiutil_set_usb_device(argv[1]);
 			*absorbed = 2;
 			return OK;
 		}
@@ -37,7 +37,7 @@ static status invoke_command(int argc, char** argv) {
 	RETURN_IF_ERROR(ftdiutil_init());
 	status err;
 	if (cmd->default_usb_device) {
-		RETURN_IF_ERROR(ftdiutil_set_default_usb_device(cmd->default_usb_device));
+		ftdiutil_set_default_usb_device(cmd->default_usb_device);
 	}
 	if (cmd->open_usb) {
 		RETURN_IF_ERROR(ftdiutil_open_usb());
