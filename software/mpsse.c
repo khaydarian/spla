@@ -43,14 +43,24 @@
 #define CMD_TRANSFER_WRITE 0x10
 #define CMD_TRANSFER_READ 0x20
 
-unsigned char data_bits_lo_out = BIT_CS | BIT_CLOCK | BIT_MOSI;
-unsigned char data_bits_lo_val = BIT_CS;
+static unsigned char data_bits_lo_dir = BIT_CS | BIT_CLOCK | BIT_MOSI;
+static unsigned char data_bits_lo_val = BIT_CS;
+static unsigned char data_bits_hi_dir = 0;
+static unsigned char data_bits_hi_val = 0;
 
 static void flush_data_bits_lo() {
 	unsigned char buf[3];
 	buf[0] = CMD_SET_DATA_BITS_LO;
 	buf[1] = data_bits_lo_val;
-	buf[2] = data_bits_lo_out;
+	buf[2] = data_bits_lo_dir;
+	ftdiutil_write_data(buf, sizeof(buf));
+}
+
+static void flush_data_bits_hi() {
+	unsigned char buf[3];
+	buf[0] = CMD_SET_DATA_BITS_HI;
+	buf[1] = data_bits_hi_val;
+	buf[2] = data_bits_hi_dir;
 	ftdiutil_write_data(buf, sizeof(buf));
 }
 
@@ -59,10 +69,10 @@ status mpsse_init() {
 	if (ret) {
 		return ftdiutil_error("ftdi_set_bitmode(MPSSE)", ret);
 	}
-	data_bits_lo_out = BIT_CS | BIT_CLOCK | BIT_MOSI;
+	data_bits_lo_dir = BIT_CS | BIT_CLOCK | BIT_MOSI;
 	data_bits_lo_val = BIT_CS;
 	flush_data_bits_lo();
-	RETURN_IF_ERROR(ftdiutil_flush_writes("flush_data_bits_low"));
+	RETURN_IF_ERROR(ftdiutil_flush_writes("flush_data_bits_lo"));
 	return OK;
 }
 
@@ -101,9 +111,35 @@ void mpsse_set_data_bits_low(unsigned char bits) {
 	flush_data_bits_lo();
 }
 
+void mpsse_set_data_bits_low_dir(unsigned char mask, unsigned char dir, unsigned char val) {
+	data_bits_lo_dir = (data_bits_lo_dir & ~mask) | (dir & mask);
+	data_bits_lo_val = (data_bits_lo_val & ~mask) | (val & mask);
+	flush_data_bits_lo();
+}
+
+void mpsse_set_data_bits_high_dir(unsigned char mask, unsigned char dir, unsigned char val) {
+	data_bits_hi_dir = (data_bits_hi_dir & ~mask) | (dir & mask);
+	data_bits_hi_val = (data_bits_hi_val & ~mask) | (val & mask);
+	flush_data_bits_hi();
+}
+
 void mpsse_chip_select(bool select) {
 	data_bits_lo_val = (data_bits_lo_val & ~BIT_CS) | (select ? 0 : BIT_CS);
 	flush_data_bits_lo();
+}
+
+void mpsse_get_data_bits_low(unsigned char* val) {
+	unsigned char buf[1];
+	buf[0] = CMD_READ_DATA_BITS_LO;
+	ftdiutil_write_data(buf, sizeof(buf));
+	ftdiutil_read_data(val, sizeof(*val));
+}
+
+void mpsse_get_data_bits_high(unsigned char* val) {
+	unsigned char buf[1];
+	buf[0] = CMD_READ_DATA_BITS_HI;
+	ftdiutil_write_data(buf, sizeof(buf));
+	ftdiutil_read_data(val, sizeof(*val));
 }
 
 void mpsse_clock_only(int bytes) {

@@ -14,6 +14,11 @@ status mpsse_set_frequency(const char* frequency_str);
 void mpsse_loopback(bool enabled);
 
 void mpsse_set_data_bits_low(unsigned char bits);
+void mpsse_set_data_bits_low_dir(unsigned char mask, unsigned char dir, unsigned char val);
+void mpsse_set_data_bits_high_dir(unsigned char mask, unsigned char dir, unsigned char val);
+
+void mpsse_get_data_bits_low(unsigned char* val);
+void mpsse_get_data_bits_high(unsigned char* val);
 
 void mpsse_chip_select(bool select);
 

@@ -235,7 +235,6 @@ status ftdiutil_open_usb() {
 	if (ret < 0) {
 		return ftdiutil_error("ftdi_usb_find_all", ret);
 	}
-	printf("ret %d\n", ret);
 
 	char manufacturer[256];
 	char description[256];
@@ -339,7 +338,9 @@ status ftdiutil_flush_writes(const char* caller) {
 	if (!caller) {
 		caller = "ftdiutil_flush_writes";
 	}
-	return flush_writes(current->ftdi, &current->wr, caller);
+	RETURN_IF_ERROR(flush_writes(a.ftdi, &a.wr, caller));
+	RETURN_IF_ERROR(flush_writes(b.ftdi, &b.wr, caller));
+	return OK;
 }
 
 void ftdiutil_read_data(unsigned char* data, int size) {
@@ -351,5 +352,7 @@ status ftdiutil_flush_reads(const char* caller) {
 	if (!caller) {
 		caller = "ftdiutil_flush_reads";
 	}
-	return flush_reads(current->ftdi, &current->rd, caller);
+	RETURN_IF_ERROR(flush_reads(a.ftdi, &a.rd, caller));
+	RETURN_IF_ERROR(flush_reads(b.ftdi, &b.rd, caller));
+	return OK;
 }
