@@ -44,7 +44,7 @@ producing a completely cycle-accurate emulation of the SNES video hardware.
 
 ## Current status
 
-* Design stabilized complete.
+* Design complete.
 * Schematic complete.
 * PCB layout complete.
 * Schematic and PCB review complete (enough).
