@@ -274,13 +274,16 @@ status ftdiutil_open_usb() {
 	if (ret) {
 		return ftdiutil_error("ftdi_usb_open_dev", ret);
 	}
-	ret = ftdi_set_interface(b.ftdi, INTERFACE_B);
-	if (ret) {
-		return ftdiutil_error("ftdi_set_interface", ret);
-	}
-	ret = ftdi_usb_open_dev(b.ftdi, dev);
-	if (ret) {
-		return ftdiutil_error("ftdi_usb_open_dev", ret);
+	// Note: This clumsily only handles the two FTDI chips I care about.
+	if (a.ftdi->type == TYPE_2232H) {
+		ret = ftdi_set_interface(b.ftdi, INTERFACE_B);
+		if (ret) {
+			return ftdiutil_error("ftdi_set_interface", ret);
+		}
+		ret = ftdi_usb_open_dev(b.ftdi, dev);
+		if (ret) {
+			return ftdiutil_error("ftdi_usb_open_dev", ret);
+		}
 	}
 	current = &a;
 	ftdi = a.ftdi;
