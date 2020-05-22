@@ -116,6 +116,18 @@ status bringup_ftdi(int argc, char** argv) {
 		printf(" "); print_bits(rd_lo.a_lo, rd_hi.a_lo, dir.a_lo, &errors);
 		printf("\n");
 	}
+	printf("         b_hi     b_lo     a_hi     a_lo\n");
+	printf("pin      55555554 44444433 33332222 22221111\n");
+	printf("         98754328 54331098 43209876 43219876\n");
+
+	// Leave all pins high (except PROGRAM).
+	RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_A));
+	mpsse_set_data_bits_low_dir(0xff, 0xff, 0xff);
+	mpsse_set_data_bits_high_dir(0xff, 0xff, 0xff);
+	RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_B));
+	mpsse_set_data_bits_low_dir(0xff, 0xff, 0xbf);
+	mpsse_set_data_bits_high_dir(0xff, 0xff, 0xff);
+	RETURN_IF_ERROR(ftdiutil_flush_writes(NULL));
 
 	printf("Errors: %d\n", errors);
 
