@@ -10,7 +10,7 @@ struct status_s {
 };
 typedef struct status_s* status;
 
-#define OK ((status)NULL)
+#define OK ((status)0)
 status errorf(const char* format, ...);
 #define RETURN_IF_ERROR(what) { status err = what; if (is_error(err)) return err; }
 

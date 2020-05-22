@@ -21,6 +21,13 @@ struct command* find_command(const char* name) {
 // TODO fix this hacky way of showing global flags
 void global_flag_usage();
 
+status no_arguments(int argc, char** argv) {
+	if (argc > 0) {
+		return errorf("No arguments accepted (got '%s'...).", argv[0]);
+	}
+	return OK;
+}
+
 status usage() {
 	fprintf(stderr, "usage: %s <global-options> [subcommand] <options...>\n", invoked_as);
 	fprintf(stderr, "global-options:\n");

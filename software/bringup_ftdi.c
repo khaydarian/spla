@@ -86,9 +86,7 @@ void print_bits(unsigned char bits_lo, unsigned char bits_hi,
 // Option: open_usb = true
 // Option: default_usb_device = new
 status bringup_ftdi(int argc, char** argv) {
-	// TODO handle per-command arguments
-	(void) argc;
-	(void) argv;
+	RETURN_IF_ERROR(no_arguments(argc, argv));
 
 	RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_A));
 	RETURN_IF_ERROR(mpsse_init());

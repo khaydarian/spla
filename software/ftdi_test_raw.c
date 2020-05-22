@@ -107,10 +107,6 @@ static int single_command(int argc, char** argv) {
 // Option: open_usb = true
 // Option: default_usb_device = cable
 status ftdi_test_raw(int argc, char** argv) {
-	// TODO handle per-command arguments
-	(void) argc;
-	(void) argv;
-
 	while (argc > 0) {
 		int absorbed = single_command(argc, argv);
 		argc -= absorbed;

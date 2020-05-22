@@ -13,9 +13,7 @@
 // Option: open_usb = true
 // Option: default_usb_device = cable
 status ftdi_test_toggle(int argc, char** argv) {
-	// TODO handle per-command arguments
-	(void) argc;
-	(void) argv;
+	RETURN_IF_ERROR(no_arguments(argc, argv));
 
 	status err = OK;
 

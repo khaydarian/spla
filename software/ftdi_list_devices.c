@@ -10,9 +10,7 @@
 // [Command]
 // Description: Show all relevant devices connected by USB.
 status ftdi_list_devices(int argc, char** argv) {
-	// TODO handle per-command arguments
-	(void) argc;
-	(void) argv;
+	RETURN_IF_ERROR(no_arguments(argc, argv));
 
 	struct ftdi_device_list* devlist;
 	int ret = ftdi_usb_find_all(ftdi, &devlist, 0, 0);
