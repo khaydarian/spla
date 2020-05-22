@@ -44,15 +44,36 @@ static status check_single_bit(struct pins dir, struct pins val, struct pins* re
 	return OK;
 }
 
-void print_bits(unsigned char bits, unsigned char expect, int* errors) {
+#define KEY(lo, hi, expect) (((hi)<<2)|((lo)<<1)|((expect)))
+
+static struct {
+	char bad;
+	char ch;
+} prbits[] = {
+	[KEY(0, 0, 0)] = {.ch = '0', .bad = false},
+	[KEY(0, 1, 0)] = {.ch = 'K', .bad = true},
+	[KEY(1, 0, 0)] = {.ch = 'J', .bad = true},
+	[KEY(1, 1, 0)] = {.ch = '1', .bad = false},
+	[KEY(0, 0, 1)] = {.ch = 'L', .bad = true},
+	[KEY(0, 1, 1)] = {.ch = 'G', .bad = false},
+	[KEY(1, 0, 1)] = {.ch = 'I', .bad = true},
+	[KEY(1, 1, 1)] = {.ch = 'H', .bad = true},
+};
+
+void print_bits(unsigned char bits_lo, unsigned char bits_hi,
+		unsigned char expect, int* errors) {
 	int err = *errors;
 	for (int m = 0x80; m; m >>= 1) {
-		int bad = ((m & bits) != (m & expect));
+		int bit_lo = !!(m & bits_lo);
+		int bit_hi = !!(m & bits_hi);
+		int expect_bit = !!(m & expect);
+		int k = KEY(bit_lo, bit_hi, expect_bit);
+		bool bad = prbits[k].bad;
 		if (bad) {
 			err++;
 			printf("\033[101;30m");
 		}
-		printf("%c", (m & bits) ? '1' : '0');
+		printf("%c", prbits[k].ch);
 		if (bad) {
 			printf("\033[0m");
 		}
@@ -69,7 +90,6 @@ status bringup_ftdi(int argc, char** argv) {
 	(void) argc;
 	(void) argv;
 
-	// Set BITBANG mode on both interfaces.
 	RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_A));
 	RETURN_IF_ERROR(mpsse_init());
 	RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_B));
@@ -77,30 +97,23 @@ status bringup_ftdi(int argc, char** argv) {
 
 	int errors = 0;
 
+	printf("         b_hi     b_lo     a_hi     a_lo\n");
 	for (int bit = 0; bit <= 31; bit++) {
 		struct pins dir;
 		pins_set_single_bit(&dir, bit);
 		struct pins rd_lo;
 		struct pins rd_hi;
 
-		// Drive low
 		struct pins val = {0, 0, 0, 0};
 		RETURN_IF_ERROR(check_single_bit(dir, val, &rd_lo));
 		pins_set_single_bit(&val, bit);
 		RETURN_IF_ERROR(check_single_bit(dir, val, &rd_hi));
 
-		struct pins delta = {
-			.a_lo = (rd_lo.a_lo ^ rd_hi.a_lo),
-			.a_hi = (rd_lo.a_hi ^ rd_hi.a_hi),
-			.b_lo = (rd_lo.b_lo ^ rd_hi.b_lo),
-			.b_hi = (rd_lo.b_hi ^ rd_hi.b_hi),
-		};
-
-		printf("bit %02d:", bit);
-		printf(" b_hi "); print_bits(delta.b_hi, dir.b_hi, &errors);
-		printf(" b_lo "); print_bits(delta.b_lo, dir.b_lo, &errors);
-		printf(" a_hi "); print_bits(delta.a_hi, dir.a_hi, &errors);
-		printf(" a_lo "); print_bits(delta.a_lo, dir.a_lo, &errors);
+		printf("bit %02d: ", bit);
+		printf(" "); print_bits(rd_lo.b_hi, rd_hi.b_hi, dir.b_hi, &errors);
+		printf(" "); print_bits(rd_lo.b_lo, rd_hi.b_lo, dir.b_lo, &errors);
+		printf(" "); print_bits(rd_lo.a_hi, rd_hi.a_hi, dir.a_hi, &errors);
+		printf(" "); print_bits(rd_lo.a_lo, rd_hi.a_lo, dir.a_lo, &errors);
 		printf("\n");
 	}
 
