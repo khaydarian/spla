@@ -1,8 +1,9 @@
 // vi: ts=2:sw=2:sts=2:noet
 
 #include "ftdiutil.h"
-
 #include "ftdi.h"
+#include "constants.h"
+
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -196,6 +197,17 @@ static bool matches_new(const char* manufacturer, const char* description, const
 	        !strcmp(serial, ""));
 }
 
+static bool matches_dead(const char* manufacturer, const char* description, const char* serial) {
+	// Busted by bad EEPROM; all fields empty.
+	return (!manufacturer[0] && !description[0] && !serial[0]);
+}
+
+static bool matches_board(const char* manufacturer, const char* description, const char* serial) {
+	(void)serial;
+	return (!strcmp(manufacturer, DEFAULT_MANUFACTURER) &&
+	        !strcmp(description, DEFAULT_DESCRIPTION));
+}
+
 static status find_matches_predicate(const char* which, matches_predicate* pred) {
 	if (!strcmp("cable", which)) {
 		*pred = matches_cable;
@@ -203,6 +215,14 @@ static status find_matches_predicate(const char* which, matches_predicate* pred)
 	}
 	if (!strcmp("new", which)) {
 		*pred = matches_new;
+		return OK;
+	}
+	if (!strcmp("dead", which)) {
+		*pred = matches_dead;
+		return OK;
+	}
+	if (!strcmp("board", which)) {
+		*pred = matches_board;
 		return OK;
 	}
 	return errorf("Unknown device '%s'", which);
@@ -317,10 +337,23 @@ status ftdiutil_set_interface(enum ftdi_interface interface) {
 
 int ftdiutil_describe(struct ftdi_context* ftdi, struct libusb_device* dev, char* manufacturer, int manufacturer_len, char* description, int description_len, char* serial, int serial_len) {
 	int ret = ftdi_usb_get_strings(ftdi, dev, manufacturer, manufacturer_len, description, description_len, serial, serial_len);
-	// With an empty serial field, libftdi fails with error code -9.
-	if (ret == -9) {
-		serial[0] = '\0';
-		ret = 0;
+	// With empty fields, ftdi_usb_get_strings fails with various error codes.
+	// However, an FTDI chip with a blank EEPROM comes up with empty 'serial',
+	// and with a bad-checksum EEPROM image, comes up with all fields empty.
+	// Handle these cases more sensibly.
+	switch (ret) {
+		case -7:
+			manufacturer[0] = '\0';
+			description[0] = '\0';
+			serial[0] = '\0';
+			return 0;
+		case -8:
+			description[0] = '\0';
+			serial[0] = '\0';
+			return 0;
+		case -9:
+			serial[0] = '\0';
+			return 0;
 	}
 	return ret;
 }
