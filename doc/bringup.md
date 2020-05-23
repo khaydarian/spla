@@ -1,5 +1,9 @@
 # Bringup sequence
 
+_This sequence assumes a "Progressive Bringup", where each section of the board
+is assembled and testing one at a time. This turns out to be a really stupid
+idea. Don't do it this way._
+
 Follow these steps to build a working SPLA board, starting from a bare board
 and parts.  This is the most-paranoid bringup for the first board; many steps
 can be skipped or merged once the board layout is proven.
@@ -48,12 +52,12 @@ can be skipped or merged once the board layout is proven.
     1.  Verify oscillator output (frequency and voltage) on oscilloscope.
     1.  Verify connection to host via `lsusb`.
     1.  Verify connection to host with `spla` command.
-    1.  Program the FTDI EEPROM with the correct settings. *Need a tool for this.*
+    1.  Verify the absense of IO-pin solder bridges with `spla bringup_ftdi`.
+    1.  Program the FTDI EEPROM with `spla ftdi_new_device`.  Select a serial number properly.
     1.  Power cycle the board to reset FTDI.
     1.  Verify that properly-configured FTDI comes up as expected on `lsusb`.
     1.  Verify that the FTDI comes up with the correct serial number with `spla ftdi_list_devices`.
-    1.  Verify `ADBUS` and `BDBUS` connectivity via MPSSE GPIO interface, on oscillscope. *Need a tool for this.*
-    1.  Toggle the LED on `BDBUS`. *Need a tool for this.*
+    1.  (Optionally) Verify `ADBUS` and `BDBUS` connectivity via MPSSE GPIO interface, on oscillscope. *Need a tool for this.*
     1.  *Note: After this point, these instructions are a bit fuzzy.*
 1.  FPGA
     1.  Solder FPGA to the board, using hot air rework station or reflow oven. *This might need to be done first, to avoid messing up other soldering on the board.*
