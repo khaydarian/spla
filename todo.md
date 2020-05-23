@@ -6,17 +6,18 @@
 * blog: Write export-to-website tool (or find static site generator).
 * blog: Add photos and scope images.
 * reference: Retrieve datasheets for all parts.
-* reference: Reverify datasheets for gotcha details.
-* schematic: Run through [schematic checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
-* pcb: Run through [PCB checklist](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md)
-* rtl: Build async fifo.
-* rtl: Build plausible FTDI-fifo interface.
-* rtl: Build stream merging protocol.
+* rtl: Build async fifo module.
+* rtl: Build plausible FTDI-fifo-interface module.
+* rtl: Design stream merging protocol.
+* rtl: Build stream merging protocol module.
 * rtl: Build opcode processor.
-* rtl: Build bringup boundary-scan-like image? Possibly get a Lattice tool instead.
+* rtl: Build bringup boundary-scan-like image?
+  * Possibly get a Lattice tool instead.
 * software: Get rid of global-constant mess.
 * software: Integrate or invent a decent unit testing framework.
+* inventory: Write txtdb lint tool.
 * inventory: Write summary tool.
+* inventory: Write inventory-to-BoM comparison tool.
 * inventory: Add borrowed scope.
 * inventory: Note pre-existing tools (#1 screwdriver, label printer).
 
@@ -32,22 +33,25 @@
 * Consider adding an easier test pad for the oscillator.
 * Move `J5` and `J6` further away from each other.
 * Maybe add `VCC` and `GND` to JTAG connector.
-* Fix `J3` pin 3, which has a weird connection.
+* Fix `J3` pin 3 layout, which has a weird connection.
 * `U32` has pads connected on the long side, which it should not.
 * Don't ground the USB shield; it's grounded on the host side and might introduce noise.
 * Bring FTDI 1.8V regulator lines through a 0-ohm resistor, so I have the option of re-wiring easily.  Alternately, add pads for an optional 1.8V LDO.
 * Add test point for FTDI 1.8V regulator.
 * Add explicit jumper / button for FTDI reset.
-* Add physical power switch (toggle)
+* Add physical power switch (toggle).
 * Add an easier test point for the 12MHz oscillator.
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
 * Add SMD test clips for scope ground.
+* Reverse `D6` (`INIT`) LED direction (net is pulled the opposite way).
+* Consolidate BoM part selections.
+* Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
 
 ## Deferred
 
 Things put off for now (possibly indefinitely).
 
-* lab: Bodge wire to vblank / hblank, and measure analog voltage levels with scope.
+* lab: Bodge wire to vblank / hblank on real SNES, and measure analog voltage levels with scope.
 
 ## Dropped
 
@@ -63,3 +67,9 @@ Things that I'd planned to do, but decided to drop.
   * Infeasible; he's too busy at the moment.
 * pcb: Shield VRAM data bus from power switching noise, if necessary?
   * It's probably not necessary.
+* reference: Reverify datasheets for gotcha details.
+  * Laziness.
+* schematic: Run through [schematic checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
+  * Laziness.
+* pcb: Run through [PCB checklist](https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md)
+  * Laziness.
