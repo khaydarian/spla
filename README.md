@@ -42,19 +42,22 @@ producing a completely cycle-accurate emulation of the SNES video hardware.
 
 <img src="images/spla-board-pcb-r009.png"></img>
 
-## Current status
+## Current Status
 
 * Design complete.
 * Schematic complete.
 * PCB layout complete.
 * Schematic and PCB review complete (enough).
-* Manufacturing started.
-  * First board works through FTDI chip.
-  * FPGA installation not started.
-  * Two sets of scavenged SNES chips available; not installed yet.
+* Lab setup essentially complete.
+* Bringup started.
+  * Power bringup complete.
+  * USB / FTDI bringup complete.
+  * FPGA bringup pending.
+  * SNES bringup pending.
+    * Two sets of scavenged SNES chips available.
+  * Analog bringup pending.
 * Software started.
 * RTL started; early bringup image ready to test.
-* Lab setup essentially complete.
 
 ## Design components
 
