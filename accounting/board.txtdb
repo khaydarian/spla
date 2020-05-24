@@ -80,7 +80,7 @@ Manufacturer Product Id: ST1S10PHR
 Unit Cost: $1.76000
 Quantity: 5
 Cost: $8.80
-Quantity: 3
+Remaining: 3
 
 Name: Passive, Inductor, IHLP2020CZ
 Category: Board Parts
@@ -173,7 +173,7 @@ Manufacturer Product Id: 150080VS75000
 Unit Cost: $0.18000
 Quantity: 20
 Cost: $3.60
-Quantity: 12
+Remaining: 12
 
 Name: HCMOS Oscillator, 12.0000 MHz
 Category: Board Parts

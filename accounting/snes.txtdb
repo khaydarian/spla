@@ -15,7 +15,7 @@ SNES Chips: CPU=5A22-02, PPU1=5C77-01, PPU2=5C78-03, VRAM=MOSEL-MS62256DL-10FC
 Name: SNES 1
 Category: SNES Related
 Ebay Condition: Working, but no sound
-Serial: UN16830049
+SNES Serial: UN16830049
 Date Arrive Estimated: 2020-03-02
 Date Arrive Actual: 2020-03-02
 Source: Ebay
@@ -60,7 +60,7 @@ Location: Small Amazon Box
 Name: SNES 2
 Category: SNES Related
 Ebay Condition: Working, but no sound
-Serial: UN12291829
+SNES Serial: UN12291829
 Date Arrive Estimated: 2020-05-02
 Date Arrive Actual: 2020-04-28
 Condition: Confirmed working (video, no sound) 2020-04-29
