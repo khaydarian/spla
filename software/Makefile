@@ -10,7 +10,7 @@ all: spla
 clean:
 	rm -rf build/ spla
 
-HDRS := build/ftdi.h $(sort $(wildcard *.h))
+HDRS := build/ftdi.h build/ftdi_i.h $(sort $(wildcard *.h))
 SRCS := $(sort $(wildcard *.c))
 
 # libusb
