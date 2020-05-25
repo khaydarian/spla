@@ -44,6 +44,7 @@
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
 * Add SMD test clips for scope ground.
 * Reverse `D6` (`INIT`) LED direction (net is pulled the opposite way).
+* Avoid inverted LEDs, which is confusing (and we don't care about the power draw).
 * Consolidate BoM part selections.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
 
