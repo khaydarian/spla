@@ -14,6 +14,10 @@
 * rtl: Build bringup boundary-scan-like image?
   * Possibly get a Lattice tool instead.
 * software: Get rid of global-constant mess.
+* software: Add `ftdi_test_flash` command to test flashing LEDs.
+* software: Fixup `ftdi_test_raw` to handle mpsse modes better (labelled pins, individual changes, etc).
+* software: Add pin numbers/names to `bringup_ftdi`.
+* software: Fix MPSSE hi/lo flushing to be less touchy.
 * software: Integrate or invent a decent unit testing framework.
 * inventory: Write txtdb lint tool.
 * inventory: Write summary tool.
