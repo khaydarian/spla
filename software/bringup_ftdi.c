@@ -116,7 +116,7 @@ status bringup_ftdi(int argc, char** argv) {
 	}
 	printf("         b_hi     b_lo     a_hi     a_lo\n");
 	printf("pin      55555554 44444433 33332222 22221111\n");
-	printf("         98754328 54331098 43209876 43219876\n");
+	printf("         98754328 65431098 43209876 43219876\n");
 
 	// Leave all pins high (except PROGRAM).
 	RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_A));
