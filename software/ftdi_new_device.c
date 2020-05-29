@@ -61,9 +61,9 @@ static void show_eeprom_buf(unsigned char* buf, int size) {
 		for (int j = 0; j < 16; j += 2) {
 			printf(" %02x%02x", buf[i+j], buf[i+j+1]);
 		}
-		printf(" ");
+		printf("  ");
 		for (int j = 0; j < 16; j += 2) {
-			printf(" %c%c", chr(buf[i+j]), chr(buf[i+j+1]));
+			printf("%c%c", chr(buf[i+j]), chr(buf[i+j+1]));
 		}
 		printf("\n");
 	}
