@@ -101,6 +101,10 @@ status ftdi_new_device(int argc, char** argv) {
 			return ftdiutil_error("ftdi_init_defaults", ret);
 		}
 
+		ret = ftdi_set_eeprom_value(ftdi, VENDOR_ID, DEFAULT_VENDOR_ID);
+		assert(ret == 0);
+		ret = ftdi_set_eeprom_value(ftdi, PRODUCT_ID, DEFAULT_PRODUCT_ID);
+		assert(ret == 0);
 		ret = ftdi_set_eeprom_value(ftdi, SELF_POWERED, 1);
 		assert(ret == 0);
 		ret = ftdi_set_eeprom_value(ftdi, MAX_POWER, 0);

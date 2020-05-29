@@ -257,19 +257,9 @@ void ftdiutil_set_default_usb_device(const char* which) {
 	default_usb_device = which;
 }
 
-#define FTDI_VENDOR_ID 0x0403
-#define FTDI_PRODUCT_ID_ANY 0
-
-status ftdiutil_open_usb() {
-	const char* devname = default_usb_device;
-	if (preferred_usb_device) {
-		devname = preferred_usb_device;
-	}
-	matches_predicate pred;
-	RETURN_IF_ERROR(find_matches_predicate(devname, &pred));
-
+static status search_for(int vendor_id, int product_id, matches_predicate pred, int* found, struct libusb_device** dev) {
 	struct ftdi_device_list* devlist;
-	int ret = ftdi_usb_find_all(ftdi, &devlist, 0, 0);
+	int ret = ftdi_usb_find_all(ftdi, &devlist, vendor_id, product_id);
 	if (ret < 0) {
 		return ftdiutil_error("ftdi_usb_find_all", ret);
 	}
@@ -277,9 +267,6 @@ status ftdiutil_open_usb() {
 	char manufacturer[256];
 	char description[256];
 	char serial[256];
-
-	int found = 0;
-	struct libusb_device* dev;
 
 	for (struct ftdi_device_list* cur = devlist; cur; cur = cur->next) {
 		int ret = ftdiutil_describe(ftdi, cur->dev,
@@ -291,11 +278,28 @@ status ftdiutil_open_usb() {
 			return ftdiutil_error("ftdi_usb_find_all", ret);
 		}
 		if (pred(manufacturer, description, serial)) {
-			found++;
-			dev = cur->dev;
+			(*found)++;
+			*dev = cur->dev;
 		}
 	}
 	ftdi_list_free(&devlist);
+	return OK;
+}
+
+status ftdiutil_open_usb() {
+	const char* devname = default_usb_device;
+	if (preferred_usb_device) {
+		devname = preferred_usb_device;
+	}
+	matches_predicate pred;
+	RETURN_IF_ERROR(find_matches_predicate(devname, &pred));
+
+	int found = 0;
+	struct libusb_device* dev;
+
+	RETURN_IF_ERROR(search_for(0, 0, pred, &found, &dev));
+	RETURN_IF_ERROR(search_for(DEFAULT_VENDOR_ID, DEFAULT_PRODUCT_ID,
+		pred, &found, &dev));
 
 	if (found == 0) {
 		return errorf("Device '%s' not found.", devname);
@@ -304,7 +308,7 @@ status ftdiutil_open_usb() {
 		return errorf("Found %d devices matching '%s'.", found, devname);
 	}
 
-	ret = ftdi_set_interface(a.ftdi, INTERFACE_A);
+	int ret = ftdi_set_interface(a.ftdi, INTERFACE_A);
 	if (ret) {
 		return ftdiutil_error("ftdi_set_interface", ret);
 	}
