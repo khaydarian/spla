@@ -1,4 +1,4 @@
-// vi: ts=2:sw=2:sts=2:noet
+// vi: ts=2:sw=2:sts=2:et
 
 // See https://github.com/obdev/v-usb/blob/master/usbdrv/USB-IDs-for-free.txt
 #define DEFAULT_VENDOR_ID 0x16c0

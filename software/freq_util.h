@@ -1,4 +1,4 @@
-// vi: ts=2:sw=2:sts=2:noet
+// vi: ts=2:sw=2:sts=2:et
 
 #ifndef FREQ_UTIL_H
 #define FREQ_UTIL_H
