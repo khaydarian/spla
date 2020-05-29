@@ -10,6 +10,10 @@ all: spla
 clean:
 	rm -rf build/ spla
 
+.PHONY: format
+format: $(sort $(wildcard *.[ch]))
+	$(CCFORMAT) $(CCFORMATFLAGS) -i $^
+
 HDRS := build/ftdi.h build/ftdi_i.h $(sort $(wildcard *.h))
 SRCS := $(sort $(wildcard *.c))
 

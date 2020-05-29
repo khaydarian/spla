@@ -3,3 +3,6 @@ CFLAGS := -Wall -Werror -Wextra
 
 LD := gcc
 LDFLAGS :=
+
+CCFORMAT := clang-format
+CCFORMATFLAGS := --style=Google
