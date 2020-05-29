@@ -8,6 +8,8 @@
 
 extern struct ftdi_context* ftdi;
 
+void ftdiutil_debug_logging(bool enable);
+
 status ftdiutil_init();
 void ftdiutil_deinit();
 

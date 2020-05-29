@@ -20,6 +20,11 @@ status global_flag(int argc, char** argv, int* absorbed) {
 			return OK;
 		}
 	}
+	if (!strcmp(argv[0], "--debug")) {
+		ftdiutil_debug_logging(true);
+		*absorbed = 1;
+		return OK;
+	}
 	return errorf("Unknown flag: %s", argv[0]);
 }
 

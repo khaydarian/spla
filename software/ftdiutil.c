@@ -10,6 +10,12 @@
 #include <memory.h>
 #include <libusb.h>
 
+static bool debug_logging = false;
+
+void ftdiutil_debug_logging(bool enable) {
+	debug_logging = enable;
+}
+
 struct write_buf {
 	unsigned char* buf;
 	int len;
@@ -48,6 +54,13 @@ static void write_data(struct write_buf* wr, unsigned char* data, int size) {
 static status flush_writes(struct ftdi_context* ftdi, struct write_buf* wr, const char* caller) {
 	unsigned char* data = wr->buf;
 	int size = wr->len;
+	if (debug_logging && size > 0) {
+		printf("[W:");
+		for (int i = 0; i < size; i++) {
+			printf("%02x", data[i]);
+		}
+		printf("]\n");
+	}
 	while (size > 0) {
 		int ret = ftdi_write_data(ftdi, data, size);
 		if (ret < 0) {
@@ -113,6 +126,11 @@ static status flush_reads(struct ftdi_context* ftdi, struct read_buf* rd, const 
 			rd->len = 0;
 			rd->size_bytes = 0;
 			return ftdiutil_error(caller, bytes_remain);
+		}
+		if (debug_logging && bytes_remain > 0) {
+			printf("[R:");
+			for (int i = 0; i < bytes_remain; i++) printf("%02x", buf[i]);
+			printf("]\n");
 		}
 		unsigned char* src = buf;
 		while (bytes_remain > 0) {
