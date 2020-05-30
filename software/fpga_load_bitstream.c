@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/stat.h>
 #include <unistd.h>
 #include "command.h"
 #include "ecp5.h"
@@ -62,11 +61,6 @@ status fpga_load_bitstream(int argc, char** argv) {
   }
 
   err = program_bitstream(&bits);
-  if (is_error(err)) {
-    bitstream_free(&bits);
-    return err;
-  }
-
   bitstream_free(&bits);
-  return OK;
+  return err;
 }
