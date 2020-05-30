@@ -65,14 +65,14 @@ static void flush_data_bits_hi() {
 }
 
 status mpsse_init() {
-  int ret = ftdi_set_bitmode(ftdi, 0xFF, BITMODE_MPSSE);
+  int ret = ftdi_set_bitmode(ftdi, 0, BITMODE_MPSSE);
   if (ret) {
     return ftdiutil_error("ftdi_set_bitmode(MPSSE)", ret);
   }
-  data_bits_lo_dir = BIT_CS | BIT_CLOCK | BIT_MOSI;
-  data_bits_lo_val = BIT_CS;
-  flush_data_bits_lo();
-  RETURN_IF_ERROR(ftdiutil_flush_writes("flush_data_bits_lo"));
+  // data_bits_lo_dir = BIT_CS | BIT_CLOCK | BIT_MOSI;
+  // data_bits_lo_val = BIT_CS;
+  // flush_data_bits_lo();
+  // RETURN_IF_ERROR(ftdiutil_flush_writes("flush_data_bits_lo"));
   return OK;
 }
 
@@ -150,9 +150,11 @@ void mpsse_clock_only(int bytes) {
 }
 
 void mpsse_write_data(unsigned char* data, int bytes) {
-  unsigned char opcode =
-      (CMD_TRANSFER_WRITE | CMD_TRANSFER_BYTE_MODE | CMD_TRANSFER_OUT_NEG_EDGE |
-       CMD_TRANSFER_IN_POS_EDGE | CMD_TRANSFER_LSB_FIRST);
+  unsigned char opcode = CMD_TRANSFER_WRITE;
+  opcode |= CMD_TRANSFER_BYTE_MODE;
+  opcode |= CMD_TRANSFER_OUT_NEG_EDGE;
+  opcode |= CMD_TRANSFER_IN_NEG_EDGE;
+  opcode |= CMD_TRANSFER_MSB_FIRST;
   unsigned char buf[3];
   buf[0] = opcode;
   buf[1] = ((bytes - 1) >> 0) & 0xff;
@@ -162,13 +164,30 @@ void mpsse_write_data(unsigned char* data, int bytes) {
 }
 
 void mpsse_read_data(unsigned char* data, int bytes) {
-  unsigned char opcode =
-      (CMD_TRANSFER_READ | CMD_TRANSFER_BYTE_MODE | CMD_TRANSFER_OUT_NEG_EDGE |
-       CMD_TRANSFER_IN_POS_EDGE | CMD_TRANSFER_LSB_FIRST);
+  unsigned char opcode = CMD_TRANSFER_READ;
+  opcode |= CMD_TRANSFER_BYTE_MODE;
+  opcode |= CMD_TRANSFER_OUT_NEG_EDGE;
+  opcode |= CMD_TRANSFER_IN_NEG_EDGE;
+  opcode |= CMD_TRANSFER_MSB_FIRST;
   unsigned char buf[3];
   buf[0] = opcode;
   buf[1] = ((bytes - 1) >> 0) & 0xff;
   buf[2] = ((bytes - 1) >> 8) & 0xff;
   ftdiutil_write_data(buf, sizeof(buf));
   ftdiutil_read_data(data, bytes);
+}
+
+void mpsse_transfer_data(unsigned char* write, unsigned char* read, int bytes) {
+  unsigned char opcode = CMD_TRANSFER_READ | CMD_TRANSFER_WRITE;
+  opcode |= CMD_TRANSFER_BYTE_MODE;
+  opcode |= CMD_TRANSFER_OUT_NEG_EDGE;
+  opcode |= CMD_TRANSFER_IN_NEG_EDGE;
+  opcode |= CMD_TRANSFER_MSB_FIRST;
+  unsigned char buf[3];
+  buf[0] = opcode;
+  buf[1] = ((bytes - 1) >> 0) & 0xff;
+  buf[2] = ((bytes - 1) >> 8) & 0xff;
+  ftdiutil_write_data(buf, sizeof(buf));
+  ftdiutil_write_data(write, bytes);
+  ftdiutil_read_data(read, bytes);
 }

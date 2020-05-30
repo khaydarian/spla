@@ -30,4 +30,6 @@ void mpsse_write_data(unsigned char* data, int bytes);
 
 void mpsse_read_data(unsigned char* data, int bytes);
 
+void mpsse_transfer_data(unsigned char* write, unsigned char* read, int bytes);
+
 #endif
