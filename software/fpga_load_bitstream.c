@@ -25,6 +25,17 @@ static status program_bitstream(struct bitstream* bits) {
     return errorf("Wrong Chip ID 0x%08x: broken board?", id);
   }
 
+  uint32_t usercode;
+  RETURN_IF_ERROR(ecp5_usercode(&usercode));
+  printf("Usercode: 0x%08x\n", usercode);
+
+  usercode = 0x11223344;
+  printf("Program with: 0x%08x\n", usercode);
+  RETURN_IF_ERROR(ecp5_program_usercode(usercode));
+
+  RETURN_IF_ERROR(ecp5_usercode(&usercode));
+  printf("Usercode: 0x%08x\n", usercode);
+
   // TODO: Fix the actual bitstream writing code.
   (void)bits;
   // RETURN_IF_ERROR(ecp5_write_bitstream(bits));
