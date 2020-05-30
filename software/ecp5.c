@@ -144,12 +144,3 @@ status ecp5_program_usercode(uint32_t usercode) {
   return class_b_op(ECP5_OPCODE_PROGRAM_USERCODE, 0, usercode,
                     "ecp5_program_usercode");
 }
-
-status ecp5_write_bitstream(struct bitstream* bits) {
-  // TODO this doesn't work right yet.
-  mpsse_chip_select(true);
-  mpsse_write_data(bits->data, bits->size);
-  mpsse_chip_select(false);
-  RETURN_IF_ERROR(ftdiutil_flush_writes("ecp5_write_bitstream"));
-  return OK;
-}

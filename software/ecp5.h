@@ -22,6 +22,4 @@ status ecp5_read_id(uint32_t* id);
 status ecp5_usercode(uint32_t* usercode);
 status ecp5_program_usercode(uint32_t usercode);
 
-status ecp5_write_bitstream(struct bitstream* bits);
-
 #endif
