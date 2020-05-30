@@ -14,6 +14,7 @@
 * rtl: Build bringup boundary-scan-like image?
   * Possibly get a Lattice tool instead.
 * software: Get rid of global-constant mess.
+* software: Fix device enumeration logic, and `ftdi_list_devices`.
 * software: Add `ftdi_test_flash` command to test flashing LEDs.
 * software: Fixup `ftdi_test_raw` to handle mpsse modes better (labelled pins, individual changes, etc).
 * software: Add pin numbers/names to `bringup_ftdi`.
