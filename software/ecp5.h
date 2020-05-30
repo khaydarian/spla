@@ -18,7 +18,13 @@ void ecp5_set_hold(bool active);
 status ecp5_reset();
 status ecp5_release_reset();
 
+status ecp5_read_status(uint32_t* status);
+status ecp5_error_status(uint32_t status);
+status ecp5_check_status();
+void ecp5_debug_status_dump(uint32_t status);
+
 status ecp5_read_id(uint32_t* id);
+status ecp5_verify_id(uint32_t id);
 status ecp5_usercode(uint32_t* usercode);
 status ecp5_program_usercode(uint32_t usercode);
 

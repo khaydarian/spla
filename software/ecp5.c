@@ -128,12 +128,205 @@ static status class_b_op(uint8_t opcode, uint32_t param, uint32_t val,
   return OK;
 }
 
+#define ECP5_OPCODE_READ_STATUS 0x3C
 #define ECP5_OPCODE_READ_ID 0xE0
+#define ECP5_OPCODE_VERIFY_ID 0xE2
 #define ECP5_OPCODE_USERCODE 0xC0
 #define ECP5_OPCODE_PROGRAM_USERCODE 0xC2
 
+status ecp5_read_status(uint32_t* id) {
+  return class_a_op(ECP5_OPCODE_READ_STATUS, 0, id, "ecp5_read_status");
+}
+
+#define ECP5_STATUS_TRANSPARENT (1 << 0)
+#define ECP5_STATUS_JTAG_ACTIVE (1 << 4)
+#define ECP5_STATUS_PWD_PROTECTION (1 << 5)
+#define ECP5_STATUS_DECRYPT_ENABLE (1 << 7)
+#define ECP5_STATUS_DONE (1 << 8)
+#define ECP5_STATUS_ISC_ENABLE (1 << 9)
+#define ECP5_STATUS_WRITE_ENABLE (1 << 10)
+#define ECP5_STATUS_READ_ENABLE (1 << 11)
+#define ECP5_STATUS_BUSY (1 << 12)
+#define ECP5_STATUS_FAIL (1 << 13)
+#define ECP5_STATUS_FEA_OTP (1 << 14)
+#define ECP5_STATUS_DECRYPT_ONLY (1 << 15)
+#define ECP5_STATUS_PWD_ENABLE (1 << 16)
+#define ECP5_STATUS_ENCRYPTED_PREAMBLE (1 << 20)
+#define ECP5_STATUS_STANDARD_PREAMBLE (1 << 21)
+#define ECP5_STATUS_SPIM_FAIL1 (1 << 22)
+#define ECP5_STATUS_BSE_ERROR(x) ((x >> 23) & 7)
+#define ECP5_STATUS_EXECUTION_ERROR (1 << 26)
+#define ECP5_STATUS_ID_ERROR (1 << 27)
+#define ECP5_STATUS_INVALID_COMMAND (1 << 28)
+#define ECP5_STATUS_SED_ERROR (1 << 29)
+#define ECP5_STATUS_BYPASS_MODE (1 << 30)
+#define ECP5_STATUS_FLOW_THROUGH_MODE (1 << 31)
+
+status ecp5_error_status(uint32_t statusval) {
+  char buf[1024] = {0};
+  char* b = buf;
+  if (statusval & ECP5_STATUS_BUSY) {
+    b += sprintf(b, " Busy");
+  }
+  if (statusval & ECP5_STATUS_FAIL) {
+    b += sprintf(b, " Fail");
+  }
+  if (statusval & ECP5_STATUS_SPIM_FAIL1) {
+    b += sprintf(b, " SPIm-Fail1");
+  }
+  switch (ECP5_STATUS_BSE_ERROR(statusval)) {
+    case 0:
+      // No error
+      break;
+    case 1:
+      b += sprintf(b, " BSE:Id-Error");
+      break;
+    case 2:
+      b += sprintf(b, " BSE:Invalid-Command");
+      break;
+    case 3:
+      b += sprintf(b, " BSE:CRC-Error");
+      break;
+    case 4:
+      b += sprintf(b, " BSE:Preamble-Error");
+      break;
+    case 5:
+      b += sprintf(b, " BSE:Aborted-by-User");
+      break;
+    case 6:
+      b += sprintf(b, " BSE:Overflow");
+      break;
+    case 7:
+      b += sprintf(b, " BSE:SDM-Error");
+      break;
+  }
+  if (statusval & ECP5_STATUS_EXECUTION_ERROR) {
+    b += sprintf(b, " Execution-Error");
+  }
+  if (statusval & ECP5_STATUS_ID_ERROR) {
+    b += sprintf(b, " Id-Error");
+  }
+  if (statusval & ECP5_STATUS_INVALID_COMMAND) {
+    b += sprintf(b, " Invalid-Command");
+  }
+  if (statusval & ECP5_STATUS_SED_ERROR) {
+    b += sprintf(b, " SED-Error");
+  }
+  if (!buf[0]) {
+    return OK;
+  }
+  return errorf("ECP5 Error: %s", &buf[1]);
+}
+
+status ecp5_check_status() {
+  uint32_t statusval;
+  RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  return ecp5_error_status(statusval);
+}
+
+void ecp5_debug_status_dump(uint32_t statusval) {
+  printf("Status 0x%08x:", statusval);
+  if (statusval & ECP5_STATUS_TRANSPARENT) {
+    printf(" Transparent");
+  }
+  if (statusval & ECP5_STATUS_JTAG_ACTIVE) {
+    printf(" JTAG-Active");
+  }
+  if (statusval & ECP5_STATUS_PWD_PROTECTION) {
+    printf(" PWD-Protection");
+  }
+  if (statusval & ECP5_STATUS_DECRYPT_ENABLE) {
+    printf(" Decrypt-Enable");
+  }
+  if (statusval & ECP5_STATUS_DONE) {
+    printf(" DONE");
+  }
+  if (statusval & ECP5_STATUS_ISC_ENABLE) {
+    printf(" ISC-Enable");
+  }
+  if (statusval & ECP5_STATUS_WRITE_ENABLE) {
+    printf(" Write");
+  }
+  if (statusval & ECP5_STATUS_READ_ENABLE) {
+    printf(" Read");
+  }
+  if (statusval & ECP5_STATUS_BUSY) {
+    printf(" Busy");
+  }
+  if (statusval & ECP5_STATUS_FAIL) {
+    printf(" Fail");
+  }
+  if (statusval & ECP5_STATUS_FEA_OTP) {
+    printf(" FEA-OTP");
+  }
+  if (statusval & ECP5_STATUS_DECRYPT_ONLY) {
+    printf(" Decrypt-Only");
+  }
+  if (statusval & ECP5_STATUS_PWD_ENABLE) {
+    printf(" PWD-Enable");
+  }
+  if (statusval & ECP5_STATUS_ENCRYPTED_PREAMBLE) {
+    printf(" Encrypted-Preamble");
+  }
+  if (statusval & ECP5_STATUS_STANDARD_PREAMBLE) {
+    printf(" Standard-Preamble");
+  }
+  if (statusval & ECP5_STATUS_SPIM_FAIL1) {
+    printf(" SPIm-Fail1");
+  }
+  switch (ECP5_STATUS_BSE_ERROR(statusval)) {
+    case 0:
+      // No error
+      break;
+    case 1:
+      printf(" BSE:Id-Error");
+      break;
+    case 2:
+      printf(" BSE:Invalid-Command");
+      break;
+    case 3:
+      printf(" BSE:CRC-Error");
+      break;
+    case 4:
+      printf(" BSE:Preamble-Error");
+      break;
+    case 5:
+      printf(" BSE:Aborted-by-User");
+      break;
+    case 6:
+      printf(" BSE:Overflow");
+      break;
+    case 7:
+      printf(" BSE:SDM-Error");
+      break;
+  }
+  if (statusval & ECP5_STATUS_EXECUTION_ERROR) {
+    printf(" Execution-Error");
+  }
+  if (statusval & ECP5_STATUS_ID_ERROR) {
+    printf(" Id-Error");
+  }
+  if (statusval & ECP5_STATUS_INVALID_COMMAND) {
+    printf(" Invalid-Command");
+  }
+  if (statusval & ECP5_STATUS_SED_ERROR) {
+    printf(" SED-Error");
+  }
+  if (statusval & ECP5_STATUS_BYPASS_MODE) {
+    printf(" Bypass-Mode");
+  }
+  if (statusval & ECP5_STATUS_FLOW_THROUGH_MODE) {
+    printf(" Flow-Through-Mode");
+  }
+  printf("\n");
+}
+
 status ecp5_read_id(uint32_t* id) {
   return class_a_op(ECP5_OPCODE_READ_ID, 0, id, "ecp5_read_id");
+}
+
+status ecp5_verify_id(uint32_t id) {
+  return class_b_op(ECP5_OPCODE_VERIFY_ID, 0, id, "ecp5_verify_id");
 }
 
 status ecp5_usercode(uint32_t* usercode) {
