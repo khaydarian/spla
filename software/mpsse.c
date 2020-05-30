@@ -1,8 +1,9 @@
 // vi: ts=2:sw=2:sts=2:et
 
 #include "mpsse.h"
-#include <unistd.h>
 
+#include <assert.h>
+#include <unistd.h>
 #include "freq_util.h"
 #include "ftdiutil.h"
 
@@ -142,6 +143,7 @@ void mpsse_get_data_bits_high(unsigned char* val) {
 }
 
 void mpsse_clock_only(int bytes) {
+  assert(bytes <= 65536);
   unsigned char buf[3];
   buf[0] = CMD_CLOCK_FOR_N_BYTES;
   buf[1] = ((bytes - 1) >> 0) & 0xFF;
@@ -150,6 +152,7 @@ void mpsse_clock_only(int bytes) {
 }
 
 void mpsse_write_data(unsigned char* data, int bytes) {
+  assert(bytes <= 65536);
   unsigned char opcode = CMD_TRANSFER_WRITE;
   opcode |= CMD_TRANSFER_BYTE_MODE;
   opcode |= CMD_TRANSFER_OUT_NEG_EDGE;
@@ -164,6 +167,7 @@ void mpsse_write_data(unsigned char* data, int bytes) {
 }
 
 void mpsse_read_data(unsigned char* data, int bytes) {
+  assert(bytes <= 65536);
   unsigned char opcode = CMD_TRANSFER_READ;
   opcode |= CMD_TRANSFER_BYTE_MODE;
   opcode |= CMD_TRANSFER_OUT_NEG_EDGE;
@@ -178,6 +182,7 @@ void mpsse_read_data(unsigned char* data, int bytes) {
 }
 
 void mpsse_transfer_data(unsigned char* write, unsigned char* read, int bytes) {
+  assert(bytes <= 65536);
   unsigned char opcode = CMD_TRANSFER_READ | CMD_TRANSFER_WRITE;
   opcode |= CMD_TRANSFER_BYTE_MODE;
   opcode |= CMD_TRANSFER_OUT_NEG_EDGE;
