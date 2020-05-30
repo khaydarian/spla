@@ -77,6 +77,7 @@ int main(int argc, char** argv) {
     } else {
       status err = invoke_command(argc, argv);
       if (is_error(err)) {
+        fflush(stdout);
         fprintf(stderr, "%s\n", err->message);
         status_free(err);
         return 1;
