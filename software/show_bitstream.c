@@ -4,56 +4,66 @@
 #include "bitstream.h"
 #include "command.h"
 
-static void show_nop(unsigned at, uint8_t op) {
+static status show_nop(unsigned at, uint8_t op) {
   printf("%06x [%02x] nop\n", at, op);
+  return OK;
 }
 
-static void show_reset_crc(unsigned at, uint8_t op) {
+static status show_reset_crc(unsigned at, uint8_t op) {
   printf("%06x [%02x] Reset CRC\n", at, op);
+  return OK;
 }
 
-static void show_verify_id(unsigned at, uint8_t op, uint32_t expected_id) {
+static status show_verify_id(unsigned at, uint8_t op, uint32_t expected_id) {
   printf("%06x [%02x] Verify ID == 0x%08x\n", at, op, expected_id);
+  return OK;
 }
 
-static void show_prog_cntrl0(unsigned at, uint8_t op, uint32_t value) {
+static status show_prog_cntrl0(unsigned at, uint8_t op, uint32_t value) {
   printf("%06x [%02x] Prog CNTRL0 with value 0x%08x\n", at, op, value);
+  return OK;
 }
 
-static void show_init_address(unsigned at, uint8_t op) {
+static status show_init_address(unsigned at, uint8_t op) {
   printf("%06x [%02x] Init Address (to 0)\n", at, op);
+  return OK;
 }
 
-static void show_write_comp_dic(unsigned at, uint8_t op, uint8_t* dic,
-                                int size) {
+static status show_write_comp_dic(unsigned at, uint8_t op, uint8_t* dic,
+                                  int size) {
   printf("%06x [%02x] Write Compression Dictionary: [", at, op);
   printf("%02x", dic[0]);
   for (int i = 1; i < size; i++) {
     printf(" %02x", dic[i]);
   }
   printf("]\n");
+  return OK;
 }
 
-static void show_prog_incr_rti(unsigned at, uint8_t op, uint8_t opts,
-                               uint8_t* frames, int bytes_per_frame,
-                               int num_frames) {
+static status show_prog_incr_rti(unsigned at, uint8_t op, uint8_t opts,
+                                 uint8_t* frames, int bytes_per_frame,
+                                 int num_frames) {
   (void)opts;
   (void)frames;
   printf(
       "%06x [%02x] Program Incremental (Uncompressed): opts 0x%02x, %d bytes "
       "per frame, %d frames\n",
       at, op, opts, bytes_per_frame, num_frames);
+  return OK;
 }
 
-static void show_program_usercode(unsigned at, uint8_t op, uint32_t usercode) {
+static status show_program_usercode(unsigned at, uint8_t op,
+                                    uint32_t usercode) {
   printf("%06x [%02x] Program Usercode 0x%08x\n", at, op, usercode);
+  return OK;
 }
 
-static void show_program_done(unsigned at, uint8_t op) {
+static status show_program_done(unsigned at, uint8_t op) {
   printf("%06x [%02x] Program Done\n", at, op);
+  return OK;
 }
 
-static void show_remaining(unsigned at, uint8_t* rest, int size) {
+static status show_remaining(unsigned at, uint8_t* rest, int size) {
   printf("%06x [", at);
   for (int i = 0; i < 16 && i < size; i++) {
     printf("%02x", rest[i]);
@@ -65,6 +75,7 @@ static void show_remaining(unsigned at, uint8_t* rest, int size) {
     printf("...");
   }
   printf("] %d bytes remaining\n", size);
+  return OK;
 }
 
 static struct bitstream_parse_callbacks print_callbacks = {

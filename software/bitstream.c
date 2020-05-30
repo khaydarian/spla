@@ -85,32 +85,44 @@ status bitstream_parse(struct bitstream* bits,
     uint8_t op = *p.pos;
     switch (op) {
       case 0xff:
-        cb->op_0xFF_nop(at, op);
+        if (cb->op_0xFF_nop) {
+          RETURN_IF_ERROR(cb->op_0xFF_nop(at, op));
+        }
         p.pos++;
         break;
       case 0x3B:
         RETURN_IF_ERROR(bp_check_space(&p, 4));
-        cb->op_0x3B_reset_crc(at, op);
+        if (cb->op_0x3B_reset_crc) {
+          RETURN_IF_ERROR(cb->op_0x3B_reset_crc(at, op));
+        }
         p.pos += 4;
         break;
       case 0xe2:
         RETURN_IF_ERROR(bp_check_space(&p, 8));
-        cb->op_0xE2_verify_id(at, op, bp_read32_at(&p, 4));
+        if (cb->op_0xE2_verify_id) {
+          RETURN_IF_ERROR(cb->op_0xE2_verify_id(at, op, bp_read32_at(&p, 4)));
+        }
         p.pos += 8;
         break;
       case 0x22:
         RETURN_IF_ERROR(bp_check_space(&p, 8));
-        cb->op_0x22_prog_cntrl0(at, op, bp_read32_at(&p, 4));
+        if (cb->op_0x22_prog_cntrl0) {
+          RETURN_IF_ERROR(cb->op_0x22_prog_cntrl0(at, op, bp_read32_at(&p, 4)));
+        }
         p.pos += 8;
         break;
       case 0x46:
         RETURN_IF_ERROR(bp_check_space(&p, 4));
-        cb->op_0x46_init_address(at, op);
+        if (cb->op_0x46_init_address) {
+          RETURN_IF_ERROR(cb->op_0x46_init_address(at, op));
+        }
         p.pos += 4;
         break;
       case 0x02:
         RETURN_IF_ERROR(bp_check_space(&p, 12));
-        cb->op_0x02_write_comp_dic(at, op, p.pos + 4, 8);
+        if (cb->op_0x02_write_comp_dic) {
+          RETURN_IF_ERROR(cb->op_0x02_write_comp_dic(at, op, p.pos + 4, 8));
+        }
         p.pos += 12;
         break;
       case 0x82:
@@ -120,13 +132,18 @@ status bitstream_parse(struct bitstream* bits,
         uint32_t bytes_per_frame = 106 + (opts & 0x80 ? 2 : 0) + (opts & 0xf);
         uint32_t size = nframes * bytes_per_frame;
         RETURN_IF_ERROR(bp_check_space(&p, 4 + size));
-        cb->op_0x82_prog_incr_rti(at, op, opts, p.pos + 4, bytes_per_frame,
-                                  nframes);
+        if (cb->op_0x82_prog_incr_rti) {
+          cb->op_0x82_prog_incr_rti(at, op, opts, p.pos + 4, bytes_per_frame,
+                                    nframes);
+        }
         p.pos += 4 + size;
         break;
       case 0xc2:
         RETURN_IF_ERROR(bp_check_space(&p, 8));
-        cb->op_0xc2_program_usercode(at, op, bp_read32_at(&p, 4));
+        if (cb->op_0xc2_program_usercode) {
+          RETURN_IF_ERROR(
+              cb->op_0xc2_program_usercode(at, op, bp_read32_at(&p, 4)));
+        }
         if (p.pos[1] & 0x80) {
           p.pos += 2;
         }
@@ -134,11 +151,15 @@ status bitstream_parse(struct bitstream* bits,
         break;
       case 0x5e:
         RETURN_IF_ERROR(bp_check_space(&p, 4));
-        cb->op_0x5e_program_done(at, op);
+        if (cb->op_0x5e_program_done) {
+          RETURN_IF_ERROR(cb->op_0x5e_program_done(at, op));
+        }
         p.pos += 4;
         break;
       default:
-        cb->error(at, p.pos, p.end - p.pos);
+        if (cb->error) {
+          RETURN_IF_ERROR(cb->error(at, p.pos, p.end - p.pos));
+        }
         return errorf("unknown opcode [%02x] at 0x%06x", op, at);
     }
   }
