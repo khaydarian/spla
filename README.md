@@ -52,7 +52,7 @@ producing a completely cycle-accurate emulation of the SNES video hardware.
 * Bringup started.
   * Power bringup complete.
   * USB / FTDI bringup complete.
-  * FPGA bringup pending.
+  * FPGA bringup in progress.
   * SNES bringup pending.
     * Two sets of scavenged SNES chips available.
   * Analog bringup pending.
