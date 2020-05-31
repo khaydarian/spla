@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include "ecp5_constants.h"
 #include "ftdiutil.h"
 #include "mpsse.h"
 
@@ -148,18 +149,6 @@ static status class_c_op(uint8_t opcode, uint32_t param, const char* name) {
   RETURN_IF_ERROR(ftdiutil_flush_writes(name));
   return OK;
 }
-
-#define ECP5_OPCODE_READ_STATUS 0x3C
-#define ECP5_OPCODE_READ_ID 0xE0
-#define ECP5_OPCODE_VERIFY_ID 0xE2
-#define ECP5_OPCODE_USERCODE 0xC0
-#define ECP5_OPCODE_PROGRAM_USERCODE 0xC2
-#define ECP5_OPCODE_RESET_CRC 0x3B
-#define ECP5_OPCODE_INIT_ADDRESS 0x46
-#define ECP5_OPCODE_PROG_CNTRL0 0x22
-#define ECP5_OPCODE_PROGRAM_DONE 0x5e
-#define ECP5_OPCODE_ISC_DISABLE 0x26
-#define ECP5_OPCODE_ISC_ENABLE 0xc6
 
 status ecp5_read_status(uint32_t* id) {
   return class_a_op(ECP5_OPCODE_READ_STATUS, 0, id, "ecp5_read_status");

@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#include "ecp5_constants.h"
 
 void bitstream_free(struct bitstream* bits) {
   if (bits->data) {
@@ -84,75 +85,73 @@ status bitstream_parse(struct bitstream* bits,
     int at = p.pos - p.base;
     uint8_t op = *p.pos;
     switch (op) {
-      case 0xff:
-        if (cb->op_0xFF_nop) {
-          RETURN_IF_ERROR(cb->op_0xFF_nop(at, op));
+      case ECP5_OPCODE_NOP:
+        if (cb->nop) {
+          RETURN_IF_ERROR(cb->nop(at, op));
         }
         p.pos++;
         break;
-      case 0x3B:
+      case ECP5_OPCODE_RESET_CRC:
         RETURN_IF_ERROR(bp_check_space(&p, 4));
-        if (cb->op_0x3B_reset_crc) {
-          RETURN_IF_ERROR(cb->op_0x3B_reset_crc(at, op));
+        if (cb->reset_crc) {
+          RETURN_IF_ERROR(cb->reset_crc(at, op));
         }
         p.pos += 4;
         break;
-      case 0xe2:
+      case ECP5_OPCODE_VERIFY_ID:
         RETURN_IF_ERROR(bp_check_space(&p, 8));
-        if (cb->op_0xE2_verify_id) {
-          RETURN_IF_ERROR(cb->op_0xE2_verify_id(at, op, bp_read32_at(&p, 4)));
+        if (cb->verify_id) {
+          RETURN_IF_ERROR(cb->verify_id(at, op, bp_read32_at(&p, 4)));
         }
         p.pos += 8;
         break;
-      case 0x22:
+      case ECP5_OPCODE_PROG_CNTRL0:
         RETURN_IF_ERROR(bp_check_space(&p, 8));
-        if (cb->op_0x22_prog_cntrl0) {
-          RETURN_IF_ERROR(cb->op_0x22_prog_cntrl0(at, op, bp_read32_at(&p, 4)));
+        if (cb->prog_cntrl0) {
+          RETURN_IF_ERROR(cb->prog_cntrl0(at, op, bp_read32_at(&p, 4)));
         }
         p.pos += 8;
         break;
-      case 0x46:
+      case ECP5_OPCODE_INIT_ADDRESS:
         RETURN_IF_ERROR(bp_check_space(&p, 4));
-        if (cb->op_0x46_init_address) {
-          RETURN_IF_ERROR(cb->op_0x46_init_address(at, op));
+        if (cb->init_address) {
+          RETURN_IF_ERROR(cb->init_address(at, op));
         }
         p.pos += 4;
         break;
-      case 0x02:
+      case ECP5_OPCODE_WRITE_COMP_DIC:
         RETURN_IF_ERROR(bp_check_space(&p, 12));
-        if (cb->op_0x02_write_comp_dic) {
-          RETURN_IF_ERROR(cb->op_0x02_write_comp_dic(at, op, p.pos + 4, 8));
+        if (cb->write_comp_dic) {
+          RETURN_IF_ERROR(cb->write_comp_dic(at, op, p.pos + 4, 8));
         }
         p.pos += 12;
         break;
-      case 0x82:
+      case ECP5_OPCODE_PROG_INCR_RTI:
         RETURN_IF_ERROR(bp_check_space(&p, 4));
         uint8_t opts = p.pos[1];
         uint16_t nframes = (p.pos[2] << 8) | p.pos[3];
         uint32_t bytes_per_frame = 106 + (opts & 0x80 ? 2 : 0) + (opts & 0xf);
         uint32_t size = nframes * bytes_per_frame;
         RETURN_IF_ERROR(bp_check_space(&p, 4 + size));
-        if (cb->op_0x82_prog_incr_rti) {
-          cb->op_0x82_prog_incr_rti(at, op, opts, p.pos + 4, bytes_per_frame,
-                                    nframes);
+        if (cb->prog_incr_rti) {
+          cb->prog_incr_rti(at, op, opts, p.pos + 4, bytes_per_frame, nframes);
         }
         p.pos += 4 + size;
         break;
-      case 0xc2:
+      case ECP5_OPCODE_PROGRAM_USERCODE:
         RETURN_IF_ERROR(bp_check_space(&p, 8));
-        if (cb->op_0xc2_program_usercode) {
-          RETURN_IF_ERROR(
-              cb->op_0xc2_program_usercode(at, op, bp_read32_at(&p, 4)));
+        if (cb->program_usercode) {
+          RETURN_IF_ERROR(cb->program_usercode(at, op, bp_read32_at(&p, 4)));
         }
         if (p.pos[1] & 0x80) {
           p.pos += 2;
         }
         p.pos += 8;
         break;
-      case 0x5e:
+      case ECP5_OPCODE_PROGRAM_DONE:
         RETURN_IF_ERROR(bp_check_space(&p, 4));
-        if (cb->op_0x5e_program_done) {
-          RETURN_IF_ERROR(cb->op_0x5e_program_done(at, op));
+        if (cb->program_done) {
+          RETURN_IF_ERROR(cb->program_done(at, op));
         }
         p.pos += 4;
         break;

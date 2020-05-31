@@ -79,15 +79,15 @@ static status show_remaining(unsigned at, uint8_t* rest, int size) {
 }
 
 static struct bitstream_parse_callbacks print_callbacks = {
-    .op_0xFF_nop = show_nop,
-    .op_0x3B_reset_crc = show_reset_crc,
-    .op_0xE2_verify_id = show_verify_id,
-    .op_0x22_prog_cntrl0 = show_prog_cntrl0,
-    .op_0x46_init_address = show_init_address,
-    .op_0x02_write_comp_dic = show_write_comp_dic,
-    .op_0x82_prog_incr_rti = show_prog_incr_rti,
-    .op_0xc2_program_usercode = show_program_usercode,
-    .op_0x5e_program_done = show_program_done,
+    .nop = show_nop,
+    .reset_crc = show_reset_crc,
+    .verify_id = show_verify_id,
+    .prog_cntrl0 = show_prog_cntrl0,
+    .init_address = show_init_address,
+    .write_comp_dic = show_write_comp_dic,
+    .prog_incr_rti = show_prog_incr_rti,
+    .program_usercode = show_program_usercode,
+    .program_done = show_program_done,
     .error = show_remaining,
 };
 

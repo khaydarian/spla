@@ -84,13 +84,13 @@ static status loadbits_program_done(unsigned at, uint8_t op) {
 }
 
 static struct bitstream_parse_callbacks loadbits_callbacks = {
-    .op_0x3B_reset_crc = loadbits_reset_crc,
-    .op_0xE2_verify_id = loadbits_verify_id,
-    .op_0x22_prog_cntrl0 = loadbits_prog_cntrl0,
-    .op_0x46_init_address = loadbits_init_address,
-    .op_0x02_write_comp_dic = loadbits_write_comp_dic,
-    .op_0x82_prog_incr_rti = loadbits_prog_incr_rti,
-    .op_0x5e_program_done = loadbits_program_done,
+    .reset_crc = loadbits_reset_crc,
+    .verify_id = loadbits_verify_id,
+    .prog_cntrl0 = loadbits_prog_cntrl0,
+    .init_address = loadbits_init_address,
+    .write_comp_dic = loadbits_write_comp_dic,
+    .prog_incr_rti = loadbits_prog_incr_rti,
+    .program_done = loadbits_program_done,
 };
 
 status load_bitstream(struct bitstream* bits) {
