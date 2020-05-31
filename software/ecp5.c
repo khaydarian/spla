@@ -128,11 +128,29 @@ static status class_b_op(uint8_t opcode, uint32_t param, uint32_t val,
   return OK;
 }
 
+static status class_c_op(uint8_t opcode, uint32_t param, const char* name) {
+  uint8_t wr[4];
+  wr[0] = opcode;
+  wr[1] = (param >> 16) & 0xff;
+  wr[2] = (param >> 8) & 0xff;
+  wr[3] = param & 0xff;
+  mpsse_chip_select(true);
+  mpsse_write_data(wr, sizeof(wr));
+  mpsse_chip_select(false);
+  RETURN_IF_ERROR(ftdiutil_flush_writes(name));
+  return OK;
+}
+
 #define ECP5_OPCODE_READ_STATUS 0x3C
 #define ECP5_OPCODE_READ_ID 0xE0
 #define ECP5_OPCODE_VERIFY_ID 0xE2
 #define ECP5_OPCODE_USERCODE 0xC0
 #define ECP5_OPCODE_PROGRAM_USERCODE 0xC2
+#define ECP5_OPCODE_RESET_CRC 0x3B
+#define ECP5_OPCODE_INIT_ADDRESS 0x46
+#define ECP5_OPCODE_PROG_CNTRL0 0x22
+#define ECP5_OPCODE_PROGRAM_DONE 0x5e
+#define ECP5_OPCODE_ISC_DISABLE 0x26
 
 status ecp5_read_status(uint32_t* id) {
   return class_a_op(ECP5_OPCODE_READ_STATUS, 0, id, "ecp5_read_status");
@@ -222,6 +240,21 @@ status ecp5_check_status() {
   uint32_t statusval;
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   return ecp5_error_status(statusval);
+}
+
+bool ecp5_status_done(uint32_t statusval) {
+  return (bool)(statusval & ECP5_STATUS_DONE);
+}
+
+status ecp5_check_done() {
+  uint32_t statusval;
+  RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  RETURN_IF_ERROR(ecp5_error_status(statusval));
+  if (!ecp5_status_done(statusval)) {
+    ecp5_debug_status_dump(statusval);
+    return errorf("ecp5 DONE bit not set");
+  }
+  return OK;
 }
 
 void ecp5_debug_status_dump(uint32_t statusval) {
@@ -336,4 +369,24 @@ status ecp5_usercode(uint32_t* usercode) {
 status ecp5_program_usercode(uint32_t usercode) {
   return class_b_op(ECP5_OPCODE_PROGRAM_USERCODE, 0, usercode,
                     "ecp5_program_usercode");
+}
+
+status ecp5_reset_crc() {
+  return class_c_op(ECP5_OPCODE_RESET_CRC, 0, "ecp5_reset_crc");
+}
+
+status ecp5_init_address() {
+  return class_c_op(ECP5_OPCODE_INIT_ADDRESS, 0, "ecp5_init_address");
+}
+
+status ecp5_prog_cntrl0(uint32_t value) {
+  return class_b_op(ECP5_OPCODE_PROG_CNTRL0, 0, value, "ecp5_prog_cntrl0");
+}
+
+status ecp5_program_done() {
+  return class_c_op(ECP5_OPCODE_PROGRAM_DONE, 0, "ecp5_program_done");
+}
+
+status ecp5_isc_disable() {
+  return class_c_op(ECP5_OPCODE_ISC_DISABLE, 0, "ecp5_isc_disable");
 }

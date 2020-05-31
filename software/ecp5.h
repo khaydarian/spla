@@ -21,11 +21,20 @@ status ecp5_release_reset();
 status ecp5_read_status(uint32_t* status);
 status ecp5_error_status(uint32_t status);
 status ecp5_check_status();
+bool ecp5_status_done(uint32_t status);
+status ecp5_check_done();
 void ecp5_debug_status_dump(uint32_t status);
 
 status ecp5_read_id(uint32_t* id);
 status ecp5_verify_id(uint32_t id);
 status ecp5_usercode(uint32_t* usercode);
 status ecp5_program_usercode(uint32_t usercode);
+
+status ecp5_reset_crc();
+status ecp5_init_address();
+status ecp5_prog_cntrl0(uint32_t value);
+
+status ecp5_program_done();
+status ecp5_isc_disable();
 
 #endif

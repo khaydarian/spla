@@ -9,6 +9,7 @@
 #include "ecp5.h"
 #include "ftdi.h"
 #include "ftdiutil.h"
+#include "load_bitstream.h"
 
 static status program_bitstream(struct bitstream* bits) {
   RETURN_IF_ERROR(ecp5_init());
@@ -24,9 +25,7 @@ static status program_bitstream(struct bitstream* bits) {
     return errorf("Wrong Chip ID 0x%08x: broken board?", id);
   }
 
-  // TODO: Fix the actual bitstream writing code.
-  (void)bits;
-  // RETURN_IF_ERROR(ecp5_write_bitstream(bits));
+  RETURN_IF_ERROR(load_bitstream(bits));
 
   RETURN_IF_ERROR(ecp5_release_reset());
   return OK;
