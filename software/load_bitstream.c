@@ -3,6 +3,7 @@
 #include "load_bitstream.h"
 
 #include <stdio.h>
+#include <unistd.h>
 #include "ecp5.h"
 #include "ftdiutil.h"
 #include "mpsse.h"
@@ -98,14 +99,21 @@ status load_bitstream(struct bitstream* bits) {
   // Check final DONE status.
   RETURN_IF_ERROR(ecp5_check_done());
 
-  // TEMP: Check status.
   uint32_t statusval;
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
 
-  RETURN_IF_ERROR(ecp5_isc_disable());
+  usleep(3000000);
 
-  // TEMP: Check status.
+  printf("ecp_isc_disable()\n");
+  ecp5_isc_disable();
+  RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  ecp5_debug_status_dump(statusval);
+
+  printf("ecp_set_init(false)\n");
+  ecp5_set_init(false);
+  ftdiutil_flush_writes("ecp5_set_init");
+
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
 

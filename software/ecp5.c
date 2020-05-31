@@ -57,6 +57,14 @@ void ecp5_set_program(bool active) {
                               active ? 0 : PROGRAMN_BIT);
 }
 
+void ecp5_set_init(bool active) {
+  mpsse_set_data_bits_low_dir(INITN_BIT, INITN_BIT, active ? 0 : INITN_BIT);
+}
+
+void ecp5_set_done(bool active) {
+  mpsse_set_data_bits_low_dir(DONE_BIT, DONE_BIT, active ? DONE_BIT : 0);
+}
+
 void ecp5_set_hold(bool active) {
   (void)active;
   // Oversight! This pin isn't connected, and really should be.
@@ -151,6 +159,7 @@ static status class_c_op(uint8_t opcode, uint32_t param, const char* name) {
 #define ECP5_OPCODE_PROG_CNTRL0 0x22
 #define ECP5_OPCODE_PROGRAM_DONE 0x5e
 #define ECP5_OPCODE_ISC_DISABLE 0x26
+#define ECP5_OPCODE_ISC_ENABLE 0xc6
 
 status ecp5_read_status(uint32_t* id) {
   return class_a_op(ECP5_OPCODE_READ_STATUS, 0, id, "ecp5_read_status");
@@ -385,6 +394,10 @@ status ecp5_prog_cntrl0(uint32_t value) {
 
 status ecp5_program_done() {
   return class_c_op(ECP5_OPCODE_PROGRAM_DONE, 0, "ecp5_program_done");
+}
+
+status ecp5_isc_enable() {
+  return class_c_op(ECP5_OPCODE_ISC_ENABLE, 0, "ecp5_isc_enable");
 }
 
 status ecp5_isc_disable() {

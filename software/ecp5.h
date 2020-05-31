@@ -13,6 +13,8 @@ status ecp5_init();
 
 void ecp5_set_led3(bool active);
 void ecp5_set_program(bool active);
+void ecp5_set_init(bool active);
+void ecp5_set_done(bool active);
 void ecp5_set_hold(bool active);
 
 status ecp5_reset();
@@ -35,6 +37,7 @@ status ecp5_init_address();
 status ecp5_prog_cntrl0(uint32_t value);
 
 status ecp5_program_done();
+status ecp5_isc_enable();
 status ecp5_isc_disable();
 
 #endif
