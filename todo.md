@@ -52,6 +52,7 @@
 * Avoid inverted LEDs, which is confusing (and we don't care about the power draw).
 * Consolidate BoM part selections.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
+* Drive all LEDs with high-impedence input things (transistors) to avoid biasing the signals I'm trying to sample.
 
 ## Deferred
 
