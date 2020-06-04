@@ -119,7 +119,11 @@ reg [7:0] spinner;
 initial counter = 0;
 initial spinner = 8'b00111011;
 
-always @(posedge clk_12mhz) begin
+wire clock;
+
+OSCG oscg(.OSC(clock));
+
+always @(posedge clock) begin
 	if (counter == 0) begin
 		counter <= COUNTER_RESET_VAL;
 		spinner <= {spinner[0], spinner[7:1]};
