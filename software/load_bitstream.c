@@ -124,6 +124,17 @@ status load_bitstream(struct bitstream* bits) {
   ecp5_set_init(false);
   ftdiutil_flush_writes("ecp5_set_init");
 
+  printf("ecp_set_done(true)\n");
+  ecp5_set_done(true);
+  ftdiutil_flush_writes("ecp5_set_done");
+
+  printf("ecp_write_idle_bytes()\n");
+  ecp5_write_idle_bytes(64);
+
+  RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  ecp5_debug_status_dump(statusval);
+
+
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
 
