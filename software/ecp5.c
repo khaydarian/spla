@@ -28,14 +28,14 @@ status ecp5_init() {
   // Interface A is not used yet; tristate all pins.
   ftdiutil_set_interface(INTERFACE_A);
   RETURN_IF_ERROR(mpsse_init());
-  RETURN_IF_ERROR(mpsse_set_frequency("1MHz"));
+  RETURN_IF_ERROR(mpsse_set_frequency("6MHz"));
   mpsse_set_data_bits_low_dir(0xff, 0, 0);
   mpsse_set_data_bits_high_dir(0xff, 0, 0);
 
   // Set interface B appropriately.
   ftdiutil_set_interface(INTERFACE_B);
   RETURN_IF_ERROR(mpsse_init());
-  RETURN_IF_ERROR(mpsse_set_frequency("1MHz"));
+  RETURN_IF_ERROR(mpsse_set_frequency("6MHz"));
   mpsse_set_data_bits_low_dir(
       0xff,
       /*dir*/ SPI_CLK_BIT | SPI_MOSI_BIT | SPI_CSN_BIT | PROGRAMN_BIT,
