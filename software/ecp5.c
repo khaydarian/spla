@@ -2,7 +2,9 @@
 
 #include "ecp5.h"
 
+#include <assert.h>
 #include <stdio.h>
+#include <string.h>
 #include <unistd.h>
 #include "ecp5_constants.h"
 #include "ftdiutil.h"
@@ -391,4 +393,12 @@ status ecp5_isc_enable() {
 
 status ecp5_isc_disable() {
   return class_c_op(ECP5_OPCODE_ISC_DISABLE, 0, "ecp5_isc_disable");
+}
+
+status ecp5_write_idle_bytes(int count) {
+  assert(count < 256);
+  uint8_t idle[256];
+  memset(idle, 0xFF, sizeof(idle));
+  mpsse_write_data(idle, count);
+  return ftdiutil_flush_writes("ecp5_write_idle_bytes");
 }

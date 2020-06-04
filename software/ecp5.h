@@ -40,4 +40,6 @@ status ecp5_program_done();
 status ecp5_isc_enable();
 status ecp5_isc_disable();
 
+status ecp5_write_idle_bytes(int count);
+
 #endif

@@ -94,12 +94,16 @@ static struct bitstream_parse_callbacks loadbits_callbacks = {
 };
 
 status load_bitstream(struct bitstream* bits) {
+  uint32_t statusval;
+  printf("Early status:\n");
+  RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  ecp5_debug_status_dump(statusval);
+
   RETURN_IF_ERROR(bitstream_parse(bits, &loadbits_callbacks));
 
   // Check final DONE status.
   RETURN_IF_ERROR(ecp5_check_done());
 
-  uint32_t statusval;
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
 
@@ -107,6 +111,12 @@ status load_bitstream(struct bitstream* bits) {
 
   printf("ecp_isc_disable()\n");
   ecp5_isc_disable();
+  RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  ecp5_debug_status_dump(statusval);
+
+  printf("ecp_write_idle_bytes()\n");
+  ecp5_write_idle_bytes(64);
+
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
 
