@@ -13,12 +13,14 @@ status loadbits_err = OK;
 static status loadbits_reset_crc(unsigned at, uint8_t op) {
   (void)at;
   (void)op;
+  printf("ecp5_reset_crc()\n");
   return ecp5_reset_crc();
 }
 
 static status loadbits_verify_id(unsigned at, uint8_t op, uint32_t id) {
   (void)at;
   (void)op;
+  printf("ecp5_verify_id(0x%08x)\n", id);
   RETURN_IF_ERROR(ecp5_verify_id(id));
   return ecp5_check_status();
 }
@@ -26,13 +28,16 @@ static status loadbits_verify_id(unsigned at, uint8_t op, uint32_t id) {
 static status loadbits_prog_cntrl0(unsigned at, uint8_t op, uint32_t value) {
   (void)at;
   (void)op;
-  RETURN_IF_ERROR(ecp5_prog_cntrl0(value));
+  (void)value;
+  //printf("ecp5_prog_cntrl0(0x%08x)\n", value);
+  //RETURN_IF_ERROR(ecp5_prog_cntrl0(value));
   return ecp5_check_status();
 }
 
 static status loadbits_init_address(unsigned at, uint8_t op) {
   (void)at;
   (void)op;
+  printf("ecp5_init_address()\n");
   RETURN_IF_ERROR(ecp5_init_address());
   return ecp5_check_status();
 }
@@ -53,6 +58,7 @@ static status loadbits_prog_incr_rti(unsigned at, uint8_t op, uint8_t opts,
   (void)op;
   (void)opts;
   (void)frames;
+  printf("prog_incr_rti(...)\n");
   // Note: we're cheating a bit here by grabbing the actual packet header,
   // instead of parsing the frames accurately.  This does violate layering a
   // bit.
@@ -79,6 +85,7 @@ static status loadbits_prog_incr_rti(unsigned at, uint8_t op, uint8_t opts,
 static status loadbits_program_done(unsigned at, uint8_t op) {
   (void)at;
   (void)op;
+  printf("program_done()\n");
   RETURN_IF_ERROR(ecp5_program_done());
   return OK;
 }
@@ -93,9 +100,18 @@ static struct bitstream_parse_callbacks loadbits_callbacks = {
     .program_done = loadbits_program_done,
 };
 
+status load_bitstream_raw(struct bitstream* bits) {
+  return bitstream_parse(bits, &loadbits_callbacks);
+}
+
 status load_bitstream(struct bitstream* bits) {
   uint32_t statusval;
   printf("Early status:\n");
+  RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  ecp5_debug_status_dump(statusval);
+
+  printf("ecp_isc_enable()\n");
+  ecp5_isc_enable();
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
 
@@ -107,40 +123,33 @@ status load_bitstream(struct bitstream* bits) {
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
 
-  usleep(3000000);
+  // printf("<wait...>\n");
+  // usleep(3000000);
 
   printf("ecp_isc_disable()\n");
   ecp5_isc_disable();
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
+  usleep(250000);
+
+  // printf("ecp_write_idle_bytes()\n");
+  // ecp5_write_idle_bytes(64);
+  // RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  // ecp5_debug_status_dump(statusval);
+
+  // printf("ecp_set_init(false)\n");
+  // ecp5_set_init(false);
+  // ftdiutil_flush_writes("ecp5_set_init");
+
+  // printf("ecp_set_done(true)\n");
+  // ecp5_set_done(true);
+  // ftdiutil_flush_writes("ecp5_set_done");
 
   printf("ecp_write_idle_bytes()\n");
   ecp5_write_idle_bytes(64);
-
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
-
-  printf("ecp_set_init(false)\n");
-  ecp5_set_init(false);
-  ftdiutil_flush_writes("ecp5_set_init");
-
-  printf("ecp_set_done(true)\n");
-  ecp5_set_done(true);
-  ftdiutil_flush_writes("ecp5_set_done");
-
-  printf("ecp_write_idle_bytes()\n");
-  ecp5_write_idle_bytes(64);
-
-  RETURN_IF_ERROR(ecp5_read_status(&statusval));
-  ecp5_debug_status_dump(statusval);
-
-
-  RETURN_IF_ERROR(ecp5_read_status(&statusval));
-  ecp5_debug_status_dump(statusval);
-
-  // TODO figure out what to do here to trigger user mode.
-  // TODO drive INIT?
-  // TODO Wait for FTDI DONE pin to go high (max 1s)?
+  usleep(250000);
 
   return OK;
 }

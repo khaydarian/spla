@@ -5,6 +5,8 @@
 
 #include "bitstream.h"
 
+status load_bitstream_raw(struct bitstream* bits);
+
 status load_bitstream(struct bitstream* bits);
 
 #endif
