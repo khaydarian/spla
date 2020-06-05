@@ -391,6 +391,10 @@ status ecp5_isc_enable() {
   return class_c_op(ECP5_OPCODE_ISC_ENABLE, 0, "ecp5_isc_enable");
 }
 
+status ecp5_isc_enablex() {
+  return class_c_op(ECP5_OPCODE_ISC_ENABLEX, 0, "ecp5_isc_enablex");
+}
+
 status ecp5_isc_disable() {
   return class_c_op(ECP5_OPCODE_ISC_DISABLE, 0, "ecp5_isc_disable");
 }

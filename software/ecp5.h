@@ -38,6 +38,7 @@ status ecp5_prog_cntrl0(uint32_t value);
 
 status ecp5_program_done();
 status ecp5_isc_enable();
+status ecp5_isc_enablex();
 status ecp5_isc_disable();
 
 status ecp5_write_idle_bytes(int count);
