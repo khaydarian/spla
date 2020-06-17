@@ -29,6 +29,10 @@ static status program_bitstream(struct bitstream* bits) {
 
   RETURN_IF_ERROR(ecp5_release_reset());
 
+  printf("ecp_set_done(true)\n");
+  ecp5_set_done(true);
+  ftdiutil_flush_writes("ecp5_set_done");
+
   for (int i = 0; i < 40; i++) {
     printf("ecp_write_idle_bytes()\n");
     ecp5_write_idle_bytes(4);
