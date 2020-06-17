@@ -28,6 +28,17 @@ static status program_bitstream(struct bitstream* bits) {
   RETURN_IF_ERROR(load_bitstream(bits));
 
   RETURN_IF_ERROR(ecp5_release_reset());
+
+  for (int i = 0; i < 40; i++) {
+    printf("ecp_write_idle_bytes()\n");
+    ecp5_write_idle_bytes(4);
+    usleep(100000);
+  }
+
+  uint32_t statusval;
+  RETURN_IF_ERROR(ecp5_read_status(&statusval));
+  ecp5_debug_status_dump(statusval);
+
   return OK;
 }
 

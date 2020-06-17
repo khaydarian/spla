@@ -130,7 +130,6 @@ status load_bitstream(struct bitstream* bits) {
   ecp5_isc_disable();
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
-  usleep(250000);
 
   // printf("ecp_write_idle_bytes()\n");
   // ecp5_write_idle_bytes(64);
@@ -144,12 +143,6 @@ status load_bitstream(struct bitstream* bits) {
   // printf("ecp_set_done(true)\n");
   // ecp5_set_done(true);
   // ftdiutil_flush_writes("ecp5_set_done");
-
-  for (int i = 0; i < 40; i++) {
-    printf("ecp_write_idle_bytes()\n");
-    ecp5_write_idle_bytes(4);
-    usleep(10000);
-  }
 
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   ecp5_debug_status_dump(statusval);
