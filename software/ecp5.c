@@ -152,6 +152,13 @@ static status class_c_op(uint8_t opcode, uint32_t param, const char* name) {
   return OK;
 }
 
+static status class_d_op(uint8_t opcode, uint32_t param, const char* name) {
+  RETURN_IF_ERROR(class_c_op(opcode, param, name));
+  // TODO: Poll BUSY bit instead of just waiting.
+  usleep(200000);
+  return OK;
+}
+
 status ecp5_read_status(uint32_t* id) {
   return class_a_op(ECP5_OPCODE_READ_STATUS, 0, id, "ecp5_read_status");
 }
@@ -242,15 +249,19 @@ status ecp5_check_status() {
   return ecp5_error_status(statusval);
 }
 
-bool ecp5_status_done(uint32_t statusval) {
+bool ecp5_status_is_done(uint32_t statusval) {
   return (bool)(statusval & ECP5_STATUS_DONE);
+}
+
+bool ecp5_status_is_offline(uint32_t statusval) {
+  return !(bool)(statusval & ECP5_STATUS_TRANSPARENT);
 }
 
 status ecp5_check_done() {
   uint32_t statusval;
   RETURN_IF_ERROR(ecp5_read_status(&statusval));
   RETURN_IF_ERROR(ecp5_error_status(statusval));
-  if (!ecp5_status_done(statusval)) {
+  if (!ecp5_status_is_done(statusval)) {
     ecp5_debug_status_dump(statusval);
     return errorf("ecp5 DONE bit not set");
   }
@@ -388,15 +399,30 @@ status ecp5_program_done() {
 }
 
 status ecp5_isc_enable() {
-  return class_c_op(ECP5_OPCODE_ISC_ENABLE, 0, "ecp5_isc_enable");
+  RETURN_IF_ERROR(class_c_op(ECP5_OPCODE_ISC_ENABLE, 0, "ecp5_isc_enable"));
+  // Sleep for 1ms is required for some unknown reason.
+  usleep(1000);
+  return OK;
 }
 
 status ecp5_isc_enablex() {
-  return class_c_op(ECP5_OPCODE_ISC_ENABLEX, 0, "ecp5_isc_enablex");
+  RETURN_IF_ERROR(class_c_op(ECP5_OPCODE_ISC_ENABLEX, 0, "ecp5_isc_enablex"));
+  // Sleep for 1ms is required for some unknown reason.
+  usleep(1000);
+  return OK;
 }
 
 status ecp5_isc_disable() {
-  return class_c_op(ECP5_OPCODE_ISC_DISABLE, 0, "ecp5_isc_disable");
+  RETURN_IF_ERROR(class_c_op(ECP5_OPCODE_ISC_DISABLE, 0, "ecp5_isc_disable"));
+  // Sleep for 1ms is required for some unknown reason.
+  usleep(1000);
+  return OK;
+}
+
+status ecp5_erase() {
+  // Not sure what this argument is for.
+  uint32_t arg = 0x010000;
+  return class_d_op(ECP5_OPCODE_ERASE, arg, "ecp5_erase");
 }
 
 status ecp5_write_idle_bytes(int count) {
@@ -405,4 +431,39 @@ status ecp5_write_idle_bytes(int count) {
   memset(idle, 0xFF, sizeof(idle));
   mpsse_write_data(idle, count);
   return ftdiutil_flush_writes("ecp5_write_idle_bytes");
+}
+
+status ecp5_bitstream_burst(uint8_t* data, unsigned int size,
+    void (*progress_fn)(unsigned int,unsigned int)) {
+  // Scan for start mark.
+  while (size > 2 && (data[0] != 0xbd || data[1] != 0xb3)) {
+    data++;
+    size--;
+  }
+  if (size <= 2) {
+    return errorf("missing start mark 0xbdb3");
+  }
+
+  unsigned int total_size = size;
+
+  uint8_t wr[4] = {ECP5_OPCODE_BITSTREAM_BURST, 0, 0, 0};
+  mpsse_chip_select(true);
+  mpsse_write_data(wr, sizeof(wr));
+  uint8_t idle[128];
+  memset(idle, 0xff, sizeof(idle));
+  mpsse_write_data(idle, sizeof(idle));
+  RETURN_IF_ERROR(ftdiutil_flush_writes("ecp5_bitstream_burst"));
+  const unsigned int block_size = 1024;
+  progress_fn(0, total_size);
+  while (size > 0) {
+    unsigned int wrsize = (size > block_size ? block_size : size);
+    mpsse_write_data(data, wrsize);
+    RETURN_IF_ERROR(ftdiutil_flush_writes("ecp5_bitstream_burst"));
+    data += wrsize;
+    size -= wrsize;
+    progress_fn(total_size - size, total_size);
+  }
+  mpsse_chip_select(true);
+  RETURN_IF_ERROR(ftdiutil_flush_writes("ecp5_bitstream_burst"));
+  return OK;
 }

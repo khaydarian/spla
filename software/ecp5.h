@@ -23,7 +23,8 @@ status ecp5_release_reset();
 status ecp5_read_status(uint32_t* status);
 status ecp5_error_status(uint32_t status);
 status ecp5_check_status();
-bool ecp5_status_done(uint32_t status);
+bool ecp5_status_is_offline(uint32_t status);
+bool ecp5_status_is_done(uint32_t status);
 status ecp5_check_done();
 void ecp5_debug_status_dump(uint32_t status);
 
@@ -41,6 +42,11 @@ status ecp5_isc_enable();
 status ecp5_isc_enablex();
 status ecp5_isc_disable();
 
+status ecp5_erase();
+
 status ecp5_write_idle_bytes(int count);
+
+status ecp5_bitstream_burst(uint8_t* bitstream, unsigned int size,
+    void (*progress_fn)(unsigned int,unsigned int));
 
 #endif
