@@ -4,7 +4,6 @@
 #define ECP5_H
 
 #include <stdint.h>
-#include "bitstream.h"
 #include "status.h"
 
 static const uint32_t ECP5_CHIP_ID_LFE5U_45 = 0x41112043;
@@ -13,9 +12,6 @@ status ecp5_init();
 
 void ecp5_set_led3(bool active);
 void ecp5_set_program(bool active);
-void ecp5_set_init(bool active);
-void ecp5_set_done(bool active);
-void ecp5_set_hold(bool active);
 
 status ecp5_reset();
 status ecp5_release_reset();
@@ -35,11 +31,9 @@ status ecp5_program_usercode(uint32_t usercode);
 
 status ecp5_reset_crc();
 status ecp5_init_address();
-status ecp5_prog_cntrl0(uint32_t value);
 
 status ecp5_program_done();
 status ecp5_isc_enable();
-status ecp5_isc_enablex();
 status ecp5_isc_disable();
 
 status ecp5_erase();

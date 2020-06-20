@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-#include "ecp5_constants.h"
 #include "ftdiutil.h"
 #include "mpsse.h"
 
@@ -27,17 +26,19 @@
 #define JTAG_TMS 0x80
 
 status ecp5_init() {
+  const char* frequency = "6MHz";
+
   // Interface A is not used yet; tristate all pins.
   ftdiutil_set_interface(INTERFACE_A);
   RETURN_IF_ERROR(mpsse_init());
-  RETURN_IF_ERROR(mpsse_set_frequency("6MHz"));
+  RETURN_IF_ERROR(mpsse_set_frequency(frequency));
   mpsse_set_data_bits_low_dir(0xff, 0, 0);
   mpsse_set_data_bits_high_dir(0xff, 0, 0);
 
   // Set interface B appropriately.
   ftdiutil_set_interface(INTERFACE_B);
   RETURN_IF_ERROR(mpsse_init());
-  RETURN_IF_ERROR(mpsse_set_frequency("6MHz"));
+  RETURN_IF_ERROR(mpsse_set_frequency(frequency));
   mpsse_set_data_bits_low_dir(
       0xff,
       /*dir*/ SPI_CLK_BIT | SPI_MOSI_BIT | SPI_CSN_BIT | PROGRAMN_BIT,
@@ -60,19 +61,6 @@ void ecp5_set_program(bool active) {
                               active ? 0 : PROGRAMN_BIT);
 }
 
-void ecp5_set_init(bool active) {
-  mpsse_set_data_bits_low_dir(INITN_BIT, INITN_BIT, active ? 0 : INITN_BIT);
-}
-
-void ecp5_set_done(bool active) {
-  mpsse_set_data_bits_low_dir(DONE_BIT, DONE_BIT, active ? DONE_BIT : 0);
-}
-
-void ecp5_set_hold(bool active) {
-  (void)active;
-  // Oversight! This pin isn't connected, and really should be.
-}
-
 status ecp5_reset() {
   // Drive PROGRAMN high for 5ms to make sure we're in a known state.
   ecp5_set_program(false);
@@ -81,9 +69,6 @@ status ecp5_reset() {
   RETURN_IF_ERROR(ftdiutil_flush_writes("ecp5_set_program"));
   usleep(5000);
   // usleep(1000000);
-
-  // Disable HOLD (we don't need it);
-  ecp5_set_hold(false);
 
   // Drive PROGRAMN low to reset and enable programming mode.
   ecp5_set_program(true);
@@ -102,6 +87,20 @@ status ecp5_release_reset() {
   RETURN_IF_ERROR(ftdiutil_flush_writes("ecp5_release_reset"));
   return OK;
 }
+
+#define ECP5_OPCODE_NOP 0xff
+#define ECP5_OPCODE_READ_STATUS 0x3c
+#define ECP5_OPCODE_READ_ID 0xe0
+#define ECP5_OPCODE_VERIFY_ID 0xe2
+#define ECP5_OPCODE_USERCODE 0xc0
+#define ECP5_OPCODE_PROGRAM_USERCODE 0xc2
+#define ECP5_OPCODE_RESET_CRC 0x3b
+#define ECP5_OPCODE_INIT_ADDRESS 0x46
+#define ECP5_OPCODE_PROGRAM_DONE 0x5e
+#define ECP5_OPCODE_ISC_DISABLE 0x26
+#define ECP5_OPCODE_ISC_ENABLE 0xc6
+#define ECP5_OPCODE_ERASE 0x0e
+#define ECP5_OPCODE_BITSTREAM_BURST 0x7a
 
 static status class_a_op(uint8_t opcode, uint32_t param, uint32_t* val,
                          const char* name) {
@@ -390,23 +389,12 @@ status ecp5_init_address() {
   return class_c_op(ECP5_OPCODE_INIT_ADDRESS, 0, "ecp5_init_address");
 }
 
-status ecp5_prog_cntrl0(uint32_t value) {
-  return class_b_op(ECP5_OPCODE_PROG_CNTRL0, 0, value, "ecp5_prog_cntrl0");
-}
-
 status ecp5_program_done() {
   return class_c_op(ECP5_OPCODE_PROGRAM_DONE, 0, "ecp5_program_done");
 }
 
 status ecp5_isc_enable() {
   RETURN_IF_ERROR(class_c_op(ECP5_OPCODE_ISC_ENABLE, 0, "ecp5_isc_enable"));
-  // Sleep for 1ms is required for some unknown reason.
-  usleep(1000);
-  return OK;
-}
-
-status ecp5_isc_enablex() {
-  RETURN_IF_ERROR(class_c_op(ECP5_OPCODE_ISC_ENABLEX, 0, "ecp5_isc_enablex"));
   // Sleep for 1ms is required for some unknown reason.
   usleep(1000);
   return OK;
