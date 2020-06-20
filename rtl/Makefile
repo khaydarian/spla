@@ -3,16 +3,20 @@ include Makefile.toolchain
 # Omit all default pattern rules.
 .SUFFIXES:
 
+ALL += build/bringup.bit
+ALL += build/bringup_uart.bit
+
 # By default, build all bitstreams.
 .PHONY: all
-all: build/bringup.bit
+all: $(ALL)
 
 # All build artifacts are put in build/
 .PHONY: clean
 clean:
 	rm -rf build/
 
-build/bringup.json: | build/
+# Always create the build directory first.
+$(ALL): | build/
 
 build/:
 	mkdir -p $@
@@ -20,6 +24,8 @@ build/:
 # Synthesis with Yosys / NextPNR
 build/bringup.json: $(shell cat bringup.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup -json $@' $^
+build/bringup_uart.json: $(shell cat bringup_uart.vf)
+	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_uart -json $@' $^
 
 %.config: %.json
 	$(NEXTPNR) $(NEXTPNR_FLAGS) --json $< --textcfg $@ --lpf default.lpf -l $(patsubst %.config,%.log,$@)
