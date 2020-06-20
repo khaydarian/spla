@@ -4,6 +4,7 @@
 #include "ftdi.h"
 #include "ftdiutil.h"
 #include "mpsse.h"
+#include "uart.h"
 
 #include <assert.h>
 #include <stdio.h>
@@ -36,6 +37,9 @@ static int single_command(int argc, char** argv) {
       printf("Error: Unknown interface '%s'\n", argv[1]);
     }
     return 2;
+  } else if (!strcmp(command, "uart")) {
+    status_ignore(uart_init());
+    return 1;
   } else if (!strcmp(command, "bitbang")) {
     ret = ftdi_set_bitmode(ftdi, 0x00, BITMODE_BITBANG);
     if (ret) {
