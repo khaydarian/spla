@@ -7,7 +7,7 @@ module bringup(
 	output led8);
 
 wire clock;
-OSCG oscg(.OSC(clock));
+OSCG #(.DIV(26)) oscg(.OSC(clock)); // DIV 26 == ~11.9MHz
 
 localparam COUNTER_RESET_VAL = 12000000;
 localparam COUNTER_BITS = $clog2(COUNTER_RESET_VAL);
