@@ -1,8 +1,0 @@
-lib/constants.v
-bringup_blinky.v
-lib/pins.v
-lib/ftdi_fifo_dummy.v
-lib/bbus_dummy.v
-lib/vram_dummy.v
-lib/misc_default.v
-lib/analog_dummy.v
