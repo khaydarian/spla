@@ -4,11 +4,11 @@ include Makefile.toolchain
 .SUFFIXES:
 
 .PHONY: all
-all: spla
+all: splat
 
 .PHONY: clean
 clean:
-	rm -rf build/ spla
+	rm -rf build/ splat
 
 .PHONY: format
 format: $(sort $(wildcard *.[ch]))
@@ -36,7 +36,7 @@ OBJS := $(patsubst %.c,build/%.o,$(SRCS))
 OBJS += build/ftdi.o
 OBJS += build/command_table.o
 
-spla: $(OBJS)
+splat: $(OBJS)
 	$(LD) $(LDFLAGS) $^ -o $@ $(LIBUSB_LIBS) -lm
 
 build/ftdi.o: build/ftdi.c build/ftdi.h build/ftdi_i.h build/ftdi_version_i.h
