@@ -14,7 +14,7 @@ module bringup_uart(
 assign led7 = 1'b1;
 assign led8 = 1'b1;
 
-localparam PULSE_RESET = 1200000;  // 10 Hz
+localparam PULSE_RESET = 120000;  // 100 Hz
 localparam PULSE_BITS = $clog2(PULSE_RESET);
 reg [PULSE_BITS-1:0] pulse_counter;
 reg pulse;
@@ -41,7 +41,7 @@ always @(posedge clk) begin
 end
 
 uart_tx
-	#(.CLOCKS_PER_BAUD(1250)) // 9600 baud
+	#(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	utx(.clk_i(clk), .write_i(pulse), .data_i(data), .tx_o(uart_tx));
 
 assign tp7 = uart_tx;

@@ -9,13 +9,17 @@ status uart_init() {
   if (ret) {
     return ftdiutil_error("ftdi_set_bitmode(UART)", ret);
   }
-  ret = ftdi_set_baudrate(ftdi, 9600);
+  ret = ftdi_set_baudrate(ftdi, 115200);
   if (ret) {
     return ftdiutil_error("ftdi_set_baudrate", ret);
   }
   ret = ftdi_set_line_property(ftdi, BITS_8, STOP_BIT_1, NONE);
   if (ret) {
     return ftdiutil_error("ftdi_set_line_property(8N1)", ret);
+  }
+  ret = ftdi_set_latency_timer(ftdi, 1);
+  if (ret) {
+    return ftdiutil_error("ftdi_set_latency_timer()", ret);
   }
   return OK;
 }
