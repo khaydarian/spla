@@ -16,7 +16,7 @@ clean:
 	rm -rf build/
 
 # Always create the build directory first.
-$(ALL): | build/
+$(patsubst %.bit,%.json,$(ALL)): | build/
 
 build/:
 	mkdir -p $@
