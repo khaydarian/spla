@@ -10,7 +10,8 @@
 #include "ftdi.h"
 #include "ftdiutil.h"
 
-static status load_bitstream_file(const char* filename, uint8_t** data, unsigned int* size) {
+static status load_bitstream_file(const char* filename, uint8_t** data,
+                                  unsigned int* size) {
   FILE* f = fopen(filename, "r");
   if (!f) {
     return errorf("%s: %s", filename, strerror(errno));
@@ -88,7 +89,8 @@ static status program_bitstream(uint8_t* bitstream, unsigned int size) {
   return OK;
 }
 
-static status program_bitstream_with_reset(uint8_t* bitstream, unsigned int size) {
+static status program_bitstream_with_reset(uint8_t* bitstream,
+                                           unsigned int size) {
   RETURN_IF_ERROR(ecp5_init());
   RETURN_IF_ERROR(ecp5_reset());
   status err = program_bitstream(bitstream, size);

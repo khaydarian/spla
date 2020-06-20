@@ -41,6 +41,6 @@ status ecp5_erase();
 status ecp5_write_idle_bytes(int count);
 
 status ecp5_bitstream_burst(uint8_t* bitstream, unsigned int size,
-    void (*progress_fn)(unsigned int,unsigned int));
+                            void (*progress_fn)(unsigned int, unsigned int));
 
 #endif
