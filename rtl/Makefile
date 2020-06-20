@@ -25,4 +25,4 @@ build/bringup.json: $(shell cat bringup.vf)
 	$(NEXTPNR) $(NEXTPNR_FLAGS) --json $< --textcfg $@ --lpf default.lpf -l $(patsubst %.config,%.log,$@)
 
 %.bit: %.config
-	$(ECPPACK) $< --bit $@
+	$(ECPPACK) $< --compress --bit $@
