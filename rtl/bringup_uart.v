@@ -9,10 +9,7 @@ module bringup_uart(
 	output led8,
 	output tp7,
 	output tp8,
-	output tp9);
-
-assign led7 = 1'b1;
-assign led8 = 1'b1;
+	input  tp9);
 
 localparam PULSE_RESET = 120000;  // 100 Hz
 localparam PULSE_BITS = $clog2(PULSE_RESET);
@@ -42,10 +39,13 @@ end
 
 uart_tx
 	#(.CLOCKS_PER_BAUD(104)) // 115200 baud
-	utx(.clk_i(clk), .write_i(pulse), .data_i(data), .tx_o(uart_tx));
+	uart_tx0(.clk_i(clk), .write_i(pulse), .data_i(data), .tx_o(uart_tx));
 
 assign tp7 = uart_tx;
-assign tp8 = pulse;
-assign tp9 = data[0];
+
+bringup_driver bringup_driver0(.clock(clk), .pin_o(tp8));
+bringup_sensor bringup_sensor0(.clock(clk), .pin_i(tp9), .sensed_o(led7));
+
+assign led8 = 1'b1;
 
 endmodule
