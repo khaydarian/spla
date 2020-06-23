@@ -43,8 +43,8 @@ uart_tx
 
 assign tp7 = uart_tx;
 
-bringup_driver bringup_driver0(.clock(clock), .pin_o(tp8));
-bringup_sensor bringup_sensor0(.clock(clock), .pin_i(tp9), .sensed_o(led7));
+bringup_driver bringup_driver0(.clock(clock), .pin_o(tp9));
+bringup_sensor bringup_sensor0(.clock(clock), .pin_i(tp8), .sensed_o(led7));
 
 assign led8 = 1'b1;
 
