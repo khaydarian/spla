@@ -2,7 +2,7 @@
 `default_nettype none
 
 module bringup_uart(
-	input  clk,
+	input  clock,
 	output uart_tx,
 	input  uart_rx,
 	output led7,
@@ -15,7 +15,7 @@ localparam PULSE_RESET = 120000;  // 100 Hz
 localparam PULSE_BITS = $clog2(PULSE_RESET);
 reg [PULSE_BITS-1:0] pulse_counter;
 reg pulse;
-always @(posedge clk) begin
+always @(posedge clock) begin
 	if (pulse_counter == 0) begin
 		pulse_counter <= PULSE_RESET;
 		pulse <= 1;
@@ -26,7 +26,7 @@ always @(posedge clk) begin
 end
 
 reg [7:0] data;
-always @(posedge clk) begin
+always @(posedge clock) begin
 	if (data == 0)
 		data <= 65; // 'A'
 	else if (pulse == 1) begin
@@ -39,12 +39,12 @@ end
 
 uart_tx
 	#(.CLOCKS_PER_BAUD(104)) // 115200 baud
-	uart_tx0(.clk_i(clk), .write_i(pulse), .data_i(data), .tx_o(uart_tx));
+	uart_tx0(.clock_i(clock), .write_i(pulse), .data_i(data), .tx_o(uart_tx));
 
 assign tp7 = uart_tx;
 
-bringup_driver bringup_driver0(.clock(clk), .pin_o(tp8));
-bringup_sensor bringup_sensor0(.clock(clk), .pin_i(tp9), .sensed_o(led7));
+bringup_driver bringup_driver0(.clock(clock), .pin_o(tp8));
+bringup_sensor bringup_sensor0(.clock(clock), .pin_i(tp9), .sensed_o(led7));
 
 assign led8 = 1'b1;
 
