@@ -32,6 +32,9 @@ build/command_table.o: build/command_table.c command.h $(SRCS)
 build/command_table.c: command_table.py $(SRCS)
 	python $^ >$@
 
+build/pindef.h: pindef.py ../rtl/lib/pindef.v
+	python $^ >$@
+
 OBJS := $(patsubst %.c,build/%.o,$(SRCS))
 OBJS += build/ftdi.o
 OBJS += build/command_table.o
