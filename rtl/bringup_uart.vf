@@ -1,4 +1,5 @@
 bringup_uart.v
+lib/pulse.v
 lib/uart_tx.v
 lib/bringup_driver.v
 lib/bringup_sensor.v

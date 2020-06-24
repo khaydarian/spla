@@ -11,25 +11,16 @@ module bringup_uart(
 	output tp8,
 	input  tp9);
 
-localparam PULSE_RESET = 120000;  // 100 Hz
-localparam PULSE_BITS = $clog2(PULSE_RESET);
-reg [PULSE_BITS-1:0] pulse_counter;
-reg pulse;
-always @(posedge clock) begin
-	if (pulse_counter == 0) begin
-		pulse_counter <= PULSE_RESET;
-		pulse <= 1;
-	end else begin
-		pulse_counter <= pulse_counter - 1;
-		pulse <= 0;
-	end
-end
+wire char_pulse;
+
+pulse #(.CLOCKS_PER_PULSE(120000)) // 100 Hz
+	pulse0(.clock(clock), .pulse_o(char_pulse));
 
 reg [7:0] data;
 always @(posedge clock) begin
 	if (data == 0)
 		data <= 65; // 'A'
-	else if (pulse == 1) begin
+	else if (char_pulse == 1) begin
 		if (data == 90) // 'Z'
 			data <= 65;
 		else
@@ -39,7 +30,7 @@ end
 
 uart_tx
 	#(.CLOCKS_PER_BAUD(104)) // 115200 baud
-	uart_tx0(.clock_i(clock), .write_i(pulse), .data_i(data), .tx_o(uart_tx));
+	uart_tx0(.clock_i(clock), .write_i(char_pulse), .data_i(data), .tx_o(uart_tx));
 
 assign tp7 = uart_tx;
 
