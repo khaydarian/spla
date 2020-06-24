@@ -1,6 +1,7 @@
 // vi: ts=2:sw=2:sts=2:et
 
 #include <stdio.h>
+#include <string.h>
 #include "command.h"
 #include "ftdi.h"
 #include "ftdiutil.h"
@@ -11,7 +12,14 @@
 // Option: open_usb = true
 // Option: default_usb_device = board
 status ftdi_uart(int argc, char** argv) {
+  bool hex = false;
+  if (argc == 1 && !strcmp(argv[0], "--hex")) {
+    hex = true;
+    argc--;
+    argv++;
+  }
   RETURN_IF_ERROR(no_arguments(argc, argv));
+
   ftdiutil_set_interface(INTERFACE_A);
   uart_init();
 
@@ -28,7 +36,15 @@ status ftdi_uart(int argc, char** argv) {
       return ftdiutil_error("ftdi_read_data", ret);
     }
     if (ret) {
-      fwrite(buf, ret, 1, stdout);
+      if (hex) {
+        printf("[");
+        for (int i = 0; i < ret; i++) {
+          printf("%02x", buf[i]);
+        }
+        printf("]\n");
+      } else {
+        fwrite(buf, ret, 1, stdout);
+      }
       fflush(stdout);
     }
   }
