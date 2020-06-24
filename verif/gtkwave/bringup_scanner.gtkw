@@ -1,0 +1,32 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Wed Jun 24 01:56:31 2020
+[*]
+[dumpfile] "/home/khaydarian/spla/verif/build/bringup_scanner.trace.vcd"
+[dumpfile_mtime] "Wed Jun 24 01:55:49 2020"
+[dumpfile_size] 35503
+[savefile] "/home/khaydarian/spla/verif/gtkwave/bringup_scanner.gtkw"
+[timestart] 2113
+[size] 1485 818
+[pos] -1 -1
+*-7.082474 1456 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 335
+[signals_width] 166
+[sst_expanded] 1
+[sst_vpaned_height] 229
+@28
+bringup_scanner.clock
+bringup_scanner.pulse_i
+@22
+bringup_scanner.state_i[176:0]
+bringup_scanner.state_copy[184:0]
+@24
+bringup_scanner.counter[4:0]
+@28
+bringup_scanner.write_o
+@22
+bringup_scanner.data_o[7:0]
+@29
+bringup_scanner.hold_i
+[pattern_trace] 1
+[pattern_trace] 0
