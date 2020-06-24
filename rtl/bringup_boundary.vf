@@ -1,0 +1,7 @@
+lib/pindef.v
+bringup_boundary.v
+lib/bringup_driver.v
+lib/bringup_scanner.v
+lib/bringup_sensor.v
+lib/pulse.v
+lib/uart_tx.v

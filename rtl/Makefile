@@ -5,6 +5,7 @@ include Makefile.toolchain
 
 ALL += build/bringup.bit
 ALL += build/bringup_uart.bit
+ALL += build/bringup_boundary.bit
 
 # By default, build all bitstreams.
 .PHONY: all
@@ -26,6 +27,8 @@ build/bringup.json: $(shell cat bringup.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup -json $@' $^
 build/bringup_uart.json: $(shell cat bringup_uart.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_uart -json $@' $^
+build/bringup_boundary.json: $(shell cat bringup_boundary.vf)
+	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_boundary -json $@' $^
 
 %.config: %.json
 	$(NEXTPNR) $(NEXTPNR_FLAGS) --json $< --textcfg $@ --lpf default.lpf -l $(patsubst %.config,%.log,$@)
