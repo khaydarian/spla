@@ -46,6 +46,28 @@ static int bits_set(uint8_t x) {
   return nibblebits[x & 0xf] + nibblebits[x >> 4];
 }
 
+static const char* GOODNESS_FILE = "./build/bringup_boundary.goodness.bin";
+
+void frame_load_goodness(struct frame* f) {
+  FILE* file = fopen(GOODNESS_FILE, "r");
+  if (!file) {
+    // Ok if there's no goodness file yet.
+    return;
+  }
+  fread(f->good, sizeof(f->good), 1, file);
+  fclose(file);
+}
+
+void frame_save_goodness(struct frame* f) {
+  FILE* file = fopen(GOODNESS_FILE, "w");
+  if (!file) {
+    // Can't save goodness? Er, ok.
+    return;
+  }
+  fwrite(f->good, sizeof(f->good), 1, file);
+  fclose(file);
+}
+
 void frame_check_goodness(struct frame* f) {
   int n = 0;
   for (unsigned i = 1; i < sizeof(f->current); i++) {
@@ -56,6 +78,7 @@ void frame_check_goodness(struct frame* f) {
     for (unsigned i = 1; i < sizeof(f->current); i++) {
       f->good[i] |= f->current[i];
     }
+    frame_save_goodness(f);
   }
   if (n > 1) {
     f->current_color = RED;
@@ -222,6 +245,8 @@ status bringup_boundary(int argc, char** argv) {
 
   struct frame f;
   memset(&f, 0, sizeof(f));
+
+  frame_load_goodness(&f);
 
   printf(ORIGIN CLEARSCREEN);
   draw_frame(&f);
