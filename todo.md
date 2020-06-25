@@ -11,16 +11,12 @@
 * rtl: Design stream merging protocol.
 * rtl: Build stream merging protocol module.
 * rtl: Build opcode processor.
-* rtl: Build bringup boundary-scan-like image?
-  * Possibly get a Lattice tool instead.
 * software: Get rid of global-constant mess.
 * software: Fix device enumeration logic, and `ftdi_list_devices`.
-* software: Add `ftdi_test_flash` command to test flashing LEDs.
 * software: Fixup `ftdi_test_raw` to handle mpsse modes better (labelled pins, individual changes, etc).
 * software: Add pin numbers/names to `bringup_ftdi`.
 * software: Fix MPSSE hi/lo flushing to be less touchy.
 * software: Integrate or invent a decent unit testing framework.
-* inventory: Write txtdb lint tool.
 * inventory: Write summary tool.
 * inventory: Write inventory-to-BoM comparison tool.
 * inventory: Add borrowed scope.
@@ -53,6 +49,7 @@
 * Consolidate BoM part selections.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
 * Drive all LEDs with high-impedence input things (transistors) to avoid biasing the signals I'm trying to sample.
+* Replace `TP7` / `TP8` / `TP9` pads with pins, which are larger but easier to work with.
 
 ## Deferred
 
