@@ -7,6 +7,9 @@ class TxtdbObject(object):
         self.field_loc = {}
         self.loc = None
 
+    def get(self, key):
+        return self.fields[key]
+
     def set(self, key, value, filename, lineno):
         if key in self.fields:
             raise ValueError("%s:%d: Duplicate key '%s'" % (filename, lineno, key))
@@ -19,7 +22,9 @@ class Txtdb(object):
     def __init__(self):
         self.objects = []
 
-    def parse_file(self, filename, f):
+    def parse_file(self, filename, f=None):
+        if f is None:
+            f = open(filename)
         last_obj = None
         for lineno, line in enumerate(f):
             line = line.strip()

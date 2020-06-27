@@ -6,7 +6,7 @@ import txtdb, schema
 def lint_files(files):
     db = txtdb.Txtdb()
     for f in files:
-        db.parse_file(f, open(f))
+        db.parse_file(f)
     errors = []
     validate_fields(db, errors)
     validate_packages(db, errors)
