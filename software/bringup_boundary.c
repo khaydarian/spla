@@ -180,11 +180,6 @@ void draw_frame(struct frame* f) {
   printf("%sppu2_tst15%s ", frame_bit(f, PINDEF_PPU2_TST15), RESET);
   printf("%slvl_tst_dir%s ", frame_bit(f, PINDEF_LVL_TST_DIR), RESET);
   printf("%slvl_tst_oe%s ", frame_bit(f, PINDEF_LVL_TST_OE), RESET);
-  printf("vdb[");
-  for (int i = 0; i < 8; i++) {
-    printf("%s%d%s", frame_bit(f, PINDEF_VDB_0 + i), i, RESET);
-  }
-  printf("]\n");
   printf("ppu2_tst[%s0%s", frame_bit(f, PINDEF_PPU2_TST_0), RESET);
   for (int i = 1; i < 15; i++) {
     printf(" %s%d%s", frame_bit(f, PINDEF_PPU2_TST_0 + i), i, RESET);
