@@ -82,6 +82,45 @@ void print_bits(unsigned char bits_lo, unsigned char bits_hi,
   *errors = err;
 }
 
+const char* BITNAMES[] = {
+  // ADBUS
+  "FIFO_D0",
+  "FIFO_D1",
+  "FIFO_D2",
+  "FIFO_D3",
+  "FIFO_D4",
+  "FIFO_D5",
+  "FIFO_D6",
+  "FIFO_D7",
+  // ACBUS
+  "FIFO_RXF_N",
+  "FIFO_TXE_N",
+  "FIFO_RD_N",
+  "FIFO_WR_N",
+  "(NC)",
+  "FIFO_CLKOUT",
+  "FIFO_OE_N",
+  "FIFO_SIWU",
+  // BDBUS
+  "SPI_CLK",
+  "SPI_MOSI",
+  "SPI_MISO",
+  "SPI_CS_N",
+  "DONE",
+  "INIT_N",
+  "PROGRAM_N",
+  "(NC)",
+  // BCBUS
+  "LED3",
+  "(NC)",
+  "(NC)",
+  "(NC)",
+  "JTAG_TCK",
+  "JTAG_TDI",
+  "JTAG_TDO",
+  "JTAG_TMS",
+};
+
 // [Command]
 // Description: Bringup check for bridged FTDI GPIO pins.
 // Option: open_usb = true
@@ -117,6 +156,7 @@ status bringup_ftdi(int argc, char** argv) {
     print_bits(rd_lo.a_hi, rd_hi.a_hi, dir.a_hi, &errors);
     printf(" ");
     print_bits(rd_lo.a_lo, rd_hi.a_lo, dir.a_lo, &errors);
+    printf(" %s", BITNAMES[bit]);
     printf("\n");
   }
   printf("         b_hi     b_lo     a_hi     a_lo\n");
