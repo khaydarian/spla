@@ -1,15 +1,3 @@
-Name: FPGA, Lattice ECP5
-Category: Board Parts
-From Package Key: Digikey-308771862
-Digikey Product Id: 220-2198-ND
-Digikey Description: IC FPGA 197 I/O 256CABGA
-Manufacturer: Lattice
-Manufacturer Product Id: LFE5U-45F-6BG256C
-Unit Cost: $15.86000
-Quantity: 2
-Cost: $31.72
-Remaining: 2
-
 Name: Level Shifter, 74LVC8T245
 Category: Board Parts
 From Package Key: Digikey-308771862
@@ -44,7 +32,7 @@ Manufacturer Product Id: TLV73311PDBVR
 Unit Cost: $0.35000
 Quantity: 5
 Cost: $1.75
-Remaining: 4
+Remaining: 3
 
 Name: Power, LDO Regulator, TLV73325P
 Category: Board Parts
@@ -56,7 +44,7 @@ Manufacturer Product Id: TLV73325PDBVR
 Unit Cost: $0.35000
 Quantity: 5
 Cost: $1.75
-Remaining: 4
+Remaining: 3
 
 Name: Analog, Opamp, LMH6611
 Category: Board Parts
@@ -80,31 +68,7 @@ Manufacturer Product Id: ST1S10PHR
 Unit Cost: $1.76000
 Quantity: 5
 Cost: $8.80
-Remaining: 3
-
-Name: Passive, Inductor, IHLP2020CZ
-Category: Board Parts
-From Package Key: Digikey-308771862
-Digikey Product Id: 541-1237-1-ND
-Digikey Description: FIXED IND 3.3UH 5.5A 40.4MOHM
-Manufacturer: Vishay Dale
-Manufacturer Product Id: IHLP2020CZER3R3M11
-Unit Cost: $2.39000
-Quantity: 4
-Cost: $9.56
-Remaining: 2
-
-Name: USB Interface, FTDI FT2232H
-Category: Board Parts
-From Package Key: Digikey-308771862
-Digikey Product Id: 768-1024-1-ND
-Digikey Description: IC USB HS DUAL UART/FIFO 64-LQFP
-Manufacturer: FTDI
-Manufacturer Product Id: FT2232HL-REEL
-Unit Cost: $6.71000
-Quantity: 2
-Cost: $13.42
-Remaining: 0
+Remaining: 1
 
 Name: USB Interface Related, FTDI EEPROM, 93LC66B
 Category: Board Parts
@@ -116,7 +80,7 @@ Manufacturer Product Id: 93LC66B/SN
 Unit Cost: $0.26000
 Quantity: 10
 Cost: $2.60
-Remaining: 9
+Remaining: 8
 
 Name: Power, LDO Regulator, TLV73333P
 Category: Board Parts
@@ -139,30 +103,6 @@ Manufacturer: ALITOVE
 Cost: $23.98
 Remaining: 2
 
-Name: Hex Standoff, Female-Female
-Category: Board Parts
-From Package Key: Digikey-309025554
-Digikey Product Id: 732-12808-ND
-Digikey Description: ALUMINIUM SPACER STUD METRIC THR
-Manufacturer: Wuerth Electronik
-Manufacturer Product Id: 970350366
-Unit Cost: $1.36000
-Quantity: 8
-Cost: $10.88
-Remaining: 0
-
-Name: Hex Standoff, Female-Male
-Category: Board Parts
-From Package Key: Digikey-309025554
-Digikey Product Id: 732-12823-ND
-Digikey Description: ALUMINIUM SPACER STUD METRIC THR
-Manufacturer: Wuerth Electronik
-Manufacturer Product Id: 971350366
-Unit Cost: $1.76000
-Quantity: 8
-Cost: $14.08
-Remaining: 0
-
 Name: Green LED
 Category: Board Parts
 From Package Key: Digikey-309025554
@@ -173,43 +113,7 @@ Manufacturer Product Id: 150080VS75000
 Unit Cost: $0.18000
 Quantity: 20
 Cost: $3.60
-Remaining: 12
-
-Name: HCMOS Oscillator, 12.0000 MHz
-Category: Board Parts
-From Package Key: Digikey-309025554
-Digikey Product Id: 631-1068-1-ND
-Digikey Description: XTAL OSC TCXO 12.0000MHZ HCMOS
-Manufacturer: Fox Electronics
-Manufacturer Product Id: FT5HNBPK12.0-T1
-Unit Cost: $2.36000
-Quantity: 2
-Cost: $4.72
-Remaining: 1
-
-Name: USB Cable
-Category: Board Parts
-From Package Key: Digikey-309025554
-Digikey Product Id: AE11229-ND
-Digikey Description: CABLE USB-A TO MICRO USB-B 0.3M
-Manufacturer: Assmann WSW Components
-Manufacturer Product Id: AK67421-0.3-VM
-Unit Cost: $2.55000
-Quantity: 2
-Cost: $5.10
-Remaining: 0
-
-Name: Power Barrel Jack
-Category: Board Parts
-From Package Key: Digikey-309025554
-Digikey Product Id: CP-036AHPJCT-ND
-Digikey Description: CONN PWR JACK 2X5.5MM SOLDER
-Manufacturer: CUI Devices
-Manufacturer Product Id: PJ-036AH-SMT-TR
-Unit Cost: $1.39000
-Quantity: 2
-Cost: $2.78
-Remaining: 1
+Remaining: 4
 
 Name: Breakaway 0.1" Headers, Single line
 Category: Board Parts
@@ -221,7 +125,7 @@ Manufacturer Product Id: PRPC040SAAN-RC
 Unit Cost: $0.66000
 Quantity: 2 (40-pos)
 Cost: $1.32
-Remaining: 1 (40-pos), 1 (22-pos), 1 (4-pos), 1 (4-pos) , 1 (3-pos)
+Remaining: 1 (40-pos), 1 (22-pos), 1 (4-pos), 2 (3-pos)
 
 Name: Breakaway 0.1" Headers, Double line
 Category: Board Parts
@@ -233,7 +137,7 @@ Manufacturer Product Id: PRPC040DAAN-RC
 Unit Cost: $1.32000
 Quantity: 2 (80-pos)
 Cost: $2.64
-Remaining: 1 (80-pos), 1 (30-pos), 1 (8-pos), 1 (6-pos), 2 (4-pos)
+Remaining: 1 (80-pos), 1 (6-pos), 1 (4-pos), 1 (3-pos), 2 (2-pos)
 
 Name: Jumper
 Category: Board Parts
@@ -245,19 +149,7 @@ Manufacturer Product Id: QPC02SXGN-RC
 Unit Cost: $0.03780
 Quantity: 50
 Cost: $1.89
-Remaining: lots
-
-Name: USB 2.0 Micro-B Connector
-Category: Board Parts
-From Package Key: Digikey-309025554
-Digikey Product Id: 732-5960-1-ND
-Digikey Description: CONN RCPT USB2.0 MICRO B SMD R/A
-Manufacturer: Wuerth Electronik
-Manufacturer Product Id: 629105150521
-Unit Cost: $2.07000
-Quantity: 2
-Cost: $4.14
-Remaining: 1
+Remaining: 39
 
 Name: Capacitor, 22uF, 0805
 Category: Board Parts
@@ -269,7 +161,7 @@ Manufacturer Product Id: GRM21BR61A226ME51L
 Unit Cost: $0.24400
 Quantity: 10
 Cost: $2.44
-Remaining: 8
+Remaining: 6
 
 Name: Capacitor, 10uF, 0805
 Category: Board Parts
@@ -281,7 +173,7 @@ Manufacturer Product Id: GRM21BR71A106KA73L
 Unit Cost: $0.17500
 Quantity: 10
 Cost: $1.75
-Remaining: 10
+Remaining: 8
 
 Name: Capactior, 1uF, 0402
 Category: Board Parts
@@ -290,10 +182,11 @@ Digikey Product Id: 490-12699-1-ND
 Digikey Description: CAP CER 1UF 10V X6S 0402
 Manufacturer: Murata Electronics
 Manufacturer Product Id: GRM155C81A105KA12D
+Note: Mis-ordered, this part should have been 0603
 Unit Cost: $0.06400
 Quantity: 10
 Cost: $0.64
-Remaining: 10
+Remaining: 8
 
 Name: Capactior, 0.1uF, 0603
 Category: Board Parts
@@ -305,7 +198,7 @@ Manufacturer Product Id: GCJ188R71E104KA12D
 Unit Cost: $0.06740
 Quantity: 100
 Cost: $6.74
-Remaining: lots
+Remaining: 76
 
 Name: Capacitor, 56pF, 0603
 Category: Board Parts
@@ -331,18 +224,6 @@ Quantity: 10
 Cost: $1.10
 Remaining: 10
 
-Name: Capacitor, 4.7uF, 0603
-Category: Board Parts
-From Package Key: Digikey-309025554
-Digikey Product Id: 490-7203-1-ND
-Digikey Description: CAP CER 4.7UF 25V X5R 0603
-Manufacturer: Murata Electronics
-Manufacturer Product Id: GRM188R61E475KE11D
-Unit Cost: $0.28400
-Quantity: 10
-Cost: $2.84
-Remaining: 5
-
 Name: Capacitor, 4.7nF, 0805
 Category: Board Parts
 From Package Key: Digikey-309025554
@@ -353,7 +234,7 @@ Manufacturer Product Id: GRM2165C1H472GA01D
 Unit Cost: $0.26900
 Quantity: 10
 Cost: $2.69
-Remaining: 8
+Remaining: 6
 
 Name: Resistor, 4.7k ohm 1%, 0402
 Category: Board Parts
@@ -365,7 +246,7 @@ Manufacturer Product Id: RMCF0402FT4K70
 Unit Cost: $0.01400
 Quantity: 10
 Cost: $0.14
-Remaining: 10
+Remaining: 8
 
 Name: Resistor, 1k ohm 1%, 0603
 Category: Board Parts
@@ -377,7 +258,7 @@ Manufacturer Product Id: RMCF0603FT1K00
 Unit Cost: $0.01600
 Quantity: 10
 Cost: $0.16
-Remaining: 8
+Remaining: 6
 
 Name: Resistor, 1.65k ohm 1%, 0603
 Category: Board Parts
@@ -413,7 +294,7 @@ Manufacturer Product Id: RMCF0603FT3K09
 Unit Cost: $0.01600
 Quantity: 10
 Cost: $0.16
-Remaining: 9
+Remaining: 8
 
 Name: Resistor, 3.48k ohm 1%, 0603
 Category: Board Parts
@@ -437,7 +318,7 @@ Manufacturer Product Id: RMCF0603FT5K23
 Unit Cost: $0.01600
 Quantity: 10
 Cost: $0.16
-Remaining: 9
+Remaining: 8
 
 Name: Resistor, 649 ohm 1%, 0603
 Category: Board Parts
@@ -473,7 +354,7 @@ Manufacturer Product Id: RMCF0603JT12K0
 Unit Cost: $0.01400
 Quantity: 10
 Cost: $0.14
-Remaining: 9
+Remaining: 8
 
 Name: Resistor, 1k ohm 5%, 0603
 Category: Board Parts
@@ -485,7 +366,7 @@ Manufacturer Product Id: RMCF0603JT1K00
 Unit Cost: $0.01400
 Quantity: 10
 Cost: $0.14
-Remaining: 9
+Remaining: 8
 
 Name: Resistor, 2.2k ohm 5%, 0603
 Category: Board Parts
@@ -497,7 +378,7 @@ Manufacturer Product Id: RMCF0603JT2K20
 Unit Cost: $0.01400
 Quantity: 10
 Cost: $0.14
-Remaining: 9
+Remaining: 8
 
 Name: Resistor 33k ohm 5%, 0603
 Category: Board Parts
@@ -521,7 +402,7 @@ Manufacturer Product Id: RMCF0603JT4K70
 Unit Cost: $0.01400
 Quantity: 10
 Cost: $0.14
-Remaining: 6
+Remaining: 2
 
 Name: Resistor, 750 ohm 5%, 0603
 Category: Board Parts
@@ -545,7 +426,7 @@ Manufacturer Product Id: RK73Z1JTTD
 Unit Cost: $0.00580
 Quantity: 100
 Cost: $0.58
-Remaining: lots
+Remaining: 89
 
 Name: Capacitor, 10uF, 0603
 Category: Board Parts
@@ -557,7 +438,7 @@ Manufacturer Product Id: GRM188R60J106KE47D
 Unit Cost: $0.06590
 Quantity: 100
 Cost: $6.59
-Remaining: lots
+Remaining: 98
 
 Name: Capacitor, 0.01uF, 0402
 Category: Board Parts
@@ -569,7 +450,7 @@ Manufacturer Product Id: GRM155R71H103KA88J
 Unit Cost: $0.01860
 Quantity: 100
 Cost: $1.86
-Remaining: 100
+Remaining: 70
 
 Name: Resistor, 10k ohm 5%, 0603
 Category: Board Parts
@@ -581,7 +462,7 @@ Manufacturer Product Id: RMCF0603JT10K0
 Unit Cost: $0.00580
 Quantity: 100
 Cost: $0.58
-Remaining: lots
+Remaining: 91
 
 Name: Resistor, 330 ohm 5%, 0603
 Category: Board Parts
@@ -593,7 +474,7 @@ Manufacturer Product Id: RMCF0603JT330R
 Unit Cost: $0.00580
 Quantity: 100
 Cost: $0.58
-Remaining: lots
+Remaining: 86
 
 Name: Boards r009
 Category: Board Parts
@@ -654,7 +535,7 @@ Manufacturer Product Id: LFE5U-45F-6BG256C
 Unit Cost: $15.86000
 Quantity: 2
 Cost: $31.72
-Remaining: 2
+Remaining: 1
 
 Name: Passive, Inductor, IHLP2020CZ
 Category: Board Parts
@@ -702,7 +583,7 @@ Manufacturer Product Id: FT2232HL-REEL
 Unit Cost: $6.71000
 Quantity: 5
 Cost: $33.55
-Remaining: 5
+Remaining: 3
 
 Name: Power Barrel Jack
 Category: Board Parts
