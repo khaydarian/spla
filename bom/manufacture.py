@@ -43,8 +43,9 @@ STAGES = [
         J7 D1 D2 L1 L2 R96 C92 C99 C94 R91 U8 C91 R98 C93 R97 R92 R86 C82 C89
         C84 R81 U7 C81 R88 C83 R87 R82 C42 U14 R34 C41 U9 R33"""),
     Stage("FTDI-Front", "U2 U3 C7 D3 D4 D5 D6 R12 R16 R8 R10 R9 R28"),
+    Stage("FPGA-Front", "D7 D8 R26 R27"),
     # Skip R1 C1
-    Stage("FTDI-Back", "R13 R14 R2 R3 C16 R4 R5 R6 R7 C38 C4 C6 C3 C5 R31 X1 C2"),
+    Stage("FTDI-Back", "R13 R14 R2 R3 C16 R4 R5 R6 R7 C38 C4 C6 C3 C5 R31 X1 C2 C18 C43"),
     Stage("FGPA-Back", "C31 C25 C13 R15 C30 C32 C37 C19 C24 C21 C35 C20 C15 C27 C33 C34 C23 C17"),
     Stage("PinHeaders", "J12 J4 J2"),
     #Stage("LevelShifters", ...),
