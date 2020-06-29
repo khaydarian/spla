@@ -26,7 +26,7 @@ struct frame {
   const char* error;
 };
 
-const char* frame_bit(struct frame* f, uint8_t bit) {
+static const char* frame_bit(struct frame* f, uint8_t bit) {
   bit -= PINDEFMIN;
   int byte = bit / 8 + 1;
   int mask = 1 << (bit % 8);
@@ -48,7 +48,7 @@ static int bits_set(uint8_t x) {
 
 static const char* GOODNESS_FILE = "./build/bringup_boundary.goodness.bin";
 
-void frame_load_goodness(struct frame* f) {
+static void frame_load_goodness(struct frame* f) {
   FILE* file = fopen(GOODNESS_FILE, "r");
   if (!file) {
     // Ok if there's no goodness file yet.
@@ -58,7 +58,7 @@ void frame_load_goodness(struct frame* f) {
   fclose(file);
 }
 
-void frame_save_goodness(struct frame* f) {
+static void frame_save_goodness(struct frame* f) {
   FILE* file = fopen(GOODNESS_FILE, "w");
   if (!file) {
     // Can't save goodness? Er, ok.
@@ -68,7 +68,7 @@ void frame_save_goodness(struct frame* f) {
   fclose(file);
 }
 
-void frame_check_goodness(struct frame* f) {
+static void frame_check_goodness(struct frame* f) {
   int n = 0;
   for (unsigned i = 1; i < sizeof(f->current); i++) {
     n += bits_set(f->current[i]);
@@ -85,7 +85,7 @@ void frame_check_goodness(struct frame* f) {
   }
 }
 
-void draw_frame(struct frame* f) {
+static void draw_frame(struct frame* f) {
   printf(ORIGIN "[FPGA Bringup - Boundary Scan Tool]" RESET "\n");
   printf("Frame: %d\n", f->frameno);
   if (f->error) {
@@ -101,6 +101,7 @@ void draw_frame(struct frame* f) {
   printf("%sclk_12mhz%s ", frame_bit(f, PINDEF_CLK_12MHZ), RESET);
   printf("%sled7%s ", frame_bit(f, PINDEF_LED7), RESET);
   printf("%sled8%s\n", frame_bit(f, PINDEF_LED8), RESET);
+  /*
   printf("fifo: d[");
   for (int i = 0; i < 8; i++) {
     printf("%s%d%s", frame_bit(f, PINDEF_FIFO_D_0 + i), i, RESET);
@@ -113,6 +114,7 @@ void draw_frame(struct frame* f) {
   printf("%ssiwu%s ", frame_bit(f, PINDEF_FIFO_SIWU), RESET);
   printf("%sclkout%s ", frame_bit(f, PINDEF_FIFO_CLKOUT), RESET);
   printf("%soe_n%s\n", frame_bit(f, PINDEF_FIFO_OE_N), RESET);
+  */
   printf("%susb_pwren_n%s ", frame_bit(f, PINDEF_USB_PWREN_N), RESET);
   printf("%susb_suspend_n%s ", frame_bit(f, PINDEF_USB_SUSPEND_N), RESET);
   printf("%sxin%s\n", frame_bit(f, PINDEF_XIN), RESET);

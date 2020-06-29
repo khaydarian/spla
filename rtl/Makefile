@@ -5,6 +5,7 @@ include Makefile.toolchain
 
 ALL += build/bringup.bit
 ALL += build/bringup_uart.bit
+ALL += build/bringup_fifo.bit
 ALL += build/bringup_boundary.bit
 
 # By default, build all bitstreams.
@@ -27,6 +28,8 @@ build/bringup.json: $(shell cat bringup.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup -json $@' $^
 build/bringup_uart.json: $(shell cat bringup_uart.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_uart -json $@' $^
+build/bringup_fifo.json: $(shell cat bringup_fifo.vf)
+	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_fifo -json $@' $^
 build/bringup_boundary.json: $(shell cat bringup_boundary.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_boundary -json $@' $^
 

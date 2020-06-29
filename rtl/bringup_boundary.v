@@ -11,23 +11,10 @@ module bringup_boundary(
 	// UART output
 	output uart_tx,
 
-	// All pins, in standard order
-	input  led7,
-	input  led8,
-	input  fifo_d_0,
-	input  fifo_d_2,
-	input  fifo_d_3,
-	input  fifo_d_4,
-	input  fifo_d_5,
-	input  fifo_d_6,
-	input  fifo_d_7,
-	input  fifo_rxf_n,
-	input  fifo_txe_n,
-	input  fifo_rd_n,
-	input  fifo_wr_n,
-	input  fifo_siwu,
-	input  fifo_clkout,
-	input  fifo_oe_n,
+	// All pins, in standard order, omitting FIFO pins (which collide with
+	// RS232 UART).
+	output led7,
+	output led8,
 	input  usb_pwren_n,
 	input  usb_suspend_n,
 	input  xin,
@@ -98,21 +85,21 @@ wire [PINDEFMAX:PINDEFMIN] sensor_state;
 assign sensor_state[PINDEF_CLK_12MHZ] = 0; // clock, used above.
 bringup_sensor sensor_led7(.clock(clock), .pin_i(led7), .sensed_o(sensor_state[PINDEF_LED7]));
 bringup_sensor sensor_led8(.clock(clock), .pin_i(led8), .sensed_o(sensor_state[PINDEF_LED8]));
-bringup_sensor sensor_fifo_d_0(.clock(clock), .pin_i(fifo_d_0), .sensed_o(sensor_state[PINDEF_FIFO_D_0]));
-assign sensor_state[PINDEF_FIFO_D_1] = 0; // uart_tx, used above.
-bringup_sensor sensor_fifo_d_2(.clock(clock), .pin_i(fifo_d_2), .sensed_o(sensor_state[PINDEF_FIFO_D_2]));
-bringup_sensor sensor_fifo_d_3(.clock(clock), .pin_i(fifo_d_3), .sensed_o(sensor_state[PINDEF_FIFO_D_3]));
-bringup_sensor sensor_fifo_d_4(.clock(clock), .pin_i(fifo_d_4), .sensed_o(sensor_state[PINDEF_FIFO_D_4]));
-bringup_sensor sensor_fifo_d_5(.clock(clock), .pin_i(fifo_d_5), .sensed_o(sensor_state[PINDEF_FIFO_D_5]));
-bringup_sensor sensor_fifo_d_6(.clock(clock), .pin_i(fifo_d_6), .sensed_o(sensor_state[PINDEF_FIFO_D_6]));
-bringup_sensor sensor_fifo_d_7(.clock(clock), .pin_i(fifo_d_7), .sensed_o(sensor_state[PINDEF_FIFO_D_7]));
-bringup_sensor sensor_fifo_rxf_n(.clock(clock), .pin_i(fifo_rxf_n), .sensed_o(sensor_state[PINDEF_FIFO_RXF_N]));
-bringup_sensor sensor_fifo_txe_n(.clock(clock), .pin_i(fifo_txe_n), .sensed_o(sensor_state[PINDEF_FIFO_TXE_N]));
-bringup_sensor sensor_fifo_rd_n(.clock(clock), .pin_i(fifo_rd_n), .sensed_o(sensor_state[PINDEF_FIFO_RD_N]));
-bringup_sensor sensor_fifo_wr_n(.clock(clock), .pin_i(fifo_wr_n), .sensed_o(sensor_state[PINDEF_FIFO_WR_N]));
-bringup_sensor sensor_fifo_siwu(.clock(clock), .pin_i(fifo_siwu), .sensed_o(sensor_state[PINDEF_FIFO_SIWU]));
-bringup_sensor sensor_fifo_clkout(.clock(clock), .pin_i(fifo_clkout), .sensed_o(sensor_state[PINDEF_FIFO_CLKOUT]));
-bringup_sensor sensor_fifo_oe_n(.clock(clock), .pin_i(fifo_oe_n), .sensed_o(sensor_state[PINDEF_FIFO_OE_N]));
+assign sensor_state[PINDEF_FIFO_D_0] = 0; // FIFO conflicts with RS232 mode.
+assign sensor_state[PINDEF_FIFO_D_1] = 0;
+assign sensor_state[PINDEF_FIFO_D_2] = 0;
+assign sensor_state[PINDEF_FIFO_D_3] = 0;
+assign sensor_state[PINDEF_FIFO_D_4] = 0;
+assign sensor_state[PINDEF_FIFO_D_5] = 0;
+assign sensor_state[PINDEF_FIFO_D_6] = 0;
+assign sensor_state[PINDEF_FIFO_D_7] = 0;
+assign sensor_state[PINDEF_FIFO_RXF_N] = 0;
+assign sensor_state[PINDEF_FIFO_TXE_N] = 0;
+assign sensor_state[PINDEF_FIFO_RD_N] = 0;
+assign sensor_state[PINDEF_FIFO_WR_N] = 0;
+assign sensor_state[PINDEF_FIFO_SIWU] = 0;
+assign sensor_state[PINDEF_FIFO_CLKOUT] = 0;
+assign sensor_state[PINDEF_FIFO_OE_N] = 0;
 bringup_sensor sensor_usb_pwren_n(.clock(clock), .pin_i(usb_pwren_n), .sensed_o(sensor_state[PINDEF_USB_PWREN_N]));
 bringup_sensor sensor_usb_suspend_n(.clock(clock), .pin_i(usb_suspend_n), .sensed_o(sensor_state[PINDEF_USB_SUSPEND_N]));
 bringup_sensor sensor_xin(.clock(clock), .pin_i(xin), .sensed_o(sensor_state[PINDEF_XIN]));
