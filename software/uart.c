@@ -1,8 +1,8 @@
 // vi: ts=2:sw=2:sts=2:et
 
+#include "uart.h"
 #include "ftdi.h"
 #include "ftdiutil.h"
-#include "uart.h"
 
 status uart_init() {
   int ret = ftdi_set_bitmode(ftdi, 0, BITMODE_RESET);
