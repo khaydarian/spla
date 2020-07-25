@@ -76,6 +76,8 @@ status bringup_fifo(int argc, char** argv) {
   unsigned char last_low, last_high;
   unsigned char low, high;
 
+  int i = 0;
+
   while (true) {
     mpsse_get_data_bits_low(&low);
     mpsse_get_data_bits_high(&high);
@@ -88,8 +90,17 @@ status bringup_fifo(int argc, char** argv) {
       print_bits(low, 0xff);
 
       uint16_t pattern = (high << 8) | low;
+      printf(" = %s%s" RESET,
+          pattern_good(pattern) ? GREEN : RED,
+          pattern_good(pattern) ? "ok" : "no");
+      if (i++ == 100) {
+        memset(patterns_found, 0, sizeof(patterns_found));
+        patterns_good = 0;
+        patterns_bad = 0;
+        i = 0;
+      }
       found_pattern(pattern);
-      printf(" good %2d / %2d, bad %d ", patterns_good, PASS_GOOD_PATTERNS,
+      printf(" : good %2d / %2d, bad %d ", patterns_good, PASS_GOOD_PATTERNS,
              patterns_bad);
       if (patterns_bad) {
         printf(RED "FAIL" RESET);
