@@ -117,3 +117,15 @@ Unit Cost: $2.55000
 Quantity: 2
 Cost: $5.10
 Remaining: 0
+
+Name: FPGA, Lattice ECP5
+Category: Board Parts
+From Package Key: Digikey-310293080
+Digikey Product Id: 220-2198-ND
+Digikey Description: IC FPGA 197 I/O 256CABGA
+Manufacturer: Lattice
+Manufacturer Product Id: LFE5U-45F-6BG256C
+Unit Cost: $15.86000
+Quantity: 2
+Cost: $31.72
+Remaining: 0
