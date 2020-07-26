@@ -99,7 +99,7 @@ static void draw_frame(struct frame* f) {
   }
   printf("]\n");
   // clk_12mhz has to work by this point.
-  //printf("%sclk_12mhz%s ", frame_bit(f, PINDEF_CLK_12MHZ), RESET);
+  // printf("%sclk_12mhz%s ", frame_bit(f, PINDEF_CLK_12MHZ), RESET);
   printf("%sled7%s ", frame_bit(f, PINDEF_LED7), RESET);
   printf("%sled8%s\n", frame_bit(f, PINDEF_LED8), RESET);
   // fifo pins already tested by bringup_fifo.
@@ -205,7 +205,7 @@ static void draw_frame(struct frame* f) {
   printf("%sextra1%s ", frame_bit(f, PINDEF_EXTRA1), RESET);
   printf("%sextra2%s ", frame_bit(f, PINDEF_EXTRA2), RESET);
   // Extra3 is the driving signal.
-  //printf("%sextra3%s ", frame_bit(f, PINDEF_EXTRA3), RESET);
+  // printf("%sextra3%s ", frame_bit(f, PINDEF_EXTRA3), RESET);
   printf("%sbodge1%s ", frame_bit(f, PINDEF_BODGE1), RESET);
   printf("%sbodge2%s ", frame_bit(f, PINDEF_BODGE2), RESET);
   printf("%sbodge3%s\n", frame_bit(f, PINDEF_BODGE3), RESET);

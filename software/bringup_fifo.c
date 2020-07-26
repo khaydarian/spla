@@ -90,9 +90,8 @@ status bringup_fifo(int argc, char** argv) {
       print_bits(low, 0xff);
 
       uint16_t pattern = (high << 8) | low;
-      printf(" = %s%s" RESET,
-          pattern_good(pattern) ? GREEN : RED,
-          pattern_good(pattern) ? "ok" : "no");
+      printf(" = %s%s" RESET, pattern_good(pattern) ? GREEN : RED,
+             pattern_good(pattern) ? "ok" : "no");
       if (i++ == 100) {
         memset(patterns_found, 0, sizeof(patterns_found));
         patterns_good = 0;
