@@ -8,7 +8,7 @@ Manufacturer Product Id: SN74LVC8T245PWR
 Unit Cost: $0.86240
 Quantity: 30
 Cost: $25.87
-Remaining: 30
+Remaining: 15
 
 Name: ADC, ADC1173
 Category: Board Parts
@@ -186,7 +186,7 @@ Note: Mis-ordered, this part should have been 0603
 Unit Cost: $0.06400
 Quantity: 10
 Cost: $0.64
-Remaining: 8
+Remaining: 5
 
 Name: Capactior, 0.1uF, 0603
 Category: Board Parts
@@ -198,7 +198,7 @@ Manufacturer Product Id: GCJ188R71E104KA12D
 Unit Cost: $0.06740
 Quantity: 100
 Cost: $6.74
-Remaining: 76
+Remaining: 67
 
 Name: Capacitor, 56pF, 0603
 Category: Board Parts
@@ -210,7 +210,7 @@ Manufacturer Product Id: GCM1885C2A560JA16D
 Unit Cost: $0.11000
 Quantity: 10
 Cost: $1.10
-Remaining: 10
+Remaining: 9
 
 Name: Capacitor, 100pF, 0603
 Category: Board Parts
@@ -342,7 +342,7 @@ Manufacturer Product Id: RMCF0603JT100R
 Unit Cost: $0.01400
 Quantity: 10
 Cost: $0.14
-Remaining: 10
+Remaining: 9
 
 Name: Resistor, 12k ohm 5%, 0603
 Category: Board Parts
@@ -426,7 +426,7 @@ Manufacturer Product Id: RK73Z1JTTD
 Unit Cost: $0.00580
 Quantity: 100
 Cost: $0.58
-Remaining: 89
+Remaining: 88
 
 Name: Capacitor, 10uF, 0603
 Category: Board Parts
@@ -462,7 +462,7 @@ Manufacturer Product Id: RMCF0603JT10K0
 Unit Cost: $0.00580
 Quantity: 100
 Cost: $0.58
-Remaining: 91
+Remaining: 81
 
 Name: Resistor, 330 ohm 5%, 0603
 Category: Board Parts
