@@ -48,8 +48,11 @@ STAGES = [
     Stage("FTDI-Back", "R13 R14 R2 R3 C16 R4 R5 R6 R7 C38 C4 C6 C3 C5 R31 X1 C2 C18 C43"),
     Stage("FGPA-Back", "C31 C25 C13 R15 C30 C32 C37 C19 C24 C21 C35 C20 C15 C27 C33 C34 C23 C17"),
     Stage("PinHeaders", "J12 J4 J2"),
-    #Stage("LevelShifters", ...),
-    #Stage("SNES", ...),
+    Stage("LevelShifters-Back", """
+        U17 U16 U23 U22 U32 U30 U31 U20 U24 U25 U26 U27 U15 U28 U29
+        C12 C39 R17 R18 R19 R20 R21 R22 R23 R24 C22
+        R11 C11 C40 C29 C36 C26 R25 C8 C10 C9 C28 C14"""),
+    Stage("SNES-Front", "R29 R30"),
     #Stage("Analog", ...),
 ]
 
@@ -57,6 +60,7 @@ def main(args):
 
     db = txtdb.Txtdb()
     db.parse_file('./accounting/board.txtdb')
+    db.parse_file('./accounting/board-used.txtdb')
     desc_by_digikey = {}
     for obj, digikey in db.objects_with_field('Digikey Product Id'):
         desc = obj.get('Digikey Description')
