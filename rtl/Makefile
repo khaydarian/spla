@@ -7,6 +7,7 @@ ALL += build/bringup.bit
 ALL += build/bringup_uart.bit
 ALL += build/bringup_fifo.bit
 ALL += build/bringup_boundary.bit
+ALL += build/bringup_levelshifter1.bit
 
 # By default, build all bitstreams.
 .PHONY: all
@@ -32,6 +33,8 @@ build/bringup_fifo.json: $(shell cat bringup_fifo.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_fifo -json $@' $^
 build/bringup_boundary.json: $(shell cat bringup_boundary.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_boundary -json $@' $^
+build/bringup_levelshifter1.json: $(shell cat bringup_levelshifter1.vf)
+	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_levelshifter1 -json $@' $^
 
 %.config: %.json
 	$(NEXTPNR) $(NEXTPNR_FLAGS) --json $< --textcfg $@ --lpf default.lpf -l $(patsubst %.config,%.log,$@)
