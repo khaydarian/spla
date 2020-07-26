@@ -4,6 +4,7 @@
 #include <string.h>
 #include <unistd.h>
 #include "bitstream.h"
+#include "color.h"
 #include "command.h"
 #include "ftdi.h"
 #include "ftdiutil.h"
@@ -52,10 +53,6 @@ static void found_pattern(uint16_t pattern) {
 }
 
 #define PASS_GOOD_PATTERNS 15
-
-#define GREEN "[92m"
-#define RED "[91m"
-#define RESET "[0m"
 
 // [Command]
 // Description: Test FTDI FIFO pins.

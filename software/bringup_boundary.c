@@ -3,20 +3,12 @@
 #include <stdio.h>
 #include <string.h>
 #include "bitstream.h"
+#include "color.h"
 #include "command.h"
 #include "ftdi.h"
 #include "ftdiutil.h"
 #include "pindef.h"
 #include "uart.h"
-
-#define CLEARSCREEN "[2J"
-#define ORIGIN "[H"
-#define CLEARLINE "[K"
-#define BOLD "[1m"
-#define GREEN "[92m"
-#define RED "[91m"
-#define BLUE "[94m"
-#define RESET "[0m"
 
 struct frame {
   unsigned int frameno;
