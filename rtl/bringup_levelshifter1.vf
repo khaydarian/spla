@@ -1,2 +1,8 @@
+lib/pindef.v
+lib/constants.v
 bringup_levelshifter1.v
-lib/clock_div.v
+lib/bringup_driver.v
+lib/bringup_scanner.v
+lib/bringup_sensor.v
+lib/pulse.v
+lib/uart_tx.v
