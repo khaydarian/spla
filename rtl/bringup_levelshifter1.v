@@ -21,7 +21,6 @@ module bringup_levelshifter1(
 
 	// All input-capabable pins (input-only, or bidirectional)
 	// in standard order.
-	input  xin,
 	input  ppu2_resout0_n,
 	input  ppu2_resout1_n,
 	input  burst_n,
