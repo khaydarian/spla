@@ -10,6 +10,9 @@
 #include "pindef.h"
 #include "uart.h"
 
+#define MODE_BOUNDARY 0
+#define MODE_LEVELSHIFTER1 1
+
 struct frame {
   unsigned int frameno;
   uint8_t current[23];
@@ -77,8 +80,17 @@ static void frame_check_goodness(struct frame* f) {
   }
 }
 
-static void draw_frame(struct frame* f) {
-  printf(ORIGIN "[FPGA Bringup - Boundary Scan Tool]" RESET "\n");
+static void draw_frame(struct frame* f, int mode) {
+  printf(ORIGIN "[FPGA Bringup - Boundary Scan Tool - ");
+  switch (mode) {
+    case MODE_BOUNDARY:
+      printf("Basic");
+      break;
+    case MODE_LEVELSHIFTER1:
+      printf("Level Shifted Inputs");
+      break;
+  }
+  printf("]" RESET "\n");
   printf("Frame: %d\n", f->frameno);
   if (f->error) {
     printf(RED "Error: %s" RESET CLEARLINE "\n", f->error);
@@ -91,50 +103,43 @@ static void draw_frame(struct frame* f) {
   }
   printf("]\n");
   // clk_12mhz has to work by this point.
-  // printf("%sclk_12mhz%s ", frame_bit(f, PINDEF_CLK_12MHZ), RESET);
-  printf("%sled7%s ", frame_bit(f, PINDEF_LED7), RESET);
-  printf("%sled8%s\n", frame_bit(f, PINDEF_LED8), RESET);
-  // fifo pins already tested by bringup_fifo.
-  /*
-  printf("fifo: d[");
-  for (int i = 0; i < 8; i++) {
-    printf("%s%d%s", frame_bit(f, PINDEF_FIFO_D_0 + i), i, RESET);
+  // fifo already tested by bringup_fifo.
+  if (mode == MODE_BOUNDARY) {
+    printf("%sled7%s ", frame_bit(f, PINDEF_LED7), RESET);
+    printf("%sled8%s\n", frame_bit(f, PINDEF_LED8), RESET);
+    printf("%susb_pwren_n%s ", frame_bit(f, PINDEF_USB_PWREN_N), RESET);
+    printf("%susb_suspend_n%s ", frame_bit(f, PINDEF_USB_SUSPEND_N), RESET);
+    printf("%sxin%s\n", frame_bit(f, PINDEF_XIN), RESET);
+    printf("%sppu1_reset_n%s ", frame_bit(f, PINDEF_PPU1_RESET_N), RESET);
+    printf("%sppu2_reset_n%s ", frame_bit(f, PINDEF_PPU2_RESET_N), RESET);
   }
-  printf("] ");
-  printf("%srxf_n%s ", frame_bit(f, PINDEF_FIFO_RXF_N), RESET);
-  printf("%stxe_n%s ", frame_bit(f, PINDEF_FIFO_TXE_N), RESET);
-  printf("%srd_n%s ", frame_bit(f, PINDEF_FIFO_RD_N), RESET);
-  printf("%swr_n%s ", frame_bit(f, PINDEF_FIFO_WR_N), RESET);
-  printf("%ssiwu%s ", frame_bit(f, PINDEF_FIFO_SIWU), RESET);
-  printf("%sclkout%s ", frame_bit(f, PINDEF_FIFO_CLKOUT), RESET);
-  printf("%soe_n%s\n", frame_bit(f, PINDEF_FIFO_OE_N), RESET);
-  */
-  printf("%susb_pwren_n%s ", frame_bit(f, PINDEF_USB_PWREN_N), RESET);
-  printf("%susb_suspend_n%s ", frame_bit(f, PINDEF_USB_SUSPEND_N), RESET);
-  printf("%sxin%s\n", frame_bit(f, PINDEF_XIN), RESET);
-  printf("%sppu1_reset_n%s ", frame_bit(f, PINDEF_PPU1_RESET_N), RESET);
-  printf("%sppu2_reset_n%s ", frame_bit(f, PINDEF_PPU2_RESET_N), RESET);
   printf("%sppu2_resout0_n%s ", frame_bit(f, PINDEF_PPU2_RESOUT0_N), RESET);
   printf("%sppu2_resout1_n%s\n", frame_bit(f, PINDEF_PPU2_RESOUT1_N), RESET);
   printf("%sburst_n%s ", frame_bit(f, PINDEF_BURST_N), RESET);
   printf("%scsync_n%s ", frame_bit(f, PINDEF_CSYNC_N), RESET);
   printf("%sppu2_hblank%s ", frame_bit(f, PINDEF_PPU2_HBLANK), RESET);
   printf("%sppu2_vblank%s\n", frame_bit(f, PINDEF_PPU2_VBLANK), RESET);
-  printf("%spard_n%s ", frame_bit(f, PINDEF_PARD_N), RESET);
-  printf("%spawr_n%s ", frame_bit(f, PINDEF_PAWR_N), RESET);
-  printf("%slvl_pa_dir%s ", frame_bit(f, PINDEF_LVL_PA_DIR), RESET);
+  if (mode == MODE_BOUNDARY) {
+    printf("%spard_n%s ", frame_bit(f, PINDEF_PARD_N), RESET);
+    printf("%spawr_n%s ", frame_bit(f, PINDEF_PAWR_N), RESET);
+    printf("%slvl_pa_dir%s ", frame_bit(f, PINDEF_LVL_PA_DIR), RESET);
+  }
   printf("pa[");
   for (int i = 0; i < 8; i++) {
     printf("%s%d%s", frame_bit(f, PINDEF_PA_0 + i), i, RESET);
   }
   printf("] ");
-  printf("%slvl_pd_dir%s ", frame_bit(f, PINDEF_LVL_PD_DIR), RESET);
+  if (mode == MODE_BOUNDARY) {
+    printf("%slvl_pd_dir%s ", frame_bit(f, PINDEF_LVL_PD_DIR), RESET);
+  }
   printf("pd[");
   for (int i = 0; i < 8; i++) {
     printf("%s%d%s", frame_bit(f, PINDEF_PD_0 + i), i, RESET);
   }
   printf("]\n");
-  printf("%slvl_va_dir%s ", frame_bit(f, PINDEF_LVL_VA_DIR), RESET);
+  if (mode == MODE_BOUNDARY) {
+    printf("%slvl_va_dir%s ", frame_bit(f, PINDEF_LVL_VA_DIR), RESET);
+  }
   printf("%svrd_n%s ", frame_bit(f, PINDEF_VRD_N), RESET);
   printf("%svawr_n%s ", frame_bit(f, PINDEF_VAWR_N), RESET);
   printf("%svbwr_n%s\n", frame_bit(f, PINDEF_VBWR_N), RESET);
@@ -149,7 +154,9 @@ static void draw_frame(struct frame* f) {
     printf(" %s%d%s", frame_bit(f, PINDEF_VAB_0 + i), i, RESET);
   }
   printf("]\n");
-  printf("%slvl_vd_dir%s ", frame_bit(f, PINDEF_LVL_VD_DIR), RESET);
+  if (mode == MODE_BOUNDARY) {
+    printf("%slvl_vd_dir%s ", frame_bit(f, PINDEF_LVL_VD_DIR), RESET);
+  }
   printf("vda[");
   for (int i = 0; i < 8; i++) {
     printf("%s%d%s", frame_bit(f, PINDEF_VDA_0 + i), i, RESET);
@@ -173,50 +180,64 @@ static void draw_frame(struct frame* f) {
   printf("chr[%s0%s%s1%s%s2%s%s3%s]\n", frame_bit(f, PINDEF_CHR_0), RESET,
          frame_bit(f, PINDEF_CHR_1), RESET, frame_bit(f, PINDEF_CHR_2), RESET,
          frame_bit(f, PINDEF_CHR_3), RESET);
-  printf("%sppu2_tst15%s ", frame_bit(f, PINDEF_PPU2_TST15), RESET);
-  printf("%slvl_tst_dir%s ", frame_bit(f, PINDEF_LVL_TST_DIR), RESET);
-  printf("%slvl_tst_oe%s ", frame_bit(f, PINDEF_LVL_TST_OE), RESET);
+  if (mode != MODE_LEVELSHIFTER1) {
+    printf("%sppu2_tst15%s ", frame_bit(f, PINDEF_PPU2_TST15), RESET);
+  }
+  if (mode == MODE_BOUNDARY) {
+    printf("%slvl_tst_dir%s ", frame_bit(f, PINDEF_LVL_TST_DIR), RESET);
+    printf("%slvl_tst_oe%s ", frame_bit(f, PINDEF_LVL_TST_OE), RESET);
+  }
   printf("ppu2_tst[%s0%s", frame_bit(f, PINDEF_PPU2_TST_0), RESET);
   for (int i = 1; i < 15; i++) {
     printf(" %s%d%s", frame_bit(f, PINDEF_PPU2_TST_0 + i), i, RESET);
   }
   printf("]\n");
-  printf("ppu1: ");
-  printf("%sextsync_n%s ", frame_bit(f, PINDEF_PPU1_EXTSYNC_N), RESET);
-  printf("%shvcmode%s ", frame_bit(f, PINDEF_PPU1_HVCMODE), RESET);
-  printf("%smaster_n%s ", frame_bit(f, PINDEF_PPU1_MASTER_N), RESET);
-  printf("%spalmode%s\n", frame_bit(f, PINDEF_PPU1_PALMODE), RESET);
+  if (mode != MODE_LEVELSHIFTER1) {
+    printf("ppu1: ");
+    printf("%sextsync_n%s ", frame_bit(f, PINDEF_PPU1_EXTSYNC_N), RESET);
+    printf("%shvcmode%s ", frame_bit(f, PINDEF_PPU1_HVCMODE), RESET);
+    printf("%smaster_n%s ", frame_bit(f, PINDEF_PPU1_MASTER_N), RESET);
+    printf("%spalmode%s\n", frame_bit(f, PINDEF_PPU1_PALMODE), RESET);
+  }
   printf("ppu2: ");
   printf("%s3p58m%s ", frame_bit(f, PINDEF_PPU2_3P58M), RESET);
   printf("%sped_n%s ", frame_bit(f, PINDEF_PPU2_PED_N), RESET);
   printf("%s5mout_n%s ", frame_bit(f, PINDEF_PPU2_5MOUT_N), RESET);
   printf("%stoumei_n%s ", frame_bit(f, PINDEF_PPU2_TOUMEI_N), RESET);
-  printf("%sextlatch%s ", frame_bit(f, PINDEF_PPU2_EXTLATCH), RESET);
-  printf("%shvcmode%s ", frame_bit(f, PINDEF_PPU2_HVCMODE), RESET);
-  printf("%spalmode%s\n", frame_bit(f, PINDEF_PPU2_PALMODE), RESET);
-  printf("%sextra1%s ", frame_bit(f, PINDEF_EXTRA1), RESET);
-  printf("%sextra2%s ", frame_bit(f, PINDEF_EXTRA2), RESET);
-  // Extra3 is the driving signal.
-  // printf("%sextra3%s ", frame_bit(f, PINDEF_EXTRA3), RESET);
-  printf("%sbodge1%s ", frame_bit(f, PINDEF_BODGE1), RESET);
-  printf("%sbodge2%s ", frame_bit(f, PINDEF_BODGE2), RESET);
-  printf("%sbodge3%s\n", frame_bit(f, PINDEF_BODGE3), RESET);
-  printf("analog %sclock%s ", frame_bit(f, PINDEF_ANALOG_CLOCK), RESET);
-  printf("r[%soe%s ", frame_bit(f, PINDEF_ANALOG_R_OE), RESET);
-  for (int i = 0; i < 8; i++) {
-    printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_R_0 + i), i, RESET);
+  if (mode != MODE_LEVELSHIFTER1) {
+    printf("%sextlatch%s ", frame_bit(f, PINDEF_PPU2_EXTLATCH), RESET);
+    printf("%shvcmode%s ", frame_bit(f, PINDEF_PPU2_HVCMODE), RESET);
+    printf("%spalmode%s", frame_bit(f, PINDEF_PPU2_PALMODE), RESET);
   }
-  printf("] ");
-  printf("g[%soe%s ", frame_bit(f, PINDEF_ANALOG_G_OE), RESET);
-  for (int i = 0; i < 8; i++) {
-    printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_G_0 + i), i, RESET);
+  printf("\n");
+  if (mode == MODE_BOUNDARY) {
+    printf("%sextra1%s ", frame_bit(f, PINDEF_EXTRA1), RESET);
+    printf("%sextra2%s ", frame_bit(f, PINDEF_EXTRA2), RESET);
+    // extra3 is the driving signal.
   }
-  printf("] ");
-  printf("b[%soe%s ", frame_bit(f, PINDEF_ANALOG_B_OE), RESET);
-  for (int i = 0; i < 8; i++) {
-    printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_B_0 + i), i, RESET);
+  if (mode != MODE_LEVELSHIFTER1) {
+    printf("%sbodge1%s ", frame_bit(f, PINDEF_BODGE1), RESET);
+    printf("%sbodge2%s ", frame_bit(f, PINDEF_BODGE2), RESET);
+    printf("%sbodge3%s\n", frame_bit(f, PINDEF_BODGE3), RESET);
   }
-  printf("]\n");
+  if (mode == MODE_BOUNDARY) {
+    printf("analog %sclock%s ", frame_bit(f, PINDEF_ANALOG_CLOCK), RESET);
+    printf("r[%soe%s ", frame_bit(f, PINDEF_ANALOG_R_OE), RESET);
+    for (int i = 0; i < 8; i++) {
+      printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_R_0 + i), i, RESET);
+    }
+    printf("] ");
+    printf("g[%soe%s ", frame_bit(f, PINDEF_ANALOG_G_OE), RESET);
+    for (int i = 0; i < 8; i++) {
+      printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_G_0 + i), i, RESET);
+    }
+    printf("] ");
+    printf("b[%soe%s ", frame_bit(f, PINDEF_ANALOG_B_OE), RESET);
+    for (int i = 0; i < 8; i++) {
+      printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_B_0 + i), i, RESET);
+    }
+    printf("]\n");
+  }
 }
 
 // [Command]
@@ -224,11 +245,32 @@ static void draw_frame(struct frame* f) {
 // Option: open_usb = true
 // Option: default_usb_device = board
 status bringup_boundary(int argc, char** argv) {
-  RETURN_IF_ERROR(no_arguments(argc, argv));
+  int mode = MODE_BOUNDARY;
 
-  const char* bringup_boundary_filename = "../rtl/build/bringup_boundary.bit";
+  while (argc) {
+    if (!strcmp(argv[0], "--levelshifter1")) {
+      mode = MODE_LEVELSHIFTER1;
+      argc--;
+      argv++;
+    } else {
+      return errorf("Unknown flag: %s", argv[0]);
+    }
+  }
+
+  const char* bitstream_filename;
+  switch (mode) {
+    case MODE_BOUNDARY:
+      bitstream_filename = "../rtl/build/bringup_boundary.bit";
+      break;
+    case MODE_LEVELSHIFTER1:
+      bitstream_filename = "../rtl/build/bringup_levelshifter1.bit";
+      break;
+    default:
+      return errorf("bad mode %d", mode);
+  }
+
   struct bitstream bits = {0};
-  RETURN_IF_ERROR(load_bitstream_file(&bits, bringup_boundary_filename));
+  RETURN_IF_ERROR(load_bitstream_file(&bits, bitstream_filename));
   RETURN_IF_ERROR(program_bitstream(&bits));
   free_bitstream(&bits);
 
@@ -241,7 +283,7 @@ status bringup_boundary(int argc, char** argv) {
   frame_load_goodness(&f);
 
   printf(ORIGIN CLEARSCREEN);
-  draw_frame(&f);
+  draw_frame(&f, mode);
 
   uint8_t buf[1024];
   while (true) {
@@ -251,7 +293,7 @@ status bringup_boundary(int argc, char** argv) {
     }
     f.frameno++;
     if (ret == 0) {
-      draw_frame(&f);
+      draw_frame(&f, mode);
       fflush(stdout);
     } else if (ret != 23) {
       f.error = "not 23 bytes";
