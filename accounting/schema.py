@@ -65,6 +65,9 @@ FIELD_TYPES = {
     'Solder Wick Width': 'any',
     'Solder Wick Length': 'any',
     'Flux Quantity': 'any',
+
+    'Board Serial': 'any',
+    'Board Completion': 'any',
 }
 
 CATEGORIES = {

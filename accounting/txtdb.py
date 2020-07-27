@@ -47,7 +47,7 @@ class Txtdb(object):
 def parse_line(line, filename, lineno):
     if ':' not in line:
         raise ValueError("%s:%d: missing ':'" % (filename, lineno))
-    key, value = line.split(':')
+    key, value = line.split(':', 1)
     key = key.strip()
     if key == '':
         raise ValueError("%s:%d: empty key" % (filename, lineno))
