@@ -29,3 +29,11 @@ It's hard to get the right amount of solder paste on the board without a stencil
 ## Vaporized Isoproypl Alcohol Sets Off Smoke Detectors Instantly
 
 Yeah, so that happened: I need to wait for the board to cool before trying to clean up flux residue. Flash-boiling isopropyl sets off the smoke detectors, which then set off the dog. Derp.
+
+## Respect the Datasheet Maximums
+
+The ECP5 datasheet says that the maximum supported I/O volatage is 3.3V, and they mean it: while running `bringup_boundary`, I shorted the 3.3V driver pin with the 5V supply, and instantly fried the FPGA.  Oops.
+
+## Respect the Datasheet Maximums, Part 2
+
+Temperature also matters: on the second board, I foolishly left power on while trying to reflow the FPGA to fix a disconnected pin -- which is well above the maximum operating temperature.  Oops.  This seems to have fried the I/O drivers in some bizarre fashion.  I can still program the FPGA, but is has strange behavior and definitely isn't working right.
