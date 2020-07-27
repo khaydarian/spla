@@ -14,6 +14,8 @@ private:
 public:
   ~Vcore() { trace_off(); }
 
+  uint64_t cycle() const { return cycle_; }
+
   void trace_on(const char *outfile) {
     Verilated::traceEverOn(true);
     trace_ = new VerilatedVcdC();

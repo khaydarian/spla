@@ -4,13 +4,12 @@
 module bringup_sensor(
 	input  clock,
 	input  pin_i,
+	input  dec_i,
 	output sensed_o);
 
 `ifdef VERILATOR
-parameter CLOCKS_PER_DECREMENT = 10;
 parameter COUNTER_BITS = 3;
 `else
-parameter CLOCKS_PER_DECREMENT = 12000; // 1 kHz
 parameter COUNTER_BITS = 6;
 `endif
 
@@ -29,29 +28,15 @@ always @(posedge clock)
 wire inc;
 assign inc = pin_sync ^ pin_last;
 
-// Generate pulses on a regular frequency, but slower than bringup_driver.
-localparam PULSE_RESET = CLOCKS_PER_DECREMENT - 1;
-localparam PULSE_BITS = $clog2(PULSE_RESET);
-reg [PULSE_BITS-1:0] pulse_counter;
-reg dec;
-always @(posedge clock)
-	if (pulse_counter == 0) begin
-		pulse_counter <= PULSE_RESET;
-		dec <= 1;
-	end else begin
-		pulse_counter <= pulse_counter - 1;
-		dec <= 0;
-	end
-
 // Counter: Count up for transition, down on regular schedule.
 // Counter saturates at min and max values.
 localparam COUNTER_MAX_VALUE = (1<<COUNTER_BITS)-1;
 localparam COUNTER_MIN_VALUE = 0;
 reg [COUNTER_BITS-1:0] counter;
 always @(posedge clock) begin
-	if (inc && !dec && counter != COUNTER_MAX_VALUE)
+	if (inc && !dec_i && counter != COUNTER_MAX_VALUE)
 		counter <= counter + 1;
-	if (!inc && dec && counter != COUNTER_MIN_VALUE)
+	if (!inc && dec_i && counter != COUNTER_MIN_VALUE)
 		counter <= counter - 1;
 end
 

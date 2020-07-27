@@ -1,20 +1,20 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Sun Jun 21 17:49:18 2020
+[*] Mon Jul 27 23:35:30 2020
 [*]
 [dumpfile] "/home/khaydarian/spla/verif/build/bringup_sensor.trace.vcd"
-[dumpfile_mtime] "Sun Jun 21 17:46:27 2020"
-[dumpfile_size] 16700
-[savefile] "/home/khaydarian/spla/verif/gktwave/bringup_sensor.gtkw"
+[dumpfile_mtime] "Mon Jul 27 23:31:26 2020"
+[dumpfile_size] 14233
+[savefile] "/home/khaydarian/spla/verif/gtkwave/bringup_sensor.gtkw"
 [timestart] 0
-[size] 1294 693
+[size] 1392 712
 [pos] -1 -1
 *-9.738688 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [sst_width] 223
 [signals_width] 174
 [sst_expanded] 1
-[sst_vpaned_height] 185
+[sst_vpaned_height] 236
 @28
 TOP.bringup_sensor.clock
 @200
@@ -27,14 +27,17 @@ TOP.bringup_sensor.pin_last
 TOP.bringup_sensor.inc
 @200
 -
-@25
-TOP.bringup_sensor.pulse_counter[3:0]
 @28
-TOP.bringup_sensor.dec
+TOP.bringup_sensor.dec_i
 @200
 -
-@24
+@8024
 TOP.bringup_sensor.counter[2:0]
+@20000
+-
+-
+-
+-
 @28
 TOP.bringup_sensor.sensed
 TOP.bringup_sensor.sensed_o
