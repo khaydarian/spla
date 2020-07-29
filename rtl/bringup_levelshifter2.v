@@ -81,112 +81,112 @@ assign data_bodge3         = 8'b01000001;
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_xin(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_xin),
 		.tx_o(xin));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu1_reset_n(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu1_reset_n),
 		.tx_o(ppu1_reset_n));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu2_reset_n(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu2_reset_n),
 		.tx_o(ppu2_reset_n));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_pard_n(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_pard_n),
 		.tx_o(pard_n));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_pawr_n(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_pawr_n),
 		.tx_o(pawr_n));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu2_tst15(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu2_tst15),
 		.tx_o(ppu2_tst15));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu1_extsync_n(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu1_extsync_n),
 		.tx_o(ppu1_extsync_n));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu1_hvcmode(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu1_hvcmode),
 		.tx_o(ppu1_hvcmode));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu1_master_n(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu1_master_n),
 		.tx_o(ppu1_master_n));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu1_palmode(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu1_palmode),
 		.tx_o(ppu1_palmode));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu2_extlatch(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu2_extlatch),
 		.tx_o(ppu2_extlatch));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu2_hvcmode(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu2_hvcmode),
 		.tx_o(ppu2_hvcmode));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_ppu2_palmode(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_ppu2_palmode),
 		.tx_o(ppu2_palmode));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_bodge1(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_bodge1),
 		.tx_o(bodge1));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_bodge2(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_bodge2),
 		.tx_o(bodge2));
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_bodge3(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(write_pulse),
 		.data_i(data_bodge3),
 		.tx_o(bodge3));

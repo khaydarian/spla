@@ -245,7 +245,7 @@ wire uart_busy;
 uart_tx
 	#(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_tx0(
-		.clock_i(clock),
+		.clock(clock),
 		.write_i(uart_write),
 		.data_i(uart_data),
 		.busy_o(uart_busy),

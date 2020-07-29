@@ -2,7 +2,7 @@
 `default_nettype none
 
 module uart_tx(
-	input clock_i,
+	input clock,
 	input write_i,
 	input [7:0] data_i,
 	output busy_o,
@@ -21,7 +21,7 @@ initial data = 9'h1ff;
 
 assign busy_o = (bitcounter != 0 || baudcounter != 0);
 
-always @(posedge clock_i)
+always @(posedge clock)
 	if (!busy_o && write_i) begin
 		baudcounter <= CLOCKS_PER_BAUD - 1'd1;
 		bitcounter <= 10;

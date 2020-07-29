@@ -30,7 +30,11 @@ end
 
 uart_tx
 	#(.CLOCKS_PER_BAUD(104)) // 115200 baud
-	uart_tx0(.clock_i(clock), .write_i(char_pulse), .data_i(data), .tx_o(uart_tx));
+	uart_tx0(
+		.clock(clock),
+		.write_i(char_pulse),
+		.data_i(data),
+		.tx_o(uart_tx));
 
 assign tp7 = uart_tx;
 
