@@ -2,3 +2,4 @@ test_uart.v
 lib/uart_tx.v
 lib/uart_rx.v
 lib/sync_fifo.v
+lib/oneshot.v
