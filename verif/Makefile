@@ -12,6 +12,7 @@ RTLDIR:=../rtl/lib
 
 build/obj_dir/Vbringup_sensor.cpp: | build/
 build/obj_dir/Vbringup_scanner.cpp: | build/
+build/obj_dir/Vuart_rx.cpp: | build/
 
 build/:
 	mkdir -p $@
@@ -51,4 +52,19 @@ build/bringup_scanner: bringup_scanner.cpp build/obj_dir/Vbringup_scanner__ALL.a
 build/bringup_scanner.trace.vcd: build/bringup_scanner
 	(cd build && ./bringup_scanner)
 
-verilator: build/bringup_sensor.trace.vcd build/bringup_scanner.trace.vcd
+build/obj_dir/Vuart_rx.cpp: $(RTLDIR)/uart_rx.v
+	(cd build && $(VERILATOR) --trace -Wall -I.. -cc ../$<)
+
+build/obj_dir/Vuart_rx__ALL.a: build/obj_dir/Vuart_rx.cpp
+	make --no-print-directory -C build/obj_dir -f Vuart_rx.mk
+
+build/uart_rx: uart_rx.cpp build/obj_dir/Vuart_rx__ALL.a
+	$(CC) $(CC_FLAGS) -I$(VERILATOR_INCLUDE) -I build/obj_dir \
+		$(VERILATOR_INCLUDE)/verilated.cpp \
+		$(VERILATOR_INCLUDE)/verilated_vcd_c.cpp \
+		-o $@ $^
+
+build/uart_rx.trace.vcd: build/uart_rx
+	(cd build && ./uart_rx)
+
+verilator: build/bringup_sensor.trace.vcd build/bringup_scanner.trace.vcd build/uart_rx.trace.vcd
