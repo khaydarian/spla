@@ -1,20 +1,20 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Wed Jul 29 02:49:51 2020
+[*] Thu Jul 30 05:06:31 2020
 [*]
 [dumpfile] "/home/khaydarian/spla/verif/build/uart_rx.trace.vcd"
-[dumpfile_mtime] "Wed Jul 29 02:49:46 2020"
-[dumpfile_size] 20168
+[dumpfile_mtime] "Thu Jul 30 05:05:04 2020"
+[dumpfile_size] 18301
 [savefile] "/home/khaydarian/spla/verif/gtkwave/uart_rx.gtkw"
-[timestart] 4991
-[size] 1460 865
+[timestart] 2505
+[size] 1519 802
 [pos] -1 -1
-*-7.351562 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-7.041032 8620 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [sst_width] 223
 [signals_width] 158
 [sst_expanded] 1
-[sst_vpaned_height] 244
+[sst_vpaned_height] 360
 @28
 TOP.uart_rx.clock
 @200
@@ -27,8 +27,8 @@ TOP.uart_rx.rx
 -
 @24
 TOP.uart_rx.state[1:0]
-@22
-TOP.uart_rx.bitcounter[3:0]
+@25
+TOP.uart_rx.bitcounter[2:0]
 @24
 TOP.uart_rx.baudcounter[3:0]
 @200
