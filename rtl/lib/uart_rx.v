@@ -22,7 +22,7 @@ always @(posedge clock) begin
 end
 
 reg [CLOCKS_PER_BAUD_BITS:0] baudcounter;
-reg [3:0] bitcounter;
+reg [2:0] bitcounter;
 reg [7:0] data;
 
 localparam STATE_IDLE = 0;
@@ -76,6 +76,8 @@ always @(posedge clock)
 assign valid_o = (state == STATE_STOP && baudcounter == RESET_VALUE);
 assign data_o = data;
 
-assign tap_o = (state != STATE_IDLE);
+assign tap_o = state[0];
+//assign tap_o = state != STATE_IDLE;
+//assign tap_o = rx;
 
 endmodule

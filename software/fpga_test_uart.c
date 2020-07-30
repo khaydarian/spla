@@ -1,5 +1,6 @@
 // vi: ts=2:sw=2:sts=2:et
 
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -41,7 +42,7 @@ status fpga_test_uart(int argc, char** argv) {
   ftdiutil_set_interface(INTERFACE_A);
   uart_init();
 
-  usleep(1000000); // 1 s
+  usleep(1000000);  // 1 s
 
   uint8_t buf[1024];
   int ch = 0x41;
@@ -52,23 +53,22 @@ status fpga_test_uart(int argc, char** argv) {
     if (ret < 0) {
       return ftdiutil_error("ftdi_read_data", ret);
     }
-    usleep(1000000); // ~1Hz
+    usleep(100000);  // ~10Hz
     ret = ftdi_read_data(ftdi, buf, sizeof(buf));
     if (ret < 0) {
       return ftdiutil_error("ftdi_read_data", ret);
     }
     if (ret) {
-      printf("%d", ret);
-      //printf("[");
-      //for (int i = 0; i < ret; i++) {
-      //  printf("%02x", buf[i]);
-      //}
-      //printf("]");
-      //fwrite(buf, ret, 1, stdout);
+      for (int i = 0; i < ret; i++) {
+        if (isprint(buf[i])) {
+          printf("%c", buf[i]);
+        } else {
+          printf("[%02x]", buf[i]);
+        }
+      }
       fflush(stdout);
     }
-    (void)chincrement;
-    //chincrement(&ch);
+    chincrement(&ch);
   }
 
   return OK;
