@@ -49,8 +49,9 @@ always @(posedge clock)
 					bitcounter <= 7;
 					baudcounter <= RESET_VALUE;
 				end
-			end else
+			end else begin
 				baudcounter <= baudcounter - 1;
+			end
 		end
 		STATE_BITS: begin
 			if (baudcounter == 0) begin
@@ -59,17 +60,19 @@ always @(posedge clock)
 				if (bitcounter == 0) begin
 					state <= STATE_STOP;
 					baudcounter <= RESET_VALUE;
-				end else
+				end else begin
 					bitcounter <= bitcounter - 1;
 				end
-			else
+			end else begin
 				baudcounter <= baudcounter - 1;
+			end
 		end
 		STATE_STOP: begin
-			if (baudcounter == 0)
+			if (baudcounter == 0) begin
 				state <= STATE_IDLE;
-			else
+			end else begin
 				baudcounter <= baudcounter - 1;
+			end
 		end
 	endcase
 
