@@ -6,7 +6,8 @@ module test_uart(
 	output uart_tx,
 	input  uart_rx,
 	output led7,
-	output led8);
+	output led8,
+	output tp9);
 
 reg output_blocked;
 
@@ -34,7 +35,8 @@ uart_rx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 		.clock(clock),
 		.data_o(incoming_data),
 		.valid_o(incoming_valid),
-		.rx_i(uart_rx));
+		.rx_i(uart_rx),
+		.tap_o(tp9));
 
 sync_fifo #(.DEPTH_BITS(4))
 	uart_fifo(
@@ -54,12 +56,10 @@ uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 		.busy_o(tx_busy),
 		.tx_o(uart_tx));
 
-wire recent_incoming;
+oneshot #(.CYCLES(600000)) // 50ms
+	oneshot_led7(.clock(clock), .in(~uart_rx), .out(led7));
 
 oneshot #(.CYCLES(600000)) // 50ms
-	oneshot_led7(.clock(clock), .in(~uart_rx), .out(recent_incoming));
-
-assign led7 = recent_incoming;
-assign led8 = ~fifo_available;
+	oneshot_led8(.clock(clock), .in(incoming_valid), .out(led8));
 
 endmodule

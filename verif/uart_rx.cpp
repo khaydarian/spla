@@ -10,9 +10,13 @@ class UartRx : public Vcore<Vuart_rx> {
      rx_i = 1;
    }
 
-   void send(uint8_t value) {
-     const int clocks_per_baud = 6;
+   static const int clocks_per_baud = 6;
 
+   void wait() {
+     tick(clocks_per_baud * 2);
+   }
+
+   void send(uint8_t value) {
      // Start bit.
      rx_i = 0;
      tick(clocks_per_baud);
@@ -38,19 +42,19 @@ int main(int argc, char** argv) {
 
   u.tick(20);
   u.send(0x41);
-  u.tick(30);
+  u.wait();
   u.send(0xaa);
-  u.tick(30);
+  u.wait();
   u.send(0x55);
-  u.tick(30);
+  u.wait();
   u.send(0x00);
-  u.tick(30);
+  u.wait();
   u.send(0xff);
-  u.tick(30);
+  u.wait();
   u.send(0x41);
   u.send(0xbe);
   u.send(0x41);
-  u.tick(30);
+  u.wait();
 
   return 0;
 }

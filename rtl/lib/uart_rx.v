@@ -2,10 +2,11 @@
 `default_nettype none
 
 module uart_rx(
-	input clock,
+	input  clock,
 	output [7:0] data_o,
 	output valid_o,
-	input rx_i);
+	input  rx_i,
+	output tap_o);
 
 parameter CLOCKS_PER_BAUD = 6;
 localparam RESET_VALUE = CLOCKS_PER_BAUD - 1;
@@ -74,5 +75,7 @@ always @(posedge clock)
 
 assign valid_o = (state == STATE_STOP && baudcounter == RESET_VALUE);
 assign data_o = data;
+
+assign tap_o = (state != STATE_IDLE);
 
 endmodule
