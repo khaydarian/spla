@@ -1,4 +1,5 @@
 test_uart.v
 lib/uart_tx.v
 lib/uart_rx.v
+lib/sync2ff.v
 lib/oneshot.v

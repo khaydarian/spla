@@ -12,13 +12,8 @@ localparam RESET_VALUE = CLOCKS_PER_BAUD - 1;
 localparam HALF_RESET_VALUE = (CLOCKS_PER_BAUD / 2) - 1;
 localparam CLOCKS_PER_BAUD_BITS = $clog2(RESET_VALUE);
 
-// 2FF synchronizer
-reg rx_sync;
-reg rx;
-always @(posedge clock) begin
-	rx_sync <= rx_i;
-	rx <= rx_sync;
-end
+wire rx;
+sync2ff sync_rx(.clock(clock), .in_i(rx_i), .out_o(rx));
 
 reg [CLOCKS_PER_BAUD_BITS:0] baudcounter;
 reg [2:0] bitcounter;

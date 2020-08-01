@@ -52,7 +52,10 @@ build/bringup_scanner: bringup_scanner.cpp build/obj_dir/Vbringup_scanner__ALL.a
 build/bringup_scanner.trace.vcd: build/bringup_scanner
 	(cd build && ./bringup_scanner)
 
-build/obj_dir/Vuart_rx.cpp: $(RTLDIR)/uart_rx.v
+build/uart_rx.concat.v: $(RTLDIR)/sync2ff.v $(RTLDIR)/uart_rx.v
+	cat $^ >$@
+
+build/obj_dir/Vuart_rx.cpp: build/uart_rx.concat.v
 	(cd build && $(VERILATOR) --trace -Wall -I.. -cc ../$<)
 
 build/obj_dir/Vuart_rx__ALL.a: build/obj_dir/Vuart_rx.cpp
