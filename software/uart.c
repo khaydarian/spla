@@ -13,7 +13,9 @@ status uart_init() {
   if (ret) {
     return ftdiutil_error("ftdi_set_baudrate", ret);
   }
-  ret = ftdi_set_line_property(ftdi, BITS_8, STOP_BIT_1, NONE);
+  // HACK: We're setting two stop bits here as a workaround
+  // for problematic code in the uart_rx RTL.  This is a bad idea.
+  ret = ftdi_set_line_property(ftdi, BITS_8, STOP_BIT_2, NONE);
   if (ret) {
     return ftdiutil_error("ftdi_set_line_property(8N1)", ret);
   }

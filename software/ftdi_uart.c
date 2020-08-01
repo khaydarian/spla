@@ -2,6 +2,8 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <poll.h>
+#include <unistd.h>
 #include "command.h"
 #include "ftdi.h"
 #include "ftdiutil.h"
@@ -30,6 +32,13 @@ status ftdi_uart(int argc, char** argv) {
   printf("%sCtrl-C to exit.%s\n", c_green, c_reset);
   uint8_t buf[1024];
 
+  struct pollfd pollfds[] = {
+    {
+      .fd = 0,  // stdin
+      .events = POLLIN,
+    },
+  };
+
   while (true) {
     int ret = ftdi_read_data(ftdi, buf, sizeof(buf));
     if (ret < 0) {
@@ -46,6 +55,16 @@ status ftdi_uart(int argc, char** argv) {
         fwrite(buf, ret, 1, stdout);
       }
       fflush(stdout);
+    }
+    ret = poll(pollfds, sizeof(pollfds) / sizeof(pollfds[0]), 0);
+    if (pollfds[0].revents | POLLIN) {
+      int n = read(pollfds[0].fd, buf, sizeof(buf));
+      if (n > 0) {
+        ret = ftdi_write_data(ftdi, buf, n);
+        if (ret < 0) {
+          return ftdiutil_error("ftdi_write_data", ret);
+        }
+      }
     }
   }
 
