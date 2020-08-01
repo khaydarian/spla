@@ -25,56 +25,53 @@ reg [CLOCKS_PER_BAUD_BITS:0] baudcounter;
 reg [2:0] bitcounter;
 reg [7:0] data;
 
-localparam STATE_IDLE = 0;
-localparam STATE_HALFWAIT = 1;
-localparam STATE_BITS = 2;
-localparam STATE_STOP = 3;
-reg [1:0] state;
+localparam STATE_IDLE = 4'b0001;
+localparam STATE_HALFWAIT = 4'b0010;
+localparam STATE_BITS = 4'b0100;
+localparam STATE_STOP = 4'b1000;
+reg [3:0] state;
 
 always @(posedge clock)
-	case (state)
-		STATE_IDLE: begin
-			if (!rx) begin
-				state <= STATE_HALFWAIT;
-				baudcounter <= HALF_RESET_VALUE;
-			end
+	if (state == STATE_IDLE) begin
+		if (!rx) begin
+			state <= STATE_HALFWAIT;
+			baudcounter <= HALF_RESET_VALUE;
 		end
-		STATE_HALFWAIT: begin
-			if (baudcounter == 0) begin
-				if (rx) begin
-					// False start bit
-					state <= STATE_IDLE;
-				end else begin
-					state <= STATE_BITS;
-					bitcounter <= 7;
-					baudcounter <= RESET_VALUE;
-				end
-			end else begin
-				baudcounter <= baudcounter - 1;
-			end
-		end
-		STATE_BITS: begin
-			if (baudcounter == 0) begin
-				data <= {rx, data[7:1]};
-				baudcounter <= RESET_VALUE;
-				if (bitcounter == 0) begin
-					state <= STATE_STOP;
-					baudcounter <= RESET_VALUE;
-				end else begin
-					bitcounter <= bitcounter - 1;
-				end
-			end else begin
-				baudcounter <= baudcounter - 1;
-			end
-		end
-		STATE_STOP: begin
-			if (baudcounter == 0) begin
+	end else if (state == STATE_HALFWAIT) begin
+		if (baudcounter == 0) begin
+			if (rx) begin
+				// False start bit
 				state <= STATE_IDLE;
 			end else begin
-				baudcounter <= baudcounter - 1;
+				state <= STATE_BITS;
+				bitcounter <= 7;
+				baudcounter <= RESET_VALUE;
 			end
+		end else begin
+			baudcounter <= baudcounter - 1;
 		end
-	endcase
+	end else if (state == STATE_BITS) begin
+		if (baudcounter == 0) begin
+			data <= {rx, data[7:1]};
+			baudcounter <= RESET_VALUE;
+			if (bitcounter == 0) begin
+				state <= STATE_STOP;
+				baudcounter <= RESET_VALUE;
+			end else begin
+				bitcounter <= bitcounter - 1;
+			end
+		end else begin
+			baudcounter <= baudcounter - 1;
+		end
+	end else if (state == STATE_STOP) begin
+		if (baudcounter == 0) begin
+			state <= STATE_IDLE;
+		end else begin
+			baudcounter <= baudcounter - 1;
+		end
+	end else begin
+		state <= STATE_IDLE;
+	end
 
 assign valid_o = (state == STATE_STOP && baudcounter == RESET_VALUE);
 assign data_o = data;

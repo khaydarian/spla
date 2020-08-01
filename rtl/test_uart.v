@@ -9,26 +9,23 @@ module test_uart(
 	output led8,
 	output tp9);
 
-reg output_blocked;
-
 reg [7:0] incoming_data;
-wire incoming_valid;
-wire tx_busy;
+reg incoming_valid;
 
 uart_rx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_rx0(
 		.clock(clock),
 		.data_o(incoming_data),
 		.valid_o(incoming_valid),
-		.rx_i(uart_rx),
-		.tap_o(tp9));
+		.rx_i(uart_rx)
+		//,.tap_o(tp9)
+		);
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_tx0(
 		.clock(clock),
 		.write_i(incoming_valid),
 		.data_i(incoming_data),
-		.busy_o(tx_busy),
 		.tx_o(uart_tx));
 
 oneshot #(.CYCLES(600000)) // 50ms
