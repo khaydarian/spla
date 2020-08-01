@@ -6,8 +6,7 @@ module test_uart(
 	output uart_tx,
 	input  uart_rx,
 	output led7,
-	output led8,
-	output tp9);
+	output led8);
 
 reg [7:0] incoming_data;
 reg incoming_valid;
@@ -18,7 +17,6 @@ uart_rx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 		.data_o(incoming_data),
 		.valid_o(incoming_valid),
 		.rx_i(uart_rx)
-		//,.tap_o(tp9)
 		);
 
 uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud

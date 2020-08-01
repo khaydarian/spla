@@ -5,8 +5,7 @@ module uart_rx(
 	input  clock,
 	output [7:0] data_o,
 	output valid_o,
-	input  rx_i,
-	output tap_o);
+	input  rx_i);
 
 parameter CLOCKS_PER_BAUD = 6;
 localparam RESET_VALUE = CLOCKS_PER_BAUD - 1;
@@ -25,19 +24,19 @@ reg [CLOCKS_PER_BAUD_BITS:0] baudcounter;
 reg [2:0] bitcounter;
 reg [7:0] data;
 
-localparam STATE_IDLE = 4'b0001;
-localparam STATE_HALFWAIT = 4'b0010;
-localparam STATE_BITS = 4'b0100;
-localparam STATE_STOP = 4'b1000;
-reg [3:0] state;
+localparam STATE_IDLE = 2'b00;
+localparam STATE_WAIT = 2'b01;
+localparam STATE_BITS = 2'b10;
+localparam STATE_STOP = 2'b11;
+reg [1:0] state;
 
 always @(posedge clock)
 	if (state == STATE_IDLE) begin
 		if (!rx) begin
-			state <= STATE_HALFWAIT;
+			state <= STATE_WAIT;
 			baudcounter <= HALF_RESET_VALUE;
 		end
-	end else if (state == STATE_HALFWAIT) begin
+	end else if (state == STATE_WAIT) begin
 		if (baudcounter == 0) begin
 			if (rx) begin
 				// False start bit
@@ -75,9 +74,5 @@ always @(posedge clock)
 
 assign valid_o = (state == STATE_STOP && baudcounter == RESET_VALUE);
 assign data_o = data;
-
-assign tap_o = state[0];
-//assign tap_o = state != STATE_IDLE;
-//assign tap_o = rx;
 
 endmodule
