@@ -4,6 +4,8 @@
 import txtdb, schema
 
 def lint_files(files):
+    if not files:
+        files = default_files()
     db = txtdb.Txtdb()
     for f in files:
         db.parse_file(f)
@@ -16,6 +18,10 @@ def lint_files(files):
     for (filename, lineno), err in errors:
         print '%s:%d: %s' % (filename, lineno, err)
     return len(errors)
+
+def default_files():
+    import sys, os.path, glob
+    return glob.glob(os.path.join(os.path.dirname(sys.argv[0]), "*.txtdb"))
 
 def validate_fields(db, errors):
     for obj in db.objects:

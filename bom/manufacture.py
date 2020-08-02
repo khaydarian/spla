@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # vi: ts=4:sw=4:sts=4:et
 
-import sys, bom
-sys.path.append('./accounting')
+import sys, os.path, bom
+ACCOUNTING_DIR = os.path.join(os.path.dirname(sys.argv[0]), '../accounting')
+sys.path.append(ACCOUNTING_DIR)
+print sys.path[-1]
 import txtdb
 
 GREEN = '[92m'
@@ -59,8 +61,8 @@ STAGES = [
 def main(args):
 
     db = txtdb.Txtdb()
-    db.parse_file('./accounting/board.txtdb')
-    db.parse_file('./accounting/board-used.txtdb')
+    db.parse_file(os.path.join(ACCOUNTING_DIR, 'board.txtdb'))
+    db.parse_file(os.path.join(ACCOUNTING_DIR, 'board-used.txtdb'))
     desc_by_digikey = {}
     for obj, digikey in db.objects_with_field('Digikey Product Id'):
         desc = obj.get('Digikey Description')

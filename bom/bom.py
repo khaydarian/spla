@@ -5,6 +5,10 @@ from xml.etree import ElementTree
 
 DEFAULT_BOM_FILENAME = 'spla-board/spla-board.xml'
 
+def defaultBomFilename():
+    import sys, os.path
+    return os.path.join(os.path.dirname(sys.argv[0]), '..', DEFAULT_BOM_FILENAME)
+
 def refsplit(ref):
     a, i = re.match('([A-Z]+)([0-9]+)', ref).groups()
     return (a, int(i))
@@ -43,9 +47,10 @@ class Component(object):
         return False
 
 def parse_xml(args):
-    filename = DEFAULT_BOM_FILENAME
     if len(args) > 0:
         filename = args[0]
+    else:
+        filename = defaultBomFilename()
     assert filename.endswith('.xml')
     et = ElementTree.parse(filename)
     components = et.find('components')
