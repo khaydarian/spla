@@ -38,7 +38,7 @@ assign do_write = write_i & ~full;
 reg [DATA_BITS-1:0] memory [0:MEMORY_SIZE-1];
 
 always @(posedge clock)
-	if (reset)
+	if (!reset)
 		read_addr <= 0;
 	else if (do_read)
 		read_addr <= read_addr + 1;
@@ -48,7 +48,7 @@ assign read_data_o =
 	? write_data_i : memory[read_addr[DEPTH_BITS-1:0]];
 
 always @(posedge clock)
-	if (reset)
+	if (!reset)
 		write_addr <= 0;
 	else if (do_write) begin
 		write_addr <= write_addr + 1;

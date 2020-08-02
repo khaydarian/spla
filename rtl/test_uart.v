@@ -8,6 +8,9 @@ module test_uart(
 	output led7,
 	output led8);
 
+wire reset;
+unreset_by_uart unreset(.clock(clock), .uart_rx(uart_rx), .reset(reset));
+
 wire [7:0] incoming_data;
 wire incoming_valid;
 wire [7:0] outgoing_data;
@@ -30,6 +33,7 @@ assign do_tx = fifo_available && !tx_busy && !fifo_corked;
 uart_rx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 	uart_rx0(
 		.clock(clock),
+		.reset(reset),
 		.data_o(incoming_data),
 		.valid_o(incoming_valid),
 		.rx_i(uart_rx));
@@ -37,7 +41,7 @@ uart_rx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 fifo #(.DEPTH_BITS(5))  // 32 elements
 	uart_fifo(
 		.clock(clock),
-		.reset(0),
+		.reset(reset),
 		.write_i(incoming_valid),
 		.write_data_i(incoming_data),
 		.write_ready_o(fifo_has_space),

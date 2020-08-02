@@ -3,6 +3,7 @@
 
 module uart_rx(
 	input  clock,
+	input  reset,
 	output [7:0] data_o,
 	output valid_o,
 	input  rx_i);
@@ -26,7 +27,9 @@ localparam STATE_STOP = 4'b1000;
 reg [3:0] state;
 
 always @(posedge clock)
-	case (state)
+	if (!reset) begin
+		state <= STATE_IDLE;
+	end else case (state)
 		STATE_IDLE:
 			if (!rx) begin
 				state <= STATE_WAIT;
