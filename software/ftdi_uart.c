@@ -1,8 +1,8 @@
 // vi: ts=2:sw=2:sts=2:et
 
+#include <poll.h>
 #include <stdio.h>
 #include <string.h>
-#include <poll.h>
 #include <unistd.h>
 #include "command.h"
 #include "ftdi.h"
@@ -33,10 +33,10 @@ status ftdi_uart(int argc, char** argv) {
   uint8_t buf[1024];
 
   struct pollfd pollfds[] = {
-    {
-      .fd = 0,  // stdin
-      .events = POLLIN,
-    },
+      {
+          .fd = 0,  // stdin
+          .events = POLLIN,
+      },
   };
 
   while (true) {

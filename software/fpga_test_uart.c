@@ -9,6 +9,7 @@
 #include "ftdi.h"
 #include "ftdiutil.h"
 #include "uart.h"
+
 static void chincrement(int* chp) {
   int ch = *chp;
   if (('a' <= ch) && (ch <= 'y')) {
@@ -40,8 +41,6 @@ status fpga_test_uart(int argc, char** argv) {
 
   ftdiutil_set_interface(INTERFACE_A);
   uart_init();
-
-  usleep(1000000);  // 1 s
 
   uint8_t buf[1024];
   int ch = 0x41;
