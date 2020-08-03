@@ -1,0 +1,8 @@
+lib/constants.v
+bringup_vram.v
+lib/oneshot.v
+lib/pins.v
+lib/sync2ff.v
+lib/uart_rx.v
+lib/uart_tx.v
+lib/unreset_by_uart.v
