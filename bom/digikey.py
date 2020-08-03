@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vi: ts=4:sw=4:sts=4:et
 
 import sys, bom
@@ -8,7 +8,7 @@ def main(args):
     b.remove_boring_components()
     if len(b.warnings):
         for w in b.warnings:
-            print w.text
+            print(w.text)
     digikey = {}
     for c in b.components:
         if c.digikey == 'N/A':
@@ -17,7 +17,7 @@ def main(args):
             digikey[c.digikey] = []
         digikey[c.digikey].append(c.ref)
     for digikey, refs in sorted(digikey.items()):
-        print '%d,%s,%s' % (len(refs), digikey, '/'.join(refs))
+        print('%d,%s,%s' % (len(refs), digikey, '/'.join(refs)))
 
 if __name__ == '__main__':
     main(sys.argv[1:])

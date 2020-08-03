@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vi: ts=4:sw=4:sts=4:et
 
 import sys, os.path, bom
@@ -36,10 +36,10 @@ def main(args):
     error = False
     for digikey in digikeys:
         if digikey in bom_by_digikey and digikey not in inv_by_digikey:
-            print "Only in BOM:", digikey
+            print("Only in BOM:", digikey)
             error = True
         if digikey not in bom_by_digikey and digikey in inv_by_digikey:
-            print "Only in INV:", digikey
+            print("Only in INV:", digikey)
             error = True
     if error:
         return
@@ -62,13 +62,13 @@ def main(args):
     parts.sort()
 
     for nboards, digikey, desc, need, quantity, remaining in parts:
-        print 'B %2d N %3d R %3d/%3d : %-20s (%s)' % (
-            nboards, need, remaining, quantity, digikey, desc)
+        print('B %2d N %3d R %3d/%3d : %-20s (%s)' % (
+            nboards, need, remaining, quantity, digikey, desc))
         #print "--- %s (%s)" % (digikey, desc)
         #print "Boards %d, Need %d per board, Remaining %d / %d" % (
         #        nboards, need, remaining, quantity)
 
-    print "(Also check on pinheaders manually.)"
+    print("(Also check on pinheaders manually.)")
 
 if __name__ == '__main__':
     main(sys.argv[1:])

@@ -1,3 +1,5 @@
+# vi: ts=4:sw=4:sts=4:et
+
 def e12(scale): return [x * scale for x in e12_raw]
 def e24(scale): return [x * scale for x in e24_raw]
 def e96(scale): return [x * scale for x in e96_raw]

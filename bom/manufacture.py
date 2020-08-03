@@ -1,10 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vi: ts=4:sw=4:sts=4:et
 
 import sys, os.path, bom
 ACCOUNTING_DIR = os.path.join(os.path.dirname(sys.argv[0]), '../accounting')
 sys.path.append(ACCOUNTING_DIR)
-print sys.path[-1]
 import txtdb
 
 GREEN = '[92m'
@@ -16,7 +15,7 @@ class Stage(object):
         self.refs = refs.split()
 
     def show(self, c_by_ref, desc_by_digikey):
-        print "----- %s -----" % self.name
+        print("----- %s -----" % self.name)
         components_by_digikey = {}
         for r in self.refs:
             c = c_by_ref[r]
@@ -24,13 +23,13 @@ class Stage(object):
                 components_by_digikey[c.digikey] = []
             components_by_digikey[c.digikey].append(c)
 
-        digikeys = components_by_digikey.keys()
+        digikeys = list(components_by_digikey.keys())
         digikeys.sort(key=lambda d: refsortkey(components_by_digikey[d][0].ref))
         for digikey in digikeys:
             components = components_by_digikey[digikey]
-            print '[%-20s] %s%s%s (%r)' % (
-                digikey, GREEN, desc_by_digikey[digikey], RESET, components[0].value)
-            print ' ', ' '.join([c.ref for c in components])
+            print('[%-20s] %s%s%s (%r)' % (
+                digikey, GREEN, desc_by_digikey[digikey], RESET, components[0].value))
+            print(' ', ' '.join([c.ref for c in components]))
 
 def refsortkey(ref):
     if ref.startswith('R'):

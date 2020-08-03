@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vi: ts=4:sw=4:sts=4:et
 
 import sys, re
@@ -12,14 +12,14 @@ for line in open(sys.argv[1]):
         raise ValueError('Bad line: %r' % line)
     name, val = m.groups()
     val = int(val)
-    print '#define %s %d' % (name, val)
+    print('#define %s %d' % (name, val))
     if name in ('PINDEFMIN', 'PINDEFMAX'):
         continue
     assert name.startswith('PINDEF_');
     lowername = name[7:].lower()
     nametable[val] = lowername
 
-print 'const char* pindef_name[] = {'
-for i in xrange(max(nametable.keys())+1):
-    print '  "%s",' % nametable.get(i, "(n/a)")
-print '};'
+print('const char* pindef_name[] = {')
+for i in range(max(nametable.keys())+1):
+    print('  "%s",' % nametable.get(i, "(n/a)"))
+print('};')

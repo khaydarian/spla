@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vi: ts=4:sw=4:sts=4:et
 
 import txtdb, schema
@@ -16,7 +16,9 @@ def lint_files(files):
     validate_cost_total(db, errors)
     errors.sort()
     for (filename, lineno), err in errors:
-        print '%s:%d: %s' % (filename, lineno, err)
+        print('%s:%d: %s' % (filename, lineno, err))
+    else:
+        print('ok')
     return len(errors)
 
 def default_files():
