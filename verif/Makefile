@@ -52,8 +52,8 @@ build/bringup_scanner: bringup_scanner.cpp build/obj_dir/Vbringup_scanner__ALL.a
 build/bringup_scanner.trace.vcd: build/bringup_scanner
 	(cd build && ./bringup_scanner)
 
-build/uart_rx.concat.v: $(RTLDIR)/sync2ff.v $(RTLDIR)/uart_rx.v
-	cat $^ >$@
+build/uart_rx.concat.v: $(RTLDIR)/uart_rx.v $(RTLDIR)/sync2ff.v
+	(echo "/* verilator lint_off DECLFILENAME */"; cat $^) >$@
 
 build/obj_dir/Vuart_rx.cpp: build/uart_rx.concat.v
 	(cd build && $(VERILATOR) --trace -Wall -I.. -cc ../$<)
