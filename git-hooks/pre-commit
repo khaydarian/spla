@@ -1,0 +1,16 @@
+#!/bin/bash
+# vi: ts=4:noet
+
+set -e
+
+IFS=$'\n'
+
+for line in $(git status -s); do
+	if [[ "$line" == A* || "$line" == M* ]]; then
+		file="$(pwd)/${line:3}"
+		if [[ "$file" == *.c || "$file" == *.h || "$file" == *.cc || "$file" == *.cpp ]]; then
+			clang-format -i -style=Google "$file"
+			git add $file
+		fi
+	fi
+done
