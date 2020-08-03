@@ -67,6 +67,62 @@ uart_rx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 		.valid_o(incoming_valid),
 		.rx_i(uart_rx));
 
+// VRAM.
+wire error_bad_state;
+wire error_bad_opcode;
+
+vram_control
+	vram(
+		.clock(clock),
+		.reset(reset),
+		.read_data_i(incoming_data),
+		.read_valid_i(incoming_valid),
+		.write_data_o(outgoing_data),
+		.write_valid_o(outgoing_valid),
+		.write_ready_i(!tx_busy),
+		.error_bad_state_o(error_bad_state),
+		.error_bad_opcode_o(error_bad_opcode));
+
+// UART TX.
+uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
+	uart_tx0(
+		.clock(clock),
+		.write_i(outgoing_valid),
+		.data_i(outgoing_data),
+		.busy_o(tx_busy),
+		.tx_o(uart_tx));
+
+// LEDs.
+oneshot #(.CYCLES(600000)) // 50ms
+	oneshot_led7(.clock(clock), .in(incoming_valid), .out(led7));
+
+assign led8 = error_bad_state || error_bad_opcode;
+
+// TEMP
+assign lvl_va_dir = LVL_DIR_INPUT;
+assign vrd_n = 1;
+assign vawr_n = 1;
+assign vbwr_n = 1;
+assign va14 = 1;
+assign vaa = 14'd0;
+assign vab = 14'd0;
+
+endmodule
+
+module vram_control(
+	input  clock,
+	input  reset,
+
+	input  [7:0] read_data_i,
+	input  read_valid_i,
+
+	output [7:0] write_data_o,
+	output write_valid_o,
+	input  write_ready_i,
+
+	output error_bad_state_o,
+	output error_bad_opcode_o);
+
 // Commands: opcode + argument
 reg [7:0] opcode;
 reg [7:0] arg;
@@ -128,14 +184,14 @@ always @(posedge clock)
 		state <= STATE_IDLE;
 	end else case (state)
 		STATE_IDLE: begin
-			if (incoming_valid) begin
-				opcode <= incoming_data;
+			if (read_valid_i) begin
+				opcode <= read_data_i;
 				state <= STATE_WAIT_ARG;
 			end
 		end
 		STATE_WAIT_ARG: begin
-			if (incoming_valid) begin
-				arg <= incoming_data;
+			if (read_valid_i) begin
+				arg <= read_data_i;
 				state <= STATE_EXECUTE;
 			end
 		end
@@ -210,7 +266,8 @@ always @(posedge clock)
 		STATE_OUTPUT: begin
 			if (outcount == 0) begin
 				state <= STATE_IDLE;
-			end else if (outgoing_valid) begin
+			end else if (write_valid_o) begin
+				outbuf[0] <= outbuf[1];
 				outcount <= outcount - 1;
 			end
 		end
@@ -220,32 +277,10 @@ always @(posedge clock)
 		end
 	endcase
 
-assign outgoing_data = outbuf[0];
-assign outgoing_valid = (outcount != 0) && !tx_busy;
+assign write_data_o = outbuf[0];
+assign write_valid_o = (outcount != 0) && write_ready_i;
 
-// UART TX.
-uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
-	uart_tx0(
-		.clock(clock),
-		.write_i(outgoing_valid),
-		.data_i(outgoing_data),
-		.busy_o(tx_busy),
-		.tx_o(uart_tx));
-
-// LEDs.
-//oneshot #(.CYCLES(600000)) // 50ms
-//	oneshot_led7(.clock(clock), .in(incoming_valid), .out(led7));
-
-assign led7 = reg_error_bad_state;
-assign led8 = reg_error_bad_opcode;
-
-// TEMP
-assign lvl_va_dir = LVL_DIR_INPUT;
-assign vrd_n = 1;
-assign vawr_n = 1;
-assign vbwr_n = 1;
-assign va14 = 1;
-assign vaa = 14'd0;
-assign vab = 14'd0;
+assign error_bad_state_o = reg_error_bad_state;
+assign error_bad_opcode_o = reg_error_bad_opcode;
 
 endmodule
