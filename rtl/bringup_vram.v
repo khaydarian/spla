@@ -42,14 +42,13 @@ assign ppu2_reset_n = 0;
 assign lvl_va_dir = LVL_DIR_OUTPUT;
 
 // Bidirectional data pins.
-wire vd_dir;
 wire [7:0] vda_i;
 wire [7:0] vdb_i;
 wire [7:0] vda_o;
 wire [7:0] vdb_o;
 
-pin_bidir_8 pin_bidir_vda(.i(vda_i), .o(vda_o), .dir(vd_dir), .pin(vda));
-pin_bidir_8 pin_bidir_vdb(.i(vdb_i), .o(vdb_o), .dir(vd_dir), .pin(vdb));
+pin_bidir_8 pin_bidir_vda(.i(vda_i), .o(vda_o), .dir(lvl_vd_dir), .pin(vda));
+pin_bidir_8 pin_bidir_vdb(.i(vdb_i), .o(vdb_o), .dir(lvl_vd_dir), .pin(vdb));
 
 // UART RX/TX wiring.
 wire [7:0] incoming_data;
@@ -75,11 +74,25 @@ vram_control
 	vram(
 		.clock(clock),
 		.reset(reset),
+		// Control/Data interface
 		.read_data_i(incoming_data),
 		.read_valid_i(incoming_valid),
 		.write_data_o(outgoing_data),
 		.write_valid_o(outgoing_valid),
 		.write_ready_i(!tx_busy),
+		// VRAM bus
+		.vrd_n_o(vrd_n),
+		.vawr_n_o(vawr_n),
+		.vbwr_n_o(vbwr_n),
+		.va14_o(va14),
+		.vaa_o(vaa),
+		.vab_o(vab),
+		.vd_dir_o(lvl_vd_dir),
+		.vda_i(vda_i),
+		.vdb_i(vdb_i),
+		.vda_o(vda_o),
+		.vdb_o(vdb_o),
+		// Error output
 		.error_bad_state_o(error_bad_state),
 		.error_bad_opcode_o(error_bad_opcode));
 
@@ -93,19 +106,10 @@ uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 		.tx_o(uart_tx));
 
 // LEDs.
-oneshot #(.CYCLES(600000)) // 50ms
+oneshot #(.CYCLES(60000)) // 5ms
 	oneshot_led7(.clock(clock), .in(incoming_valid), .out(led7));
 
 assign led8 = error_bad_state || error_bad_opcode;
-
-// TEMP
-assign lvl_va_dir = LVL_DIR_INPUT;
-assign vrd_n = 1;
-assign vawr_n = 1;
-assign vbwr_n = 1;
-assign va14 = 1;
-assign vaa = 14'd0;
-assign vab = 14'd0;
 
 endmodule
 
@@ -113,13 +117,27 @@ module vram_control(
 	input  clock,
 	input  reset,
 
+	// Control/Data interface
 	input  [7:0] read_data_i,
 	input  read_valid_i,
-
 	output [7:0] write_data_o,
 	output write_valid_o,
 	input  write_ready_i,
 
+	// VRAM bus
+	output vrd_n_o,
+	output vawr_n_o,
+	output vbwr_n_o,
+	output va14_o,
+	output [13:0] vaa_o,
+	output [13:0] vab_o,
+	output vd_dir_o,
+	input  [7:0] vda_i,
+	input  [7:0] vdb_i,
+	output [7:0] vda_o,
+	output [7:0] vdb_o,
+
+	// Error output
 	output error_bad_state_o,
 	output error_bad_opcode_o);
 
@@ -127,24 +145,21 @@ module vram_control(
 reg [7:0] opcode;
 reg [7:0] arg;
 
-localparam OPCODE_NOOP           = 8'h00;
-localparam OPCODE_ECHO           = 8'h01;
-localparam OPCODE_ECHO2          = 8'h02;
-localparam OPCODE_RESET          = 8'h10;
-localparam OPCODE_SET_VAA_LOW    = 8'h20;
-localparam OPCODE_SET_VAA_HIGH   = 8'h21;
-localparam OPCODE_SET_VAB_LOW    = 8'h30;
-localparam OPCODE_SET_VAB_HIGH   = 8'h31;
-localparam OPCODE_SET_VDA        = 8'h42;
-localparam OPCODE_SET_VDB        = 8'h43;
-localparam OPCODE_WRITE_DURATION = 8'h50;
-localparam OPCODE_READ_DELAY     = 8'h51;
-localparam OPCODE_WRITE          = 8'h80;
-localparam OPCODE_READ           = 8'h90;
-
-// flag: postincrement write address
-// flag: postincrement read address
-// flag: scramble vda / vdb per write
+localparam OPCODE_NOOP               = 8'h00;
+localparam OPCODE_ECHO               = 8'h01;
+localparam OPCODE_ECHO2              = 8'h02;
+localparam OPCODE_RESET              = 8'h10;
+localparam OPCODE_SET_VA_LOW         = 8'h20;
+localparam OPCODE_SET_VA_HIGH        = 8'h21;
+localparam OPCODE_SET_VAA_LOW        = 8'h30;
+localparam OPCODE_SET_VAA_HIGH       = 8'h31;
+localparam OPCODE_SET_VAB_LOW        = 8'h40;
+localparam OPCODE_SET_VAB_HIGH       = 8'h41;
+localparam OPCODE_SET_VDA            = 8'h50;
+localparam OPCODE_SET_VDB            = 8'h51;
+localparam OPCODE_SET_CYCLE_DURATION = 8'h60;
+localparam OPCODE_WRITE              = 8'h80;
+localparam OPCODE_READ               = 8'h90;
 
 // Registers
 reg reg_error_bad_state;
@@ -154,21 +169,33 @@ reg [13:0] reg_vaa;
 reg [13:0] reg_vab;
 reg [7:0] reg_vda;
 reg [7:0] reg_vdb;
-reg [5:0] reg_write_duration;
-reg [5:0] reg_read_delay;
-localparam MAX_DURATION = 6'b111111;
-localparam MAX_DELAY    = 6'b111111;
+
+localparam CYCLE_DURATION_BITS = 6;
+reg [CYCLE_DURATION_BITS-1:0] reg_cycle_duration;
+localparam MAX_CYCLE_DURATION = (1 << CYCLE_DURATION_BITS) - 1;
+
+reg cycle_op;
+localparam CYCLE_OP_READ = 1'b0;
+localparam CYCLE_OP_WRITE = 1'b1;
+wire cycle_op_is_read;
+wire cycle_op_is_write;
+assign cycle_op_is_read = (cycle_op == CYCLE_OP_READ);
+assign cycle_op_is_write = (cycle_op == CYCLE_OP_WRITE);
+
+reg [CYCLE_DURATION_BITS-1:0] cycle_counter;
 
 // Output Buffer
-reg [7:0] outbuf [1:0];
+reg [7:0] out_first;
+reg [7:0] out_second;
 reg [1:0] outcount;
 
 // State Machine.
-localparam STATE_IDLE     = 4'b0001;
-localparam STATE_WAIT_ARG = 4'b0010;
-localparam STATE_EXECUTE  = 4'b0100;
-localparam STATE_OUTPUT   = 4'b1000;
-reg [3:0] state;
+localparam STATE_IDLE     = 5'b00001;
+localparam STATE_WAIT_ARG = 5'b00010;
+localparam STATE_EXECUTE  = 5'b00100;
+localparam STATE_CYCLE    = 5'b01000;
+localparam STATE_OUTPUT   = 5'b10000;
+reg [4:0] state;
 
 always @(posedge clock)
 	if (!reset) begin
@@ -179,8 +206,7 @@ always @(posedge clock)
 		reg_vab <= 0;
 		reg_vda <= 0;
 		reg_vdb <= 0;
-		reg_write_duration <= MAX_DURATION;
-		reg_read_delay <= MAX_DELAY;
+		reg_cycle_duration <= MAX_CYCLE_DURATION;
 		state <= STATE_IDLE;
 	end else case (state)
 		STATE_IDLE: begin
@@ -201,13 +227,13 @@ always @(posedge clock)
 					state <= STATE_IDLE;
 				end
 				OPCODE_ECHO: begin
-					outbuf[0] <= arg;
+					out_first <= arg;
 					outcount <= 1;
 					state <= STATE_OUTPUT;
 				end
 				OPCODE_ECHO2: begin
-					outbuf[0] <= arg;
-					outbuf[1] <= ~arg;
+					out_first <= arg;
+					out_second <= ~arg;
 					outcount <= 2;
 					state <= STATE_OUTPUT;
 				end
@@ -219,8 +245,18 @@ always @(posedge clock)
 					reg_vab <= 0;
 					reg_vda <= 0;
 					reg_vdb <= 0;
-					reg_write_duration <= MAX_DURATION;
-					reg_read_delay <= MAX_DELAY;
+					reg_cycle_duration <= MAX_CYCLE_DURATION;
+					state <= STATE_IDLE;
+				end
+				OPCODE_SET_VA_LOW: begin
+					reg_vaa <= {reg_vaa[13:8], arg};
+					reg_vab <= {reg_vab[13:8], arg};
+					state <= STATE_IDLE;
+				end
+				OPCODE_SET_VA_HIGH: begin
+					reg_va14 <= arg[6];
+					reg_vaa <= {arg[5:0], reg_vaa[7:0]};
+					reg_vab <= {arg[5:0], reg_vab[7:0]};
 					state <= STATE_IDLE;
 				end
 				OPCODE_SET_VAA_LOW: begin
@@ -246,16 +282,22 @@ always @(posedge clock)
 					state <= STATE_IDLE;
 				end
 				OPCODE_SET_VDB: begin
-					reg_vda <= arg;
+					reg_vdb <= arg;
 					state <= STATE_IDLE;
 				end
-				OPCODE_WRITE_DURATION: begin
-					reg_write_duration <= arg;
+				OPCODE_SET_CYCLE_DURATION: begin
+					reg_cycle_duration <= arg;
 					state <= STATE_IDLE;
 				end
-				OPCODE_READ_DELAY: begin
-					reg_read_delay <= arg;
-					state <= STATE_IDLE;
+				OPCODE_WRITE: begin
+					cycle_op <= CYCLE_OP_WRITE;
+					cycle_counter <= 0;
+					state <= STATE_CYCLE;
+				end
+				OPCODE_READ: begin
+					cycle_op <= CYCLE_OP_READ;
+					cycle_counter <= 0;
+					state <= STATE_CYCLE;
 				end
 				default: begin
 					reg_error_bad_opcode <= 1;
@@ -263,11 +305,25 @@ always @(posedge clock)
 				end
 			endcase
 		end
+		STATE_CYCLE: begin
+			if (cycle_counter == reg_cycle_duration) begin
+				if (cycle_op_is_read) begin
+					reg_vda <= vda_i;
+					reg_vdb <= vdb_i;
+					out_first <= vda_i;
+					out_second <= vdb_i;
+					outcount <= 2;
+				end
+				state <= STATE_OUTPUT;
+			end else begin
+				cycle_counter <= cycle_counter + 1;
+			end
+		end
 		STATE_OUTPUT: begin
 			if (outcount == 0) begin
 				state <= STATE_IDLE;
 			end else if (write_valid_o) begin
-				outbuf[0] <= outbuf[1];
+				out_first <= out_second;
 				outcount <= outcount - 1;
 			end
 		end
@@ -277,9 +333,25 @@ always @(posedge clock)
 		end
 	endcase
 
-assign write_data_o = outbuf[0];
+// Cycle signals
+assign vrd_n_o = (state == STATE_CYCLE ? ~cycle_op_is_read : 1);
+assign vawr_n_o = (state == STATE_CYCLE ? ~cycle_op_is_write : 1);
+assign vbwr_n_o = (state == STATE_CYCLE ? ~cycle_op_is_write : 1);
+assign va14_o = (state == STATE_CYCLE ? reg_va14 : 0);
+assign vaa_o = (state == STATE_CYCLE ? reg_vaa : 14'd0);
+assign vab_o = (state == STATE_CYCLE ? reg_vab : 14'd0);
+assign vd_dir_o = (
+	state == STATE_CYCLE ?
+		(cycle_op_is_write ? LVL_DIR_OUTPUT : LVL_DIR_INPUT)
+		: LVL_DIR_INPUT);
+assign vda_o = (state == STATE_CYCLE ? reg_vda : 8'd0);
+assign vdb_o = (state == STATE_CYCLE ? reg_vdb : 8'd0);
+
+// Output signals
+assign write_data_o = out_first;
 assign write_valid_o = (outcount != 0) && write_ready_i;
 
+// Error signals
 assign error_bad_state_o = reg_error_bad_state;
 assign error_bad_opcode_o = reg_error_bad_opcode;
 
