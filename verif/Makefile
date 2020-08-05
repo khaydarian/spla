@@ -70,4 +70,22 @@ build/uart_rx: uart_rx.cpp build/obj_dir/Vuart_rx__ALL.a
 build/uart_rx.trace.vcd: build/uart_rx
 	(cd build && ./uart_rx)
 
-verilator: build/bringup_sensor.trace.vcd build/bringup_scanner.trace.vcd build/uart_rx.trace.vcd
+build/vram_control.concat.v: $(RTLDIR)/constants.v $(RTLDIR)/vram_control.v
+	(echo "/* verilator lint_off DECLFILENAME */"; cat $^) >$@
+
+build/obj_dir/Vvram_control.cpp: build/vram_control.concat.v
+	(cd build && $(VERILATOR) --trace -Wall -I.. -cc ../$<)
+
+build/obj_dir/Vvram_control__ALL.a: build/obj_dir/Vvram_control.cpp
+	make --no-print-directory -C build/obj_dir -f Vvram_control.mk
+
+build/vram_control: vram_control.cpp build/obj_dir/Vvram_control__ALL.a
+	$(CC) $(CC_FLAGS) -I$(VERILATOR_INCLUDE) -I build/obj_dir \
+		$(VERILATOR_INCLUDE)/verilated.cpp \
+		$(VERILATOR_INCLUDE)/verilated_vcd_c.cpp \
+		-o $@ $^
+
+build/vram_control.trace.vcd: build/vram_control
+	(cd build && ./vram_control)
+
+verilator: build/bringup_sensor.trace.vcd build/bringup_scanner.trace.vcd build/uart_rx.trace.vcd build/vram_control.trace.vcd
