@@ -30,12 +30,17 @@ build/command_table.o: build/command_table.c command.h $(SRCS)
 	$(CC) $(CFLAGS) -I. -c $< -o $@
 
 build/command_table.c: command_table.py $(SRCS)
-	python $^ >$@
+	python3 $^ >$@
 
 build/pindef.h: pindef.py ../rtl/lib/pindef.v
-	python $^ >$@
+	python3 $^ >$@
 
 build/bringup_boundary.o: build/pindef.h
+
+build/vram_control.h: vram_control.py ../rtl/lib/vram_control.v
+	python3 $^ >$@
+
+build/bringup_vram.o: build/vram_control.h
 
 OBJS := $(patsubst %.c,build/%.o,$(SRCS))
 OBJS += build/ftdi.o
