@@ -1,0 +1,4 @@
+lib/constants.v
+bringup_vram_trivial.v
+lib/clock_div.v
+lib/pins.v

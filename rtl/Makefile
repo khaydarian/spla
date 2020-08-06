@@ -10,6 +10,8 @@ ALL += build/bringup_boundary.bit
 ALL += build/bringup_levelshifter1.bit
 ALL += build/bringup_levelshifter2.bit
 ALL += build/bringup_vram.bit
+ALL += build/bringup_vram_trivial.bit
+ALL += build/bringup_vram_scan.bit
 ALL += build/test_uart.bit
 
 # By default, build all bitstreams.
@@ -42,6 +44,10 @@ build/bringup_levelshifter2.json: $(shell cat bringup_levelshifter2.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_levelshifter2 -json $@' $^
 build/bringup_vram.json: $(shell cat bringup_vram.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_vram -json $@' $^
+build/bringup_vram_trivial.json: $(shell cat bringup_vram_trivial.vf)
+	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_vram_trivial -json $@' $^
+build/bringup_vram_scan.json: $(shell cat bringup_vram_scan.vf)
+	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_vram_scan -json $@' $^
 build/test_uart.json: $(shell cat test_uart.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top test_uart -json $@' $^
 
