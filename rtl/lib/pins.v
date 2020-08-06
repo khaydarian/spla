@@ -8,8 +8,7 @@ module pin_bidir(
 	input pin // Actual pin
 	);
 
-TRELLIS_IO #(.DIR("BIDIR")) trellis_io_inst (
-	.I(o), .O(i), .T(dir), .B(pin));
+BB bb(.I(o), .O(i), .T(dir), .B(pin));
 
 endmodule
 
