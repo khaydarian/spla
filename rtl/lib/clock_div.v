@@ -6,7 +6,7 @@ module clock_div(
 	output div_o);
 
 parameter CYCLES = 12000000;
-localparam RESET_VAL = CYCLES / 2;
+localparam RESET_VAL = (CYCLES - 1) / 2;
 localparam BITS = $clog2(RESET_VAL);
 
 reg [BITS-1:0] counter;
