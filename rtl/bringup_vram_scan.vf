@@ -1,4 +1,0 @@
-lib/constants.v
-bringup_vram_scan.v
-lib/pulse.v
-lib/pins.v
