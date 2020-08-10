@@ -1,6 +1,5 @@
 bringup_vram_steps.v
 lib/oneshot.v
-lib/pins.v
 lib/uart_rx.v
 lib/uart_tx.v
 lib/sync2ff.v
