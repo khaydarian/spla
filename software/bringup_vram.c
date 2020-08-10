@@ -119,10 +119,6 @@ static void set_vda(uint8_t vda) { queue_op_zero(OPCODE_SET_VDA, vda); }
 
 static void set_vdb(uint8_t vdb) { queue_op_zero(OPCODE_SET_VDB, vdb); }
 
-static void set_duration(uint8_t duration) {
-  queue_op_zero(OPCODE_SET_DURATION, duration);
-}
-
 static void vram_read() { queue_op_zero(OPCODE_CYCLE_READ, 0); }
 
 static void vram_write() { queue_op_zero(OPCODE_CYCLE_WRITE, 0); }
@@ -159,7 +155,7 @@ static status check_vd() {
 }
 
 static status selftest() {
-  printf("--- selftest\n");
+  printf("=== selftest\n");
 
   // ECHO
   printf("echo\n");
@@ -186,7 +182,7 @@ static status selftest() {
 }
 
 static status spot_check() {
-  printf("--- spot_check:\n");
+  printf("=== spot_check:\n");
   set_vaa(0x1234);
   set_vab(0x1234);
   uint8_t expect_vda = 0x1a;
@@ -212,6 +208,7 @@ static status spot_check() {
   vram_read();
   RETURN_IF_ERROR(ftdiutil_flush_reads("spot_check"));
 
+  int errors = 0;
   for (int i = 0; i < 3; i++) {
     get_vda(&vda);
     get_vdb(&vdb);
@@ -219,10 +216,98 @@ static status spot_check() {
     printf("  vda = %s0x%02x%s, vdb = %s0x%02x%s\n",
            (vda == expect_vda ? GREEN : RED), vda, RESET,
            (vdb == expect_vdb ? GREEN : RED), vdb, RESET);
+    errors += (vda == expect_vda ? 0 : 1);
+    errors += (vdb == expect_vdb ? 0 : 1);
   }
 
-  (void)set_duration;
+  if (errors) {
+    printf("--- FAIL (%d errors)\n", errors);
+  } else {
+    printf("--- PASS\n");
+  }
 
+  return OK;
+}
+
+static status bit_scan() {
+  printf("=== bit_scan:\n");
+  reset();
+
+  uint16_t base_tests[] = {0, 0x7fff};
+  int num_base_tests = sizeof(base_tests) / sizeof(base_tests[0]);
+
+  int errors = 0;
+  for (uint16_t baseidx = 0; baseidx < num_base_tests; baseidx++) {
+    uint16_t base = base_tests[baseidx];
+    for (uint16_t bit = 1; bit < MAX_ADDRESS; bit <<= 1) {
+      uint16_t address = base ^ bit;
+      uint8_t expect_vda_at_zero = 0xa1;
+      uint8_t expect_vda_at_one = 0x1a;
+      uint8_t expect_vdb_at_zero = 0xb2;
+      uint8_t expect_vdb_at_one = 0x2b;
+
+      for (unsigned order = 0; order < 2; order++) {
+        for (unsigned which = 0; which < 2; which++) {
+          if (order == which) {
+            set_vaa(base);
+            set_vab(base);
+            set_vda(expect_vda_at_zero);
+            set_vdb(expect_vdb_at_zero);
+            vram_write();
+          } else {
+            set_vaa(address);
+            set_vab(address);
+            set_vda(expect_vda_at_one);
+            set_vdb(expect_vdb_at_one);
+            vram_write();
+          }
+        }
+        RETURN_IF_ERROR(ftdiutil_flush_writes("bit_scan.write"));
+
+        uint8_t actual_vda_at_zero;
+        uint8_t actual_vdb_at_zero;
+        uint8_t actual_vda_at_one;
+        uint8_t actual_vdb_at_one;
+        set_vaa(address);
+        set_vab(address);
+        vram_read();
+        get_vda(&actual_vda_at_one);
+        get_vdb(&actual_vdb_at_one);
+        set_vaa(base);
+        set_vab(base);
+        vram_read();
+        get_vda(&actual_vda_at_zero);
+        get_vdb(&actual_vdb_at_zero);
+        RETURN_IF_ERROR(ftdiutil_flush_reads("bit_scan.read"));
+
+        int line_errors = ((actual_vda_at_zero == expect_vda_at_zero ? 0 : 1) +
+                           (actual_vdb_at_zero == expect_vdb_at_zero ? 0 : 1) +
+                           (actual_vda_at_one == expect_vda_at_one ? 0 : 1) +
+                           (actual_vdb_at_one == expect_vdb_at_one ? 0 : 1));
+        if (line_errors) {
+          printf(
+              "<0x%04x->0x%04x> vda %s0x%02x%s (0x%02x) %s0x%02x%s (0x%02x)"
+              " vdb %s0x%02x%s (0x%02x) %s0x%02x%s (0x%02x)\n",
+              order ? base : address, order ? address : base,
+              (actual_vda_at_zero == expect_vda_at_zero ? GREEN : RED),
+              actual_vda_at_zero, RESET, expect_vda_at_zero,
+              (actual_vda_at_one == expect_vda_at_one ? GREEN : RED),
+              actual_vda_at_one, RESET, expect_vda_at_one,
+              (actual_vdb_at_zero == expect_vdb_at_zero ? GREEN : RED),
+              actual_vdb_at_zero, RESET, expect_vdb_at_zero,
+              (actual_vdb_at_one == expect_vdb_at_one ? GREEN : RED),
+              actual_vdb_at_one, RESET, expect_vdb_at_one);
+        }
+        errors += line_errors;
+      }
+    }
+  }
+
+  if (errors) {
+    printf("--- FAIL (%d errors)\n", errors);
+  } else {
+    printf("--- PASS\n");
+  }
   return OK;
 }
 
@@ -231,10 +316,10 @@ static uint8_t scan_data_at(uint8_t side, uint16_t address) {
 }
 
 static status memory_scan() {
-  printf("--- memory_scan:\n");
+  printf("=== memory_scan:\n");
   uint16_t minaddr = 0;
   uint16_t maxaddr = MAX_ADDRESS;
-  uint16_t incr = 0x40;  // Arbitrary; should be 1 for better sampling.
+  uint16_t incr = 0x41;  // Arbitrary; should be 1 for better sampling.
 
   printf("write:\n");
   int buffered = 0;
@@ -254,6 +339,7 @@ static status memory_scan() {
   }
 
   printf("read:\n");
+  int errors = 0;
   for (uint16_t address = minaddr; address < maxaddr; address += incr) {
     set_vaa(address);
     set_vab(address);
@@ -264,89 +350,20 @@ static status memory_scan() {
     get_vda(&vda);
     get_vdb(&vdb);
     RETURN_IF_ERROR(ftdiutil_flush_reads("memory_scan.vdb"));
-    printf("read 0x%04x vda %s0x%02x%s (0x%02x) vdb %s0x%02x%s (0x%02x)\n",
-           address, (vda == expect_vda ? GREEN : RED), vda, RESET, expect_vda,
-           (vdb == expect_vdb ? GREEN : RED), vdb, RESET, expect_vdb);
-  }
-
-  return OK;
-}
-
-static void set_lvl_vd_dir(int value) {
-  queue_op_zero(OPCODE_SET_LVL_VD_DIR, value & 1);
-}
-
-static void set_vrd_n(int value) { queue_op_zero(OPCODE_SET_VRD_N, value & 1); }
-
-static void set_vawr_n(int value) {
-  queue_op_zero(OPCODE_SET_VAWR_N, value & 1);
-}
-
-static void set_vbwr_n(int value) {
-  queue_op_zero(OPCODE_SET_VBWR_N, value & 1);
-}
-
-static void set_vwr_n(int value) { queue_op_zero(OPCODE_SET_VWR_N, value & 1); }
-
-static void vram_sample() { queue_op_zero(OPCODE_SAMPLE, 0); }
-
-static status noncycle_test() {
-  uint8_t vda, vdb;
-
-  uint8_t expect_vda = 0xa1;
-  uint8_t expect_vdb = 0xb2;
-
-  for (uint16_t address = 0; address < MAX_ADDRESS; address += 0x707) {
-    set_vaa(address);
-    set_vab(address);
-    RETURN_IF_ERROR(ftdiutil_flush_writes("noncycle_test:addr"));
-
-    int lvl_vd_dir = 1;
-
-    printf("lvl_vd_dir = %d\n", lvl_vd_dir);
-
-    set_vda(expect_vda);
-    RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:..."));
-    set_vdb(expect_vda);
-    RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:..."));
-
-    set_lvl_vd_dir(lvl_vd_dir);
-    RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:..."));
-    set_vwr_n(0);
-    RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:..."));
-    set_vwr_n(1);
-    RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:..."));
-
-    vda = 0;
-    vdb = 0;
-    set_vda(vda);
-    set_vda(vdb);
-    RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:clear"));
-
-    vram_sample();
-    RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:clear"));
-
-    set_lvl_vd_dir(1 - lvl_vd_dir);
-    set_vrd_n(0);
-    set_vrd_n(1);
-    RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:read"));
-
-    for (int i = 0; i < 3; i++) {
-      get_vda(&vda);
-      get_vdb(&vdb);
-      RETURN_IF_ERROR(ftdiutil_flush_reads("noncycle_test:get_vd"));
-      printf("  vda %s0x%02x%s (0x%02x) vdb %s0x%02x%s (0x%02x)\n",
-             (vda == expect_vda ? GREEN : RED), vda, RESET, expect_vda,
+    if (vda != expect_vda || vdb != expect_vdb) {
+      printf("read 0x%04x vda %s0x%02x%s (0x%02x) vdb %s0x%02x%s (0x%02x)\n",
+             address, (vda == expect_vda ? GREEN : RED), vda, RESET, expect_vda,
              (vdb == expect_vdb ? GREEN : RED), vdb, RESET, expect_vdb);
+      errors += (vda == expect_vda ? 0 : 1);
+      errors += (vdb == expect_vdb ? 0 : 1);
     }
-
-    expect_vda += 2;
-    expect_vdb += 2;
   }
 
-  (void)set_vawr_n;
-  (void)set_vbwr_n;
-
+  if (errors) {
+    printf("--- FAIL (%d errors)\n", errors);
+  } else {
+    printf("--- PASS\n");
+  }
   return OK;
 }
 
@@ -400,10 +417,9 @@ status bringup_vram(int argc, char** argv) {
 
   RETURN_IF_ERROR(spot_check());
 
-  RETURN_IF_ERROR(memory_scan());
+  RETURN_IF_ERROR(bit_scan());
 
-  // RETURN_IF_ERROR(noncycle_test());
-  (void)noncycle_test;
+  RETURN_IF_ERROR(memory_scan());
 
   RETURN_IF_ERROR(reset());
 
