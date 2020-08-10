@@ -8,14 +8,7 @@ class VramControl : public Vcore<Vvram_control> {
  public:
   VramControl() {
     // Always ready for an output byte.
-    write_ready_i = 1;
-    reset = 0;
-  }
-
-  void unreset() {
-    mtick(3);
-    reset = 1;
-    mtick();
+    // write_ready_i = 1;
   }
 
   void send_byte(uint8_t byte) {
@@ -32,31 +25,11 @@ class VramControl : public Vcore<Vvram_control> {
     mtick(6);
   }
 
-  uint8_t wait_output(int max_cycles = 100) {
-    int i = 0;
-    while (1) {
-      if (i >= max_cycles) {
-        fprintf(stderr, "Error: no output.\n");
-        trace_off();
-        exit(1);
-        return 0;
-      }
-      mtick();
-      if (write_valid_o) {
-        break;
-      }
-    }
-    uint8_t out = write_data_o;
-    write_ready_i = 0;
-    mtick(6);
-    write_ready_i = 1;
-    return out;
-  }
-
   void mtick(unsigned n = 1) {
     for (unsigned i = 0; i < n; i++) {
       update_inputs();
       tick();
+      handle_outputs();
     }
   }
 
@@ -72,12 +45,12 @@ class VramControl : public Vcore<Vvram_control> {
   uint8_t a_chip[32768];
   uint8_t b_chip[32768];
 
+  const int cycle_threshold = 7;
+
   void update_inputs() {
     if (vrd_n_o == 1 && vawr_n_o == 1 && vbwr_n_o == 1) {
       return;
     }
-
-    const int cycle_threshold = 10;
 
     if (vrd_n_o == 0) {
       if (vrd_n_o_last != vrd_n_o) {
@@ -116,6 +89,43 @@ class VramControl : public Vcore<Vvram_control> {
       vbwr_counter++;
     }
   }
+
+  unsigned ready_delay_counter = 0;
+
+  void handle_outputs() {
+    if (write_valid_o) {
+      assert(outbuf_size < sizeof(outbuf));
+      outbuf[outbuf_size] = write_data_o;
+      outbuf_size++;
+      ready_delay_counter = 6;
+      // write_ready_i = 0;
+    } else if (ready_delay_counter > 0) {
+      ready_delay_counter--;
+      if (ready_delay_counter == 0) {
+        // write_ready_i = 1;
+      }
+      assert(ready_delay_counter < 6);
+    }
+  }
+
+  uint8_t outbuf[16];
+  unsigned outbuf_size = 0;
+
+  uint8_t wait_output(unsigned max_cycles = 100) {
+    for (unsigned i = 0; !outbuf_size; i++) {
+      mtick();
+      if (i >= max_cycles) {
+        printf("Error: no output!\n");
+        return 0xff;
+      }
+    }
+    uint8_t ret = outbuf[0];
+    for (unsigned i = 1; i < outbuf_size; i++) {
+      outbuf[i - 1] = outbuf[i];
+    }
+    outbuf_size--;
+    return ret;
+  }
 };
 
 int main(int argc, char** argv) {
@@ -124,37 +134,39 @@ int main(int argc, char** argv) {
   VramControl v;
   v.trace_on("vram_control.trace.vcd");
 
-  v.unreset();
   v.mtick(10);
 
   printf("ECHO: send 0x41\n");
-  v.send_byte(0x02);
-  v.mtick(2);
-  v.send_byte(0x41);
-
-  uint8_t first = v.wait_output();
-  uint8_t second = v.wait_output();
-  printf("ECHO: Got 0x%02x 0x%02x\n", first, second);
-
+  v.send_op(0x01, 0x41);
+  printf("ECHO: Got 0x%02x\n", v.wait_output());
   v.mtick(20);
 
+  printf("Set Address / Data\n");
   v.send_op(0x21, 0x3e);
   v.send_op(0x20, 0x56);
-  v.send_op(0x50, 0xef);
-  v.send_op(0x51, 0xfe);
-
+  v.send_op(0x50, 0xa1);
+  v.send_op(0x51, 0xb2);
   v.mtick(20);
 
-  v.send_op(0x80, 0x00);  // Write
-
-  v.mtick(20);
-
+  printf("Write\n");
+  v.send_op(0x73, 0x00);  // Write
   v.mtick(100);
 
-  v.send_op(0x90, 0x00);  // Read
-  first = v.wait_output();
-  second = v.wait_output();
-  printf("Read: Got 0x%02x 0x%02x\n", first, second);
+  printf("Clear VDA / VDB registers.\n");
+  v.send_op(0x50, 0x55);
+  v.send_op(0x51, 0xaa);
+  v.mtick(20);
+
+  printf("Read\n");
+  v.send_op(0x70, 0x00);  // Read
+  v.mtick(100);
+
+  printf("Get VDA / VDB\n");
+  v.send_op(0xd0, 0x00);
+  printf("VDA 0x%02x\n", v.wait_output());
+  v.mtick(20);
+  v.send_op(0xd1, 0x00);
+  printf("VDB 0x%02x\n", v.wait_output());
   v.mtick(20);
 
   return 0;

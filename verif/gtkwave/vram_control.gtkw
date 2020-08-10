@@ -1,22 +1,21 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Wed Aug  5 02:22:43 2020
+[*] Mon Aug 10 06:29:05 2020
 [*]
 [dumpfile] "/home/khaydarian/spla/verif/build/vram_control.trace.vcd"
-[dumpfile_mtime] "Wed Aug  5 01:50:08 2020"
-[dumpfile_size] 14809
+[dumpfile_mtime] "Mon Aug 10 06:28:54 2020"
+[dumpfile_size] 19491
 [savefile] "/home/khaydarian/spla/verif/gtkwave/vram_control.gtkw"
 [timestart] 0
-[size] 1582 898
+[size] 1569 880
 [pos] -1 -1
-*-9.390180 381 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-9.708108 2408 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [sst_width] 312
 [signals_width] 174
 [sst_expanded] 1
-[sst_vpaned_height] 256
+[sst_vpaned_height] 101
 @28
 vram_control.clock
-vram_control.reset
 vram_control.read_valid_i
 @22
 vram_control.read_data_i[7:0]
@@ -24,21 +23,16 @@ vram_control.opcode[7:0]
 vram_control.arg[7:0]
 @200
 -
-@24
-vram_control.state[4:0]
 @28
 vram_control.reg_va14
 @22
 vram_control.reg_vaa[13:0]
 vram_control.reg_vab[13:0]
-@23
 vram_control.reg_vda[7:0]
-@22
 vram_control.reg_vdb[7:0]
 @200
 -
 @28
-vram_control.cycle_op
 vram_control.cycle_op_is_read
 vram_control.cycle_op_is_write
 @8022
@@ -46,7 +40,6 @@ vram_control.cycle_counter[5:0]
 @200
 -
 @28
-vram_control.vd_dir_o
 vram_control.va14_o
 @22
 vram_control.vaa_o[13:0]
@@ -62,15 +55,11 @@ vram_control.vda_o[7:0]
 vram_control.vdb_o[7:0]
 @200
 -
-@22
-vram_control.out_first[7:0]
-vram_control.out_second[7:0]
-@24
-vram_control.outcount[1:0]
+@23
+vram_control.out_data[7:0]
 @200
 -
 @28
-vram_control.write_ready_i
 vram_control.write_valid_o
 @22
 vram_control.write_data_o[7:0]

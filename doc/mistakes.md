@@ -37,3 +37,17 @@ The ECP5 datasheet says that the maximum supported I/O volatage is 3.3V, and the
 ## Respect the Datasheet Maximums, Part 2
 
 Temperature also matters: on the second board, I foolishly left power on while trying to reflow the FPGA to fix a disconnected pin -- which is well above the maximum operating temperature.  Oops.  This seems to have fried the I/O drivers in some bizarre fashion.  I can still program the FPGA, but is has strange behavior and definitely isn't working right.
+
+## Don't Double-Drive Nets
+
+Nominally, double-driving a net is "bad", but in a fairly ill-defined fashion.  In my case, I didn't damage any of the chips, but it wastes a ton of power, and the resulting heating can damage the chips.  This normally wasn't enough to be a problem, but when I tried experimentally double-driving all the VRAM address pins (to confirm that that was the issue), power usage jumped from 1.5W to 11W, and the chip temperature went from 30C to 85C in three seconds -- and then I shut everything off.
+
+## Timing Constraints Matter
+
+I was getting all kinds of weird data problems when trying to drive the VRAM chips for the first time.  However, there's some setup-and-hold timing constraints that I hadn't considered, so just driving the control and data signals at the same time caused weird and nondeterministic results.
+
+## Check for dumb typo errors
+
+While getting `bringup_vram` working (after the above issues), I had a strange problem where reading `VDA` and `VDB` would always result in `0` for `VDA, and `VDA`'s value in `VDB`.  I'd first thought this was a byte getting inserted into the UART by a glitch in the RTL, and reworked the protocol to avoid sending two bytes at a time, which didn't fix it.  I then scrubbed the code for places where I might has swapped A and B, and there weren't any. After some painful hours, I tried sticking in an extra `reset()` call, and now the A and B values appeared in the right slots -- but there was an extra pair of zeros on the first call.  This looked for all the world like my A and B data was delayed by a clock, but that's not reasonable, since the second reads are a few hundred clocks later (latency of the UART).
+
+Finally I belatedly noticed that my `reset()` method wasn't using `OPCODE_RESET`, but instead `OPCODE_ECHO`, which returns an extra byte, throwing off the protocol.  Facepalm.

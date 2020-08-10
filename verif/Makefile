@@ -1,6 +1,12 @@
 include Makefile.toolchain
 
-all: verilator
+ALL += build/bringup_sensor.trace.vcd
+ALL += build/bringup_scanner.trace.vcd
+ALL += build/uart_rx.trace.vcd
+ALL += build/vram_control.trace.vcd
+
+.PHONY: all
+all: $(ALL)
 
 .SUFFIXES:
 
@@ -88,4 +94,3 @@ build/vram_control: vram_control.cpp build/obj_dir/Vvram_control__ALL.a
 build/vram_control.trace.vcd: build/vram_control
 	(cd build && ./vram_control)
 
-verilator: build/bringup_sensor.trace.vcd build/bringup_scanner.trace.vcd build/uart_rx.trace.vcd build/vram_control.trace.vcd
