@@ -9,6 +9,7 @@ ALL += build/bringup_fifo.bit
 ALL += build/bringup_boundary.bit
 ALL += build/bringup_levelshifter1.bit
 ALL += build/bringup_levelshifter2.bit
+ALL += build/bringup_ppu.bit
 ALL += build/bringup_vram.bit
 ALL += build/bringup_vram_steps.bit
 ALL += build/test_bidir.bit
@@ -42,6 +43,8 @@ build/bringup_levelshifter1.json: $(shell cat bringup_levelshifter1.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_levelshifter1 -json $@' $^
 build/bringup_levelshifter2.json: $(shell cat bringup_levelshifter2.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_levelshifter2 -json $@' $^
+build/bringup_ppu.json: $(shell cat bringup_ppu.vf)
+	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_ppu -json $@' $^
 build/bringup_vram.json: $(shell cat bringup_vram.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_vram -json $@' $^
 build/bringup_vram_steps.json: $(shell cat bringup_vram_steps.vf)
