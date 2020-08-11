@@ -61,8 +61,9 @@ def main(args):
 
     parts.sort()
 
+    print('Board Need  Remaining : Digikey ID (Description)')
     for nboards, digikey, desc, need, quantity, remaining in parts:
-        print('B %2d N %3d R %3d/%3d : %-20s (%s)' % (
+        print('B %3d N %3d R %3d/%3d : %-20s (%s)' % (
             nboards, need, remaining, quantity, digikey, desc))
         #print "--- %s (%s)" % (digikey, desc)
         #print "Boards %d, Need %d per board, Remaining %d / %d" % (
