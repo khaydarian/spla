@@ -64,32 +64,37 @@ Driving the ADC is tricky; most op-amps want a wide voltage range with negative 
 
 I've also used the same opamp to drive and stabilize the input reference voltages, which might be overkill. At least I don't have to read an extra datasheet.
 
-## Crystal oscillator: `IHLP-2020CZ`
+## Crystal oscillator: Fox Electronics `FOX924`
 
-Found at random on LCSC; needs reconsideration.
+Arbitrary and cheap HCMOS osciallator.
 
 ## Passives
 
-Not chosen yet. Mostly `0603` packages, as the smallest I can reasonably hand-solder (without going slightly crazy).
+Resistors from Stackpole Electronics (arbitrary); Capacitors from Murata Electrons (arbitrary).  Mostly `0603` packages, which I can comfortably hand-solder; some `0402` capacitors for FPGA decoupling (spacing is tricky in the BGA).
 
-Inductor is likely `IHLP2020CZ`.
+Inductor is Vishay Dale `IHLP2020CZ` (arbitrary).
 
 ## LEDs
 
-Not chosen yet. All `0603` packages.
+LEDs are all green, from Wuerth Electronik (cheap, and arbitrary).  All `0603` package.
+
+## USB Micro-B Connector
+
+Matches conveniently-available KiCad symbol, from Wuerth Electronik.
+
+## 12V Barrel Jack
+
+Matches conveniently-available KiCad symbol, from CUI Devices.
 
 ## Mechanical parts
 
-Not chosen yet:
+All essentially arbitrary.
 
-### 2.54mm Pin Headers (lots)
-
-### Jumpers
-
-### USB Micro-B Connector
-
-### 12V Barrel Jack
+*   2.54mm Pin Headers (lots): single- and double-row, from Sullins Connector Solutions.
+*   Jumpers, from Sullins Connector Solutions.
+*   Standoff Hex Legs: from Wuerth Electronik.
 
 ### 12V Power Supply Brick
 
-### Standoff Hex Legs
+Arbitrary.  I'm mostly using my bench supply anyhow.
+

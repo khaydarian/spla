@@ -20,7 +20,7 @@ Kor
 
 JLCPCB's capabilities say the track-to-via minimum is 5 mil, or 1.27mm.  The current layout has a few places that are just barely under the limit, which needs fixing.
 
-Status: Pending.
+Status: Fixed in some potentially-problematic places.  Boards were manufacturing without issue.
 
 ## 5V Power Plane
 
@@ -60,7 +60,7 @@ Programming input pins ought to have a pull-up/pull-down resistors, in case the 
 
 There should be LEDs on the various important FPGA programming pins (`DONE`, `INIT`, `PROGRAM`);
 
-Status: Needs review.
+Status: Done.  LEDs are still dodgy, because (I think) the FPGA pins can't drive enough current.
 
 ## `FT2232H` layout
 
@@ -80,4 +80,4 @@ Status: Probably ignore, since I'm not sure if this is a real problem.
 
 USB Micro adapter and 12V Barrel jack might not match reasonable actual parts; need to choose those parts and update the layout to match.
 
-Status: Pending.
+Status: These match exactly, thanks to KiCad symbols.

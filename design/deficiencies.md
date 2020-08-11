@@ -30,6 +30,8 @@ The power layout is perhaps entirely nonsense and I've no idea if it'll work.  I
 
 There's (small) ground loops in the power layout, whch is maybe bad. The PCB layout recommends a "guard trace" which I don't know how to do correctly.
 
+_Note: Power layout definitely works (and in fact did so the first time, with zero issues)._
+
 ## schematic/pcb: Analog
 
 The analog block is by far the least competently-developed part of the design.  The entire analog setup (ADCs + opamps) is based on my very limited understanding of analog electronics, so I might have done any number of things wrong and not realized so.  It's possibly fixable by replacing some passives with other values, but there's no guarantee.
@@ -44,6 +46,8 @@ I don't know if I've added enough / the right decopling capacitors; I've mostly 
 
 Many of the level shifter chips don't have a good place to put decoupling capacitors.  I might have enough bulk decoupling on the board that this isn't a huge problem, and I can add in a few optional ones to help.
 
+_Note: This is probably inconsequential; I've encountered no decoupling issues so far._
+
 ## pcb: PPU1 layout
 
 The layout of the level shifters under the PPU1 chip is way tighter than necessary, and could be relaxed without causing issues.
@@ -56,17 +60,25 @@ The split between 5V and 3.3V sections of the power plan is ugly, because the le
 
 The power/ground fills have wide areas around vias (which is probably necessary), but this doesn't really leave enough space for all the 1.1V and 2.5V power to get in.  I've added traces for this, but they're often too small (0.2mm or 0.1mm), so I've added extra back-layer traces to supplement this.  This is really a side effect of having a four-layer board layout.
 
+_Note: This is apparently inconsequential; I've encountered no FPGA power issues so far._
+
 ## pcb: FPGA Decoupling
 
 The FPGA decoupling is considerably below spec for the 3.3V domain, because I can't fit all the capacitors in properly. This needs either reworking -- or a 6-layer board -- to avoid the extra bottom-layer power traces, which take up all the space for the capacitors pads.
+
+_Note: This is apparently inconsequential; I've encountered no decoupling issues so far._
 
 ## pcb: Trace Lengths
 
 Some of the traces are very long -- in particular, the VRAM data buses wrap all the way around the board. I'm not sure if this is a problem or not; the frequency shouldn't be too high.
 
+_Note: This works ok at low speed (16 clocks at 12 MhZ, ~750kHz)._
+
 ## pcb: Trace Spacing
 
 For the most part I've tried to avoid spacing traces at the minimum size: 3.5 mil, or slightly less than 0.1mm (I've set the limit at the latter).  There's a handful of places I'm stuck with it, and it's probably fine -- but those buses could couple together and cause signal integrity issues.  Probably that will only limit maximum speed, which shouldn't be a huge issue.  I'd expect that it's more likely to have a manufacturing error at the minimum size, and more capacitive coupling between traces.
+
+_Note: No observed trace spacing issues.  One board (`b001`) had some dodgy solder mask._
 
 ## pcb: Trace Sizing Inconsistencies
 

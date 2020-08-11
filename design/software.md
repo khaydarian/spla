@@ -1,11 +1,12 @@
 # SPLA Software
 
-Simple notes on the design of the host-side software that
+Simple notes on the design of the host-side software.
 
-* One CLI tool, `spla`, with sub-commands.
-* By default, uses the SPLA device identified by matching VID/PID/Serial.
-  * Can use VID/PID from FTDI for now.
+* One CLI tool, `splat`, with sub-commands.
+* By default, uses the single SPLA device identified by matching VID/PID/Serial.
+  * Uses an arbitrary "freely available" VID/PID for libusb applications.
 * Commands try to verify which FPGA image is on the board, and repogram if necessary.
+  * _(This isn't done yet.)_
 
 * Category: Low-level commands
   * `show_ftdi`: Show all connected FTDI devices, VID/PID/Serial.
