@@ -1,5 +1,39 @@
 # Bringup sequence
 
+_A more realistic sequence than below, ignoring the various soldering details._
+
+1.  Parts inspection.
+1.  Power validation.
+    1.   Verify that power LEDs (`D1`, `D2`) are lit.
+    1.   Measure 3.3V and 5.0V switching regulators.
+    1.   Measure 1.1V and 2.5V LDO linear regulators.
+1.  FTDI Bringup.
+    1.   Verify 1.8V internal LDO linear regulator.
+    1.   Verify 12 MHz clock input.
+    1.   Verify USB connectivity.
+    1.   Run `splat bringup_ftdi` to verify pins.
+    1.   Run `splat ftdi_new_device`, with appropriate serial number.
+    1.   Power-cycle the board to use the new VID/PID/Serial.
+    1.   Run `splat bringup_fifo` to verify ADBUS fifo pins.
+1.  FPGA Bringup.
+    1.   Run `splat bringup_fpga`, and verify flashing LEDs.
+    1.   (Optional) Run `splat 
+    1.   Run `splat bringup_boundary`, and verify connectivity of the FPGA pins.
+1.  Level Shifter Bringup.
+    1.   Run `splat bringup_boundary --levelshifter1`, and verify connectivity of the FPGA input-only and input-capable pins.
+    1.   Run `splat fpga_load_bitstream ../rtl/build/bringup_levelshifter2.bit`, and verify the FPGA output-only pins.
+1.  SNES VRAM Bringup
+    1.   Run `splat bringup_vram`.
+    1.   Run `splat bringup_vram --random` for more testing.
+1.  SNES PPU Bringup
+    1.   _(Run some test program to verify that the PPU pins are connected.)_
+1.  (Optional) Analog Bringup
+    1.   _(Skip for now.)_
+1.  Final Validation
+    1.   _(Run some test program to program the PPUs and collect a stock test image.)_
+
+## Legacy bringup sequence
+
 _This sequence assumes a "Progressive Bringup", where each section of the board
 is assembled and testing one at a time. This turns out to be a really stupid
 idea. Don't do it this way._
