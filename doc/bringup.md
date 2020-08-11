@@ -21,7 +21,7 @@ _A more realistic sequence than below, ignoring the various soldering details._
     1.   Run `splat bringup_boundary`, and verify connectivity of the FPGA pins.
 1.  Level Shifter Bringup.
     1.   Run `splat bringup_boundary --levelshifter1`, and verify connectivity of the FPGA input-only and input-capable pins.
-    1.   Run `splat fpga_load_bitstream ../rtl/build/bringup_levelshifter2.bit`, and verify the FPGA output-only pins.
+    1.   Run `splat bringup_boundary --levelshifter2`, and verify the FPGA output-only pins via oscilloscope.
 1.  SNES VRAM Bringup
     1.   Run `splat bringup_vram`.
     1.   Run `splat bringup_vram --random` for more testing.

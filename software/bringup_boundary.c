@@ -12,6 +12,7 @@
 
 #define MODE_BOUNDARY 0
 #define MODE_LEVELSHIFTER1 1
+#define MODE_LEVELSHIFTER2 2
 
 struct frame {
   unsigned int frameno;
@@ -252,6 +253,10 @@ status bringup_boundary(int argc, char** argv) {
       mode = MODE_LEVELSHIFTER1;
       argc--;
       argv++;
+    } else if (!strcmp(argv[0], "--levelshifter2")) {
+      mode = MODE_LEVELSHIFTER2;
+      argc--;
+      argv++;
     } else {
       return errorf("Unknown flag: %s", argv[0]);
     }
@@ -265,6 +270,9 @@ status bringup_boundary(int argc, char** argv) {
     case MODE_LEVELSHIFTER1:
       bitstream_filename = "../rtl/build/bringup_levelshifter1.bit";
       break;
+    case MODE_LEVELSHIFTER2:
+      bitstream_filename = "../rtl/build/bringup_levelshifter2.bit";
+      break;
     default:
       return errorf("bad mode %d", mode);
   }
@@ -273,6 +281,12 @@ status bringup_boundary(int argc, char** argv) {
   RETURN_IF_ERROR(load_bitstream_file(&bits, bitstream_filename));
   RETURN_IF_ERROR(program_bitstream(&bits));
   free_bitstream(&bits);
+
+  if (mode == MODE_LEVELSHIFTER2) {
+    // This is for testing output-only pins, so we can't get any useful data
+    // from the host.  Resort to scope probing.
+    return OK;
+  }
 
   ftdiutil_set_interface(INTERFACE_A);
   uart_init();
