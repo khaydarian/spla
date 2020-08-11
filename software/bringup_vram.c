@@ -367,6 +367,102 @@ static status memory_scan() {
   return OK;
 }
 
+static uint32_t xorshift32(uint32_t* state) {
+  uint32_t x = *state;
+  x ^= x << 13;
+  x ^= x >> 17;
+  x ^= x << 5;
+  return *state = x;
+}
+
+static status memory_random() {
+  printf("=== memory_random()\n");
+
+  uint32_t rand = 42;
+
+  uint8_t chip_a[32768];
+  uint8_t chip_b[32768];
+  uint8_t addr_used[32768];
+
+  const int min_flight = 128;
+  const int max_flight = 2048;
+  const int mid_flight = (max_flight + min_flight) / 2;
+
+  uint16_t addresses[max_flight];
+  int addresses_valid;
+
+  int errors = 0;
+  const int max_attempts = 5000;
+
+  for (int attempts = 0; attempts < max_attempts; attempts++) {
+    if (attempts % 100 == 0) {
+      printf("[%d / %d] flight %4d / %04d\n", attempts, max_attempts,
+             addresses_valid, max_flight);
+    }
+    if (addresses_valid >= min_flight) {
+      int reads = xorshift32(&rand) & 1;
+      if (addresses_valid >= mid_flight) {
+        reads = xorshift32(&rand) % 4;  // 0, 1, 2, 3: expected 1.5
+      } else {
+        reads = xorshift32(&rand) % 2;  // 0, 1: expect 0.5
+      }
+      for (int i = 0; i < reads; i++) {
+        int addrindex = xorshift32(&rand) % addresses_valid;
+        uint16_t address = addresses[addrindex];
+        set_vaa(address);
+        set_vab(address);
+        uint8_t expect_vda = chip_a[address];
+        uint8_t expect_vdb = chip_b[address];
+        uint8_t vda, vdb;
+        vram_read();
+        get_vda(&vda);
+        get_vdb(&vdb);
+        RETURN_IF_ERROR(ftdiutil_flush_reads("memory_random.read"));
+        if (vda != expect_vda || vdb != expect_vdb) {
+          printf(
+              "read 0x%04x vda %s0x%02x%s (0x%02x) vdb %s0x%02x%s (0x%02x)\n",
+              address, (vda == expect_vda ? GREEN : RED), vda, RESET,
+              expect_vda, (vdb == expect_vdb ? GREEN : RED), vdb, RESET,
+              expect_vdb);
+          errors += (vda == expect_vda ? 0 : 1);
+          errors += (vdb == expect_vdb ? 0 : 1);
+        }
+        for (int i = addrindex; i < addresses_valid - 1; i++) {
+          addresses[addrindex] = addresses[addrindex + 1];
+        }
+        addresses_valid--;
+      }
+    }
+    if (addresses_valid <= max_flight) {
+      uint16_t address;
+      do {
+        address = xorshift32(&rand) % MAX_ADDRESS;
+      } while (!addr_used[address]);
+      addr_used[address] = 1;
+      addresses[addresses_valid] = address;
+      addresses_valid++;
+      set_vaa(address);
+      set_vab(address);
+      uint8_t vda = xorshift32(&rand) & 0xff;
+      uint8_t vdb = xorshift32(&rand) & 0xff;
+      ;
+      set_vda(vda);
+      set_vdb(vdb);
+      chip_a[address] = vda;
+      chip_b[address] = vdb;
+      vram_write();
+      RETURN_IF_ERROR(ftdiutil_flush_reads("memory_random.write"));
+    }
+  }
+
+  if (errors) {
+    printf("--- FAIL (%d errors)\n", errors);
+  } else {
+    printf("--- PASS\n");
+  }
+  return OK;
+}
+
 // [Command]
 // Description: Test VRAM chips in isolation for manufacturing faults.
 // Option: open_usb = true
@@ -375,6 +471,7 @@ status bringup_vram(int argc, char** argv) {
   bool flag_skip_program = false;
   bool flag_debug = false;
   bool flag_reset = false;
+  bool flag_random = false;
 
   while (argc) {
     if (!strcmp(argv[0], "--skip-program")) {
@@ -387,6 +484,10 @@ status bringup_vram(int argc, char** argv) {
       argv++;
     } else if (!strcmp(argv[0], "--reset")) {
       flag_reset = true;
+      argc--;
+      argv++;
+    } else if (!strcmp(argv[0], "--random")) {
+      flag_random = true;
       argc--;
       argv++;
     } else {
@@ -420,6 +521,10 @@ status bringup_vram(int argc, char** argv) {
   RETURN_IF_ERROR(bit_scan());
 
   RETURN_IF_ERROR(memory_scan());
+
+  if (flag_random) {
+    RETURN_IF_ERROR(memory_random());
+  }
 
   RETURN_IF_ERROR(reset());
 
