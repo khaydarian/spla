@@ -1073,11 +1073,11 @@ Design Cutoff Frequency = 10MHz\nCutoff = 1/(2*pi*sqrt(R101*R102*C101*C102)) = 9
 Text Notes 10900 7700 0    50   ~ 0
 RC low-pass filter\nCutoff = 1/(2*pi*R109*C109) = 18.55MHz\nWith Rxxx = 22 and Cxxx = 390pF\nNOSTUFF for now; left in as an option.
 Text GLabel 15000 3050 2    50   Input ~ 0
-ANALOG_B_OE
+ANALOG_OE
 Text GLabel 15000 6100 2    50   Input ~ 0
-ANALOG_G_OE
+ANALOG_OE
 Text GLabel 15000 9150 2    50   Input ~ 0
-ANALOG_R_OE
+ANALOG_OE
 Wire Wire Line
 	9450 7050 9450 7150
 Text Notes 7550 7100 0    50   ~ 0

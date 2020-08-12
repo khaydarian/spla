@@ -49,7 +49,8 @@
 * Move `TP7` / `TP8` / `TP9` closer to the bottom edge of the board, to be out of the way.
 * Fix decoupling capacitors on VRAM chips, which ought to be across actual power/ground, and not the `OE` pin.
 * Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
-* Merge the analog output-enable pins into a single net, and add a pullup resistor here.
+* Pinswap FPGA to move LEDs / Test points to the south edge of the board.
+* Absorb otherwise-unused FPGA pins for more LEDs.
 
 ## Deferred
 
