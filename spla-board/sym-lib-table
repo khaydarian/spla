@@ -1,4 +1,3 @@
 (sym_lib_table
   (lib (name SPLA)(type Legacy)(uri ${KIPRJMOD}/SPLA.lib)(options "")(descr ""))
-  (lib (name spla-board-rescue)(type Legacy)(uri ${KIPRJMOD}/spla-board-rescue.lib)(options "")(descr ""))
 )
