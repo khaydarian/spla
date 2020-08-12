@@ -25,7 +25,6 @@
 ## Next Schematic / PCB revision
 
 * Consider ENIG finish, which makes the BGA easier to install.
-* Omit large areas of silkscreen, which are awkward to print and can have lower quality.
 * Consider the "paper between boards" option, which would avoid some silkscreen scratches.
 * Consider ordering stencils.
 * Review the back-side silkscreen more carefully; there's several references clumsily placed (`U32`, `C10`, etc).
@@ -33,21 +32,23 @@
 * Consider adding an alternate clock source for the FPGA.
 * Consider adding an easier test pad for the 12MHz oscillator.
 * Move `J5` and `J6` further away from each other.
-* Maybe add `VCC` and `GND` to JTAG connector.
+* Remove JTAG connector, or reduce its footprint.
 * Fix `J3` pin 3 layout, which has a weird connection.
 * `U32` has pads connected on the long side, which it should not.
 * Bring FTDI 1.8V regulator lines through a 0-ohm resistor, so I have the option of re-wiring easily.  Alternately, add pads for an optional 1.8V LDO.
 * Add physical power switch (toggle).
+* Add a momentary push button for the FPGA, with ~1ms RC debounce.
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
-* Add SMD test clips for scope ground.
+* Add SMD test clips for scope ground.  Or, add more nearby ground pins.
 * Reverse `D6` (`INIT`) LED direction (net is pulled the opposite way).
 * Avoid inverted LEDs, which is confusing (and we don't care about the power draw).
 * Consolidate BoM part selections.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
-* Drive all LEDs with high-impedence input things (transistors) to avoid biasing the signals I'm trying to sample.
+* Drive all LEDs with high-impedence input things (transistors) to avoid biasing the signals I'm trying to sample.  (At least `INIT` and `DONE`, which are open-drain and can't support very much current).
 * Replace `TP7` / `TP8` / `TP9` pads with pins, which are larger but easier to work with.
 * Move `TP7` / `TP8` / `TP9` closer to the bottom edge of the board, to be out of the way.
 * Fix decoupling capacitors on VRAM chips, which ought to be across actual power/ground, and not the `OE` pin.
+* Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
 
 ## Deferred
 
