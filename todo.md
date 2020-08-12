@@ -37,7 +37,6 @@
 * Fix `J3` pin 3 layout, which has a weird connection.
 * `U32` has pads connected on the long side, which it should not.
 * Bring FTDI 1.8V regulator lines through a 0-ohm resistor, so I have the option of re-wiring easily.  Alternately, add pads for an optional 1.8V LDO.
-* Add explicit jumper / button for FTDI reset.
 * Add physical power switch (toggle).
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
 * Add SMD test clips for scope ground.
