@@ -83,3 +83,11 @@ Package Cost Tariff: $1.29
 Package Cost Sales Tax: $10.77
 Package Cost Total: $132.15
 Date Arrive Actual: 2020-06-21
+
+Name: Amazon Digital Calipers
+source: Amazon
+Package Key: amazon-calipers
+Package Cost Base: $22.99
+Package Cost Tax: $2.13
+Package Cost Total: $25.12
+Date Arrive Estimated: 2020-08-13
