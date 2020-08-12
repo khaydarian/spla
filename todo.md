@@ -36,7 +36,6 @@
 * Maybe add `VCC` and `GND` to JTAG connector.
 * Fix `J3` pin 3 layout, which has a weird connection.
 * `U32` has pads connected on the long side, which it should not.
-* Don't ground the USB shield; it's grounded on the host side and might introduce noise.
 * Bring FTDI 1.8V regulator lines through a 0-ohm resistor, so I have the option of re-wiring easily.  Alternately, add pads for an optional 1.8V LDO.
 * Add test point for FTDI 1.8V regulator.
 * Add explicit jumper / button for FTDI reset.
