@@ -131,12 +131,6 @@ Connection ~ 10150 7850
 Wire Wire Line
 	10150 7850 10050 7850
 NoConn ~ 8750 7250
-Wire Wire Line
-	7550 7900 8100 7900
-Wire Wire Line
-	8100 7900 8100 6850
-Wire Wire Line
-	8100 6850 8750 6850
 $Comp
 L power:GND #PWR0104
 U 1 1 5E558255
@@ -531,13 +525,6 @@ Wire Wire Line
 	3100 4850 8750 4850
 Wire Wire Line
 	3100 4750 8750 4750
-Text GLabel 8300 8300 2    50   Output ~ 0
-CLK_12MHZ
-Wire Wire Line
-	8100 7900 8100 8300
-Wire Wire Line
-	8100 8300 8300 8300
-Connection ~ 8100 7900
 Wire Wire Line
 	6350 7450 6350 7600
 Wire Wire Line
@@ -962,4 +949,32 @@ Wire Wire Line
 Text Label 3250 5050 0    50   ~ 0
 VBUS
 NoConn ~ 3650 5050
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5F33FE5B
+P 8000 3800
+F 0 "TP10" H 8058 3918 50  0000 L CNN
+F 1 "TP_1V8" H 8058 3827 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 8200 3800 50  0001 C CNN
+F 3 "~" H 8200 3800 50  0001 C CNN
+	1    8000 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3950 8000 3950
+Wire Wire Line
+	8000 3950 8000 3800
+Text GLabel 8300 8300 2    50   Output ~ 0
+CLK_12MHZ
+Wire Wire Line
+	8100 8300 8300 8300
+Connection ~ 8100 7900
+Wire Wire Line
+	8100 7900 8100 8300
+Wire Wire Line
+	8100 6850 8750 6850
+Wire Wire Line
+	8100 7900 8100 6850
+Wire Wire Line
+	7550 7900 8100 7900
 $EndSCHEMATC

@@ -31,16 +31,14 @@
 * Review the back-side silkscreen more carefully; there's several references clumsily placed (`U32`, `C10`, etc).
 * Compact the board, since there's quite a bit of unnecessary empty space.
 * Consider adding an alternate clock source for the FPGA.
-* Consider adding an easier test pad for the oscillator.
+* Consider adding an easier test pad for the 12MHz oscillator.
 * Move `J5` and `J6` further away from each other.
 * Maybe add `VCC` and `GND` to JTAG connector.
 * Fix `J3` pin 3 layout, which has a weird connection.
 * `U32` has pads connected on the long side, which it should not.
 * Bring FTDI 1.8V regulator lines through a 0-ohm resistor, so I have the option of re-wiring easily.  Alternately, add pads for an optional 1.8V LDO.
-* Add test point for FTDI 1.8V regulator.
 * Add explicit jumper / button for FTDI reset.
 * Add physical power switch (toggle).
-* Add an easier test point for the 12MHz oscillator.
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
 * Add SMD test clips for scope ground.
 * Reverse `D6` (`INIT`) LED direction (net is pulled the opposite way).
