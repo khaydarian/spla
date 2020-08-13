@@ -473,9 +473,9 @@ Text GLabel 12150 3300 2    50   Input ~ 0
 ANALOG_R6
 Text GLabel 12150 2900 2    50   Input ~ 0
 ANALOG_R7
-Text GLabel 14650 4300 2    50   Output ~ 0
+Text GLabel 12150 1300 2    50   Output ~ 0
 ANALOG_CLK
-Text GLabel 12150 2500 2    50   Input ~ 0
+Text GLabel 12150 2600 2    50   Input ~ 0
 ANALOG_B0
 Wire Wire Line
 	850  2400 850  2500
@@ -587,85 +587,83 @@ Text GLabel 4650 1900 2    39   Output ~ 0
 FPGA_~PARD~
 Text GLabel 4650 2400 2    39   Output ~ 0
 FPGA_~PAWR~
-Text GLabel 14650 2200 2    50   Input ~ 0
-FPGA_PA0
-Text GLabel 14650 2900 2    50   Input ~ 0
-FPGA_PA1
 Text GLabel 14650 2700 2    50   Input ~ 0
-FPGA_PA2
+FPGA_PA0
 Text GLabel 14650 3700 2    50   Input ~ 0
-FPGA_PA3
+FPGA_PA1
 Text GLabel 14650 3000 2    50   Input ~ 0
-FPGA_PA4
+FPGA_PA2
 Text GLabel 14650 3800 2    50   Input ~ 0
-FPGA_PA5
+FPGA_PA3
 Text GLabel 14650 4100 2    50   Input ~ 0
-FPGA_PA6
+FPGA_PA4
 Text GLabel 14650 4200 2    50   Input ~ 0
+FPGA_PA5
+Text GLabel 14650 4300 2    50   Input ~ 0
+FPGA_PA6
+Text GLabel 14650 4400 2    50   Input ~ 0
 FPGA_PA7
-Text GLabel 7150 2900 2    50   BiDi ~ 0
-FPGA_VAB0
-Text GLabel 7150 3000 2    50   BiDi ~ 0
-FPGA_VAB1
-Text GLabel 7150 3700 2    50   BiDi ~ 0
-FPGA_VAB2
-Text GLabel 7150 3200 2    50   BiDi ~ 0
-FPGA_VAB3
-Text GLabel 7150 3800 2    50   BiDi ~ 0
-FPGA_VAB4
-Text GLabel 7150 4100 2    50   BiDi ~ 0
-FPGA_VAB5
-Text GLabel 7150 4200 2    50   BiDi ~ 0
-FPGA_VAB6
-Text GLabel 7150 4300 2    50   BiDi ~ 0
-FPGA_VAB7
-Text GLabel 4650 3300 2    50   BiDi ~ 0
-FPGA_VAA0
-Text GLabel 4650 4100 2    50   BiDi ~ 0
-FPGA_VAA1
-Text GLabel 4650 3700 2    50   BiDi ~ 0
-FPGA_VAA2
-Text GLabel 4650 4200 2    50   BiDi ~ 0
-FPGA_VAA3
-Text GLabel 4650 4300 2    50   BiDi ~ 0
-FPGA_VAA4
-Text GLabel 4650 4400 2    50   BiDi ~ 0
-FPGA_VAA5
-Text GLabel 7150 1400 2    50   BiDi ~ 0
-FPGA_VAA6
-Text GLabel 7150 1300 2    50   BiDi ~ 0
-FPGA_VAA7
-Text GLabel 7150 1800 2    50   BiDi ~ 0
-FPGA_VAA8
-Text GLabel 7150 1700 2    50   BiDi ~ 0
-FPGA_VAA9
 Text GLabel 7150 1600 2    50   BiDi ~ 0
-FPGA_VAA10
+FPGA_VAB0
 Text GLabel 7150 2100 2    50   BiDi ~ 0
-FPGA_VAA11
+FPGA_VAB1
 Text GLabel 7150 2200 2    50   BiDi ~ 0
-FPGA_VAA12
+FPGA_VAB2
+Text GLabel 7150 2800 2    50   BiDi ~ 0
+FPGA_VAB3
 Text GLabel 7150 2700 2    50   BiDi ~ 0
+FPGA_VAB4
+Text GLabel 7150 2900 2    50   BiDi ~ 0
+FPGA_VAB5
+Text GLabel 7150 3000 2    50   BiDi ~ 0
+FPGA_VAB6
+Text GLabel 7150 3700 2    50   BiDi ~ 0
+FPGA_VAB7
+Text GLabel 4650 2200 2    50   BiDi ~ 0
+FPGA_VAA0
+Text GLabel 4650 2300 2    50   BiDi ~ 0
+FPGA_VAA1
+Text GLabel 4650 3100 2    50   BiDi ~ 0
+FPGA_VAA2
+Text GLabel 4650 2700 2    50   BiDi ~ 0
+FPGA_VAA3
+Text GLabel 4650 3200 2    50   BiDi ~ 0
+FPGA_VAA4
+Text GLabel 4650 3300 2    50   BiDi ~ 0
+FPGA_VAA5
+Text GLabel 4650 4100 2    50   BiDi ~ 0
+FPGA_VAA6
+Text GLabel 4650 3700 2    50   BiDi ~ 0
+FPGA_VAA7
+Text GLabel 4650 4200 2    50   BiDi ~ 0
+FPGA_VAA8
+Text GLabel 4650 4400 2    50   BiDi ~ 0
+FPGA_VAA10
+Text GLabel 7150 1400 2    50   BiDi ~ 0
+FPGA_VAA11
+Text GLabel 7150 1300 2    50   BiDi ~ 0
+FPGA_VAA12
+Text GLabel 7150 1700 2    50   BiDi ~ 0
 FPGA_VAA13
-Text GLabel 9650 1500 2    50   BiDi ~ 0
+Text GLabel 7150 4200 2    50   BiDi ~ 0
 FPGA_VA14
-Text GLabel 7150 4400 2    50   BiDi ~ 0
+Text GLabel 7150 3200 2    50   BiDi ~ 0
 FPGA_VAB8
-Text GLabel 9650 1300 2    50   BiDi ~ 0
+Text GLabel 7150 3800 2    50   BiDi ~ 0
 FPGA_VAB9
-Text GLabel 9650 1400 2    50   BiDi ~ 0
+Text GLabel 7150 4100 2    50   BiDi ~ 0
 FPGA_VAB10
-Text GLabel 9650 3000 2    50   BiDi ~ 0
+Text GLabel 9650 1300 2    50   BiDi ~ 0
 FPGA_VAB11
-Text GLabel 9650 2100 2    50   BiDi ~ 0
+Text GLabel 7150 4400 2    50   BiDi ~ 0
 FPGA_VAB12
-Text GLabel 9650 1600 2    50   BiDi ~ 0
+Text GLabel 7150 4300 2    50   BiDi ~ 0
 FPGA_VAB13
-Text GLabel 4650 3100 2    39   BiDi ~ 0
+Text GLabel 4650 1500 2    39   BiDi ~ 0
 FGPA_~VRD~
-Text GLabel 4650 3200 2    39   BiDi ~ 0
+Text GLabel 4650 1700 2    39   BiDi ~ 0
 FPGA_~VAWR~
-Text GLabel 4650 2700 2    39   BiDi ~ 0
+Text GLabel 4650 2100 2    39   BiDi ~ 0
 FPGA_~VBWR~
 Text GLabel 7150 3500 2    50   BiDi ~ 0
 FPGA_VDB0
@@ -699,21 +697,21 @@ Text GLabel 9650 1700 2    50   BiDi ~ 0
 FPGA_VDA6
 Text GLabel 7150 3900 2    50   BiDi ~ 0
 FPGA_VDA7
-Text GLabel 2150 3600 2    50   Input ~ 0
-FPGA_CHR3
-Text GLabel 2150 2800 2    50   Input ~ 0
-FPGA_CHR2
-Text GLabel 2150 3200 2    50   Input ~ 0
-FPGA_CHR1
-Text GLabel 2150 2700 2    50   Input ~ 0
-FPGA_CHR0
-Text GLabel 2150 2200 2    50   Input ~ 0
-FPGA_COLOR2
-Text GLabel 2150 4100 2    50   Input ~ 0
-FPGA_COLOR1
-Text GLabel 2150 2600 2    50   Input ~ 0
-FPGA_PRIO1
 Text GLabel 2150 4200 2    50   Input ~ 0
+FPGA_CHR3
+Text GLabel 2150 2200 2    50   Input ~ 0
+FPGA_CHR2
+Text GLabel 2150 4100 2    50   Input ~ 0
+FPGA_CHR1
+Text GLabel 2150 4000 2    50   Input ~ 0
+FPGA_CHR0
+Text GLabel 14650 1300 2    50   Input ~ 0
+FPGA_COLOR2
+Text GLabel 14650 1800 2    50   Input ~ 0
+FPGA_COLOR1
+Text GLabel 2150 3900 2    50   Input ~ 0
+FPGA_PRIO1
+Text GLabel 14650 1400 2    50   Input ~ 0
 FPGA_PRIO0
 Text GLabel 4650 3400 2    39   Output ~ 0
 FGPA_PPU1_~EXTSYNC~
@@ -725,9 +723,9 @@ Text GLabel 4650 3000 2    39   Output ~ 0
 FPGA_PPU1_~MASTER~
 Text GLabel 4650 2800 2    50   Output ~ 0
 FPGA_PPU1_PALMODE
-Text GLabel 14650 1300 2    39   Input ~ 0
+Text GLabel 14650 2800 2    39   Input ~ 0
 FPGA_~BURST~
-Text GLabel 14650 1800 2    39   Input ~ 0
+Text GLabel 14650 2200 2    39   Input ~ 0
 FPGA_~CSYNC~
 Text GLabel 14650 2400 2    39   Output ~ 0
 LVL_TST_~OE~
@@ -785,9 +783,9 @@ Text GLabel 2150 3500 2    39   Input ~ 0
 FPGA_PPU2_~5MOUT~
 Text GLabel 4650 1300 2    50   Output ~ 0
 FPGA_PPU2_PALMODE
-Text GLabel 14650 1400 2    39   Input ~ 0
+Text GLabel 14650 1900 2    39   Input ~ 0
 FPGA_PPU2_~RESOUT1~
-Text GLabel 2150 4000 2    39   Input ~ 0
+Text GLabel 14650 1700 2    39   Input ~ 0
 FPGA_PPU2_~RESOUT0~
 Text GLabel 4650 1400 2    39   Output ~ 0
 FPGA_PPU2_~RESET~
@@ -795,9 +793,9 @@ Text GLabel 2150 3300 2    50   Input ~ 0
 FPGA_PPU2_VBLANK
 Text GLabel 2150 3100 2    50   Input ~ 0
 FPGA_PPU2_HBLANK
-Text GLabel 7150 2800 2    50   Output ~ 0
+Text GLabel 7150 1800 2    50   Output ~ 0
 LVL_VA_DIR
-Text GLabel 14650 2800 2    50   Output ~ 0
+Text GLabel 14650 2900 2    50   Output ~ 0
 LVL_PA_DIR
 Text GLabel 9650 2700 2    50   Output ~ 0
 LVL_VD_DIR
@@ -811,19 +809,19 @@ Text GLabel 4650 1800 2    50   Output ~ 0
 FPGA_XIN
 Text GLabel 2150 3000 2    50   Output ~ 0
 LVL_PD_DIR
-Text GLabel 4650 1600 2    50   Input ~ 0
+Text GLabel 2150 2700 2    50   Input ~ 0
 FPGA_PPU2_3.58M
-Text GLabel 2150 3800 2    39   Input ~ 0
+Text GLabel 2150 3200 2    39   Input ~ 0
 FPGA_~5M~
-Text GLabel 4650 1500 2    39   Input ~ 0
+Text GLabel 2150 2800 2    39   Input ~ 0
 FPGA_~OVER~
-Text GLabel 4650 2100 2    50   Input ~ 0
+Text GLabel 2150 3600 2    50   Input ~ 0
 FPGA_FIELD
-Text GLabel 4650 1700 2    39   Input ~ 0
+Text GLabel 2150 3700 2    39   Input ~ 0
 FPGA_~HCLD
-Text GLabel 4650 2200 2    39   Input ~ 0
+Text GLabel 4650 1600 2    39   Input ~ 0
 FPGA_~VCLD~
-Text GLabel 4650 2300 2    50   Input ~ 0
+Text GLabel 2150 3800 2    50   Input ~ 0
 FPGA_COLOR0
 Text GLabel 14650 2000 2    50   Output ~ 0
 LVL_TST_DIR
@@ -947,7 +945,6 @@ NoConn ~ 9650 4100
 NoConn ~ 9650 3900
 NoConn ~ 12150 1700
 NoConn ~ 12150 1800
-NoConn ~ 12150 2400
 NoConn ~ 12150 4100
 NoConn ~ 14650 3600
 NoConn ~ 14650 2500
@@ -958,107 +955,38 @@ NoConn ~ 7150 2600
 NoConn ~ 4650 2600
 NoConn ~ 4650 3600
 NoConn ~ 7150 2500
-Text GLabel 2150 3900 2    39   Input ~ 0
+Text GLabel 14650 2100 2    39   Input ~ 0
 FPGA_PPU2_~TOUMEI~
-Text GLabel 2150 3700 2    39   Input ~ 0
+Text GLabel 2150 2600 2    39   Input ~ 0
 FPGA_PPU2_~PED~
 Text GLabel 4650 2900 2    50   Output ~ 0
 FPGA_PPU2_EXTLATCH
-Text GLabel 12150 2800 2    50   Input ~ 0
+Text GLabel 12150 2200 2    50   Input ~ 0
 ANALOG_B1
-Text GLabel 12150 2100 2    50   Input ~ 0
+Text GLabel 12150 2500 2    50   Input ~ 0
 ANALOG_B2
-Text GLabel 12150 1600 2    50   Input ~ 0
+Text GLabel 12150 2800 2    50   Input ~ 0
 ANALOG_B3
-Text GLabel 12150 1500 2    50   Input ~ 0
+Text GLabel 12150 2100 2    50   Input ~ 0
 ANALOG_B4
-Text GLabel 12150 1400 2    50   Input ~ 0
+Text GLabel 12150 1600 2    50   Input ~ 0
 ANALOG_B5
-Text GLabel 12150 1300 2    50   Input ~ 0
+Text GLabel 12150 1500 2    50   Input ~ 0
 ANALOG_B6
-Text GLabel 14650 4400 2    50   Input ~ 0
+Text GLabel 12150 1400 2    50   Input ~ 0
 ANALOG_B7
 Text GLabel 4650 8000 2    50   Input ~ 0
 ANALOG_OE
-Text GLabel 12150 3700 2    50   Input ~ 0
-ANALOG_G0
-Text GLabel 12150 3800 2    50   Input ~ 0
-ANALOG_G1
-Text GLabel 12150 3500 2    50   Input ~ 0
-ANALOG_G2
-Text GLabel 12150 3600 2    50   Input ~ 0
-ANALOG_G3
-Text GLabel 12150 3400 2    50   Input ~ 0
-ANALOG_G4
-Text GLabel 12150 3200 2    50   Input ~ 0
-ANALOG_G5
-Text GLabel 12150 3100 2    50   Input ~ 0
-ANALOG_G6
-Text GLabel 12150 2600 2    50   Input ~ 0
-ANALOG_G7
 Text GLabel 3100 8800 2    39   Input ~ 0
 ~PROGRAM
 $Comp
 L Device:LED D?
 U 1 1 5E9D36B8
-P 4750 9750
+P 5150 9750
 AR Path="/5E4F712F/5E9D36B8" Ref="D?"  Part="1" 
 AR Path="/5E50D39B/5E9D36B8" Ref="D?"  Part="1" 
 AR Path="/5E4D8358/5E9D36B8" Ref="D6"  Part="1" 
-F 0 "D6" V 4789 9633 50  0000 R CNN
-F 1 "LED" V 4698 9633 50  0000 R CNN
-F 2 "LED_SMD:LED_0805_2012Metric" H 4750 9750 50  0001 C CNN
-F 3 "~" H 4750 9750 50  0001 C CNN
-F 4 "732-4986-1-ND" H 4750 9750 50  0001 C CNN "Digikey"
-F 5 "150080VS75000" H 4750 9750 50  0001 C CNN "Manufacturer Id"
-F 6 "Wuerth Electronik" H 4750 9750 50  0001 C CNN "Manufacturer"
-	1    4750 9750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 5E9D36C2
-P 4750 10100
-AR Path="/5E4F712F/5E9D36C2" Ref="R?"  Part="1" 
-AR Path="/5E50D39B/5E9D36C2" Ref="R?"  Part="1" 
-AR Path="/5E4D8358/5E9D36C2" Ref="R9"  Part="1" 
-F 0 "R9" H 4809 10146 50  0000 L CNN
-F 1 "330" H 4809 10055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4750 10100 50  0001 C CNN
-F 3 "~" H 4750 10100 50  0001 C CNN
-F 4 "RMCF0603JT330RCT-ND" H 4750 10100 50  0001 C CNN "Digikey"
-F 5 "Stackpole Electronics Inc" H 4750 10100 50  0001 C CNN "Manufacturer"
-F 6 "RMCF0603JT330R" H 4750 10100 50  0001 C CNN "Manufacturer Id"
-	1    4750 10100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 9900 4750 10000
-Wire Wire Line
-	4750 10200 4750 10300
-$Comp
-L power:GND #PWR?
-U 1 1 5E9D36CE
-P 4750 10300
-AR Path="/5E4F712F/5E9D36CE" Ref="#PWR?"  Part="1" 
-AR Path="/5E4D8358/5E9D36CE" Ref="#PWR0209"  Part="1" 
-F 0 "#PWR0209" H 4750 10050 50  0001 C CNN
-F 1 "GND" H 4755 10127 50  0000 C CNN
-F 2 "" H 4750 10300 50  0001 C CNN
-F 3 "" H 4750 10300 50  0001 C CNN
-	1    4750 10300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 9500 4750 9600
-$Comp
-L Device:LED D?
-U 1 1 5E9D36D9
-P 5150 9750
-AR Path="/5E4F712F/5E9D36D9" Ref="D?"  Part="1" 
-AR Path="/5E50D39B/5E9D36D9" Ref="D?"  Part="1" 
-AR Path="/5E4D8358/5E9D36D9" Ref="D5"  Part="1" 
-F 0 "D5" V 5189 9633 50  0000 R CNN
+F 0 "D6" V 5189 9633 50  0000 R CNN
 F 1 "LED" V 5098 9633 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric" H 5150 9750 50  0001 C CNN
 F 3 "~" H 5150 9750 50  0001 C CNN
@@ -1070,12 +998,12 @@ F 6 "Wuerth Electronik" H 5150 9750 50  0001 C CNN "Manufacturer"
 $EndComp
 $Comp
 L Device:R_Small R?
-U 1 1 5E9D36E3
+U 1 1 5E9D36C2
 P 5150 10100
-AR Path="/5E4F712F/5E9D36E3" Ref="R?"  Part="1" 
-AR Path="/5E50D39B/5E9D36E3" Ref="R?"  Part="1" 
-AR Path="/5E4D8358/5E9D36E3" Ref="R10"  Part="1" 
-F 0 "R10" H 5209 10146 50  0000 L CNN
+AR Path="/5E4F712F/5E9D36C2" Ref="R?"  Part="1" 
+AR Path="/5E50D39B/5E9D36C2" Ref="R?"  Part="1" 
+AR Path="/5E4D8358/5E9D36C2" Ref="R9"  Part="1" 
+F 0 "R9" H 5209 10146 50  0000 L CNN
 F 1 "330" H 5209 10055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 5150 10100 50  0001 C CNN
 F 3 "~" H 5150 10100 50  0001 C CNN
@@ -1091,22 +1019,73 @@ Wire Wire Line
 	5150 10200 5150 10300
 $Comp
 L power:GND #PWR?
-U 1 1 5E9D36EF
+U 1 1 5E9D36CE
 P 5150 10300
-AR Path="/5E4F712F/5E9D36EF" Ref="#PWR?"  Part="1" 
-AR Path="/5E4D8358/5E9D36EF" Ref="#PWR0211"  Part="1" 
-F 0 "#PWR0211" H 5150 10050 50  0001 C CNN
+AR Path="/5E4F712F/5E9D36CE" Ref="#PWR?"  Part="1" 
+AR Path="/5E4D8358/5E9D36CE" Ref="#PWR0209"  Part="1" 
+F 0 "#PWR0209" H 5150 10050 50  0001 C CNN
 F 1 "GND" H 5155 10127 50  0000 C CNN
 F 2 "" H 5150 10300 50  0001 C CNN
 F 3 "" H 5150 10300 50  0001 C CNN
 	1    5150 10300
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E9D36D9
+P 4750 9750
+AR Path="/5E4F712F/5E9D36D9" Ref="D?"  Part="1" 
+AR Path="/5E50D39B/5E9D36D9" Ref="D?"  Part="1" 
+AR Path="/5E4D8358/5E9D36D9" Ref="D5"  Part="1" 
+F 0 "D5" V 4789 9633 50  0000 R CNN
+F 1 "LED" V 4698 9633 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 4750 9750 50  0001 C CNN
+F 3 "~" H 4750 9750 50  0001 C CNN
+F 4 "732-4986-1-ND" H 4750 9750 50  0001 C CNN "Digikey"
+F 5 "150080VS75000" H 4750 9750 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 4750 9750 50  0001 C CNN "Manufacturer"
+	1    4750 9750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E9D36E3
+P 4750 10100
+AR Path="/5E4F712F/5E9D36E3" Ref="R?"  Part="1" 
+AR Path="/5E50D39B/5E9D36E3" Ref="R?"  Part="1" 
+AR Path="/5E4D8358/5E9D36E3" Ref="R10"  Part="1" 
+F 0 "R10" H 4809 10146 50  0000 L CNN
+F 1 "330" H 4809 10055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4750 10100 50  0001 C CNN
+F 3 "~" H 4750 10100 50  0001 C CNN
+F 4 "RMCF0603JT330RCT-ND" H 4750 10100 50  0001 C CNN "Digikey"
+F 5 "Stackpole Electronics Inc" H 4750 10100 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT330R" H 4750 10100 50  0001 C CNN "Manufacturer Id"
+	1    4750 10100
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	5150 9500 5150 9600
-Text GLabel 4750 9500 0    39   BiDi ~ 0
+	4750 9900 4750 10000
+Wire Wire Line
+	4750 10200 4750 10300
+$Comp
+L power:GND #PWR?
+U 1 1 5E9D36EF
+P 4750 10300
+AR Path="/5E4F712F/5E9D36EF" Ref="#PWR?"  Part="1" 
+AR Path="/5E4D8358/5E9D36EF" Ref="#PWR0211"  Part="1" 
+F 0 "#PWR0211" H 4750 10050 50  0001 C CNN
+F 1 "GND" H 4755 10127 50  0000 C CNN
+F 2 "" H 4750 10300 50  0001 C CNN
+F 3 "" H 4750 10300 50  0001 C CNN
+	1    4750 10300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 9500 4750 9600
+Text GLabel 5150 9500 0    39   BiDi ~ 0
 ~INIT
-Text GLabel 5150 9500 0    50   BiDi ~ 0
+Text GLabel 4750 9500 0    50   BiDi ~ 0
 DONE
 Wire Wire Line
 	2250 10250 2700 10250
@@ -1155,74 +1134,70 @@ F 6 "RMCF0402FT4K70" H 4000 6800 50  0001 C CNN "Manufacturer Id"
 $EndComp
 Wire Wire Line
 	4000 6600 4000 6700
-Text GLabel 4850 9100 2    39   Input ~ 0
+Text GLabel 4450 9150 2    39   Input ~ 0
 ~PROGRAM
 Wire Wire Line
-	4850 9100 4850 8900
+	4450 9150 4450 8950
 $Comp
 L Device:R_Small R?
 U 1 1 5EB9F9F9
-P 4850 8800
+P 4450 8850
 AR Path="/5E4F712F/5EB9F9F9" Ref="R?"  Part="1" 
 AR Path="/5E50D39B/5EB9F9F9" Ref="R?"  Part="1" 
 AR Path="/5E4D8358/5EB9F9F9" Ref="R16"  Part="1" 
-F 0 "R16" H 4909 8846 50  0000 L CNN
-F 1 "4.7k" H 4909 8755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4850 8800 50  0001 C CNN
-F 3 "~" H 4850 8800 50  0001 C CNN
-F 4 "RMCF0603JT4K70CT-ND" H 4850 8800 50  0001 C CNN "Digikey"
-F 5 "Stackpole Electronics Inc" H 4850 8800 50  0001 C CNN "Manufacturer"
-F 6 "RMCF0603JT4K70" H 4850 8800 50  0001 C CNN "Manufacturer Id"
-	1    4850 8800
+F 0 "R16" H 4509 8896 50  0000 L CNN
+F 1 "4.7k" H 4509 8805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4450 8850 50  0001 C CNN
+F 3 "~" H 4450 8850 50  0001 C CNN
+F 4 "RMCF0603JT4K70CT-ND" H 4450 8850 50  0001 C CNN "Digikey"
+F 5 "Stackpole Electronics Inc" H 4450 8850 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT4K70" H 4450 8850 50  0001 C CNN "Manufacturer Id"
+	1    4450 8850
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR0214
 U 1 1 5EBA4221
-P 4850 8600
-F 0 "#PWR0214" H 4850 8450 50  0001 C CNN
-F 1 "+3V3" H 4865 8773 50  0000 C CNN
-F 2 "" H 4850 8600 50  0001 C CNN
-F 3 "" H 4850 8600 50  0001 C CNN
-	1    4850 8600
+P 4450 8650
+F 0 "#PWR0214" H 4450 8500 50  0001 C CNN
+F 1 "+3V3" H 4465 8823 50  0000 C CNN
+F 2 "" H 4450 8650 50  0001 C CNN
+F 3 "" H 4450 8650 50  0001 C CNN
+	1    4450 8650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 8600 4850 8700
-Text GLabel 5550 9100 2    39   BiDi ~ 0
-~INIT
-Wire Wire Line
-	5550 9100 5550 8900
+	4450 8650 4450 8750
 $Comp
 L Device:R_Small R?
 U 1 1 5EBAC32F
-P 5550 8800
+P 5150 9200
 AR Path="/5E4F712F/5EBAC32F" Ref="R?"  Part="1" 
 AR Path="/5E50D39B/5EBAC32F" Ref="R?"  Part="1" 
 AR Path="/5E4D8358/5EBAC32F" Ref="R28"  Part="1" 
-F 0 "R28" H 5609 8846 50  0000 L CNN
-F 1 "4.7k" H 5609 8755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 8800 50  0001 C CNN
-F 3 "~" H 5550 8800 50  0001 C CNN
-F 4 "RMCF0603JT4K70CT-ND" H 5550 8800 50  0001 C CNN "Digikey"
-F 5 "Stackpole Electronics Inc" H 5550 8800 50  0001 C CNN "Manufacturer"
-F 6 "RMCF0603JT4K70" H 5550 8800 50  0001 C CNN "Manufacturer Id"
-	1    5550 8800
+F 0 "R28" H 5209 9246 50  0000 L CNN
+F 1 "4.7k" H 5209 9155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5150 9200 50  0001 C CNN
+F 3 "~" H 5150 9200 50  0001 C CNN
+F 4 "RMCF0603JT4K70CT-ND" H 5150 9200 50  0001 C CNN "Digikey"
+F 5 "Stackpole Electronics Inc" H 5150 9200 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT4K70" H 5150 9200 50  0001 C CNN "Manufacturer Id"
+	1    5150 9200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR0215
 U 1 1 5EBAC339
-P 5550 8600
-F 0 "#PWR0215" H 5550 8450 50  0001 C CNN
-F 1 "+3V3" H 5565 8773 50  0000 C CNN
-F 2 "" H 5550 8600 50  0001 C CNN
-F 3 "" H 5550 8600 50  0001 C CNN
-	1    5550 8600
+P 5150 9000
+F 0 "#PWR0215" H 5150 8850 50  0001 C CNN
+F 1 "+3V3" H 5165 9173 50  0000 C CNN
+F 2 "" H 5150 9000 50  0001 C CNN
+F 3 "" H 5150 9000 50  0001 C CNN
+	1    5150 9000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5550 8600 5550 8700
+	5150 9000 5150 9100
 Text Label 3650 7000 0    50   ~ 0
 CFG_0
 Text Label 3650 7100 0    50   ~ 0
@@ -1713,11 +1688,11 @@ F 3 "" H 7300 7500 50  0001 C CNN
 $EndComp
 Text Notes 7950 7350 0    50   ~ 0
 Note: by above logic, 3.3V is short 9x 0.01uF decoupling capacitors, due to lack of space.
-Text GLabel 14650 1700 2    50   Output ~ 0
+Text GLabel 9650 1400 2    50   Output ~ 0
 FPGA_EXTRA1
-Text GLabel 14650 2100 2    50   Output ~ 0
+Text GLabel 9650 1500 2    50   Output ~ 0
 FPGA_EXTRA2
-Text GLabel 14650 1900 2    50   Output ~ 0
+Text GLabel 9650 1600 2    50   Output ~ 0
 FPGA_EXTRA3
 Text GLabel 14800 5300 2    50   Output ~ 0
 FPGA_EXTRA1
@@ -1780,16 +1755,6 @@ Wire Wire Line
 Wire Wire Line
 	14700 6100 14700 6000
 Wire Wire Line
-	3100 8300 4250 8300
-NoConn ~ 4250 8300
-Text Label 3750 8300 0    50   ~ 0
-UNUSED_0
-Wire Wire Line
-	12150 2200 13200 2200
-NoConn ~ 13200 2200
-Text Label 12700 2200 0    50   ~ 0
-UNUSED_1
-Wire Wire Line
 	4650 8000 4450 8000
 $Comp
 L Device:R_Small R36
@@ -1825,4 +1790,192 @@ F 3 "" H 4450 7600 50  0001 C CNN
 $EndComp
 Text Notes 4750 7750 0    50   ~ 0
 Weak pullup (~OE~ is active-low)
+Text GLabel 3100 8300 2    50   Input ~ 0
+ANALOG_G0
+Text GLabel 12150 3700 2    50   Input ~ 0
+ANALOG_G1
+Text GLabel 12150 3800 2    50   Input ~ 0
+ANALOG_G2
+Text GLabel 12150 3500 2    50   Input ~ 0
+ANALOG_G3
+Text GLabel 12150 3600 2    50   Input ~ 0
+ANALOG_G4
+Text GLabel 12150 3400 2    50   Input ~ 0
+ANALOG_G5
+Text GLabel 12150 3200 2    50   Input ~ 0
+ANALOG_G6
+NoConn ~ 12150 2400
+Text GLabel 12150 3100 2    50   Input ~ 0
+ANALOG_G7
+Text GLabel 4650 4300 2    50   BiDi ~ 0
+FPGA_VAA9
+$Comp
+L Device:LED D?
+U 1 1 60148FD2
+P 6350 9750
+AR Path="/5E4F712F/60148FD2" Ref="D?"  Part="1" 
+AR Path="/5E50D39B/60148FD2" Ref="D?"  Part="1" 
+AR Path="/5E4D8358/60148FD2" Ref="D9"  Part="1" 
+F 0 "D9" V 6389 9633 50  0000 R CNN
+F 1 "LED" V 6298 9633 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6350 9750 50  0001 C CNN
+F 3 "~" H 6350 9750 50  0001 C CNN
+F 4 "732-4986-1-ND" H 6350 9750 50  0001 C CNN "Digikey"
+F 5 "150080VS75000" H 6350 9750 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 6350 9750 50  0001 C CNN "Manufacturer"
+	1    6350 9750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 60148FDF
+P 6350 10100
+AR Path="/5E4F712F/60148FDF" Ref="R?"  Part="1" 
+AR Path="/5E50D39B/60148FDF" Ref="R?"  Part="1" 
+AR Path="/5E4D8358/60148FDF" Ref="R37"  Part="1" 
+F 0 "R37" H 6409 10146 50  0000 L CNN
+F 1 "330" H 6409 10055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6350 10100 50  0001 C CNN
+F 3 "~" H 6350 10100 50  0001 C CNN
+F 4 "RMCF0603JT330RCT-ND" H 6350 10100 50  0001 C CNN "Digikey"
+F 5 "Stackpole Electronics Inc" H 6350 10100 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT330R" H 6350 10100 50  0001 C CNN "Manufacturer Id"
+	1    6350 10100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 9900 6350 10000
+Wire Wire Line
+	6350 10200 6350 10300
+$Comp
+L power:GND #PWR?
+U 1 1 60148FEB
+P 6350 10300
+AR Path="/5E4F712F/60148FEB" Ref="#PWR?"  Part="1" 
+AR Path="/5E4D8358/60148FEB" Ref="#PWR0238"  Part="1" 
+F 0 "#PWR0238" H 6350 10050 50  0001 C CNN
+F 1 "GND" H 6355 10127 50  0000 C CNN
+F 2 "" H 6350 10300 50  0001 C CNN
+F 3 "" H 6350 10300 50  0001 C CNN
+	1    6350 10300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 9500 6350 9600
+$Comp
+L Device:LED D?
+U 1 1 60148FF9
+P 6750 9750
+AR Path="/5E4F712F/60148FF9" Ref="D?"  Part="1" 
+AR Path="/5E50D39B/60148FF9" Ref="D?"  Part="1" 
+AR Path="/5E4D8358/60148FF9" Ref="D10"  Part="1" 
+F 0 "D10" V 6789 9633 50  0000 R CNN
+F 1 "LED" V 6698 9633 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6750 9750 50  0001 C CNN
+F 3 "~" H 6750 9750 50  0001 C CNN
+F 4 "732-4986-1-ND" H 6750 9750 50  0001 C CNN "Digikey"
+F 5 "150080VS75000" H 6750 9750 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 6750 9750 50  0001 C CNN "Manufacturer"
+	1    6750 9750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 60149006
+P 6750 10100
+AR Path="/5E4F712F/60149006" Ref="R?"  Part="1" 
+AR Path="/5E50D39B/60149006" Ref="R?"  Part="1" 
+AR Path="/5E4D8358/60149006" Ref="R38"  Part="1" 
+F 0 "R38" H 6809 10146 50  0000 L CNN
+F 1 "330" H 6809 10055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6750 10100 50  0001 C CNN
+F 3 "~" H 6750 10100 50  0001 C CNN
+F 4 "RMCF0603JT330RCT-ND" H 6750 10100 50  0001 C CNN "Digikey"
+F 5 "Stackpole Electronics Inc" H 6750 10100 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT330R" H 6750 10100 50  0001 C CNN "Manufacturer Id"
+	1    6750 10100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 9900 6750 10000
+Wire Wire Line
+	6750 10200 6750 10300
+$Comp
+L power:GND #PWR?
+U 1 1 60149012
+P 6750 10300
+AR Path="/5E4F712F/60149012" Ref="#PWR?"  Part="1" 
+AR Path="/5E4D8358/60149012" Ref="#PWR0239"  Part="1" 
+F 0 "#PWR0239" H 6750 10050 50  0001 C CNN
+F 1 "GND" H 6755 10127 50  0000 C CNN
+F 2 "" H 6750 10300 50  0001 C CNN
+F 3 "" H 6750 10300 50  0001 C CNN
+	1    6750 10300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 9500 6750 9600
+Text GLabel 6350 9500 0    50   Input ~ 0
+LED9
+Text GLabel 6750 9500 0    50   Input ~ 0
+LED10
+$Comp
+L Device:LED D?
+U 1 1 601B51D9
+P 4100 8650
+AR Path="/5E4F712F/601B51D9" Ref="D?"  Part="1" 
+AR Path="/5E50D39B/601B51D9" Ref="D?"  Part="1" 
+AR Path="/5E4D8358/601B51D9" Ref="D4"  Part="1" 
+F 0 "D4" V 4139 8533 50  0000 R CNN
+F 1 "LED" V 4048 8533 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 4100 8650 50  0001 C CNN
+F 3 "~" H 4100 8650 50  0001 C CNN
+F 4 "732-4986-1-ND" H 4100 8650 50  0001 C CNN "Digikey"
+F 5 "150080VS75000" H 4100 8650 50  0001 C CNN "Manufacturer Id"
+F 6 "Wuerth Electronik" H 4100 8650 50  0001 C CNN "Manufacturer"
+	1    4100 8650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 8800 4100 8900
+Wire Wire Line
+	4100 8450 4100 8500
+$Comp
+L Device:R_Small R?
+U 1 1 601B51E5
+P 4100 9000
+AR Path="/5E4F712F/601B51E5" Ref="R?"  Part="1" 
+AR Path="/5E50D39B/601B51E5" Ref="R?"  Part="1" 
+AR Path="/5E4D8358/601B51E5" Ref="R8"  Part="1" 
+F 0 "R8" H 4159 9046 50  0000 L CNN
+F 1 "330" H 4159 8955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4100 9000 50  0001 C CNN
+F 3 "~" H 4100 9000 50  0001 C CNN
+F 4 "RMCF0603JT330RCT-ND" H 4100 9000 50  0001 C CNN "Digikey"
+F 5 "Stackpole Electronics Inc" H 4100 9000 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT330R" H 4100 9000 50  0001 C CNN "Manufacturer Id"
+	1    4100 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0237
+U 1 1 601C2CD0
+P 4100 8450
+F 0 "#PWR0237" H 4100 8300 50  0001 C CNN
+F 1 "+3V3" H 4115 8623 50  0000 C CNN
+F 2 "" H 4100 8450 50  0001 C CNN
+F 3 "" H 4100 8450 50  0001 C CNN
+	1    4100 8450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 9150 4450 9150
+Wire Wire Line
+	4100 9100 4100 9150
+Wire Wire Line
+	5150 9300 5150 9600
+Text GLabel 9650 3000 2    50   Output ~ 0
+LED9
+Text GLabel 9650 2100 2    50   Output ~ 0
+LED10
 $EndSCHEMATC

@@ -46,11 +46,8 @@
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
 * Drive all LEDs with high-impedence input things (transistors) to avoid biasing the signals I'm trying to sample.  (At least `INIT` and `DONE`, which are open-drain and can't support very much current).
 * Replace `TP7` / `TP8` / `TP9` pads with pins, which are larger but easier to work with.
-* Move `TP7` / `TP8` / `TP9` closer to the bottom edge of the board, to be out of the way.
 * Fix decoupling capacitors on VRAM chips, which ought to be across actual power/ground, and not the `OE` pin.
 * Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
-* Pinswap FPGA to move LEDs / Test points to the south edge of the board.
-* Absorb otherwise-unused FPGA pins for more LEDs.
 
 ## Deferred
 

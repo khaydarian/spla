@@ -494,7 +494,7 @@ Connection ~ 6350 7900
 NoConn ~ 11150 5050
 Text GLabel 11150 6050 2    39   BiDi ~ 0
 ~INIT
-Text GLabel 12600 6150 2    39   Output ~ 0
+Text GLabel 11150 6150 2    39   Output ~ 0
 ~PROGRAM
 Text GLabel 11150 5950 2    50   BiDi ~ 0
 DONE
@@ -608,46 +608,18 @@ F 6 "Microchip Technology" H 5700 6550 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D4
-U 1 1 5E9C89B2
-P 12400 5600
-AR Path="/5E4F712F/5E9C89B2" Ref="D4"  Part="1" 
-AR Path="/5E50D39B/5E9C89B2" Ref="D?"  Part="1" 
-AR Path="/5E4D8358/5E9C89B2" Ref="D?"  Part="1" 
-F 0 "D4" V 12439 5483 50  0000 R CNN
-F 1 "LED" V 12348 5483 50  0000 R CNN
-F 2 "LED_SMD:LED_0805_2012Metric" H 12400 5600 50  0001 C CNN
-F 3 "~" H 12400 5600 50  0001 C CNN
-F 4 "732-4986-1-ND" H 12400 5600 50  0001 C CNN "Digikey"
-F 5 "150080VS75000" H 12400 5600 50  0001 C CNN "Manufacturer Id"
-F 6 "Wuerth Electronik" H 12400 5600 50  0001 C CNN "Manufacturer"
-	1    12400 5600
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	12400 5750 12400 5850
-Wire Wire Line
-	12400 6050 12400 6150
-$Comp
 L power:+3V3 #PWR?
 U 1 1 5E9C89C1
-P 12400 5250
+P 11900 5250
 AR Path="/5E4D8358/5E9C89C1" Ref="#PWR?"  Part="1" 
 AR Path="/5E4F712F/5E9C89C1" Ref="#PWR053"  Part="1" 
-F 0 "#PWR053" H 12400 5100 50  0001 C CNN
-F 1 "+3V3" H 12415 5423 50  0000 C CNN
-F 2 "" H 12400 5250 50  0001 C CNN
-F 3 "" H 12400 5250 50  0001 C CNN
-	1    12400 5250
+F 0 "#PWR053" H 11900 5100 50  0001 C CNN
+F 1 "+3V3" H 11915 5423 50  0000 C CNN
+F 2 "" H 11900 5250 50  0001 C CNN
+F 3 "" H 11900 5250 50  0001 C CNN
+	1    11900 5250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	12400 5250 12400 5350
-Wire Wire Line
-	12600 6150 12400 6150
-Connection ~ 12400 6150
-Wire Wire Line
-	12400 6150 11150 6150
 Wire Wire Line
 	6350 7450 7550 7450
 NoConn ~ 6750 7700
@@ -691,13 +663,6 @@ F 6 "RMCF0603JT10K0" H 11900 5600 50  0001 C CNN "Manufacturer Id"
 	1    11900 5600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	12400 5350 11900 5350
-Wire Wire Line
-	11900 5350 11900 5500
-Connection ~ 12400 5350
-Wire Wire Line
-	12400 5350 12400 5450
 Wire Wire Line
 	2800 4450 2800 4200
 Wire Wire Line
@@ -793,23 +758,6 @@ F 4 "490-7203-1-ND" H 7300 2900 50  0001 C CNN "Digikey"
 F 5 "Murata Electronics" H 7300 2900 50  0001 C CNN "Manufacturer"
 F 6 "GRM188R61E475KE11D" H 7300 2900 50  0001 C CNN "Manufacturer Id"
 	1    7300 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R8
-U 1 1 5E9C89B8
-P 12400 5950
-AR Path="/5E4F712F/5E9C89B8" Ref="R8"  Part="1" 
-AR Path="/5E50D39B/5E9C89B8" Ref="R?"  Part="1" 
-AR Path="/5E4D8358/5E9C89B8" Ref="R?"  Part="1" 
-F 0 "R8" H 12459 5996 50  0000 L CNN
-F 1 "330" H 12459 5905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 12400 5950 50  0001 C CNN
-F 3 "~" H 12400 5950 50  0001 C CNN
-F 4 "RMCF0603JT330RCT-ND" H 12400 5950 50  0001 C CNN "Digikey"
-F 5 "Stackpole Electronics Inc" H 12400 5950 50  0001 C CNN "Manufacturer"
-F 6 "RMCF0603JT330R" H 12400 5950 50  0001 C CNN "Manufacturer Id"
-	1    12400 5950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1003,4 +951,6 @@ Wire Wire Line
 Connection ~ 3950 3950
 Wire Wire Line
 	3950 3950 3950 4250
+Wire Wire Line
+	11900 5250 11900 5500
 $EndSCHEMATC
