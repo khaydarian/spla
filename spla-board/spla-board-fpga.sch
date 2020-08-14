@@ -645,7 +645,7 @@ Text GLabel 7150 1300 2    50   BiDi ~ 0
 FPGA_VAA12
 Text GLabel 7150 1700 2    50   BiDi ~ 0
 FPGA_VAA13
-Text GLabel 7150 4200 2    50   BiDi ~ 0
+Text GLabel 9650 1300 2    50   BiDi ~ 0
 FPGA_VA14
 Text GLabel 7150 3200 2    50   BiDi ~ 0
 FPGA_VAB8
@@ -653,11 +653,11 @@ Text GLabel 7150 3800 2    50   BiDi ~ 0
 FPGA_VAB9
 Text GLabel 7150 4100 2    50   BiDi ~ 0
 FPGA_VAB10
-Text GLabel 9650 1300 2    50   BiDi ~ 0
+Text GLabel 7150 4200 2    50   BiDi ~ 0
 FPGA_VAB11
-Text GLabel 7150 4400 2    50   BiDi ~ 0
-FPGA_VAB12
 Text GLabel 7150 4300 2    50   BiDi ~ 0
+FPGA_VAB12
+Text GLabel 7150 4400 2    50   BiDi ~ 0
 FPGA_VAB13
 Text GLabel 4650 1500 2    39   BiDi ~ 0
 FGPA_~VRD~

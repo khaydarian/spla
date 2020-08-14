@@ -31,10 +31,7 @@
 * Compact the board, since there's quite a bit of unnecessary empty space.
 * Consider adding an alternate clock source for the FPGA.
 * Consider adding an easier test pad for the 12MHz oscillator.
-* Move `J5` and `J6` further away from each other.
 * Remove JTAG connector, or reduce its footprint.
-* Fix `J3` pin 3 layout, which has a weird connection.
-* `U32` has pads connected on the long side, which it should not.
 * Add physical power switch (toggle).
 * Add a momentary push button for the FPGA, with ~1ms RC debounce.
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
@@ -45,7 +42,6 @@
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
 * Drive all LEDs with high-impedence input things (transistors) to avoid biasing the signals I'm trying to sample.  (At least `INIT` and `DONE`, which are open-drain and can't support very much current).
 * Replace `TP7` / `TP8` / `TP9` pads with pins, which are larger but easier to work with.
-* Fix decoupling capacitors on VRAM chips, which ought to be across actual power/ground, and not the `OE` pin.
 * Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
 
 ## Deferred

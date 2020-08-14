@@ -1768,21 +1768,21 @@ F 6 "Texas Instruments" H 8750 9500 50  0001 C CNN "Manufacturer"
 	1    8750 9500
 	1    0    0    -1  
 $EndComp
-Text GLabel 9150 9600 2    50   BiDi ~ 0
-TAP_VA14
-Text GLabel 8350 9600 0    50   BiDi ~ 0
-FPGA_VA14
 Text GLabel 9150 9300 2    50   BiDi ~ 0
-TAP_VAB11
-Text GLabel 9150 9400 2    50   BiDi ~ 0
-TAP_VAB12
-Text GLabel 9150 9500 2    50   BiDi ~ 0
-TAP_VAB13
+TAP_VA14
 Text GLabel 8350 9300 0    50   BiDi ~ 0
+FPGA_VA14
+Text GLabel 9150 9600 2    50   BiDi ~ 0
+TAP_VAB11
+Text GLabel 9150 9500 2    50   BiDi ~ 0
+TAP_VAB12
+Text GLabel 9150 9400 2    50   BiDi ~ 0
+TAP_VAB13
+Text GLabel 8350 9600 0    50   BiDi ~ 0
 FPGA_VAB11
-Text GLabel 8350 9400 0    50   BiDi ~ 0
-FPGA_VAB12
 Text GLabel 8350 9500 0    50   BiDi ~ 0
+FPGA_VAB12
+Text GLabel 8350 9400 0    50   BiDi ~ 0
 FPGA_VAB13
 NoConn ~ 11050 1550
 NoConn ~ 10250 1550
