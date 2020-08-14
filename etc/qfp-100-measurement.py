@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # vi: ts=4:sw=4:sts=4:et
 
-pin_pitch = 635 # um
-plastic_width = 13500 # um
-plastic_height = 19500 # um
-land_outer_width = 19500 # um
-land_outer_height = 25500 # um
+pin_pitch = 650 # um
+plastic_width = 14000 # um
+plastic_height = 20000 # um
+land_outer_width = 20000 # um
+land_outer_height = 26000 # um
 land_orig_length = 2000 # um
 land_new_length = 3000 # um, including space for hand-soldering
 land_width = 400 # um -- guessing
@@ -38,5 +38,22 @@ show("land_top_inner", land_top_inner)
 show("land_top_outer", land_top_outer)
 land_top_center = (land_top_inner + land_top_outer) / 2
 show("land_top_center", land_top_center)
-show("land width", land_width)
 show("land height", land_new_length)
+show("land width", land_width)
+
+left = -land_right_center
+right = land_right_center
+top = -land_top_center
+bot = -land_top_center
+
+first_in_row_of = lambda x: pin_pitch * ((x / 2.0) - 0.5)
+
+print("--- pins")
+show("Pin  1 X", left)
+show("Pin  1 Y", -first_in_row_of(30))
+show("Pin 31 X", first_in_row_of(20))
+show("Pin 31 Y", bot)
+show("Pin 51 X", right)
+show("Pin 51 Y", first_in_row_of(30))
+show("Pin 81 X", -first_in_row_of(20))
+show("Pin 81 Y", top)
