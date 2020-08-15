@@ -36,11 +36,9 @@
 * Add a momentary push button for the FPGA, with ~1ms RC debounce.
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
 * Add SMD test clips for scope ground.  Or, add more nearby ground pins.
-* Reverse `D6` (`INIT`) LED direction (net is pulled the opposite way).
 * Avoid inverted LEDs, which is confusing (and we don't care about the power draw).
 * Consolidate BoM part selections.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
-* Drive all LEDs with high-impedence input things (transistors) to avoid biasing the signals I'm trying to sample.  (At least `INIT` and `DONE`, which are open-drain and can't support very much current).
 * Replace `TP7` / `TP8` / `TP9` pads with pins, which are larger but easier to work with.
 * Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
 

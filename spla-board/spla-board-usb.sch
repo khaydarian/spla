@@ -883,6 +883,9 @@ F 0 "TP10" H 7758 3918 50  0000 L CNN
 F 1 "TP_1V8" H 7758 3827 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7900 3800 50  0001 C CNN
 F 3 "~" H 7900 3800 50  0001 C CNN
+F 4 "N/A" H 7700 3800 50  0001 C CNN "Digikey"
+F 5 "N/A" H 7700 3800 50  0001 C CNN "Manufacturer"
+F 6 "N/A" H 7700 3800 50  0001 C CNN "Manufacturer Id"
 	1    7700 3800
 	1    0    0    -1  
 $EndComp
