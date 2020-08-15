@@ -27,7 +27,6 @@
 * Consider ENIG finish, which makes the BGA easier to install.
 * Consider the "paper between boards" option, which would avoid some silkscreen scratches.
 * Consider ordering stencils.
-* Review the back-side silkscreen more carefully; there's several references clumsily placed (`U32`, `C10`, etc).
 * Compact the board, since there's quite a bit of unnecessary empty space.
 * Consider adding an alternate clock source for the FPGA.
 * Consider adding an easier test pad for the 12MHz oscillator.
