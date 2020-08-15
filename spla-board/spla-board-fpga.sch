@@ -920,18 +920,16 @@ F 3 "" H 5950 10300 50  0001 C CNN
 	1    5950 10300
 	1    0    0    -1  
 $EndComp
-Text Notes 4750 10700 0    50   ~ 0
+Text Notes 5200 9100 0    50   ~ 0
 (3.3V - 2.0V) / 4 mA = 325 ohm
 Wire Wire Line
 	5950 9500 5950 9600
 Text GLabel 5550 9500 0    50   Input ~ 0
-LED7
+LED_A
 Text GLabel 5950 9500 0    50   Input ~ 0
-LED8
+LED_B
 Text GLabel 9650 2200 2    50   Output ~ 0
-LED7
-Text GLabel 9650 2500 2    50   Output ~ 0
-LED8
+LED_A
 NoConn ~ 9650 4100
 NoConn ~ 9650 3900
 NoConn ~ 12150 1700
@@ -1641,72 +1639,18 @@ F 3 "" H 7300 7500 50  0001 C CNN
 $EndComp
 Text Notes 7950 7350 0    50   ~ 0
 Note: by above logic, 3.3V is short 9x 0.01uF decoupling capacitors, due to lack of space.
-Text GLabel 9650 1400 2    50   Output ~ 0
+Text GLabel 9650 1600 2    50   Output ~ 0
 FPGA_EXTRA1
 Text GLabel 9650 1500 2    50   Output ~ 0
 FPGA_EXTRA2
-Text GLabel 9650 1600 2    50   Output ~ 0
+Text GLabel 9650 1400 2    50   Output ~ 0
 FPGA_EXTRA3
-Text GLabel 14800 5300 2    50   Output ~ 0
+Text GLabel 14650 5150 0    50   Output ~ 0
 FPGA_EXTRA1
-Text GLabel 14800 5700 2    50   Output ~ 0
+Text GLabel 14650 5250 0    50   Output ~ 0
 FPGA_EXTRA2
-Text GLabel 14800 6100 2    50   Output ~ 0
+Text GLabel 14650 5350 0    50   Output ~ 0
 FPGA_EXTRA3
-$Comp
-L Connector:TestPoint TP7
-U 1 1 5EA65145
-P 14700 5200
-F 0 "TP7" H 14758 5318 50  0000 L CNN
-F 1 "TP_EXTRA1" H 14758 5227 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 5200 50  0001 C CNN
-F 3 "~" H 14900 5200 50  0001 C CNN
-F 4 "N/A" H 14700 5200 50  0001 C CNN "Digikey"
-F 5 "N/A" H 14700 5200 50  0001 C CNN "Manufacturer Id"
-F 6 "N/A" H 14700 5200 50  0001 C CNN "Manufacturer"
-	1    14700 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP8
-U 1 1 5EA6567A
-P 14700 5600
-F 0 "TP8" H 14758 5718 50  0000 L CNN
-F 1 "TP_EXTRA2" H 14758 5627 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 5600 50  0001 C CNN
-F 3 "~" H 14900 5600 50  0001 C CNN
-F 4 "N/A" H 14700 5600 50  0001 C CNN "Digikey"
-F 5 "N/A" H 14700 5600 50  0001 C CNN "Manufacturer Id"
-F 6 "N/A" H 14700 5600 50  0001 C CNN "Manufacturer"
-	1    14700 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP9
-U 1 1 5EA6C737
-P 14700 6000
-F 0 "TP9" H 14758 6118 50  0000 L CNN
-F 1 "TP_EXTRA3" H 14758 6027 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14900 6000 50  0001 C CNN
-F 3 "~" H 14900 6000 50  0001 C CNN
-F 4 "N/A" H 14700 6000 50  0001 C CNN "Digikey"
-F 5 "N/A" H 14700 6000 50  0001 C CNN "Manufacturer Id"
-F 6 "N/A" H 14700 6000 50  0001 C CNN "Manufacturer"
-	1    14700 6000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14800 5300 14700 5300
-Wire Wire Line
-	14700 5300 14700 5200
-Wire Wire Line
-	14800 5700 14700 5700
-Wire Wire Line
-	14700 5700 14700 5600
-Wire Wire Line
-	14800 6100 14700 6100
-Wire Wire Line
-	14700 6100 14700 6000
 Wire Wire Line
 	3000 6700 2800 6700
 $Comp
@@ -1866,9 +1810,9 @@ $EndComp
 Wire Wire Line
 	6750 9500 6750 9600
 Text GLabel 6350 9500 0    50   Input ~ 0
-LED9
+LED_C
 Text GLabel 6750 9500 0    50   Input ~ 0
-LED10
+LED_D
 $Comp
 L Device:LED D?
 U 1 1 601B51D9
@@ -1922,10 +1866,8 @@ Wire Wire Line
 	2900 7850 3250 7850
 Wire Wire Line
 	2900 7800 2900 7850
-Text GLabel 9650 3000 2    50   Output ~ 0
-LED9
 Text GLabel 9650 2100 2    50   Output ~ 0
-LED10
+LED_D
 Wire Wire Line
 	2150 6700 2800 6700
 Connection ~ 2800 6700
@@ -2082,4 +2024,37 @@ Wire Wire Line
 	4550 6100 4550 7650
 Wire Wire Line
 	850  5750 850  5850
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 5FA04E8A
+P 14850 5250
+AR Path="/5E50D400/5FA04E8A" Ref="J?"  Part="1" 
+AR Path="/5E4D8358/5FA04E8A" Ref="J9"  Part="1" 
+F 0 "J9" H 14930 5242 50  0000 L CNN
+F 1 "J_EXTRA" H 14930 5151 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 14850 5250 50  0001 C CNN
+F 3 "~" H 14850 5250 50  0001 C CNN
+F 4 "S1011EC-40-ND" H 14850 5250 50  0001 C CNN "Digikey"
+F 5 "PRPC040SAAN-RC" H 14850 5250 50  0001 C CNN "Manufacturer Id"
+F 6 "Sullins Connector Solutions" H 14850 5250 50  0001 C CNN "Manufacturer"
+	1    14850 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0244
+U 1 1 5FA509E2
+P 14650 5550
+F 0 "#PWR0244" H 14650 5300 50  0001 C CNN
+F 1 "GND" H 14655 5377 50  0000 C CNN
+F 2 "" H 14650 5550 50  0001 C CNN
+F 3 "" H 14650 5550 50  0001 C CNN
+	1    14650 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14650 5450 14650 5550
+Text GLabel 9650 3000 2    50   Output ~ 0
+LED_C
+Text GLabel 9650 2500 2    50   Output ~ 0
+LED_B
 $EndSCHEMATC

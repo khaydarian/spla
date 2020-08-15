@@ -35,12 +35,10 @@
 * Add physical power switch (toggle).
 * Add a momentary push button for the FPGA, with ~1ms RC debounce.
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
-* Add SMD test clips for scope ground.  Or, add more nearby ground pins.
-* Avoid inverted LEDs, which is confusing (and we don't care about the power draw).
 * Consolidate BoM part selections.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
-* Replace `TP7` / `TP8` / `TP9` pads with pins, which are larger but easier to work with.
 * Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
+* Clean up power plane splits between 3.3V and 5V.
 
 ## Deferred
 
