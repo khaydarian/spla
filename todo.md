@@ -36,7 +36,6 @@
 * Consolidate BoM part selections.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
 * Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
-* Clean up power plane splits between 3.3V and 5V.
 
 ## Deferred
 
