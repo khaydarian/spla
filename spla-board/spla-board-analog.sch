@@ -2725,7 +2725,7 @@ Wire Notes Line
 Text Notes 4650 8050 0    50   ~ 0
 Ignore ~DISABLE~
 Text Notes 2700 8600 0    50   ~ 0
-Design Cutoff Frequency = 50kHz\nCutoff = 1/(2*pi*sqrt(R401*R402*C401*C402)) = 48.23kHz\nQ = 0.5\nShould reject power noise stongly.
+Design Cutoff Frequency = 50kHz\nCutoff = 1/(2*pi*sqrt(R401*R402*C401*C402)) = 48.23kHz\nQ = 0.5\nShould reject power noise strongly.
 Wire Wire Line
 	4200 6150 4200 6250
 Text Label 4950 7350 0    50   ~ 0
