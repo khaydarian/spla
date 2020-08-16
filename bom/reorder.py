@@ -11,6 +11,7 @@ def main(args):
     db = txtdb.Txtdb()
     db.parse_file(os.path.join(ACCOUNTING_DIR, 'board.txtdb'))
     db.parse_file(os.path.join(ACCOUNTING_DIR, 'board-used.txtdb'))
+    db.parse_file(os.path.join(ACCOUNTING_DIR, 'board-pending.txtdb'))
 
     b = bom.parse_xml(args)
     b.remove_boring_components()
@@ -31,29 +32,20 @@ def main(args):
         inv_by_digikey[digikey].append(obj)
         desc_by_digikey[digikey] = obj.get('Digikey Description')
 
-    digikeys = set(bom_by_digikey.keys()).union(set(inv_by_digikey.keys()))
-
-    error = False
-    for digikey in digikeys:
-        if digikey in bom_by_digikey and digikey not in inv_by_digikey:
-            print("Only in BOM:", digikey)
-            error = True
-        if digikey not in bom_by_digikey and digikey in inv_by_digikey:
-            print("Only in INV:", digikey)
-            error = True
-    if error:
-        return
+    for digikey in inv_by_digikey.keys():
+        if digikey not in bom_by_digikey:
+            print("Warning: Deprecated inventory part:", digikey)
 
     parts = []
-    for digikey in digikeys:
-        desc = desc_by_digikey[digikey]
+    for digikey in bom_by_digikey.keys():
+        desc = desc_by_digikey.get(digikey, "<Digikey Description Unknown>")
         if 'CONN HEADER VERT' in desc:
             # These suck.
             continue
         need = len(bom_by_digikey[digikey])
         quantity = 0
         remaining = 0
-        for c in inv_by_digikey[digikey]:
+        for c in inv_by_digikey.get(digikey, []):
             quantity += int(c.get('Quantity'))
             remaining += int(c.get('Remaining'))
         nboards = remaining // need
