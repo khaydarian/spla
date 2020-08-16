@@ -488,20 +488,6 @@ Wire Wire Line
 	850  2500 850  2600
 Connection ~ 850  2500
 $Comp
-L Device:R_Small R13
-U 1 1 5E5D3141
-P 2850 9650
-F 0 "R13" H 2909 9696 50  0000 L CNN
-F 1 "10k" H 2909 9605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 2850 9650 50  0001 C CNN
-F 3 "~" H 2850 9650 50  0001 C CNN
-F 4 "RMCF0603JT10K0CT-ND" H 2850 9650 50  0001 C CNN "Digikey"
-F 5 "Stackpole Electronics Inc" H 2850 9650 50  0001 C CNN "Manufacturer"
-F 6 "RMCF0603JT10K0" H 2850 9650 50  0001 C CNN "Manufacturer Id"
-	1    2850 9650
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small R14
 U 1 1 5E5E7554
 P 2850 10350
@@ -516,17 +502,6 @@ F 6 "RMCF0603JT10K0" H 2850 10350 50  0001 C CNN "Manufacturer Id"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR047
-U 1 1 5E5EFF92
-P 2850 9450
-F 0 "#PWR047" H 2850 9300 50  0001 C CNN
-F 1 "+3V3" H 2865 9623 50  0000 C CNN
-F 2 "" H 2850 9450 50  0001 C CNN
-F 3 "" H 2850 9450 50  0001 C CNN
-	1    2850 9450
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR048
 U 1 1 5E5F54EF
 P 2850 10550
@@ -537,13 +512,6 @@ F 3 "" H 2850 10550 50  0001 C CNN
 	1    2850 10550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2850 9450 2850 9550
-Wire Wire Line
-	2850 9750 2850 9850
-Connection ~ 2850 9850
-Wire Wire Line
-	2850 9850 3250 9850
 Wire Wire Line
 	2850 10250 2850 9950
 Connection ~ 2850 9950
@@ -1079,8 +1047,6 @@ Wire Wire Line
 Wire Wire Line
 	2050 9850 2050 9750
 Connection ~ 2050 9850
-Wire Wire Line
-	2050 9850 2850 9850
 Wire Wire Line
 	2150 9750 2150 10150
 Connection ~ 2150 10150
@@ -2189,4 +2155,6 @@ F 6 "Sullins Connector Solutions" H 14850 7450 50  0001 C CNN "Manufacturer"
 	1    14850 7450
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2050 9850 3250 9850
 $EndSCHEMATC
