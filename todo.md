@@ -27,6 +27,7 @@
 * Consider ENIG finish, which makes the BGA easier to install.
 * Consider the "paper between boards" option, which would avoid some silkscreen scratches.
 * Consider ordering stencils.
+* Remove `LVL_PA_DIR`, which is probably unnecessary.
 
 ### Skipped ideas
 
