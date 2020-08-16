@@ -6,6 +6,7 @@
 * blog: Write export-to-website tool (or find static site generator).
 * blog: Add photos and scope images.
 * reference: Retrieve datasheets for all parts.
+* rtl: Build netlist-to-lpf extraction script.
 * rtl: Build async fifo module.
 * rtl: Build plausible FTDI-fifo-interface module.
 * rtl: Design stream merging protocol.
