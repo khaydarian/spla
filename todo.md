@@ -27,6 +27,8 @@
 * Consider ENIG finish, which makes the BGA easier to install.
 * Consider the "paper between boards" option, which would avoid some silkscreen scratches.
 * Consider ordering stencils.
+* Add pullup to PROGRAMN (?).
+* Swap around directions of programming LEDs.
 
 ### Skipped ideas
 
