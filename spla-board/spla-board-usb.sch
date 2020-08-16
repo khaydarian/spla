@@ -630,9 +630,9 @@ F 0 "BOM1" H 1750 4900 50  0000 L CNN
 F 1 "USB Cable" H 1750 4800 50  0000 L CNN
 F 2 "SPLA:BoM" H 1600 4850 50  0001 C CNN
 F 3 "" H 1600 4850 50  0001 C CNN
-F 4 "AE11229-ND" H 1600 4850 50  0001 C CNN "Digikey"
-F 5 "AK67421-0.3-VM" H 1600 4850 50  0001 C CNN "Manufacturer Id"
-F 6 "Assmann WSW Components" H 1600 4850 50  0001 C CNN "Manufacturer"
+F 4 "Q966-ND" H 1600 4850 50  0001 C CNN "Digikey"
+F 5 "3025030-03" H 1600 4850 50  0001 C CNN "Manufacturer Id"
+F 6 "Qualtek" H 1600 4850 50  0001 C CNN "Manufacturer"
 	1    1600 4850
 	1    0    0    -1  
 $EndComp
