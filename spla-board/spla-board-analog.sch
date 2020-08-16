@@ -66,10 +66,10 @@ ANALOG_B7
 Wire Wire Line
 	1900 8950 1500 8950
 $Comp
-L Connector_Generic:Conn_02x04_Odd_Even J14
+L Connector_Generic:Conn_02x04_Odd_Even J10
 U 1 1 5E5B71A2
 P 2100 8850
-F 0 "J14" H 2150 9167 50  0000 C CNN
+F 0 "J10" H 2150 9167 50  0000 C CNN
 F 1 "J_AREF" H 2150 9076 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2100 8850 50  0001 C CNN
 F 3 "~" H 2100 8850 50  0001 C CNN
@@ -153,10 +153,10 @@ $EndComp
 Wire Wire Line
 	1900 9250 1900 9350
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J13
+L Connector_Generic:Conn_02x03_Odd_Even J12
 U 1 1 5E5CB713
 P 6250 3000
-F 0 "J13" H 6300 3317 50  0000 C CNN
+F 0 "J12" H 6300 3317 50  0000 C CNN
 F 1 "J_ANALOG" H 6300 3226 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 6250 3000 50  0001 C CNN
 F 3 "~" H 6250 3000 50  0001 C CNN
@@ -2771,10 +2771,10 @@ Wire Wire Line
 Wire Wire Line
 	6800 5100 7950 5100
 $Comp
-L Connector_Generic:Conn_02x02_Odd_Even J8
+L Connector_Generic:Conn_02x02_Odd_Even J11
 U 1 1 5EF0EE37
 P 5800 8800
-F 0 "J8" H 5850 9017 50  0000 C CNN
+F 0 "J11" H 5850 9017 50  0000 C CNN
 F 1 "J_AREF_AMP" H 5850 8926 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 5800 8800 50  0001 C CNN
 F 3 "~" H 5800 8800 50  0001 C CNN

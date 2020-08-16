@@ -98,10 +98,10 @@ F 6 "Lattice Semiconductor Corporation" H 11500 2850 50  0001 C CNN "Manufacture
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J2
+L Connector_Generic:Conn_01x04 J4
 U 1 1 6001AFBA
 P 2150 9550
-F 0 "J2" V 2250 9550 50  0000 R CNN
+F 0 "J4" V 2250 9550 50  0000 R CNN
 F 1 "J_JTAG" V 2350 9500 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2150 9550 50  0001 C CNN
 F 3 "~" H 2150 9550 50  0001 C CNN
@@ -1995,8 +1995,8 @@ L Connector_Generic:Conn_01x05 J?
 U 1 1 5FA04E8A
 P 14950 6250
 AR Path="/5E50D400/5FA04E8A" Ref="J?"  Part="1" 
-AR Path="/5E4D8358/5FA04E8A" Ref="J9"  Part="1" 
-F 0 "J9" H 15030 6242 50  0000 L CNN
+AR Path="/5E4D8358/5FA04E8A" Ref="J5"  Part="1" 
+F 0 "J5" H 15030 6242 50  0000 L CNN
 F 1 "J_EXTRA" H 15030 6151 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 14950 6250 50  0001 C CNN
 F 3 "~" H 14950 6250 50  0001 C CNN

@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Barrel_Jack J7
+L Connector:Barrel_Jack J1
 U 1 1 5E532515
 P 850 3550
-F 0 "J7" H 907 3875 50  0000 C CNN
+F 0 "J1" H 907 3875 50  0000 C CNN
 F 1 "Barrel_Jack" H 907 3784 50  0000 C CNN
 F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-036AH-SMT_Horizontal" H 900 3510 50  0001 C CNN
 F 3 "~" H 900 3510 50  0001 C CNN
@@ -946,10 +946,10 @@ Wire Wire Line
 	10350 5000 10450 5000
 Connection ~ 10350 4900
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J12
+L Connector_Generic:Conn_02x08_Odd_Even J2
 U 1 1 5E5D4B8F
 P 10750 4700
-F 0 "J12" H 10800 5250 50  0000 C CNN
+F 0 "J2" H 10800 5250 50  0000 C CNN
 F 1 "J_POWER" H 10800 5150 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 10750 4700 50  0001 C CNN
 F 3 "~" H 10750 4700 50  0001 C CNN

@@ -2389,10 +2389,10 @@ $EndComp
 Wire Wire Line
 	2800 8950 3050 8950
 $Comp
-L Connector_Generic:Conn_01x03 J15
+L Connector_Generic:Conn_01x03 J9
 U 1 1 5EE846AD
 P 3250 9600
-F 0 "J15" H 3168 9275 50  0000 C CNN
+F 0 "J9" H 3168 9275 50  0000 C CNN
 F 1 "J_DPULL" H 3168 9366 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3250 9600 50  0001 C CNN
 F 3 "~" H 3250 9600 50  0001 C CNN
@@ -2562,10 +2562,10 @@ Wire Wire Line
 Text GLabel 8500 2200 2    50   Input ~ 0
 TAP_PPU1_~RESET~
 $Comp
-L Connector_Generic:Conn_01x03 J5
+L Connector_Generic:Conn_01x03 J8
 U 1 1 5E72EA03
 P 8050 1900
-F 0 "J5" V 8300 1900 50  0000 C CNN
+F 0 "J8" V 8300 1900 50  0000 C CNN
 F 1 "J_PPURESET" V 8200 1900 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8050 1900 50  0001 C CNN
 F 3 "~" H 8050 1900 50  0001 C CNN

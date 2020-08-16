@@ -411,10 +411,10 @@ Connection ~ 7300 3050
 Text Notes 7200 1950 0    50   ~ 0
 Decoupling Capacitors\n
 $Comp
-L Connector:USB_B_Micro J1
+L Connector:USB_B_Micro J3
 U 1 1 5E4AA2D6
 P 2800 4850
-F 0 "J1" H 2857 5317 50  0000 C CNN
+F 0 "J3" H 2857 5317 50  0000 C CNN
 F 1 "USB_B_Micro" H 2857 5226 50  0000 C CNN
 F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 2950 4800 50  0001 C CNN
 F 3 "~" H 2950 4800 50  0001 C CNN

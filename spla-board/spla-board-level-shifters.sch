@@ -731,10 +731,10 @@ Test signals\n(NC or GND on original board)
 Wire Wire Line
 	4200 1750 4050 1750
 $Comp
-L Connector_Generic:Conn_01x04 J3
+L Connector_Generic:Conn_01x04 J6
 U 1 1 5E5A824A
 P 7950 3950
-F 0 "J3" H 8030 3942 50  0000 L CNN
+F 0 "J6" H 8030 3942 50  0000 L CNN
 F 1 "J_BODGE" H 8030 3851 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7950 3950 50  0001 C CNN
 F 3 "~" H 7950 3950 50  0001 C CNN
@@ -2035,10 +2035,10 @@ $EndComp
 Text GLabel 5900 4150 0    50   Input ~ 0
 FPGA_PPU2_EXTLATCH
 $Comp
-L Connector_Generic:Conn_01x06 J6
+L Connector_Generic:Conn_01x06 J7
 U 1 1 5E9B9595
 P 7250 2700
-F 0 "J6" V 7350 2650 50  0000 L CNN
+F 0 "J7" V 7350 2650 50  0000 L CNN
 F 1 "J_SAMPLE" V 7450 2500 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7250 2700 50  0001 C CNN
 F 3 "~" H 7250 2700 50  0001 C CNN
