@@ -37,8 +37,6 @@
   * No, it's within spec for the 1% resistors.  Doesn't matter.
 * Remove JTAG connector, or reduce its footprint.
   * No compelling reason to do so -- I don't need it, but it's not a space issue.
-* Consider adding an easier test pad for the 12MHz oscillator.
-  * This might damange the clock integrity.  Probably won't, but probing the pad isn't too hard.
 * Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
   * Not worth the trouble.
 

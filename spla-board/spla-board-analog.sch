@@ -167,10 +167,10 @@ F 6 "Sullins Connector Solutions" H 6250 3000 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP3
+L Connector:TestPoint TP7
 U 1 1 5E6C3881
 P 6200 8700
-F 0 "TP3" H 6258 8818 50  0000 L CNN
+F 0 "TP7" H 6258 8818 50  0000 L CNN
 F 1 "TP_AREF_HI" H 6258 8727 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 8700 50  0001 C CNN
 F 3 "~" H 6400 8700 50  0001 C CNN
@@ -183,10 +183,10 @@ $EndComp
 Wire Wire Line
 	2400 8850 2600 8850
 $Comp
-L Connector:TestPoint TP4
+L Connector:TestPoint TP8
 U 1 1 5E6D90A7
 P 6200 8900
-F 0 "TP4" H 6150 9000 50  0000 R CNN
+F 0 "TP8" H 6150 9000 50  0000 R CNN
 F 1 "TP_AREF_LO" H 6150 9100 50  0000 R CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 8900 50  0001 C CNN
 F 3 "~" H 6400 8900 50  0001 C CNN
