@@ -31,7 +31,6 @@
 * Consider adding an alternate clock source for the FPGA.
 * Consider adding an easier test pad for the 12MHz oscillator.
 * Remove JTAG connector, or reduce its footprint.
-* Add physical power switch (toggle).
 * Replace 12k 5% resistor (FTDI `REF`) with 12k 1%.
 * Consolidate BoM part selections.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).

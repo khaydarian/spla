@@ -16,19 +16,17 @@ $EndDescr
 $Comp
 L Connector:Barrel_Jack J7
 U 1 1 5E532515
-P 1600 3450
-F 0 "J7" H 1657 3775 50  0000 C CNN
-F 1 "Barrel_Jack" H 1657 3684 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-036AH-SMT_Horizontal" H 1650 3410 50  0001 C CNN
-F 3 "~" H 1650 3410 50  0001 C CNN
-F 4 "CP-036AHPJCT-ND" H 1600 3450 50  0001 C CNN "Digikey"
-F 5 "PJ-036AH-SMT-TR" H 1600 3450 50  0001 C CNN "Manufacturer Id"
-F 6 "CUI Devices" H 1600 3450 50  0001 C CNN "Manufacturer"
-	1    1600 3450
+P 850 3550
+F 0 "J7" H 907 3875 50  0000 C CNN
+F 1 "Barrel_Jack" H 907 3784 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-036AH-SMT_Horizontal" H 900 3510 50  0001 C CNN
+F 3 "~" H 900 3510 50  0001 C CNN
+F 4 "CP-036AHPJCT-ND" H 850 3550 50  0001 C CNN "Digikey"
+F 5 "PJ-036AH-SMT-TR" H 850 3550 50  0001 C CNN "Manufacturer Id"
+F 6 "CUI Devices" H 850 3550 50  0001 C CNN "Manufacturer"
+	1    850  3550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1900 3550 2000 3550
 $Comp
 L power:+12V #PWR029
 U 1 1 5E534EED
@@ -58,28 +56,28 @@ Wire Wire Line
 $Comp
 L Connector:TestPoint TP5
 U 1 1 5E6077CA
-P 2850 3250
-F 0 "TP5" H 2908 3368 50  0000 L CNN
-F 1 "TP_12V" H 2908 3277 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 3050 3250 50  0001 C CNN
-F 3 "~" H 3050 3250 50  0001 C CNN
-F 4 "N/A" H 2850 3250 50  0001 C CNN "Digikey"
-F 5 "N/A" H 2850 3250 50  0001 C CNN "Manufacturer Id"
-F 6 "N/A" H 2850 3250 50  0001 C CNN "Manufacturer"
-	1    2850 3250
+P 2900 3250
+F 0 "TP5" H 2958 3368 50  0000 L CNN
+F 1 "TP_12V" H 2958 3277 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 3100 3250 50  0001 C CNN
+F 3 "~" H 3100 3250 50  0001 C CNN
+F 4 "N/A" H 2900 3250 50  0001 C CNN "Digikey"
+F 5 "N/A" H 2900 3250 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 2900 3250 50  0001 C CNN "Manufacturer"
+	1    2900 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2850 3350 2850 3250
+	2900 3350 2900 3250
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5F9445F5
-P 2450 3350
-F 0 "#FLG0101" H 2450 3425 50  0001 C CNN
-F 1 "PWR_FLAG" H 2450 3523 50  0000 C CNN
-F 2 "" H 2450 3350 50  0001 C CNN
-F 3 "~" H 2450 3350 50  0001 C CNN
-	1    2450 3350
+P 2550 3350
+F 0 "#FLG0101" H 2550 3425 50  0001 C CNN
+F 1 "PWR_FLAG" H 2550 3523 50  0000 C CNN
+F 2 "" H 2550 3350 50  0001 C CNN
+F 3 "~" H 2550 3350 50  0001 C CNN
+	1    2550 3350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -275,7 +273,6 @@ F 3 "" H 5150 4550 50  0001 C CNN
 $EndComp
 Text Notes 5000 4400 2    50   ~ 0
 SYNC = use internal 900kHz oscillator
-Connection ~ 2450 3350
 $Comp
 L Device:R_Small R87
 U 1 1 5EA1301A
@@ -522,8 +519,7 @@ Wire Wire Line
 Text Notes 4400 4100 0    50   ~ 0
 ~INH~ = Always On
 Wire Wire Line
-	2850 3350 3400 3350
-Connection ~ 2850 3350
+	2900 3350 3400 3350
 Wire Wire Line
 	4150 3850 4150 3750
 $Comp
@@ -1712,23 +1708,20 @@ Wire Wire Line
 	4100 9750 4100 9850
 Wire Wire Line
 	4100 10250 4100 10350
-Connection ~ 2850 4050
 $Comp
 L Connector:TestPoint TP6
 U 1 1 5EAFCBB1
-P 2850 3950
-F 0 "TP6" H 2908 4068 50  0000 L CNN
-F 1 "TP_GND" H 2908 3977 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 3050 3950 50  0001 C CNN
-F 3 "~" H 3050 3950 50  0001 C CNN
-F 4 "N/A" H 2850 3950 50  0001 C CNN "Digikey"
-F 5 "N/A" H 2850 3950 50  0001 C CNN "Manufacturer Id"
-F 6 "N/A" H 2850 3950 50  0001 C CNN "Manufacturer"
-	1    2850 3950
+P 2900 4200
+F 0 "TP6" H 2958 4318 50  0000 L CNN
+F 1 "TP_GND" H 2958 4227 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 3100 4200 50  0001 C CNN
+F 3 "~" H 3100 4200 50  0001 C CNN
+F 4 "N/A" H 2900 4200 50  0001 C CNN "Digikey"
+F 5 "N/A" H 2900 4200 50  0001 C CNN "Manufacturer Id"
+F 6 "N/A" H 2900 4200 50  0001 C CNN "Manufacturer"
+	1    2900 4200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2000 3550 2000 4050
 $Comp
 L SPLA:BomExtra BOM?
 U 1 1 5EC0FA41
@@ -1940,26 +1933,16 @@ $EndComp
 $Comp
 L power:GND #PWR030
 U 1 1 5E5334D6
-P 2850 4150
-F 0 "#PWR030" H 2850 3900 50  0001 C CNN
-F 1 "GND" H 2855 3977 50  0000 C CNN
-F 2 "" H 2850 4150 50  0001 C CNN
-F 3 "" H 2850 4150 50  0001 C CNN
-	1    2850 4150
+P 2900 4400
+F 0 "#PWR030" H 2900 4150 50  0001 C CNN
+F 1 "GND" H 2905 4227 50  0000 C CNN
+F 2 "" H 2900 4400 50  0001 C CNN
+F 3 "" H 2900 4400 50  0001 C CNN
+	1    2900 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2450 3350 2850 3350
-Wire Wire Line
-	2000 4050 2850 4050
-Wire Wire Line
-	2850 3950 2850 4050
-Wire Wire Line
-	2850 4050 2850 4150
-Wire Wire Line
 	3400 3200 3400 3350
-Wire Wire Line
-	1900 3350 2450 3350
 $Comp
 L Device:R_Small R40
 U 1 1 5FB785AC
@@ -2002,4 +1985,57 @@ Connection ~ 14900 5100
 Wire Wire Line
 	14900 6350 15250 6350
 Connection ~ 14900 6350
+$Comp
+L Switch:SW_DPDT_x2 SW2
+U 1 1 5F400F1C
+P 2050 3450
+F 0 "SW2" H 2050 3735 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 2050 3644 50  0000 C CNN
+F 2 "SPLA:JS202011SCQN" H 2050 3450 50  0001 C CNN
+F 3 "https://ckswitches.com/media/1422/js.pdf" H 2050 3450 50  0001 C CNN
+F 4 "401-2002-1-ND" H 2050 3450 50  0001 C CNN "Digikey"
+F 5 "C&K" H 2050 3450 50  0001 C CNN "Manufacturer"
+F 6 "JS202011SCQN" H 2050 3450 50  0001 C CNN "Manufacturer Id"
+	1    2050 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 3450 1850 3450
+Text Label 1300 3450 0    50   ~ 0
+PWR_12V_IN
+Wire Wire Line
+	2250 3350 2550 3350
+Connection ~ 2900 3350
+Connection ~ 2550 3350
+Wire Wire Line
+	2550 3350 2900 3350
+Wire Wire Line
+	1150 3650 1300 3650
+$Comp
+L Switch:SW_DPDT_x2 SW2
+U 2 1 5F55178C
+P 2050 3950
+F 0 "SW2" H 2050 4235 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 2050 4144 50  0000 C CNN
+F 2 "SPLA:JS202011SCQN" H 2050 3950 50  0001 C CNN
+F 3 "https://ckswitches.com/media/1422/js.pdf" H 2050 3950 50  0001 C CNN
+F 4 "401-2002-1-ND" H 2050 3950 50  0001 C CNN "Digikey"
+F 5 "C&K" H 2050 3950 50  0001 C CNN "Manufacturer"
+F 6 "JS202011SCQN" H 2050 3950 50  0001 C CNN "Manufacturer Id"
+	2    2050 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 3650 1300 4300
+Wire Wire Line
+	1300 4300 2900 4300
+NoConn ~ 2250 3850
+NoConn ~ 1850 3950
+Wire Wire Line
+	2900 4200 2900 4300
+Connection ~ 2900 4300
+Wire Wire Line
+	2900 4300 2900 4400
+NoConn ~ 2250 3550
+NoConn ~ 2250 4050
 $EndSCHEMATC
