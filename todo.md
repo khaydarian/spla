@@ -27,13 +27,20 @@
 * Consider ENIG finish, which makes the BGA easier to install.
 * Consider the "paper between boards" option, which would avoid some silkscreen scratches.
 * Consider ordering stencils.
-* Compact the board, since there's quite a bit of unnecessary empty space.
+
+### Skipped ideas
+
 * Consider adding an alternate clock source for the FPGA.
-* Consider adding an easier test pad for the 12MHz oscillator.
-* Remove JTAG connector, or reduce its footprint.
-* Consolidate BoM part selections.
+* Compact the board, since there's quite a bit of unnecessary empty space.
+  * This is only partially possible (pulled in left edge by 13mm), and not worth the cost savings.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
+  * No, it's within spec for the 1% resistors.  Doesn't matter.
+* Remove JTAG connector, or reduce its footprint.
+  * No compelling reason to do so -- I don't need it, but it's not a space issue.
+* Consider adding an easier test pad for the 12MHz oscillator.
+  * This might damange the clock integrity.  Probably won't, but probing the pad isn't too hard.
 * Consider if I can have the spare pins to double-duty as both LED outputs and test-point inputs.
+  * Not worth the trouble.
 
 ## Deferred
 
