@@ -27,12 +27,11 @@
 * Consider ENIG finish, which makes the BGA easier to install.
 * Consider the "paper between boards" option, which would avoid some silkscreen scratches.
 * Consider ordering stencils.
-* Add pullup to PROGRAMN (?).
-* Swap around directions of programming LEDs.
 
 ### Skipped ideas
 
 * Consider adding an alternate clock source for the FPGA.
+  * Not necessary at this point, I think -- 12MHz and FTDI's 60MHz should be sufficient.
 * Compact the board, since there's quite a bit of unnecessary empty space.
   * This is only partially possible (pulled in left edge by 13mm), and not worth the cost savings.
 * Consider adjusting 3.3V and 5V regulators to be up a notch (sligtly below spec, probably due to overly-idealistic calculations).
