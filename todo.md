@@ -29,7 +29,6 @@
 * Consider ordering stencils.
 * Add pullup to PROGRAMN (?).
 * Swap around directions of programming LEDs.
-* Have all hard-pulled SNES pins go through 0-ohm resistors.
 
 ### Skipped ideas
 

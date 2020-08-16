@@ -518,11 +518,11 @@ Text GLabel 2800 6900 2    50   Output ~ 0
 TAP_PA1
 Text GLabel 2800 6800 2    50   Output ~ 0
 TAP_PA0
-Text GLabel 1450 3800 2    50   BiDi ~ 0
+Text GLabel 2400 3950 0    50   BiDi ~ 0
 TAP_PPU1_TST0
-Text GLabel 1450 3900 2    50   BiDi ~ 0
+Text GLabel 2400 4300 0    50   BiDi ~ 0
 TAP_PPU1_TST1
-Text GLabel 1450 4000 2    50   BiDi ~ 0
+Text GLabel 2400 4650 0    50   BiDi ~ 0
 TAP_PPU1_TST2
 Text GLabel 11050 4500 2    50   Input ~ 0
 TAP_PPU2_TST0
@@ -1402,12 +1402,6 @@ Connection ~ 11150 1150
 Wire Wire Line
 	11150 1150 11150 1250
 Wire Wire Line
-	1250 3800 1450 3800
-Wire Wire Line
-	1250 3900 1450 3900
-Wire Wire Line
-	1250 4000 1450 4000
-Wire Wire Line
 	4050 1750 3500 1750
 Connection ~ 4050 1750
 Text GLabel 5900 3850 0    50   Input ~ 0
@@ -1718,40 +1712,30 @@ DIR = B-to-A
 Text Notes 12700 3650 0    50   ~ 0
 DIR = B-to-A
 $Comp
-L Device:R_Small R72
+L Device:R_Small R70
 U 1 1 5F2D13A9
-P 1250 4200
-F 0 "R72" H 1309 4246 50  0000 L CNN
-F 1 "0" H 1309 4155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 1250 4200 50  0001 C CNN
-F 3 "~" H 1250 4200 50  0001 C CNN
-F 4 "2019-RK73Z1JTTDCT-ND" H 1250 4200 50  0001 C CNN "Digikey"
-F 5 "KOA Speer Electronics Inc." H 1250 4200 50  0001 C CNN "Manufacturer"
-F 6 "RK73Z1JTTD" H 1250 4200 50  0001 C CNN "Manufacturer Id"
-	1    1250 4200
-	1    0    0    -1  
+P 2600 3950
+F 0 "R70" V 2800 3950 50  0000 C CNN
+F 1 "0" V 2700 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2600 3950 50  0001 C CNN
+F 3 "~" H 2600 3950 50  0001 C CNN
+F 4 "2019-RK73Z1JTTDCT-ND" H 2600 3950 50  0001 C CNN "Digikey"
+F 5 "KOA Speer Electronics Inc." H 2600 3950 50  0001 C CNN "Manufacturer"
+F 6 "RK73Z1JTTD" H 2600 3950 50  0001 C CNN "Manufacturer Id"
+	1    2600 3950
+	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR011
 U 1 1 5F2D1E97
-P 1250 4400
-F 0 "#PWR011" H 1250 4150 50  0001 C CNN
-F 1 "GND" H 1255 4227 50  0000 C CNN
-F 2 "" H 1250 4400 50  0001 C CNN
-F 3 "" H 1250 4400 50  0001 C CNN
-	1    1250 4400
+P 2800 4750
+F 0 "#PWR011" H 2800 4500 50  0001 C CNN
+F 1 "GND" H 2805 4577 50  0000 C CNN
+F 2 "" H 2800 4750 50  0001 C CNN
+F 3 "" H 2800 4750 50  0001 C CNN
+	1    2800 4750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1250 3800 1250 3900
-Connection ~ 1250 3900
-Wire Wire Line
-	1250 3900 1250 4000
-Connection ~ 1250 4000
-Wire Wire Line
-	1250 4000 1250 4100
-Wire Wire Line
-	1250 4300 1250 4400
 Wire Notes Line
 	10550 5450 10550 11200
 $Comp
@@ -2182,4 +2166,52 @@ Wire Wire Line
 	7050 2500 6850 2500
 Wire Wire Line
 	6850 2500 6850 2650
+$Comp
+L Device:R_Small R71
+U 1 1 5F54AD0D
+P 2600 4300
+F 0 "R71" V 2800 4300 50  0000 C CNN
+F 1 "0" V 2700 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2600 4300 50  0001 C CNN
+F 3 "~" H 2600 4300 50  0001 C CNN
+F 4 "2019-RK73Z1JTTDCT-ND" H 2600 4300 50  0001 C CNN "Digikey"
+F 5 "KOA Speer Electronics Inc." H 2600 4300 50  0001 C CNN "Manufacturer"
+F 6 "RK73Z1JTTD" H 2600 4300 50  0001 C CNN "Manufacturer Id"
+	1    2600 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R72
+U 1 1 5F55CC77
+P 2600 4650
+F 0 "R72" V 2800 4650 50  0000 C CNN
+F 1 "0" V 2700 4650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2600 4650 50  0001 C CNN
+F 3 "~" H 2600 4650 50  0001 C CNN
+F 4 "2019-RK73Z1JTTDCT-ND" H 2600 4650 50  0001 C CNN "Digikey"
+F 5 "KOA Speer Electronics Inc." H 2600 4650 50  0001 C CNN "Manufacturer"
+F 6 "RK73Z1JTTD" H 2600 4650 50  0001 C CNN "Manufacturer Id"
+	1    2600 4650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 3950 2500 3950
+Wire Wire Line
+	2500 4300 2400 4300
+Wire Wire Line
+	2400 4650 2500 4650
+Wire Wire Line
+	2700 3950 2800 3950
+Wire Wire Line
+	2800 3950 2800 4300
+Wire Wire Line
+	2700 4650 2800 4650
+Connection ~ 2800 4650
+Wire Wire Line
+	2800 4650 2800 4750
+Wire Wire Line
+	2700 4300 2800 4300
+Connection ~ 2800 4300
+Wire Wire Line
+	2800 4300 2800 4650
 $EndSCHEMATC
