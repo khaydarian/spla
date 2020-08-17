@@ -14,8 +14,9 @@ Follow these steps before shipping a board off for manufacturing:
    1. Increment "Revision".  Check "Export to other sheets."
 1. Plot the schematic.
    1. Format: PDF
-   1. Output filename: `spla-board.pdf`.
+   1. Output director: `~/spla`.
    1. Click "Plot All Pages"
+   1. Verify output PDF in `~/spla/spla-board.pdf`.
 1. Generate Bill of Materials.
    1. Use `bom2csv` plugin, but only for the `.xml` output file.
 1. Save and close the schematic.
