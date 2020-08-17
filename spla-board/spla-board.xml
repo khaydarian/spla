@@ -2,14 +2,14 @@
 <export version="D">
   <design>
     <source>/home/khaydarian/spla/spla-board/spla-board.sch</source>
-    <date>Sun 16 Aug 2020 04:27:11 PM PDT</date>
+    <date>Sun 16 Aug 2020 05:52:46 PM PDT</date>
     <tool>Eeschema 5.1.6-c6e7f7d~87~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>SPLA Board - Root</title>
         <company/>
-        <rev>9</rev>
-        <date>2020-04-26</date>
+        <rev>10</rev>
+        <date>2020-08-16</date>
         <source>spla-board.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -21,8 +21,8 @@
       <title_block>
         <title>SPLA Board - USB</title>
         <company/>
-        <rev>9</rev>
-        <date>2020-04-26</date>
+        <rev>10</rev>
+        <date>2020-08-16</date>
         <source>spla-board-usb.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -34,8 +34,8 @@
       <title_block>
         <title>SPLA Board - FPGA</title>
         <company/>
-        <rev>9</rev>
-        <date>2020-04-26</date>
+        <rev>10</rev>
+        <date>2020-08-16</date>
         <source>spla-board-fpga.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -47,8 +47,8 @@
       <title_block>
         <title/>
         <company/>
-        <rev>9</rev>
-        <date>2020-04-26</date>
+        <rev>10</rev>
+        <date>2020-08-16</date>
         <source>spla-board-level-shifters.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -60,8 +60,8 @@
       <title_block>
         <title>SPLA Board - PPU</title>
         <company/>
-        <rev>9</rev>
-        <date>2020-04-26</date>
+        <rev>10</rev>
+        <date>2020-08-16</date>
         <source>spla-board-ppu.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -73,8 +73,8 @@
       <title_block>
         <title/>
         <company/>
-        <rev>9</rev>
-        <date>2020-04-26</date>
+        <rev>10</rev>
+        <date>2020-08-16</date>
         <source>spla-board-analog.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -86,8 +86,8 @@
       <title_block>
         <title/>
         <company/>
-        <rev>9</rev>
-        <date>2020-04-26</date>
+        <rev>10</rev>
+        <date>2020-08-16</date>
         <source>spla-board-power.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
