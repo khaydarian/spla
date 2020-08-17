@@ -64,6 +64,17 @@ Follow these steps before shipping a board off for manufacturing:
          1. Zeros Format: Decimal format.
       1. Click "Generate Drill File".
 1. Verify generated files in Gerber Viewer.
+   1. In particular, check traceability markings.
+1. (Optional) Print Front / Back layouts on paper.
+   1. "Print..."
+      1. Included Layers: "F_Cu.gbr"
+      1. Uncheck "Print Mirrored"
+      1. Print to file "output-front.pdf"
+   1. "Print..."
+      1. Included Layers: "B_Cu.gbr"
+      1. Uncheck "Print Mirrored"
+      1. Print to file "output-back.pdf"
+   1. Print both files on paper and verify footprints.
 1. Commit all of the above.
    1. Commit description: "manufacturing: Export Gerber files revision {REV}.".
    1. Tag the commit as `manufacturing-rXXX`.
@@ -71,3 +82,32 @@ Follow these steps before shipping a board off for manufacturing:
    1. cd to `spla-board/gerber`.
    1. Run `zip /mnt/shared/spla-board-rXXX-gerber.zip *.gbr *.drl`
 
+## Ordering via JLCPCB
+
+1. JLCPCB options:
+   1. Layers: 4 (required)
+   1. Dimensions: (from gerber files)
+   1. PCB Qty: (arbitrary)
+   1. Different Design: 1
+   1. Delivery Format: Single PCB
+   1. PCB Thickness: 1.6mm
+   1. Impedence: No (Not sure this matters)
+   1. PCB Color: Green
+   1. Surface Finish: ENIG-RoHS
+   1. Copper Weight: 1oz
+   1. Gold Finders: No
+   1. Material Type: FR-4 TG155 (will be required later anyways)
+   1. Castellated Holes: No
+   1. Remove Order Number: Specify Location
+   1. Advanced Options
+      1. Min Hole Size / Diameter: 0.2mm/0.4mm
+      1. Paper between PCBs: Yes
+      1. Confirm Production File: No
+   1. Stencil
+      1. Framework: No
+      1. Dimensions: 380*280
+      1. Customized Size: 200mm*150mm (this might be backwards)
+      1. Stencil Side: Top+Bottom on separate stencil
+      1. Stencil Qty: 2
+      1. Electropolishing: Yes (useful for small pitch / BGA)
+      1. Fiducials: No Fiducials
