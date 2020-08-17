@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 # vi: ts=4:sw=4:sts=4:et
 
-import sys, bom
+import sys, argparse
+import bom
 
 def main(args):
-    b = bom.parse_xml(args)
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+            '--bom', type=str, default=None,
+            help='BoM xml file.')
+    args = parser.parse_args()
+    b = bom.parse_xml(args.bom)
     b.remove_boring_components()
     if len(b.warnings):
         for w in b.warnings:

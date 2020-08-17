@@ -46,13 +46,11 @@ class Component(object):
             return True
         return False
 
-def parse_xml(args):
-    if len(args) > 0:
-        filename = args[0]
-    else:
-        filename = defaultBomFilename()
-    assert filename.endswith('.xml')
-    et = ElementTree.parse(filename)
+def parse_xml(bom_filename=None):
+    if bom_filename is None:
+        bom_filename = defaultBomFilename()
+    assert bom_filename.endswith('.xml')
+    et = ElementTree.parse(bom_filename)
     components = et.find('components')
     assert components is not None
     out = []

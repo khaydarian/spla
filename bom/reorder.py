@@ -1,19 +1,29 @@
 #!/usr/bin/env python3
 # vi: ts=4:sw=4:sts=4:et
 
-import sys, os.path, bom
+import sys, os.path, argparse
 ACCOUNTING_DIR = os.path.join(os.path.dirname(sys.argv[0]), '../accounting')
 sys.path.append(ACCOUNTING_DIR)
+import bom
 import txtdb
 
 def main(args):
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+            '-n', '--num-boards', type=int, default=0,
+            help='Number of boards to order parts for.')
+    parser.add_argument(
+            '--bom', type=str, default=None,
+            help='BoM xml file.')
+    args = parser.parse_args()
+    num_boards_to_order = args.num_boards
 
     db = txtdb.Txtdb()
     db.parse_file(os.path.join(ACCOUNTING_DIR, 'board.txtdb'))
     db.parse_file(os.path.join(ACCOUNTING_DIR, 'board-used.txtdb'))
     db.parse_file(os.path.join(ACCOUNTING_DIR, 'board-pending.txtdb'))
 
-    b = bom.parse_xml(args)
+    b = bom.parse_xml(args.bom)
     b.remove_boring_components()
 
     bom_by_digikey = {}
@@ -34,7 +44,15 @@ def main(args):
 
     for digikey in inv_by_digikey.keys():
         if digikey not in bom_by_digikey:
-            print("Warning: Deprecated inventory part:", digikey)
+            print("Warning: Deprecated inventory part:", digikey,
+                file=sys.stderr)
+
+    for digikey in bom_by_digikey.keys():
+        if digikey not in desc_by_digikey:
+            print("Warning: BoM part not in inventory:", digikey,
+                file=sys.stderr)
+
+    order = []
 
     parts = []
     for digikey in bom_by_digikey.keys():
@@ -51,17 +69,23 @@ def main(args):
         nboards = remaining // need
         parts.append((nboards, digikey, desc, need, quantity, remaining))
 
+        num_to_order = (num_boards_to_order * need) - remaining
+        if num_to_order > 0:
+            order.append((digikey, num_to_order))
+
     parts.sort()
 
-    print('Board Need  Remaining : Digikey ID (Description)')
-    for nboards, digikey, desc, need, quantity, remaining in parts:
-        print('B %3d N %3d R %3d/%3d : %-20s (%s)' % (
-            nboards, need, remaining, quantity, digikey, desc))
-        #print "--- %s (%s)" % (digikey, desc)
-        #print "Boards %d, Need %d per board, Remaining %d / %d" % (
-        #        nboards, need, remaining, quantity)
+    if num_boards_to_order:
+        for digikey, count in order:
+            print('%d,%s' % (count, digikey))
+    else:
+        print('Board Need  Remaining : Digikey ID (Description)')
+        for nboards, digikey, desc, need, quantity, remaining in parts:
+            print('B %3d N %3d R %3d/%3d : %-20s (%s)' % (
+                nboards, need, remaining, quantity, digikey, desc))
 
-    print("(Also check on pinheaders manually.)")
+    print('(Also check on pinheaders manually.)', file=sys.stderr)
+
 
 if __name__ == '__main__':
     main(sys.argv[1:])
