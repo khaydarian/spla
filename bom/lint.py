@@ -12,11 +12,10 @@ def main(args):
     args = parser.parse_args()
 
     b = bom.parse_xml(args.bom)
-    b.remove_boring_components()
     for w in b.warnings:
         print(w.text)
     else:
-        print('ok')
+        print('ok (%d components)' % len(b.components))
 
 if __name__ == '__main__':
     main(sys.argv[1:])

@@ -18,7 +18,7 @@ def lint_files(files):
     for (filename, lineno), err in errors:
         print('%s:%d: %s' % (filename, lineno, err))
     else:
-        print('ok')
+        print('ok (%d files, %d objects)' % (len(files), len(db.objects)))
     return len(errors)
 
 def default_files():
