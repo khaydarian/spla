@@ -40,7 +40,7 @@ and sufficient supporting software written, it should be possible to
 experimentally characterize the entire operation of the PPU chips, thus
 producing a completely cycle-accurate emulation of the SNES video hardware.
 
-<img src="images/spla-board-pcb-r009.png"></img>
+<img src="images/spla-board-pcb-r010.png"></img>
 
 ## Current Status
 
