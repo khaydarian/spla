@@ -103,3 +103,43 @@ Unit Cost: $14.99000
 Quantity: 1
 Cost: $14.99
 
+Name: Lead-Free Solder, 0.8mm
+From Package Key: amazon-soldering-2
+Category: Lab Supplies
+Manufacturer: AUSTOR
+Cost Base: $9.99
+Solder Composition: 99Sn/0.3Ag/0.7Cu
+Solder Width: 0.8mm
+Solder Size: 100g
+
+Name: Lead-Free Solder, 0.3mm
+From Package Key: amazon-soldering-2
+Category: Lab Supplies
+Manufacturer: Enersystec Electric Co Ltd
+Cost Base: $9.99
+Solder Composition: 99Sn/0.3Ag/0.7Cu
+Solder Width: 0.3mm
+Solder Size: 50g
+
+Name: Isopropyl Alcohol 99.9% (945mL bottle)
+From Package Key: amazon-soldering-2
+Category: Lab Supplies
+Manufacturer: MG Chemicals
+Source: Amazon
+Cost Base: $20.03
+
+Name: Haako Tip Cleaning Paste
+From Package Key: amazon-soldering-2
+Category: Lab Supplies
+Manufacturer: Haako
+Source: Amazon
+Cost Base: $7.46
+
+Name: Lead-Free Solder Paste
+From Package Key: amazon-soldering-2
+Category: Lab Supplies
+Manufacturer: MG Chemicals
+Solder Composition: 96.5Sn/3.0Ag/0.5Cu
+Solder Size: 25g
+Source: Amazon
+Cost Base: $23.25

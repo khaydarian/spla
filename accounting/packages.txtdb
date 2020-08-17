@@ -108,3 +108,10 @@ Package Cost Tariff: $2.88
 Package Cost Sales Tax: $0.00
 Note: No sales tax? Strange...
 Package Cost Total: $232.91
+
+Name: Amazon Lead-Free Solder Etc
+Source: Amazon
+Package Key: amazon-soldering-2
+Package Cost Base: $70.72
+Package Cost Tax: $8.84
+Package Cost Total: $79.56
