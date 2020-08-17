@@ -478,8 +478,8 @@ Remaining: 86
 
 Name: Boards r009
 Category: Board Parts
-JLCPCB Product File: 202005021225140
-JLCPCB HS Code: 85340090000
+JLCPCB Product File: W202005021225140
+JLCPCB HS Code: 8534009000
 Cost Base: $76.70
 Cost Shipping: $17.25
 Cost Discount Coupon: -$6.00
@@ -612,6 +612,7 @@ Remaining: 100
 Name: Boards r010 + Stencils
 Category: Board Parts
 JLCPCB Product File: W202008171012636
+JLCPCB HS Code: 8534009000, stencils 7314500000
 Cost Base: $140.39
 Note: Boards $111.83 + Stencils $28.56
 Cost Shipping: $24.31
