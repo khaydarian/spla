@@ -21,7 +21,6 @@ def main(args):
     db = txtdb.Txtdb()
     db.parse_file(os.path.join(ACCOUNTING_DIR, 'board.txtdb'))
     db.parse_file(os.path.join(ACCOUNTING_DIR, 'board-used.txtdb'))
-    db.parse_file(os.path.join(ACCOUNTING_DIR, 'board-pending.txtdb'))
 
     b = bom.parse_xml(args.bom)
     b.remove_boring_components()

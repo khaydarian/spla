@@ -19,6 +19,7 @@ Cost Tax: $2.03
 Cost Total: $24.02
 
 Name: Digikey Order 1
+Source: Digikey
 Category: Board Parts
 Package Key: Digikey-308771862
 Digikey Web ID: 308771862
@@ -33,6 +34,7 @@ Package Cost Sales Tax: $12.51
 Package Cost Total: $152.74
 
 Name: Digikey Order 2
+Source: Digikey
 Package Key: Digikey-309025554
 Digikey Web ID: 309025554
 Digikey Salesorder Number: 63983604
@@ -72,6 +74,7 @@ Date Arrive Estimated: 2020-05-11
 Date Arrive Actual: 2020-05-06
 
 Name: Digikey Order 3
+Source: Digikey
 Package Key: Digikey-310293080
 Digikey Web ID: 310293080
 Digikey Salesorder Number: 64675872
@@ -92,3 +95,16 @@ Package Cost Tax: $2.13
 Package Cost Total: $25.12
 Date Arrive Estimated: 2020-08-13
 Date Arrive Actual: 2020-08-13
+
+Name: Digikey Order 4
+Package Key: Digikey-311626650
+Digikey Web ID: 311626650
+Digikey Salesorder Number: 65451279
+Order Submitted Date: 2020-08-16
+Shipping Method: USPS, First Class Mail
+Package Cost Subtotal: $225.04
+Package Cost Shipping: $4.99
+Package Cost Tariff: $2.88
+Package Cost Sales Tax: $0.00
+Note: No sales tax? Strange...
+Package Cost Total: $232.91
