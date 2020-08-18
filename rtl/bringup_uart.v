@@ -5,8 +5,8 @@ module bringup_uart(
 	input  clock,
 	output uart_tx,
 	input  uart_rx,
-	output led7,
-	output led8,
+	output led_a,
+	output led_b,
 	output tp7,
 	output tp8,
 	input  tp9);
@@ -39,8 +39,8 @@ uart_tx
 assign tp7 = uart_tx;
 
 bringup_driver bringup_driver0(.clock(clock), .pin_o(tp9));
-bringup_sensor bringup_sensor0(.clock(clock), .pin_i(tp8), .sensed_o(led7));
+bringup_sensor bringup_sensor0(.clock(clock), .pin_i(tp8), .sensed_o(led_a));
 
-assign led8 = 1'b1;
+assign led_b = 1'b1;
 
 endmodule

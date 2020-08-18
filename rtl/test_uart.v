@@ -5,8 +5,8 @@ module test_uart(
 	input  clock,
 	output uart_tx,
 	input  uart_rx,
-	output led7,
-	output led8);
+	output led_a,
+	output led_b);
 
 wire reset;
 unreset_by_uart unreset(.clock(clock), .uart_rx(uart_rx), .reset(reset));
@@ -58,9 +58,9 @@ uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 		.tx_o(uart_tx));
 
 oneshot #(.CYCLES(600000)) // 50ms
-	oneshot_led7(.clock(clock), .in(~uart_rx), .out(led7));
+	oneshot_led_a(.clock(clock), .in(~uart_rx), .out(led_a));
 
 oneshot #(.CYCLES(600000)) // 50ms
-	oneshot_led8(.clock(clock), .in(do_tx), .out(led8));
+	oneshot_led_b(.clock(clock), .in(do_tx), .out(led_b));
 
 endmodule

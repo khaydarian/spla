@@ -106,8 +106,8 @@ static void draw_frame(struct frame* f, int mode) {
   // clk_12mhz has to work by this point.
   // fifo already tested by bringup_fifo.
   if (mode == MODE_BOUNDARY) {
-    printf("%sled7%s ", frame_bit(f, PINDEF_LED7), RESET);
-    printf("%sled8%s\n", frame_bit(f, PINDEF_LED8), RESET);
+    printf("%sled_a%s ", frame_bit(f, PINDEF_LED_A), RESET);
+    printf("%sled_b%s\n", frame_bit(f, PINDEF_LED_B), RESET);
     printf("%susb_pwren_n%s ", frame_bit(f, PINDEF_USB_PWREN_N), RESET);
     printf("%susb_suspend_n%s ", frame_bit(f, PINDEF_USB_SUSPEND_N), RESET);
     printf("%sxin%s\n", frame_bit(f, PINDEF_XIN), RESET);

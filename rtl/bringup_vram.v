@@ -28,8 +28,8 @@ module bringup_vram(
 	inout  [7:0] vdb,
 
 	// LEDs
-	output  led7,
-	output  led8);
+	output  led_a,
+	output  led_b);
 
 wire reset;
 unreset_by_uart unreset(.clock(clock), .uart_rx(uart_rx), .reset(reset));
@@ -122,8 +122,8 @@ uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 
 // LEDs.
 oneshot #(.CYCLES(60000)) // 5ms
-	oneshot_led7(.clock(clock), .in(incoming_valid), .out(led7));
+	oneshot_led_a(.clock(clock), .in(incoming_valid), .out(led_a));
 
-assign led8 = error_bad_state || error_bad_opcode || vram_control_busy;
+assign led_b = error_bad_state || error_bad_opcode || vram_control_busy;
 
 endmodule

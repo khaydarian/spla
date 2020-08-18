@@ -41,8 +41,8 @@ module bringup_ppu(
 	output ppu2_palmode,
 
 	// LEDs
-	output  led7,
-	output  led8);
+	output  led_a,
+	output  led_b);
 
 // SNES Master Clock
 assign xin = clock;
@@ -70,7 +70,7 @@ always @(posedge clock)
 			vblank_counter <= vblank_counter + 1;
 		end
 	end
-assign led7 = vblank_output;
+assign led_a = vblank_output;
 
 sync2ff hblank_sync(.clock(clock), .in_i(ppu2_hblank), .out_o(hblank));
 wire hblank;
@@ -89,7 +89,7 @@ always @(posedge clock)
 			hblank_counter <= hblank_counter + 1;
 		end
 	end
-assign led8 = hblank_output;
+assign led_b = hblank_output;
 
 // B-Bus
 assign pard_n = 1;

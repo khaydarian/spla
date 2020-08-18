@@ -5,8 +5,8 @@ module bringup_fifo(
 	// Clock input
 	input  clock,
 
-	output led7,
-	output led8,
+	output led_a,
+	output led_b,
 
 	// FIFO pins
 	output [7:0] fifo_d,
@@ -42,7 +42,7 @@ assign fifo_clkout = state[12];
 assign fifo_oe_n = state[13];
 assign fifo_siwu = state[14];
 
-assign led7 = toggle;
-assign led8 = ~toggle;
+assign led_a = toggle;
+assign led_b = ~toggle;
 
 endmodule

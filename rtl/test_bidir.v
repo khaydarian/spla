@@ -3,8 +3,8 @@
 
 module test_bidir(
 	input  clock,
-	output led7,
-	output led8,
+	output led_a,
+	output led_b,
 	inout  tp9,
 	output bodge3);
 
@@ -28,8 +28,8 @@ wire bb_t;
 assign bb_t = (state == 3'b100);
 assign bb_i = (state != 3'b001);
 
-assign led7 = state[0];
-assign led8 = state[1];
+assign led_a = state[0];
+assign led_b = state[1];
 
 BB bb(.I(bb_i), .O(bb_o), .T(bb_t), .B(tp9));
 

@@ -28,8 +28,8 @@ module bringup_vram_steps(
 	inout  [7:0] vdb,
 
 	// LEDs
-	output  led7,
-	output  led8,
+	output  led_a,
+	output  led_b,
 	output  bodge1);
 
 wire reset;
@@ -136,8 +136,8 @@ always @(posedge clock) begin
 	end
 end
 
-assign led7 = ~state[1];
-assign led8 = ~state[0];
+assign led_a = ~state[1];
+assign led_b = ~state[0];
 
 // State output drivers.
 always @(posedge clock) begin
@@ -206,6 +206,6 @@ uart_tx #(.CLOCKS_PER_BAUD(104)) // 115200 baud
 
 // LEDs.
 //oneshot #(.CYCLES(60000)) // 5ms
-//	oneshot_led7(.clock(clock), .in(incoming_valid), .out(led7));
+//	oneshot_led_a(.clock(clock), .in(incoming_valid), .out(led_a));
 
 endmodule

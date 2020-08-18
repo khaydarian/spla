@@ -13,8 +13,8 @@ module bringup_boundary(
 
 	// All pins, in standard order, omitting FIFO pins (which collide with
 	// RS232 UART).
-	output led7,
-	output led8,
+	output led_a,
+	output led_b,
 	input  usb_pwren_n,
 	input  usb_suspend_n,
 	input  xin,
@@ -87,8 +87,8 @@ pulse #(.CLOCKS_PER_PULSE(12000))  // 1 kHz, slower than bringup_driver0
 wire [PINDEFMAX:PINDEFMIN] sensor_state;
 
 assign sensor_state[PINDEF_CLK_12MHZ] = 0; // clock, used above.
-bringup_sensor sensor_led7(.clock(clock), .pin_i(led7), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LED7]));
-bringup_sensor sensor_led8(.clock(clock), .pin_i(led8), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LED8]));
+bringup_sensor sensor_led_a(.clock(clock), .pin_i(led_a), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LED_A]));
+bringup_sensor sensor_led_b(.clock(clock), .pin_i(led_b), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LED_B]));
 assign sensor_state[PINDEF_FIFO_D_0] = 0; // FIFO conflicts with RS232 mode.
 assign sensor_state[PINDEF_FIFO_D_1] = 0;
 assign sensor_state[PINDEF_FIFO_D_2] = 0;

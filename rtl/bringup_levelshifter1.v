@@ -62,8 +62,8 @@ pulse #(.CLOCKS_PER_PULSE(12000))  // 1 kHz, slower than bringup_driver0
 wire [PINDEFMAX:PINDEFMIN] sensor_state;
 
 assign sensor_state[PINDEF_CLK_12MHZ] = 0; // clock, used above.
-assign sensor_state[PINDEF_LED7] = 0; // not level-shifter related
-assign sensor_state[PINDEF_LED8] = 0; // not level-shifter related
+assign sensor_state[PINDEF_LED_A] = 0; // not level-shifter related
+assign sensor_state[PINDEF_LED_B] = 0; // not level-shifter related
 assign sensor_state[PINDEF_FIFO_D_0] = 0; // not level-shifter related
 assign sensor_state[PINDEF_FIFO_D_1] = 0; // not level-shifter related
 assign sensor_state[PINDEF_FIFO_D_2] = 0; // not level-shifter related
