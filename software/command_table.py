@@ -4,7 +4,8 @@
 import re
 
 class Command(object):
-    def __init__(self):
+    def __init__(self, filename):
+        self.filename = filename
         self.name = None
         self.description = None
         self.options = {}
@@ -31,7 +32,7 @@ def collect_commands(filename, commands):
     for lineno, line in enumerate(open(filename)):
         line = line.strip()
         if re.match('// \[Command\]', line):
-            cur = Command()
+            cur = Command(filename)
             commands.append(cur)
         elif cur is not None:
             m = re.match(r'status ([a-z0-9_]+)\(int argc, char.. argv\) {', line)
@@ -49,6 +50,23 @@ def collect_commands(filename, commands):
                     cur.add_option(m.group(2).strip(), loc)
                 else:
                     raise ValueError("%s: Bad keyword %r" % (loc, m.group(1)))
+
+def check_unique(commands):
+    name_to_files = {}
+    for c in commands:
+        if c.name not in name_to_files:
+            name_to_files[c.name] = []
+        name_to_files[c.name].append(c.filename)
+
+    errors = False
+    for name, filenames in name_to_files.items():
+        if len(filenames) > 1:
+            print("Error: Command %r multiply defined in: %s" %(
+                        name, ' '.join(filenames)),
+                    file=sys.stderr)
+            errors = True
+    if errors:
+        sys.exit(1)
 
 KNOWN_OPTIONS = {'open_usb', 'default_usb_device'}
 
@@ -80,6 +98,7 @@ def main(argv):
     commands = []
     for filename in argv:
         collect_commands(filename, commands)
+    check_unique(commands)
     output_table(commands)
 
 if __name__ == '__main__':
