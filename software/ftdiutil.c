@@ -379,8 +379,74 @@ status ftdiutil_set_bitmode_mpsse(unsigned char outputs) {
                               "ftdi_set_bitmode(MODE_MPSSE)");
 }
 
+static status ftdiutil_read_eeprom() {
+  int ret = ftdi_read_eeprom(ftdi);
+  if (ret) {
+    return ftdiutil_error("ftdiutil_read_eeprom()", ret);
+  }
+  return OK;
+}
+
+static status get_default_channel_type(int* type) {
+  // Might redundantly read the eeprom, wasting some time.
+  // This isn't in the fast-path anyhow.
+  RETURN_IF_ERROR(ftdiutil_read_eeprom());
+  int ret;
+  int atype;
+  int btype;
+  ret = ftdi_get_eeprom_value(ftdi, CHANNEL_A_TYPE, &atype);
+  assert(ret == 0);
+  ret = ftdi_get_eeprom_value(ftdi, CHANNEL_B_TYPE, &btype);
+  assert(ret == 0);
+  if (atype == CHANNEL_IS_UART && btype == CHANNEL_IS_UART) {
+    *type = CHANNEL_IS_UART;
+    return OK;
+  }
+  if (atype == CHANNEL_IS_FIFO && btype == CHANNEL_IS_FIFO) {
+    *type = CHANNEL_IS_FIFO;
+    return OK;
+  }
+  return errorf(
+      "get_default_channel_type: incoherent channel types "
+      "(a = 0x%02x, b = 0x%02x)",
+      atype, btype);
+}
+
+static const char* channel_type_name(int channel_type) {
+  switch (channel_type) {
+    case CHANNEL_IS_UART:
+      return "UART";
+    case CHANNEL_IS_FIFO:
+      return "FIFO";
+    default:
+      return "<Unknown?>";
+  }
+}
+
+static status set_picky_bitmode(int desired_type) {
+  int type;
+  RETURN_IF_ERROR(get_default_channel_type(&type));
+  if (type != desired_type) {
+    return errorf("Can't set %s mode, EEPROM set to %s mode.",
+                  channel_type_name(desired_type), channel_type_name(type));
+  }
+  return ftdiutil_set_bitmode(0, BITMODE_RESET,
+                              "ftdi_set_bitmode(BITMODE_RESET for uart)");
+}
+
 status ftdiutil_set_bitmode_uart() {
-  return ftdiutil_set_bitmode(0, BITMODE_RESET, "ftdi_set_bitmode(MODE_RESET)");
+  return set_picky_bitmode(CHANNEL_IS_UART);
+}
+
+status ftdiutil_set_bitmode_syncff(unsigned char outputs) {
+  ftdiutil_set_interface(INTERFACE_A);
+  if (ftdi->bitbang_mode != BITMODE_SYNCFF) {
+    RETURN_IF_ERROR(set_picky_bitmode(CHANNEL_IS_FIFO));
+    RETURN_IF_ERROR(ftdiutil_set_bitmode(
+        0x00, BITMODE_RESET, "ftdi_set_bitmode(BITMODE_RESET for fifo)"));
+  }
+  return ftdiutil_set_bitmode(outputs, BITMODE_SYNCFF,
+                              "ftdi_set_bitmode(BITMODE_SYNCFF)");
 }
 
 int ftdiutil_describe(struct ftdi_context* ftdi, struct libusb_device* dev,

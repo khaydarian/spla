@@ -27,6 +27,8 @@ status ftdiutil_set_bitmode_bitbang(unsigned char outputs)
 status ftdiutil_set_bitmode_mpsse(unsigned char outputs)
     __attribute__((warn_unused_result));
 status ftdiutil_set_bitmode_uart() __attribute__((warn_unused_result));
+status ftdiutil_set_bitmode_syncff(unsigned char outputs)
+    __attribute__((warn_unused_result));
 
 int ftdiutil_describe(struct ftdi_context* ftdi, struct libusb_device* dev,
                       char* manufacturer, int manufacturer_len,
