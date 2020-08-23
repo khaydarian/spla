@@ -59,3 +59,9 @@ Once I'd gotten far enough through bringup to solder the PPU chips on the board,
 Turns out the PPU chips have 0.65mm pin pitch, not 0.635mm (ie, 40 pins per inch), which makes sense because Nintendo is Japanese and of course uses metric.  Duh.
 
 This is a deeply annoying mistake, and probably the worst on this list: It's a classic dumb mistake, which I knew about, and measured at least four times, and *still* got it wrong.  I even printed out a paper PCB layout to verify the footprints, but somehow didn't think to desolder the PPU chips and check them specifically, even though they're the most likely chip to get the footprint wrong, and it's obviously wrong at casual inspection.
+
+## Enabling FTDI Synchronous FIFO Mode is Tricky
+
+There's some curious asymmetry in the FTDI mode configuration: Some modes are set by software using `ftdi_set_bitmode`, but some are the power-on defaults configured by the attached EEPROM.  In the most-obvious configuration the "reset" mode is UART, and everything else I'd used (bitbang, mpsse, etc) works as expected.  However, the synchronous FIFO mode (ie, the highest-throughput one, and the one I wanted to use) needs the default mode to be set to _asynchronous fifo mode_, not UART mode -- and there' no obvious error if you try; it just doesn't drive the 60MHz clock like it ought to (but confusingly does drive the `RXF#` and `TXE#` signals).
+
+Since the only way to change this mode is to rewrite the EEPROM and reset the FTDI chip (and there's no way to reset it via software, so needs a power-cycle), I had to add some checking to make sure the EEPROM is in the right mode, and error out otherwise. This means you can't use both UART and FIFO modes interchangeably via software; it requires physical intervention to swap -- an unfortunate limitations of the FTDI chip.
