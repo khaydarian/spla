@@ -23,7 +23,7 @@ status ftdi_uart(int argc, char** argv) {
   RETURN_IF_ERROR(no_arguments(argc, argv));
 
   ftdiutil_set_interface(INTERFACE_A);
-  uart_init();
+  RETURN_IF_ERROR(uart_init());
 
   const char* c_green = "[32m";
   const char* c_reset = "[0m";

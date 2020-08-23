@@ -504,7 +504,7 @@ status bringup_vram(int argc, char** argv) {
   }
 
   ftdiutil_set_interface(INTERFACE_A);
-  uart_init();
+  RETURN_IF_ERROR(uart_init());
 
   if (flag_debug) {
     ftdiutil_debug_logging(true);

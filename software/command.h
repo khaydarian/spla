@@ -19,8 +19,8 @@ extern const char* invoked_as;
 
 struct command* find_command(const char* name);
 
-status no_arguments(int argc, char** argv);
+status no_arguments(int argc, char** argv) __attribute__((warn_unused_result));
 
-status usage();
+status usage() __attribute__((warn_unused_result));
 
 #endif

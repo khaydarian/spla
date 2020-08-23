@@ -5,11 +5,12 @@
 
 #include "status.h"
 
-status mpsse_init();
+status mpsse_init() __attribute__((warn_unused_result));
 
-status mpsse_deinit();
+status mpsse_deinit() __attribute__((warn_unused_result));
 
-status mpsse_set_frequency(const char* frequency_str);
+status mpsse_set_frequency(const char* frequency_str)
+    __attribute__((warn_unused_result));
 
 void mpsse_loopback(bool enabled);
 

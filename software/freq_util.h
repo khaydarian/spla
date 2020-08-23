@@ -5,6 +5,7 @@
 
 #include "status.h"
 
-status parse_frequency(const char* frequency_str, bool* div5, int* divisor);
+status parse_frequency(const char* frequency_str, bool* div5, int* divisor)
+    __attribute__((warn_unused_result));
 
 #endif

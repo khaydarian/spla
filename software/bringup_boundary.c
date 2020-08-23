@@ -289,7 +289,7 @@ status bringup_boundary(int argc, char** argv) {
   }
 
   ftdiutil_set_interface(INTERFACE_A);
-  uart_init();
+  RETURN_IF_ERROR(uart_init());
 
   struct frame f;
   memset(&f, 0, sizeof(f));

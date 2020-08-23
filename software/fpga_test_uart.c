@@ -40,7 +40,7 @@ status fpga_test_uart(int argc, char** argv) {
   free_bitstream(&bits);
 
   ftdiutil_set_interface(INTERFACE_A);
-  uart_init();
+  RETURN_IF_ERROR(uart_init());
 
   uint8_t buf[1024];
   int ch = 0x41;

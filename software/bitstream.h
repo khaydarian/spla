@@ -11,10 +11,12 @@ struct bitstream {
   unsigned int size;
 };
 
-status load_bitstream_file(struct bitstream* bits, const char* filename);
+status load_bitstream_file(struct bitstream* bits, const char* filename)
+    __attribute__((warn_unused_result));
 
 void free_bitstream(struct bitstream* bits);
 
-status program_bitstream(struct bitstream* bits);
+status program_bitstream(struct bitstream* bits)
+    __attribute__((warn_unused_result));
 
 #endif

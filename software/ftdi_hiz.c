@@ -11,7 +11,8 @@
 // Option: default_usb_device = board
 status ftdi_hiz(int argc, char** argv) {
   RETURN_IF_ERROR(no_arguments(argc, argv));
-  mpsse_init();
+
+  RETURN_IF_ERROR(mpsse_init());
 
   ftdiutil_set_interface(INTERFACE_A);
   mpsse_set_data_bits_low_dir(0xff, 0, 0);

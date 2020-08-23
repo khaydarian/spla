@@ -344,7 +344,7 @@ status ftdiutil_close_usb() {
   return OK;
 }
 
-status ftdiutil_set_interface(enum ftdi_interface interface) {
+void ftdiutil_set_interface(enum ftdi_interface interface) {
   switch (interface) {
     case INTERFACE_A:
       current = &a;
@@ -355,9 +355,8 @@ status ftdiutil_set_interface(enum ftdi_interface interface) {
       ftdi = b.ftdi;
       break;
     default:
-      return errorf("Can't use ftdi_interface %d", interface);
+      assert(!"ftdi_set_interface: bad constant");
   }
-  return OK;
 }
 
 int ftdiutil_describe(struct ftdi_context* ftdi, struct libusb_device* dev,

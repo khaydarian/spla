@@ -128,9 +128,9 @@ const char* BITNAMES[] = {
 status bringup_ftdi(int argc, char** argv) {
   RETURN_IF_ERROR(no_arguments(argc, argv));
 
-  RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_A));
+  ftdiutil_set_interface(INTERFACE_A);
   RETURN_IF_ERROR(mpsse_init());
-  RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_B));
+  ftdiutil_set_interface(INTERFACE_B);
   RETURN_IF_ERROR(mpsse_init());
 
   int errors = 0;
@@ -164,10 +164,10 @@ status bringup_ftdi(int argc, char** argv) {
   printf("         98754328 65431098 43209876 43219876\n");
 
   // Leave all pins high (except PROGRAM).
-  RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_A));
+  ftdiutil_set_interface(INTERFACE_A);
   mpsse_set_data_bits_low_dir(0xff, 0xff, 0xff);
   mpsse_set_data_bits_high_dir(0xff, 0xff, 0xff);
-  RETURN_IF_ERROR(ftdiutil_set_interface(INTERFACE_B));
+  ftdiutil_set_interface(INTERFACE_B);
   mpsse_set_data_bits_low_dir(0xff, 0xff, 0xbf);
   mpsse_set_data_bits_high_dir(0xff, 0xff, 0xff);
   RETURN_IF_ERROR(ftdiutil_flush_writes(NULL));

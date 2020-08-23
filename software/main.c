@@ -85,6 +85,6 @@ int main(int argc, char** argv) {
       return 0;
     }
   }
-  usage();
+  status_ignore(usage());
   return 0;
 }

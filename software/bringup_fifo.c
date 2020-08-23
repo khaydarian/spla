@@ -68,7 +68,7 @@ status bringup_fifo(int argc, char** argv) {
   free_bitstream(&bits);
 
   ftdiutil_set_interface(INTERFACE_A);
-  mpsse_init();
+  RETURN_IF_ERROR(mpsse_init());
 
   unsigned char last_low, last_high;
   unsigned char low, high;

@@ -30,9 +30,9 @@ static int single_command(int argc, char** argv) {
     return 1;
   } else if (!strcmp(command, "interface") && argc >= 2) {
     if (!strcmp(argv[1], "a")) {
-      status_ignore(ftdiutil_set_interface(INTERFACE_A));
+      ftdiutil_set_interface(INTERFACE_A);
     } else if (!strcmp(argv[1], "b")) {
-      status_ignore(ftdiutil_set_interface(INTERFACE_B));
+      ftdiutil_set_interface(INTERFACE_B);
     } else {
       printf("Error: Unknown interface '%s'\n", argv[1]);
     }
