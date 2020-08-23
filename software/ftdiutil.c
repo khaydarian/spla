@@ -419,11 +419,12 @@ static status get_default_channel_type(int* type) {
 const char* ftdiutil_channel_type_name(int channel_type) {
   switch (channel_type) {
     case CHANNEL_IS_UART:
-      return "UART";
+      return "uart";
     case CHANNEL_IS_FIFO:
-      return "FIFO";
+      return "fifo";
     default:
-      return "<Unknown?>";
+      assert(!"ftdiutil_channel_type_name bad type");
+      return "???";
   }
 }
 
@@ -431,9 +432,12 @@ static status set_picky_bitmode(int desired_type) {
   int type;
   RETURN_IF_ERROR(get_default_channel_type(&type));
   if (type != desired_type) {
-    return errorf("Can't set %s mode, EEPROM set to %s mode.",
-                  ftdiutil_channel_type_name(desired_type),
-                  ftdiutil_channel_type_name(type));
+    return errorf(
+        "Can't set '%s' mode, EEPROM set to '%s' mode.\n"
+        "Run \"splat ftdi_default_mode --%s\" and power-cycle.",
+        ftdiutil_channel_type_name(desired_type),
+        ftdiutil_channel_type_name(type),
+        ftdiutil_channel_type_name(desired_type));
   }
   return ftdiutil_set_bitmode(0, BITMODE_RESET,
                               "ftdi_set_bitmode(BITMODE_RESET for uart)");
