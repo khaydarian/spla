@@ -1,5 +1,6 @@
 // vi: ts=2:sw=2:sts=2:et
 
+#include <assert.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,6 +9,7 @@
 #include "freq_util.h"
 
 static int divisor_to_frequency(bool div5, int divisor) {
+  assert(divisor >= 0);
   int initial_freq = div5 ? 6000000 : 30000000;
   return initial_freq / (1 + divisor);
 }
@@ -93,6 +95,16 @@ __attribute__((constructor)) static void selftest_parse_frequency_string() {
       {"30000k", true, 30000000},
       {"30M", true, 30000000},
       {"30MHz", true, 30000000},
+      {"15M", true, 15000000},
+      {"15MHz", true, 15000000},
+      {"12M", true, 12000000},
+      {"12MHz", true, 12000000},
+      {"9M", true, 9000000},
+      {"9MHz", true, 9000000},
+      {"6M", true, 6000000},
+      {"6MHz", true, 6000000},
+      {"1M", true, 1000000},
+      {"1MHz", true, 1000000},
       {"30.0", true, 30},
       {"30.0M", true, 30000000},
       {"30.0MHz", true, 30000000},
@@ -137,13 +149,15 @@ status parse_frequency(const char* frequency_str, bool* div5, int* divisor) {
   RETURN_IF_ERROR(parse_frequency_string(frequency_str, &frequency_hz));
 
   float ideal_divisor_div1 = frequency_to_divisor(false, frequency_hz);
-  if (frequency_hz == divisor_to_frequency(false, floor(ideal_divisor_div1))) {
+  if (ideal_divisor_div1 >= 0 &&
+      frequency_hz == divisor_to_frequency(false, floor(ideal_divisor_div1))) {
     *div5 = false;
     *divisor = floor(ideal_divisor_div1);
     return OK;
   }
   float ideal_divisor_div5 = frequency_to_divisor(true, frequency_hz);
-  if (frequency_hz == divisor_to_frequency(false, floor(ideal_divisor_div5))) {
+  if (ideal_divisor_div5 >= 0 &&
+      frequency_hz == divisor_to_frequency(false, floor(ideal_divisor_div5))) {
     *div5 = false;
     *divisor = floor(ideal_divisor_div5);
     return OK;
