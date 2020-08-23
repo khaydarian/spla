@@ -22,6 +22,8 @@ status ftdiutil_open_usb() __attribute__((warn_unused_result));
 status ftdiutil_close_usb() __attribute__((warn_unused_result));
 void ftdiutil_set_interface(enum ftdi_interface interface);
 
+const char* ftdiutil_channel_type_name(int channel_type);
+
 status ftdiutil_set_bitmode_bitbang(unsigned char outputs)
     __attribute__((warn_unused_result));
 status ftdiutil_set_bitmode_mpsse(unsigned char outputs)

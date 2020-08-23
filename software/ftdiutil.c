@@ -382,7 +382,11 @@ status ftdiutil_set_bitmode_mpsse(unsigned char outputs) {
 static status ftdiutil_read_eeprom() {
   int ret = ftdi_read_eeprom(ftdi);
   if (ret) {
-    return ftdiutil_error("ftdiutil_read_eeprom()", ret);
+    return ftdiutil_error("ftdiutil_read_eeprom", ret);
+  }
+  ret = ftdi_eeprom_decode(ftdi, 0);
+  if (ret) {
+    return ftdiutil_error("ftdi_eeprom_decode", ret);
   }
   return OK;
 }
@@ -412,7 +416,7 @@ static status get_default_channel_type(int* type) {
       atype, btype);
 }
 
-static const char* channel_type_name(int channel_type) {
+const char* ftdiutil_channel_type_name(int channel_type) {
   switch (channel_type) {
     case CHANNEL_IS_UART:
       return "UART";
@@ -428,7 +432,8 @@ static status set_picky_bitmode(int desired_type) {
   RETURN_IF_ERROR(get_default_channel_type(&type));
   if (type != desired_type) {
     return errorf("Can't set %s mode, EEPROM set to %s mode.",
-                  channel_type_name(desired_type), channel_type_name(type));
+                  ftdiutil_channel_type_name(desired_type),
+                  ftdiutil_channel_type_name(type));
   }
   return ftdiutil_set_bitmode(0, BITMODE_RESET,
                               "ftdi_set_bitmode(BITMODE_RESET for uart)");
