@@ -41,18 +41,12 @@ static int single_command(int argc, char** argv) {
     status_ignore(uart_init());
     return 1;
   } else if (!strcmp(command, "bitbang")) {
-    ret = ftdi_set_bitmode(ftdi, 0x00, BITMODE_BITBANG);
-    if (ret) {
-      status_ignore(ftdiutil_error("ftdi_set_bitmode(BITBANG)", ret));
-    }
+    status_ignore(ftdiutil_set_bitmode_bitbang(0x00));
     return 1;
   } else if (!strcmp(command, "bbout") && argc >= 2) {
     int outputs = strtol(argv[1], 0, 0) & 0xFF;
     printf("outputs = 0x%02x\n", outputs);
-    ret = ftdi_set_bitmode(ftdi, outputs, BITMODE_BITBANG);
-    if (ret) {
-      status_ignore(ftdiutil_error("ftdi_set_bitmode(BITBANG)", ret));
-    }
+    status_ignore(ftdiutil_set_bitmode_bitbang(outputs));
     return 2;
   } else if (!strcmp(command, "bbval") && argc >= 2) {
     int values = strtol(argv[1], 0, 0) & 0xFF;

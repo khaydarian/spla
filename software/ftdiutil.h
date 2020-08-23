@@ -22,6 +22,12 @@ status ftdiutil_open_usb() __attribute__((warn_unused_result));
 status ftdiutil_close_usb() __attribute__((warn_unused_result));
 void ftdiutil_set_interface(enum ftdi_interface interface);
 
+status ftdiutil_set_bitmode_bitbang(unsigned char outputs)
+    __attribute__((warn_unused_result));
+status ftdiutil_set_bitmode_mpsse(unsigned char outputs)
+    __attribute__((warn_unused_result));
+status ftdiutil_set_bitmode_uart() __attribute__((warn_unused_result));
+
 int ftdiutil_describe(struct ftdi_context* ftdi, struct libusb_device* dev,
                       char* manufacturer, int manufacturer_len,
                       char* description, int description_len, char* serial,

@@ -66,10 +66,7 @@ static void flush_data_bits_hi() {
 }
 
 status mpsse_init() {
-  int ret = ftdi_set_bitmode(ftdi, 0, BITMODE_MPSSE);
-  if (ret) {
-    return ftdiutil_error("ftdi_set_bitmode(MPSSE)", ret);
-  }
+  RETURN_IF_ERROR(ftdiutil_set_bitmode_mpsse(0));
   // data_bits_lo_dir = BIT_CS | BIT_CLOCK | BIT_MOSI;
   // data_bits_lo_val = BIT_CS;
   // flush_data_bits_lo();

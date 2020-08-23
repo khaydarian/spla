@@ -359,6 +359,30 @@ void ftdiutil_set_interface(enum ftdi_interface interface) {
   }
 }
 
+static status ftdiutil_set_bitmode(unsigned char outputs,
+                                   enum ftdi_mpsse_mode mode,
+                                   const char* where) {
+  int ret = ftdi_set_bitmode(ftdi, outputs, mode);
+  if (ret) {
+    return ftdiutil_error(where, ret);
+  }
+  return OK;
+}
+
+status ftdiutil_set_bitmode_bitbang(unsigned char outputs) {
+  return ftdiutil_set_bitmode(outputs, BITMODE_BITBANG,
+                              "ftdi_set_bitmode(MODE_BITBANG)");
+}
+
+status ftdiutil_set_bitmode_mpsse(unsigned char outputs) {
+  return ftdiutil_set_bitmode(outputs, BITMODE_MPSSE,
+                              "ftdi_set_bitmode(MODE_MPSSE)");
+}
+
+status ftdiutil_set_bitmode_uart() {
+  return ftdiutil_set_bitmode(0, BITMODE_RESET, "ftdi_set_bitmode(MODE_RESET)");
+}
+
 int ftdiutil_describe(struct ftdi_context* ftdi, struct libusb_device* dev,
                       char* manufacturer, int manufacturer_len,
                       char* description, int description_len, char* serial,

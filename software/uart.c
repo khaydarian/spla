@@ -5,11 +5,8 @@
 #include "ftdiutil.h"
 
 status uart_init() {
-  int ret = ftdi_set_bitmode(ftdi, 0, BITMODE_RESET);
-  if (ret) {
-    return ftdiutil_error("ftdi_set_bitmode(UART)", ret);
-  }
-  ret = ftdi_set_baudrate(ftdi, 115200);
+  RETURN_IF_ERROR(ftdiutil_set_bitmode_uart());
+  int ret = ftdi_set_baudrate(ftdi, 115200);
   if (ret) {
     return ftdiutil_error("ftdi_set_baudrate", ret);
   }

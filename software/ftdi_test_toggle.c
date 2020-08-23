@@ -17,30 +17,27 @@ status ftdi_test_toggle(int argc, char** argv) {
 
   status err = OK;
 
-  int ret = ftdi_set_bitmode(ftdi, 0xFF, BITMODE_BITBANG);
-  if (ret) {
-    err = ftdiutil_error("ftdi_set_bitmode", ret);
-  } else {
-    unsigned char buf[1];
+  RETURN_IF_ERROR(ftdiutil_set_bitmode_bitbang(0xFF));
 
-    for (int i = 0; i < 100; i++) {
-      printf("On\n");
-      buf[0] = 0xFF;
-      ret = ftdi_write_data(ftdi, buf, 1);
-      if (ret < 0) {
-        err = ftdiutil_error("ftdi_write_data", ret);
-        break;
-      }
-      usleep(1000000);
-      printf("Off\n");
-      buf[0] = 0x0;
-      ret = ftdi_write_data(ftdi, buf, 1);
-      if (ret < 0) {
-        err = ftdiutil_error("ftdi_write_data", ret);
-        break;
-      }
-      usleep(1000000);
+  unsigned char buf[1];
+
+  for (int i = 0; i < 100; i++) {
+    printf("On\n");
+    buf[0] = 0xFF;
+    int ret = ftdi_write_data(ftdi, buf, 1);
+    if (ret < 0) {
+      err = ftdiutil_error("ftdi_write_data", ret);
+      break;
     }
+    usleep(1000000);
+    printf("Off\n");
+    buf[0] = 0x0;
+    ret = ftdi_write_data(ftdi, buf, 1);
+    if (ret < 0) {
+      err = ftdiutil_error("ftdi_write_data", ret);
+      break;
+    }
+    usleep(1000000);
   }
 
   // Reset all pins to inputs / hi-z.
