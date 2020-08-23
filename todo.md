@@ -29,6 +29,7 @@
 * Consider the "paper between boards" option, which would avoid some silkscreen scratches.
 * Consider ordering stencils.
 * Remove `LVL_PA_DIR`, which is probably unnecessary.
+* Move `FIFO_SIWU` to the correct pin (pin 30 `ACBUS4`, not pin 34 `ACBUS7`).
 
 ### Skipped ideas
 
