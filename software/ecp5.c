@@ -26,7 +26,7 @@
 #define JTAG_TMS 0x80
 
 status ecp5_init() {
-  const char* frequency = "6MHz";
+  const char* frequency = "30MHz";
 
   // Interface A is not used yet; tristate all pins.
   ftdiutil_set_interface(INTERFACE_A);
