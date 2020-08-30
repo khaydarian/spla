@@ -12,16 +12,17 @@ _A more realistic sequence than below, ignoring the various soldering details._
     1.   Measure 1.1V and 2.5V LDO linear regulators.
 1.  FTDI Bringup.
     1.   Enable 3.3V via jumpers.
-    1.   Verify 12 MHz clock input.
-    1.   Verify 1.8V internal LDO linear regulator.
+    1.   Verify 12 MHz clock input on test pad.
+    1.   Verify 12 MHz clock input on FTDI pin 2.
+    1.   Verify 1.8V internal LDO linear regulator on test pad.
     1.   Verify USB connectivity.
+    1.   Run `splat bringup_first` to verify basic FTDI connectivity.
     1.   Run `splat bringup_ftdi` to verify pins.
     1.   Run `splat ftdi_new_device`, with appropriate serial number.
     1.   Power-cycle the board to use the new VID/PID/Serial.
-    1.   Run `splat bringup_fifo` to verify ADBUS fifo pins.
 1.  FPGA Bringup.
     1.   Run `splat bringup_fpga`, and verify flashing LEDs.
-    1.   (Optional) Run `splat 
+    1.   Run `splat bringup_fifo` to verify ADBUS fifo pins.
     1.   Run `splat bringup_boundary`, and verify connectivity of the FPGA pins.
 1.  Level Shifter Bringup.
     1.   Run `splat bringup_boundary --levelshifter1`, and verify connectivity of the FPGA input-only and input-capable pins.
