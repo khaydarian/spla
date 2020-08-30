@@ -4,12 +4,16 @@ _A more realistic sequence than below, ignoring the various soldering details._
 
 1.  Parts inspection.
 1.  Power validation.
+    1.   Apply 12V power.
+    1.   Verify 12V power via test points (`TP3`, `TP4`).
     1.   Verify that power LEDs (`D1`, `D2`) are lit.
     1.   Measure 3.3V and 5.0V switching regulators.
+    1.   Enable 1.1V and 2.5V LDO linear regulators via jumpers.
     1.   Measure 1.1V and 2.5V LDO linear regulators.
 1.  FTDI Bringup.
-    1.   Verify 1.8V internal LDO linear regulator.
+    1.   Enable 3.3V via jumpers.
     1.   Verify 12 MHz clock input.
+    1.   Verify 1.8V internal LDO linear regulator.
     1.   Verify USB connectivity.
     1.   Run `splat bringup_ftdi` to verify pins.
     1.   Run `splat ftdi_new_device`, with appropriate serial number.
