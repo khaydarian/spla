@@ -2,12 +2,18 @@ Name: Board b001
 Board Serial: SPLA-r009-b001
 Board Completion: Power, FTDI, FPGA, LevelShifter, not SNES
 Condition: Good
-SNES Chips: No
+SNES Chips: VRAM (from SNES 1)
 Note: Bridged FPGA pins: `analog_b6`-`analog_b7`; LevelShifter `U15` pin `ppu1_hvcmode` apparently not working; bad chip?
 
 Name: Board b002
 Board Serial: SPLA-r009-b002
 Board Completion: Power, FTDI, FPGA
 Condition: Broken
-SNES Chips: No
+SNES Chips: None
 Note: FPGA badly misbehaving, probably bad chip
+
+Name: Board b003
+Board Serial: SPLA-r010-b003
+Board Completion: Power, FTDI, FPGA, LevelShifter, not VRAM, not SNES, Analog
+Condition: New, Untested
+SNES Chips: None
