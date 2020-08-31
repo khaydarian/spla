@@ -6,15 +6,17 @@ module bringup_boundary(
 	input  clock,
 
 	// Driver pin
-	output tp9,
+	output extra3,
 
 	// UART output
 	output uart_tx,
 
 	// All pins, in standard order, omitting FIFO pins (which collide with
 	// RS232 UART).
-	output led_a,
-	output led_b,
+	input  led_a,
+	input  led_b,
+	input  led_c,
+	input  led_d,
 	input  usb_pwren_n,
 	input  usb_suspend_n,
 	input  xin,
@@ -24,8 +26,8 @@ module bringup_boundary(
 	input  ppu2_resout1_n,
 	input  burst_n,
 	input  csync_n,
-	input  ppu2_hblank,
-	input  ppu2_vblank,
+	input  hblank,
+	input  vblank,
 	input  pard_n,
 	input  pawr_n,
 	input  lvl_pa_dir,
@@ -71,24 +73,24 @@ module bringup_boundary(
 	input  bodge2,
 	input  bodge3,
 	input  analog_clock,
-	input  analog_r_oe,
+	input  analog_oe_n,
 	input  [7:0] analog_r,
-	input  analog_g_oe,
 	input  [7:0] analog_g,
-	input  analog_b_oe,
 	input  [7:0] analog_b);
 
-bringup_driver bringup_driver0(.clock(clock), .pin_o(tp9));
+bringup_driver bringup_driver0(.clock(clock), .pin_o(extra3));
 
 wire dec;
 pulse #(.CLOCKS_PER_PULSE(12000))  // 1 kHz, slower than bringup_driver0
 	pulse_dec(.clock(clock), .pulse_o(dec));
 
-wire [PINDEFMAX:PINDEFMIN] sensor_state;
+wire [PINDEFMAX:0] sensor_state;
 
 assign sensor_state[PINDEF_CLK_12MHZ] = 0; // clock, used above.
 bringup_sensor sensor_led_a(.clock(clock), .pin_i(led_a), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LED_A]));
 bringup_sensor sensor_led_b(.clock(clock), .pin_i(led_b), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LED_B]));
+bringup_sensor sensor_led_c(.clock(clock), .pin_i(led_c), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LED_C]));
+bringup_sensor sensor_led_d(.clock(clock), .pin_i(led_d), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LED_D]));
 assign sensor_state[PINDEF_FIFO_D_0] = 0; // FIFO conflicts with RS232 mode.
 assign sensor_state[PINDEF_FIFO_D_1] = 0;
 assign sensor_state[PINDEF_FIFO_D_2] = 0;
@@ -113,8 +115,8 @@ bringup_sensor sensor_ppu2_resout0_n(.clock(clock), .pin_i(ppu2_resout0_n), .dec
 bringup_sensor sensor_ppu2_resout1_n(.clock(clock), .pin_i(ppu2_resout1_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PPU2_RESOUT1_N]));
 bringup_sensor sensor_burst_n(.clock(clock), .pin_i(burst_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_BURST_N]));
 bringup_sensor sensor_csync_n(.clock(clock), .pin_i(csync_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_CSYNC_N]));
-bringup_sensor sensor_ppu2_hblank(.clock(clock), .pin_i(ppu2_hblank), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PPU2_HBLANK]));
-bringup_sensor sensor_ppu2_vblank(.clock(clock), .pin_i(ppu2_vblank), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PPU2_VBLANK]));
+bringup_sensor sensor_hblank(.clock(clock), .pin_i(hblank), .dec_i(dec), .sensed_o(sensor_state[PINDEF_HBLANK]));
+bringup_sensor sensor_vblank(.clock(clock), .pin_i(vblank), .dec_i(dec), .sensed_o(sensor_state[PINDEF_VBLANK]));
 bringup_sensor sensor_pard_n(.clock(clock), .pin_i(pard_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PARD_N]));
 bringup_sensor sensor_pawr_n(.clock(clock), .pin_i(pawr_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PAWR_N]));
 bringup_sensor sensor_lvl_pa_dir(.clock(clock), .pin_i(lvl_pa_dir), .dec_i(dec), .sensed_o(sensor_state[PINDEF_LVL_PA_DIR]));
@@ -230,12 +232,12 @@ bringup_sensor sensor_ppu2_hvcmode(.clock(clock), .pin_i(ppu2_hvcmode), .dec_i(d
 bringup_sensor sensor_ppu2_palmode(.clock(clock), .pin_i(ppu2_palmode), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PPU2_PALMODE]));
 bringup_sensor sensor_extra1(.clock(clock), .pin_i(extra1), .dec_i(dec), .sensed_o(sensor_state[PINDEF_EXTRA1]));
 bringup_sensor sensor_extra2(.clock(clock), .pin_i(extra2), .dec_i(dec), .sensed_o(sensor_state[PINDEF_EXTRA2]));
-assign sensor_state[PINDEF_EXTRA3] = 0; // tp9, used above as bringup_driver.
+assign sensor_state[PINDEF_EXTRA3] = 0; // extra3, used above as bringup_driver.
 bringup_sensor sensor_bodge1(.clock(clock), .pin_i(bodge1), .dec_i(dec), .sensed_o(sensor_state[PINDEF_BODGE1]));
 bringup_sensor sensor_bodge2(.clock(clock), .pin_i(bodge2), .dec_i(dec), .sensed_o(sensor_state[PINDEF_BODGE2]));
 bringup_sensor sensor_bodge3(.clock(clock), .pin_i(bodge3), .dec_i(dec), .sensed_o(sensor_state[PINDEF_BODGE3]));
 bringup_sensor sensor_analog_clock(.clock(clock), .pin_i(analog_clock), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_CLOCK]));
-bringup_sensor sensor_analog_r_oe(.clock(clock), .pin_i(analog_r_oe), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_R_OE]));
+bringup_sensor sensor_analog_oe_n(.clock(clock), .pin_i(analog_oe_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_OE_N]));
 bringup_sensor sensor_analog_r_0(.clock(clock), .pin_i(analog_r[0]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_R_0]));
 bringup_sensor sensor_analog_r_1(.clock(clock), .pin_i(analog_r[1]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_R_1]));
 bringup_sensor sensor_analog_r_2(.clock(clock), .pin_i(analog_r[2]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_R_2]));
@@ -244,7 +246,6 @@ bringup_sensor sensor_analog_r_4(.clock(clock), .pin_i(analog_r[4]), .dec_i(dec)
 bringup_sensor sensor_analog_r_5(.clock(clock), .pin_i(analog_r[5]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_R_5]));
 bringup_sensor sensor_analog_r_6(.clock(clock), .pin_i(analog_r[6]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_R_6]));
 bringup_sensor sensor_analog_r_7(.clock(clock), .pin_i(analog_r[7]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_R_7]));
-bringup_sensor sensor_analog_g_oe(.clock(clock), .pin_i(analog_g_oe), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_G_OE]));
 bringup_sensor sensor_analog_g_0(.clock(clock), .pin_i(analog_g[0]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_G_0]));
 bringup_sensor sensor_analog_g_1(.clock(clock), .pin_i(analog_g[1]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_G_1]));
 bringup_sensor sensor_analog_g_2(.clock(clock), .pin_i(analog_g[2]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_G_2]));
@@ -253,7 +254,6 @@ bringup_sensor sensor_analog_g_4(.clock(clock), .pin_i(analog_g[4]), .dec_i(dec)
 bringup_sensor sensor_analog_g_5(.clock(clock), .pin_i(analog_g[5]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_G_5]));
 bringup_sensor sensor_analog_g_6(.clock(clock), .pin_i(analog_g[6]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_G_6]));
 bringup_sensor sensor_analog_g_7(.clock(clock), .pin_i(analog_g[7]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_G_7]));
-bringup_sensor sensor_analog_b_oe(.clock(clock), .pin_i(analog_b_oe), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_B_OE]));
 bringup_sensor sensor_analog_b_0(.clock(clock), .pin_i(analog_b[0]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_B_0]));
 bringup_sensor sensor_analog_b_1(.clock(clock), .pin_i(analog_b[1]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_B_1]));
 bringup_sensor sensor_analog_b_2(.clock(clock), .pin_i(analog_b[2]), .dec_i(dec), .sensed_o(sensor_state[PINDEF_ANALOG_B_2]));

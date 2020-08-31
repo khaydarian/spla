@@ -13,8 +13,8 @@ module bringup_ppu(
 	output ppu2_reset_n,
 
 	// Video signals
-	input  ppu2_hblank,
-	input  ppu2_vblank,
+	input  hblank,
+	input  vblank,
 
 	// B-Bus
 	output pard_n,
@@ -53,9 +53,9 @@ assign ppu2_reset_n = 1; // released
 
 // Video signals
 
-sync2ff vblank_sync(.clock(clock), .in_i(ppu2_vblank), .out_o(vblank));
-wire vblank;
-edge_falling vblank_edge(.clock(clock), .in_i(vblank), .pulse_o(vblank_pulse));
+sync2ff vblank_sync2ff(.clock(clock), .in_i(vblank), .out_o(vblank_sync));
+wire vblank_sync;
+edge_falling vblank_edge(.clock(clock), .in_i(vblank_sync), .pulse_o(vblank_pulse));
 wire vblank_pulse;
 reg [3:0] vblank_counter;
 initial vblank_counter = 0;
@@ -72,9 +72,9 @@ always @(posedge clock)
 	end
 assign led_a = vblank_output;
 
-sync2ff hblank_sync(.clock(clock), .in_i(ppu2_hblank), .out_o(hblank));
-wire hblank;
-edge_falling hblank_edge(.clock(clock), .in_i(hblank), .pulse_o(hblank_pulse));
+sync2ff hblank_sync2ff(.clock(clock), .in_i(hblank), .out_o(hblank_sync));
+wire hblank_sync;
+edge_falling hblank_edge(.clock(clock), .in_i(hblank_sync), .pulse_o(hblank_pulse));
 wire hblank_pulse;
 reg [13:0] hblank_counter;
 initial hblank_counter = 0;

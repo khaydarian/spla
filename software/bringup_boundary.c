@@ -23,7 +23,6 @@ struct frame {
 };
 
 static const char* frame_bit(struct frame* f, uint8_t bit) {
-  bit -= PINDEFMIN;
   int byte = bit / 8 + 1;
   int mask = 1 << (bit % 8);
   bool is_current = (bool)(f->current[byte] & mask);
@@ -107,7 +106,9 @@ static void draw_frame(struct frame* f, int mode) {
   // fifo already tested by bringup_fifo.
   if (mode == MODE_BOUNDARY) {
     printf("%sled_a%s ", frame_bit(f, PINDEF_LED_A), RESET);
-    printf("%sled_b%s\n", frame_bit(f, PINDEF_LED_B), RESET);
+    printf("%sled_b%s ", frame_bit(f, PINDEF_LED_B), RESET);
+    printf("%sled_c%s ", frame_bit(f, PINDEF_LED_C), RESET);
+    printf("%sled_d%s\n", frame_bit(f, PINDEF_LED_D), RESET);
     printf("%susb_pwren_n%s ", frame_bit(f, PINDEF_USB_PWREN_N), RESET);
     printf("%susb_suspend_n%s ", frame_bit(f, PINDEF_USB_SUSPEND_N), RESET);
     printf("%sxin%s\n", frame_bit(f, PINDEF_XIN), RESET);
@@ -118,8 +119,8 @@ static void draw_frame(struct frame* f, int mode) {
   printf("%sppu2_resout1_n%s\n", frame_bit(f, PINDEF_PPU2_RESOUT1_N), RESET);
   printf("%sburst_n%s ", frame_bit(f, PINDEF_BURST_N), RESET);
   printf("%scsync_n%s ", frame_bit(f, PINDEF_CSYNC_N), RESET);
-  printf("%sppu2_hblank%s ", frame_bit(f, PINDEF_PPU2_HBLANK), RESET);
-  printf("%sppu2_vblank%s\n", frame_bit(f, PINDEF_PPU2_VBLANK), RESET);
+  printf("%shblank%s ", frame_bit(f, PINDEF_HBLANK), RESET);
+  printf("%svblank%s\n", frame_bit(f, PINDEF_VBLANK), RESET);
   if (mode == MODE_BOUNDARY) {
     printf("%spard_n%s ", frame_bit(f, PINDEF_PARD_N), RESET);
     printf("%spawr_n%s ", frame_bit(f, PINDEF_PAWR_N), RESET);
@@ -222,18 +223,19 @@ static void draw_frame(struct frame* f, int mode) {
     printf("%sbodge3%s\n", frame_bit(f, PINDEF_BODGE3), RESET);
   }
   if (mode == MODE_BOUNDARY) {
-    printf("analog %sclock%s ", frame_bit(f, PINDEF_ANALOG_CLOCK), RESET);
-    printf("r[%soe%s ", frame_bit(f, PINDEF_ANALOG_R_OE), RESET);
+    printf("analog %sclock%s %soe_n%s ", frame_bit(f, PINDEF_ANALOG_CLOCK),
+           RESET, frame_bit(f, PINDEF_ANALOG_OE_N), RESET);
+    printf("r[");
     for (int i = 0; i < 8; i++) {
       printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_R_0 + i), i, RESET);
     }
     printf("] ");
-    printf("g[%soe%s ", frame_bit(f, PINDEF_ANALOG_G_OE), RESET);
+    printf("g[");
     for (int i = 0; i < 8; i++) {
       printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_G_0 + i), i, RESET);
     }
     printf("] ");
-    printf("b[%soe%s ", frame_bit(f, PINDEF_ANALOG_B_OE), RESET);
+    printf("b[");
     for (int i = 0; i < 8; i++) {
       printf("%s%d%s", frame_bit(f, PINDEF_ANALOG_B_0 + i), i, RESET);
     }

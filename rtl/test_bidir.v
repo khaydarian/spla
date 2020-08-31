@@ -5,7 +5,7 @@ module test_bidir(
 	input  clock,
 	output led_a,
 	output led_b,
-	inout  tp9,
+	inout  extra3,
 	output bodge3);
 
 reg [2:0] state;
@@ -31,7 +31,7 @@ assign bb_i = (state != 3'b001);
 assign led_a = state[0];
 assign led_b = state[1];
 
-BB bb(.I(bb_i), .O(bb_o), .T(bb_t), .B(tp9));
+BB bb(.I(bb_i), .O(bb_o), .T(bb_t), .B(extra3));
 
 assign bodge3 = bb_o;
 

@@ -25,8 +25,8 @@ module bringup_levelshifter1(
 	input  ppu2_resout1_n,
 	input  burst_n,
 	input  csync_n,
-	input  ppu2_hblank,
-	input  ppu2_vblank,
+	input  hblank,
+	input  vblank,
 	input  [7:0] pa,
 	input  [7:0] pd,
 	input  vrd_n,
@@ -59,11 +59,13 @@ wire dec;
 pulse #(.CLOCKS_PER_PULSE(12000))  // 1 kHz, slower than bringup_driver0
 	pulse_dec(.clock(clock), .pulse_o(dec));
 
-wire [PINDEFMAX:PINDEFMIN] sensor_state;
+wire [PINDEFMAX:0] sensor_state;
 
 assign sensor_state[PINDEF_CLK_12MHZ] = 0; // clock, used above.
 assign sensor_state[PINDEF_LED_A] = 0; // not level-shifter related
 assign sensor_state[PINDEF_LED_B] = 0; // not level-shifter related
+assign sensor_state[PINDEF_LED_C] = 0; // not level-shifter related
+assign sensor_state[PINDEF_LED_D] = 0; // not level-shifter related
 assign sensor_state[PINDEF_FIFO_D_0] = 0; // not level-shifter related
 assign sensor_state[PINDEF_FIFO_D_1] = 0; // not level-shifter related
 assign sensor_state[PINDEF_FIFO_D_2] = 0; // not level-shifter related
@@ -88,8 +90,8 @@ bringup_sensor sensor_ppu2_resout0_n(.clock(clock), .pin_i(ppu2_resout0_n), .dec
 bringup_sensor sensor_ppu2_resout1_n(.clock(clock), .pin_i(ppu2_resout1_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PPU2_RESOUT1_N]));
 bringup_sensor sensor_burst_n(.clock(clock), .pin_i(burst_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_BURST_N]));
 bringup_sensor sensor_csync_n(.clock(clock), .pin_i(csync_n), .dec_i(dec), .sensed_o(sensor_state[PINDEF_CSYNC_N]));
-bringup_sensor sensor_ppu2_hblank(.clock(clock), .pin_i(ppu2_hblank), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PPU2_HBLANK]));
-bringup_sensor sensor_ppu2_vblank(.clock(clock), .pin_i(ppu2_vblank), .dec_i(dec), .sensed_o(sensor_state[PINDEF_PPU2_VBLANK]));
+bringup_sensor sensor_hblank(.clock(clock), .pin_i(hblank), .dec_i(dec), .sensed_o(sensor_state[PINDEF_HBLANK]));
+bringup_sensor sensor_vblank(.clock(clock), .pin_i(vblank), .dec_i(dec), .sensed_o(sensor_state[PINDEF_VBLANK]));
 assign sensor_state[PINDEF_PARD_N] = 0; // output only
 assign sensor_state[PINDEF_PAWR_N] = 0; // output only
 assign sensor_state[PINDEF_LVL_PA_DIR] = 0; // direction pin
@@ -210,7 +212,7 @@ bringup_sensor sensor_bodge1(.clock(clock), .pin_i(bodge1), .dec_i(dec), .sensed
 bringup_sensor sensor_bodge2(.clock(clock), .pin_i(bodge2), .dec_i(dec), .sensed_o(sensor_state[PINDEF_BODGE2]));
 assign sensor_state[PINDEF_BODGE3] = 0; // output driver pin, above
 assign sensor_state[PINDEF_ANALOG_CLOCK] = 0; // not level-shifter related
-assign sensor_state[PINDEF_ANALOG_R_OE] = 0; // not level-shifter related
+assign sensor_state[PINDEF_ANALOG_OE_N] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_R_0] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_R_1] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_R_2] = 0; // not level-shifter related
@@ -219,7 +221,6 @@ assign sensor_state[PINDEF_ANALOG_R_4] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_R_5] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_R_6] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_R_7] = 0; // not level-shifter related
-assign sensor_state[PINDEF_ANALOG_G_OE] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_G_0] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_G_1] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_G_2] = 0; // not level-shifter related
@@ -228,7 +229,6 @@ assign sensor_state[PINDEF_ANALOG_G_4] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_G_5] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_G_6] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_G_7] = 0; // not level-shifter related
-assign sensor_state[PINDEF_ANALOG_B_OE] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_B_0] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_B_1] = 0; // not level-shifter related
 assign sensor_state[PINDEF_ANALOG_B_2] = 0; // not level-shifter related
