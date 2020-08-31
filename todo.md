@@ -33,6 +33,7 @@
 * Fix adjacent pins bridged on `U20`.
 * Fix pads / packages for various capacitors.
 * Fix push button pad orientation (wrong pair shorted).
+* Fix naming of `FGPA_~VRD~`; various signals with `~` (should be paired).
 
 ### Skipped ideas
 
