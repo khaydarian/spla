@@ -24,8 +24,12 @@ _A more realistic sequence than below, ignoring the various soldering details._
     1.   Run `splat bringup_fpga`, and verify flashing LEDs.
     1.   Run `splat bringup_fifo` to verify ADBUS fifo pins.
     1.   Run `splat bringup_boundary`, and verify connectivity of the FPGA pins.
+         1.  Probe using jumper wire on `EXTRA3` to various pins.
 1.  Level Shifter Bringup.
+    1.   Enable 5.0V via jumpers.
     1.   Run `splat bringup_boundary --levelshifter1`, and verify connectivity of the FPGA input-only and input-capable pins.
+         1.  Probe using jumper wire on `BODGE3` to PPU1/PPU2/VRAM pads.
+         1.  *Be very careful not to short to any 3.3V pins.*
     1.   Run `splat bringup_boundary --levelshifter2`, and verify the FPGA output-only pins via oscilloscope.
 1.  SNES VRAM Bringup
     1.   Run `splat bringup_vram`.
