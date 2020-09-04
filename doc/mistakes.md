@@ -69,3 +69,7 @@ Since the only way to change this mode is to rewrite the EEPROM and reset the FT
 ## Don't set USB Vendor ID / Product ID to Zero
 
 While writing the above eeprom-mode-changing tool (`ftdi_default_mode`), I accidentally set the USB vendor id and product id to zero -- which apparently `libftdi` can't deal with at all, since it re-uses those values to mean "the default FTDI ids".  I had to hack libftdi to get it to attach to the semi-dead device, and reprogram the EEPROM back to a sensible state.
+
+## Wrong Pinout for Push Button
+
+The button I added at the last minute is hardwired to connect pins 1 and 2, and to separately connect pins 3 and 4.  Pressing the button shorts the `1-2` net with the `3-4` net.  This is fine, except that the symbol I picked in KiCad has two pins, and shorts pin `1` with pin `2` -- which doesn't match the actual button.  To fix this I had to clip the lead for pin 2 (disconnecting it from +3v3), and shorting that pad across to pad `3`.
