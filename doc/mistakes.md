@@ -70,6 +70,10 @@ Since the only way to change this mode is to rewrite the EEPROM and reset the FT
 
 While writing the above eeprom-mode-changing tool (`ftdi_default_mode`), I accidentally set the USB vendor id and product id to zero -- which apparently `libftdi` can't deal with at all, since it re-uses those values to mean "the default FTDI ids".  I had to hack libftdi to get it to attach to the semi-dead device, and reprogram the EEPROM back to a sensible state.
 
+## `FIFO_SIWU` is still on the wrong pin.
+
+I didn't notice that the `FT2232H` datasheet table for "synchronous fifo" mode has all the pins in order _except_ `SIWU`, so I put it on the wrong pin.  Fortunately, it's sorta optional, and I wired it to an unused pin, so I can jumper over if I need to.  Annoying, though, since I didn't noticed until after shipping out the second board revision (`r010`).
+
 ## Wrong Pinout for Push Button
 
 The button I added at the last minute is hardwired to connect pins 1 and 2, and to separately connect pins 3 and 4.  Pressing the button shorts the `1-2` net with the `3-4` net.  This is fine, except that the symbol I picked in KiCad has two pins, and shorts pin `1` with pin `2` -- which doesn't match the actual button.  To fix this I had to clip the lead for pin 2 (disconnecting it from +3v3), and shorting that pad across to pad `3`.
