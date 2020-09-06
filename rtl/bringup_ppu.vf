@@ -1,3 +1,4 @@
 bringup_ppu.v
 lib/edge.v
 lib/sync2ff.v
+lib/misc_default.v

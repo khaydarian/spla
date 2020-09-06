@@ -107,12 +107,13 @@ assign lvl_tst_dir = 0; // input (irrelevant, given oe)
 assign lvl_tst_oe = 1; // output disabled (active low)
 
 // Misc
-assign ppu1_extsync_n = 1;
-assign ppu1_hvcmode = 0;
-assign ppu1_master_n = 0;
-assign ppu1_palmode = 0;
-assign ppu2_extlatch = 0; // Note: Not sure if active-high
-assign ppu2_hvcmode = 0;
-assign ppu2_palmode = 0;
+misc_default misc_default(
+	.ppu1_extsync_n(ppu1_extsync_n),
+	.ppu1_hvcmode(ppu1_hvcmode),
+	.ppu1_master_n(ppu1_master_n),
+	.ppu1_palmode(ppu1_palmode),
+	.ppu2_extlatch(ppu2_extlatch),
+	.ppu2_hvcmode(ppu2_hvcmode),
+	.ppu2_palmode(ppu2_palmode));
 
 endmodule
