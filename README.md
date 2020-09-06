@@ -54,11 +54,14 @@ producing a completely cycle-accurate emulation of the SNES video hardware.
   * USB / FTDI bringup complete.
   * FPGA bringup complete.
   * Level shifter bringup complete.
-  * SNES bringup pending.
-    * Two sets of scavenged SNES chips available.
+  * SNES bringup complete.
   * Analog bringup pending.
-* Software started.
-* RTL started; early bringup image ready to test.
+* Software development in progress.
+  * Early bringup and testing software complete.
+* RTL development in progress.
+  * All bringup images complete.
+  * Low-speed driver image in progress.
+  * High-speed driver image pending.
 
 ## Design components
 
