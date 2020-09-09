@@ -4,3 +4,6 @@ VERILATOR_INCLUDE := $(VERILATOR_ROOT)/include
 
 CC := g++
 CC_FLAGS := -Wall -Wextra -Werror -faligned-new
+
+IVERILOG_COMPILE := iverilog
+IVERILOG_SIMULATE := vvp

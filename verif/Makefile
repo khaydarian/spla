@@ -4,6 +4,7 @@ ALL += build/bringup_sensor.trace.vcd
 ALL += build/bringup_scanner.trace.vcd
 ALL += build/uart_rx.trace.vcd
 ALL += build/vram_control.trace.vcd
+ALL += build/fifo_testbench.vcd
 
 .PHONY: all
 all: $(ALL)
@@ -94,3 +95,9 @@ build/vram_control: vram_control.cpp build/obj_dir/Vvram_control__ALL.a
 build/vram_control.trace.vcd: build/vram_control
 	(cd build && ./vram_control)
 
+build/fifo_testbench.vvp: | build/
+build/fifo_testbench.vvp: fifo_testbench.v ../rtl/lib/fifo.v
+	$(IVERILOG_COMPILE) $^ -o $@
+
+build/fifo_testbench.vcd: build/fifo_testbench.vvp
+	(cd build/ && $(IVERLOG_SIMULATE) ../$<)

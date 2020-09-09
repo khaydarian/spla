@@ -9,50 +9,78 @@ module fifo(
 	output write_ready_o,
 	input  read_i,
 	output [DATA_BITS-1:0] read_data_o,
-	output read_ready_o);
+	output read_ready_o,
+	output error_overflow_o,
+	output error_underflow_o);
 
 parameter DATA_BITS = 8;
 parameter DEPTH_BITS = 2;
 
 localparam MEMORY_SIZE = (1<<DEPTH_BITS);
 
-reg [DEPTH_BITS:0] read_addr;
-reg [DEPTH_BITS:0] write_addr;
+reg [DEPTH_BITS:0] read_ptr;
+reg [DEPTH_BITS:0] write_ptr;
+initial read_ptr = 0;
+initial write_ptr = 0;
+wire [DEPTH_BITS-1:0] read_addr;
+wire [DEPTH_BITS-1:0] write_addr;
+assign read_addr = read_ptr[DEPTH_BITS-1:0];
+assign write_addr = write_ptr[DEPTH_BITS-1:0];
 
-initial read_addr = 0;
-initial write_addr = 0;
+wire [DEPTH_BITS:0] size;
+assign size = write_ptr - read_ptr;
 
-wire empty = (read_addr == write_addr);
-wire full = (
-	read_addr[DEPTH_BITS] != write_addr[DEPTH_BITS] &&
-	read_addr[DEPTH_BITS-1:0] == write_addr[DEPTH_BITS-1:0]);
+wire empty;
+assign empty = (read_ptr == write_ptr);
 
-assign read_ready_o = ~empty;
-assign write_ready_o = ~full;
+wire full;
+assign full = (
+	read_ptr[DEPTH_BITS] != write_ptr[DEPTH_BITS] &&
+	read_ptr[DEPTH_BITS-1:0] == write_ptr[DEPTH_BITS-1:0]);
 
-wire do_read;
-wire do_write;
-assign do_read = read_i & ~empty;
-assign do_write = write_i & ~full;
+reg read_ready_o;
+initial read_ready_o = 0;
+always @(posedge clock)
+	if (!reset)
+		read_ready_o <= 0;
+	else
+		read_ready_o <= ~empty;
+
+reg write_ready_o;
+initial write_ready_o = 1;
+always @(posedge clock)
+	if (!reset)
+		write_ready_o <= 1;
+	else
+		write_ready_o <= ~full;
+
+assign error_underflow_o = read_i & ~read_ready_o;
+assign error_overflow_o = write_i & ~read_i & ~write_ready_o;
 
 reg [DATA_BITS-1:0] memory [0:MEMORY_SIZE-1];
 
 always @(posedge clock)
 	if (!reset)
-		read_addr <= 0;
-	else if (do_read)
-		read_addr <= read_addr + 1;
+		read_ptr <= 0;
+	else if (read_i & ~empty)
+		read_ptr <= read_ptr + 1;
 
-assign read_data_o =
-	(do_read && do_write && empty)
-	? write_data_i : memory[read_addr[DEPTH_BITS-1:0]];
+reg [DATA_BITS-1:0] read_data_o;
+always @(posedge clock)
+	if (empty & read_i & write_i)
+		read_data_o <= write_data_i;
+	else
+		read_data_o <= memory[read_addr];
 
 always @(posedge clock)
 	if (!reset)
-		write_addr <= 0;
-	else if (do_write) begin
-		write_addr <= write_addr + 1;
-		memory[write_addr[DEPTH_BITS-1:0]] <= write_data_i;
+		write_ptr <= 0;
+	else if (write_i & read_i & full) begin
+		write_ptr <= write_ptr + 1;
+		memory[write_addr] <= write_data_i;
+	end else if (write_i & ~full) begin
+		write_ptr <= write_ptr + 1;
+		memory[write_addr] <= write_data_i;
 	end
 
 endmodule

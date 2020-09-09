@@ -1,0 +1,80 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Wed Sep  9 06:27:02 2020
+[*]
+[dumpfile] "/home/khaydarian/spla/verif/build/fifo_testbench.vcd"
+[dumpfile_mtime] "Wed Sep  9 06:26:31 2020"
+[dumpfile_size] 8704
+[savefile] "/home/khaydarian/spla/verif/gtkwave/fifo_testbench.gtkw"
+[timestart] 0
+[size] 1609 922
+[pos] -1 -1
+*-7.734823 579 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] fifo_testbench.
+[sst_width] 223
+[signals_width] 198
+[sst_expanded] 1
+[sst_vpaned_height] 555
+@28
+fifo_testbench.clock
+fifo_testbench.reset
+@200
+-
+@28
+fifo_testbench.write_strobe
+@820
+fifo_testbench.write_data[7:0]
+@28
+fifo_testbench.error_overflow
+@200
+-
+@28
+fifo_testbench.write_ready
+fifo_testbench.read_ready
+@200
+-
+@28
+fifo_testbench.read_strobe
+fifo_testbench.error_underflow
+@820
+fifo_testbench.read_data[7:0]
+fifo_testbench.expect_read_data[7:0]
+@200
+-
+@28
+fifo_testbench.tb_read_PASS
+fifo_testbench.tb_underflow_PASS
+fifo_testbench.tb_overflow_PASS
+@200
+-
+@28
+fifo_testbench.fx_fifo.write_i
+@820
+fifo_testbench.fx_fifo.write_data_i[7:0]
+@4
+fifo_testbench.fx_fifo.write_addr[1:0]
+@24
+fifo_testbench.fx_fifo.write_ptr[2:0]
+@200
+-
+@28
+fifo_testbench.fx_fifo.read_i
+@24
+fifo_testbench.fx_fifo.read_addr[1:0]
+fifo_testbench.fx_fifo.read_ptr[2:0]
+@820
+fifo_testbench.fx_fifo.read_data_o[7:0]
+@200
+-
+@28
+fifo_testbench.fx_fifo.full
+@29
+fifo_testbench.fx_fifo.empty
+@88024
+fifo_testbench.fx_fifo.size[2:0]
+@20000
+-
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0
