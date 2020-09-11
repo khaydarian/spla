@@ -37,7 +37,7 @@ build/pindef.h: pindef.py ../rtl/lib/pindef.v
 
 build/bringup_boundary.o: build/pindef.h
 
-build/vram_control.h: vram_control.py ../rtl/lib/vram_control.v
+build/vram_control.h: opcodes_from_rtl.py ../rtl/lib/vram_control.v
 	python3 $^ >$@
 
 build/bringup_vram.o: build/vram_control.h
