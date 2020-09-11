@@ -42,6 +42,11 @@ build/vram_control.h: opcodes_from_rtl.py ../rtl/lib/vram_control.v
 
 build/bringup_vram.o: build/vram_control.h
 
+build/lowspeed_core.h: opcodes_from_rtl.py ../rtl/lib/lowspeed_core.v
+	python3 $^ >$@
+
+build/lowspeed.o: build/lowspeed_core.h
+
 OBJS := $(patsubst %.c,build/%.o,$(SRCS))
 OBJS += build/ftdi.o
 OBJS += build/command_table.o

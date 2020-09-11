@@ -12,6 +12,7 @@ ALL += build/bringup_levelshifter2.bit
 ALL += build/bringup_ppu.bit
 ALL += build/bringup_vram.bit
 ALL += build/bringup_vram_steps.bit
+ALL += build/lowspeed.bit
 ALL += build/test_bidir.bit
 ALL += build/test_button.bit
 ALL += build/test_uart.bit
@@ -50,6 +51,8 @@ build/bringup_vram.json: $(shell cat bringup_vram.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_vram -json $@' $^
 build/bringup_vram_steps.json: $(shell cat bringup_vram_steps.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top bringup_vram_steps -json $@' $^
+build/lowspeed.json: $(shell cat lowspeed.vf)
+	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top lowspeed -json $@' $^
 build/test_bidir.json: $(shell cat test_bidir.vf)
 	$(YOSYS) -v2 -p 'synth_ecp5 -abc2 -top test_bidir -json $@' $^
 build/test_button.json: $(shell cat test_button.vf)
