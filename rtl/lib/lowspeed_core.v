@@ -48,8 +48,11 @@ localparam OPCODE_ABSORB             = 8'h82;
 localparam OPCODE_GENERATE           = 8'h83;
 localparam OPCODE_SET_LEDS           = 8'h44;
 localparam OPCODE_RESET              = 8'h05;
-localparam OPCODE_SET_PPU_RESET      = 8'h46;
 localparam OPCODE_READ_CONTROL       = 8'h07;
+localparam OPCODE_SET_XIN_LO         = 8'h10;
+localparam OPCODE_SET_XIN_HI         = 8'h11;
+localparam OPCODE_PPU_RESET          = 8'h12;
+localparam OPCODE_PPU_UNRESET        = 8'h13;
 
 // Error registers
 reg reg_error_bad_state;
@@ -121,7 +124,36 @@ always @(posedge clock)
 				end
 				OPCODE_SET_LEDS: begin
 					leds <= args[3:0];
-					state = STATE_IDLE;
+					state <= STATE_IDLE;
+				end
+				OPCODE_READ_CONTROL: begin
+					out_data[7:0] <= {
+						ppu2_reset_n,
+						ppu1_reset_n,
+						ppu2_resout1_n,
+						ppu2_resout0_n,
+						burst_n,
+						csync_n,
+						hblank,
+						vblank};
+					out_count <= 1;
+					state <= STATE_OUTPUT;
+				end
+				OPCODE_SET_XIN_LO: begin
+					// Side-effects done by assign statements below.
+					state <= STATE_IDLE;
+				end
+				OPCODE_SET_XIN_HI: begin
+					// Side-effects done by assign statements below.
+					state <= STATE_IDLE;
+				end
+				OPCODE_PPU_RESET: begin
+					// Side-effects done by assign statements below.
+					state <= STATE_IDLE;
+				end
+				OPCODE_PPU_UNRESET: begin
+					// Side-effects done by assign statements below.
+					state <= STATE_IDLE;
 				end
 				default: begin
 					reg_error_bad_opcode <= 1;
@@ -146,19 +178,34 @@ always @(posedge clock)
 		end
 	endcase
 
-// TEMP
-assign xin = 0;
-assign ppu1_reset_n = 0;
-assign ppu2_reset_n = 0;
+// PPU control signals
+ppu_control ppu_control(
+	.clock(clock),
+	.reset(reset),
+	.xin_lo_i(xin_lo),
+	.xin_hi_i(xin_hi),
+	.set_ppu_reset_i(set_ppu_reset),
+	.clr_ppu_reset_i(clr_ppu_reset),
+	.xin(xin),
+	.ppu1_reset_n(ppu1_reset_n),
+	.ppu2_reset_n(ppu2_reset_n));
 
+wire xin_lo;
+wire xin_hi;
+wire set_ppu_reset;
+wire clr_ppu_reset;
+assign xin_lo = (state == STATE_EXECUTE && opcode == OPCODE_SET_XIN_LO);
+assign xin_hi = (state == STATE_EXECUTE && opcode == OPCODE_SET_XIN_HI);
+assign set_ppu_reset = (state == STATE_EXECUTE && opcode == OPCODE_PPU_RESET);
+assign clr_ppu_reset = (state == STATE_EXECUTE && opcode == OPCODE_PPU_UNRESET);
+
+// Output registers
 reg [23:0] out_data;
 reg [1:0] out_count;
 
+// Output signals
 assign write_data_o = out_data[7:0];
 assign write_valid_o = (state == STATE_OUTPUT);
-
-// Output Signals
-assign write_data_o = out_data[7:0];
 assign read_ready_o = (state == STATE_IDLE);
 
 // LEDs

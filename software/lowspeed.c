@@ -110,6 +110,97 @@ static status selftest() {
   return OK;
 }
 
+// TODO: skip flushes for ppu_reset/ppu_unreset/set_xin_hi/set_xin_lo
+static status op_ppu_reset() {
+  queue_op(OPCODE_PPU_RESET, 0, NULL, 0, NULL);
+  return ftdiutil_flush_reads("op_ppu_reset");
+}
+
+static status op_ppu_unreset() {
+  queue_op(OPCODE_PPU_UNRESET, 0, NULL, 0, NULL);
+  return ftdiutil_flush_reads("op_ppu_reset");
+}
+
+static status op_read_control(uint8_t* control) {
+  queue_op(OPCODE_READ_CONTROL, 0, NULL, 1, control);
+  return ftdiutil_flush_reads("op_read_control");
+}
+
+static status op_set_xin_lo() {
+  queue_op(OPCODE_SET_XIN_LO, 0, NULL, 0, NULL);
+  return ftdiutil_flush_reads("op_set_xin_lo");
+}
+
+static status op_set_xin_hi() {
+  queue_op(OPCODE_SET_XIN_HI, 0, NULL, 0, NULL);
+  return ftdiutil_flush_reads("op_set_xin_hi");
+}
+
+static void showcontrol(int cycle, int xin, uint8_t control) {
+  int vblank = ((control & 0x1) ? 1 : 0);
+  int hblank = ((control & 0x2) ? 1 : 0);
+  int csync_n = ((control & 0x4) ? 1 : 0);
+  int burst_n = ((control & 0x8) ? 1 : 0);
+  int ppu2_resout0_n = ((control & 0x10) ? 1 : 0);
+  int ppu2_resout1_n = ((control & 0x20) ? 1 : 0);
+  int ppu1_reset_n = ((control & 0x40) ? 1 : 0);
+  int ppu2_reset_n = ((control & 0x80) ? 1 : 0);
+  printf(
+      "%06d xin %d V %d H %d C %d B %d "
+      "Rout0 %d Rout1 %d ppu1R %d ppu2R %d\n",
+      cycle, xin, vblank, hblank, csync_n, burst_n, ppu2_resout0_n,
+      ppu2_resout1_n, ppu1_reset_n, ppu2_reset_n);
+}
+
+static status measuretiming() {
+  printf("=== measuretiming\n");
+  uint8_t control;
+
+  printf("ppu_reset\n");
+  RETURN_IF_ERROR(op_ppu_reset());
+
+  RETURN_IF_ERROR(op_read_control(&control));
+  showcontrol(0, 0, control);
+
+  printf("op_set_xin_lo\n");
+  RETURN_IF_ERROR(op_set_xin_lo());
+
+  RETURN_IF_ERROR(op_read_control(&control));
+  showcontrol(0, 0, control);
+
+  printf("ppu_unreset\n");
+  RETURN_IF_ERROR(op_ppu_unreset());
+
+  RETURN_IF_ERROR(op_read_control(&control));
+  showcontrol(0, 0, control);
+
+  const int max_cycles = 10000;
+  uint8_t last_control;
+  for (int cycle = 0; cycle < max_cycles; cycle++) {
+    for (int x = 0; x < 2; x++) {
+      if (x) {
+        RETURN_IF_ERROR(op_set_xin_hi());
+      } else {
+        RETURN_IF_ERROR(op_set_xin_lo());
+      }
+
+      RETURN_IF_ERROR(op_read_control(&control));
+      if (control != last_control) {
+        showcontrol(cycle, x, control);
+      }
+      last_control = control;
+    }
+  }
+
+  printf("ppu_reset\n");
+  op_ppu_reset();
+
+  RETURN_IF_ERROR(op_read_control(&control));
+  showcontrol(max_cycles, 0, control);
+
+  return OK;
+}
+
 // [Command]
 // Description: Test VRAM chips in isolation for manufacturing faults.
 // Option: open_usb = true
@@ -118,6 +209,7 @@ status lowspeed(int argc, char** argv) {
   bool flag_skip_program = false;
   bool flag_debug = false;
   bool flag_selftest = false;
+  bool flag_measuretiming = false;
 
   while (argc) {
     if (!strcmp(argv[0], "--skip-program")) {
@@ -130,6 +222,10 @@ status lowspeed(int argc, char** argv) {
       argv++;
     } else if (!strcmp(argv[0], "--selftest")) {
       flag_selftest = true;
+      argc--;
+      argv++;
+    } else if (!strcmp(argv[0], "--measuretiming")) {
+      flag_measuretiming = true;
       argc--;
       argv++;
     } else {
@@ -154,6 +250,10 @@ status lowspeed(int argc, char** argv) {
 
   if (flag_selftest) {
     RETURN_IF_ERROR(selftest());
+  }
+
+  if (flag_measuretiming) {
+    RETURN_IF_ERROR(measuretiming());
   }
 
   return OK;
