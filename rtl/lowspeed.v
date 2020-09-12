@@ -15,14 +15,43 @@ module lowspeed(
 	// SNES reset
 	output ppu1_reset_n,
 	output ppu2_reset_n,
+	input  ppu2_resout0_n,
+	input  ppu2_resout1_n,
 
-	// Direction pins
-	output lvl_va_dir,
-	output lvl_vd_dir,
+	// SNES sync
+	input  burst_n,
+	input  csync_n,
+	input  hblank,
+	input  vblank,
+
+	// TODO: SNES pa/pd
 	output lvl_pa_dir,
 	output lvl_pd_dir,
+
+	// TODO: SNES va/vd
+	output lvl_va_dir,
+	output lvl_vd_dir,
+
+	// TODO: SNES inter-ppu
+
+	// TODO: SNES tst output
 	output lvl_tst_dir,
 	output lvl_tst_oe,
+
+	// SNES misc pins
+	output ppu1_extsync_n,
+	output ppu1_hvcmode,
+	output ppu1_master_n,
+	output ppu1_palmode,
+	input  ppu2_3p58m,
+	input  ppu2_ped_n,
+	input  ppu2_5mout_n,
+	output ppu2_extlatch,
+	output ppu2_hvcmode,
+	output ppu2_palmode,
+	input  ppu2_toumei_n,
+
+	// TODO: Analog output
 
 	// LEDs
 	output led_a,
@@ -71,6 +100,16 @@ lowspeed_core lowspeed_core0(
 	.write_valid_o(outgoing_valid),
 	.write_ready_i(~tx_busy),
 
+	.xin(xin),
+	.ppu1_reset_n(ppu1_reset_n),
+	.ppu2_reset_n(ppu2_reset_n),
+	.ppu2_resout0_n(ppu2_resout0_n),
+	.ppu2_resout1_n(ppu2_resout1_n),
+	.burst_n(burst_n),
+	.csync_n(csync_n),
+	.hblank(hblank),
+	.vblank(vblank),
+
 	.error_bad_state_o(error_bad_state),
 	.error_bad_opcode_o(error_bad_opcode),
 
@@ -80,22 +119,25 @@ lowspeed_core lowspeed_core0(
 	.led_d(led_d_value),
 	);
 
-// Temporary; hold SNES in reset
-assign ppu1_reset_n = 0;
-assign ppu2_reset_n = 0;
-assign lvl_va_dir = 1'b0; // input
-assign lvl_vd_dir = 1'b0; // input
+// TODO: SNES pa/pd
 assign lvl_pa_dir = 1'b0; // input
 assign lvl_pd_dir = 1'b0; // input
+
+// TODO: SNES va/vd
+assign lvl_va_dir = 1'b0; // input
+assign lvl_vd_dir = 1'b0; // input
+
+// TODO: SNES tst output
 assign lvl_tst_dir = 1'b0; // input
 assign lvl_tst_oe = 1'b1; // disabled
 
+// Errors
 wire error_overrun;
 assign error_overrun = incoming_valid & ~core_ready;
-
 wire error_bad_state;
 wire error_bad_opcode;
 
+// LEDs
 wire led_a_value;
 wire led_b_value;
 wire led_c_value;
@@ -120,5 +162,15 @@ wire [7:0] error_word = {
 	error_overrun,
 	error_bad_opcode,
 	error_bad_state};
+
+// SNES misc pins (outputs only)
+misc_default misc_default0(
+	.ppu1_extsync_n(ppu1_extsync_n),
+	.ppu1_hvcmode(ppu1_hvcmode),
+	.ppu1_master_n(ppu1_master_n),
+	.ppu1_palmode(ppu1_palmode),
+	.ppu2_extlatch(ppu2_extlatch),
+	.ppu2_hvcmode(ppu2_hvcmode),
+	.ppu2_palmode(ppu2_palmode));
 
 endmodule

@@ -7,3 +7,4 @@ lib/unreset_by_uart.v
 lib/lowspeed_core.v
 lib/pulse.v
 lib/led_errors.v
+lib/misc_default.v

@@ -13,6 +13,17 @@ module lowspeed_core(
 	output write_valid_o,
 	input  write_ready_i,
 
+	// SNES
+	output xin,
+	output ppu1_reset_n,
+	output ppu2_reset_n,
+	input  ppu2_resout0_n,
+	input  ppu2_resout1_n,
+	input  burst_n,
+	input  csync_n,
+	input  hblank,
+	input  vblank,
+
 	// Error signals
 	output error_bad_state_o,
 	output error_bad_opcode_o,
@@ -26,13 +37,19 @@ module lowspeed_core(
 
 // Commands
 reg [7:0] opcode;
+reg [1:0] args_count;
+reg [23:0] args;
 
 localparam OPCODE_NOOP               = 8'h00;
-localparam OPCODE_ECHO               = 8'h01;
-localparam OPCODE_ABSORB             = 8'h02;
-localparam OPCODE_GENERATE           = 8'h03;
-localparam OPCODE_SET_LEDS           = 8'h0e;
-localparam OPCODE_RESET              = 8'h0f;
+localparam OPCODE_ECHO1              = 8'h41;
+localparam OPCODE_ECHO2              = 8'h81;
+localparam OPCODE_ECHO3              = 8'hc1;
+localparam OPCODE_ABSORB             = 8'h82;
+localparam OPCODE_GENERATE           = 8'h83;
+localparam OPCODE_SET_LEDS           = 8'h44;
+localparam OPCODE_RESET              = 8'h05;
+localparam OPCODE_SET_PPU_RESET      = 8'h46;
+localparam OPCODE_READ_CONTROL       = 8'h07;
 
 // Error registers
 reg reg_error_bad_state;
@@ -44,20 +61,39 @@ initial reg_error_bad_opcode = 0;
 assign error_bad_opcode_o = reg_error_bad_opcode;
 
 // State Machine.
-localparam STATE_IDLE    = 6'b001;
-localparam STATE_EXECUTE = 6'b010;
-localparam STATE_OUTPUT  = 6'b100;
-reg [2:0] state;
+localparam STATE_IDLE    = 6'b000001;
+localparam STATE_ARGS    = 6'b000010;
+localparam STATE_EXECUTE = 6'b000100;
+localparam STATE_OUTPUT  = 6'b001000;
+reg [5:0] state;
 initial state = STATE_IDLE;
 
+wire [1:0] read_data_i_args_count;
+assign read_data_i_args_count = read_data_i[7:6];
+
 always @(posedge clock)
-	if (!reset)
+	if (!reset) begin
 		state <= STATE_IDLE;
-	else case (state)
+		reg_error_bad_state <= 0;
+		reg_error_bad_opcode <= 0;
+	end else case (state)
 		STATE_IDLE: begin
 			if (read_valid_i) begin
 				opcode <= read_data_i;
-				state <= STATE_EXECUTE;
+				args_count <= read_data_i_args_count - 1;
+				if (read_data_i_args_count == 0)
+					state <= STATE_EXECUTE;
+				else
+					state <= STATE_ARGS;
+			end
+		end
+		STATE_ARGS: begin
+			if (read_valid_i) begin
+				args <= {args[15:0], read_data_i};
+				if (args_count == 0)
+					state <= STATE_EXECUTE;
+				else
+					args_count <= args_count - 1;
 			end
 		end
 		STATE_EXECUTE: begin
@@ -65,17 +101,27 @@ always @(posedge clock)
 				OPCODE_NOOP: begin
 					state <= STATE_IDLE;
 				end
-				OPCODE_ECHO: begin
-					if (read_valid_i) begin
-						out_data <= read_data_i;
-						state <= STATE_OUTPUT;
-					end
+				OPCODE_ECHO1: begin
+					out_data[7:0] <= args[7:0];
+					out_count <= 1;
+					state <= STATE_OUTPUT;
+				end
+				OPCODE_ECHO2: begin
+					out_data[7:0] <= args[15:8];
+					out_data[15:8] <= args[7:0];
+					out_count <= 2;
+					state <= STATE_OUTPUT;
+				end
+				OPCODE_ECHO3: begin
+					out_data[7:0] <= args[23:16];
+					out_data[15:8] <= args[15:8];
+					out_data[23:16] <= args[7:0];
+					out_count <= 3;
+					state <= STATE_OUTPUT;
 				end
 				OPCODE_SET_LEDS: begin
-					if (read_valid_i) begin
-						leds <= read_data_i[3:0];
-						state = STATE_IDLE;
-					end
+					leds <= args[3:0];
+					state = STATE_IDLE;
 				end
 				default: begin
 					reg_error_bad_opcode <= 1;
@@ -85,7 +131,13 @@ always @(posedge clock)
 		end
 		STATE_OUTPUT: begin
 			if (write_ready_i) begin
-				state <= STATE_IDLE;
+				if (out_count == 0 || out_count == 1) begin
+					out_count <= 0;
+					state <= STATE_IDLE;
+				end else begin
+					out_count <= out_count - 1;
+					out_data <= {8'b0, out_data[23:8]};
+				end
 			end
 		end
 		default: begin
@@ -94,11 +146,19 @@ always @(posedge clock)
 		end
 	endcase
 
-reg [7:0] out_data;
+// TEMP
+assign xin = 0;
+assign ppu1_reset_n = 0;
+assign ppu2_reset_n = 0;
+
+reg [23:0] out_data;
+reg [1:0] out_count;
+
+assign write_data_o = out_data[7:0];
+assign write_valid_o = (state == STATE_OUTPUT);
 
 // Output Signals
 assign write_data_o = out_data[7:0];
-assign write_valid_o = write_ready_i & (state == STATE_OUTPUT);
 assign read_ready_o = (state == STATE_IDLE);
 
 // LEDs

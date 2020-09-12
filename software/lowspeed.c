@@ -13,38 +13,77 @@
 #include "lowspeed_core.h"
 #include "uart.h"
 
-static void queue_op_zero(uint8_t opcode, uint8_t arg) {
-  uint8_t wbuf[2];
-  wbuf[0] = opcode;
-  wbuf[1] = arg;
-  ftdiutil_write_data(wbuf, sizeof(wbuf));
+static void queue_op(uint8_t opcode, int argc, uint8_t* argv, int respc,
+                     uint8_t* resp) {
+  assert(argc >= 0 && argc <= 3);
+  assert(((opcode >> 6) & 3) == argc);
+  ftdiutil_write_data(&opcode, 1);
+  ftdiutil_write_data(argv, argc);
+  if (respc) {
+    ftdiutil_read_data(resp, respc);
+  }
 }
 
-static void queue_op_one(uint8_t opcode, uint8_t arg, uint8_t* response) {
-  queue_op_zero(opcode, arg);
-  ftdiutil_read_data(response, 1);
+static status op_echo1(uint8_t request, uint8_t* response) {
+  queue_op(OPCODE_ECHO1, 1, &request, 1, response);
+  RETURN_IF_ERROR(ftdiutil_flush_reads("op_echo1"));
+  return OK;
 }
 
-static status op_echo(uint8_t request, uint8_t* response) {
-  queue_op_one(OPCODE_ECHO, request, response);
-  RETURN_IF_ERROR(ftdiutil_flush_reads("op_echo"));
+static status op_echo2(uint8_t* request, uint8_t* response) {
+  queue_op(OPCODE_ECHO2, 2, request, 2, response);
+  RETURN_IF_ERROR(ftdiutil_flush_reads("op_echo2"));
+  return OK;
+}
+
+static status op_echo3(uint8_t* request, uint8_t* response) {
+  queue_op(OPCODE_ECHO3, 3, request, 3, response);
+  RETURN_IF_ERROR(ftdiutil_flush_reads("op_echo3"));
   return OK;
 }
 
 static status selftest_echo() {
-  uint8_t request = 0x41;
-  uint8_t response;
-  RETURN_IF_ERROR(op_echo(request, &response));
-  if (request != response) {
-    return errorf("selftest_echo: request 0x%02x, bad response 0x%02x", request,
-                  response);
+  {
+    uint8_t request = 0x12;
+    uint8_t response = 0xad;
+    RETURN_IF_ERROR(op_echo1(request, &response));
+    if (request != response) {
+      return errorf("selftest_echo: request 0x%02x, bad response 0x%02x",
+                    request, response);
+    }
+  }
+
+  {
+    uint8_t request[2] = {0x12, 0x34};
+    uint8_t response[2] = {0xad, 0xad};
+    RETURN_IF_ERROR(op_echo2(request, response));
+    if (request[0] != response[0] || request[1] != response[1]) {
+      return errorf(
+          "selftest_echo: request 0x%02x 0x%02x, "
+          "bad response 0x%02x 0x%02x",
+          request[0], request[1], response[0], response[1]);
+    }
+  }
+
+  {
+    uint8_t request[3] = {0x12, 0x34, 0x56};
+    uint8_t response[3] = {0xad, 0xad, 0xad};
+    RETURN_IF_ERROR(op_echo3(request, response));
+    if (request[0] != response[0] || request[1] != response[1] ||
+        request[2] != response[2]) {
+      return errorf(
+          "selftest_echo: request 0x%02x 0x%02x 0x%02x, "
+          "bad response 0x%02x 0x%02x 0x%02x",
+          request[0], request[1], request[2], response[0], response[1],
+          response[2]);
+    }
   }
   return OK;
 }
 
 static status op_set_leds(uint8_t state) {
   assert(state <= 0xf);
-  queue_op_zero(OPCODE_SET_LEDS, state);
+  queue_op(OPCODE_SET_LEDS, 1, &state, 0, NULL);
   RETURN_IF_ERROR(ftdiutil_flush_reads("op_set_leds"));
   return OK;
 }
