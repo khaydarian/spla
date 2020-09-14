@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Mon Sep 14 00:43:28 2020
+[*]
+[dumpfile] "/home/khaydarian/spla/verif/build/ppu_clock_testbench.vcd"
+[dumpfile_mtime] "Mon Sep 14 00:43:12 2020"
+[dumpfile_size] 15561
+[savefile] "/home/khaydarian/spla/verif/gtkwave/ppu_clock_testbench.gtkw"
+[timestart] 0
+[size] 1605 805
+[pos] -1 -1
+*-7.199209 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] ppu_clock_testbench.
+[sst_width] 223
+[signals_width] 166
+[sst_expanded] 1
+[sst_vpaned_height] 224
+@28
+ppu_clock_testbench.clock
+ppu_clock_testbench.reset
+@200
+-
+@28
+ppu_clock_testbench.xin_stall
+ppu_clock_testbench.ppu_clock.xin_stall_o
+ppu_clock_testbench.xin
+@24
+ppu_clock_testbench.xin_counter[31:0]
+@200
+-
+@88025
+ppu_clock_testbench.ppu_clock.div_count[5:0]
+@20000
+-
+[pattern_trace] 1
+[pattern_trace] 0
