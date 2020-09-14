@@ -5,6 +5,8 @@ ALL += build/bringup_scanner.trace.vcd
 ALL += build/uart_rx.trace.vcd
 ALL += build/vram_control.trace.vcd
 ALL += build/fifo_testbench.vcd
+ALL += build/ppu_interrupt_testbench.vcd
+ALL += build/ppu_clock_testbench.vcd
 
 .PHONY: all
 all: $(ALL)
@@ -100,4 +102,18 @@ build/fifo_testbench.vvp: fifo_testbench.v ../rtl/lib/fifo.v
 	$(IVERILOG_COMPILE) $^ -o $@
 
 build/fifo_testbench.vcd: build/fifo_testbench.vvp
+	(cd build/ && $(IVERLOG_SIMULATE) ../$<)
+
+build/ppu_interrupt_testbench.vvp: | build/
+build/ppu_interrupt_testbench.vvp: ppu_interrupt_testbench.v ../rtl/lib/ppu_interrupt.v
+	$(IVERILOG_COMPILE) $^ -o $@
+
+build/ppu_interrupt_testbench.vcd: build/ppu_interrupt_testbench.vvp
+	(cd build/ && $(IVERLOG_SIMULATE) ../$<)
+
+build/ppu_clock_testbench.vvp: | build/
+build/ppu_clock_testbench.vvp: ppu_clock_testbench.v ../rtl/lib/ppu_clock.v
+	$(IVERILOG_COMPILE) $^ -o $@
+
+build/ppu_clock_testbench.vcd: build/ppu_clock_testbench.vvp
 	(cd build/ && $(IVERLOG_SIMULATE) ../$<)

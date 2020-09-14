@@ -1,0 +1,59 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Mon Sep 14 03:38:35 2020
+[*]
+[dumpfile] "/home/khaydarian/spla/verif/build/ppu_interrupt_testbench.vcd"
+[dumpfile_mtime] "Mon Sep 14 03:37:54 2020"
+[dumpfile_size] 4005
+[savefile] "/home/khaydarian/spla/verif/gtkwave/ppu_interrupt_testbench.gtkw"
+[timestart] 0
+[size] 1598 868
+[pos] -39 -39
+*-7.300291 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] ppu_interrupt_testbench.
+[sst_width] 223
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 511
+@28
+ppu_interrupt_testbench.clock
+ppu_interrupt_testbench.reset
+@200
+-
+@28
+ppu_interrupt_testbench.burst_n
+ppu_interrupt_testbench.csync_n
+ppu_interrupt_testbench.hblank
+ppu_interrupt_testbench.vblank
+@200
+-
+@28
+ppu_interrupt_testbench.ppu_interrupt.last_burst_n
+ppu_interrupt_testbench.ppu_interrupt.last_csync_n
+ppu_interrupt_testbench.ppu_interrupt.last_hblank
+ppu_interrupt_testbench.ppu_interrupt.last_vblank
+@200
+-
+@28
+ppu_interrupt_testbench.ppu_interrupt.falling_burst_n
+ppu_interrupt_testbench.ppu_interrupt.rising_burst_n
+ppu_interrupt_testbench.ppu_interrupt.falling_csync_n
+ppu_interrupt_testbench.ppu_interrupt.rising_csync_n
+ppu_interrupt_testbench.ppu_interrupt.rising_hblank
+ppu_interrupt_testbench.ppu_interrupt.falling_hblank
+ppu_interrupt_testbench.ppu_interrupt.rising_vblank
+ppu_interrupt_testbench.ppu_interrupt.falling_vblank
+@200
+-
+@22
+ppu_interrupt_testbench.int_enabled[7:0]
+@29
+ppu_interrupt_testbench.int_clear_all
+@200
+-
+@28
+ppu_interrupt_testbench.ppu_interrupt.int_immediate[7:0]
+ppu_interrupt_testbench.ppu_interrupt.int_triggered[7:0]
+ppu_interrupt_testbench.int_any_triggered_o
+[pattern_trace] 1
+[pattern_trace] 0
