@@ -80,6 +80,7 @@ always @(posedge clock)
 	else
 		int_triggered <= int_triggered | (int_enabled_i & int_immediate);
 
-assign int_any_triggered_o = |int_triggered;
+assign int_triggered_o = int_triggered;
+assign int_any_triggered_o = (|int_triggered);
 
 endmodule

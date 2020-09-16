@@ -16,7 +16,12 @@
 static void queue_op(uint8_t opcode, int argc, uint8_t* argv, int respc,
                      uint8_t* resp) {
   assert(argc >= 0 && argc <= 3);
-  assert(((opcode >> 6) & 3) == argc);
+  int expected_argc = ((opcode >> 6) & 3);
+  if (expected_argc != argc) {
+    fprintf(stderr, "opcode 0x%02x: expected %d args, got %d\n", opcode,
+            expected_argc, argc);
+  }
+  assert(expected_argc == argc);
   ftdiutil_write_data(&opcode, 1);
   ftdiutil_write_data(argv, argc);
   if (respc) {
@@ -81,36 +86,64 @@ static status selftest_echo() {
   return OK;
 }
 
-static status op_set_leds(uint8_t state) {
-  assert(state <= 0xf);
-  queue_op(OPCODE_SET_LEDS, 1, &state, 0, NULL);
-  RETURN_IF_ERROR(ftdiutil_flush_reads("op_set_leds"));
-  return OK;
-}
-
-static status selftest_leds() {
-  for (uint8_t i = 0; i < 16; i++) {
-    RETURN_IF_ERROR(op_set_leds(i));
-    usleep(100000);
-  }
-  usleep(900000);
-  RETURN_IF_ERROR(op_set_leds(0));
-  return OK;
-}
-
 static status selftest() {
   printf("=== selftest\n");
   printf("echo\n");
   RETURN_IF_ERROR(selftest_echo());
 
-  printf("set_leds\n");
-  RETURN_IF_ERROR(selftest_leds());
-
   printf("--- " GREEN "PASS" RESET "\n");
   return OK;
 }
 
-// TODO: skip flushes for ppu_reset/ppu_unreset/set_xin_hi/set_xin_lo
+static status op_reset() {
+  queue_op(OPCODE_RESET, 0, NULL, 0, NULL);
+  return ftdiutil_flush_reads("op_ppu_reset");
+}
+
+static status op_xin_enable() {
+  queue_op(OPCODE_XIN_ENABLE, 0, NULL, 0, NULL);
+  return ftdiutil_flush_reads("op_xin_enable");
+}
+
+static status op_xin_disable() {
+  queue_op(OPCODE_XIN_DISABLE, 0, NULL, 0, NULL);
+  return ftdiutil_flush_reads("op_xin_disable");
+}
+
+static status op_xin_read_counter(uint32_t* xin_counter) {
+  uint8_t response[3];
+  queue_op(OPCODE_XIN_READ_COUNTER, 0, NULL, sizeof(response), response);
+  RETURN_IF_ERROR(ftdiutil_flush_reads("op_xin_read_counter"));
+  *xin_counter = ((response[2] << 16) | (response[1] << 8) | response[0]);
+  return OK;
+}
+
+static status op_int_wait() {
+  uint8_t response;
+  queue_op(OPCODE_INT_WAIT, 0, NULL, 1, &response);
+  return ftdiutil_flush_reads("op_int_wait");
+}
+
+static status op_int_enabled(uint8_t* enabled) {
+  queue_op(OPCODE_INT_ENABLED, 0, NULL, 1, enabled);
+  return ftdiutil_flush_reads("op_int_enabled");
+}
+
+static status op_int_set_enabled(uint8_t enabled) {
+  queue_op(OPCODE_INT_SET_ENABLED, 1, &enabled, 0, NULL);
+  return ftdiutil_flush_reads("op_int_set_enabled");
+}
+
+static status op_int_triggered(uint8_t* triggered) {
+  queue_op(OPCODE_INT_TRIGGERED, 0, NULL, 1, triggered);
+  return ftdiutil_flush_reads("op_int_triggered");
+}
+
+static status op_int_clear() {
+  queue_op(OPCODE_INT_CLEAR, 0, NULL, 0, NULL);
+  return ftdiutil_flush_reads("op_int_clear");
+}
+
 static status op_ppu_reset() {
   queue_op(OPCODE_PPU_RESET, 0, NULL, 0, NULL);
   return ftdiutil_flush_reads("op_ppu_reset");
@@ -126,17 +159,7 @@ static status op_read_control(uint8_t* control) {
   return ftdiutil_flush_reads("op_read_control");
 }
 
-static status op_set_xin_lo() {
-  queue_op(OPCODE_SET_XIN_LO, 0, NULL, 0, NULL);
-  return ftdiutil_flush_reads("op_set_xin_lo");
-}
-
-static status op_set_xin_hi() {
-  queue_op(OPCODE_SET_XIN_HI, 0, NULL, 0, NULL);
-  return ftdiutil_flush_reads("op_set_xin_hi");
-}
-
-static void showcontrol(int cycle, int xin, uint8_t control) {
+static void showcontrol(uint32_t cycle, uint8_t control, uint32_t* last_cycle) {
   int vblank = ((control & 0x1) ? 1 : 0);
   int hblank = ((control & 0x2) ? 1 : 0);
   int csync_n = ((control & 0x4) ? 1 : 0);
@@ -146,57 +169,80 @@ static void showcontrol(int cycle, int xin, uint8_t control) {
   int ppu1_reset_n = ((control & 0x40) ? 1 : 0);
   int ppu2_reset_n = ((control & 0x80) ? 1 : 0);
   printf(
-      "%06d xin %d V %d H %d C %d B %d "
-      "Rout0 %d Rout1 %d ppu1R %d ppu2R %d\n",
-      cycle, xin, vblank, hblank, csync_n, burst_n, ppu2_resout0_n,
-      ppu2_resout1_n, ppu1_reset_n, ppu2_reset_n);
+      "%08d V %d H %d C %d B %d "
+      "Rout0 %d Rout1 %d ppu1R %d ppu2R %d",
+      cycle, vblank, hblank, csync_n, burst_n, ppu2_resout0_n, ppu2_resout1_n,
+      ppu1_reset_n, ppu2_reset_n);
+  if (last_cycle) {
+    printf(" (+%4d)", cycle - *last_cycle);
+  }
+  printf("\n");
+  fflush(stdout);
 }
 
 static status measuretiming() {
   printf("=== measuretiming\n");
   uint8_t control;
 
+  printf("op_reset\n");
+  RETURN_IF_ERROR(op_reset());
+
   printf("ppu_reset\n");
   RETURN_IF_ERROR(op_ppu_reset());
 
+  uint32_t cycle = 0;
   RETURN_IF_ERROR(op_read_control(&control));
-  showcontrol(0, 0, control);
+  showcontrol(cycle, control, NULL);
 
-  printf("op_set_xin_lo\n");
-  RETURN_IF_ERROR(op_set_xin_lo());
+  RETURN_IF_ERROR(op_xin_read_counter(&cycle));
+  printf("xin_counter = %d\n", cycle);
+  if (cycle != 0) {
+    printf("Warning: xin_counter is nonzero on reset\n");
+  }
 
   RETURN_IF_ERROR(op_read_control(&control));
-  showcontrol(0, 0, control);
+  showcontrol(cycle, control, NULL);
 
   printf("ppu_unreset\n");
   RETURN_IF_ERROR(op_ppu_unreset());
 
   RETURN_IF_ERROR(op_read_control(&control));
-  showcontrol(0, 0, control);
+  showcontrol(cycle, control, NULL);
 
-  const int max_cycles = 10000;
-  uint8_t last_control;
-  for (int cycle = 0; cycle < max_cycles; cycle++) {
-    for (int x = 0; x < 2; x++) {
-      if (x) {
-        RETURN_IF_ERROR(op_set_xin_hi());
-      } else {
-        RETURN_IF_ERROR(op_set_xin_lo());
-      }
+  printf("int_set_enabled\n");
+  RETURN_IF_ERROR(op_int_set_enabled(0xff));
+  printf("xin_enable\n");
+  RETURN_IF_ERROR(op_xin_enable());
 
-      RETURN_IF_ERROR(op_read_control(&control));
-      if (control != last_control) {
-        showcontrol(cycle, x, control);
-      }
-      last_control = control;
-    }
+  uint8_t int_triggered;
+  uint32_t last_cycle = 0;
+  const uint32_t max_cycles = 2000000;
+  while (cycle < max_cycles) {
+    // for (int i = 0; i < 50; i++) {
+    RETURN_IF_ERROR(op_int_triggered(&int_triggered));
+    // printf("int_triggered = 0x%02x\n", int_triggered);
+    RETURN_IF_ERROR(op_xin_read_counter(&cycle));
+    RETURN_IF_ERROR(op_read_control(&control));
+    showcontrol(cycle, control, &last_cycle);
+    RETURN_IF_ERROR(op_int_clear());
+    // usleep(1000000);
+    // RETURN_IF_ERROR(op_int_wait());
+    last_cycle = cycle;
   }
+
+  (void)op_int_wait;
+  (void)op_int_triggered;
+  (void)op_int_enabled;
+  (void)op_int_clear;
+
+  printf("xin_disable\n");
+  RETURN_IF_ERROR(op_xin_disable());
 
   printf("ppu_reset\n");
   op_ppu_reset();
 
   RETURN_IF_ERROR(op_read_control(&control));
-  showcontrol(max_cycles, 0, control);
+  showcontrol(cycle, control, NULL);
 
   return OK;
 }

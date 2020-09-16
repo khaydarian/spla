@@ -9,3 +9,5 @@ lib/pulse.v
 lib/led_errors.v
 lib/misc_default.v
 lib/ppu_control.v
+lib/ppu_clock.v
+lib/ppu_interrupt.v

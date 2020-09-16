@@ -40,19 +40,25 @@ reg [7:0] opcode;
 reg [1:0] args_count;
 reg [23:0] args;
 
-localparam OPCODE_NOOP               = 8'h00;
-localparam OPCODE_ECHO1              = 8'h41;
-localparam OPCODE_ECHO2              = 8'h81;
-localparam OPCODE_ECHO3              = 8'hc1;
-localparam OPCODE_ABSORB             = 8'h82;
-localparam OPCODE_GENERATE           = 8'h83;
-localparam OPCODE_SET_LEDS           = 8'h44;
-localparam OPCODE_RESET              = 8'h05;
-localparam OPCODE_READ_CONTROL       = 8'h07;
-localparam OPCODE_SET_XIN_LO         = 8'h10;
-localparam OPCODE_SET_XIN_HI         = 8'h11;
-localparam OPCODE_PPU_RESET          = 8'h12;
-localparam OPCODE_PPU_UNRESET        = 8'h13;
+localparam OPCODE_NOOP               = 8'h00; // 0 -> 0
+localparam OPCODE_RESET              = 8'h01; // 0 -> 0
+localparam OPCODE_ECHO1              = 8'h42; // 1 -> 1
+localparam OPCODE_ECHO2              = 8'h83; // 2 -> 2
+localparam OPCODE_ECHO3              = 8'hc4; // 3 -> 3
+localparam OPCODE_READ_CONTROL       = 8'h06; // 0 -> 1
+localparam OPCODE_XIN_ENABLE         = 8'h07; // 0 -> 0
+localparam OPCODE_XIN_DISABLE        = 8'h08; // 0 -> 1
+localparam OPCODE_XIN_READ_COUNTER   = 8'h09; // 0 -> 3
+localparam OPCODE_INT_WAIT           = 8'h0a; // 0 -> ... -> 1
+localparam OPCODE_INT_ENABLED        = 8'h0b; // 0 -> 1
+localparam OPCODE_INT_SET_ENABLED    = 8'h4c; // 1 -> 0
+localparam OPCODE_INT_TRIGGERED      = 8'h0d; // 0 -> 1
+localparam OPCODE_INT_CLEAR          = 8'h0e; // 0 -> 0
+localparam OPCODE_PPU_RESET          = 8'h0f; // 0 -> 0
+localparam OPCODE_PPU_UNRESET        = 8'h10; // 0 -> 0
+
+wire [1:0] read_data_i_args_count;
+assign read_data_i_args_count = read_data_i[7:6];
 
 // Error registers
 reg reg_error_bad_state;
@@ -70,9 +76,6 @@ localparam STATE_EXECUTE = 6'b000100;
 localparam STATE_OUTPUT  = 6'b001000;
 reg [5:0] state;
 initial state = STATE_IDLE;
-
-wire [1:0] read_data_i_args_count;
-assign read_data_i_args_count = read_data_i[7:6];
 
 always @(posedge clock)
 	if (!reset) begin
@@ -104,6 +107,12 @@ always @(posedge clock)
 				OPCODE_NOOP: begin
 					state <= STATE_IDLE;
 				end
+				OPCODE_RESET: begin
+					state <= STATE_IDLE;
+					led_b <= 0;
+					xin_enabled <= 0;
+					int_enabled <= 0;
+				end
 				OPCODE_ECHO1: begin
 					out_data[7:0] <= args[7:0];
 					out_count <= 1;
@@ -122,10 +131,6 @@ always @(posedge clock)
 					out_count <= 3;
 					state <= STATE_OUTPUT;
 				end
-				OPCODE_SET_LEDS: begin
-					leds <= args[3:0];
-					state <= STATE_IDLE;
-				end
 				OPCODE_READ_CONTROL: begin
 					out_data[7:0] <= {
 						ppu2_reset_n,
@@ -139,11 +144,44 @@ always @(posedge clock)
 					out_count <= 1;
 					state <= STATE_OUTPUT;
 				end
-				OPCODE_SET_XIN_LO: begin
-					// Side-effects done by assign statements below.
+				OPCODE_XIN_ENABLE: begin
+					state <= STATE_IDLE;
+					xin_enabled <= 1;
+				end
+				OPCODE_XIN_DISABLE: begin
+					state <= STATE_IDLE;
+					xin_enabled <= 0;
+				end
+				OPCODE_XIN_READ_COUNTER: begin
+					out_data <= xin_counter[23:0];
+					out_count <= 3;
+					state <= STATE_OUTPUT;
+				end
+				OPCODE_INT_WAIT: begin
+					if (int_any_triggered) begin
+						out_data[7:0] <= int_triggered;
+						out_count <= 1;
+						state <= STATE_OUTPUT;
+						led_b <= 0;
+					end else begin
+						led_b <= 1;
+					end
+				end
+				OPCODE_INT_ENABLED: begin
+					out_data[7:0] <= int_enabled;
+					out_count <= 1;
+					state <= STATE_OUTPUT;
+				end
+				OPCODE_INT_SET_ENABLED: begin
+					int_enabled <= args[7:0];
 					state <= STATE_IDLE;
 				end
-				OPCODE_SET_XIN_HI: begin
+				OPCODE_INT_TRIGGERED: begin
+					out_data[7:0] <= int_triggered;
+					out_count <= 1;
+					state <= STATE_OUTPUT;
+				end
+				OPCODE_INT_CLEAR: begin
 					// Side-effects done by assign statements below.
 					state <= STATE_IDLE;
 				end
@@ -168,7 +206,7 @@ always @(posedge clock)
 					state <= STATE_IDLE;
 				end else begin
 					out_count <= out_count - 1;
-					out_data <= {8'b0, out_data[23:8]};
+					out_data <= {8'b0, out_data[31:8]};
 				end
 			end
 		end
@@ -178,45 +216,65 @@ always @(posedge clock)
 		end
 	endcase
 
-// PPU control signals
-ppu_control ppu_control(
-	.clock(clock),
-	.reset(reset),
-	.xin_lo_i(xin_lo),
-	.xin_hi_i(xin_hi),
-	.set_ppu_reset_i(set_ppu_reset),
-	.clr_ppu_reset_i(clr_ppu_reset),
-	.xin(xin),
-	.ppu1_reset_n(ppu1_reset_n),
-	.ppu2_reset_n(ppu2_reset_n));
+assign led_a = xin;
 
-wire xin_lo;
-wire xin_hi;
+reg led_b;
+initial led_b = 0;
+
+// PPU control signals
+wire ppu_control_reset;
+assign ppu_control_reset = (!reset | !(state == STATE_EXECUTE && opcode == OPCODE_RESET));
+
+reg xin_enabled;
+initial xin_enabled = 0;
+assign led_d = xin_enabled;
+wire xin_stalled;
+assign led_c = xin_stalled;
+wire [31:0] xin_counter;
+
+reg [7:0] int_enabled;
+initial int_enabled = 8'h0;
+wire [7:0] int_triggered;
+wire int_any_triggered;
+
+wire int_clear_all;
+assign int_clear_all = (state == STATE_EXECUTE && opcode == OPCODE_INT_CLEAR);
+
 wire set_ppu_reset;
 wire clr_ppu_reset;
-assign xin_lo = (state == STATE_EXECUTE && opcode == OPCODE_SET_XIN_LO);
-assign xin_hi = (state == STATE_EXECUTE && opcode == OPCODE_SET_XIN_HI);
 assign set_ppu_reset = (state == STATE_EXECUTE && opcode == OPCODE_PPU_RESET);
 assign clr_ppu_reset = (state == STATE_EXECUTE && opcode == OPCODE_PPU_UNRESET);
 
+ppu_control ppu_control(
+	.clock(clock),
+	.reset(ppu_control_reset),
+	.xin_enabled_i(xin_enabled),
+	.xin_stalled_o(xin_stalled),
+	.xin_counter_o(xin_counter),
+	.set_ppu_reset_i(set_ppu_reset),
+	.clr_ppu_reset_i(clr_ppu_reset),
+	.int_enabled_i(int_enabled),
+	.int_clear_all_i(int_clear_all),
+	.int_triggered_o(int_triggered),
+	.int_any_triggered_o(int_any_triggered),
+	.xin(xin),
+	.ppu1_reset_n(ppu1_reset_n),
+	.ppu2_reset_n(ppu2_reset_n),
+	.burst_n(burst_n),
+	.csync_n(csync_n),
+	.hblank(hblank),
+	.vblank(vblank));
+
 // Output registers
-reg [23:0] out_data;
-reg [1:0] out_count;
+reg [31:0] out_data;
+reg [2:0] out_count;
 
 // Output signals
 assign write_data_o = out_data[7:0];
 assign write_valid_o = (state == STATE_OUTPUT);
 assign read_ready_o = (state == STATE_IDLE);
 
-// LEDs
-reg [3:0] leds;
-assign led_a = leds[0];
-assign led_b = leds[1];
-assign led_c = leds[2];
-assign led_d = leds[3];
-
 endmodule
-
 
 // Noop
 // Echo
