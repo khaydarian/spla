@@ -159,11 +159,19 @@ static status op_read_control(uint8_t* control) {
   return ftdiutil_flush_reads("op_read_control");
 }
 
+static bool control_vblank(uint8_t control) { return !!(control & 0x1); }
+
+static bool control_hblank(uint8_t control) { return !!(control & 0x2); }
+
+static bool control_csync_n(uint8_t control) { return !!(control & 0x4); }
+
+static bool control_burst_n(uint8_t control) { return !!(control & 0x8); }
+
 static void showcontrol(uint32_t cycle, uint8_t control, uint32_t* last_cycle) {
-  int vblank = ((control & 0x1) ? 1 : 0);
-  int hblank = ((control & 0x2) ? 1 : 0);
-  int csync_n = ((control & 0x4) ? 1 : 0);
-  int burst_n = ((control & 0x8) ? 1 : 0);
+  int vblank = control_vblank(control);
+  int hblank = control_hblank(control);
+  int csync_n = control_csync_n(control);
+  int burst_n = control_burst_n(control);
   int ppu2_resout0_n = ((control & 0x10) ? 1 : 0);
   int ppu2_resout1_n = ((control & 0x20) ? 1 : 0);
   int ppu1_reset_n = ((control & 0x40) ? 1 : 0);
@@ -178,6 +186,62 @@ static void showcontrol(uint32_t cycle, uint8_t control, uint32_t* last_cycle) {
   }
   printf("\n");
   fflush(stdout);
+}
+
+struct signal_analysis {
+  const char* name;
+
+  bool currently_high;
+  uint32_t cycle_last_rise;
+  uint32_t cycle_last_fall;
+
+  uint32_t period;
+};
+
+void siganalysis_init(struct signal_analysis* sa, const char* name,
+                      bool is_high) {
+  sa->name = name;
+  sa->currently_high = is_high;
+  sa->cycle_last_rise = (uint32_t)-1;
+  sa->cycle_last_fall = (uint32_t)-1;
+
+  sa->period = 0;
+}
+
+static float MASTER_CLOCK_FREQUENCY = 21.477e6;
+
+void siganalysis_inc(struct signal_analysis* sa, uint32_t cycle, bool is_high) {
+  if ((is_high && sa->currently_high) || (!is_high && !sa->currently_high)) {
+    // If there's no transition, return;
+    return;
+  }
+
+  if (is_high) {
+    if (sa->cycle_last_rise != (uint32_t)-1) {
+      uint32_t period = cycle - sa->cycle_last_rise;
+      if (sa->period != period) {
+        sa->period = period;
+        printf("Sig %s: period %d (approx %f Hz)\n", sa->name, period,
+               MASTER_CLOCK_FREQUENCY / period);
+      }
+    }
+  } else {
+    if (sa->cycle_last_fall != (uint32_t)-1) {
+      uint32_t period = cycle - sa->cycle_last_fall;
+      if (sa->period != period) {
+        sa->period = period;
+        printf("Sig %s: period %d (approx %f Hz)\n", sa->name, period,
+               MASTER_CLOCK_FREQUENCY / period);
+      }
+    }
+  }
+
+  sa->currently_high = is_high;
+  if (is_high) {
+    sa->cycle_last_rise = cycle;
+  } else {
+    sa->cycle_last_fall = cycle;
+  }
 }
 
 static status measuretiming() {
@@ -210,24 +274,45 @@ static status measuretiming() {
   showcontrol(cycle, control, NULL);
 
   printf("int_set_enabled\n");
-  RETURN_IF_ERROR(op_int_set_enabled(0xff));
+  uint8_t int_enabled = 0x0f;
+  RETURN_IF_ERROR(op_int_set_enabled(int_enabled));
   printf("xin_enable\n");
   RETURN_IF_ERROR(op_xin_enable());
 
-  uint8_t int_triggered;
+  struct signal_analysis sa_vblank;
+  struct signal_analysis sa_hblank;
+  struct signal_analysis sa_csync_n;
+  struct signal_analysis sa_burst_n;
+  siganalysis_init(&sa_vblank, "vblank", control_vblank(control));
+  siganalysis_init(&sa_hblank, "hblank", control_hblank(control));
+  siganalysis_init(&sa_csync_n, "csync_n", control_csync_n(control));
+  siganalysis_init(&sa_burst_n, "burst_n", control_burst_n(control));
+
+  printf("cycle\n");
   uint32_t last_cycle = 0;
   const uint32_t max_cycles = 2000000;
   while (cycle < max_cycles) {
-    // for (int i = 0; i < 50; i++) {
-    RETURN_IF_ERROR(op_int_triggered(&int_triggered));
-    // printf("int_triggered = 0x%02x\n", int_triggered);
     RETURN_IF_ERROR(op_xin_read_counter(&cycle));
     RETURN_IF_ERROR(op_read_control(&control));
+
     showcontrol(cycle, control, &last_cycle);
-    RETURN_IF_ERROR(op_int_clear());
-    // usleep(1000000);
-    // RETURN_IF_ERROR(op_int_wait());
+    if (int_enabled & 0x3) {
+      siganalysis_inc(&sa_vblank, cycle, control_vblank(control));
+    }
+    if (int_enabled & 0xc) {
+      siganalysis_inc(&sa_hblank, cycle, control_hblank(control));
+    }
+    if (int_enabled & 0x30) {
+      siganalysis_inc(&sa_csync_n, cycle, control_csync_n(control));
+    }
+    if (int_enabled & 0xc0) {
+      siganalysis_inc(&sa_burst_n, cycle, control_burst_n(control));
+    }
+
     last_cycle = cycle;
+
+    RETURN_IF_ERROR(op_int_clear());
+    RETURN_IF_ERROR(op_int_wait());
   }
 
   (void)op_int_wait;
