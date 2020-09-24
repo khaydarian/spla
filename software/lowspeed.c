@@ -201,6 +201,8 @@ static status vcd_open(const char* filename) {
   fprintf(vcd_file, "$var wire 1 V vblank $end\n");
   fprintf(vcd_file, "$var wire 1 C csync_n $end\n");
   fprintf(vcd_file, "$var wire 1 B burst_n $end\n");
+  fprintf(vcd_file, "$var wire 9 L scanline $end\n");
+  fprintf(vcd_file, "$var wire 11 P hblank_period $end\n");
   fprintf(vcd_file, "$upscope $end\n");
   fprintf(vcd_file, "$enddefinitions $end\n");
   fprintf(vcd_file, "$dumpvars\n");
@@ -208,16 +210,28 @@ static status vcd_open(const char* filename) {
   fprintf(vcd_file, "xV\n");
   fprintf(vcd_file, "xC\n");
   fprintf(vcd_file, "xB\n");
+  fprintf(vcd_file, "d0 L\n");
   fprintf(vcd_file, "$end\n");
   return OK;
 }
 
-static void vcd_log(uint32_t cycle, uint8_t control) {
+static void vcd_log(uint32_t cycle, uint8_t control, int scanline,
+                    int hblank_period) {
   fprintf(vcd_file, "#%d\n", cycle);
   fprintf(vcd_file, "%dH\n", control_hblank(control));
   fprintf(vcd_file, "%dV\n", control_vblank(control));
   fprintf(vcd_file, "%dC\n", control_csync_n(control));
   fprintf(vcd_file, "%dB\n", control_burst_n(control));
+  fprintf(vcd_file, "b");
+  for (int bit = 8; bit >= 0; bit--) {
+    fprintf(vcd_file, "%c", scanline & (1 << bit) ? '1' : '0');
+  }
+  fprintf(vcd_file, " L\n");
+  fprintf(vcd_file, "b");
+  for (int bit = 10; bit >= 0; bit--) {
+    fprintf(vcd_file, "%c", hblank_period & (1 << bit) ? '1' : '0');
+  }
+  fprintf(vcd_file, " P\n");
 }
 
 static void vcd_close() {
@@ -327,6 +341,10 @@ static status measuretiming() {
 
   RETURN_IF_ERROR(vcd_open("timing.vcd"));
 
+  int scanline = 0;
+  int last_vblank = 1;
+  int last_hblank = 1;
+
   printf("cycle\n");
   uint32_t last_cycle = 0;
   const uint32_t max_cycles = 2000000;
@@ -348,7 +366,16 @@ static status measuretiming() {
       siganalysis_inc(&sa_burst_n, cycle, control_burst_n(control));
     }
 
-    vcd_log(cycle, control);
+    if (last_hblank && !control_hblank(control)) {
+      scanline++;
+      if (last_vblank && !control_vblank(control)) {
+        scanline = 0;
+      }
+      last_vblank = control_vblank(control);
+    }
+    last_hblank = control_hblank(control);
+
+    vcd_log(cycle, control, scanline, sa_hblank.period);
 
     last_cycle = cycle;
 
