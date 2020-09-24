@@ -188,6 +188,43 @@ static void showcontrol(uint32_t cycle, uint8_t control, uint32_t* last_cycle) {
   fflush(stdout);
 }
 
+FILE* vcd_file = NULL;
+
+static status vcd_open(const char* filename) {
+  vcd_file = fopen(filename, "w");
+  if (!vcd_file) {
+    return errorf("couldn't open vcd file");
+  }
+  fprintf(vcd_file, "$timescale 1ps $end\n");
+  fprintf(vcd_file, "$scope module snes $end\n");
+  fprintf(vcd_file, "$var wire 1 H hblank $end\n");
+  fprintf(vcd_file, "$var wire 1 V vblank $end\n");
+  fprintf(vcd_file, "$var wire 1 C csync_n $end\n");
+  fprintf(vcd_file, "$var wire 1 B burst_n $end\n");
+  fprintf(vcd_file, "$upscope $end\n");
+  fprintf(vcd_file, "$enddefinitions $end\n");
+  fprintf(vcd_file, "$dumpvars\n");
+  fprintf(vcd_file, "xH\n");
+  fprintf(vcd_file, "xV\n");
+  fprintf(vcd_file, "xC\n");
+  fprintf(vcd_file, "xB\n");
+  fprintf(vcd_file, "$end\n");
+  return OK;
+}
+
+static void vcd_log(uint32_t cycle, uint8_t control) {
+  fprintf(vcd_file, "#%d\n", cycle);
+  fprintf(vcd_file, "%dH\n", control_hblank(control));
+  fprintf(vcd_file, "%dV\n", control_vblank(control));
+  fprintf(vcd_file, "%dC\n", control_csync_n(control));
+  fprintf(vcd_file, "%dB\n", control_burst_n(control));
+}
+
+static void vcd_close() {
+  fclose(vcd_file);
+  vcd_file = NULL;
+}
+
 struct signal_analysis {
   const char* name;
 
@@ -274,7 +311,7 @@ static status measuretiming() {
   showcontrol(cycle, control, NULL);
 
   printf("int_set_enabled\n");
-  uint8_t int_enabled = 0x0f;
+  uint8_t int_enabled = 0xff;
   RETURN_IF_ERROR(op_int_set_enabled(int_enabled));
   printf("xin_enable\n");
   RETURN_IF_ERROR(op_xin_enable());
@@ -287,6 +324,8 @@ static status measuretiming() {
   siganalysis_init(&sa_hblank, "hblank", control_hblank(control));
   siganalysis_init(&sa_csync_n, "csync_n", control_csync_n(control));
   siganalysis_init(&sa_burst_n, "burst_n", control_burst_n(control));
+
+  RETURN_IF_ERROR(vcd_open("timing.vcd"));
 
   printf("cycle\n");
   uint32_t last_cycle = 0;
@@ -309,6 +348,8 @@ static status measuretiming() {
       siganalysis_inc(&sa_burst_n, cycle, control_burst_n(control));
     }
 
+    vcd_log(cycle, control);
+
     last_cycle = cycle;
 
     RETURN_IF_ERROR(op_int_clear());
@@ -319,6 +360,8 @@ static status measuretiming() {
   (void)op_int_triggered;
   (void)op_int_enabled;
   (void)op_int_clear;
+
+  vcd_close();
 
   printf("xin_disable\n");
   RETURN_IF_ERROR(op_xin_disable());
