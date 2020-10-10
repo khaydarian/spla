@@ -12,6 +12,7 @@
 #include "ftdiutil.h"
 #include "lowspeed_core.h"
 #include "uart.h"
+#include "vcd.h"
 
 static void queue_op(uint8_t opcode, int argc, uint8_t* argv, int respc,
                      uint8_t* resp) {
@@ -188,56 +189,38 @@ static void showcontrol(uint32_t cycle, uint8_t control, uint32_t* last_cycle) {
   fflush(stdout);
 }
 
-FILE* vcd_file = NULL;
+struct vcd* v_trace;
+struct vcd_signal* vs_hblank;
+struct vcd_signal* vs_vblank;
+struct vcd_signal* vs_csync_n;
+struct vcd_signal* vs_burst_n;
+struct vcd_signal* vs_scanline;
+struct vcd_signal* vs_hblank_period;
 
-static status vcd_open(const char* filename) {
-  vcd_file = fopen(filename, "w");
-  if (!vcd_file) {
-    return errorf("couldn't open vcd file");
-  }
-  fprintf(vcd_file, "$timescale 1ps $end\n");
-  fprintf(vcd_file, "$scope module snes $end\n");
-  fprintf(vcd_file, "$var wire 1 H hblank $end\n");
-  fprintf(vcd_file, "$var wire 1 V vblank $end\n");
-  fprintf(vcd_file, "$var wire 1 C csync_n $end\n");
-  fprintf(vcd_file, "$var wire 1 B burst_n $end\n");
-  fprintf(vcd_file, "$var wire 9 L scanline $end\n");
-  fprintf(vcd_file, "$var wire 11 P hblank_period $end\n");
-  fprintf(vcd_file, "$upscope $end\n");
-  fprintf(vcd_file, "$enddefinitions $end\n");
-  fprintf(vcd_file, "$dumpvars\n");
-  fprintf(vcd_file, "xH\n");
-  fprintf(vcd_file, "xV\n");
-  fprintf(vcd_file, "xC\n");
-  fprintf(vcd_file, "xB\n");
-  fprintf(vcd_file, "d0 L\n");
-  fprintf(vcd_file, "$end\n");
+static status trace_open(const char* filename) {
+  RETURN_IF_ERROR(vcd_open(&v_trace, filename));
+  vs_hblank = vcd_add_signal(v_trace, "hblank", 1);
+  vs_vblank = vcd_add_signal(v_trace, "vblank", 1);
+  vs_csync_n = vcd_add_signal(v_trace, "csync_n", 1);
+  vs_burst_n = vcd_add_signal(v_trace, "burst_n", 1);
+  vs_scanline = vcd_add_signal(v_trace, "scanline", 9);
+  vs_hblank_period = vcd_add_signal(v_trace, "hblank_period", 11);
   return OK;
 }
 
-static void vcd_log(uint32_t cycle, uint8_t control, int scanline,
-                    int hblank_period) {
-  fprintf(vcd_file, "#%d\n", cycle);
-  fprintf(vcd_file, "%dH\n", control_hblank(control));
-  fprintf(vcd_file, "%dV\n", control_vblank(control));
-  fprintf(vcd_file, "%dC\n", control_csync_n(control));
-  fprintf(vcd_file, "%dB\n", control_burst_n(control));
-  fprintf(vcd_file, "b");
-  for (int bit = 8; bit >= 0; bit--) {
-    fprintf(vcd_file, "%c", scanline & (1 << bit) ? '1' : '0');
-  }
-  fprintf(vcd_file, " L\n");
-  fprintf(vcd_file, "b");
-  for (int bit = 10; bit >= 0; bit--) {
-    fprintf(vcd_file, "%c", hblank_period & (1 << bit) ? '1' : '0');
-  }
-  fprintf(vcd_file, " P\n");
+static status trace_log(uint32_t cycle, uint8_t control, int scanline,
+                        int hblank_period) {
+  RETURN_IF_ERROR(vcd_value(vs_hblank, control_hblank(control)));
+  RETURN_IF_ERROR(vcd_value(vs_vblank, control_vblank(control)));
+  RETURN_IF_ERROR(vcd_value(vs_csync_n, control_csync_n(control)));
+  RETURN_IF_ERROR(vcd_value(vs_burst_n, control_burst_n(control)));
+  RETURN_IF_ERROR(vcd_value(vs_scanline, scanline));
+  RETURN_IF_ERROR(vcd_value(vs_hblank_period, hblank_period));
+  RETURN_IF_ERROR(vcd_timestamp(v_trace, cycle));
+  return OK;
 }
 
-static void vcd_close() {
-  fclose(vcd_file);
-  vcd_file = NULL;
-}
+static void trace_close() { vcd_close(&v_trace); }
 
 struct signal_analysis {
   const char* name;
@@ -339,7 +322,7 @@ static status measuretiming() {
   siganalysis_init(&sa_csync_n, "csync_n", control_csync_n(control));
   siganalysis_init(&sa_burst_n, "burst_n", control_burst_n(control));
 
-  RETURN_IF_ERROR(vcd_open("timing.vcd"));
+  RETURN_IF_ERROR(trace_open("timing.vcd"));
 
   int scanline = 0;
   int last_vblank = 1;
@@ -375,7 +358,7 @@ static status measuretiming() {
     }
     last_hblank = control_hblank(control);
 
-    vcd_log(cycle, control, scanline, sa_hblank.period);
+    RETURN_IF_ERROR(trace_log(cycle, control, scanline, sa_hblank.period));
 
     last_cycle = cycle;
 
@@ -388,7 +371,7 @@ static status measuretiming() {
   (void)op_int_enabled;
   (void)op_int_clear;
 
-  vcd_close();
+  trace_close();
 
   printf("xin_disable\n");
   RETURN_IF_ERROR(op_xin_disable());
